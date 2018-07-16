@@ -1,0 +1,100 @@
+stellar-layout {
+  display: block;
+}
+
+stellar-layout > .layout {
+  display: block;
+  margin: 0 auto;
+  padding: 4rem 0;
+  width: 90%;
+  max-width: 1024px;
+  min-height: 0;
+  min-width: 0;
+}
+
+stellar-layout > .layout > * {
+  min-width: 0;
+}
+
+stellar-layout[size="tiny"] > .layout {
+  max-width: 420px;
+}
+
+stellar-layout[size="small"] > .layout {
+  max-width: 700px;
+}
+
+stellar-layout[size="medium"] > .layout {
+  max-width: 1024px;
+}
+
+stellar-layout[size="large"] > .layout {
+  max-width: 1200px;
+}
+
+stellar-layout[size="full"] > .layout {
+  max-width: 100%;
+}
+
+stellar-layout[size="flush"] > .layout {
+  max-width: 100%;
+  width: 100%;
+}
+
+stellar-layout[padding="tiny"] > .layout {
+  padding: 0.5rem 0;
+}
+
+stellar-layout[padding="small"] > .layout {
+  padding: 1rem 0;
+}
+
+stellar-layout[padding="medium"] > .layout {
+  padding: 2rem 0;
+}
+
+stellar-layout[padding="large"] > .layout {
+  padding: 4rem 0;
+}
+
+stellar-layout[type="copy"] > .layout {
+  padding: 3rem 0;
+}
+
+stellar-layout[align="top"] > .layout {
+  align-items: flex-start;
+}
+
+stellar-layout[align="center"] > .layout {
+  align-items: center;
+}
+
+stellar-layout[align="baseline"] > .layout {
+  align-items: baseline;
+}
+
+stellar-header + stellar-layout > .layout {
+  padding-top: 3rem;
+}
+
+stellar-layout + stellar-layout > .layout {
+  padding-top: 0;
+}
+
+main > stellar-layout:first-of-type > .layout {
+  padding-top: 0;
+}
+
+@media (min-width: 700px) {
+  stellar-layout[type="sidebar-right"] > .layout {
+    display: grid;
+    grid-gap: 3.2rem;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  stellar-layout[type="sidebar"] > .layout {
+    display: grid;
+    grid-gap: 3.2rem;
+    grid-template-columns: 1fr 3fr;
+  }
+}

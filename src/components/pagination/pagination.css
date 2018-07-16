@@ -1,0 +1,134 @@
+stellar-pagination {
+  display: block;
+  color: var(--color);
+  font-size: 1rem;
+  --color: var(--theme-base6);
+  --hover: var(--theme-base9);
+  text-align: center;
+}
+
+stellar-pagination .pagination-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+stellar-pagination .indicator {
+  position: absolute;
+  top: 1.2rem;
+  left: var(--indicator-left, 50%);
+  transition: all 220ms var(--ease) 0s;
+  width: 2rem;
+  height: 1.6rem;
+  background: var(--theme-base5);
+  z-index: 0;
+}
+
+stellar-pagination stellar-blur[horizontal="0"] .indicator {
+  height: 2rem;
+  top: 1rem;
+}
+
+stellar-pagination .pagination-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+stellar-pagination a {
+  text-decoration: none;
+}
+
+stellar-pagination a.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: var(--color);
+}
+
+stellar-pagination a.icon:hover,
+stellar-pagination a.icon:active {
+  color: var(--hover);
+}
+
+stellar-pagination a.current-number:hover,
+stellar-pagination a.current-number:active,
+stellar-pagination a.current-number:focus {
+  color: white;
+}
+
+stellar-pagination .ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 1rem;
+}
+
+stellar-pagination .pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
+  position: relative;
+  transition: all 200ms var(--ease) 0s;
+}
+
+stellar-pagination .number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: currentColor;
+  font-weight: 700;
+  overflow: hidden;
+  transition: all 200ms var(--ease) 0s;
+  margin: 1rem 0;
+  width: 2rem;
+  height: 2rem;
+  opacity: 1;
+  z-index: 1;
+  transform: scale(1);
+}
+
+stellar-pagination .number[data-visible="false"] {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  padding: 0;
+  transform: scale(0);
+}
+
+stellar-pagination .number:hover,
+stellar-pagination .number:active {
+  color: var(--hover);
+}
+
+stellar-pagination .current-number {
+  margin: 1rem;
+  color: white;
+}
+
+stellar-pagination .skip-button {
+  margin-left: 36px;
+  line-height: 0;
+}
+
+stellar-pagination *[data-hidden=yes] {
+  display: none !important;
+}
+
+stellar-pagination .compact-pagination-container {
+  display: flex;
+  align-items: baseline;
+}
+
+stellar-pagination .compact-pagination-container stellar-input {
+  width: 4rem;
+  --padding: 0 1rem;
+  margin: 0 1rem;
+}

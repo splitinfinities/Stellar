@@ -1,0 +1,25 @@
+stellar-starscape {
+  background: linear-gradient(var(--rotate, 0deg), var(--theme-base7), var(--theme-complement7), var(--theme-base7), var(--theme-complement7));
+  background-size: 400% 400%;
+  background-position: var(--y-pos, 0%) var(--y-pos, 0%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+stellar-starscape::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 1;
+  mix-blend-mode: color-dodge;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQAgMAAAD90d5fAAAACVBMVEUAAAATExNCt0Ijhc27AAACEklEQVR4AezYAYbDUBCH8W9qUMAsPUCOMr3BHilHX5BqRsD6z4jIhwo/6HtJpk24ftIMWPgUAKQWCI5TAjhfvQFWOWzNrMiaoRbgDeAVxeDgNMPIQiZPytTakpoeMD3c/a9XPV9pcpgsnC3DhDBw/U7OrfmiHmpgaGgFwe6PRehhpaaC+UIJVy+JLqjdP8Un3B6rB6sQ5k+x90LUcS2GR5UGmM8HYHIdpoRrF+3wYMv0UAdQoIfnwSBIJcw8XGfuti1YtLBZfT2hhPli/2WsA34oCeAULUo4dXfxNXdSD/OZHi67lCs80Wcj1CHmfXCwib96uOL9l5+PtxwG7peB/XrVq830MLQa56DUwvSgUV5V94tAZQahhgSvOyqA+33UyQu2ku05PFwJg5kDaZ1wMC+XHlh3pIbacwD+2rVjGgAAAAZh/l3jgquoWJaKuWPumDvmjrmz75k75o65Y+6YO+aOuWPumDvmjrlj7pg75o65Y+6YOzF3zB1zx9wxd8wdc8fcMXfMHXM3xNwxd8wdc8fcMXfMHXPH3Im5Y+6YO+aOuWPumDvmjrlj7pg75o65Y+6YO+aOuRNzx9wxd8wdc8fcMXfMnSOQufNHMXfMHXMn5o65Y+6YO+bOvmfumDvmjrlj7pg75o65Y+6YO+aOuWPumDvmjrlj7sTcMXfMHXPH3DF3zB1zx9wxd8wdc8fcMXcBIjHTARHFCxEAAAAASUVORK5CYII=');
+  background-position: calc(var(--y-pos, 0%) * 1) calc(var(--y-pos, 0%) * -50);
+}

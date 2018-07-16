@@ -1,0 +1,120 @@
+stellar-switch {
+  display: block;
+  --border-radius: 200px;
+  --font-size: 1rem;
+}
+
+stellar-switch .label {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+stellar-switch button ::-moz-selection { background: transparent; }
+stellar-switch button ::selection { background: transparent; }
+
+stellar-switch .label button {
+  font-size: var(--font-size);
+  display: inline-block;
+  position: relative;
+  transition: all .2s var(--ease) 0s;
+  margin-right: 1em;
+  background-color: var(--theme-base1);
+  width: 5em;
+  height: 2em;
+  vertical-align: text-bottom;
+  border-radius: var(--border-radius);
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+}
+
+stellar-switch .label button:focus {
+  background-color: var(--theme-base3);
+}
+
+stellar-switch .label button:focus::before,
+stellar-switch .label button:hover::before {
+  transform: translate3d(.1em, .1em, 0) scale3d(1, 1, 1);
+  background-color: var(--theme-base0);
+
+}
+
+stellar-switch .label button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(.1em, .1em, 0) scale3d(1, 1, 1);
+  transition: all .2s var(--ease) 0s;
+  background-color: var(--white);
+  width: calc(100% - .2em);
+  height: calc(100% - .2em);
+  border-radius: var(--border-radius);
+}
+
+stellar-switch .label button span {
+  transition: all .2s var(--ease) 0s;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--gray9);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-style: normal;
+  text-transform: uppercase;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 .5em 0 2.375em;
+  pointer-events: none;
+}
+
+stellar-switch .label button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(.125em, .125em, 0);
+  transition: all .2s var(--ease) 0s;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: var(--border-radius);
+  width: 1.75em;
+  height: 1.75em;
+}
+
+stellar-switch .label:active button::after {
+  transform: translate3d(2px, 2px, 0);
+  width: 2em;
+}
+
+stellar-switch .label:active input:checked + button::after {
+  transform: translate3d(2.9em,.125em,0);
+}
+
+stellar-switch .label input {
+  pointer-events: none;
+  position: absolute;
+  opacity: 0;
+}
+
+stellar-switch .label input:checked + button {
+  background-color: var(--theme-base5);
+}
+
+stellar-switch .label input:checked + button span {
+  color: white;
+  padding: 0 1rem;
+}
+
+stellar-switch .label input:checked + button::before {
+  transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
+}
+
+stellar-switch .label input:checked + button::after {
+  transform: translate3d(3.15em,.125em,0);
+}

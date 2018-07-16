@@ -1,0 +1,3029 @@
+{
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.9.7"
+  },
+  "app": {
+    "namespace": "stellar",
+    "fsNamespace": "stellar",
+    "components": 64,
+    "entries": 41,
+    "bundles": 126
+  },
+  "options": {
+    "minifyJs": true,
+    "minifyCss": true,
+    "hashFileNames": true,
+    "hashedFileNameLength": 8,
+    "buildEs5": true
+  },
+  "components": [
+    {
+      "tag": "copy-wrap",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-documentation-site",
+        "stellar-input",
+        "stellar-markdown"
+      ]
+    },
+    {
+      "tag": "stellar-asset",
+      "dependencies": [
+        "ion-icon"
+      ],
+      "dependencyOf": [
+        "skeleton-img",
+        "stellar-accordion",
+        "stellar-breadcrumbs",
+        "stellar-button",
+        "stellar-documentation-site",
+        "stellar-dropdown",
+        "stellar-input",
+        "stellar-item",
+        "stellar-message",
+        "stellar-pagination",
+        "stellar-quick-actions",
+        "stellar-select",
+        "stellar-theme-preview",
+        "stellar-toggle-option"
+      ]
+    },
+    {
+      "tag": "ion-icon",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-asset"
+      ]
+    },
+    {
+      "tag": "skeleton-img",
+      "dependencies": [
+        "stellar-asset"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "skeleton-text",
+      "dependencies": [],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-accordion",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-blur",
+        "stellar-button"
+      ],
+      "dependencyOf": [
+        "stellar-documentation-site"
+      ]
+    },
+    {
+      "tag": "stellar-content",
+      "dependencies": [
+        "stellar-blur"
+      ],
+      "dependencyOf": [
+        "stellar-documentation-site"
+      ]
+    },
+    {
+      "tag": "stellar-documentation-site",
+      "dependencies": [
+        "copy-wrap",
+        "stellar-accordion",
+        "stellar-asset",
+        "stellar-button",
+        "stellar-card",
+        "stellar-content",
+        "stellar-documentation",
+        "stellar-footer",
+        "stellar-grid",
+        "stellar-item",
+        "stellar-layout",
+        "stellar-markdown",
+        "stellar-message",
+        "stellar-select",
+        "stellar-starscape",
+        "stellar-tab",
+        "stellar-tabs",
+        "stellar-tag",
+        "stellar-toggle",
+        "stellar-toggle-option",
+        "stellar-unit"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-footer",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-documentation-site"
+      ]
+    },
+    {
+      "tag": "stellar-layout",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-documentation-site"
+      ]
+    },
+    {
+      "tag": "stellar-markdown",
+      "dependencies": [
+        "copy-wrap"
+      ],
+      "dependencyOf": [
+        "stellar-documentation-site"
+      ]
+    },
+    {
+      "tag": "stellar-message",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-button"
+      ],
+      "dependencyOf": [
+        "stellar-documentation-site"
+      ]
+    },
+    {
+      "tag": "stellar-select",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-blur",
+        "stellar-item"
+      ],
+      "dependencyOf": [
+        "stellar-documentation-site"
+      ]
+    },
+    {
+      "tag": "stellar-tab",
+      "dependencies": [
+        "stellar-tag"
+      ],
+      "dependencyOf": [
+        "stellar-documentation-site"
+      ]
+    },
+    {
+      "tag": "stellar-tabs",
+      "dependencies": [
+        "stellar-blur"
+      ],
+      "dependencyOf": [
+        "stellar-documentation-site"
+      ]
+    },
+    {
+      "tag": "stellar-toggle",
+      "dependencies": [
+        "stellar-grid"
+      ],
+      "dependencyOf": [
+        "stellar-documentation-site"
+      ]
+    },
+    {
+      "tag": "stellar-toggle-option",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-blur",
+        "stellar-tag"
+      ],
+      "dependencyOf": [
+        "stellar-documentation-site"
+      ]
+    },
+    {
+      "tag": "stellar-unit",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-documentation-site"
+      ]
+    },
+    {
+      "tag": "stellar-animate-text",
+      "dependencies": [
+        "stellar-blur"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-asset-library",
+      "dependencies": [
+        "stellar-documentation",
+        "stellar-grid"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-avatar",
+      "dependencies": [
+        "stellar-tooltip"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-blur",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-accordion",
+        "stellar-animate-text",
+        "stellar-content",
+        "stellar-dropdown",
+        "stellar-pagination",
+        "stellar-progress",
+        "stellar-select",
+        "stellar-slide",
+        "stellar-tabs",
+        "stellar-toggle-option"
+      ]
+    },
+    {
+      "tag": "stellar-breadcrumb",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-breadcrumbs"
+      ]
+    },
+    {
+      "tag": "stellar-breadcrumbs",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-breadcrumb"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-button",
+      "dependencies": [
+        "stellar-asset"
+      ],
+      "dependencyOf": [
+        "stellar-accordion",
+        "stellar-code-block",
+        "stellar-documentation-site",
+        "stellar-message",
+        "stellar-modal",
+        "stellar-step"
+      ]
+    },
+    {
+      "tag": "stellar-callout",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-code-block"
+      ]
+    },
+    {
+      "tag": "stellar-code",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-code-block"
+      ]
+    },
+    {
+      "tag": "stellar-code-block",
+      "dependencies": [
+        "stellar-button",
+        "stellar-callout",
+        "stellar-card",
+        "stellar-code",
+        "stellar-tag"
+      ],
+      "dependencyOf": [
+        "stellar-documentation"
+      ]
+    },
+    {
+      "tag": "stellar-documentation",
+      "dependencies": [
+        "stellar-card",
+        "stellar-code-block"
+      ],
+      "dependencyOf": [
+        "stellar-asset-library",
+        "stellar-documentation-site"
+      ]
+    },
+    {
+      "tag": "stellar-grid",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-asset-library",
+        "stellar-documentation-site"
+      ]
+    },
+    {
+      "tag": "stellar-card",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-code-block",
+        "stellar-color-library",
+        "stellar-documentation",
+        "stellar-documentation-site",
+        "stellar-modal"
+      ]
+    },
+    {
+      "tag": "stellar-chart",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-table"
+      ]
+    },
+    {
+      "tag": "stellar-table",
+      "dependencies": [
+        "stellar-chart"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-color-library",
+      "dependencies": [
+        "stellar-card",
+        "stellar-grid"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-color-picker",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-theme-preview"
+      ]
+    },
+    {
+      "tag": "stellar-theme-preview",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-color-picker",
+        "stellar-grid"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-comment",
+      "dependencies": [],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-comments",
+      "dependencies": [],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-dropdown",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-blur"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-form",
+      "dependencies": [],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-group",
+      "dependencies": [
+        "stellar-group-overflow"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-group-overflow",
+      "dependencies": [
+        "stellar-tooltip"
+      ],
+      "dependencyOf": [
+        "stellar-group"
+      ]
+    },
+    {
+      "tag": "stellar-header",
+      "dependencies": [
+        "stellar-progress",
+        "stellar-starscape"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-progress",
+      "dependencies": [
+        "stellar-blur"
+      ],
+      "dependencyOf": [
+        "stellar-header"
+      ]
+    },
+    {
+      "tag": "stellar-image",
+      "dependencies": [],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-input",
+      "dependencies": [
+        "copy-wrap",
+        "stellar-asset"
+      ],
+      "dependencyOf": [
+        "stellar-pagination",
+        "stellar-stripe"
+      ]
+    },
+    {
+      "tag": "stellar-item",
+      "dependencies": [
+        "stellar-asset"
+      ],
+      "dependencyOf": [
+        "stellar-documentation-site",
+        "stellar-list",
+        "stellar-select"
+      ]
+    },
+    {
+      "tag": "stellar-list",
+      "dependencies": [
+        "stellar-item"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-modal",
+      "dependencies": [
+        "stellar-button",
+        "stellar-card"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-modal-controller",
+      "dependencies": [
+        "stellar-overlay"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-overlay",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-modal-controller"
+      ]
+    },
+    {
+      "tag": "stellar-pagination",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-blur",
+        "stellar-input"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-parallax",
+      "dependencies": [],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-parallax-section",
+      "dependencies": [],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-quick-actions",
+      "dependencies": [
+        "stellar-asset"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-slide",
+      "dependencies": [
+        "stellar-blur"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-slides",
+      "dependencies": [],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-starscape",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-documentation-site",
+        "stellar-header"
+      ]
+    },
+    {
+      "tag": "stellar-step",
+      "dependencies": [
+        "stellar-button"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-steps",
+      "dependencies": [],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-stripe",
+      "dependencies": [
+        "stellar-grid",
+        "stellar-input"
+      ],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-switch",
+      "dependencies": [],
+      "dependencyOf": []
+    },
+    {
+      "tag": "stellar-tag",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-code-block",
+        "stellar-documentation-site",
+        "stellar-tab",
+        "stellar-toggle-option"
+      ]
+    },
+    {
+      "tag": "stellar-tooltip",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-avatar",
+        "stellar-group-overflow"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "entryId": "entry:copy-wrap",
+      "components": [
+        {
+          "tag": "copy-wrap",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-documentation-site",
+            "stellar-input",
+            "stellar-markdown"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "gvjmzw0c.js",
+          "outputs": [
+            "dist/stellar/gvjmzw0c.js",
+            "www/build/stellar/gvjmzw0c.js"
+          ],
+          "size": 1252,
+          "gzip": 501
+        },
+        {
+          "fileName": "gvjmzw0c.es5.js",
+          "outputs": [
+            "dist/stellar/gvjmzw0c.es5.js",
+            "www/build/stellar/gvjmzw0c.es5.js"
+          ],
+          "size": 1568,
+          "gzip": 600,
+          "target": "es5"
+        },
+        {
+          "fileName": "gvjmzw0c.js",
+          "outputs": [
+            "dist/esm/es5/gvjmzw0c.js"
+          ],
+          "size": 1488,
+          "gzip": 563,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/copy-wrap/copy-wrap.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-asset.ion-icon",
+      "components": [
+        {
+          "tag": "stellar-asset",
+          "dependencies": [
+            "ion-icon"
+          ],
+          "dependencyOf": [
+            "skeleton-img",
+            "stellar-accordion",
+            "stellar-breadcrumbs",
+            "stellar-button",
+            "stellar-documentation-site",
+            "stellar-dropdown",
+            "stellar-input",
+            "stellar-item",
+            "stellar-message",
+            "stellar-pagination",
+            "stellar-quick-actions",
+            "stellar-select",
+            "stellar-theme-preview",
+            "stellar-toggle-option"
+          ]
+        },
+        {
+          "tag": "ion-icon",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-asset"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "bpbhjplh.js",
+          "outputs": [
+            "dist/stellar/bpbhjplh.js",
+            "www/build/stellar/bpbhjplh.js"
+          ],
+          "size": 6930,
+          "gzip": 2038
+        },
+        {
+          "fileName": "bpbhjplh.es5.js",
+          "outputs": [
+            "dist/stellar/bpbhjplh.es5.js",
+            "www/build/stellar/bpbhjplh.es5.js"
+          ],
+          "size": 7694,
+          "gzip": 2136,
+          "target": "es5"
+        },
+        {
+          "fileName": "bpbhjplh.js",
+          "outputs": [
+            "dist/esm/es5/bpbhjplh.js"
+          ],
+          "size": 7764,
+          "gzip": 2153,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/asset/asset.js",
+        "node_modules/ionicons/dist/collection/icon/icon.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:skeleton-img",
+      "components": [
+        {
+          "tag": "skeleton-img",
+          "dependencies": [
+            "stellar-asset"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "ox4yfbkf.js",
+          "outputs": [
+            "dist/stellar/ox4yfbkf.js",
+            "www/build/stellar/ox4yfbkf.js"
+          ],
+          "size": 2767,
+          "gzip": 981
+        },
+        {
+          "fileName": "ox4yfbkf.es5.js",
+          "outputs": [
+            "dist/stellar/ox4yfbkf.es5.js",
+            "www/build/stellar/ox4yfbkf.es5.js"
+          ],
+          "size": 3113,
+          "gzip": 1077,
+          "target": "es5"
+        },
+        {
+          "fileName": "ox4yfbkf.js",
+          "outputs": [
+            "dist/esm/es5/ox4yfbkf.js"
+          ],
+          "size": 3063,
+          "gzip": 1045,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/skeleton-img/skeleton-img.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:skeleton-text",
+      "components": [
+        {
+          "tag": "skeleton-text",
+          "dependencies": [],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "ktjcpsdq.js",
+          "outputs": [
+            "dist/stellar/ktjcpsdq.js",
+            "www/build/stellar/ktjcpsdq.js"
+          ],
+          "size": 2732,
+          "gzip": 996
+        },
+        {
+          "fileName": "ktjcpsdq.es5.js",
+          "outputs": [
+            "dist/stellar/ktjcpsdq.es5.js",
+            "www/build/stellar/ktjcpsdq.es5.js"
+          ],
+          "size": 3080,
+          "gzip": 1090,
+          "target": "es5"
+        },
+        {
+          "fileName": "ktjcpsdq.js",
+          "outputs": [
+            "dist/esm/es5/ktjcpsdq.js"
+          ],
+          "size": 3031,
+          "gzip": 1056,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/skeleton-text/skeleton-text.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-accordion.stellar-content.stellar-documentation-site.stellar-footer.stellar-layout.stellar-markdown.stellar-message.stellar-select.stellar-tab.stellar-tabs.stellar-toggle.stellar-toggle-option.stellar-unit",
+      "components": [
+        {
+          "tag": "stellar-accordion",
+          "dependencies": [
+            "stellar-asset",
+            "stellar-blur",
+            "stellar-button"
+          ],
+          "dependencyOf": [
+            "stellar-documentation-site"
+          ]
+        },
+        {
+          "tag": "stellar-content",
+          "dependencies": [
+            "stellar-blur"
+          ],
+          "dependencyOf": [
+            "stellar-documentation-site"
+          ]
+        },
+        {
+          "tag": "stellar-documentation-site",
+          "dependencies": [
+            "copy-wrap",
+            "stellar-accordion",
+            "stellar-asset",
+            "stellar-button",
+            "stellar-card",
+            "stellar-content",
+            "stellar-documentation",
+            "stellar-footer",
+            "stellar-grid",
+            "stellar-item",
+            "stellar-layout",
+            "stellar-markdown",
+            "stellar-message",
+            "stellar-select",
+            "stellar-starscape",
+            "stellar-tab",
+            "stellar-tabs",
+            "stellar-tag",
+            "stellar-toggle",
+            "stellar-toggle-option",
+            "stellar-unit"
+          ],
+          "dependencyOf": []
+        },
+        {
+          "tag": "stellar-footer",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-documentation-site"
+          ]
+        },
+        {
+          "tag": "stellar-layout",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-documentation-site"
+          ]
+        },
+        {
+          "tag": "stellar-markdown",
+          "dependencies": [
+            "copy-wrap"
+          ],
+          "dependencyOf": [
+            "stellar-documentation-site"
+          ]
+        },
+        {
+          "tag": "stellar-message",
+          "dependencies": [
+            "stellar-asset",
+            "stellar-button"
+          ],
+          "dependencyOf": [
+            "stellar-documentation-site"
+          ]
+        },
+        {
+          "tag": "stellar-select",
+          "dependencies": [
+            "stellar-asset",
+            "stellar-blur",
+            "stellar-item"
+          ],
+          "dependencyOf": [
+            "stellar-documentation-site"
+          ]
+        },
+        {
+          "tag": "stellar-tab",
+          "dependencies": [
+            "stellar-tag"
+          ],
+          "dependencyOf": [
+            "stellar-documentation-site"
+          ]
+        },
+        {
+          "tag": "stellar-tabs",
+          "dependencies": [
+            "stellar-blur"
+          ],
+          "dependencyOf": [
+            "stellar-documentation-site"
+          ]
+        },
+        {
+          "tag": "stellar-toggle",
+          "dependencies": [
+            "stellar-grid"
+          ],
+          "dependencyOf": [
+            "stellar-documentation-site"
+          ]
+        },
+        {
+          "tag": "stellar-toggle-option",
+          "dependencies": [
+            "stellar-asset",
+            "stellar-blur",
+            "stellar-tag"
+          ],
+          "dependencyOf": [
+            "stellar-documentation-site"
+          ]
+        },
+        {
+          "tag": "stellar-unit",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-documentation-site"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "mkdduhsz.js",
+          "outputs": [
+            "dist/stellar/mkdduhsz.js",
+            "www/build/stellar/mkdduhsz.js"
+          ],
+          "size": 165435,
+          "gzip": 50458
+        },
+        {
+          "fileName": "mkdduhsz.es5.js",
+          "outputs": [
+            "dist/stellar/mkdduhsz.es5.js",
+            "www/build/stellar/mkdduhsz.es5.js"
+          ],
+          "size": 172583,
+          "gzip": 51392,
+          "target": "es5"
+        },
+        {
+          "fileName": "mkdduhsz.js",
+          "outputs": [
+            "dist/esm/es5/mkdduhsz.js"
+          ],
+          "size": 176269,
+          "gzip": 52223,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/accordion/accordion.js",
+        "dist/collection/components/content/content.js",
+        "dist/collection/components/documentation-site/documentation-site.js",
+        "dist/collection/components/footer/footer.js",
+        "dist/collection/components/layout/layout.js",
+        "dist/collection/components/markdown/markdown.js",
+        "dist/collection/components/message/message.js",
+        "dist/collection/components/select/select.js",
+        "dist/collection/components/tab/tab.js",
+        "dist/collection/components/tabs/tabs.js",
+        "dist/collection/components/toggle-option/toggle-option.js",
+        "dist/collection/components/toggle/toggle.js",
+        "dist/collection/components/unit/unit.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-animate-text",
+      "components": [
+        {
+          "tag": "stellar-animate-text",
+          "dependencies": [
+            "stellar-blur"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "bn6792wy.js",
+          "outputs": [
+            "dist/stellar/bn6792wy.js",
+            "www/build/stellar/bn6792wy.js"
+          ],
+          "size": 5464,
+          "gzip": 1006
+        },
+        {
+          "fileName": "bn6792wy.es5.js",
+          "outputs": [
+            "dist/stellar/bn6792wy.es5.js",
+            "www/build/stellar/bn6792wy.es5.js"
+          ],
+          "size": 5898,
+          "gzip": 1114,
+          "target": "es5"
+        },
+        {
+          "fileName": "bn6792wy.js",
+          "outputs": [
+            "dist/esm/es5/bn6792wy.js"
+          ],
+          "size": 5867,
+          "gzip": 1086,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/animate-text/animate-text.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-asset-library",
+      "components": [
+        {
+          "tag": "stellar-asset-library",
+          "dependencies": [
+            "stellar-documentation",
+            "stellar-grid"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "xdlnwp5o.js",
+          "outputs": [
+            "dist/stellar/xdlnwp5o.js",
+            "www/build/stellar/xdlnwp5o.js"
+          ],
+          "size": 934,
+          "gzip": 524
+        },
+        {
+          "fileName": "xdlnwp5o.es5.js",
+          "outputs": [
+            "dist/stellar/xdlnwp5o.es5.js",
+            "www/build/stellar/xdlnwp5o.es5.js"
+          ],
+          "size": 2455,
+          "gzip": 1171,
+          "target": "es5"
+        },
+        {
+          "fileName": "xdlnwp5o.js",
+          "outputs": [
+            "dist/esm/es5/xdlnwp5o.js"
+          ],
+          "size": 2422,
+          "gzip": 1147,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/asset-library/asset-library.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-avatar",
+      "components": [
+        {
+          "tag": "stellar-avatar",
+          "dependencies": [
+            "stellar-tooltip"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "tyqxx3ej.js",
+          "outputs": [
+            "dist/stellar/tyqxx3ej.js",
+            "www/build/stellar/tyqxx3ej.js"
+          ],
+          "size": 32021,
+          "gzip": 7550
+        },
+        {
+          "fileName": "tyqxx3ej.es5.js",
+          "outputs": [
+            "dist/stellar/tyqxx3ej.es5.js",
+            "www/build/stellar/tyqxx3ej.es5.js"
+          ],
+          "size": 32394,
+          "gzip": 7644,
+          "target": "es5"
+        },
+        {
+          "fileName": "tyqxx3ej.js",
+          "outputs": [
+            "dist/esm/es5/tyqxx3ej.js"
+          ],
+          "size": 32589,
+          "gzip": 7687,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/avatar/avatar.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-blur",
+      "components": [
+        {
+          "tag": "stellar-blur",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-accordion",
+            "stellar-animate-text",
+            "stellar-content",
+            "stellar-dropdown",
+            "stellar-pagination",
+            "stellar-progress",
+            "stellar-select",
+            "stellar-slide",
+            "stellar-tabs",
+            "stellar-toggle-option"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "imo04n8b.js",
+          "outputs": [
+            "dist/stellar/imo04n8b.js",
+            "www/build/stellar/imo04n8b.js"
+          ],
+          "size": 1582,
+          "gzip": 778
+        },
+        {
+          "fileName": "imo04n8b.es5.js",
+          "outputs": [
+            "dist/stellar/imo04n8b.es5.js",
+            "www/build/stellar/imo04n8b.es5.js"
+          ],
+          "size": 2008,
+          "gzip": 854,
+          "target": "es5"
+        },
+        {
+          "fileName": "imo04n8b.js",
+          "outputs": [
+            "dist/esm/es5/imo04n8b.js"
+          ],
+          "size": 1959,
+          "gzip": 826,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/blur/blur.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-breadcrumb.stellar-breadcrumbs",
+      "components": [
+        {
+          "tag": "stellar-breadcrumb",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-breadcrumbs"
+          ]
+        },
+        {
+          "tag": "stellar-breadcrumbs",
+          "dependencies": [
+            "stellar-asset",
+            "stellar-breadcrumb"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "cbc6ornc.js",
+          "outputs": [
+            "dist/stellar/cbc6ornc.js",
+            "www/build/stellar/cbc6ornc.js"
+          ],
+          "size": 3774,
+          "gzip": 1192
+        },
+        {
+          "fileName": "cbc6ornc.es5.js",
+          "outputs": [
+            "dist/stellar/cbc6ornc.es5.js",
+            "www/build/stellar/cbc6ornc.es5.js"
+          ],
+          "size": 4312,
+          "gzip": 1293,
+          "target": "es5"
+        },
+        {
+          "fileName": "cbc6ornc.js",
+          "outputs": [
+            "dist/esm/es5/cbc6ornc.js"
+          ],
+          "size": 4269,
+          "gzip": 1262,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/breadcrumb/breadcrumb.js",
+        "dist/collection/components/breadcrumbs/breadcrumbs.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-button",
+      "components": [
+        {
+          "tag": "stellar-button",
+          "dependencies": [
+            "stellar-asset"
+          ],
+          "dependencyOf": [
+            "stellar-accordion",
+            "stellar-code-block",
+            "stellar-documentation-site",
+            "stellar-message",
+            "stellar-modal",
+            "stellar-step"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "rs7zi1si.js",
+          "outputs": [
+            "dist/stellar/rs7zi1si.js",
+            "www/build/stellar/rs7zi1si.js"
+          ],
+          "size": 6770,
+          "gzip": 1862
+        },
+        {
+          "fileName": "rs7zi1si.es5.js",
+          "outputs": [
+            "dist/stellar/rs7zi1si.es5.js",
+            "www/build/stellar/rs7zi1si.es5.js"
+          ],
+          "size": 8400,
+          "gzip": 2488,
+          "target": "es5"
+        },
+        {
+          "fileName": "rs7zi1si.js",
+          "outputs": [
+            "dist/esm/es5/rs7zi1si.js"
+          ],
+          "size": 8355,
+          "gzip": 2457,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/button/button.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-callout.stellar-code.stellar-code-block.stellar-documentation.stellar-grid",
+      "components": [
+        {
+          "tag": "stellar-callout",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-code-block"
+          ]
+        },
+        {
+          "tag": "stellar-code",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-code-block"
+          ]
+        },
+        {
+          "tag": "stellar-code-block",
+          "dependencies": [
+            "stellar-button",
+            "stellar-callout",
+            "stellar-card",
+            "stellar-code",
+            "stellar-tag"
+          ],
+          "dependencyOf": [
+            "stellar-documentation"
+          ]
+        },
+        {
+          "tag": "stellar-documentation",
+          "dependencies": [
+            "stellar-card",
+            "stellar-code-block"
+          ],
+          "dependencyOf": [
+            "stellar-asset-library",
+            "stellar-documentation-site"
+          ]
+        },
+        {
+          "tag": "stellar-grid",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-asset-library",
+            "stellar-documentation-site"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "arit9bvw.js",
+          "outputs": [
+            "dist/stellar/arit9bvw.js",
+            "www/build/stellar/arit9bvw.js"
+          ],
+          "size": 34643,
+          "gzip": 11324
+        },
+        {
+          "fileName": "arit9bvw.es5.js",
+          "outputs": [
+            "dist/stellar/arit9bvw.es5.js",
+            "www/build/stellar/arit9bvw.es5.js"
+          ],
+          "size": 37906,
+          "gzip": 11985,
+          "target": "es5"
+        },
+        {
+          "fileName": "arit9bvw.js",
+          "outputs": [
+            "dist/esm/es5/arit9bvw.js"
+          ],
+          "size": 38147,
+          "gzip": 12031,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/callout/callout.js",
+        "dist/collection/components/code-block/code-block.js",
+        "dist/collection/components/code/code.js",
+        "dist/collection/components/documentation/documentation.js",
+        "dist/collection/components/grid/grid.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-card",
+      "components": [
+        {
+          "tag": "stellar-card",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-code-block",
+            "stellar-color-library",
+            "stellar-documentation",
+            "stellar-documentation-site",
+            "stellar-modal"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "aygv8m66.js",
+          "outputs": [
+            "dist/stellar/aygv8m66.js",
+            "www/build/stellar/aygv8m66.js"
+          ],
+          "size": 6252,
+          "gzip": 1873
+        },
+        {
+          "fileName": "aygv8m66.es5.js",
+          "outputs": [
+            "dist/stellar/aygv8m66.es5.js",
+            "www/build/stellar/aygv8m66.es5.js"
+          ],
+          "size": 7871,
+          "gzip": 2482,
+          "target": "es5"
+        },
+        {
+          "fileName": "aygv8m66.js",
+          "outputs": [
+            "dist/esm/es5/aygv8m66.js"
+          ],
+          "size": 7847,
+          "gzip": 2462,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/card/card.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-chart.stellar-table",
+      "components": [
+        {
+          "tag": "stellar-chart",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-table"
+          ]
+        },
+        {
+          "tag": "stellar-table",
+          "dependencies": [
+            "stellar-chart"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "tpymwwea.js",
+          "outputs": [
+            "dist/stellar/tpymwwea.js",
+            "www/build/stellar/tpymwwea.js"
+          ],
+          "size": 222354,
+          "gzip": 77485
+        },
+        {
+          "fileName": "tpymwwea.es5.js",
+          "outputs": [
+            "dist/stellar/tpymwwea.es5.js",
+            "www/build/stellar/tpymwwea.es5.js"
+          ],
+          "size": 223186,
+          "gzip": 77571,
+          "target": "es5"
+        },
+        {
+          "fileName": "tpymwwea.js",
+          "outputs": [
+            "dist/esm/es5/tpymwwea.js"
+          ],
+          "size": 223687,
+          "gzip": 77696,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/chart/chart.js",
+        "dist/collection/components/table/table.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-color-library",
+      "components": [
+        {
+          "tag": "stellar-color-library",
+          "dependencies": [
+            "stellar-card",
+            "stellar-grid"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "0joghlsn.js",
+          "outputs": [
+            "dist/stellar/0joghlsn.js",
+            "www/build/stellar/0joghlsn.js"
+          ],
+          "size": 1238,
+          "gzip": 543
+        },
+        {
+          "fileName": "0joghlsn.es5.js",
+          "outputs": [
+            "dist/stellar/0joghlsn.es5.js",
+            "www/build/stellar/0joghlsn.es5.js"
+          ],
+          "size": 1550,
+          "gzip": 635,
+          "target": "es5"
+        },
+        {
+          "fileName": "0joghlsn.js",
+          "outputs": [
+            "dist/esm/es5/0joghlsn.js"
+          ],
+          "size": 1509,
+          "gzip": 607,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/color-library/color-library.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-color-picker.stellar-theme-preview",
+      "components": [
+        {
+          "tag": "stellar-color-picker",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-theme-preview"
+          ]
+        },
+        {
+          "tag": "stellar-theme-preview",
+          "dependencies": [
+            "stellar-asset",
+            "stellar-color-picker",
+            "stellar-grid"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "pticknwb.js",
+          "outputs": [
+            "dist/stellar/pticknwb.js",
+            "www/build/stellar/pticknwb.js"
+          ],
+          "size": 8002,
+          "gzip": 1760
+        },
+        {
+          "fileName": "pticknwb.es5.js",
+          "outputs": [
+            "dist/stellar/pticknwb.es5.js",
+            "www/build/stellar/pticknwb.es5.js"
+          ],
+          "size": 8810,
+          "gzip": 1866,
+          "target": "es5"
+        },
+        {
+          "fileName": "pticknwb.js",
+          "outputs": [
+            "dist/esm/es5/pticknwb.js"
+          ],
+          "size": 8813,
+          "gzip": 1843,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/color-picker/color-picker.js",
+        "dist/collection/components/theme-preview/theme-preview.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-comment",
+      "components": [
+        {
+          "tag": "stellar-comment",
+          "dependencies": [],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "r9wlbhdg.js",
+          "outputs": [
+            "dist/stellar/r9wlbhdg.js",
+            "www/build/stellar/r9wlbhdg.js"
+          ],
+          "size": 1476,
+          "gzip": 657
+        },
+        {
+          "fileName": "r9wlbhdg.es5.js",
+          "outputs": [
+            "dist/stellar/r9wlbhdg.es5.js",
+            "www/build/stellar/r9wlbhdg.es5.js"
+          ],
+          "size": 1814,
+          "gzip": 757,
+          "target": "es5"
+        },
+        {
+          "fileName": "r9wlbhdg.js",
+          "outputs": [
+            "dist/esm/es5/r9wlbhdg.js"
+          ],
+          "size": 1744,
+          "gzip": 722,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/comment/comment.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-comments",
+      "components": [
+        {
+          "tag": "stellar-comments",
+          "dependencies": [],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "x3zjmdf3.js",
+          "outputs": [
+            "dist/stellar/x3zjmdf3.js",
+            "www/build/stellar/x3zjmdf3.js"
+          ],
+          "size": 436,
+          "gzip": 258
+        },
+        {
+          "fileName": "x3zjmdf3.es5.js",
+          "outputs": [
+            "dist/stellar/x3zjmdf3.es5.js",
+            "www/build/stellar/x3zjmdf3.es5.js"
+          ],
+          "size": 806,
+          "gzip": 362,
+          "target": "es5"
+        },
+        {
+          "fileName": "x3zjmdf3.js",
+          "outputs": [
+            "dist/esm/es5/x3zjmdf3.js"
+          ],
+          "size": 738,
+          "gzip": 327,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/comments/comments.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-dropdown",
+      "components": [
+        {
+          "tag": "stellar-dropdown",
+          "dependencies": [
+            "stellar-asset",
+            "stellar-blur"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "xou5mo8d.js",
+          "outputs": [
+            "dist/stellar/xou5mo8d.js",
+            "www/build/stellar/xou5mo8d.js"
+          ],
+          "size": 9072,
+          "gzip": 2244
+        },
+        {
+          "fileName": "xou5mo8d.es5.js",
+          "outputs": [
+            "dist/stellar/xou5mo8d.es5.js",
+            "www/build/stellar/xou5mo8d.es5.js"
+          ],
+          "size": 9452,
+          "gzip": 2340,
+          "target": "es5"
+        },
+        {
+          "fileName": "xou5mo8d.js",
+          "outputs": [
+            "dist/esm/es5/xou5mo8d.js"
+          ],
+          "size": 9437,
+          "gzip": 2312,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/dropdown/dropdown.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-form",
+      "components": [
+        {
+          "tag": "stellar-form",
+          "dependencies": [],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "j4jx5ecz.js",
+          "outputs": [
+            "dist/stellar/j4jx5ecz.js",
+            "www/build/stellar/j4jx5ecz.js"
+          ],
+          "size": 1059,
+          "gzip": 493
+        },
+        {
+          "fileName": "j4jx5ecz.es5.js",
+          "outputs": [
+            "dist/stellar/j4jx5ecz.es5.js",
+            "www/build/stellar/j4jx5ecz.es5.js"
+          ],
+          "size": 1405,
+          "gzip": 593,
+          "target": "es5"
+        },
+        {
+          "fileName": "j4jx5ecz.js",
+          "outputs": [
+            "dist/esm/es5/j4jx5ecz.js"
+          ],
+          "size": 1329,
+          "gzip": 564,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/form/form.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-group.stellar-group-overflow",
+      "components": [
+        {
+          "tag": "stellar-group",
+          "dependencies": [
+            "stellar-group-overflow"
+          ],
+          "dependencyOf": []
+        },
+        {
+          "tag": "stellar-group-overflow",
+          "dependencies": [
+            "stellar-tooltip"
+          ],
+          "dependencyOf": [
+            "stellar-group"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "hdxsjmls.js",
+          "outputs": [
+            "dist/stellar/hdxsjmls.js",
+            "www/build/stellar/hdxsjmls.js"
+          ],
+          "size": 4121,
+          "gzip": 1314
+        },
+        {
+          "fileName": "hdxsjmls.es5.js",
+          "outputs": [
+            "dist/stellar/hdxsjmls.es5.js",
+            "www/build/stellar/hdxsjmls.es5.js"
+          ],
+          "size": 4714,
+          "gzip": 1410,
+          "target": "es5"
+        },
+        {
+          "fileName": "hdxsjmls.js",
+          "outputs": [
+            "dist/esm/es5/hdxsjmls.js"
+          ],
+          "size": 4665,
+          "gzip": 1382,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/group-overflow/group-overflow.js",
+        "dist/collection/components/group/group.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-header.stellar-progress",
+      "components": [
+        {
+          "tag": "stellar-header",
+          "dependencies": [
+            "stellar-progress",
+            "stellar-starscape"
+          ],
+          "dependencyOf": []
+        },
+        {
+          "tag": "stellar-progress",
+          "dependencies": [
+            "stellar-blur"
+          ],
+          "dependencyOf": [
+            "stellar-header"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "hzgyjmg3.js",
+          "outputs": [
+            "dist/stellar/hzgyjmg3.js",
+            "www/build/stellar/hzgyjmg3.js"
+          ],
+          "size": 3742,
+          "gzip": 1378
+        },
+        {
+          "fileName": "hzgyjmg3.es5.js",
+          "outputs": [
+            "dist/stellar/hzgyjmg3.es5.js",
+            "www/build/stellar/hzgyjmg3.es5.js"
+          ],
+          "size": 4324,
+          "gzip": 1480,
+          "target": "es5"
+        },
+        {
+          "fileName": "hzgyjmg3.js",
+          "outputs": [
+            "dist/esm/es5/hzgyjmg3.js"
+          ],
+          "size": 4294,
+          "gzip": 1450,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/header/header.js",
+        "dist/collection/components/progress/progress.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-image",
+      "components": [
+        {
+          "tag": "stellar-image",
+          "dependencies": [],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "x5b3kvxr.js",
+          "outputs": [
+            "dist/stellar/x5b3kvxr.js",
+            "www/build/stellar/x5b3kvxr.js"
+          ],
+          "size": 18346,
+          "gzip": 6401
+        },
+        {
+          "fileName": "x5b3kvxr.sc.js",
+          "outputs": [
+            "dist/stellar/x5b3kvxr.sc.js",
+            "www/build/stellar/x5b3kvxr.sc.js"
+          ],
+          "size": 19045,
+          "gzip": 6433,
+          "scopedStyles": true
+        },
+        {
+          "fileName": "x5b3kvxr.es5.js",
+          "outputs": [
+            "dist/stellar/x5b3kvxr.es5.js",
+            "www/build/stellar/x5b3kvxr.es5.js"
+          ],
+          "size": 18995,
+          "gzip": 6467,
+          "target": "es5"
+        },
+        {
+          "fileName": "x5b3kvxr.sc.es5.js",
+          "outputs": [
+            "dist/stellar/x5b3kvxr.sc.es5.js",
+            "www/build/stellar/x5b3kvxr.sc.es5.js"
+          ],
+          "size": 19694,
+          "gzip": 6499,
+          "target": "es5",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "x5b3kvxr.js",
+          "outputs": [
+            "dist/esm/es5/x5b3kvxr.js"
+          ],
+          "size": 19478,
+          "gzip": 6603,
+          "target": "es5"
+        },
+        {
+          "fileName": "x5b3kvxr.sc.js",
+          "outputs": [
+            "dist/esm/es5/x5b3kvxr.sc.js"
+          ],
+          "size": 20177,
+          "gzip": 6634,
+          "target": "es5",
+          "scopedStyles": true
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/image/image.js"
+      ],
+      "encapsulations": [
+        "shadow"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-input",
+      "components": [
+        {
+          "tag": "stellar-input",
+          "dependencies": [
+            "copy-wrap",
+            "stellar-asset"
+          ],
+          "dependencyOf": [
+            "stellar-pagination",
+            "stellar-stripe"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "r04xzzqv.js",
+          "outputs": [
+            "dist/stellar/r04xzzqv.js",
+            "www/build/stellar/r04xzzqv.js"
+          ],
+          "size": 908524,
+          "gzip": 421029
+        },
+        {
+          "fileName": "r04xzzqv.es5.js",
+          "outputs": [
+            "dist/stellar/r04xzzqv.es5.js",
+            "www/build/stellar/r04xzzqv.es5.js"
+          ],
+          "size": 913435,
+          "gzip": 421299,
+          "target": "es5"
+        },
+        {
+          "fileName": "r04xzzqv.js",
+          "outputs": [
+            "dist/esm/es5/r04xzzqv.js"
+          ],
+          "size": 917275,
+          "gzip": 422055,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/input/input.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-item",
+      "components": [
+        {
+          "tag": "stellar-item",
+          "dependencies": [
+            "stellar-asset"
+          ],
+          "dependencyOf": [
+            "stellar-documentation-site",
+            "stellar-list",
+            "stellar-select"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "nt31iuqo.js",
+          "outputs": [
+            "dist/stellar/nt31iuqo.js",
+            "www/build/stellar/nt31iuqo.js"
+          ],
+          "size": 4403,
+          "gzip": 1416
+        },
+        {
+          "fileName": "nt31iuqo.es5.js",
+          "outputs": [
+            "dist/stellar/nt31iuqo.es5.js",
+            "www/build/stellar/nt31iuqo.es5.js"
+          ],
+          "size": 5012,
+          "gzip": 1544,
+          "target": "es5"
+        },
+        {
+          "fileName": "nt31iuqo.js",
+          "outputs": [
+            "dist/esm/es5/nt31iuqo.js"
+          ],
+          "size": 4936,
+          "gzip": 1512,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/item/item.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-list",
+      "components": [
+        {
+          "tag": "stellar-list",
+          "dependencies": [
+            "stellar-item"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "gkgebix5.js",
+          "outputs": [
+            "dist/stellar/gkgebix5.js",
+            "www/build/stellar/gkgebix5.js"
+          ],
+          "size": 8098,
+          "gzip": 3037
+        },
+        {
+          "fileName": "gkgebix5.es5.js",
+          "outputs": [
+            "dist/stellar/gkgebix5.es5.js",
+            "www/build/stellar/gkgebix5.es5.js"
+          ],
+          "size": 8708,
+          "gzip": 3101,
+          "target": "es5"
+        },
+        {
+          "fileName": "gkgebix5.js",
+          "outputs": [
+            "dist/esm/es5/gkgebix5.js"
+          ],
+          "size": 8727,
+          "gzip": 3102,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/list/list.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-modal",
+      "components": [
+        {
+          "tag": "stellar-modal",
+          "dependencies": [
+            "stellar-button",
+            "stellar-card"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "qoxviiwe.js",
+          "outputs": [
+            "dist/stellar/qoxviiwe.js",
+            "www/build/stellar/qoxviiwe.js"
+          ],
+          "size": 1243,
+          "gzip": 558
+        },
+        {
+          "fileName": "qoxviiwe.es5.js",
+          "outputs": [
+            "dist/stellar/qoxviiwe.es5.js",
+            "www/build/stellar/qoxviiwe.es5.js"
+          ],
+          "size": 1642,
+          "gzip": 665,
+          "target": "es5"
+        },
+        {
+          "fileName": "qoxviiwe.js",
+          "outputs": [
+            "dist/esm/es5/qoxviiwe.js"
+          ],
+          "size": 1568,
+          "gzip": 632,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/modal/modal.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-modal-controller.stellar-overlay",
+      "components": [
+        {
+          "tag": "stellar-modal-controller",
+          "dependencies": [
+            "stellar-overlay"
+          ],
+          "dependencyOf": []
+        },
+        {
+          "tag": "stellar-overlay",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-modal-controller"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "kdcypjcc.js",
+          "outputs": [
+            "dist/stellar/kdcypjcc.js",
+            "www/build/stellar/kdcypjcc.js"
+          ],
+          "size": 3759,
+          "gzip": 1314
+        },
+        {
+          "fileName": "kdcypjcc.es5.js",
+          "outputs": [
+            "dist/stellar/kdcypjcc.es5.js",
+            "www/build/stellar/kdcypjcc.es5.js"
+          ],
+          "size": 5867,
+          "gzip": 2034,
+          "target": "es5"
+        },
+        {
+          "fileName": "kdcypjcc.js",
+          "outputs": [
+            "dist/esm/es5/kdcypjcc.js"
+          ],
+          "size": 5850,
+          "gzip": 2017,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/modal-controller/modal-controller.js",
+        "dist/collection/components/overlay/overlay.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-pagination",
+      "components": [
+        {
+          "tag": "stellar-pagination",
+          "dependencies": [
+            "stellar-asset",
+            "stellar-blur",
+            "stellar-input"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "ja14pllq.js",
+          "outputs": [
+            "dist/stellar/ja14pllq.js",
+            "www/build/stellar/ja14pllq.js"
+          ],
+          "size": 8028,
+          "gzip": 2206
+        },
+        {
+          "fileName": "ja14pllq.es5.js",
+          "outputs": [
+            "dist/stellar/ja14pllq.es5.js",
+            "www/build/stellar/ja14pllq.es5.js"
+          ],
+          "size": 8928,
+          "gzip": 2327,
+          "target": "es5"
+        },
+        {
+          "fileName": "ja14pllq.js",
+          "outputs": [
+            "dist/esm/es5/ja14pllq.js"
+          ],
+          "size": 8912,
+          "gzip": 2298,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/pagination/pagination.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-parallax",
+      "components": [
+        {
+          "tag": "stellar-parallax",
+          "dependencies": [],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "krsbg8y5.js",
+          "outputs": [
+            "dist/stellar/krsbg8y5.js",
+            "www/build/stellar/krsbg8y5.js"
+          ],
+          "size": 4024,
+          "gzip": 1669
+        },
+        {
+          "fileName": "krsbg8y5.es5.js",
+          "outputs": [
+            "dist/stellar/krsbg8y5.es5.js",
+            "www/build/stellar/krsbg8y5.es5.js"
+          ],
+          "size": 4416,
+          "gzip": 1754,
+          "target": "es5"
+        },
+        {
+          "fileName": "krsbg8y5.js",
+          "outputs": [
+            "dist/esm/es5/krsbg8y5.js"
+          ],
+          "size": 4409,
+          "gzip": 1738,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/parallax/parallax.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-parallax-section",
+      "components": [
+        {
+          "tag": "stellar-parallax-section",
+          "dependencies": [],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "9tkcbs07.js",
+          "outputs": [
+            "dist/stellar/9tkcbs07.js",
+            "www/build/stellar/9tkcbs07.js"
+          ],
+          "size": 968,
+          "gzip": 456
+        },
+        {
+          "fileName": "9tkcbs07.es5.js",
+          "outputs": [
+            "dist/stellar/9tkcbs07.es5.js",
+            "www/build/stellar/9tkcbs07.es5.js"
+          ],
+          "size": 1328,
+          "gzip": 557,
+          "target": "es5"
+        },
+        {
+          "fileName": "9tkcbs07.js",
+          "outputs": [
+            "dist/esm/es5/9tkcbs07.js"
+          ],
+          "size": 1274,
+          "gzip": 525,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/parallax-section/parallax-section.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-quick-actions",
+      "components": [
+        {
+          "tag": "stellar-quick-actions",
+          "dependencies": [
+            "stellar-asset"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "fyhxdzlz.js",
+          "outputs": [
+            "dist/stellar/fyhxdzlz.js",
+            "www/build/stellar/fyhxdzlz.js"
+          ],
+          "size": 2462,
+          "gzip": 889
+        },
+        {
+          "fileName": "fyhxdzlz.es5.js",
+          "outputs": [
+            "dist/stellar/fyhxdzlz.es5.js",
+            "www/build/stellar/fyhxdzlz.es5.js"
+          ],
+          "size": 2832,
+          "gzip": 972,
+          "target": "es5"
+        },
+        {
+          "fileName": "fyhxdzlz.js",
+          "outputs": [
+            "dist/esm/es5/fyhxdzlz.js"
+          ],
+          "size": 2799,
+          "gzip": 944,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/quick-actions/quick-actions.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-slide",
+      "components": [
+        {
+          "tag": "stellar-slide",
+          "dependencies": [
+            "stellar-blur"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "6igph3jw.js",
+          "outputs": [
+            "dist/stellar/6igph3jw.js",
+            "www/build/stellar/6igph3jw.js"
+          ],
+          "size": 935,
+          "gzip": 447
+        },
+        {
+          "fileName": "6igph3jw.es5.js",
+          "outputs": [
+            "dist/stellar/6igph3jw.es5.js",
+            "www/build/stellar/6igph3jw.es5.js"
+          ],
+          "size": 1273,
+          "gzip": 549,
+          "target": "es5"
+        },
+        {
+          "fileName": "6igph3jw.js",
+          "outputs": [
+            "dist/esm/es5/6igph3jw.js"
+          ],
+          "size": 1199,
+          "gzip": 513,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/slide/slide.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-slides",
+      "components": [
+        {
+          "tag": "stellar-slides",
+          "dependencies": [],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "qeuaotjo.js",
+          "outputs": [
+            "dist/stellar/qeuaotjo.js",
+            "www/build/stellar/qeuaotjo.js"
+          ],
+          "size": 147676,
+          "gzip": 35046
+        },
+        {
+          "fileName": "qeuaotjo.es5.js",
+          "outputs": [
+            "dist/stellar/qeuaotjo.es5.js",
+            "www/build/stellar/qeuaotjo.es5.js"
+          ],
+          "size": 148565,
+          "gzip": 35187,
+          "target": "es5"
+        },
+        {
+          "fileName": "qeuaotjo.js",
+          "outputs": [
+            "dist/esm/es5/qeuaotjo.js"
+          ],
+          "size": 148593,
+          "gzip": 35165,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/slides/slides.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-starscape",
+      "components": [
+        {
+          "tag": "stellar-starscape",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-documentation-site",
+            "stellar-header"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "wcbyukwt.js",
+          "outputs": [
+            "dist/stellar/wcbyukwt.js",
+            "www/build/stellar/wcbyukwt.js"
+          ],
+          "size": 2069,
+          "gzip": 1168
+        },
+        {
+          "fileName": "wcbyukwt.es5.js",
+          "outputs": [
+            "dist/stellar/wcbyukwt.es5.js",
+            "www/build/stellar/wcbyukwt.es5.js"
+          ],
+          "size": 2447,
+          "gzip": 1258,
+          "target": "es5"
+        },
+        {
+          "fileName": "wcbyukwt.js",
+          "outputs": [
+            "dist/esm/es5/wcbyukwt.js"
+          ],
+          "size": 2377,
+          "gzip": 1225,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/starscape/starscape.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-step",
+      "components": [
+        {
+          "tag": "stellar-step",
+          "dependencies": [
+            "stellar-button"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "pxrjqp2j.js",
+          "outputs": [
+            "dist/stellar/pxrjqp2j.js",
+            "www/build/stellar/pxrjqp2j.js"
+          ],
+          "size": 2672,
+          "gzip": 1032
+        },
+        {
+          "fileName": "pxrjqp2j.es5.js",
+          "outputs": [
+            "dist/stellar/pxrjqp2j.es5.js",
+            "www/build/stellar/pxrjqp2j.es5.js"
+          ],
+          "size": 3150,
+          "gzip": 1138,
+          "target": "es5"
+        },
+        {
+          "fileName": "pxrjqp2j.js",
+          "outputs": [
+            "dist/esm/es5/pxrjqp2j.js"
+          ],
+          "size": 3105,
+          "gzip": 1106,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/step/step.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-steps",
+      "components": [
+        {
+          "tag": "stellar-steps",
+          "dependencies": [],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "76dx1qm7.js",
+          "outputs": [
+            "dist/stellar/76dx1qm7.js",
+            "www/build/stellar/76dx1qm7.js"
+          ],
+          "size": 1098,
+          "gzip": 521
+        },
+        {
+          "fileName": "76dx1qm7.es5.js",
+          "outputs": [
+            "dist/stellar/76dx1qm7.es5.js",
+            "www/build/stellar/76dx1qm7.es5.js"
+          ],
+          "size": 1496,
+          "gzip": 629,
+          "target": "es5"
+        },
+        {
+          "fileName": "76dx1qm7.js",
+          "outputs": [
+            "dist/esm/es5/76dx1qm7.js"
+          ],
+          "size": 1422,
+          "gzip": 592,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/steps/steps.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-stripe",
+      "components": [
+        {
+          "tag": "stellar-stripe",
+          "dependencies": [
+            "stellar-grid",
+            "stellar-input"
+          ],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "9kjgmtb3.js",
+          "outputs": [
+            "dist/stellar/9kjgmtb3.js",
+            "www/build/stellar/9kjgmtb3.js"
+          ],
+          "size": 5342,
+          "gzip": 1925
+        },
+        {
+          "fileName": "9kjgmtb3.es5.js",
+          "outputs": [
+            "dist/stellar/9kjgmtb3.es5.js",
+            "www/build/stellar/9kjgmtb3.es5.js"
+          ],
+          "size": 7097,
+          "gzip": 2579,
+          "target": "es5"
+        },
+        {
+          "fileName": "9kjgmtb3.js",
+          "outputs": [
+            "dist/esm/es5/9kjgmtb3.js"
+          ],
+          "size": 7068,
+          "gzip": 2569,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/stripe/stripe.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-switch",
+      "components": [
+        {
+          "tag": "stellar-switch",
+          "dependencies": [],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "cph36cah.js",
+          "outputs": [
+            "dist/stellar/cph36cah.js",
+            "www/build/stellar/cph36cah.js"
+          ],
+          "size": 3660,
+          "gzip": 1065
+        },
+        {
+          "fileName": "cph36cah.es5.js",
+          "outputs": [
+            "dist/stellar/cph36cah.es5.js",
+            "www/build/stellar/cph36cah.es5.js"
+          ],
+          "size": 4014,
+          "gzip": 1170,
+          "target": "es5"
+        },
+        {
+          "fileName": "cph36cah.js",
+          "outputs": [
+            "dist/esm/es5/cph36cah.js"
+          ],
+          "size": 3942,
+          "gzip": 1135,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/switch/switch.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-tag",
+      "components": [
+        {
+          "tag": "stellar-tag",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-code-block",
+            "stellar-documentation-site",
+            "stellar-tab",
+            "stellar-toggle-option"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "i0a3mdfn.js",
+          "outputs": [
+            "dist/stellar/i0a3mdfn.js",
+            "www/build/stellar/i0a3mdfn.js"
+          ],
+          "size": 1569,
+          "gzip": 689
+        },
+        {
+          "fileName": "i0a3mdfn.es5.js",
+          "outputs": [
+            "dist/stellar/i0a3mdfn.es5.js",
+            "www/build/stellar/i0a3mdfn.es5.js"
+          ],
+          "size": 1900,
+          "gzip": 780,
+          "target": "es5"
+        },
+        {
+          "fileName": "i0a3mdfn.js",
+          "outputs": [
+            "dist/esm/es5/i0a3mdfn.js"
+          ],
+          "size": 1849,
+          "gzip": 749,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/tag/tag.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-tooltip",
+      "components": [
+        {
+          "tag": "stellar-tooltip",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-avatar",
+            "stellar-group-overflow"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "y6cfpwfl.js",
+          "outputs": [
+            "dist/stellar/y6cfpwfl.js",
+            "www/build/stellar/y6cfpwfl.js"
+          ],
+          "size": 6072,
+          "gzip": 1118
+        },
+        {
+          "fileName": "y6cfpwfl.es5.js",
+          "outputs": [
+            "dist/stellar/y6cfpwfl.es5.js",
+            "www/build/stellar/y6cfpwfl.es5.js"
+          ],
+          "size": 6388,
+          "gzip": 1214,
+          "target": "es5"
+        },
+        {
+          "fileName": "y6cfpwfl.js",
+          "outputs": [
+            "dist/esm/es5/y6cfpwfl.js"
+          ],
+          "size": 6318,
+          "gzip": 1181,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/tooltip/tooltip.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
+    }
+  ],
+  "sourceGraph": {
+    "src/components/accordion/accordion.tsx": [
+      "css-custom-properties",
+      "src/global/helpers.ts"
+    ],
+    "src/components/animate-text/animate-text.tsx": [
+      "src/global/helpers.ts"
+    ],
+    "src/components/asset-library/asset-library.tsx": [],
+    "src/components/asset/asset.tsx": [],
+    "src/components/avatar/avatar.tsx": [
+      "css-custom-properties",
+      "src/global/colors.ts",
+      "title-case",
+      "validator/lib/isHexColor"
+    ],
+    "src/components/blur/blur.tsx": [
+      "css-custom-properties"
+    ],
+    "src/components/breadcrumb/breadcrumb.tsx": [],
+    "src/components/breadcrumbs/breadcrumbs.tsx": [],
+    "src/components/button/button.tsx": [],
+    "src/components/callout/callout.tsx": [],
+    "src/components/card/card.tsx": [
+      "css-custom-properties"
+    ],
+    "src/components/chart/chart.tsx": [
+      "deepmerge",
+      "highcharts",
+      "highcharts/modules/data",
+      "src/components/chart/options.ts"
+    ],
+    "src/components/chart/options.ts": [],
+    "src/components/code-block/code-block.tsx": [],
+    "src/components/code/code.tsx": [
+      "ez-clipboard",
+      "prismjs",
+      "prismjs/components/prism-bash",
+      "prismjs/components/prism-typescript",
+      "prismjs/plugins/line-numbers/prism-line-numbers.js",
+      "prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js"
+    ],
+    "src/components/color-library/color-library.tsx": [
+      "src/global/colors.ts"
+    ],
+    "src/components/color-picker/color-picker.tsx": [
+      "css-custom-properties",
+      "src/global/colors.ts"
+    ],
+    "src/components/comment/comment.tsx": [],
+    "src/components/comments/comments.tsx": [],
+    "src/components/content/content.tsx": [
+      "src/global/helpers.ts"
+    ],
+    "src/components/copy-wrap/copy-wrap.tsx": [],
+    "src/components/documentation-site/documentation-site.tsx": [],
+    "src/components/documentation/documentation.tsx": [],
+    "src/components/dropdown/dropdown.tsx": [
+      "easing",
+      "focus-within"
+    ],
+    "src/components/footer/footer.tsx": [],
+    "src/components/form/form.tsx": [],
+    "src/components/grid/grid.tsx": [
+      "eq.js"
+    ],
+    "src/components/group-overflow/group-overflow.tsx": [],
+    "src/components/group/group.tsx": [],
+    "src/components/header/header.tsx": [],
+    "src/components/image/image.tsx": [
+      "css-custom-properties",
+      "medium-zoom",
+      "src/components/image/vendor/colorThief.js"
+    ],
+    "src/components/input/input.tsx": [
+      "src/components/input/lib/helpers.ts",
+      "src/components/input/lib/validator.ts",
+      "tokenfield",
+      "zxcvbn"
+    ],
+    "src/components/input/lib/helpers.ts": [],
+    "src/components/input/lib/validator.ts": [
+      "validator"
+    ],
+    "src/components/item/item.tsx": [],
+    "src/components/layout/layout.tsx": [
+      "eq.js"
+    ],
+    "src/components/list/list.tsx": [
+      "hyperlist"
+    ],
+    "src/components/markdown/markdown.tsx": [
+      "showdown"
+    ],
+    "src/components/message/message.tsx": [],
+    "src/components/modal-controller/modal-controller.tsx": [],
+    "src/components/modal/modal.tsx": [],
+    "src/components/overlay/overlay.tsx": [],
+    "src/components/pagination/pagination.tsx": [
+      "css-custom-properties",
+      "easing"
+    ],
+    "src/components/parallax-section/parallax-section.tsx": [],
+    "src/components/parallax/parallax.tsx": [
+      "rellax"
+    ],
+    "src/components/progress/progress.tsx": [
+      "easing"
+    ],
+    "src/components/quick-actions/quick-actions.tsx": [
+      "css-custom-properties"
+    ],
+    "src/components/select/select.tsx": [
+      "easing"
+    ],
+    "src/components/skeleton-img/skeleton-img.tsx": [
+      "css-custom-properties"
+    ],
+    "src/components/skeleton-text/skeleton-text.tsx": [
+      "css-custom-properties"
+    ],
+    "src/components/slide/slide.tsx": [],
+    "src/components/slides/slides.tsx": [
+      "src/components/slides/vendor/swiper.js",
+      "src/global/helpers.ts"
+    ],
+    "src/components/starscape/starscape.tsx": [
+      "css-custom-properties"
+    ],
+    "src/components/step/step.tsx": [
+      "parent-node-selector"
+    ],
+    "src/components/steps/steps.tsx": [],
+    "src/components/stripe/config.ts": [],
+    "src/components/stripe/stripe.tsx": [
+      "src/components/stripe/config.ts"
+    ],
+    "src/components/switch/switch.tsx": [],
+    "src/components/tab/tab.tsx": [
+      "css-custom-properties",
+      "parent-node-selector",
+      "src/global/helpers.ts"
+    ],
+    "src/components/table/table.tsx": [],
+    "src/components/tabs/tabs.tsx": [],
+    "src/components/tag/tag.tsx": [
+      "css-custom-properties"
+    ],
+    "src/components/theme-preview/theme-preview.tsx": [],
+    "src/components/toggle-option/toggle-option.tsx": [
+      "easing"
+    ],
+    "src/components/toggle/toggle.tsx": [],
+    "src/components/tooltip/tooltip.tsx": [],
+    "src/components/unit/unit.tsx": [
+      "convert-units",
+      "round-to"
+    ],
+    "src/global/colors.ts": [],
+    "src/global/helpers.ts": [
+      "easing"
+    ]
+  },
+  "collections": [
+    {
+      "name": "ionicons",
+      "source": "node_modules/ionicons",
+      "tags": [
+        "ion-icon"
+      ]
+    }
+  ]
+}

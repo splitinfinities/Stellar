@@ -1,0 +1,99 @@
+{
+  "name": "@stellar-design/core",
+  "version": "0.0.0",
+  "description": "Stellar is a beautiful, complete design system for your next product 🌌",
+  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "dev:build": "stencil build",
+    "dev:runOld": "sd concurrent \"stencil build --dev --es5 --watch\" \"stencil-dev-server\"",
+    "dev:run": "stencil build --dev --watch --serve",
+    "dev:run-prod": "stencil build --prod --watch --serve",
+    "dev:serve": "stencil-dev-server",
+    "start": "npm run dev:runOld",
+    "test:run": "jest",
+    "test:watch": "jest --watch",
+    "sketch:accordions": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/accordion.html accordion",
+    "sketch:assets": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/assets.html assets",
+    "sketch:avatar": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/avatar.html avatar",
+    "sketch:blur": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/blur.html blur",
+    "sketch:button": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/button.html button",
+    "sketch:breadcrumb": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/breadcrumb.html breadcrumb",
+    "sketch:colors": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/colors.html colors",
+    "sketch:copy-wrap": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/copy-wrap.html copy-wrap",
+    "sketch:design-principals": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/design-principals.html design-principals",
+    "sketch:functional-css": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/functional-css.html functional-css",
+    "sketch:group": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/group.html group",
+    "sketch:index": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/index.html page-home",
+    "sketch:input": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/input.html input",
+    "sketch:markdown": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/markdown.html markdown",
+    "sketch:tag": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/tag.html tag",
+    "sketch:tab": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/tab.html tab",
+    "sketch:theming": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/theming.html theming",
+    "sketch:tooltip": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/tooltip.html tooltip"
+  },
+  "dependencies": {
+    "@brainly/html-sketchapp": "^3.2.0",
+    "@shopify/draggable": "^1.0.0-beta.7",
+    "@stencil/postcss": "0.0.4",
+    "@stencil/sass": "^0.0.5",
+    "convert-units": "^2.3.4",
+    "css-custom-properties": "^0.1.0",
+    "deepmerge": "^2.1.1",
+    "easing": "^1.1.2",
+    "eq.js": "^1.9.0",
+    "ez-clipboard": "^1.0.0",
+    "focus-within": "^2.0.0",
+    "highcharts": "^6.1.0",
+    "hyperlist": "^1.0.0-beta",
+    "ionicons": "^4.1.2",
+    "medium-zoom": "^0.4.0",
+    "node-vibrant": "^3.0.0",
+    "parent-node-selector": "^0.1.1",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-design-token-function": "^1.0.0",
+    "prismjs": "^1.14.0",
+    "rellax": "^1.6.2",
+    "round-to": "^3.0.0",
+    "showdown": "^1.8.6",
+    "title-case": "^2.1.1",
+    "tokenfield": "^0.9.8",
+    "validator": "^10.2.0",
+    "zxcvbn": "^4.4.2"
+  },
+  "devDependencies": {
+    "@stencil/core": "^0.9.7",
+    "@stencil/dev-server": "latest",
+    "@stencil/utils": "latest",
+    "@types/jest": "^21.1.1",
+    "jest": "^21.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/splitinfinities/stellar.git"
+  },
+  "author": "Split Infinities, William M. Riley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/splitinfinities/stellar"
+  },
+  "homepage": "https://github.com/splitinfinities/stellar",
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+/*
+
+   CODE
+
+*/
+
+.pre {
+  overflow: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
+}

@@ -1,0 +1,82 @@
+copy-wrap {
+  display: block;
+}
+
+copy-wrap[align="left"] {
+  text-align: left;
+}
+
+copy-wrap[align="left"] > * {
+  margin-right: auto;
+}
+
+copy-wrap[align="center"] {
+  text-align: center;
+}
+
+copy-wrap[align="center"] > * {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+copy-wrap[align="right"] {
+  text-align: right;
+}
+
+copy-wrap[align="right"] > * {
+  margin-left: auto;
+}
+
+copy-wrap stellar-button {
+  display: inline-block;
+}
+
+copy-wrap > img,
+copy-wrap stellar-code-block {
+  margin-bottom: 2rem;
+}
+
+copy-wrap > *:last-child {
+  margin-bottom: 0;
+}
+
+copy-wrap h1,
+copy-wrap h2,
+copy-wrap h3,
+copy-wrap h4,
+copy-wrap h5,
+copy-wrap h6,
+copy-wrap p {
+  margin-bottom: .25em;
+  max-width: 25em;
+}
+
+copy-wrap p + h1,
+copy-wrap p + h2,
+copy-wrap p + h3,
+copy-wrap p + h4,
+copy-wrap p + h5,
+copy-wrap p + h6  {
+  margin-top: 1em;
+}
+
+copy-wrap[full] * {
+  max-width: 100%;
+}
+
+copy-wrap + copy-wrap,
+copy-wrap + stellar-grid,
+stellar-grid + copy-wrap {
+  margin-top: 4rem;
+}
+
+copy-wrap ul,
+copy-wrap ol {
+  margin: .25em 0;
+  display: inline-block;
+  text-align: left;
+}
+
+copy-wrap li {
+  margin-top: 0.5em;
+}

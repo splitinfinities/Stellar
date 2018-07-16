@@ -1,0 +1,61 @@
+stellar-modal-controller {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+}
+
+stellar-modal-controller[state="empty"] {
+  display: none;
+}
+
+stellar-modal-controller .modal-controller-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 0.2s ease 0s;
+  z-index: 6;
+  margin: 0 auto;
+  padding: 5vw;
+  width: 90%;
+  max-width: 1000px;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+stellar-modal-controller[size="small"] .modal-controller-wrapper {
+  max-width: 590px;
+}
+
+@media (min-width: 1150px) {
+  stellar-modal-controller .modal-controller-wrapper {
+    padding: 60px;
+  }
+}
+
+stellar-modal-controller stellar-modal,
+stellar-modal-controller stellar-overlay {
+  transition: all 300ms ease-in-out 0s;
+  opacity: 0;
+}
+
+stellar-modal-controller[state="opening"] stellar-modal,
+stellar-modal-controller[state="opening"] stellar-overlay,
+stellar-modal-controller[state="open"] stellar-modal,
+stellar-modal-controller[state="open"] stellar-overlay {
+  display: block;
+  opacity: 1;
+}
+
+stellar-modal-controller[state="closing"] stellar-modal,
+stellar-modal-controller[state="closing"] stellar-overlay {
+  display: block;
+  opacity: 0;
+}

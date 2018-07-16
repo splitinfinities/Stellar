@@ -1,0 +1,55 @@
+/*
+
+  STYLES
+
+  Add custom styles here.
+
+*/
+
+.f-invert {
+  filter: invert(100%);
+}
+
+.mbm {
+  mix-blend-mode: color;
+}
+
+.fs-massive {
+  font-size: 8rem;
+}
+
+.animation-gradient {
+  background: linear-gradient(
+    var(--red8) 0%,
+    var(--red8) 10%,
+    var(--orange8) 10%,
+    var(--orange8) 20%,
+    var(--yellow8) 20%,
+    var(--yellow8) 30%,
+    var(--lime8) 30%,
+    var(--lime8) 40%,
+    var(--green8) 40%,
+    var(--green8) 50%,
+    var(--cyan8) 50%,
+    var(--cyan8) 60%,
+    var(--blue8) 60%,
+    var(--blue8) 70%,
+    var(--indigo8) 70%,
+    var(--indigo8) 80%,
+    var(--violet8) 80%,
+    var(--violet8) 90%,
+    var(--fuchsia8) 90%,
+    var(--fuchsia8) 100%
+  );
+  bakground-position: 1000px 75vh;
+  background-repeat: repeat-y;
+  background-position: 0px 0px;
+  animation: gradient 4s infinite linear;
+}
+
+
+@keyframes gradient {
+  to {
+    background-position: 0 75vh;
+  }
+}

@@ -1,0 +1,51 @@
+stellar-group {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+stellar-group[fill],
+stellar-group[fill] > * {
+	width: 100%;
+}
+
+stellar-group stellar-button,
+stellar-group stellar-input,
+stellar-group stellar-card {
+	--border-radius: 0;
+	margin: 0;
+}
+
+stellar-group [emphasis] {
+	transform: scale(1.1);
+	z-index: 1;
+	box-shadow: 0 3px 6px -4px var(--gray2);
+	--background: var(--theme-base0);
+}
+
+stellar-group stellar-avatar {
+	margin-left: 2px;
+	--drop-shadow: none;
+}
+
+stellar-group > stellar-avatar {
+	position: relative;
+	margin-left: -0.5em;
+	--drop-shadow: .1em 0 0 white;
+	transition: all 100ms ease 0s;
+}
+
+stellar-group[overflow] > *:nth-of-type(1) { z-index: 10; }
+stellar-group[overflow] > *:nth-of-type(2) { z-index: 9; }
+stellar-group[overflow] > *:nth-of-type(3) { z-index: 8; }
+stellar-group[overflow] > *:nth-of-type(4) { z-index: 7; }
+stellar-group[overflow] > *:nth-of-type(5) { z-index: 6; }
+stellar-group[overflow] > *:nth-of-type(6) { z-index: 5; }
+stellar-group[overflow] > *:nth-of-type(7) { z-index: 4; }
+stellar-group[overflow] > *:nth-of-type(8) { z-index: 3; }
+stellar-group[overflow] > *:nth-of-type(9) { z-index: 2; }
+stellar-group[overflow] > *:nth-of-type(10) { z-index: 1; }
+
+stellar-group stellar-group-overflow {
+	margin-left: 0.25em;
+}

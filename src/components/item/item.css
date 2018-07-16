@@ -1,0 +1,108 @@
+stellar-item {
+  --item-size: 2.356em;
+  --font-size: 1.3rem;
+  display: block;
+  width: 100%;
+  height: var(--item-size);
+  color: var(--gray9);
+  font-family: inherit;
+  visibility: visible !important;
+  font-size: var(--font-size);
+  text-align: left;
+}
+
+stellar-item[fit] {
+  --item-size: auto;
+}
+
+stellar-item[danger] .button {
+  color: var(--red5);
+}
+
+stellar-item .button {
+  text-decoration: none;
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  padding: 0 0 0 1rem;
+  width: 100%;
+  height: var(--item-size);
+  color: currentColor;
+  font-weight: 500;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+stellar-item .button stellar-avatar {
+  flex: 0 0 var(--avatar-size);
+  margin-right: .5rem;
+}
+
+stellar-item .button stellar-avatar:not(.hydrated) {
+  background: var(--theme-base5);
+  visibility: visible !important;
+  display: block !important;
+  width: 2rem;
+  height: 2rem;
+}
+
+stellar-item .button stellar-tag {
+  margin: auto 0.5rem auto auto;
+}
+
+stellar-item .button stellar-asset {
+  margin-left: 1rem;
+}
+
+stellar-item .button span {
+  margin: auto auto auto 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+stellar-item[size="small"] .button {
+  padding: 0 1rem;
+  height: 3rem;
+}
+
+stellar-item .selected {
+  font-size: 1.75em;
+  margin-left: auto !important;
+  background: var(--theme-base5);
+  color: var(--white);
+}
+
+stellar-item[selectable] .button:focus,
+stellar-item[selectable] .button:hover,
+stellar-item[selectable]:hover,
+stellar-item[selectable]:focus-within {
+  color: var(--theme-base7);
+}
+
+stellar-item[selectable][danger] .button:focus,
+stellar-item[selectable][danger] .button:hover  {
+  background: var(--red5);
+  color: white;
+}
+
+stellar-item[simple] .button {
+  background: white !impportant;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -2%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}

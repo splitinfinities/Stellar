@@ -1,0 +1,62 @@
+stellar-breadcrumbs {
+	--background: linear-gradient(45deg, var(--theme-base7) 0%, var(--theme-base0) 100%);
+	display: block;
+	border-bottom: 1px solid var(--background);
+	background: var(--white);
+	height: 3rem;
+	overflow-x: auto;
+	overflow-y: hidden;
+	font-size: var(--font-size, 1rem);
+}
+
+stellar-breadcrumbs stellar-asset {
+	font-size: 2rem;
+	line-height: 0;
+}
+
+stellar-breadcrumbs .breadcrumbs {
+	display: inline-flex;
+	position: relative;
+	background: var(--background);
+	width: auto;
+	height: 100%;
+}
+
+stellar-breadcrumbs .breadcrumbs .flush {
+	display: block;
+	right: 0;
+	flex: 0 0 2rem;
+	margin-left: -2rem;
+	background: var(--white);
+	width: 2rem;
+	height: inherit;
+}
+
+stellar-breadcrumbs .breadcrumbs .flush-left {
+	display: block;
+	left: 0;
+	flex: 0 0 2rem;
+	margin-right: -2.5rem;
+	background: var(--white);
+	width: 2rem;
+	height: inherit;
+}
+
+stellar-breadcrumbs stellar-breadcrumb:first-of-type {
+	background: var(--theme-base7);
+	color: var(--white);
+}
+
+stellar-breadcrumbs stellar-breadcrumb:first-of-type a {
+	padding-left: 2em;
+	padding-right: 1.25em;
+}
+
+stellar-breadcrumbs stellar-breadcrumb:first-of-type a stellar-asset {
+	margin: 0;
+}
+
+stellar-breadcrumbs stellar-breadcrumb:last-of-type {
+	color: var(--gray9);
+	background: var(--white);
+}

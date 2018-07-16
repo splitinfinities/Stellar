@@ -1,0 +1,9 @@
+stellar-modal {
+  display: none;
+}
+
+stellar-modal .close {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+}

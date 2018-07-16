@@ -1,0 +1,33 @@
+stellar-code-block {
+  contain: layout style;
+  display: block;
+  position: relative;
+  transition: max-height var(--timing, 200ms) ease-in-out 0ms;
+  border: 1px solid var(--gray15);
+  overflow: hidden;
+}
+
+stellar-code-block stellar-code {
+  padding: 2rem 0 4rem;
+  overflow-y: hidden;
+}
+
+stellar-code-block h6 {
+  margin: 0;
+  text-align: left;
+}
+
+stellar-code-block stellar-tag,
+stellar-code-block stellar-button {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 1;
+}
+
+stellar-code-block stellar-button {
+  left: auto;
+  bottom: 1rem;
+  right: 1rem;
+  color: white;
+}

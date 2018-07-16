@@ -1,0 +1,253 @@
+@import "./normalize.css";
+@import "./theming.css";
+@import "./type-treatment.css";
+@import "./tachyons/_aspect-ratios.css";
+@import "./tachyons/_background-position.css";
+@import "./tachyons/_background-size.css";
+@import "./tachyons/_border-colors.css";
+@import "./tachyons/_border-radius.css";
+@import "./tachyons/_border-style.css";
+@import "./tachyons/_border-widths.css";
+@import "./tachyons/_borders.css";
+@import "./tachyons/_box-shadow.css";
+@import "./tachyons/_clears.css";
+@import "./tachyons/_code.css";
+@import "./tachyons/_coordinates.css";
+@import "./tachyons/_debug-children.css";
+@import "./tachyons/_debug-grid.css";
+@import "./tachyons/_display.css";
+@import "./tachyons/_flexbox.css";
+@import "./tachyons/_floats.css";
+@import "./tachyons/_font-style.css";
+@import "./tachyons/_font-weight.css";
+@import "./tachyons/_heights.css";
+@import "./tachyons/_hovers.css";
+@import "./tachyons/_images.css";
+@import "./tachyons/_letter-spacing.css";
+@import "./tachyons/_line-height.css";
+@import "./tachyons/_lists.css";
+@import "./tachyons/_max-widths.css";
+@import "./tachyons/_module-template.css";
+@import "./tachyons/_negative-margins.css";
+@import "./tachyons/_nested.css";
+@import "./tachyons/_opacity.css";
+@import "./tachyons/_outlines.css";
+@import "./tachyons/_overflow.css";
+@import "./tachyons/_position.css";
+@import "./tachyons/_rotations.css";
+@import "./tachyons/_skins-pseudo.css";
+@import "./tachyons/_skins.css";
+@import "./tachyons/_spacing.css";
+@import "./tachyons/_styles.css";
+@import "./tachyons/_tables.css";
+@import "./tachyons/_text-align.css";
+@import "./tachyons/_text-decoration.css";
+@import "./tachyons/_text-transform.css";
+@import "./tachyons/_typography.css";
+@import "./tachyons/_utilities.css";
+@import "./tachyons/_vertical-align.css";
+@import "./tachyons/_visibility.css";
+@import "./tachyons/_white-space.css";
+@import "./tachyons/_widths.css";
+@import "./tachyons/_word-break.css";
+@import "./tachyons/_z-index.css";
+
+:root {
+  --spacing-none: 0;
+  --spacing-extra-small: .2rem;
+  --spacing-small: .4rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+  --spacing-extra-large: 4rem;
+  --spacing-extra-extra-large: 8rem;
+  --spacing-extra-extra-extra-large: 16rem;
+
+  --base: color(base);
+  --black: color(black);
+  --white: color(white);
+
+  --gray0: color(gray, 0);
+  --gray1: color(gray, 1);
+  --gray2: color(gray, 2);
+  --gray3: color(gray, 3);
+  --gray4: color(gray, 4);
+  --gray5: color(gray, 5);
+  --gray6: color(gray, 6);
+  --gray7: color(gray, 7);
+  --gray8: color(gray, 8);
+  --gray9: color(gray, 9);
+
+  --red0: color(red, 0);
+  --red1: color(red, 1);
+  --red2: color(red, 2);
+  --red3: color(red, 3);
+  --red4: color(red, 4);
+  --red5: color(red, 5);
+  --red6: color(red, 6);
+  --red7: color(red, 7);
+  --red8: color(red, 8);
+  --red9: color(red, 9);
+
+  --orange0: color(orange, 0);
+  --orange1: color(orange, 1);
+  --orange2: color(orange, 2);
+  --orange3: color(orange, 3);
+  --orange4: color(orange, 4);
+  --orange5: color(orange, 5);
+  --orange6: color(orange, 6);
+  --orange7: color(orange, 7);
+  --orange8: color(orange, 8);
+  --orange9: color(orange, 9);
+
+  --yellow0: color(yellow, 0);
+  --yellow1: color(yellow, 1);
+  --yellow2: color(yellow, 2);
+  --yellow3: color(yellow, 3);
+  --yellow4: color(yellow, 4);
+  --yellow5: color(yellow, 5);
+  --yellow6: color(yellow, 6);
+  --yellow7: color(yellow, 7);
+  --yellow8: color(yellow, 8);
+  --yellow9: color(yellow, 9);
+
+  --lime0: color(lime, 0);
+  --lime1: color(lime, 1);
+  --lime2: color(lime, 2);
+  --lime3: color(lime, 3);
+  --lime4: color(lime, 4);
+  --lime5: color(lime, 5);
+  --lime6: color(lime, 6);
+  --lime7: color(lime, 7);
+  --lime8: color(lime, 8);
+  --lime9: color(lime, 9);
+
+  --green0: color(green, 0);
+  --green1: color(green, 1);
+  --green2: color(green, 2);
+  --green3: color(green, 3);
+  --green4: color(green, 4);
+  --green5: color(green, 5);
+  --green6: color(green, 6);
+  --green7: color(green, 7);
+  --green8: color(green, 8);
+  --green9: color(green, 9);
+
+  --teal0: color(teal, 0);
+  --teal1: color(teal, 1);
+  --teal2: color(teal, 2);
+  --teal3: color(teal, 3);
+  --teal4: color(teal, 4);
+  --teal5: color(teal, 5);
+  --teal6: color(teal, 6);
+  --teal7: color(teal, 7);
+  --teal8: color(teal, 8);
+  --teal9: color(teal, 9);
+
+  --cyan0: color(cyan, 0);
+  --cyan1: color(cyan, 1);
+  --cyan2: color(cyan, 2);
+  --cyan3: color(cyan, 3);
+  --cyan4: color(cyan, 4);
+  --cyan5: color(cyan, 5);
+  --cyan6: color(cyan, 6);
+  --cyan7: color(cyan, 7);
+  --cyan8: color(cyan, 8);
+  --cyan9: color(cyan, 9);
+
+  --blue0: color(blue, 0);
+  --blue1: color(blue, 1);
+  --blue2: color(blue, 2);
+  --blue3: color(blue, 3);
+  --blue4: color(blue, 4);
+  --blue5: color(blue, 5);
+  --blue6: color(blue, 6);
+  --blue7: color(blue, 7);
+  --blue8: color(blue, 8);
+  --blue9: color(blue, 9);
+
+  --indigo0: color(indigo, 0);
+  --indigo1: color(indigo, 1);
+  --indigo2: color(indigo, 2);
+  --indigo3: color(indigo, 3);
+  --indigo4: color(indigo, 4);
+  --indigo5: color(indigo, 5);
+  --indigo6: color(indigo, 6);
+  --indigo7: color(indigo, 7);
+  --indigo8: color(indigo, 8);
+  --indigo9: color(indigo, 9);
+
+  --violet0: color(violet, 0);
+  --violet1: color(violet, 1);
+  --violet2: color(violet, 2);
+  --violet3: color(violet, 3);
+  --violet4: color(violet, 4);
+  --violet5: color(violet, 5);
+  --violet6: color(violet, 6);
+  --violet7: color(violet, 7);
+  --violet8: color(violet, 8);
+  --violet9: color(violet, 9);
+
+  --fuchsia0: color(fuchsia, 0);
+  --fuchsia1: color(fuchsia, 1);
+  --fuchsia2: color(fuchsia, 2);
+  --fuchsia3: color(fuchsia, 3);
+  --fuchsia4: color(fuchsia, 4);
+  --fuchsia5: color(fuchsia, 5);
+  --fuchsia6: color(fuchsia, 6);
+  --fuchsia7: color(fuchsia, 7);
+  --fuchsia8: color(fuchsia, 8);
+  --fuchsia9: color(fuchsia, 9);
+
+  --pink0: color(pink, 0);
+  --pink1: color(pink, 1);
+  --pink2: color(pink, 2);
+  --pink3: color(pink, 3);
+  --pink4: color(pink, 4);
+  --pink5: color(pink, 5);
+  --pink6: color(pink, 6);
+  --pink7: color(pink, 7);
+  --pink8: color(pink, 8);
+  --pink9: color(pink, 9);
+
+  --ease: cubic-bezier(0.2, 0.3, 0.25, 0.9);
+
+  --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+  --font-heading: var(--font-system);
+  --font-subheading: var(--font-system);
+  --font-body: var(--font-system);
+
+  --theme-base0: var(--red0);
+  --theme-base1: var(--red1);
+  --theme-base2: var(--red2);
+  --theme-base3: var(--red3);
+  --theme-base4: var(--red4);
+  --theme-base5: var(--red5);
+  --theme-base6: var(--red6);
+  --theme-base7: var(--red7);
+  --theme-base8: var(--red8);
+  --theme-base9: var(--red9);
+
+  --theme-complement0: var(--indigo0);
+  --theme-complement1: var(--indigo1);
+  --theme-complement2: var(--indigo2);
+  --theme-complement3: var(--indigo3);
+  --theme-complement4: var(--indigo4);
+  --theme-complement5: var(--indigo5);
+  --theme-complement6: var(--indigo6);
+  --theme-complement7: var(--indigo7);
+  --theme-complement8: var(--indigo8);
+  --theme-complement9: var(--indigo9);
+
+  --theme-copy-base: var(--gray9);
+  --theme-copy-supporting: var(--red9);
+  --theme-copy-complement: var(--indigo9);
+
+  --theme-bg-base: var(--theme-base9);
+  --theme-bg-supporting: var(--theme-base2);
+  --theme-bg-complement: var(--indigo5);
+
+  --theme-placeholder-color: var(--gray4);
+
+  font-family: var(--font-body, var(--font-system));
+}

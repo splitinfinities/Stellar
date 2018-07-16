@@ -1,0 +1,255 @@
+Minimum Lovable Product:
+  Systems (initial code out):
+    ✔ Color @done (18-06-22 16:38)
+    ✔ Typography @done (18-06-22 16:38)
+    ✔ Motion @done (18-06-22 16:38)
+    ✔ Theming @done (18-06-22 16:38)
+    ☐ Sound
+    ☐ Automate Documentation
+
+  Components (initial code out):
+    ✔ accordion @done (18-06-22 16:38)
+    ☐ animate-image
+    ✔ animate-text @done (18-06-22 16:38)
+    ✔ asset @done (18-06-22 16:38)
+    ✔ asset-library @done (18-06-22 16:38)
+    ☐ audio
+    ☐ audio-visualizer
+    ✔ avatar @done (18-06-22 16:38)
+    ☐ banner
+    ✔ blur @done (18-06-22 16:39)
+    ✔ breadcrumb @done (18-06-22 16:39)
+    ✔ breadcrumbs @done (18-06-22 16:39)
+    ✔ button @done (18-06-22 16:39)
+    ☐ calendar
+    ✔ callout @done (18-06-22 16:39)
+    ✔ card @done (18-06-22 16:39)
+    ☐ chart
+    ✔ code @done (18-06-22 16:39)
+    ✔ code-block @done (18-06-22 16:39)
+    ☐ codepen
+    ✔ color-library @done (18-06-22 16:39)
+    ✔ color-picker @done (18-06-22 16:39)
+    ☐ comment
+    ☐ comments
+    ☐ copy-wrap
+    ✔ date-picker @done (18-06-22 16:39)
+    ☐ datetime-picker
+    ☐ device
+    ☐ divider
+    ✔ documentation @done (18-06-22 16:39)
+    ✔ dropdown @done (18-06-22 16:39)
+    ☐ dummy-copy
+    ☐ dummy-img
+    ☐ empty
+    ☐ fab
+    ☐ file-group
+    ☐ file-tree
+    ☐ fitted-text
+    ☐ footer
+    ☐ form
+    ☐ git-commit
+    ☐ git-history
+    ☐ graphql
+    ✔ grid @done (18-06-22 16:40)
+    ✔ group @done (18-06-22 16:40)
+    ✔ group-overflow @done (18-06-22 16:40)
+    ☐ header
+    ☐ hero
+    ☐ image
+    ✔ input @done (18-06-22 16:40)
+    ☐ item
+    ☐ layout
+    ✔ list @done (18-06-22 16:40)
+    ☐ live-demo
+    ☐ loading
+    ☐ map
+    ✔ markdown @done (18-06-22 16:40)
+    ☐ media-picker
+    ☐ menu
+    ✔ message @done (18-06-22 16:40)
+    ☐ mobile-menu
+    ☐ modal
+    ☐ modal-controller
+    ☐ music-score
+    ☐ notification
+    ☐ notification-controller
+    ☐ overlay
+    ☐ overlay-controller
+    ✔ pagination @done (18-06-22 16:41)
+    ☐ parallax
+    ☐ parallax-section
+    ☐ playlist
+    ☐ podcast
+    ☐ podcast-episode
+    ☐ popover
+    ☐ preload-screen
+    ✔ progress-bar @done (18-06-22 16:41)
+    ☐ pullquote
+    ✔ quick-actions @done (18-06-22 16:42)
+    ☐ range
+    ☐ range-option
+    ☐ rating
+    ☐ rest-api
+    ☐ scrollspy
+    ✔ select @done (18-06-22 16:42)
+    ☐ select-add-more
+    ☐ carousel
+    ☐ carousel-slide
+    ☐ song
+    ☐ step
+    ☐ steps
+    ☐ stripe
+    ☐ swiper
+    ☐ swiper-item
+    ☐ switch
+    ✔ tab @done (18-06-22 16:42)
+    ✔ tab-content @done (18-06-22 16:42)
+    ☐ table
+    ✔ tabs @done (18-06-22 16:42)
+    ☐ tag
+    ☐ theme-preview
+    ☐ time-picker
+    ☐ toggle
+    ☐ toggle-option
+    ✔ tooltip @done (18-06-22 16:42)
+    ☐ tweet
+    ☐ video
+    ☐ video-player
+    ☐ video-playlist
+    ☐ virtual-list
+    ☐ wakatime-stats
+    ☐ xray
+
+Products (dog fooding):
+ ☐ Portfolio site
+ ☐ Cosmic (git app)
+ ☐ New Tab page
+ ☐ WordPress Theme
+ ☐ Ruby gem
+ ☐ Composer package
+ ☐ Go package
+
+Redesigned (with accomodating Sketch library):
+  Systems (initial code out):
+    ☐ Color
+    ☐ Typography
+    ☐ Motion
+    ☐ Theming
+    ☐ Automate Documentation
+
+  Components (initial code out):
+    ☐ accordion
+    ☐ animate-image
+    ☐ animate-text
+    ☐ asset
+    ☐ asset-library
+    ☐ audio
+    ☐ audio-visualizer
+    ☐ avatar
+    ☐ banner
+    ☐ blur
+    ☐ breadcrumb
+    ☐ breadcrumbs
+    ☐ button
+    ☐ calendar
+    ☐ callout
+    ☐ card
+    ☐ chart
+    ☐ code
+    ☐ code-block
+    ☐ codepen
+    ☐ color-library
+    ☐ color-picker
+    ☐ comment
+    ☐ comments
+    ☐ copy-wrap
+    ☐ date-picker
+    ☐ datetime-picker
+    ☐ device
+    ☐ divider
+    ☐ documentation
+    ☐ dropdown
+    ☐ dummy-copy
+    ☐ dummy-img
+    ☐ empty
+    ☐ fab
+    ☐ file-group
+    ☐ file-tree
+    ☐ fitted-text
+    ☐ footer
+    ☐ form
+    ☐ git-commit
+    ☐ git-history
+    ☐ graphql
+    ☐ grid
+    ☐ group
+    ☐ group-overflow
+    ☐ header
+    ☐ hero
+    ☐ image
+    ☐ input
+    ☐ item
+    ☐ label
+    ☐ layout
+    ☐ list
+    ☐ live-demo
+    ☐ loading
+    ☐ map
+    ☐ markdown
+    ☐ media-picker
+    ☐ menu
+    ☐ message
+    ☐ mobile-menu
+    ☐ modal
+    ☐ modal-controller
+    ☐ music-score
+    ☐ notification
+    ☐ notification-controller
+    ☐ overlay
+    ☐ overlay-controller
+    ☐ pagination
+    ☐ parallax
+    ☐ parallax-section
+    ☐ playlist
+    ☐ podcast
+    ☐ podcast-episode
+    ☐ popover
+    ☐ preload-screen
+    ☐ progress-bar
+    ☐ pullquote
+    ☐ quick-actions
+    ☐ range
+    ☐ range-option
+    ☐ rating
+    ☐ rest-api
+    ☐ scrollspy
+    ☐ select
+    ☐ select-add-more
+    ☐ slide
+    ☐ slider
+    ☐ song
+    ☐ starscape
+    ☐ step
+    ☐ steps
+    ☐ stripe
+    ☐ swiper
+    ☐ swiper-item
+    ☐ switch
+    ☐ tab
+    ☐ tab-content
+    ☐ table
+    ☐ tabs
+    ☐ tag
+    ☐ theme-preview
+    ☐ time-picker
+    ☐ toggle
+    ☐ toggle-option
+    ☐ tooltip
+    ☐ tweet
+    ☐ video
+    ☐ video-player
+    ☐ video-playlist
+    ☐ virtual-list
+    ☐ wakatime-stats
+    ☐ xray

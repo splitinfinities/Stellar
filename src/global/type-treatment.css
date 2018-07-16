@@ -1,0 +1,142 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  max-width: 23.5em;
+  display: block;
+  color: var(--theme-header-color, var(--black));
+}
+
+h1[alt],
+h2[alt],
+h3[alt],
+h4[alt],
+h5[alt],
+h6[alt] {
+  color: var(--theme-header-alt-color, var(--gray5));
+}
+
+h1[fill],
+h2[fill],
+h3[fill],
+h4[fill],
+h5[fill],
+h6[fill] {
+  max-width: 100%
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+.font-primary {
+  font-family: var(--font-heading);
+}
+
+h6,
+.font-secondary {
+  font-family: var(--font-subheading);
+}
+
+h1,
+.fs1 {
+  font-size: 2.8rem;
+}
+
+h2,
+.fs2 {
+  font-size: 2.4rem;
+}
+
+h3,
+.fs3 {
+  font-size: 2rem;
+}
+
+h4,
+.fs4 {
+  font-size: 1.8rem;
+}
+
+h5,
+.fs5 {
+  font-size: 1.4rem;
+}
+
+h6,
+.fs6 {
+  font-size: 1.2rem;
+}
+
+p,
+.fs7 {
+  font-size: 1rem;
+}
+
+small,
+.fs8 {
+  font-size: .8em;
+  letter-spacing: 0.02em;
+}
+
+a {
+  color: var(--theme-base6);
+}
+
+
+a:hover,
+a:focus {
+  color: var(--theme-base8);
+}
+
+h1 {
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  line-height: 1.33;
+  letter-spacing: 0.01em;
+}
+
+h3 {
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+h4 {
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+h5 {
+  line-height: 1.22;
+  letter-spacing: 0.0225em;
+}
+
+h6 {
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+}
+
+hr {
+  margin: 3rem auto;
+  border: 0;
+  height: 1px;
+  background-color: var(--gray1);
+}
+
+hr.vertical {
+  width: 1px;
+  height: 2rem;
+  margin: -.75rem 1rem;
+  display: inline-block;
+}

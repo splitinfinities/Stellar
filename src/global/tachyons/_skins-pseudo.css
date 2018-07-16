@@ -1,0 +1,159 @@
+/*
+
+   SKINS:PSEUDO
+
+   Customize the color of an element when
+   it is focused or hovered over.
+
+ */
+
+.hover-base:hover,
+.hover-base:focus {
+  color: var(--base);
+}
+.hover-black:hover,
+.hover-black:focus {
+  color: var(--black);
+}
+.hover-white:hover,
+.hover-white:focus {
+  color: var(--white);
+}
+
+.hover-gray0:hover,
+.hover-gray0:focus {
+  color: var(--gray0);
+}
+.hover-gray1:hover,
+.hover-gray1:focus {
+  color: var(--gray1);
+}
+.hover-gray2:hover,
+.hover-gray2:focus {
+  color: var(--gray2);
+}
+.hover-gray3:hover,
+.hover-gray3:focus {
+  color: var(--gray3);
+}
+.hover-gray4:hover,
+.hover-gray4:focus {
+  color: var(--gray4);
+}
+.hover-gray5:hover,
+.hover-gray5:focus {
+  color: var(--gray5);
+}
+.hover-gray6:hover,
+.hover-gray6:focus {
+  color: var(--gray6);
+}
+.hover-gray7:hover,
+.hover-gray7:focus {
+  color: var(--gray7);
+}
+.hover-gray8:hover,
+.hover-gray8:focus {
+  color: var(--gray8);
+}
+.hover-gray9:hover,
+.hover-gray9:focus {
+  color: var(--gray9);
+}
+
+
+.hover-theme-base0:hover,
+.hover-theme-base0:focus {
+  color: var(--theme-base0);
+}
+.hover-theme-base1:hover,
+.hover-theme-base1:focus {
+  color: var(--theme-base1);
+}
+.hover-theme-base2:hover,
+.hover-theme-base2:focus {
+  color: var(--theme-base2);
+}
+.hover-theme-base3:hover,
+.hover-theme-base3:focus {
+  color: var(--theme-base3);
+}
+.hover-theme-base4:hover,
+.hover-theme-base4:focus {
+  color: var(--theme-base4);
+}
+.hover-theme-base5:hover,
+.hover-theme-base5:focus {
+  color: var(--theme-base5);
+}
+.hover-theme-base6:hover,
+.hover-theme-base6:focus {
+  color: var(--theme-base6);
+}
+.hover-theme-base7:hover,
+.hover-theme-base7:focus {
+  color: var(--theme-base7);
+}
+.hover-theme-base8:hover,
+.hover-theme-base8:focus {
+  color: var(--theme-base8);
+}
+.hover-theme-base9:hover,
+.hover-theme-base9:focus {
+  color: var(--theme-base9);
+}
+
+.hover-theme-complement0:hover,
+.hover-theme-complement0:focus {
+  color: var(--theme-complement0);
+}
+.hover-theme-complement1:hover,
+.hover-theme-complement1:focus {
+  color: var(--theme-complement1);
+}
+.hover-theme-complement2:hover,
+.hover-theme-complement2:focus {
+  color: var(--theme-complement2);
+}
+.hover-theme-complement3:hover,
+.hover-theme-complement3:focus {
+  color: var(--theme-complement3);
+}
+.hover-theme-complement4:hover,
+.hover-theme-complement4:focus {
+  color: var(--theme-complement4);
+}
+.hover-theme-complement5:hover,
+.hover-theme-complement5:focus {
+  color: var(--theme-complement5);
+}
+.hover-theme-complement6:hover,
+.hover-theme-complement6:focus {
+  color: var(--theme-complement6);
+}
+.hover-theme-complement7:hover,
+.hover-theme-complement7:focus {
+  color: var(--theme-complement7);
+}
+.hover-theme-complement8:hover,
+.hover-theme-complement8:focus {
+  color: var(--theme-complement8);
+}
+.hover-theme-complement9:hover,
+.hover-theme-complement9:focus {
+  color: var(--theme-complement9);
+}
+
+
+.hover-transparent:hover,
+.hover-transparent:focus {
+  color: transparent;
+}
+.hover-current:hover,
+.hover-current:focus {
+  color: currentColor;
+}
+.hover-inherit:hover,
+.hover-inherit:focus {
+  color: inherit;
+}

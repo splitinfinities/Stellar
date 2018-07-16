@@ -1,0 +1,214 @@
+stellar-code {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  background: var(--gray9);
+}
+
+stellar-code .hidden {
+  display: none;
+}
+
+stellar-code pre {
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+  tab-size: 4;
+  word-break: break-word;
+  white-space: pre-wrap;
+  color: var(--gray1);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+stellar-code code[class*=language-],
+stellar-code pre[class*=language-] {
+  background: none;
+  text-align: left;
+  text-shadow: 0 1px var(--gray9);
+  line-height: 1.5rem;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  word-break: normal;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: pre;
+  color: var(--gray1);
+  font-family: "Hack", monospace;
+  font-size: 1rem;
+  width: 0;
+}
+
+stellar-code code {
+  display: block;
+}
+
+stellar-code span {
+  font-size: 1rem;
+}
+
+stellar-code pre > .token {
+  display: inline-block;
+}
+
+stellar-code pre .token {
+  line-height: 1.5rem !important;
+  font-family: "Hack", monospace;
+  font-size: 1rem !important;
+}
+
+stellar-code pre .token.comment,
+stellar-code pre .token.prolog,
+stellar-code pre .token.doctype,
+stellar-code pre .token.cdata {
+  color: var(--gray7);
+}
+
+stellar-code pre .token.punctuation {
+  color: var(--gray7);
+}
+
+stellar-code pre .namespace {
+  opacity: 0.7;
+}
+
+stellar-code pre .token.property,
+stellar-code pre .token.tag,
+stellar-code pre .token.boolean,
+stellar-code pre .token.number,
+stellar-code pre .token.constant,
+stellar-code pre .token.symbol,
+stellar-code pre .token.deleted {
+  color: var(--cyan5);
+}
+
+stellar-code pre .token.selector,
+stellar-code pre .token.attr-name,
+stellar-code pre .token.string,
+stellar-code pre .token.char,
+stellar-code pre .token.builtin,
+stellar-code pre .token.inserted {
+  color: var(--green5);
+}
+
+stellar-code pre .token.operator,
+stellar-code pre .token.entity,
+stellar-code pre .token.url,
+stellar-code pre.language-css .token.string,
+stellar-code pre.style .token.string {
+  color: var(--yellow5);
+  font-family: "Hack", monospace;
+}
+
+stellar-code pre .token.atrule,
+stellar-code pre .token.attr-value,
+stellar-code pre .token.keyword {
+  color: var(--cyan5);
+}
+
+stellar-code pre .token.function {
+  color: var(--blue5);
+}
+
+stellar-code pre .token.regex,
+stellar-code pre .token.important,
+stellar-code pre .token.variable {
+  color: var(--red5);
+}
+
+stellar-code pre .token.important,
+stellar-code pre .token.bold {
+  font-weight: bold;
+}
+
+stellar-code pre .token.italic {
+  font-style: italic;
+}
+
+stellar-code pre .token.entity {
+  cursor: help;
+}
+
+stellar-code pre.show-line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+stellar-code pre.show-line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+stellar-code pre.show-line-numbers .line-numbers-rows {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  top: 0.125em;
+  left: -3.8em;
+  border-right: 1px solid var(--gray8);
+  width: 3em;
+  line-height: 1.5rem;
+  letter-spacing: -1px;
+  font-size: 1rem;
+}
+
+stellar-code pre.show-line-numbers .line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+stellar-code pre.show-line-numbers .line-numbers-rows > span::before {
+  content: counter(linenumber);
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+  line-height: 1.5rem;
+  color: var(--gray8);
+  font-size: 1rem;
+}
+
+stellar-code .token.tab:not(:empty),
+stellar-code .token.cr,
+stellar-code .token.lf,
+stellar-code .token.space {
+  display: inline;
+  position: relative;
+}
+
+stellar-code .token.tab:not(:empty)::before,
+stellar-code .token.cr::before,
+stellar-code .token.lf::before,
+stellar-code .token.space::before {
+  position: absolute;
+  color: var(--gray8);
+}
+
+stellar-code pre.show-invisibles .token.tab:not(:empty)::before {
+  content: "────";
+}
+
+stellar-code pre.show-invisibles .token.cr::before {
+  content: "␍";
+}
+
+stellar-code pre.show-invisibles .token.crlf::before {
+  content: "␍␊";
+}
+
+stellar-code pre.show-invisibles .token.lf::before {
+  content: "␊";
+}
+
+stellar-code pre.show-invisibles .token.space::before {
+  content: "·";
+}

@@ -1,0 +1,28 @@
+stellar-content {
+  display: none;
+    animation-name: fadeInUp;
+  animation-timing-function: var(--ease);
+  animation-duration: 0.225s;
+  animation-fill-mode: both;
+  transform: translate3d(0, 85px, 0);
+  opacity: 0;
+  overflow: hidden;
+}
+
+stellar-content[open] {
+  display: block;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 85px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

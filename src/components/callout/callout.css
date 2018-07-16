@@ -1,0 +1,22 @@
+stellar-callout {
+	display: block;
+	padding: 2rem;
+	background-color: var(--theme-base1);
+}
+
+stellar-callout .callout-wrap {
+	display: flex;
+	align-items: center;
+}
+
+stellar-callout.db .callout-wrap {
+	display: block;
+}
+
+stellar-callout a {
+	color: var(--theme-base6);
+}
+
+stellar-callout a {
+	color: var(--theme-base8);
+}
