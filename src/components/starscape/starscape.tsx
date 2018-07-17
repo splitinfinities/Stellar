@@ -6,12 +6,12 @@ import properties from 'css-custom-properties'
   styleUrl: 'starscape.css'
 })
 export class Starscape {
-
   @Element() element: HTMLElement;
 
   @Listen('window:scroll')
   handleScroll() {
-    let percentageY = window.pageYOffset / 5
+    let onconstrainedY = window.pageYOffset / 15
+    let percentageY = onconstrainedY;
 
     if (percentageY > 100) {
       percentageY = 100;
@@ -21,7 +21,8 @@ export class Starscape {
 
     properties.set({
       "--y-pos": `${percentageY}%`,
-      "--rotate": `${percentageY / 4}deg`,
+      "--star-y-pos": `${onconstrainedY}%`,
+      "--rotate": `${onconstrainedY}deg`,
     }, this.element)
   }
 }

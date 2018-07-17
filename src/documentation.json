@@ -1849,6 +1849,21 @@
       "events": []
     },
     {
+      "tag": "stellar-scatter",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "scatter",
+          "type": "number",
+          "attr": "scatter",
+          "docs": ""
+        }
+      ],
+      "methods": [],
+      "events": []
+    },
+    {
       "tag": "stellar-select",
       "readme": "# stellar-select\n\n\n",
       "usage": {

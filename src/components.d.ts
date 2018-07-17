@@ -2009,6 +2009,43 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface StellarScatter {
+      'max': number;
+      'min': number;
+      'scatter': number;
+    }
+  }
+
+  interface HTMLStellarScatterElement extends StencilComponents.StellarScatter, HTMLStencilElement {}
+
+  var HTMLStellarScatterElement: {
+    prototype: HTMLStellarScatterElement;
+    new (): HTMLStellarScatterElement;
+  };
+  interface HTMLElementTagNameMap {
+    'stellar-scatter': HTMLStellarScatterElement;
+  }
+  interface ElementTagNameMap {
+    'stellar-scatter': HTMLStellarScatterElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'stellar-scatter': JSXElements.StellarScatterAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface StellarScatterAttributes extends HTMLAttributes {
+      'max'?: number;
+      'min'?: number;
+      'scatter'?: number;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface StellarSelect {
       'focused': boolean;
       'footer': boolean;

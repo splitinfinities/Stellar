@@ -1,55 +1,98 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-	<title>Stellar</title>
-	<link rel="stylesheet" href="/build/stellar.css" />
-	<link rel="stylesheet" href="/global/fonts/exodus-display/exodus-display.css" />
-	<link rel="stylesheet" href="/global/fonts/hanken-sans/hanken-sans.css" />
-	<script src="/build/stellar.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stellar</title>
+  <link rel="stylesheet" href="/build/stellar.css" />
+  <link rel="stylesheet" href="/global/fonts/exodus-display/exodus-display.css" />
+  <link rel="stylesheet" href="/global/fonts/hanken-sans/hanken-sans.css" />
+  <script src="/build/stellar.js"></script>
 </head>
 <body class="hanken-sans tc bg-gray1 theme-blue">
-	<stellar-layout>
-		<stellar-image width="2792" height="1574" preload="./global/images/google_cardboard_will@2x-76x43.jpg">
-			<source srcset="./global/images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
-			<source srcset="./global/images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
-			<source srcset="./global/images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
-			<source srcset="./global/images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
-			<img srcset="./global/images/google_cardboard_will@2x-640x361.jpg" alt="…" />
-		</stellar-image>
-	</stellar-layout>
-
-	<stellar-layout>
-		<stellar-image width="2792" height="1574" preload="./global/images/google_cardboard_will@2x-76x43.jpg">
-			<source srcset="./global/images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
-			<source srcset="./global/images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
-			<source srcset="./global/images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
-			<source srcset="./global/images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
-			<img srcset="./global/images/google_cardboard_will@2x-640x361.jpg" alt="…" />
-		</stellar-image>
-	</stellar-layout>
-
-	<stellar-layout>
-		<stellar-image width="2792" height="1574" preload="./global/images/google_cardboard_will@2x-76x43.jpg">
-			<source srcset="./global/images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
-			<source srcset="./global/images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
-			<source srcset="./global/images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
-			<source srcset="./global/images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
-			<img srcset="./global/images/google_cardboard_will@2x-640x361.jpg" alt="…" />
-		</stellar-image>
-	</stellar-layout>
-
-	<stellar-layout>
-		<stellar-image width="2792" height="1574" preload="./global/images/google_cardboard_will@2x-76x43.jpg">
-			<source srcset="./global/images/google_cardboard_will@2x.jpg" media="(min-width:1023px) and (min-device-pixel-ratio: 2)" />
-			<source srcset="./global/images/google_cardboard_will@2x-1024x577.jpg" media="(min-width:1023px)" />
-			<source srcset="./global/images/google_cardboard_will@2x-1024x577.jpg" media="(max-width:640px) and (min-device-pixel-ratio: 2)" />
-			<source srcset="./global/images/google_cardboard_will@2x-640x361.jpg" media="(max-width:640px)" />
-			<img srcset="./global/images/google_cardboard_will@2x-640x361.jpg" alt="…" />
-		</stellar-image>
-	</stellar-layout>
-
-	<stellar-overlay></stellar-overlay>
+  <stellar-parallax style="height: 200vh">
+    <stellar-starscape></stellar-starscape>
+    <stellar-parallax-section layer="2" speed="4">
+      <stellar-scatter min="0" max="100">
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs4"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs4"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs4"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs4"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs4"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+      </stellar-scatter>
+    </stellar-parallax-section>
+    <stellar-parallax-section layer="2" speed="8">
+      <stellar-scatter min="0" max="100">
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs4"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs4"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs4"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs4"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs4"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+      </stellar-scatter>
+    </stellar-parallax-section>
+    <stellar-parallax-section layer="3" speed="-3">
+      <stellar-scatter min="0" max="100">
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs1"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs3"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs4"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs4"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs4"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs4"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs4"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+        <stellar-asset name="rocket" class="white fs-massive"></stellar-asset>
+      </stellar-scatter>
+    </stellar-parallax-section>
+  </stellar-parallax>
 </body>
 </html>
