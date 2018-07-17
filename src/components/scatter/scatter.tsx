@@ -7,6 +7,7 @@ import { Component, Element, Prop } from '@stencil/core'
 export class Accordion {
   @Element() element: HTMLElement
 
+  @Prop({reflectToAttr: true}) float: boolean = false;
   @Prop() scatter: number = 2
   @Prop() min: number = -10
   @Prop() max: number = 10

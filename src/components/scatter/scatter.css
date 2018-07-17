@@ -1,9 +1,98 @@
 stellar-scatter {
-  height: 100%;
-  width: 100%;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 stellar-scatter > * {
   position: absolute;
+}
+
+stellar-scatter[floating] > *:nth-of-type(5n+1) {
+  animation: floating-x 10s infinite;
+}
+stellar-scatter[floating] > *:nth-of-type(5n+2) {
+  animation: floating-x-spin 15s infinite;
+}
+stellar-scatter[floating] > *:nth-of-type(5n+3) {
+  animation: floating-x-full-spin 35s infinite;
+}
+stellar-scatter[floating] > *:nth-of-type(5n+4) {
+  animation: floating-x 20s infinite;
+}
+stellar-scatter[floating] > *:nth-of-type(5n+5) {
+  animation: floating-x-full-spin 25s infinite;
+}
+
+@keyframes floating-x {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
+}
+@keyframes floating-x-rel {
+  from {
+    transform: translate(0, 0%);
+  }
+  65% {
+    transform: translate(0, -50%);
+  }
+  to {
+    transform: translate(0, 0%);
+  }
+}
+@keyframes floating-x-spin {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px) rotate(0deg);
+  }
+  75% {
+    transform: translate(0, 15px) rotate(15deg);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
+}
+@keyframes floating-x-spin-rel {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, -50%) rotate(0deg);
+  }
+  75% {
+    transform: translate(0, -50%) rotate(15deg);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
+}
+@keyframes floating-x-full-spin {
+  from {
+    transform: translate(0, 0px) rotate(0deg);
+  }
+  65% {
+    transform: translate(0, 15px) rotate(234deg);
+  }
+  to {
+    transform: translate(0, 0px) rotate(360deg);
+  }
+}
+@keyframes floating-x-full-spin-rel {
+  from {
+    transform: translate(0, 0px) rotate(0deg);
+  }
+  65% {
+    transform: translate(0, -50%) rotate(234deg);
+  }
+  to {
+    transform: translate(0, 0px) rotate(360deg);
+  }
 }

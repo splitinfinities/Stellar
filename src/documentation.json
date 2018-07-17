@@ -1850,9 +1850,27 @@
     },
     {
       "tag": "stellar-scatter",
-      "readme": "",
+      "readme": "# stellar-scatter\n\n\n",
       "usage": {},
       "props": [
+        {
+          "name": "float",
+          "type": "boolean",
+          "attr": "float",
+          "docs": ""
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "attr": "max",
+          "docs": ""
+        },
+        {
+          "name": "min",
+          "type": "number",
+          "attr": "min",
+          "docs": ""
+        },
         {
           "name": "scatter",
           "type": "number",

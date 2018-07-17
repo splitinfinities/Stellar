@@ -11,9 +11,9 @@
     "bundles": 129
   },
   "options": {
-    "minifyJs": false,
-    "minifyCss": false,
-    "hashFileNames": false,
+    "minifyJs": true,
+    "minifyCss": true,
+    "hashFileNames": true,
     "hashedFileNameLength": 8,
     "buildEs5": true
   },
@@ -589,31 +589,31 @@
       ],
       "bundles": [
         {
-          "fileName": "copy-wrap.js",
+          "fileName": "gvjmzw0c.js",
           "outputs": [
-            "dist/stellar/copy-wrap.js",
-            "www/build/stellar/copy-wrap.js"
+            "dist/stellar/gvjmzw0c.js",
+            "www/build/stellar/gvjmzw0c.js"
           ],
-          "size": 1814,
-          "gzip": 577
+          "size": 1252,
+          "gzip": 501
         },
         {
-          "fileName": "copy-wrap.es5.js",
+          "fileName": "gvjmzw0c.es5.js",
           "outputs": [
-            "dist/stellar/copy-wrap.es5.js",
-            "www/build/stellar/copy-wrap.es5.js"
+            "dist/stellar/gvjmzw0c.es5.js",
+            "www/build/stellar/gvjmzw0c.es5.js"
           ],
-          "size": 2644,
-          "gzip": 732,
+          "size": 1568,
+          "gzip": 600,
           "target": "es5"
         },
         {
-          "fileName": "copy-wrap.js",
+          "fileName": "gvjmzw0c.js",
           "outputs": [
-            "dist/esm/es5/copy-wrap.js"
+            "dist/esm/es5/gvjmzw0c.js"
           ],
-          "size": 2352,
-          "gzip": 680,
+          "size": 1488,
+          "gzip": 563,
           "target": "es5"
         }
       ],
@@ -659,31 +659,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-asset.js",
+          "fileName": "bpbhjplh.js",
           "outputs": [
-            "dist/stellar/stellar-asset.js",
-            "www/build/stellar/stellar-asset.js"
+            "dist/stellar/bpbhjplh.js",
+            "www/build/stellar/bpbhjplh.js"
           ],
-          "size": 13548,
-          "gzip": 3356
+          "size": 6930,
+          "gzip": 2038
         },
         {
-          "fileName": "stellar-asset.es5.js",
+          "fileName": "bpbhjplh.es5.js",
           "outputs": [
-            "dist/stellar/stellar-asset.es5.js",
-            "www/build/stellar/stellar-asset.es5.js"
+            "dist/stellar/bpbhjplh.es5.js",
+            "www/build/stellar/bpbhjplh.es5.js"
           ],
-          "size": 17040,
-          "gzip": 3587,
+          "size": 7694,
+          "gzip": 2136,
           "target": "es5"
         },
         {
-          "fileName": "stellar-asset.js",
+          "fileName": "bpbhjplh.js",
           "outputs": [
-            "dist/esm/es5/stellar-asset.js"
+            "dist/esm/es5/bpbhjplh.js"
           ],
-          "size": 15465,
-          "gzip": 3503,
+          "size": 7764,
+          "gzip": 2153,
           "target": "es5"
         }
       ],
@@ -708,31 +708,31 @@
       ],
       "bundles": [
         {
-          "fileName": "skeleton-img.js",
+          "fileName": "ox4yfbkf.js",
           "outputs": [
-            "dist/stellar/skeleton-img.js",
-            "www/build/stellar/skeleton-img.js"
+            "dist/stellar/ox4yfbkf.js",
+            "www/build/stellar/ox4yfbkf.js"
           ],
-          "size": 4096,
-          "gzip": 1163
+          "size": 2767,
+          "gzip": 981
         },
         {
-          "fileName": "skeleton-img.es5.js",
+          "fileName": "ox4yfbkf.es5.js",
           "outputs": [
-            "dist/stellar/skeleton-img.es5.js",
-            "www/build/stellar/skeleton-img.es5.js"
+            "dist/stellar/ox4yfbkf.es5.js",
+            "www/build/stellar/ox4yfbkf.es5.js"
           ],
-          "size": 5241,
-          "gzip": 1312,
+          "size": 3113,
+          "gzip": 1077,
           "target": "es5"
         },
         {
-          "fileName": "skeleton-img.js",
+          "fileName": "ox4yfbkf.js",
           "outputs": [
-            "dist/esm/es5/skeleton-img.js"
+            "dist/esm/es5/ox4yfbkf.js"
           ],
-          "size": 4810,
-          "gzip": 1254,
+          "size": 3063,
+          "gzip": 1045,
           "target": "es5"
         }
       ],
@@ -754,31 +754,31 @@
       ],
       "bundles": [
         {
-          "fileName": "skeleton-text.js",
+          "fileName": "ktjcpsdq.js",
           "outputs": [
-            "dist/stellar/skeleton-text.js",
-            "www/build/stellar/skeleton-text.js"
+            "dist/stellar/ktjcpsdq.js",
+            "www/build/stellar/ktjcpsdq.js"
           ],
-          "size": 3946,
-          "gzip": 1148
+          "size": 2732,
+          "gzip": 996
         },
         {
-          "fileName": "skeleton-text.es5.js",
+          "fileName": "ktjcpsdq.es5.js",
           "outputs": [
-            "dist/stellar/skeleton-text.es5.js",
-            "www/build/stellar/skeleton-text.es5.js"
+            "dist/stellar/ktjcpsdq.es5.js",
+            "www/build/stellar/ktjcpsdq.es5.js"
           ],
-          "size": 5072,
-          "gzip": 1303,
+          "size": 3080,
+          "gzip": 1090,
           "target": "es5"
         },
         {
-          "fileName": "skeleton-text.js",
+          "fileName": "ktjcpsdq.js",
           "outputs": [
-            "dist/esm/es5/skeleton-text.js"
+            "dist/esm/es5/ktjcpsdq.js"
           ],
-          "size": 4667,
-          "gzip": 1246,
+          "size": 3031,
+          "gzip": 1056,
           "target": "es5"
         }
       ],
@@ -931,31 +931,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-accordion.js",
+          "fileName": "mkdduhsz.js",
           "outputs": [
-            "dist/stellar/stellar-accordion.js",
-            "www/build/stellar/stellar-accordion.js"
+            "dist/stellar/mkdduhsz.js",
+            "www/build/stellar/mkdduhsz.js"
           ],
-          "size": 309475,
-          "gzip": 71250
+          "size": 165435,
+          "gzip": 50458
         },
         {
-          "fileName": "stellar-accordion.es5.js",
+          "fileName": "mkdduhsz.es5.js",
           "outputs": [
-            "dist/stellar/stellar-accordion.es5.js",
-            "www/build/stellar/stellar-accordion.es5.js"
+            "dist/stellar/mkdduhsz.es5.js",
+            "www/build/stellar/mkdduhsz.es5.js"
           ],
-          "size": 405981,
-          "gzip": 74392,
+          "size": 172583,
+          "gzip": 51392,
           "target": "es5"
         },
         {
-          "fileName": "stellar-accordion.js",
+          "fileName": "mkdduhsz.js",
           "outputs": [
-            "dist/esm/es5/stellar-accordion.js"
+            "dist/esm/es5/mkdduhsz.js"
           ],
-          "size": 373119,
-          "gzip": 73609,
+          "size": 176269,
+          "gzip": 52223,
           "target": "es5"
         }
       ],
@@ -991,31 +991,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-animate-text.js",
+          "fileName": "bn6792wy.js",
           "outputs": [
-            "dist/stellar/stellar-animate-text.js",
-            "www/build/stellar/stellar-animate-text.js"
+            "dist/stellar/bn6792wy.js",
+            "www/build/stellar/bn6792wy.js"
           ],
-          "size": 7944,
-          "gzip": 1167
+          "size": 5464,
+          "gzip": 1006
         },
         {
-          "fileName": "stellar-animate-text.es5.js",
+          "fileName": "bn6792wy.es5.js",
           "outputs": [
-            "dist/stellar/stellar-animate-text.es5.js",
-            "www/build/stellar/stellar-animate-text.es5.js"
+            "dist/stellar/bn6792wy.es5.js",
+            "www/build/stellar/bn6792wy.es5.js"
           ],
-          "size": 9101,
-          "gzip": 1330,
+          "size": 5898,
+          "gzip": 1114,
           "target": "es5"
         },
         {
-          "fileName": "stellar-animate-text.js",
+          "fileName": "bn6792wy.js",
           "outputs": [
-            "dist/esm/es5/stellar-animate-text.js"
+            "dist/esm/es5/bn6792wy.js"
           ],
-          "size": 8697,
-          "gzip": 1272,
+          "size": 5867,
+          "gzip": 1086,
           "target": "es5"
         }
       ],
@@ -1040,31 +1040,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-asset-library.js",
+          "fileName": "xdlnwp5o.js",
           "outputs": [
-            "dist/stellar/stellar-asset-library.js",
-            "www/build/stellar/stellar-asset-library.js"
+            "dist/stellar/xdlnwp5o.js",
+            "www/build/stellar/xdlnwp5o.js"
           ],
-          "size": 1725,
-          "gzip": 711
+          "size": 934,
+          "gzip": 524
         },
         {
-          "fileName": "stellar-asset-library.es5.js",
+          "fileName": "xdlnwp5o.es5.js",
           "outputs": [
-            "dist/stellar/stellar-asset-library.es5.js",
-            "www/build/stellar/stellar-asset-library.es5.js"
+            "dist/stellar/xdlnwp5o.es5.js",
+            "www/build/stellar/xdlnwp5o.es5.js"
           ],
-          "size": 4962,
-          "gzip": 1579,
+          "size": 2455,
+          "gzip": 1171,
           "target": "es5"
         },
         {
-          "fileName": "stellar-asset-library.js",
+          "fileName": "xdlnwp5o.js",
           "outputs": [
-            "dist/esm/es5/stellar-asset-library.js"
+            "dist/esm/es5/xdlnwp5o.js"
           ],
-          "size": 4530,
-          "gzip": 1522,
+          "size": 2422,
+          "gzip": 1147,
           "target": "es5"
         }
       ],
@@ -1088,31 +1088,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-avatar.js",
+          "fileName": "tyqxx3ej.js",
           "outputs": [
-            "dist/stellar/stellar-avatar.js",
-            "www/build/stellar/stellar-avatar.js"
+            "dist/stellar/tyqxx3ej.js",
+            "www/build/stellar/tyqxx3ej.js"
           ],
-          "size": 37221,
-          "gzip": 8357
+          "size": 32021,
+          "gzip": 7550
         },
         {
-          "fileName": "stellar-avatar.es5.js",
+          "fileName": "tyqxx3ej.es5.js",
           "outputs": [
-            "dist/stellar/stellar-avatar.es5.js",
-            "www/build/stellar/stellar-avatar.es5.js"
+            "dist/stellar/tyqxx3ej.es5.js",
+            "www/build/stellar/tyqxx3ej.es5.js"
           ],
-          "size": 39663,
-          "gzip": 8528,
+          "size": 32394,
+          "gzip": 7644,
           "target": "es5"
         },
         {
-          "fileName": "stellar-avatar.js",
+          "fileName": "tyqxx3ej.js",
           "outputs": [
-            "dist/esm/es5/stellar-avatar.js"
+            "dist/esm/es5/tyqxx3ej.js"
           ],
-          "size": 38415,
-          "gzip": 8433,
+          "size": 32589,
+          "gzip": 7687,
           "target": "es5"
         }
       ],
@@ -1145,31 +1145,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-blur.js",
+          "fileName": "imo04n8b.js",
           "outputs": [
-            "dist/stellar/stellar-blur.js",
-            "www/build/stellar/stellar-blur.js"
+            "dist/stellar/imo04n8b.js",
+            "www/build/stellar/imo04n8b.js"
           ],
-          "size": 2691,
-          "gzip": 973
+          "size": 1582,
+          "gzip": 778
         },
         {
-          "fileName": "stellar-blur.es5.js",
+          "fileName": "imo04n8b.es5.js",
           "outputs": [
-            "dist/stellar/stellar-blur.es5.js",
-            "www/build/stellar/stellar-blur.es5.js"
+            "dist/stellar/imo04n8b.es5.js",
+            "www/build/stellar/imo04n8b.es5.js"
           ],
-          "size": 3890,
-          "gzip": 1099,
+          "size": 2008,
+          "gzip": 854,
           "target": "es5"
         },
         {
-          "fileName": "stellar-blur.js",
+          "fileName": "imo04n8b.js",
           "outputs": [
-            "dist/esm/es5/stellar-blur.js"
+            "dist/esm/es5/imo04n8b.js"
           ],
-          "size": 3406,
-          "gzip": 1041,
+          "size": 1959,
+          "gzip": 826,
           "target": "es5"
         }
       ],
@@ -1201,31 +1201,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-breadcrumb.js",
+          "fileName": "cbc6ornc.js",
           "outputs": [
-            "dist/stellar/stellar-breadcrumb.js",
-            "www/build/stellar/stellar-breadcrumb.js"
+            "dist/stellar/cbc6ornc.js",
+            "www/build/stellar/cbc6ornc.js"
           ],
-          "size": 5292,
-          "gzip": 1310
+          "size": 3774,
+          "gzip": 1192
         },
         {
-          "fileName": "stellar-breadcrumb.es5.js",
+          "fileName": "cbc6ornc.es5.js",
           "outputs": [
-            "dist/stellar/stellar-breadcrumb.es5.js",
-            "www/build/stellar/stellar-breadcrumb.es5.js"
+            "dist/stellar/cbc6ornc.es5.js",
+            "www/build/stellar/cbc6ornc.es5.js"
           ],
-          "size": 7122,
-          "gzip": 1487,
+          "size": 4312,
+          "gzip": 1293,
           "target": "es5"
         },
         {
-          "fileName": "stellar-breadcrumb.js",
+          "fileName": "cbc6ornc.js",
           "outputs": [
-            "dist/esm/es5/stellar-breadcrumb.js"
+            "dist/esm/es5/cbc6ornc.js"
           ],
-          "size": 6538,
-          "gzip": 1435,
+          "size": 4269,
+          "gzip": 1262,
           "target": "es5"
         }
       ],
@@ -1257,31 +1257,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-button.js",
+          "fileName": "rs7zi1si.js",
           "outputs": [
-            "dist/stellar/stellar-button.js",
-            "www/build/stellar/stellar-button.js"
+            "dist/stellar/rs7zi1si.js",
+            "www/build/stellar/rs7zi1si.js"
           ],
-          "size": 11913,
-          "gzip": 2494
+          "size": 6770,
+          "gzip": 1862
         },
         {
-          "fileName": "stellar-button.es5.js",
+          "fileName": "rs7zi1si.es5.js",
           "outputs": [
-            "dist/stellar/stellar-button.es5.js",
-            "www/build/stellar/stellar-button.es5.js"
+            "dist/stellar/rs7zi1si.es5.js",
+            "www/build/stellar/rs7zi1si.es5.js"
           ],
-          "size": 16321,
-          "gzip": 3325,
+          "size": 8400,
+          "gzip": 2488,
           "target": "es5"
         },
         {
-          "fileName": "stellar-button.js",
+          "fileName": "rs7zi1si.js",
           "outputs": [
-            "dist/esm/es5/stellar-button.js"
+            "dist/esm/es5/rs7zi1si.js"
           ],
-          "size": 15224,
-          "gzip": 3256,
+          "size": 8355,
+          "gzip": 2457,
           "target": "es5"
         }
       ],
@@ -1344,31 +1344,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-callout.js",
+          "fileName": "arit9bvw.js",
           "outputs": [
-            "dist/stellar/stellar-callout.js",
-            "www/build/stellar/stellar-callout.js"
+            "dist/stellar/arit9bvw.js",
+            "www/build/stellar/arit9bvw.js"
           ],
-          "size": 58185,
-          "gzip": 16023
+          "size": 34643,
+          "gzip": 11324
         },
         {
-          "fileName": "stellar-callout.es5.js",
+          "fileName": "arit9bvw.es5.js",
           "outputs": [
-            "dist/stellar/stellar-callout.es5.js",
-            "www/build/stellar/stellar-callout.es5.js"
+            "dist/stellar/arit9bvw.es5.js",
+            "www/build/stellar/arit9bvw.es5.js"
           ],
-          "size": 84560,
-          "gzip": 17529,
+          "size": 37906,
+          "gzip": 11985,
           "target": "es5"
         },
         {
-          "fileName": "stellar-callout.js",
+          "fileName": "arit9bvw.js",
           "outputs": [
-            "dist/esm/es5/stellar-callout.js"
+            "dist/esm/es5/arit9bvw.js"
           ],
-          "size": 78091,
-          "gzip": 17307,
+          "size": 38147,
+          "gzip": 12031,
           "target": "es5"
         }
       ],
@@ -1400,31 +1400,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-card.js",
+          "fileName": "aygv8m66.js",
           "outputs": [
-            "dist/stellar/stellar-card.js",
-            "www/build/stellar/stellar-card.js"
+            "dist/stellar/aygv8m66.js",
+            "www/build/stellar/aygv8m66.js"
           ],
-          "size": 9858,
-          "gzip": 2383
+          "size": 6252,
+          "gzip": 1873
         },
         {
-          "fileName": "stellar-card.es5.js",
+          "fileName": "aygv8m66.es5.js",
           "outputs": [
-            "dist/stellar/stellar-card.es5.js",
-            "www/build/stellar/stellar-card.es5.js"
+            "dist/stellar/aygv8m66.es5.js",
+            "www/build/stellar/aygv8m66.es5.js"
           ],
-          "size": 13931,
-          "gzip": 3205,
+          "size": 7871,
+          "gzip": 2482,
           "target": "es5"
         },
         {
-          "fileName": "stellar-card.js",
+          "fileName": "aygv8m66.js",
           "outputs": [
-            "dist/esm/es5/stellar-card.js"
+            "dist/esm/es5/aygv8m66.js"
           ],
-          "size": 13033,
-          "gzip": 3132,
+          "size": 7847,
+          "gzip": 2462,
           "target": "es5"
         }
       ],
@@ -1455,31 +1455,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-chart.js",
+          "fileName": "tpymwwea.js",
           "outputs": [
-            "dist/stellar/stellar-chart.js",
-            "www/build/stellar/stellar-chart.js"
+            "dist/stellar/tpymwwea.js",
+            "www/build/stellar/tpymwwea.js"
           ],
-          "size": 228745,
-          "gzip": 80874
+          "size": 222354,
+          "gzip": 77485
         },
         {
-          "fileName": "stellar-chart.es5.js",
+          "fileName": "tpymwwea.es5.js",
           "outputs": [
-            "dist/stellar/stellar-chart.es5.js",
-            "www/build/stellar/stellar-chart.es5.js"
+            "dist/stellar/tpymwwea.es5.js",
+            "www/build/stellar/tpymwwea.es5.js"
           ],
-          "size": 371249,
-          "gzip": 92640,
+          "size": 223186,
+          "gzip": 77571,
           "target": "es5"
         },
         {
-          "fileName": "stellar-chart.js",
+          "fileName": "tpymwwea.js",
           "outputs": [
-            "dist/esm/es5/stellar-chart.js"
+            "dist/esm/es5/tpymwwea.js"
           ],
-          "size": 354668,
-          "gzip": 91853,
+          "size": 223687,
+          "gzip": 77696,
           "target": "es5"
         }
       ],
@@ -1505,31 +1505,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-color-library.js",
+          "fileName": "0joghlsn.js",
           "outputs": [
-            "dist/stellar/stellar-color-library.js",
-            "www/build/stellar/stellar-color-library.js"
+            "dist/stellar/0joghlsn.js",
+            "www/build/stellar/0joghlsn.js"
           ],
-          "size": 2066,
-          "gzip": 658
+          "size": 1238,
+          "gzip": 543
         },
         {
-          "fileName": "stellar-color-library.es5.js",
+          "fileName": "0joghlsn.es5.js",
           "outputs": [
-            "dist/stellar/stellar-color-library.es5.js",
-            "www/build/stellar/stellar-color-library.es5.js"
+            "dist/stellar/0joghlsn.es5.js",
+            "www/build/stellar/0joghlsn.es5.js"
           ],
-          "size": 2280,
-          "gzip": 763,
+          "size": 1550,
+          "gzip": 635,
           "target": "es5"
         },
         {
-          "fileName": "stellar-color-library.js",
+          "fileName": "0joghlsn.js",
           "outputs": [
-            "dist/esm/es5/stellar-color-library.js"
+            "dist/esm/es5/0joghlsn.js"
           ],
-          "size": 2035,
-          "gzip": 709,
+          "size": 1509,
+          "gzip": 607,
           "target": "es5"
         }
       ],
@@ -1562,31 +1562,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-color-picker.js",
+          "fileName": "pticknwb.js",
           "outputs": [
-            "dist/stellar/stellar-color-picker.js",
-            "www/build/stellar/stellar-color-picker.js"
+            "dist/stellar/pticknwb.js",
+            "www/build/stellar/pticknwb.js"
           ],
-          "size": 10718,
-          "gzip": 1993
+          "size": 8002,
+          "gzip": 1760
         },
         {
-          "fileName": "stellar-color-picker.es5.js",
+          "fileName": "pticknwb.es5.js",
           "outputs": [
-            "dist/stellar/stellar-color-picker.es5.js",
-            "www/build/stellar/stellar-color-picker.es5.js"
+            "dist/stellar/pticknwb.es5.js",
+            "www/build/stellar/pticknwb.es5.js"
           ],
-          "size": 12534,
-          "gzip": 2172,
+          "size": 8810,
+          "gzip": 1866,
           "target": "es5"
         },
         {
-          "fileName": "stellar-color-picker.js",
+          "fileName": "pticknwb.js",
           "outputs": [
-            "dist/esm/es5/stellar-color-picker.js"
+            "dist/esm/es5/pticknwb.js"
           ],
-          "size": 11878,
-          "gzip": 2111,
+          "size": 8813,
+          "gzip": 1843,
           "target": "es5"
         }
       ],
@@ -1609,31 +1609,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-comment.js",
+          "fileName": "r9wlbhdg.js",
           "outputs": [
-            "dist/stellar/stellar-comment.js",
-            "www/build/stellar/stellar-comment.js"
+            "dist/stellar/r9wlbhdg.js",
+            "www/build/stellar/r9wlbhdg.js"
           ],
-          "size": 2046,
-          "gzip": 759
+          "size": 1476,
+          "gzip": 657
         },
         {
-          "fileName": "stellar-comment.es5.js",
+          "fileName": "r9wlbhdg.es5.js",
           "outputs": [
-            "dist/stellar/stellar-comment.es5.js",
-            "www/build/stellar/stellar-comment.es5.js"
+            "dist/stellar/r9wlbhdg.es5.js",
+            "www/build/stellar/r9wlbhdg.es5.js"
           ],
-          "size": 2833,
-          "gzip": 902,
+          "size": 1814,
+          "gzip": 757,
           "target": "es5"
         },
         {
-          "fileName": "stellar-comment.js",
+          "fileName": "r9wlbhdg.js",
           "outputs": [
-            "dist/esm/es5/stellar-comment.js"
+            "dist/esm/es5/r9wlbhdg.js"
           ],
-          "size": 2539,
-          "gzip": 856,
+          "size": 1744,
+          "gzip": 722,
           "target": "es5"
         }
       ],
@@ -1655,31 +1655,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-comments.js",
+          "fileName": "x3zjmdf3.js",
           "outputs": [
-            "dist/stellar/stellar-comments.js",
-            "www/build/stellar/stellar-comments.js"
+            "dist/stellar/x3zjmdf3.js",
+            "www/build/stellar/x3zjmdf3.js"
           ],
-          "size": 671,
-          "gzip": 314
+          "size": 436,
+          "gzip": 258
         },
         {
-          "fileName": "stellar-comments.es5.js",
+          "fileName": "x3zjmdf3.es5.js",
           "outputs": [
-            "dist/stellar/stellar-comments.es5.js",
-            "www/build/stellar/stellar-comments.es5.js"
+            "dist/stellar/x3zjmdf3.es5.js",
+            "www/build/stellar/x3zjmdf3.es5.js"
           ],
-          "size": 1466,
-          "gzip": 467,
+          "size": 806,
+          "gzip": 362,
           "target": "es5"
         },
         {
-          "fileName": "stellar-comments.js",
+          "fileName": "x3zjmdf3.js",
           "outputs": [
-            "dist/esm/es5/stellar-comments.js"
+            "dist/esm/es5/x3zjmdf3.js"
           ],
-          "size": 1195,
-          "gzip": 415,
+          "size": 738,
+          "gzip": 327,
           "target": "es5"
         }
       ],
@@ -1704,31 +1704,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-dropdown.js",
+          "fileName": "xou5mo8d.js",
           "outputs": [
-            "dist/stellar/stellar-dropdown.js",
-            "www/build/stellar/stellar-dropdown.js"
+            "dist/stellar/xou5mo8d.js",
+            "www/build/stellar/xou5mo8d.js"
           ],
-          "size": 12667,
-          "gzip": 2774
+          "size": 9072,
+          "gzip": 2244
         },
         {
-          "fileName": "stellar-dropdown.es5.js",
+          "fileName": "xou5mo8d.es5.js",
           "outputs": [
-            "dist/stellar/stellar-dropdown.es5.js",
-            "www/build/stellar/stellar-dropdown.es5.js"
+            "dist/stellar/xou5mo8d.es5.js",
+            "www/build/stellar/xou5mo8d.es5.js"
           ],
-          "size": 14276,
-          "gzip": 2914,
+          "size": 9452,
+          "gzip": 2340,
           "target": "es5"
         },
         {
-          "fileName": "stellar-dropdown.js",
+          "fileName": "xou5mo8d.js",
           "outputs": [
-            "dist/esm/es5/stellar-dropdown.js"
+            "dist/esm/es5/xou5mo8d.js"
           ],
-          "size": 13628,
-          "gzip": 2839,
+          "size": 9437,
+          "gzip": 2312,
           "target": "es5"
         }
       ],
@@ -1750,31 +1750,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-form.js",
+          "fileName": "j4jx5ecz.js",
           "outputs": [
-            "dist/stellar/stellar-form.js",
-            "www/build/stellar/stellar-form.js"
+            "dist/stellar/j4jx5ecz.js",
+            "www/build/stellar/j4jx5ecz.js"
           ],
-          "size": 1827,
-          "gzip": 598
+          "size": 1059,
+          "gzip": 493
         },
         {
-          "fileName": "stellar-form.es5.js",
+          "fileName": "j4jx5ecz.es5.js",
           "outputs": [
-            "dist/stellar/stellar-form.es5.js",
-            "www/build/stellar/stellar-form.es5.js"
+            "dist/stellar/j4jx5ecz.es5.js",
+            "www/build/stellar/j4jx5ecz.es5.js"
           ],
-          "size": 3010,
-          "gzip": 747,
+          "size": 1405,
+          "gzip": 593,
           "target": "es5"
         },
         {
-          "fileName": "stellar-form.js",
+          "fileName": "j4jx5ecz.js",
           "outputs": [
-            "dist/esm/es5/stellar-form.js"
+            "dist/esm/es5/j4jx5ecz.js"
           ],
-          "size": 2587,
-          "gzip": 701,
+          "size": 1329,
+          "gzip": 564,
           "target": "es5"
         }
       ],
@@ -1807,31 +1807,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-group.js",
+          "fileName": "hdxsjmls.js",
           "outputs": [
-            "dist/stellar/stellar-group.js",
-            "www/build/stellar/stellar-group.js"
+            "dist/stellar/hdxsjmls.js",
+            "www/build/stellar/hdxsjmls.js"
           ],
-          "size": 6084,
-          "gzip": 1554
+          "size": 4121,
+          "gzip": 1314
         },
         {
-          "fileName": "stellar-group.es5.js",
+          "fileName": "hdxsjmls.es5.js",
           "outputs": [
-            "dist/stellar/stellar-group.es5.js",
-            "www/build/stellar/stellar-group.es5.js"
+            "dist/stellar/hdxsjmls.es5.js",
+            "www/build/stellar/hdxsjmls.es5.js"
           ],
-          "size": 7831,
-          "gzip": 1744,
+          "size": 4714,
+          "gzip": 1410,
           "target": "es5"
         },
         {
-          "fileName": "stellar-group.js",
+          "fileName": "hdxsjmls.js",
           "outputs": [
-            "dist/esm/es5/stellar-group.js"
+            "dist/esm/es5/hdxsjmls.js"
           ],
-          "size": 7224,
-          "gzip": 1683,
+          "size": 4665,
+          "gzip": 1382,
           "target": "es5"
         }
       ],
@@ -1866,31 +1866,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-header.js",
+          "fileName": "hzgyjmg3.js",
           "outputs": [
-            "dist/stellar/stellar-header.js",
-            "www/build/stellar/stellar-header.js"
+            "dist/stellar/hzgyjmg3.js",
+            "www/build/stellar/hzgyjmg3.js"
           ],
-          "size": 5931,
-          "gzip": 1672
+          "size": 3742,
+          "gzip": 1378
         },
         {
-          "fileName": "stellar-header.es5.js",
+          "fileName": "hzgyjmg3.es5.js",
           "outputs": [
-            "dist/stellar/stellar-header.es5.js",
-            "www/build/stellar/stellar-header.es5.js"
+            "dist/stellar/hzgyjmg3.es5.js",
+            "www/build/stellar/hzgyjmg3.es5.js"
           ],
-          "size": 7707,
-          "gzip": 1865,
+          "size": 4324,
+          "gzip": 1480,
           "target": "es5"
         },
         {
-          "fileName": "stellar-header.js",
+          "fileName": "hzgyjmg3.js",
           "outputs": [
-            "dist/esm/es5/stellar-header.js"
+            "dist/esm/es5/hzgyjmg3.js"
           ],
-          "size": 7078,
-          "gzip": 1798,
+          "size": 4294,
+          "gzip": 1450,
           "target": "es5"
         }
       ],
@@ -1913,61 +1913,61 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-image.js",
+          "fileName": "4ufholyk.js",
           "outputs": [
-            "dist/stellar/stellar-image.js",
-            "www/build/stellar/stellar-image.js"
+            "dist/stellar/4ufholyk.js",
+            "www/build/stellar/4ufholyk.js"
           ],
-          "size": 36707,
-          "gzip": 10148
+          "size": 18343,
+          "gzip": 6402
         },
         {
-          "fileName": "stellar-image.sc.js",
+          "fileName": "4ufholyk.sc.js",
           "outputs": [
-            "dist/stellar/stellar-image.sc.js",
-            "www/build/stellar/stellar-image.sc.js"
+            "dist/stellar/4ufholyk.sc.js",
+            "www/build/stellar/4ufholyk.sc.js"
           ],
-          "size": 37400,
-          "gzip": 10177,
+          "size": 19042,
+          "gzip": 6434,
           "scopedStyles": true
         },
         {
-          "fileName": "stellar-image.es5.js",
+          "fileName": "4ufholyk.es5.js",
           "outputs": [
-            "dist/stellar/stellar-image.es5.js",
-            "www/build/stellar/stellar-image.es5.js"
+            "dist/stellar/4ufholyk.es5.js",
+            "www/build/stellar/4ufholyk.es5.js"
           ],
-          "size": 42546,
-          "gzip": 10500,
+          "size": 18992,
+          "gzip": 6467,
           "target": "es5"
         },
         {
-          "fileName": "stellar-image.sc.es5.js",
+          "fileName": "4ufholyk.sc.es5.js",
           "outputs": [
-            "dist/stellar/stellar-image.sc.es5.js",
-            "www/build/stellar/stellar-image.sc.es5.js"
+            "dist/stellar/4ufholyk.sc.es5.js",
+            "www/build/stellar/4ufholyk.sc.es5.js"
           ],
-          "size": 43239,
-          "gzip": 10526,
+          "size": 19691,
+          "gzip": 6499,
           "target": "es5",
           "scopedStyles": true
         },
         {
-          "fileName": "stellar-image.js",
+          "fileName": "4ufholyk.js",
           "outputs": [
-            "dist/esm/es5/stellar-image.js"
+            "dist/esm/es5/4ufholyk.js"
           ],
-          "size": 39215,
-          "gzip": 10331,
+          "size": 19475,
+          "gzip": 6604,
           "target": "es5"
         },
         {
-          "fileName": "stellar-image.sc.js",
+          "fileName": "4ufholyk.sc.js",
           "outputs": [
-            "dist/esm/es5/stellar-image.sc.js"
+            "dist/esm/es5/4ufholyk.sc.js"
           ],
-          "size": 39908,
-          "gzip": 10360,
+          "size": 20174,
+          "gzip": 6635,
           "target": "es5",
           "scopedStyles": true
         }
@@ -1996,31 +1996,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-input.js",
+          "fileName": "r04xzzqv.js",
           "outputs": [
-            "dist/stellar/stellar-input.js",
-            "www/build/stellar/stellar-input.js"
+            "dist/stellar/r04xzzqv.js",
+            "www/build/stellar/r04xzzqv.js"
           ],
-          "size": 1022693,
-          "gzip": 434883
+          "size": 908524,
+          "gzip": 421029
         },
         {
-          "fileName": "stellar-input.es5.js",
+          "fileName": "r04xzzqv.es5.js",
           "outputs": [
-            "dist/stellar/stellar-input.es5.js",
-            "www/build/stellar/stellar-input.es5.js"
+            "dist/stellar/r04xzzqv.es5.js",
+            "www/build/stellar/r04xzzqv.es5.js"
           ],
-          "size": 1112594,
-          "gzip": 436674,
+          "size": 913435,
+          "gzip": 421299,
           "target": "es5"
         },
         {
-          "fileName": "stellar-input.js",
+          "fileName": "r04xzzqv.js",
           "outputs": [
-            "dist/esm/es5/stellar-input.js"
+            "dist/esm/es5/r04xzzqv.js"
           ],
-          "size": 1086263,
-          "gzip": 436007,
+          "size": 917275,
+          "gzip": 422055,
           "target": "es5"
         }
       ],
@@ -2048,31 +2048,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-item.js",
+          "fileName": "nt31iuqo.js",
           "outputs": [
-            "dist/stellar/stellar-item.js",
-            "www/build/stellar/stellar-item.js"
+            "dist/stellar/nt31iuqo.js",
+            "www/build/stellar/nt31iuqo.js"
           ],
-          "size": 7291,
-          "gzip": 1664
+          "size": 4403,
+          "gzip": 1416
         },
         {
-          "fileName": "stellar-item.es5.js",
+          "fileName": "nt31iuqo.es5.js",
           "outputs": [
-            "dist/stellar/stellar-item.es5.js",
-            "www/build/stellar/stellar-item.es5.js"
+            "dist/stellar/nt31iuqo.es5.js",
+            "www/build/stellar/nt31iuqo.es5.js"
           ],
-          "size": 9807,
-          "gzip": 1864,
+          "size": 5012,
+          "gzip": 1544,
           "target": "es5"
         },
         {
-          "fileName": "stellar-item.js",
+          "fileName": "nt31iuqo.js",
           "outputs": [
-            "dist/esm/es5/stellar-item.js"
+            "dist/esm/es5/nt31iuqo.js"
           ],
-          "size": 8928,
-          "gzip": 1802,
+          "size": 4936,
+          "gzip": 1512,
           "target": "es5"
         }
       ],
@@ -2096,31 +2096,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-list.js",
+          "fileName": "gkgebix5.js",
           "outputs": [
-            "dist/stellar/stellar-list.js",
-            "www/build/stellar/stellar-list.js"
+            "dist/stellar/gkgebix5.js",
+            "www/build/stellar/gkgebix5.js"
           ],
-          "size": 17233,
-          "gzip": 4949
+          "size": 8098,
+          "gzip": 3037
         },
         {
-          "fileName": "stellar-list.es5.js",
+          "fileName": "gkgebix5.es5.js",
           "outputs": [
-            "dist/stellar/stellar-list.es5.js",
-            "www/build/stellar/stellar-list.es5.js"
+            "dist/stellar/gkgebix5.es5.js",
+            "www/build/stellar/gkgebix5.es5.js"
           ],
-          "size": 30795,
-          "gzip": 5325,
+          "size": 8708,
+          "gzip": 3101,
           "target": "es5"
         },
         {
-          "fileName": "stellar-list.js",
+          "fileName": "gkgebix5.js",
           "outputs": [
-            "dist/esm/es5/stellar-list.js"
+            "dist/esm/es5/gkgebix5.js"
           ],
-          "size": 28681,
-          "gzip": 5270,
+          "size": 8727,
+          "gzip": 3102,
           "target": "es5"
         }
       ],
@@ -2145,31 +2145,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-modal.js",
+          "fileName": "qoxviiwe.js",
           "outputs": [
-            "dist/stellar/stellar-modal.js",
-            "www/build/stellar/stellar-modal.js"
+            "dist/stellar/qoxviiwe.js",
+            "www/build/stellar/qoxviiwe.js"
           ],
-          "size": 2203,
-          "gzip": 676
+          "size": 1243,
+          "gzip": 558
         },
         {
-          "fileName": "stellar-modal.es5.js",
+          "fileName": "qoxviiwe.es5.js",
           "outputs": [
-            "dist/stellar/stellar-modal.es5.js",
-            "www/build/stellar/stellar-modal.es5.js"
+            "dist/stellar/qoxviiwe.es5.js",
+            "www/build/stellar/qoxviiwe.es5.js"
           ],
-          "size": 3434,
-          "gzip": 821,
+          "size": 1642,
+          "gzip": 665,
           "target": "es5"
         },
         {
-          "fileName": "stellar-modal.js",
+          "fileName": "qoxviiwe.js",
           "outputs": [
-            "dist/esm/es5/stellar-modal.js"
+            "dist/esm/es5/qoxviiwe.js"
           ],
-          "size": 2986,
-          "gzip": 773,
+          "size": 1568,
+          "gzip": 632,
           "target": "es5"
         }
       ],
@@ -2200,31 +2200,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-modal-controller.js",
+          "fileName": "kdcypjcc.js",
           "outputs": [
-            "dist/stellar/stellar-modal-controller.js",
-            "www/build/stellar/stellar-modal-controller.js"
+            "dist/stellar/kdcypjcc.js",
+            "www/build/stellar/kdcypjcc.js"
           ],
-          "size": 6424,
-          "gzip": 1685
+          "size": 3759,
+          "gzip": 1314
         },
         {
-          "fileName": "stellar-modal-controller.es5.js",
+          "fileName": "kdcypjcc.es5.js",
           "outputs": [
-            "dist/stellar/stellar-modal-controller.es5.js",
-            "www/build/stellar/stellar-modal-controller.es5.js"
+            "dist/stellar/kdcypjcc.es5.js",
+            "www/build/stellar/kdcypjcc.es5.js"
           ],
-          "size": 11913,
-          "gzip": 2627,
+          "size": 5867,
+          "gzip": 2034,
           "target": "es5"
         },
         {
-          "fileName": "stellar-modal-controller.js",
+          "fileName": "kdcypjcc.js",
           "outputs": [
-            "dist/esm/es5/stellar-modal-controller.js"
+            "dist/esm/es5/kdcypjcc.js"
           ],
-          "size": 10967,
-          "gzip": 2571,
+          "size": 5850,
+          "gzip": 2017,
           "target": "es5"
         }
       ],
@@ -2251,31 +2251,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-pagination.js",
+          "fileName": "ja14pllq.js",
           "outputs": [
-            "dist/stellar/stellar-pagination.js",
-            "www/build/stellar/stellar-pagination.js"
+            "dist/stellar/ja14pllq.js",
+            "www/build/stellar/ja14pllq.js"
           ],
-          "size": 12352,
-          "gzip": 2683
+          "size": 8028,
+          "gzip": 2206
         },
         {
-          "fileName": "stellar-pagination.es5.js",
+          "fileName": "ja14pllq.es5.js",
           "outputs": [
-            "dist/stellar/stellar-pagination.es5.js",
-            "www/build/stellar/stellar-pagination.es5.js"
+            "dist/stellar/ja14pllq.es5.js",
+            "www/build/stellar/ja14pllq.es5.js"
           ],
-          "size": 15060,
-          "gzip": 2859,
+          "size": 8928,
+          "gzip": 2327,
           "target": "es5"
         },
         {
-          "fileName": "stellar-pagination.js",
+          "fileName": "ja14pllq.js",
           "outputs": [
-            "dist/esm/es5/stellar-pagination.js"
+            "dist/esm/es5/ja14pllq.js"
           ],
-          "size": 14007,
-          "gzip": 2779,
+          "size": 8912,
+          "gzip": 2298,
           "target": "es5"
         }
       ],
@@ -2297,31 +2297,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-parallax.js",
+          "fileName": "krsbg8y5.js",
           "outputs": [
-            "dist/stellar/stellar-parallax.js",
-            "www/build/stellar/stellar-parallax.js"
+            "dist/stellar/krsbg8y5.js",
+            "www/build/stellar/krsbg8y5.js"
           ],
-          "size": 11046,
-          "gzip": 3556
+          "size": 4024,
+          "gzip": 1669
         },
         {
-          "fileName": "stellar-parallax.es5.js",
+          "fileName": "krsbg8y5.es5.js",
           "outputs": [
-            "dist/stellar/stellar-parallax.es5.js",
-            "www/build/stellar/stellar-parallax.es5.js"
+            "dist/stellar/krsbg8y5.es5.js",
+            "www/build/stellar/krsbg8y5.es5.js"
           ],
-          "size": 15383,
-          "gzip": 3737,
+          "size": 4416,
+          "gzip": 1754,
           "target": "es5"
         },
         {
-          "fileName": "stellar-parallax.js",
+          "fileName": "krsbg8y5.js",
           "outputs": [
-            "dist/esm/es5/stellar-parallax.js"
+            "dist/esm/es5/krsbg8y5.js"
           ],
-          "size": 14068,
-          "gzip": 3673,
+          "size": 4409,
+          "gzip": 1738,
           "target": "es5"
         }
       ],
@@ -2343,31 +2343,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-parallax-section.js",
+          "fileName": "9tkcbs07.js",
           "outputs": [
-            "dist/stellar/stellar-parallax-section.js",
-            "www/build/stellar/stellar-parallax-section.js"
+            "dist/stellar/9tkcbs07.js",
+            "www/build/stellar/9tkcbs07.js"
           ],
-          "size": 1448,
-          "gzip": 524
+          "size": 968,
+          "gzip": 456
         },
         {
-          "fileName": "stellar-parallax-section.es5.js",
+          "fileName": "9tkcbs07.es5.js",
           "outputs": [
-            "dist/stellar/stellar-parallax-section.es5.js",
-            "www/build/stellar/stellar-parallax-section.es5.js"
+            "dist/stellar/9tkcbs07.es5.js",
+            "www/build/stellar/9tkcbs07.es5.js"
           ],
-          "size": 2501,
-          "gzip": 682,
+          "size": 1328,
+          "gzip": 557,
           "target": "es5"
         },
         {
-          "fileName": "stellar-parallax-section.js",
+          "fileName": "9tkcbs07.js",
           "outputs": [
-            "dist/esm/es5/stellar-parallax-section.js"
+            "dist/esm/es5/9tkcbs07.js"
           ],
-          "size": 2146,
-          "gzip": 630,
+          "size": 1274,
+          "gzip": 525,
           "target": "es5"
         }
       ],
@@ -2391,31 +2391,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-quick-actions.js",
+          "fileName": "fyhxdzlz.js",
           "outputs": [
-            "dist/stellar/stellar-quick-actions.js",
-            "www/build/stellar/stellar-quick-actions.js"
+            "dist/stellar/fyhxdzlz.js",
+            "www/build/stellar/fyhxdzlz.js"
           ],
-          "size": 3355,
-          "gzip": 1028
+          "size": 2462,
+          "gzip": 889
         },
         {
-          "fileName": "stellar-quick-actions.es5.js",
+          "fileName": "fyhxdzlz.es5.js",
           "outputs": [
-            "dist/stellar/stellar-quick-actions.es5.js",
-            "www/build/stellar/stellar-quick-actions.es5.js"
+            "dist/stellar/fyhxdzlz.es5.js",
+            "www/build/stellar/fyhxdzlz.es5.js"
           ],
-          "size": 4284,
-          "gzip": 1177,
+          "size": 2832,
+          "gzip": 972,
           "target": "es5"
         },
         {
-          "fileName": "stellar-quick-actions.js",
+          "fileName": "fyhxdzlz.js",
           "outputs": [
-            "dist/esm/es5/stellar-quick-actions.js"
+            "dist/esm/es5/fyhxdzlz.js"
           ],
-          "size": 3967,
-          "gzip": 1124,
+          "size": 2799,
+          "gzip": 944,
           "target": "es5"
         }
       ],
@@ -2437,31 +2437,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-scatter.js",
+          "fileName": "d106ab03.js",
           "outputs": [
-            "dist/stellar/stellar-scatter.js",
-            "www/build/stellar/stellar-scatter.js"
+            "dist/stellar/d106ab03.js",
+            "www/build/stellar/d106ab03.js"
           ],
-          "size": 1285,
-          "gzip": 523
+          "size": 4521,
+          "gzip": 777
         },
         {
-          "fileName": "stellar-scatter.es5.js",
+          "fileName": "d106ab03.es5.js",
           "outputs": [
-            "dist/stellar/stellar-scatter.es5.js",
-            "www/build/stellar/stellar-scatter.es5.js"
+            "dist/stellar/d106ab03.es5.js",
+            "www/build/stellar/d106ab03.es5.js"
           ],
-          "size": 2331,
-          "gzip": 683,
+          "size": 4888,
+          "gzip": 881,
           "target": "es5"
         },
         {
-          "fileName": "stellar-scatter.js",
+          "fileName": "d106ab03.js",
           "outputs": [
-            "dist/esm/es5/stellar-scatter.js"
+            "dist/esm/es5/d106ab03.js"
           ],
-          "size": 1973,
-          "gzip": 631,
+          "size": 4822,
+          "gzip": 849,
           "target": "es5"
         }
       ],
@@ -2485,31 +2485,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-slide.js",
+          "fileName": "6igph3jw.js",
           "outputs": [
-            "dist/stellar/stellar-slide.js",
-            "www/build/stellar/stellar-slide.js"
+            "dist/stellar/6igph3jw.js",
+            "www/build/stellar/6igph3jw.js"
           ],
-          "size": 1370,
-          "gzip": 532
+          "size": 935,
+          "gzip": 447
         },
         {
-          "fileName": "stellar-slide.es5.js",
+          "fileName": "6igph3jw.es5.js",
           "outputs": [
-            "dist/stellar/stellar-slide.es5.js",
-            "www/build/stellar/stellar-slide.es5.js"
+            "dist/stellar/6igph3jw.es5.js",
+            "www/build/stellar/6igph3jw.es5.js"
           ],
-          "size": 2147,
-          "gzip": 679,
+          "size": 1273,
+          "gzip": 549,
           "target": "es5"
         },
         {
-          "fileName": "stellar-slide.js",
+          "fileName": "6igph3jw.js",
           "outputs": [
-            "dist/esm/es5/stellar-slide.js"
+            "dist/esm/es5/6igph3jw.js"
           ],
-          "size": 1859,
-          "gzip": 628,
+          "size": 1199,
+          "gzip": 513,
           "target": "es5"
         }
       ],
@@ -2531,31 +2531,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-slides.js",
+          "fileName": "qeuaotjo.js",
           "outputs": [
-            "dist/stellar/stellar-slides.js",
-            "www/build/stellar/stellar-slides.js"
+            "dist/stellar/qeuaotjo.js",
+            "www/build/stellar/qeuaotjo.js"
           ],
-          "size": 315450,
-          "gzip": 52252
+          "size": 147676,
+          "gzip": 35046
         },
         {
-          "fileName": "stellar-slides.es5.js",
+          "fileName": "qeuaotjo.es5.js",
           "outputs": [
-            "dist/stellar/stellar-slides.es5.js",
-            "www/build/stellar/stellar-slides.es5.js"
+            "dist/stellar/qeuaotjo.es5.js",
+            "www/build/stellar/qeuaotjo.es5.js"
           ],
-          "size": 405605,
-          "gzip": 53898,
+          "size": 148565,
+          "gzip": 35187,
           "target": "es5"
         },
         {
-          "fileName": "stellar-slides.js",
+          "fileName": "qeuaotjo.js",
           "outputs": [
-            "dist/esm/es5/stellar-slides.js"
+            "dist/esm/es5/qeuaotjo.js"
           ],
-          "size": 369289,
-          "gzip": 52872,
+          "size": 148593,
+          "gzip": 35165,
           "target": "es5"
         }
       ],
@@ -2580,31 +2580,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-starscape.js",
+          "fileName": "fnqvqdyh.js",
           "outputs": [
-            "dist/stellar/stellar-starscape.js",
-            "www/build/stellar/stellar-starscape.js"
+            "dist/stellar/fnqvqdyh.js",
+            "www/build/stellar/fnqvqdyh.js"
           ],
-          "size": 2404,
-          "gzip": 1159
+          "size": 1772,
+          "gzip": 1041
         },
         {
-          "fileName": "stellar-starscape.es5.js",
+          "fileName": "fnqvqdyh.es5.js",
           "outputs": [
-            "dist/stellar/stellar-starscape.es5.js",
-            "www/build/stellar/stellar-starscape.es5.js"
+            "dist/stellar/fnqvqdyh.es5.js",
+            "www/build/stellar/fnqvqdyh.es5.js"
           ],
-          "size": 3418,
-          "gzip": 1310,
+          "size": 2148,
+          "gzip": 1129,
           "target": "es5"
         },
         {
-          "fileName": "stellar-starscape.js",
+          "fileName": "fnqvqdyh.js",
           "outputs": [
-            "dist/esm/es5/stellar-starscape.js"
+            "dist/esm/es5/fnqvqdyh.js"
           ],
-          "size": 3003,
-          "gzip": 1227,
+          "size": 2078,
+          "gzip": 1094,
           "target": "es5"
         }
       ],
@@ -2628,31 +2628,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-step.js",
+          "fileName": "pxrjqp2j.js",
           "outputs": [
-            "dist/stellar/stellar-step.js",
-            "www/build/stellar/stellar-step.js"
+            "dist/stellar/pxrjqp2j.js",
+            "www/build/stellar/pxrjqp2j.js"
           ],
-          "size": 3813,
-          "gzip": 1177
+          "size": 2672,
+          "gzip": 1032
         },
         {
-          "fileName": "stellar-step.es5.js",
+          "fileName": "pxrjqp2j.es5.js",
           "outputs": [
-            "dist/stellar/stellar-step.es5.js",
-            "www/build/stellar/stellar-step.es5.js"
+            "dist/stellar/pxrjqp2j.es5.js",
+            "www/build/stellar/pxrjqp2j.es5.js"
           ],
-          "size": 5156,
-          "gzip": 1350,
+          "size": 3150,
+          "gzip": 1138,
           "target": "es5"
         },
         {
-          "fileName": "stellar-step.js",
+          "fileName": "pxrjqp2j.js",
           "outputs": [
-            "dist/esm/es5/stellar-step.js"
+            "dist/esm/es5/pxrjqp2j.js"
           ],
-          "size": 4720,
-          "gzip": 1293,
+          "size": 3105,
+          "gzip": 1106,
           "target": "es5"
         }
       ],
@@ -2674,31 +2674,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-steps.js",
+          "fileName": "76dx1qm7.js",
           "outputs": [
-            "dist/stellar/stellar-steps.js",
-            "www/build/stellar/stellar-steps.js"
+            "dist/stellar/76dx1qm7.js",
+            "www/build/stellar/76dx1qm7.js"
           ],
-          "size": 1678,
-          "gzip": 619
+          "size": 1098,
+          "gzip": 521
         },
         {
-          "fileName": "stellar-steps.es5.js",
+          "fileName": "76dx1qm7.es5.js",
           "outputs": [
-            "dist/stellar/stellar-steps.es5.js",
-            "www/build/stellar/stellar-steps.es5.js"
+            "dist/stellar/76dx1qm7.es5.js",
+            "www/build/stellar/76dx1qm7.es5.js"
           ],
-          "size": 2764,
-          "gzip": 780,
+          "size": 1496,
+          "gzip": 629,
           "target": "es5"
         },
         {
-          "fileName": "stellar-steps.js",
+          "fileName": "76dx1qm7.js",
           "outputs": [
-            "dist/esm/es5/stellar-steps.js"
+            "dist/esm/es5/76dx1qm7.js"
           ],
-          "size": 2392,
-          "gzip": 731,
+          "size": 1422,
+          "gzip": 592,
           "target": "es5"
         }
       ],
@@ -2723,31 +2723,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-stripe.js",
+          "fileName": "9kjgmtb3.js",
           "outputs": [
-            "dist/stellar/stellar-stripe.js",
-            "www/build/stellar/stellar-stripe.js"
+            "dist/stellar/9kjgmtb3.js",
+            "www/build/stellar/9kjgmtb3.js"
           ],
-          "size": 8652,
-          "gzip": 2396
+          "size": 5342,
+          "gzip": 1925
         },
         {
-          "fileName": "stellar-stripe.es5.js",
+          "fileName": "9kjgmtb3.es5.js",
           "outputs": [
-            "dist/stellar/stellar-stripe.es5.js",
-            "www/build/stellar/stellar-stripe.es5.js"
+            "dist/stellar/9kjgmtb3.es5.js",
+            "www/build/stellar/9kjgmtb3.es5.js"
           ],
-          "size": 12737,
-          "gzip": 3254,
+          "size": 7097,
+          "gzip": 2579,
           "target": "es5"
         },
         {
-          "fileName": "stellar-stripe.js",
+          "fileName": "9kjgmtb3.js",
           "outputs": [
-            "dist/esm/es5/stellar-stripe.js"
+            "dist/esm/es5/9kjgmtb3.js"
           ],
-          "size": 11788,
-          "gzip": 3193,
+          "size": 7068,
+          "gzip": 2569,
           "target": "es5"
         }
       ],
@@ -2769,31 +2769,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-switch.js",
+          "fileName": "cph36cah.js",
           "outputs": [
-            "dist/stellar/stellar-switch.js",
-            "www/build/stellar/stellar-switch.js"
+            "dist/stellar/cph36cah.js",
+            "www/build/stellar/cph36cah.js"
           ],
-          "size": 4672,
-          "gzip": 1197
+          "size": 3660,
+          "gzip": 1065
         },
         {
-          "fileName": "stellar-switch.es5.js",
+          "fileName": "cph36cah.es5.js",
           "outputs": [
-            "dist/stellar/stellar-switch.es5.js",
-            "www/build/stellar/stellar-switch.es5.js"
+            "dist/stellar/cph36cah.es5.js",
+            "www/build/stellar/cph36cah.es5.js"
           ],
-          "size": 5502,
-          "gzip": 1350,
+          "size": 4014,
+          "gzip": 1170,
           "target": "es5"
         },
         {
-          "fileName": "stellar-switch.js",
+          "fileName": "cph36cah.js",
           "outputs": [
-            "dist/esm/es5/stellar-switch.js"
+            "dist/esm/es5/cph36cah.js"
           ],
-          "size": 5209,
-          "gzip": 1302,
+          "size": 3942,
+          "gzip": 1135,
           "target": "es5"
         }
       ],
@@ -2820,31 +2820,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-tag.js",
+          "fileName": "i0a3mdfn.js",
           "outputs": [
-            "dist/stellar/stellar-tag.js",
-            "www/build/stellar/stellar-tag.js"
+            "dist/stellar/i0a3mdfn.js",
+            "www/build/stellar/i0a3mdfn.js"
           ],
-          "size": 2360,
-          "gzip": 791
+          "size": 1569,
+          "gzip": 689
         },
         {
-          "fileName": "stellar-tag.es5.js",
+          "fileName": "i0a3mdfn.es5.js",
           "outputs": [
-            "dist/stellar/stellar-tag.es5.js",
-            "www/build/stellar/stellar-tag.es5.js"
+            "dist/stellar/i0a3mdfn.es5.js",
+            "www/build/stellar/i0a3mdfn.es5.js"
           ],
-          "size": 3391,
-          "gzip": 947,
+          "size": 1900,
+          "gzip": 780,
           "target": "es5"
         },
         {
-          "fileName": "stellar-tag.js",
+          "fileName": "i0a3mdfn.js",
           "outputs": [
-            "dist/esm/es5/stellar-tag.js"
+            "dist/esm/es5/i0a3mdfn.js"
           ],
-          "size": 3020,
-          "gzip": 887,
+          "size": 1849,
+          "gzip": 749,
           "target": "es5"
         }
       ],
@@ -2869,31 +2869,31 @@
       ],
       "bundles": [
         {
-          "fileName": "stellar-tooltip.js",
+          "fileName": "y6cfpwfl.js",
           "outputs": [
-            "dist/stellar/stellar-tooltip.js",
-            "www/build/stellar/stellar-tooltip.js"
+            "dist/stellar/y6cfpwfl.js",
+            "www/build/stellar/y6cfpwfl.js"
           ],
-          "size": 7556,
-          "gzip": 1282
+          "size": 6072,
+          "gzip": 1118
         },
         {
-          "fileName": "stellar-tooltip.es5.js",
+          "fileName": "y6cfpwfl.es5.js",
           "outputs": [
-            "dist/stellar/stellar-tooltip.es5.js",
-            "www/build/stellar/stellar-tooltip.es5.js"
+            "dist/stellar/y6cfpwfl.es5.js",
+            "www/build/stellar/y6cfpwfl.es5.js"
           ],
-          "size": 8322,
-          "gzip": 1431,
+          "size": 6388,
+          "gzip": 1214,
           "target": "es5"
         },
         {
-          "fileName": "stellar-tooltip.js",
+          "fileName": "y6cfpwfl.js",
           "outputs": [
-            "dist/esm/es5/stellar-tooltip.js"
+            "dist/esm/es5/y6cfpwfl.js"
           ],
-          "size": 8048,
-          "gzip": 1380,
+          "size": 6318,
+          "gzip": 1181,
           "target": "es5"
         }
       ],
@@ -3069,5 +3069,13 @@
       "easing"
     ]
   },
-  "collections": []
+  "collections": [
+    {
+      "name": "ionicons",
+      "source": "node_modules/ionicons",
+      "tags": [
+        "ion-icon"
+      ]
+    }
+  ]
 }
