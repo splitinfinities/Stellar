@@ -7,6 +7,11 @@
 
 ## Properties
 
+#### colors
+
+boolean
+
+
 #### float
 
 boolean
@@ -25,10 +30,20 @@ number
 #### scatter
 
 number
+
+
+#### sizes
+
+boolean
 
 
 ## Attributes
 
+#### colors
+
+boolean
+
+
 #### float
 
 boolean
@@ -47,6 +62,11 @@ number
 #### scatter
 
 number
+
+
+#### sizes
+
+boolean
 
 
 

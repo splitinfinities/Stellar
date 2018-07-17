@@ -1854,6 +1854,12 @@
       "usage": {},
       "props": [
         {
+          "name": "colors",
+          "type": "boolean",
+          "attr": "colors",
+          "docs": ""
+        },
+        {
           "name": "float",
           "type": "boolean",
           "attr": "float",
@@ -1875,6 +1881,12 @@
           "name": "scatter",
           "type": "number",
           "attr": "scatter",
+          "docs": ""
+        },
+        {
+          "name": "sizes",
+          "type": "boolean",
+          "attr": "sizes",
           "docs": ""
         }
       ],

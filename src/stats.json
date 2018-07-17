@@ -7,8 +7,8 @@
     "namespace": "stellar",
     "fsNamespace": "stellar",
     "components": 65,
-    "entries": 42,
-    "bundles": 129
+    "entries": 40,
+    "bundles": 123
   },
   "options": {
     "minifyJs": true,
@@ -490,12 +490,27 @@
     {
       "tag": "stellar-parallax",
       "dependencies": [],
-      "dependencyOf": []
+      "dependencyOf": [
+        "stellar-starscape"
+      ]
     },
     {
       "tag": "stellar-parallax-section",
       "dependencies": [],
-      "dependencyOf": []
+      "dependencyOf": [
+        "stellar-starscape"
+      ]
+    },
+    {
+      "tag": "stellar-starscape",
+      "dependencies": [
+        "stellar-parallax",
+        "stellar-parallax-section"
+      ],
+      "dependencyOf": [
+        "stellar-documentation-site",
+        "stellar-header"
+      ]
     },
     {
       "tag": "stellar-quick-actions",
@@ -520,14 +535,6 @@
       "tag": "stellar-slides",
       "dependencies": [],
       "dependencyOf": []
-    },
-    {
-      "tag": "stellar-starscape",
-      "dependencies": [],
-      "dependencyOf": [
-        "stellar-documentation-site",
-        "stellar-header"
-      ]
     },
     {
       "tag": "stellar-step",
@@ -2287,92 +2294,68 @@
       ]
     },
     {
-      "entryId": "entry:stellar-parallax",
+      "entryId": "entry:stellar-parallax.stellar-parallax-section.stellar-starscape",
       "components": [
         {
           "tag": "stellar-parallax",
           "dependencies": [],
-          "dependencyOf": []
-        }
-      ],
-      "bundles": [
-        {
-          "fileName": "krsbg8y5.js",
-          "outputs": [
-            "dist/stellar/krsbg8y5.js",
-            "www/build/stellar/krsbg8y5.js"
-          ],
-          "size": 4024,
-          "gzip": 1669
+          "dependencyOf": [
+            "stellar-starscape"
+          ]
         },
-        {
-          "fileName": "krsbg8y5.es5.js",
-          "outputs": [
-            "dist/stellar/krsbg8y5.es5.js",
-            "www/build/stellar/krsbg8y5.es5.js"
-          ],
-          "size": 4416,
-          "gzip": 1754,
-          "target": "es5"
-        },
-        {
-          "fileName": "krsbg8y5.js",
-          "outputs": [
-            "dist/esm/es5/krsbg8y5.js"
-          ],
-          "size": 4409,
-          "gzip": 1738,
-          "target": "es5"
-        }
-      ],
-      "inputs": [
-        "dist/collection/components/parallax/parallax.js"
-      ],
-      "encapsulations": [
-        "none"
-      ]
-    },
-    {
-      "entryId": "entry:stellar-parallax-section",
-      "components": [
         {
           "tag": "stellar-parallax-section",
           "dependencies": [],
-          "dependencyOf": []
+          "dependencyOf": [
+            "stellar-starscape"
+          ]
+        },
+        {
+          "tag": "stellar-starscape",
+          "dependencies": [
+            "stellar-parallax",
+            "stellar-parallax-section"
+          ],
+          "dependencyOf": [
+            "stellar-documentation-site",
+            "stellar-header"
+          ]
         }
       ],
       "bundles": [
         {
-          "fileName": "9tkcbs07.js",
+          "fileName": "fw82bp2n.js",
           "outputs": [
-            "dist/stellar/9tkcbs07.js",
-            "www/build/stellar/9tkcbs07.js"
+            "dist/stellar/fw82bp2n.js",
+            "www/build/stellar/fw82bp2n.js"
           ],
-          "size": 968,
-          "gzip": 456
+          "size": 6797,
+          "gzip": 2815
         },
         {
-          "fileName": "9tkcbs07.es5.js",
+          "fileName": "fw82bp2n.es5.js",
           "outputs": [
-            "dist/stellar/9tkcbs07.es5.js",
-            "www/build/stellar/9tkcbs07.es5.js"
+            "dist/stellar/fw82bp2n.es5.js",
+            "www/build/stellar/fw82bp2n.es5.js"
           ],
-          "size": 1328,
-          "gzip": 557,
+          "size": 7770,
+          "gzip": 2895,
           "target": "es5"
         },
         {
-          "fileName": "9tkcbs07.js",
+          "fileName": "fw82bp2n.js",
           "outputs": [
-            "dist/esm/es5/9tkcbs07.js"
+            "dist/esm/es5/fw82bp2n.js"
           ],
-          "size": 1274,
-          "gzip": 525,
+          "size": 7832,
+          "gzip": 2901,
           "target": "es5"
         }
       ],
       "inputs": [
-        "dist/collection/components/parallax-section/parallax-section.js"
+        "dist/collection/components/parallax-section/parallax-section.js",
+        "dist/collection/components/parallax/parallax.js",
+        "dist/collection/components/starscape/starscape.js"
       ],
       "encapsulations": [
         "none"
@@ -2437,31 +2420,31 @@
       ],
       "bundles": [
         {
-          "fileName": "d106ab03.js",
+          "fileName": "r1y34o38.js",
           "outputs": [
-            "dist/stellar/d106ab03.js",
-            "www/build/stellar/d106ab03.js"
+            "dist/stellar/r1y34o38.js",
+            "www/build/stellar/r1y34o38.js"
           ],
-          "size": 4521,
-          "gzip": 777
+          "size": 4952,
+          "gzip": 924
         },
         {
-          "fileName": "d106ab03.es5.js",
+          "fileName": "r1y34o38.es5.js",
           "outputs": [
-            "dist/stellar/d106ab03.es5.js",
-            "www/build/stellar/d106ab03.es5.js"
+            "dist/stellar/r1y34o38.es5.js",
+            "www/build/stellar/r1y34o38.es5.js"
           ],
-          "size": 4888,
-          "gzip": 881,
+          "size": 5402,
+          "gzip": 1043,
           "target": "es5"
         },
         {
-          "fileName": "d106ab03.js",
+          "fileName": "r1y34o38.js",
           "outputs": [
-            "dist/esm/es5/d106ab03.js"
+            "dist/esm/es5/r1y34o38.js"
           ],
-          "size": 4822,
-          "gzip": 849,
+          "size": 5336,
+          "gzip": 1015,
           "target": "es5"
         }
       ],
@@ -2561,55 +2544,6 @@
       ],
       "inputs": [
         "dist/collection/components/slides/slides.js"
-      ],
-      "encapsulations": [
-        "none"
-      ]
-    },
-    {
-      "entryId": "entry:stellar-starscape",
-      "components": [
-        {
-          "tag": "stellar-starscape",
-          "dependencies": [],
-          "dependencyOf": [
-            "stellar-documentation-site",
-            "stellar-header"
-          ]
-        }
-      ],
-      "bundles": [
-        {
-          "fileName": "fnqvqdyh.js",
-          "outputs": [
-            "dist/stellar/fnqvqdyh.js",
-            "www/build/stellar/fnqvqdyh.js"
-          ],
-          "size": 1772,
-          "gzip": 1041
-        },
-        {
-          "fileName": "fnqvqdyh.es5.js",
-          "outputs": [
-            "dist/stellar/fnqvqdyh.es5.js",
-            "www/build/stellar/fnqvqdyh.es5.js"
-          ],
-          "size": 2148,
-          "gzip": 1129,
-          "target": "es5"
-        },
-        {
-          "fileName": "fnqvqdyh.js",
-          "outputs": [
-            "dist/esm/es5/fnqvqdyh.js"
-          ],
-          "size": 2078,
-          "gzip": 1094,
-          "target": "es5"
-        }
-      ],
-      "inputs": [
-        "dist/collection/components/starscape/starscape.js"
       ],
       "encapsulations": [
         "none"

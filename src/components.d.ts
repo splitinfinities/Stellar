@@ -2010,10 +2010,12 @@ declare global {
 
   namespace StencilComponents {
     interface StellarScatter {
+      'colors': boolean;
       'float': boolean;
       'max': number;
       'min': number;
       'scatter': number;
+      'sizes': boolean;
     }
   }
 
@@ -2036,10 +2038,12 @@ declare global {
   }
   namespace JSXElements {
     export interface StellarScatterAttributes extends HTMLAttributes {
+      'colors'?: boolean;
       'float'?: boolean;
       'max'?: number;
       'min'?: number;
       'scatter'?: number;
+      'sizes'?: boolean;
     }
   }
 }

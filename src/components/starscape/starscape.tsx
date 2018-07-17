@@ -25,4 +25,18 @@ export class Starscape {
       "--rotate": `${onconstrainedY}deg`,
     }, this.element)
   }
+
+  render () {
+    return (
+      <stellar-parallax>
+        <stellar-parallax-section layer={2} speed={-8}>
+          <div class="stars" />
+        </stellar-parallax-section>
+
+        <stellar-parallax-section layer={1} speed={-3}>
+          <div class="stars" />
+        </stellar-parallax-section>
+      </stellar-parallax>
+    )
+  }
 }

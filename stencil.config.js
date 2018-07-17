@@ -28,7 +28,7 @@ exports.config = {
     { type: "stats", file: "./src/stats.json" },
     { type: "docs", jsonFile: "/src/documentation.json" },
     { type: "dist" },
-    { type: "www", serviceWorker: true }
+    { type: "www", serviceWorker: false }
   ],
   plugins: [
     postcss({
