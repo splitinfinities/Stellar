@@ -2324,31 +2324,31 @@
       ],
       "bundles": [
         {
-          "fileName": "fw82bp2n.js",
+          "fileName": "6jsw7qq6.js",
           "outputs": [
-            "dist/stellar/fw82bp2n.js",
-            "www/build/stellar/fw82bp2n.js"
+            "dist/stellar/6jsw7qq6.js",
+            "www/build/stellar/6jsw7qq6.js"
           ],
-          "size": 6797,
-          "gzip": 2815
+          "size": 6314,
+          "gzip": 2653
         },
         {
-          "fileName": "fw82bp2n.es5.js",
+          "fileName": "6jsw7qq6.es5.js",
           "outputs": [
-            "dist/stellar/fw82bp2n.es5.js",
-            "www/build/stellar/fw82bp2n.es5.js"
+            "dist/stellar/6jsw7qq6.es5.js",
+            "www/build/stellar/6jsw7qq6.es5.js"
           ],
-          "size": 7770,
-          "gzip": 2895,
+          "size": 7209,
+          "gzip": 2742,
           "target": "es5"
         },
         {
-          "fileName": "fw82bp2n.js",
+          "fileName": "6jsw7qq6.js",
           "outputs": [
-            "dist/esm/es5/fw82bp2n.js"
+            "dist/esm/es5/6jsw7qq6.js"
           ],
-          "size": 7832,
-          "gzip": 2901,
+          "size": 7248,
+          "gzip": 2736,
           "target": "es5"
         }
       ],
@@ -2966,9 +2966,7 @@
       "src/components/slides/vendor/swiper.js",
       "src/global/helpers.ts"
     ],
-    "src/components/starscape/starscape.tsx": [
-      "css-custom-properties"
-    ],
+    "src/components/starscape/starscape.tsx": [],
     "src/components/step/step.tsx": [
       "parent-node-selector"
     ],
