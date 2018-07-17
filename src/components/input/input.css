@@ -60,6 +60,18 @@ stellar-input .tags-input {
   -moz-appearance: none;
 }
 
+stellar-input.db input,
+stellar-input.db textarea,
+stellar-input.db .tags-input,
+stellar-input.dib input,
+stellar-input.dib textarea,
+stellar-input.dib .tags-input,
+stellar-input.di input,
+stellar-input.di textarea,
+stellar-input.di .tags-input {
+  width: auto;
+}
+
 stellar-input input::-moz-focus-inner,
 stellar-input textarea::-moz-focus-inner,
 stellar-input .tags-input::-moz-focus-inner {

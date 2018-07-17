@@ -2003,31 +2003,31 @@
       ],
       "bundles": [
         {
-          "fileName": "r04xzzqv.js",
+          "fileName": "zrjvctd0.js",
           "outputs": [
-            "dist/stellar/r04xzzqv.js",
-            "www/build/stellar/r04xzzqv.js"
+            "dist/stellar/zrjvctd0.js",
+            "www/build/stellar/zrjvctd0.js"
           ],
-          "size": 908524,
-          "gzip": 421029
+          "size": 908772,
+          "gzip": 421065
         },
         {
-          "fileName": "r04xzzqv.es5.js",
+          "fileName": "zrjvctd0.es5.js",
           "outputs": [
-            "dist/stellar/r04xzzqv.es5.js",
-            "www/build/stellar/r04xzzqv.es5.js"
+            "dist/stellar/zrjvctd0.es5.js",
+            "www/build/stellar/zrjvctd0.es5.js"
           ],
-          "size": 913435,
-          "gzip": 421299,
+          "size": 913683,
+          "gzip": 421336,
           "target": "es5"
         },
         {
-          "fileName": "r04xzzqv.js",
+          "fileName": "zrjvctd0.js",
           "outputs": [
-            "dist/esm/es5/r04xzzqv.js"
+            "dist/esm/es5/zrjvctd0.js"
           ],
-          "size": 917275,
-          "gzip": 422055,
+          "size": 917523,
+          "gzip": 422091,
           "target": "es5"
         }
       ],
