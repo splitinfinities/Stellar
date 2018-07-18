@@ -60,7 +60,7 @@ export class Tab {
   }
 
   handleIndicatorPosition() {
-    if (this.open) {
+    if (this.open && this.parent.nodeName === "STELLAR-TABS") {
       properties.set({
         "--tab-left": `${this.element.offsetLeft}px`,
         "--tab-width": `${this.element.offsetWidth}px`
