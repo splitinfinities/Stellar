@@ -1,4 +1,4 @@
-stellar-button {
+:host {
   appearance: none !important;
   -webkit-appearance: none !important;
   -webkit-user-select: none;
@@ -20,7 +20,7 @@ stellar-button {
   --font-size: 1.3rem;
 }
 
-stellar-button[outline] {
+:host([outline]) {
   --background: transparent;
   --color: var(--theme-base5);
   --border: 2px solid currentColor;
@@ -29,7 +29,7 @@ stellar-button[outline] {
   --active-border: 2px solid currentColor;
 }
 
-stellar-button[ghost] {
+:host([ghost]) {
   --padding: 0.05em 0 0.125em;
   --background: none;
   --color: var(--theme-base5);
@@ -39,14 +39,14 @@ stellar-button[ghost] {
   --active-border: none;
 }
 
-stellar-button[outline][invert] {
+:host([outline][invert]) {
   --background: transparent;
   --border: 2px solid currentColor;
   --active-background: var(--theme-base0);
   --active-border: 2px solid currentColor;
 }
 
-stellar-button[ghost][invert] {
+:host([ghost][invert]) {
   --background: none;
   --color: var(--theme-base2);
   --border: none;
@@ -55,7 +55,7 @@ stellar-button[ghost][invert] {
   --active-border: none;
 }
 
-stellar-button[invert] {
+:host([invert]) {
   --background: var(--white);
   --color: var(--theme-base2);
   --border: none;
@@ -64,23 +64,23 @@ stellar-button[invert] {
   --active-border: none;
 }
 
-stellar-button[pill] {
+:host([pill]) {
   --border-radius: 1000px;
 }
 
-stellar-button[size="tiny"] {
+:host([size="tiny"]) {
   --font-size: .9rem;
 }
 
-stellar-button[size="small"] {
+:host([size="small"]) {
   --font-size: 1rem;
 }
 
-stellar-button[size="large"] {
+:host([size="large"]) {
   --font-size: 2rem;
 }
 
-stellar-button .button {
+:host .button {
   cursor: pointer;
   display: inline-flex;
   position: relative;
@@ -102,79 +102,46 @@ stellar-button .button {
   border-radius: var(--border-radius, 0);
 }
 
-stellar-button .button:hover,
-stellar-button .button:focus,
-stellar-button[state="hover"] .button,
-stellar-button[state="focus"] .button,
-stellar-button[state="active"] .button {
+:host .button:hover,
+:host .button:focus {
   border: var(--active-border);
   background-color: var(--active-background);
   color: var(--active-color);
 }
 
 
-stellar-button .button:active,
-stellar-button[state="active"] .button {
+:host .button:active {
   transform: scale(0.925)
 }
 
-stellar-button .button .content {
+:host .button .content {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-stellar-button[block],
-stellar-button[block] .button {
+:host([block]),
+:host([block]) .button {
   display: block;
   width: 100%;
 }
 
-stellar-button .button img,
-stellar-button .button stellar-asset {
+:host .button img,
+:host .button stellar-asset {
   display: inline-block;
   float: none;
   width: 1em;
   height: 1em;
 }
 
-stellar-button .button img[align="left"],
-stellar-button .button stellar-asset[align="left"] {
+:host .button img[align="left"],
+:host .button stellar-asset[align="left"] {
   order: -1;
   margin-right: 0.75em;
 }
 
-stellar-button .button img[align="right"],
-stellar-button .button stellar-asset[align="right"] {
+:host .button img[align="right"],
+:host .button stellar-asset[align="right"] {
   order: 2;
   margin-left: 0.75em;
-}
-
-/* Processing State */
-
-stellar-button[processing] .content {
-  opacity: 0;
-}
-
-stellar-button div .processing {
-  position: absolute;
-  top: 50%;
-  right: 50%;
-  bottom: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-stellar-button div .processing stellar-asset {
-  width: 100%;
-  height: 100%;
-}
-
-stellar-button[processing] .processing {
-  opacity: 1;
-  width: 2.25em;
-  height: 2.25em;
 }

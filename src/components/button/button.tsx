@@ -2,7 +2,8 @@ import { Component, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'stellar-button',
-  styleUrl: 'button.css'
+  styleUrl: 'button.css',
+  shadow: true
 })
 export class Button {
 

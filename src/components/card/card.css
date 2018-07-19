@@ -100,13 +100,13 @@ stellar-card > .item > header {
   display: flex;
   position: absolute;
   z-index: 3;
-  top: 1px;
+  top: 0;
   left: 0;
   align-items: center;
   justify-content: space-between;
   border: 1px solid var(--gray1);
   padding: 0 2rem;
-  width: 100%;
+  width: fill-available;
   height: 4rem;
 }
 

@@ -3,7 +3,8 @@ import { default as eqjs } from 'eq.js';
 
 @Component({
 	tag: 'stellar-layout',
-	styleUrl: 'layout.css'
+	styleUrl: 'layout.css',
+  shadow: true
 })
 export class Layout {
 	@Element() element: HTMLElement;

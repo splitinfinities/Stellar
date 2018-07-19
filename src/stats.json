@@ -7,8 +7,8 @@
     "namespace": "stellar",
     "fsNamespace": "stellar",
     "components": 65,
-    "entries": 40,
-    "bundles": 123
+    "entries": 41,
+    "bundles": 132
   },
   "options": {
     "minifyJs": true,
@@ -117,13 +117,6 @@
     },
     {
       "tag": "stellar-footer",
-      "dependencies": [],
-      "dependencyOf": [
-        "stellar-documentation-site"
-      ]
-    },
-    {
-      "tag": "stellar-layout",
       "dependencies": [],
       "dependencyOf": [
         "stellar-documentation-site"
@@ -447,6 +440,13 @@
         "stellar-documentation-site",
         "stellar-list",
         "stellar-select"
+      ]
+    },
+    {
+      "tag": "stellar-layout",
+      "dependencies": [],
+      "dependencyOf": [
+        "stellar-documentation-site"
       ]
     },
     {
@@ -797,7 +797,7 @@
       ]
     },
     {
-      "entryId": "entry:stellar-accordion.stellar-content.stellar-documentation-site.stellar-footer.stellar-layout.stellar-markdown.stellar-message.stellar-select.stellar-tab.stellar-tabs.stellar-toggle.stellar-toggle-option.stellar-unit",
+      "entryId": "entry:stellar-accordion.stellar-content.stellar-documentation-site.stellar-footer.stellar-markdown.stellar-message.stellar-select.stellar-tab.stellar-tabs.stellar-toggle.stellar-toggle-option.stellar-unit",
       "components": [
         {
           "tag": "stellar-accordion",
@@ -848,13 +848,6 @@
         },
         {
           "tag": "stellar-footer",
-          "dependencies": [],
-          "dependencyOf": [
-            "stellar-documentation-site"
-          ]
-        },
-        {
-          "tag": "stellar-layout",
           "dependencies": [],
           "dependencyOf": [
             "stellar-documentation-site"
@@ -938,31 +931,31 @@
       ],
       "bundles": [
         {
-          "fileName": "cmv5expq.js",
+          "fileName": "bphxjyiq.js",
           "outputs": [
-            "dist/stellar/cmv5expq.js",
-            "www/build/stellar/cmv5expq.js"
+            "dist/stellar/bphxjyiq.js",
+            "www/build/stellar/bphxjyiq.js"
           ],
-          "size": 165474,
-          "gzip": 50478
+          "size": 163209,
+          "gzip": 49965
         },
         {
-          "fileName": "cmv5expq.es5.js",
+          "fileName": "bphxjyiq.es5.js",
           "outputs": [
-            "dist/stellar/cmv5expq.es5.js",
-            "www/build/stellar/cmv5expq.es5.js"
+            "dist/stellar/bphxjyiq.es5.js",
+            "www/build/stellar/bphxjyiq.es5.js"
           ],
-          "size": 172622,
-          "gzip": 51413,
+          "size": 170077,
+          "gzip": 50896,
           "target": "es5"
         },
         {
-          "fileName": "cmv5expq.js",
+          "fileName": "bphxjyiq.js",
           "outputs": [
-            "dist/esm/es5/cmv5expq.js"
+            "dist/esm/es5/bphxjyiq.js"
           ],
-          "size": 176308,
-          "gzip": 52244,
+          "size": 173739,
+          "gzip": 51726,
           "target": "es5"
         }
       ],
@@ -971,7 +964,6 @@
         "dist/collection/components/content/content.js",
         "dist/collection/components/documentation-site/documentation-site.js",
         "dist/collection/components/footer/footer.js",
-        "dist/collection/components/layout/layout.js",
         "dist/collection/components/markdown/markdown.js",
         "dist/collection/components/message/message.js",
         "dist/collection/components/select/select.js",
@@ -1264,39 +1256,70 @@
       ],
       "bundles": [
         {
-          "fileName": "rs7zi1si.js",
+          "fileName": "4kfenfut.js",
           "outputs": [
-            "dist/stellar/rs7zi1si.js",
-            "www/build/stellar/rs7zi1si.js"
+            "dist/stellar/4kfenfut.js",
+            "www/build/stellar/4kfenfut.js"
           ],
-          "size": 6770,
-          "gzip": 1862
+          "size": 6107,
+          "gzip": 1752
         },
         {
-          "fileName": "rs7zi1si.es5.js",
+          "fileName": "4kfenfut.sc.js",
           "outputs": [
-            "dist/stellar/rs7zi1si.es5.js",
-            "www/build/stellar/rs7zi1si.es5.js"
+            "dist/stellar/4kfenfut.sc.js",
+            "www/build/stellar/4kfenfut.sc.js"
           ],
-          "size": 8400,
-          "gzip": 2488,
+          "size": 7010,
+          "gzip": 1789,
+          "scopedStyles": true
+        },
+        {
+          "fileName": "4kfenfut.es5.js",
+          "outputs": [
+            "dist/stellar/4kfenfut.es5.js",
+            "www/build/stellar/4kfenfut.es5.js"
+          ],
+          "size": 7799,
+          "gzip": 2382,
           "target": "es5"
         },
         {
-          "fileName": "rs7zi1si.js",
+          "fileName": "4kfenfut.sc.es5.js",
           "outputs": [
-            "dist/esm/es5/rs7zi1si.js"
+            "dist/stellar/4kfenfut.sc.es5.js",
+            "www/build/stellar/4kfenfut.sc.es5.js"
           ],
-          "size": 8355,
-          "gzip": 2457,
+          "size": 8702,
+          "gzip": 2419,
+          "target": "es5",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "4kfenfut.js",
+          "outputs": [
+            "dist/esm/es5/4kfenfut.js"
+          ],
+          "size": 7754,
+          "gzip": 2351,
           "target": "es5"
+        },
+        {
+          "fileName": "4kfenfut.sc.js",
+          "outputs": [
+            "dist/esm/es5/4kfenfut.sc.js"
+          ],
+          "size": 8657,
+          "gzip": 2388,
+          "target": "es5",
+          "scopedStyles": true
         }
       ],
       "inputs": [
         "dist/collection/components/button/button.js"
       ],
       "encapsulations": [
-        "none"
+        "shadow"
       ]
     },
     {
@@ -1407,31 +1430,31 @@
       ],
       "bundles": [
         {
-          "fileName": "2y3lqwle.js",
+          "fileName": "by3g9iec.js",
           "outputs": [
-            "dist/stellar/2y3lqwle.js",
-            "www/build/stellar/2y3lqwle.js"
+            "dist/stellar/by3g9iec.js",
+            "www/build/stellar/by3g9iec.js"
           ],
-          "size": 6252,
-          "gzip": 1868
+          "size": 6310,
+          "gzip": 1886
         },
         {
-          "fileName": "2y3lqwle.es5.js",
+          "fileName": "by3g9iec.es5.js",
           "outputs": [
-            "dist/stellar/2y3lqwle.es5.js",
-            "www/build/stellar/2y3lqwle.es5.js"
+            "dist/stellar/by3g9iec.es5.js",
+            "www/build/stellar/by3g9iec.es5.js"
           ],
-          "size": 7871,
-          "gzip": 2481,
+          "size": 7929,
+          "gzip": 2496,
           "target": "es5"
         },
         {
-          "fileName": "2y3lqwle.js",
+          "fileName": "by3g9iec.js",
           "outputs": [
-            "dist/esm/es5/2y3lqwle.js"
+            "dist/esm/es5/by3g9iec.js"
           ],
-          "size": 7847,
-          "gzip": 2460,
+          "size": 7905,
+          "gzip": 2478,
           "target": "es5"
         }
       ],
@@ -2088,6 +2111,85 @@
       ],
       "encapsulations": [
         "none"
+      ]
+    },
+    {
+      "entryId": "entry:stellar-layout",
+      "components": [
+        {
+          "tag": "stellar-layout",
+          "dependencies": [],
+          "dependencyOf": [
+            "stellar-documentation-site"
+          ]
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "ifpvmhcc.js",
+          "outputs": [
+            "dist/stellar/ifpvmhcc.js",
+            "www/build/stellar/ifpvmhcc.js"
+          ],
+          "size": 2222,
+          "gzip": 873
+        },
+        {
+          "fileName": "ifpvmhcc.sc.js",
+          "outputs": [
+            "dist/stellar/ifpvmhcc.sc.js",
+            "www/build/stellar/ifpvmhcc.sc.js"
+          ],
+          "size": 3110,
+          "gzip": 898,
+          "scopedStyles": true
+        },
+        {
+          "fileName": "ifpvmhcc.es5.js",
+          "outputs": [
+            "dist/stellar/ifpvmhcc.es5.js",
+            "www/build/stellar/ifpvmhcc.es5.js"
+          ],
+          "size": 2651,
+          "gzip": 961,
+          "target": "es5"
+        },
+        {
+          "fileName": "ifpvmhcc.sc.es5.js",
+          "outputs": [
+            "dist/stellar/ifpvmhcc.sc.es5.js",
+            "www/build/stellar/ifpvmhcc.sc.es5.js"
+          ],
+          "size": 3539,
+          "gzip": 983,
+          "target": "es5",
+          "scopedStyles": true
+        },
+        {
+          "fileName": "ifpvmhcc.js",
+          "outputs": [
+            "dist/esm/es5/ifpvmhcc.js"
+          ],
+          "size": 2600,
+          "gzip": 936,
+          "target": "es5"
+        },
+        {
+          "fileName": "ifpvmhcc.sc.js",
+          "outputs": [
+            "dist/esm/es5/ifpvmhcc.sc.js"
+          ],
+          "size": 3488,
+          "gzip": 959,
+          "target": "es5",
+          "scopedStyles": true
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/layout/layout.js"
+      ],
+      "encapsulations": [
+        "shadow"
       ]
     },
     {
