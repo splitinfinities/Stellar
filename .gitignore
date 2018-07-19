@@ -19,3 +19,4 @@ CVS
 dist/*
 node_modules/*
 www/*
+src/site
