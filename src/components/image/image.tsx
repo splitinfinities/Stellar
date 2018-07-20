@@ -40,15 +40,14 @@ export class StellarImage {
   componentDidLoad() {
     this.addIntersectionObserver();
     this.figure = this.element.shadowRoot.querySelector('figure');
-    this.zoom = mediumZoom(this.element.shadowRoot.querySelector('.placeholder'), {
-      background: 'var(--theme-base5)',
-      scrollOffset: 1,
-      margin: 30
-    });
+  }
 
-    this.zoom.addEventListeners('hidden', () => {
-      document.querySelector('stellar-overlay').open = false
-    })
+  mountZoom() {
+    this.zoom = mediumZoom(this.element.shadowRoot.querySelector('.final_image'), {
+      background:  `rgb(${this.palette[0][0]}, ${this.palette[0][1]}, ${this.palette[0][2]})`,
+      scrollOffset: 1,
+      margin: 0
+    });
   }
 
   @Method()
@@ -58,6 +57,7 @@ export class StellarImage {
 
   handleImage() {
     this.active = true;
+    setTimeout(() => { this.mountZoom(); }, 10);
   }
 
   addIntersectionObserver() {
@@ -88,23 +88,27 @@ export class StellarImage {
     }
   }
 
+  getPictureColor() {
+    const img = new Image(80, 80);
+    img.onload = () => {
+      const cf = new ColorThief();
+      this.palette = cf.getPalette(img)
+
+      properties.set({
+        "--bg": `rgb(${this.palette[0][0]}, ${this.palette[0][1]}, ${this.palette[0][2]})`
+      }, this.element);
+
+      this.zoom.update({
+        background: `rgb(${this.palette[0][0]}, ${this.palette[0][1]}, ${this.palette[0][2]})`
+      })
+    }
+    img.src = this.preload;
+    img.crossOrigin = "Anonymous";
+  }
+
   setBG() {
     if (this.bg === "auto") {
-      const img = new Image(80, 80);
-      img.onload = () => {
-        const cf = new ColorThief();
-        this.palette = cf.getPalette(img)
-
-        properties.set({
-          "--bg": `rgb(${this.palette[0][0]}, ${this.palette[0][1]}, ${this.palette[0][2]})`
-        }, this.element);
-
-        this.zoom.update({
-          background: `rgb(${this.palette[0][0]}, ${this.palette[0][1]}, ${this.palette[0][2]})`
-        })
-      }
-      img.src = this.preload;
-      img.crossOrigin = "Anonymous";
+      this.getPictureColor();
     } else {
       properties.set({
         "--bg": `${this.bg}`
@@ -137,25 +141,23 @@ export class StellarImage {
 
   renderPicture() {
     if (this.active) {
-      this.figure.classList.add('loaded');
-
       return [
         this.sources.map((source) =>
           <source srcSet={source.srcset} media={source.media} />
         ),
-        <img src={this.preload} class="final_image" />
+        <img src={this.sources[0].srcset} class="final_image" />
       ]
     }
   }
 
   render() {
     return (
-      <figure itemtype="http://schema.org/ImageObject" onClick={() => { this.zoom.show() }}>
+      <figure itemtype="http://schema.org/ImageObject" class={this.active ? 'loaded' : ''} onClick={() => { this.zoom.show() }} >
         <div class="overlay"></div>
         <picture>
           { this.renderPicture() }
         </picture>
-        <img src={this.preload} class="placeholder" data-zoom-target={this.sources[0].srcset} />
+        <div class="placeholder" style={{"background-image": `url(${this.preload})`}} />
       </figure>
     );
   }
