@@ -152,7 +152,7 @@ export class StellarImage {
 
   render() {
     return (
-      <figure itemtype="http://schema.org/ImageObject" class={this.active ? 'loaded' : ''} onClick={() => { this.zoom.show() }} >
+      <figure itemtype="http://schema.org/ImageObject" class={this.active ? 'loaded' : ''} onClick={() => { if (this.zoom) { this.zoom.show() } }} >
         <div class="overlay"></div>
         <picture>
           { this.renderPicture() }
