@@ -71,7 +71,7 @@
   max-width: none;
 }
 
-@media (--breakpoint-not-small) {
+@media (min-width: 480px) {
   .mw-100-ns {
     max-width: 100%;
   }
@@ -109,7 +109,7 @@
   }
 }
 
-@media (--breakpoint-medium) {
+@media (min-width: 480px) and (max-width: 960px) {
   .mw-100-m {
     max-width: 100%;
   }
@@ -147,7 +147,7 @@
   }
 }
 
-@media (--breakpoint-large) {
+@media (min-width: 960px) {
   .mw-100-l {
     max-width: 100%;
   }

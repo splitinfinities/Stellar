@@ -1,5 +1,5 @@
-import { Component, Prop, State, Listen, Watch, Element, Event, EventEmitter } from '@stencil/core';
-import Easing from 'easing';
+import { Component, Prop, State, Listen, Watch, Element, Event, EventEmitter, Method } from '@stencil/core';
+import { blurringEase } from '../../global/helpers';
 
 @Component({
   tag: 'stellar-select',
@@ -28,7 +28,17 @@ export class Select {
   @State() status: { errors?: any; valid?: boolean; level?: number; };
   @State() blur: number = 0;
 
+  @State() values: Array<string> = [];
+
   @Event() change: EventEmitter;
+
+  componentWillLoad () {
+    const values = Array.from(this.element.querySelectorAll('stellar-item[selectable], stellar-item[selectable="true"]'))
+
+    this.values = values.map((element: HTMLStellarItemElement) => {
+      return element.value;
+    })
+  }
 
   componentDidLoad () {
     this.current = this.element.querySelector('stellar-item.current')
@@ -36,13 +46,18 @@ export class Select {
 
   @Watch('open')
   handleOpenChange() {
-    const blurEvent = Easing.event(30, 'linear', { duration: 200, endToEnd: false, invert: true });
-    blurEvent.on('data', (data: number) => {
-      this.blur = data * 10;
-    })
-
     // @ts-ignore
     this.element.querySelector('button.select-title').focus()
+
+    if (this.open === false) {
+      blurringEase((data: number) => {
+        this.blur = data * 10;
+      }, 300, 275)
+    } else if (this.open === true) {
+      blurringEase((data: number) => {
+        this.blur = data * 10;
+      }, 200)
+    }
   }
 
   @Listen('selectionChanged')
@@ -112,6 +127,27 @@ export class Select {
     }
   }
 
+  @Method()
+  validate() {
+    const status = { valid: true, errors: [] };
+
+    // @ts-ignore
+    if (!this.value) {
+      status.valid = false;
+      status.errors.push({ message: 'This field is required.' });
+    }
+
+    // @ts-ignore
+    if (!this.values.includes(this.value)) {
+      status.valid = false;
+      status.errors.push({ message: `"${this.value}" isn't a valid option.` });
+    }
+
+    this.status = status;
+
+    return this.status;
+  }
+
   options(): any {
     return this.element.querySelectorAll('stellar-item:not(.current)');
   }
@@ -137,6 +173,11 @@ export class Select {
     }
 
     return { previous, current, next };
+  }
+
+  focusFirstItem() {
+    //@ts-ignore
+    this.element.querySelector('.select-list stellar-item:first-of-type button').focus()
   }
 
   focusElement(element) {
@@ -165,7 +206,7 @@ export class Select {
 
   renderLabel() {
     if (this.label) {
-      return (<p class="label">{this.label}</p>)
+      return (<stellar-label onClick={() => { this.focusFirstItem() }}>{this.label}</stellar-label>)
     }
   }
 
@@ -174,7 +215,7 @@ export class Select {
       return (
         <p class="validation">
           {this.status.errors.map(error =>
-            <span>• {error.message}</span>
+            <span>{error.message}</span>
           )}
         </p>
       )
@@ -189,7 +230,9 @@ export class Select {
 
         <div class="select">
           <button type="button" class="select-title" onClick={() => this.handleTitleClick()} onFocus={() => this.handleTitleFocus()} onBlur={() => this.handleTitleBlur()}>
-            <stellar-item class="current" value={this.value} tabindex="-1" selectable={false} label={this.placeholder} />
+            <stellar-item class="current" value={this.value} tabindex="-1" selectable={false} label={this.value}>
+              {this.value}
+            </stellar-item>
             <stellar-asset name="arrow-down" />
             <input type="text" tabindex="-1" value={this.value} name={this.name} required={this.required} />
           </button>

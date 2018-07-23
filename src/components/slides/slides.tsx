@@ -274,7 +274,7 @@ export class Slides {
       this.slides.forEach((slide) => {
         slide.motion = data * 30
       })
-    }, this.speed * 0.5, 'linear', { endToEnd: true })
+    }, this.speed * 0.25, 0, 'linear', { endToEnd: true })
   }
 
   blurEnd() {

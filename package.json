@@ -42,6 +42,7 @@
     "@shopify/draggable": "^1.0.0-beta.7",
     "@stencil/postcss": "0.0.4",
     "@stencil/sass": "^0.0.5",
+    "await-delay": "^1.0.0",
     "convert-units": "^2.3.4",
     "css-custom-properties": "^0.1.0",
     "deepmerge": "^2.1.1",

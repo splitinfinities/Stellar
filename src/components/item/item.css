@@ -71,7 +71,8 @@ stellar-item[size="small"] .button {
 }
 
 stellar-item .selected {
-  font-size: 1.75em;
+  animation: fadeInLeft 200ms ease;
+  font-size: var(--item-size);
   margin-left: auto !important;
   background: var(--theme-base5);
   color: var(--white);
@@ -91,18 +92,17 @@ stellar-item[selectable][danger] .button:hover  {
 }
 
 stellar-item[simple] .button {
-  background: white !impportant;
+  background: white !important;
 }
 
-@keyframes fadeInDown {
+@keyframes fadeInLeft {
   from {
     opacity: 0;
-    transform: translate3d(0, -2%, 0);
+    transform: translate3d(50%, 0, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 }

@@ -1126,12 +1126,14 @@ declare global {
     interface StellarForm {
       'acceptCharset': string;
       'action': string;
+      'ajax': boolean;
       'autocomplete': string;
       'enctype': string;
       'method': string;
       'name': string;
       'novalidate': boolean;
       'refresh': () => void;
+      'submit': () => void;
       'target': string;
     }
   }
@@ -1157,6 +1159,7 @@ declare global {
     export interface StellarFormAttributes extends HTMLAttributes {
       'acceptCharset'?: string;
       'action'?: string;
+      'ajax'?: boolean;
       'autocomplete'?: string;
       'enctype'?: string;
       'method'?: string;
@@ -1396,6 +1399,7 @@ declare global {
        */
       'type': string;
       'val': () => any;
+      'validate': () => { errors?: any; valid?: boolean; level?: number; };
       'validates': string;
       /**
        * The pre-set value to pass to the input element
@@ -1518,6 +1522,39 @@ declare global {
       'size'?: string;
       'type'?: "a"|"button";
       'value'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface StellarLabel {
+      'for': string;
+    }
+  }
+
+  interface HTMLStellarLabelElement extends StencilComponents.StellarLabel, HTMLStencilElement {}
+
+  var HTMLStellarLabelElement: {
+    prototype: HTMLStellarLabelElement;
+    new (): HTMLStellarLabelElement;
+  };
+  interface HTMLElementTagNameMap {
+    'stellar-label': HTMLStellarLabelElement;
+  }
+  interface ElementTagNameMap {
+    'stellar-label': HTMLStellarLabelElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'stellar-label': JSXElements.StellarLabelAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface StellarLabelAttributes extends HTMLAttributes {
+      'for'?: string;
     }
   }
 }
@@ -2066,6 +2103,7 @@ declare global {
       'processing': boolean;
       'required': boolean;
       'size': string;
+      'validate': () => { errors?: any; valid?: boolean; level?: number; };
       'value': any;
     }
   }
@@ -2662,6 +2700,7 @@ declare global {
       'block': boolean;
       'blurring': number;
       'contents': () => NodeListOf<any>;
+      'height': string;
       'name': string;
       'noanimation': boolean;
       'tabs': () => NodeListOf<any>;
@@ -2689,6 +2728,7 @@ declare global {
     export interface StellarTabsAttributes extends HTMLAttributes {
       'block'?: boolean;
       'blurring'?: number;
+      'height'?: string;
       'name'?: string;
       'noanimation'?: boolean;
     }

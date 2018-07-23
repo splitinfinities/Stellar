@@ -10,7 +10,11 @@ stellar-card {
   position: relative;
   background: var(--background);
   transform-style: preserve-3d;
-  transform: perspective(700px);
+  transform: perspective(200px);
+}
+
+stellar-card[tag="a"] {
+  background: transparent;
 }
 
 stellar-card + stellar-card {
@@ -31,37 +35,28 @@ stellar-card > .item {
 }
 
 stellar-card > a.item {
-  transition: transform 0.125s linear 0s;
-  transform: scale(1) translateZ(4px);
+  transform: scale(1) translateZ(10px);
 }
 
 stellar-card > button.item:hover,
 stellar-card > button.item:active,
 stellar-card > a.item:hover,
 stellar-card > a.item:active {
-  transform: scale(1.025) var(--card-transform) translateZ(20px);
-  box-shadow: var(--card-hover-right, 1.6rem) var(--card-hover-top, 3rem) 1rem -.5rem var(--gray1);
-}
-
-stellar-card > a.item > * {
-  transition: all 0.125s linear 0s;
-}
-
-stellar-card > a.item:hover > * {
-  transform: scale(1.025) var(--card-transform) translateZ(100px);
+  transform: scale(1.0025) var(--card-transform) translateZ(20px);
+  box-shadow: var(--card-hover-right, 1.6rem) var(--card-hover-top, 3rem) 1rem -.5rem var(--theme-base8);
 }
 
 stellar-card > button.item:active,
 stellar-card > a.item:active {
-  background: var(--gray0);
+  background: var(--theme-base0);
 }
 
 stellar-card > a.item:active {
-  transform: scale(.975) var(--card-transform) translateZ(20px);
+  transform: scale(.9875) var(--card-transform) translateZ(20px);
 }
 
 stellar-card > a.item:active > * {
-  transform: scale(.975) var(--card-transform) translateZ(100px);
+  transform: scale(.9875) var(--card-transform) translateZ(100px);
 }
 
 stellar-card[shadow="light"] {

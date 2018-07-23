@@ -23,7 +23,7 @@
   position: fixed;
 }
 
-@media (--breakpoint-not-small) {
+@media (min-width: 480px) {
   .static-ns {
     position: static;
   }
@@ -38,7 +38,7 @@
   }
 }
 
-@media (--breakpoint-medium) {
+@media (min-width: 480px) and (max-width: 960px) {
   .static-m {
     position: static;
   }
@@ -53,7 +53,7 @@
   }
 }
 
-@media (--breakpoint-large) {
+@media (min-width: 960px) {
   .static-l {
     position: static;
   }

@@ -131,3 +131,7 @@ stellar-tabs[block] .indicator {
   bottom: 3px;
   transition: all .35s var(--ease);
 }
+
+stellar-tabs[height="auto"] {
+  height: 100%;
+}

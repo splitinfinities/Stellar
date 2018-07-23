@@ -926,6 +926,12 @@
           "docs": ""
         },
         {
+          "name": "ajax",
+          "type": "boolean",
+          "attr": "ajax",
+          "docs": ""
+        },
+        {
           "name": "autocomplete",
           "type": "string",
           "attr": "autocomplete",
@@ -965,6 +971,10 @@
       "methods": [
         {
           "name": "refresh",
+          "docs": ""
+        },
+        {
+          "name": "submit",
           "docs": ""
         }
       ],
@@ -1315,6 +1325,10 @@
         {
           "name": "val",
           "docs": ""
+        },
+        {
+          "name": "validate",
+          "docs": ""
         }
       ],
       "events": [
@@ -1440,6 +1454,21 @@
           "docs": ""
         }
       ]
+    },
+    {
+      "tag": "stellar-label",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "for",
+          "type": "string",
+          "attr": "for",
+          "docs": ""
+        }
+      ],
+      "methods": [],
+      "events": []
     },
     {
       "tag": "stellar-layout",
@@ -1996,7 +2025,12 @@
           "docs": ""
         }
       ],
-      "methods": [],
+      "methods": [
+        {
+          "name": "validate",
+          "docs": ""
+        }
+      ],
       "events": [
         {
           "event": "change",
@@ -2498,6 +2532,12 @@
           "type": "number",
           "mutable": true,
           "attr": "blurring",
+          "docs": ""
+        },
+        {
+          "name": "height",
+          "type": "string",
+          "attr": "height",
           "docs": ""
         },
         {

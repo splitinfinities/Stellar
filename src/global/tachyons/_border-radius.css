@@ -62,7 +62,7 @@
   border-bottom-right-radius: 0;
 }
 
-@media (--breakpoint-not-small) {
+@media (min-width: 480px) {
   .br0-ns {
     border-radius: 0;
   }
@@ -102,7 +102,7 @@
   }
 }
 
-@media (--breakpoint-medium) {
+@media (min-width: 480px) and (max-width: 960px) {
   .br0-m {
     border-radius: 0;
   }
@@ -142,7 +142,7 @@
   }
 }
 
-@media (--breakpoint-large) {
+@media (min-width: 960px) {
   .br0-l {
     border-radius: 0;
   }

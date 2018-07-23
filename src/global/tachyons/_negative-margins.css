@@ -166,7 +166,7 @@
  margin-top: calc(-1 * var(--spacing-extra-extra-extra-large));
 }
 
-@media (--breakpoint-not-small) {
+@media (min-width: 480px) {
   .na1-ns {
     margin: calc(-1 * var(--spacing-extra-small));
   }
@@ -309,7 +309,7 @@
 
 }
 
-@media (--breakpoint-medium) {
+@media (min-width: 480px) and (max-width: 960px) {
   .na1-m {
     margin: calc(-1 * var(--spacing-extra-small));
   }
@@ -452,7 +452,7 @@
 
 }
 
-@media (--breakpoint-large) {
+@media (min-width: 960px) {
   .na1-l {
     margin: calc(-1 * var(--spacing-extra-small));
   }

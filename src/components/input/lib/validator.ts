@@ -36,7 +36,7 @@ export class Validator {
 	}
 
 	results (): { errors?: any; valid?: boolean; level?: number; } {
-		const valid = (this.errors.length !== 0)
+		const valid = (this.errors.length === 0)
 
 		return {
 			errors: this.errors,

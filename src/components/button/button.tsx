@@ -1,4 +1,4 @@
-import { Component, Prop, State } from '@stencil/core';
+import { Component, Prop, State, Element } from '@stencil/core';
 
 @Component({
   tag: 'stellar-button',
@@ -6,6 +6,7 @@ import { Component, Prop, State } from '@stencil/core';
   shadow: true
 })
 export class Button {
+  @Element() element: HTMLElement;
 
   /**
    * Allows the button to render for different tags.
@@ -112,6 +113,10 @@ export class Button {
         const modal: HTMLStellarModalElement = document.querySelector(`stellar-modal[name="${target[1]}"]`);
         modal.open();
       }
+    }
+
+    if (this.tag === "submit") {
+      this.element.closest('stellar-form').submit();
     }
 
     return true;

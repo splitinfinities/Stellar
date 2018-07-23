@@ -20,7 +20,7 @@
   letter-spacing: .25em;
 }
 
-@media (--breakpoint-not-small) {
+@media (min-width: 480px) {
   .tracked-ns {
     letter-spacing: .1em;
   }
@@ -32,7 +32,7 @@
   }
 }
 
-@media (--breakpoint-medium) {
+@media (min-width: 480px) and (max-width: 960px) {
   .tracked-m {
     letter-spacing: .1em;
   }
@@ -44,7 +44,7 @@
   }
 }
 
-@media (--breakpoint-large) {
+@media (min-width: 960px) {
   .tracked-l {
     letter-spacing: .1em;
   }

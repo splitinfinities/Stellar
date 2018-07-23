@@ -4,14 +4,6 @@ const designTokenFunction = require("postcss-design-token-function");
 const colors = require("./src/global/_colors");
 const sass = require('@stencil/sass');
 
-const customMediaArgs = {
-  extensions: {
-    "--breakpoint-not-small": "screen and (min-width: 30em)",
-    "--breakpoint-medium": "screen and (min-width: 30em) and (max-width: 60em)",
-    "--breakpoint-large": "screen and (min-width: 60em)"
-  }
-}
-
 exports.config = {
   namespace: "stellar",
   globalStyle: "./src/global/stellar.css",
@@ -33,7 +25,6 @@ exports.config = {
   plugins: [
     postcss({
       plugins: [
-        customMedia(customMediaArgs),
         designTokenFunction({
           name: "color",
           data: colors,

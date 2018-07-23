@@ -17,6 +17,11 @@ string
 string
 
 
+#### ajax
+
+boolean
+
+
 #### autocomplete
 
 string
@@ -59,6 +64,11 @@ string
 string
 
 
+#### ajax
+
+boolean
+
+
 #### autocomplete
 
 string
@@ -92,6 +102,9 @@ string
 ## Methods
 
 #### refresh()
+
+
+#### submit()
 
 
 

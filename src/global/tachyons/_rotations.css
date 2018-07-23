@@ -26,7 +26,7 @@
   transform: rotate(315deg);
 }
 
-@media (--breakpoint-not-small) {
+@media (min-width: 480px) {
   .rotate-45-ns {
     transform: rotate(45deg);
   }
@@ -50,7 +50,7 @@
   }
 }
 
-@media (--breakpoint-medium) {
+@media (min-width: 480px) and (max-width: 960px) {
   .rotate-45-m {
     transform: rotate(45deg);
   }
@@ -74,7 +74,7 @@
   }
 }
 
-@media (--breakpoint-large) {
+@media (min-width: 960px) {
   .rotate-45-l {
     transform: rotate(45deg);
   }

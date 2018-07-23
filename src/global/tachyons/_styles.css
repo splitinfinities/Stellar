@@ -15,8 +15,15 @@
 }
 
 .fs-massive {
-  font-size: 8rem;
+  font-size: 15vw;
 }
+
+@media (min-width: 960px) {
+  .fs-massive {
+    font-size: 8rem;
+  }
+}
+
 
 .animation-gradient {
   background: linear-gradient(

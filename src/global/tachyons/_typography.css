@@ -46,7 +46,7 @@
   white-space: nowrap;
 }
 
-@media (--breakpoint-not-small) {
+@media (min-width: 480px) {
   .measure-ns {
     max-width: 30em;
   }
@@ -71,7 +71,7 @@
   }
 }
 
-@media (--breakpoint-medium) {
+@media (min-width: 480px) and (max-width: 960px) {
   .measure-m {
     max-width: 30em;
   }
@@ -96,7 +96,7 @@
   }
 }
 
-@media (--breakpoint-large) {
+@media (min-width: 960px) {
   .measure-l {
     max-width: 30em;
   }

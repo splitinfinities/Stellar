@@ -1,5 +1,4 @@
 import { Component, Prop, State, Element, Listen, Event, EventEmitter } from '@stencil/core'
-import parentNodeSelector from 'parent-node-selector'
 import properties from 'css-custom-properties'
 import { blurringEase } from '../../global/helpers';
 
@@ -22,7 +21,7 @@ export class Tab {
   @Event() contentChange: EventEmitter;
 
   componentWillLoad () {
-    this.parent = parentNodeSelector(this.element, 'stellar-tabs')
+    this.parent = this.element.closest('stellar-tabs')
   }
 
   @Listen("window:resize")
@@ -46,7 +45,7 @@ export class Tab {
     if (this.open) {
       blurringEase((data: number) => {
         this.parent.blurring = data * 10
-      }, 180, 'quadratic', { endToEnd: true, invert: false })
+      }, 220, 0, 'quadratic', { endToEnd: true, invert: false })
     }
 
     if (!this.disabled && this.tag !== "a") {
@@ -60,7 +59,7 @@ export class Tab {
   }
 
   handleIndicatorPosition() {
-    if (this.open && this.parent.nodeName === "STELLAR-TABS") {
+    if (this.open && this.parent && this.parent.nodeName === "STELLAR-TABS") {
       properties.set({
         "--tab-left": `${this.element.offsetLeft}px`,
         "--tab-width": `${this.element.offsetWidth}px`

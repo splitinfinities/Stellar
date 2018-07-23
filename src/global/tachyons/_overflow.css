@@ -48,7 +48,7 @@
   overflow-y: auto;
 }
 
-@media (--breakpoint-not-small) {
+@media (min-width: 480px) {
   .overflow-visible-ns {
     overflow: visible;
   }
@@ -88,7 +88,7 @@
   }
 }
 
-@media (--breakpoint-medium) {
+@media (min-width: 480px) and (max-width: 960px) {
   .overflow-visible-m {
     overflow: visible;
   }
@@ -129,7 +129,7 @@
   }
 }
 
-@media (--breakpoint-large) {
+@media (min-width: 960px) {
   .overflow-visible-l {
     overflow: visible;
   }

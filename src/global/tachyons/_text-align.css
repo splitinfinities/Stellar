@@ -32,7 +32,7 @@
   text-align: justify;
 }
 
-@media (--breakpoint-not-small) {
+@media (min-width: 480px) {
   .tl-ns {
     text-align: left;
   }
@@ -47,7 +47,7 @@
   }
 }
 
-@media (--breakpoint-medium) {
+@media (min-width: 480px) and (max-width: 960px) {
   .tl-m {
     text-align: left;
   }
@@ -62,7 +62,7 @@
   }
 }
 
-@media (--breakpoint-large) {
+@media (min-width: 960px) {
   .tl-l {
     text-align: left;
   }

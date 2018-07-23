@@ -97,7 +97,7 @@
   height: inherit;
 }
 
-@media (--breakpoint-not-small) {
+@media (min-width: 480px) {
   .h1-ns {
     height: 1rem;
   }
@@ -151,7 +151,7 @@
   }
 }
 
-@media (--breakpoint-medium) {
+@media (min-width: 480px) and (max-width: 960px) {
   .h1-m {
     height: 1rem;
   }
@@ -205,7 +205,7 @@
   }
 }
 
-@media (--breakpoint-large) {
+@media (min-width: 960px) {
   .h1-l {
     height: 1rem;
   }

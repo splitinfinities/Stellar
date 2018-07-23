@@ -20,7 +20,7 @@ export class Content {
     if (this.open) {
       blurringEase((e: number) => {
         this.blur = e * 5
-      }, 100, 'linear')
+      }, 100, 0, 'linear')
     }
   }
 

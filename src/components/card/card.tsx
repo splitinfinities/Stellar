@@ -47,7 +47,7 @@ export class Card {
   @State() height: number;
   @State() middleX: number;
   @State() middleY: number;
-  @State() rotationLimit: number = 3;
+  @State() rotationLimit: number = 0.75;
 
   @Prop({reflectToAttr: true, mutable: true}) transition: boolean = false;
 
@@ -78,7 +78,7 @@ export class Card {
     }, 250)
   }
 
-  animateRotation(event) {
+  async animateRotation(event) {
     const x = event.offsetX
     const y = event.offsetY
     const rotateX = (x - this.middleX) * (this.rotationLimit / this.middleX)
@@ -91,7 +91,7 @@ export class Card {
     }, this.element)
   }
 
-  removeRotation() {
+  async removeRotation() {
     this.refresh()
 
     this.transition = true;

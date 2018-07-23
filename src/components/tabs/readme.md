@@ -17,6 +17,11 @@ boolean
 number
 
 
+#### height
+
+string
+
+
 #### name
 
 string
@@ -37,6 +42,11 @@ boolean
 #### blurring
 
 number
+
+
+#### height
+
+string
 
 
 #### name

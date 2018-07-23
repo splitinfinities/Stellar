@@ -162,7 +162,7 @@
   flex-shrink: 1;
 }
 
-@media (--breakpoint-not-small) {
+@media (min-width: 480px) {
   .flex-ns {
     display: flex;
   }
@@ -310,7 +310,7 @@
     flex-shrink: 1;
   }
 }
-@media (--breakpoint-medium) {
+@media (min-width: 480px) and (max-width: 960px) {
   .flex-m {
     display: flex;
   }
@@ -459,7 +459,7 @@
   }
 }
 
-@media (--breakpoint-large) {
+@media (min-width: 960px) {
   .flex-l {
     display: flex;
   }

@@ -130,14 +130,6 @@ stellar-input[focused] .input {
   box-shadow: inset 0 0 0 1px var(--theme-base5);
 }
 
-stellar-input .label {
-  line-height: 1.3;
-  color: var(--gray9);
-  font-weight: 600;
-  margin-bottom: .5em;
-  font-size: var(--complementing-font-size);
-}
-
 stellar-input .search {
   cursor: pointer;
   display: flex;

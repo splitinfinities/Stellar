@@ -71,20 +71,17 @@ stellar-select .select-list {
   left: 0;
   flex-direction: column;
   transform-origin: 50% 0;
-  transition: transform 200ms var(--ease) 0ms, opacity 250ms var(--ease) 0ms, max-height 200ms var(--ease) 0ms;
+  transition: transform 200ms var(--ease) 350ms, opacity 250ms var(--ease) 350ms, max-height 200ms var(--ease) 350ms;
   opacity: 0;
   z-index: 3;
   background: white;
   width: 100%;
   max-height: 0rem;
-  overflow: hidden;
-  color: var(--blue);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  color: var(--theme-base5);
+  border: 2px solid var(--theme-base5);
   pointer-events: none;
-}
-
-stellar-select .select-list-body {
-  max-height: 20rem;
-  overflow: auto;
 }
 
 stellar-select .select-list-footer {
@@ -93,8 +90,21 @@ stellar-select .select-list-footer {
   border-top: 1px solid var(--theme-base5);
 }
 
-stellar-select .validation {
-  font-size: 1rem;
+stellar-input .validation {
+  margin-bottom: 0;
+  color: var(--red5);
+  font-size: var(--complementing-font-size);
+  font-weight: 500;
+}
+
+stellar-input .validation span {
+  display: block;
+  padding: 1rem 0;
+  line-height: 1.4;
+}
+
+stellar-input .validation span + span {
+  border-top: 1px solid var(--theme-base1);
 }
 
 stellar-select[open] .select-list,
@@ -103,7 +113,7 @@ stellar-select .select-list:focus-within {
   opacity: 1;
   pointer-events: initial;
   max-height: 20rem;
-  box-shadow: 0 2px 6px 0 rgba(72, 72, 73, 0.15);
+  overflow-y: auto;
 }
 
 stellar-select[size="small"] .select-title {

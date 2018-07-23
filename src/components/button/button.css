@@ -6,6 +6,7 @@
   -ms-user-select: none;
   user-select: none;
   display: var(--wrap-display, inline-block);
+  font-family: inherit;
 
   --width: 100%;
   --padding: 1.05em 2em 1.1em 2em;

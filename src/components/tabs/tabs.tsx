@@ -8,6 +8,7 @@ import { Component, Prop, State, Element, Method } from '@stencil/core';
 export class Tabs {
   @Element() element: HTMLElement;
 
+  @Prop() height: string;
   @Prop({mutable: true, reflectToAttr: true}) name: string;
   @Prop({mutable: true, reflectToAttr: true}) noanimation: boolean = false;
 

@@ -14,13 +14,13 @@ export class Accordion {
   blurHorizontal() {
     blurringEase((e: number) => {
       this.horizontalBlur = e * 4
-    }, 450, 'exponential', { invert: true })
+    }, 450, 0, 'exponential', { invert: true })
   }
 
   blurVertical() {
     blurringEase((e: number) => {
       this.verticalBlur = e * 4
-    }, 450, 'exponential', { invert: true })
+    }, 450, 0, 'exponential', { invert: true })
   }
 
   componentWillLoad() {

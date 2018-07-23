@@ -70,7 +70,7 @@ export class Input {
   @Prop() step: number = 1;
 
   // Validation
-  @Prop() required: boolean;
+  @Prop() required: boolean = false;
   @Prop() novalidation: boolean = false;
   @Prop() validates: string;
   @Prop() match: string;
@@ -81,6 +81,8 @@ export class Input {
   @State() strength: object;
 
   @State() tokenField: object;
+
+  @State() generatedId: string;
 
   componentWillLoad () {
     if (this.match) {
@@ -98,6 +100,8 @@ export class Input {
     if (this.type === "password") {
       this.getStrongLevel()
     }
+
+    this.generatedId = this.generateId()
   }
 
   componentDidLoad() {
@@ -177,6 +181,16 @@ export class Input {
     }
   }
 
+  generateId() {
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    return `input-${getRandomInt(0,1000)}`;
+  }
+
   @Method()
   val() {
     return this.value;
@@ -228,8 +242,11 @@ export class Input {
     }
   }
 
+  @Method()
   validate () {
     this.status = this.validator.validate(this)
+
+    return this.status;
   }
 
   validateDarkColor () {
@@ -244,7 +261,7 @@ export class Input {
 
   renderLabel() {
     if (this.label) {
-      return (<p class="label">{this.label}</p>)
+      return (<stellar-label for={this.generatedId}>{this.label}</stellar-label>)
     }
   }
 
@@ -252,7 +269,7 @@ export class Input {
     if (this.type === "color") {
       return (
         <copy-wrap class="color-picker" align="center" data-invert={this.validateDarkColor()}>
-          <span class="label">{this.value}</span>
+          <stellar-label for={this.generatedId}>{this.value}</stellar-label>
         </copy-wrap>
       )
     }
@@ -310,7 +327,7 @@ export class Input {
   renderInput() {
     if (shouldBeAnInput(this.type)) {
       return (
-        <input class="input" type={this.type} value={this.value} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} />
+        <input class="input" id={this.generatedId} type={this.type} value={this.value} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} />
       )
     }
   }
@@ -318,7 +335,7 @@ export class Input {
   renderTextArea() {
     if (this.type === "textarea") {
       return (
-        <textarea class="input" placeholder={this.placeholder} name={this.name} cols={this.cols} maxlength={this.maxlength} rows={this.rows} disabled={this.disabled} readonly={this.readonly} autofocus={this.autofocus} spellcheck={this.spellcheck} required={this.required} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()}>{this.value}</textarea>
+        <textarea class="input" id={this.generatedId} placeholder={this.placeholder} name={this.name} cols={this.cols} maxlength={this.maxlength} rows={this.rows} disabled={this.disabled} readonly={this.readonly} autofocus={this.autofocus} spellcheck={this.spellcheck} required={this.required} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()}>{this.value}</textarea>
       )
     }
   }
