@@ -6,7 +6,7 @@ import roundTo from 'round-to';
   tag: 'stellar-unit',
   styleUrl: 'unit.css'
 })
-export class Unit {s
+export class Unit {
   @Prop({reflectToAttr: true}) value: number = 1000;
   @Prop({reflectToAttr: true}) from: string = "B";
   @Prop({reflectToAttr: true}) to: string = "KB";

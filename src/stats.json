@@ -6,9 +6,9 @@
   "app": {
     "namespace": "stellar",
     "fsNamespace": "stellar",
-    "components": 66,
-    "entries": 41,
-    "bundles": 132
+    "components": 67,
+    "entries": 42,
+    "bundles": 135
   },
   "options": {
     "minifyJs": true,
@@ -588,6 +588,11 @@
         "stellar-avatar",
         "stellar-group-overflow"
       ]
+    },
+    {
+      "tag": "stellar-video",
+      "dependencies": [],
+      "dependencyOf": []
     }
   ],
   "entries": [
@@ -2147,61 +2152,61 @@
       ],
       "bundles": [
         {
-          "fileName": "ij6lnfsj.js",
+          "fileName": "gepkzkje.js",
           "outputs": [
-            "dist/stellar/ij6lnfsj.js",
-            "www/build/stellar/ij6lnfsj.js"
+            "dist/stellar/gepkzkje.js",
+            "www/build/stellar/gepkzkje.js"
           ],
-          "size": 2242,
-          "gzip": 887
+          "size": 2462,
+          "gzip": 939
         },
         {
-          "fileName": "ij6lnfsj.sc.js",
+          "fileName": "gepkzkje.sc.js",
           "outputs": [
-            "dist/stellar/ij6lnfsj.sc.js",
-            "www/build/stellar/ij6lnfsj.sc.js"
+            "dist/stellar/gepkzkje.sc.js",
+            "www/build/stellar/gepkzkje.sc.js"
           ],
-          "size": 3130,
-          "gzip": 912,
+          "size": 3424,
+          "gzip": 968,
           "scopedStyles": true
         },
         {
-          "fileName": "ij6lnfsj.es5.js",
+          "fileName": "gepkzkje.es5.js",
           "outputs": [
-            "dist/stellar/ij6lnfsj.es5.js",
-            "www/build/stellar/ij6lnfsj.es5.js"
+            "dist/stellar/gepkzkje.es5.js",
+            "www/build/stellar/gepkzkje.es5.js"
           ],
-          "size": 2671,
-          "gzip": 975,
+          "size": 2891,
+          "gzip": 1029,
           "target": "es5"
         },
         {
-          "fileName": "ij6lnfsj.sc.es5.js",
+          "fileName": "gepkzkje.sc.es5.js",
           "outputs": [
-            "dist/stellar/ij6lnfsj.sc.es5.js",
-            "www/build/stellar/ij6lnfsj.sc.es5.js"
+            "dist/stellar/gepkzkje.sc.es5.js",
+            "www/build/stellar/gepkzkje.sc.es5.js"
           ],
-          "size": 3559,
-          "gzip": 997,
+          "size": 3853,
+          "gzip": 1053,
           "target": "es5",
           "scopedStyles": true
         },
         {
-          "fileName": "ij6lnfsj.js",
+          "fileName": "gepkzkje.js",
           "outputs": [
-            "dist/esm/es5/ij6lnfsj.js"
+            "dist/esm/es5/gepkzkje.js"
           ],
-          "size": 2620,
-          "gzip": 949,
+          "size": 2840,
+          "gzip": 1001,
           "target": "es5"
         },
         {
-          "fileName": "ij6lnfsj.sc.js",
+          "fileName": "gepkzkje.sc.js",
           "outputs": [
-            "dist/esm/es5/ij6lnfsj.sc.js"
+            "dist/esm/es5/gepkzkje.sc.js"
           ],
-          "size": 3508,
-          "gzip": 972,
+          "size": 3802,
+          "gzip": 1028,
           "target": "es5",
           "scopedStyles": true
         }
@@ -2960,6 +2965,52 @@
       "encapsulations": [
         "none"
       ]
+    },
+    {
+      "entryId": "entry:stellar-video",
+      "components": [
+        {
+          "tag": "stellar-video",
+          "dependencies": [],
+          "dependencyOf": []
+        }
+      ],
+      "bundles": [
+        {
+          "fileName": "hadow6vw.js",
+          "outputs": [
+            "dist/stellar/hadow6vw.js",
+            "www/build/stellar/hadow6vw.js"
+          ],
+          "size": 2306,
+          "gzip": 1014
+        },
+        {
+          "fileName": "hadow6vw.es5.js",
+          "outputs": [
+            "dist/stellar/hadow6vw.es5.js",
+            "www/build/stellar/hadow6vw.es5.js"
+          ],
+          "size": 2745,
+          "gzip": 1113,
+          "target": "es5"
+        },
+        {
+          "fileName": "hadow6vw.js",
+          "outputs": [
+            "dist/esm/es5/hadow6vw.js"
+          ],
+          "size": 2698,
+          "gzip": 1087,
+          "target": "es5"
+        }
+      ],
+      "inputs": [
+        "dist/collection/components/video/video.js"
+      ],
+      "encapsulations": [
+        "none"
+      ]
     }
   ],
   "sourceGraph": {
@@ -3118,6 +3169,9 @@
     "src/components/unit/unit.tsx": [
       "convert-units",
       "round-to"
+    ],
+    "src/components/video/video.tsx": [
+      "css-custom-properties"
     ],
     "src/global/colors.ts": [],
     "src/global/helpers.ts": [

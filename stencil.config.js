@@ -10,6 +10,7 @@ exports.config = {
   copy: [
     { src: "global/fonts" },
     { src: "global/images" },
+    { src: "global/video" },
     { src: "global/vector" },
     { src: "*.html" },
     { src: "**/*.md" },

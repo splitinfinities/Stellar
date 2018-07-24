@@ -1457,7 +1457,7 @@
     },
     {
       "tag": "stellar-label",
-      "readme": "",
+      "readme": "# stellar-label\n\n\n",
       "usage": {},
       "props": [
         {
@@ -2862,6 +2862,53 @@
           "name": "value",
           "type": "number",
           "attr": "value",
+          "docs": ""
+        }
+      ],
+      "methods": [],
+      "events": []
+    },
+    {
+      "tag": "stellar-video",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "autoplay",
+          "type": "boolean",
+          "attr": "autoplay",
+          "docs": ""
+        },
+        {
+          "name": "height",
+          "type": "number",
+          "mutable": true,
+          "attr": "height",
+          "docs": ""
+        },
+        {
+          "name": "muted",
+          "type": "boolean",
+          "attr": "muted",
+          "docs": ""
+        },
+        {
+          "name": "playsinline",
+          "type": "boolean",
+          "attr": "playsinline",
+          "docs": ""
+        },
+        {
+          "name": "preload",
+          "type": "string",
+          "attr": "preload",
+          "docs": ""
+        },
+        {
+          "name": "width",
+          "type": "number",
+          "mutable": true,
+          "attr": "width",
           "docs": ""
         }
       ],

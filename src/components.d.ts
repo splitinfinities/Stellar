@@ -2993,6 +2993,49 @@ declare global {
   }
 }
 
+
+declare global {
+
+  namespace StencilComponents {
+    interface StellarVideo {
+      'autoplay': boolean;
+      'height': number;
+      'muted': boolean;
+      'playsinline': boolean;
+      'preload': string;
+      'width': number;
+    }
+  }
+
+  interface HTMLStellarVideoElement extends StencilComponents.StellarVideo, HTMLStencilElement {}
+
+  var HTMLStellarVideoElement: {
+    prototype: HTMLStellarVideoElement;
+    new (): HTMLStellarVideoElement;
+  };
+  interface HTMLElementTagNameMap {
+    'stellar-video': HTMLStellarVideoElement;
+  }
+  interface ElementTagNameMap {
+    'stellar-video': HTMLStellarVideoElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'stellar-video': JSXElements.StellarVideoAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface StellarVideoAttributes extends HTMLAttributes {
+      'autoplay'?: boolean;
+      'height'?: number;
+      'muted'?: boolean;
+      'playsinline'?: boolean;
+      'preload'?: string;
+      'width'?: number;
+    }
+  }
+}
+
 declare global { namespace JSX { interface StencilJSX {} } }
 
 export declare function defineCustomElements(window: any): void;

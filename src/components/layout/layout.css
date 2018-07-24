@@ -75,6 +75,10 @@
   align-items: baseline;
 }
 
+:host([type="supporting-content-right"]) ::slotted(aside) {
+  order: 1;
+}
+
 @media (min-width: 700px) {
   :host([type="sidebar-right"]) .layout {
     grid-template-columns: 3fr 1fr;
@@ -84,12 +88,16 @@
     grid-template-columns: 1fr 3fr;
   }
 
-  :host([type="supporting_content"]) .layout {
+  :host([type="supporting-content"]) .layout {
     grid-template-columns: 6fr 4fr;
   }
 
-  :host([type="supporting_content_right"]) .layout {
+  :host([type="supporting-content-right"]) .layout {
     grid-template-columns: 4fr 6fr;
+  }
+
+  :host([type="supporting-content-right"]) ::slotted(aside) {
+    order: -1;
   }
 }
 

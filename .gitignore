@@ -20,3 +20,4 @@ dist/*
 node_modules/*
 www/*
 src/site
+*.mp4
