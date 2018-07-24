@@ -2870,7 +2870,7 @@
     },
     {
       "tag": "stellar-video",
-      "readme": "",
+      "readme": "# stellar-video\n\n\n",
       "usage": {},
       "props": [
         {
