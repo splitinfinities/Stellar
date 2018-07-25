@@ -89,8 +89,6 @@ export class Code {
           code = Array.from(code.children).map((node: any) => {
             return node.outerHTML
           }).join()
-
-          console.log(code)
         } else {
           // @ts-ignore
           code = code.innerHTML

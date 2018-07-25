@@ -3002,6 +3002,7 @@ declare global {
       'height': number;
       'muted': boolean;
       'playsinline': boolean;
+      'poster': string;
       'preload': string;
       'width': number;
     }
@@ -3030,6 +3031,7 @@ declare global {
       'height'?: number;
       'muted'?: boolean;
       'playsinline'?: boolean;
+      'poster'?: string;
       'preload'?: string;
       'width'?: number;
     }

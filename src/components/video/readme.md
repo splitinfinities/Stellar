@@ -27,6 +27,11 @@ boolean
 boolean
 
 
+#### poster
+
+string
+
+
 #### preload
 
 string
@@ -57,6 +62,11 @@ boolean
 #### playsinline
 
 boolean
+
+
+#### poster
+
+string
 
 
 #### preload

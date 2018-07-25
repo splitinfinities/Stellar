@@ -62,8 +62,6 @@ export class ToggleOption {
   onChange () {
     this.checked = this.input.checked;
 
-    console.log(this.checked)
-
     const blurEvent = Easing.event(30, 'linear', { duration: 100, endToEnd: true, invert: !this.checked });
     blurEvent.on('data', (data: number) => {
       this.blur = data * 10;

@@ -25,7 +25,6 @@ export class Progress {
 
   @Watch("value")
   valueChange() {
-    console.log(this.value)
     const blurEvent = Easing.event(30, 'quadratic', { duration: 320, endToEnd: true, invert: false })
     blurEvent.on('data', (data: number) => {
       this.blur = data * 30

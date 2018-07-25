@@ -15,6 +15,7 @@ export class Video {
   @Prop() autoplay: boolean = false;
   @Prop() muted: boolean = false;
   @Prop() playsinline: boolean = false;
+  @Prop() poster: string;
 
   @State() video: HTMLVideoElement;
   @State() io: IntersectionObserver;
@@ -71,7 +72,7 @@ export class Video {
 
   render () {
     return (
-      <video preload={this.preload} width={this.width} height={this.height} autoplay={this.autoplay} muted={this.muted} playsinline={this.playsinline} poster="/global/video/engineering.png">
+      <video preload={this.preload} width={this.width} height={this.height} autoplay={this.autoplay} muted={this.muted} playsinline={this.playsinline} poster={this.poster}>
         <slot />
       </video>
     )

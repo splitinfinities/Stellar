@@ -2899,6 +2899,12 @@
           "docs": ""
         },
         {
+          "name": "poster",
+          "type": "string",
+          "attr": "poster",
+          "docs": ""
+        },
+        {
           "name": "preload",
           "type": "string",
           "attr": "preload",
