@@ -45,6 +45,12 @@ html {
   perspective: 1000px;
 }
 
+html *,
+html *::after,
+html *::before {
+  box-sizing: border-box;
+}
+
 @media (min-width: 550px) {
   html {
     font-size: 11px;

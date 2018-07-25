@@ -2231,31 +2231,31 @@
       ],
       "bundles": [
         {
-          "fileName": "gkgebix5.js",
+          "fileName": "dc35d0tj.js",
           "outputs": [
-            "dist/stellar/gkgebix5.js",
-            "www/build/stellar/gkgebix5.js"
+            "dist/stellar/dc35d0tj.js",
+            "www/build/stellar/dc35d0tj.js"
           ],
-          "size": 8098,
-          "gzip": 3037
+          "size": 8520,
+          "gzip": 3184
         },
         {
-          "fileName": "gkgebix5.es5.js",
+          "fileName": "dc35d0tj.es5.js",
           "outputs": [
-            "dist/stellar/gkgebix5.es5.js",
-            "www/build/stellar/gkgebix5.es5.js"
+            "dist/stellar/dc35d0tj.es5.js",
+            "www/build/stellar/dc35d0tj.es5.js"
           ],
-          "size": 8708,
-          "gzip": 3101,
+          "size": 9154,
+          "gzip": 3241,
           "target": "es5"
         },
         {
-          "fileName": "gkgebix5.js",
+          "fileName": "dc35d0tj.js",
           "outputs": [
-            "dist/esm/es5/gkgebix5.js"
+            "dist/esm/es5/dc35d0tj.js"
           ],
-          "size": 8727,
-          "gzip": 3102,
+          "size": 9173,
+          "gzip": 3240,
           "target": "es5"
         }
       ],

@@ -11,6 +11,7 @@ export class List {
   @State() container: HTMLElement;
   @State() list: HyperList;
   @Prop({mutable: true}) items: Array<any> = [];
+  @State() indexed: boolean = false
 
   @State() config: Object = {
     height: 600,
@@ -50,6 +51,7 @@ export class List {
   }
 
   componentWillLoad() {
+    this.indexChildren();
     this.updateConfig({
       generate: (row) => { return this.generate(row); },
       itemHeight: this.itemHeight
@@ -57,6 +59,7 @@ export class List {
   }
 
   componentDidLoad() {
+    this.indexed = true;
     this.container = this.element.querySelector('.list');
     this.mount()
   }
@@ -76,22 +79,41 @@ export class List {
     return el;
   }
 
+  indexChildren() {
+    const items = Array.from(this.element.querySelectorAll('stellar-item'));
+    let data = [];
+
+    console.log(items);
+
+    items.forEach((item) => {
+      data.push({
+        ...item.attributes,
+        content: item.innerHTML
+      })
+    })
+
+    this.items = [...data, ...this.items];
+  }
+
   @Method()
   mount() {
-    if (this.items) {
-      this.updateConfig({});
+    if (this.indexed && this.items) {
+      this.updateConfig({total: this.items.length});
       this.list = HyperList.create(this.container, this.config);
     }
   }
 
   @Method()
   refresh() {
-    this.list.refresh(this.container, this.config);
+    if (this.indexed) {
+      this.list.refresh(this.container, this.config);
+    }
   }
 
   render() {
-    return (
+    return [
+      <div hidden={true}><slot /></div>,
       <div class="list"></div>
-    )
+    ]
   }
 }
