@@ -1,6 +1,6 @@
 {
   "name": "@stellar-design/core",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Stellar is a beautiful, complete design system for your next product 🌌",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
