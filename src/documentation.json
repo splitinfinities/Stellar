@@ -1117,7 +1117,7 @@
       "tag": "stellar-image",
       "readme": "# stellar-image\n\n\n",
       "usage": {
-        "default": "<stellar-image width=\"2792\" height=\"1574\" preload=\"./global/images/google_cardboard_will@2x-76x43.jpg\">\n\t<source srcset=\"./global/images/google_cardboard_will@2x.jpg\" media=\"(min-width:1023px) and (min-device-pixel-ratio: 2)\" />\n\t<source srcset=\"./global/images/google_cardboard_will@2x-1024x577.jpg\" media=\"(min-width:1023px)\" />\n\t<source srcset=\"./global/images/google_cardboard_will@2x-1024x577.jpg\" media=\"(max-width:640px) and (min-device-pixel-ratio: 2)\" />\n\t<source srcset=\"./global/images/google_cardboard_will@2x-640x361.jpg\" media=\"(max-width:640px)\" />\n\t<img srcset=\"./global/images/google_cardboard_will@2x-640x361.jpg\" alt=\"…\" />\n</stellar-image>\n"
+        "default": "<stellar-image width=\"2792\" height=\"1574\" preload=\"./global/images/google_cardboard_will@2x-76x43.jpg\">\n\t<source srcset=\"./global/images/google_cardboard_will@2x.jpg\" media=\"(min-width:1023px) and (min-device-pixel-ratio: 2)\" />\n\t<source srcset=\"./global/images/google_cardboard_will@2x-1024x577.jpg\" media=\"(min-width:1023px)\" />\n\t<source srcset=\"./global/images/google_cardboard_will@2x-1024x577.jpg\" media=\"(max-width:640px) and (min-device-pixel-ratio: 2)\" />\n\t<source srcset=\"./global/images/google_cardboard_will@2x-640x361.jpg\" media=\"(max-width:640px)\" />\n\n</stellar-image>\n"
       },
       "props": [
         {

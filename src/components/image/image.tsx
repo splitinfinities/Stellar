@@ -43,8 +43,10 @@ export class StellarImage {
   }
 
   mountZoom() {
-    this.zoom = mediumZoom(this.element.shadowRoot.querySelector('.final_image'), {
-      background:  `rgb(${this.palette[0][0]}, ${this.palette[0][1]}, ${this.palette[0][2]})`,
+    let zoomable = this.element.shadowRoot.querySelector('img');
+
+    this.zoom = mediumZoom(zoomable, {
+      background: `rgb(${this.palette[0][0]}, ${this.palette[0][1]}, ${this.palette[0][2]})`,
       scrollOffset: 1,
       margin: 0
     });
@@ -57,7 +59,7 @@ export class StellarImage {
 
   handleImage() {
     this.active = true;
-    setTimeout(() => { this.mountZoom(); }, 10);
+    setTimeout(() => { this.mountZoom(); }, 100);
   }
 
   addIntersectionObserver() {
@@ -98,9 +100,11 @@ export class StellarImage {
         "--bg": `rgb(${this.palette[0][0]}, ${this.palette[0][1]}, ${this.palette[0][2]})`
       }, this.element);
 
-      this.zoom.update({
-        background: `rgb(${this.palette[0][0]}, ${this.palette[0][1]}, ${this.palette[0][2]})`
-      })
+      if (this.zoom) {
+        this.zoom.update({
+          background: `rgb(${this.palette[0][0]}, ${this.palette[0][1]}, ${this.palette[0][2]})`
+        })
+      }
     }
     img.src = this.preload;
     img.crossOrigin = "Anonymous";
@@ -123,6 +127,7 @@ export class StellarImage {
 
     [].forEach.call(sources, (source) => {
       sourcesArray = [...sourcesArray, source];
+      source.hidden = true
     });
 
     this.sources = sourcesArray;
