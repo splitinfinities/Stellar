@@ -2977,31 +2977,31 @@
       ],
       "bundles": [
         {
-          "fileName": "b7n52saa.js",
+          "fileName": "fil4ky0y.js",
           "outputs": [
-            "dist/stellar/b7n52saa.js",
-            "www/build/stellar/b7n52saa.js"
+            "dist/stellar/fil4ky0y.js",
+            "www/build/stellar/fil4ky0y.js"
           ],
-          "size": 2321,
-          "gzip": 1005
+          "size": 2481,
+          "gzip": 1038
         },
         {
-          "fileName": "b7n52saa.es5.js",
+          "fileName": "fil4ky0y.es5.js",
           "outputs": [
-            "dist/stellar/b7n52saa.es5.js",
-            "www/build/stellar/b7n52saa.es5.js"
+            "dist/stellar/fil4ky0y.es5.js",
+            "www/build/stellar/fil4ky0y.es5.js"
           ],
-          "size": 2760,
-          "gzip": 1106,
+          "size": 2920,
+          "gzip": 1139,
           "target": "es5"
         },
         {
-          "fileName": "b7n52saa.js",
+          "fileName": "fil4ky0y.js",
           "outputs": [
-            "dist/esm/es5/b7n52saa.js"
+            "dist/esm/es5/fil4ky0y.js"
           ],
-          "size": 2713,
-          "gzip": 1078,
+          "size": 2873,
+          "gzip": 1114,
           "target": "es5"
         }
       ],

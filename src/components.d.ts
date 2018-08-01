@@ -2999,8 +2999,10 @@ declare global {
   namespace StencilComponents {
     interface StellarVideo {
       'autoplay': boolean;
+      'controls': boolean;
       'height': number;
       'muted': boolean;
+      'overlay': boolean;
       'playsinline': boolean;
       'poster': string;
       'preload': string;
@@ -3028,8 +3030,10 @@ declare global {
   namespace JSXElements {
     export interface StellarVideoAttributes extends HTMLAttributes {
       'autoplay'?: boolean;
+      'controls'?: boolean;
       'height'?: number;
       'muted'?: boolean;
+      'overlay'?: boolean;
       'playsinline'?: boolean;
       'poster'?: string;
       'preload'?: string;

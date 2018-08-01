@@ -12,12 +12,22 @@
 boolean
 
 
+#### controls
+
+boolean
+
+
 #### height
 
 number
 
 
 #### muted
+
+boolean
+
+
+#### overlay
 
 boolean
 
@@ -49,12 +59,22 @@ number
 boolean
 
 
+#### controls
+
+boolean
+
+
 #### height
 
 number
 
 
 #### muted
+
+boolean
+
+
+#### overlay
 
 boolean
 

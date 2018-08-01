@@ -2880,6 +2880,12 @@
           "docs": ""
         },
         {
+          "name": "controls",
+          "type": "boolean",
+          "attr": "controls",
+          "docs": ""
+        },
+        {
           "name": "height",
           "type": "number",
           "mutable": true,
@@ -2890,6 +2896,12 @@
           "name": "muted",
           "type": "boolean",
           "attr": "muted",
+          "docs": ""
+        },
+        {
+          "name": "overlay",
+          "type": "boolean",
+          "attr": "overlay",
           "docs": ""
         },
         {

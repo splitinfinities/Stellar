@@ -14,7 +14,7 @@ stellar-video video {
   top: 0; left: 0; right: 0; bottom: 0;
 }
 
-stellar-video[overlay]::after {
+stellar-video::after {
   content: "";
   display: block;
   position: absolute;
@@ -23,6 +23,10 @@ stellar-video[overlay]::after {
   width: 100%;
   height: 100%;
   top: 0; left: 0; right: 0; bottom: 0;
+  mix-blend-mode: color;
+}
+
+stellar-video[overlay]::after {
   background: linear-gradient(35deg, var(--theme-complement5) 0%, var(--theme-base5) 40%, var(--theme-complement5) 100%);
   mix-blend-mode: color;
 }
