@@ -1,4 +1,4 @@
-import { flush, render } from '@stencil/core/testing';
+import { TestWindow } from '@stencil/core/testing';
 import { Grid } from './grid';
 
 describe('stellar-grid', () => {

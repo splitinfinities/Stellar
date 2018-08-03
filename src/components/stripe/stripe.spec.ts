@@ -1,4 +1,4 @@
-import { flush, render } from '@stencil/core/testing';
+import { TestWindow } from '@stencil/core/testing';
 import { Stripe } from './stripe';
 
 describe('stellar-stripe', () => {

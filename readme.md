@@ -1,3 +1,4 @@
+<img src="./global/images/">
 
 <h1 align="center">Stellar</h1>
 

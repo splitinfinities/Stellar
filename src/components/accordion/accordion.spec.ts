@@ -1,4 +1,4 @@
-import { flush, render } from '@stencil/core/testing';
+import { TestWindow } from '@stencil/core/testing';
 import { Accordion } from './accordion';
 
 describe('stellar-accordion', () => {
@@ -7,35 +7,20 @@ describe('stellar-accordion', () => {
   });
 
   describe('rendering', () => {
-    let element;
+    let element: HTMLStellarAccordionElement;
+    let testWindow: TestWindow;
+
     beforeEach(async () => {
-      element = await render({
+      testWindow = new TestWindow();
+      element = await testWindow.load({
         components: [Accordion],
         html: '<stellar-accordion></stellar-accordion>'
       });
     });
 
     it('should work without parameters', () => {
-      expect(element.textContent).toEqual('Hello, my name is  ');
-    });
-
-    it('should work a first name', async () => {
-      element.first = 'Peter';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter ');
-    });
-
-    it('should work with a last name', async () => {
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is  Parker');
-    });
-
-    it('should work with both a first and a last name', async () => {
-      element.first = 'Peter'
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter Parker');
+      console.log(element.textContent.trim())
+      expect(element.textContent.trim()).toEqual('Hello, World! I\'m');
     });
   });
 });
