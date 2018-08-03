@@ -30,12 +30,6 @@ export class ToggleOption {
 
   @Event() toggleChanged: EventEmitter;
 
-  hostData() {
-    return {
-      checked: this.checked
-    }
-  }
-
   componentWillLoad () {
     this.updateRealType();
   }

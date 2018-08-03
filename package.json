@@ -10,13 +10,12 @@
     "dist/"
   ],
   "scripts": {
-    "dev:build": "stencil build",
-    "dev:runOld": "sd concurrent \"stencil build --dev --es5 --watch\" \"stencil-dev-server\"",
-    "dev:run": "stencil build --dev --watch --serve",
-    "dev:run-prod": "stencil build --prod --watch --serve",
-    "dev:serve": "stencil-dev-server",
-    "start": "npm run dev:runOld",
-    "test:run": "jest",
+    "dev:build": "stencil build --",
+    "dev:build:prod": "stencil build --prod --docs",
+    "dev:watch": "stencil build --dev --watch --serve",
+    "dev:watch:prod": "stencil build --prod --watch --serve",
+    "start": "npm run dev:watch:prod",
+    "test:build": "jest",
     "test:watch": "jest --watch",
     "sketch:accordions": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/accordion.html accordion",
     "sketch:assets": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/assets.html assets",
@@ -40,8 +39,8 @@
   "dependencies": {
     "@brainly/html-sketchapp": "^3.2.0",
     "@shopify/draggable": "^1.0.0-beta.7",
-    "@stencil/postcss": "0.0.4",
-    "@stencil/sass": "^0.0.5",
+    "@stencil/postcss": "^0.1.0",
+    "@stencil/sass": "^0.1.0",
     "await-delay": "^1.0.0",
     "convert-units": "^2.3.4",
     "css-custom-properties": "^0.1.0",
@@ -68,7 +67,7 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
-    "@stencil/core": "^0.9.7",
+    "@stencil/core": "^0.11.0",
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
     "@types/jest": "^21.1.1",
