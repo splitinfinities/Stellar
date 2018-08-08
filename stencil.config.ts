@@ -16,7 +16,7 @@ export const config: Config = {
     { src: "global/vector" },
     { src: "*.html" },
     { src: "**/*.md" },
-    { src: "data/**/*" },
+    { src: "data" },
   ],
   outputTargets: [
     { type: "stats", file: "/data/stats.json" },

@@ -1,3 +1,4 @@
+// Color system made via: https://palx.jxnblk.com/e5405c
 if (typeof module === 'undefined' || typeof module.exports === 'undefined') {
   window["exports"] = {}
 }
