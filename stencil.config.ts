@@ -1,12 +1,13 @@
 import { Config } from '@stencil/core';
 import { postcss } from "@stencil/postcss";
 import customMedia from "postcss-custom-media";
-import designTokenFunction from "postcss-design-token-function";
-import { colors } from "./src/global/colors";
+import * as designTokenFunction from "postcss-design-token-function";
+import colors from "./src/global/_colors";
 import { sass } from '@stencil/sass';
 
 export const config: Config = {
-  namespace: 'stellar',
+  namespace: 'Stellar',
+  preamble: '(C) Split Infinities https://splitinfinities.com - MIT License',
   globalStyle: "./src/global/stellar.css",
   copy: [
     { src: "global/fonts" },
@@ -15,13 +16,13 @@ export const config: Config = {
     { src: "global/vector" },
     { src: "*.html" },
     { src: "**/*.md" },
-    { src: "documentation.json" },
+    { src: "data/**/*" },
   ],
-  outputTargets:[
-    { type: "stats", file: "/src/stats.json" } as ,
-    { type: "docs", file: "/src/documentation.json" },
-    { type: "dist" },
-    { type: "www", serviceWorker: false }
+  outputTargets: [
+    { type: "stats", file: "/data/stats.json" },
+    { type: "docs", jsonFile: "/data/documentation.json" },
+    { type: "www" },
+    { type: "dist" }
   ],
   plugins: [
     postcss({

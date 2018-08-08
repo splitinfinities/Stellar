@@ -37,7 +37,7 @@ number
 string
 
 
-#### title
+#### label
 
 string
 
@@ -74,7 +74,7 @@ number
 string
 
 
-#### title
+#### label
 
 string
 

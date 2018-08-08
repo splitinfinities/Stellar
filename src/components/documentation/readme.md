@@ -12,17 +12,17 @@
 string
 
 
+#### feature
+
+string
+
+
 #### preview
 
 boolean
 
 
-#### subtitle
-
-string
-
-
-#### title
+#### property
 
 string
 
@@ -39,17 +39,17 @@ string
 string
 
 
+#### feature
+
+string
+
+
 #### preview
 
 boolean
 
 
-#### subtitle
-
-string
-
-
-#### title
+#### property
 
 string
 

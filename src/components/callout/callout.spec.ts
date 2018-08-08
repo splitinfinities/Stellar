@@ -1,22 +1,26 @@
 import { TestWindow } from '@stencil/core/testing';
-import { Asset } from './asset';
+import { Callout } from './callout';
 
-describe('stellar-asset', () => {
+describe('stellar-callout', () => {
   it('should build', () => {
-    expect(new Asset()).toBeTruthy();
+    expect(new Callout()).toBeTruthy();
   });
 
   describe('rendering', () => {
-    let element;
+    let element: HTMLStellarCalloutElement;
+    let testWindow: TestWindow;
+
     beforeEach(async () => {
-      element = await render({
-        components: [Asset],
-        html: '<stellar-asset></stellar-asset>'
+      testWindow = new TestWindow();
+      element = await testWindow.load({
+        components: [Callout],
+        html: '<stellar-callout></stellar-callout>'
       });
     });
 
     it('should work without parameters', () => {
-      expect(element.textContent).toEqual('Hello, my name is  ');
+      expect(element.outerHTML.trim()).toEqual('<stellar-callout class=\"theme-gray hydrated\"><div class=\"callout-wrap\"></div></stellar-callout>');
     });
   });
 });
+

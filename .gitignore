@@ -22,3 +22,4 @@ www/*
 src/site
 *.mp4
 .stencil
+coverage

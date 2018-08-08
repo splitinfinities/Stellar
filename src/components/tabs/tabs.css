@@ -32,6 +32,13 @@ stellar-tabs[size="large"] {
   --font-size: 1.5rem;
 }
 
+stellar-tabs stellar-blur {
+  position: absolute;
+  width: 0;
+  left: 0;
+  bottom: 0;
+}
+
 stellar-tabs .indicator {
   display: block;
   position: absolute;

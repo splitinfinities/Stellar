@@ -22,12 +22,12 @@ boolean
 string
 
 
-#### target
+#### label
 
 string
 
 
-#### title
+#### target
 
 string
 
@@ -49,12 +49,12 @@ boolean
 string
 
 
-#### target
+#### label
 
 string
 
 
-#### title
+#### target
 
 string
 

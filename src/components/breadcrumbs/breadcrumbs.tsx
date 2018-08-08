@@ -11,7 +11,7 @@ export class Breadcrumbs {
   @Prop() icon_size: number = 0.85;
 
   @Prop() home: string = "/";
-  @Prop() title: string = "Home";
+  @Prop() label: string = "Home";
   @Prop() description: string = "An icon that shows the main page you're on";
 
   @Prop() color: string = "blue5";
@@ -20,7 +20,7 @@ export class Breadcrumbs {
     return (
       <div id="breadcumb_wrapper" class="breadcrumbs">
         <div class="flush-left"></div>
-        <stellar-breadcrumb title={this.title}>
+        <stellar-breadcrumb label={this.label}>
           <stellar-asset id="icon" name={this.icon} src={this.icon_src} color={this.color}></stellar-asset>
         </stellar-breadcrumb>
         <slot></slot>

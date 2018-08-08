@@ -1,22 +1,25 @@
 import { TestWindow } from '@stencil/core/testing';
-import { Asset } from './asset';
+import { Unit } from './unit';
 
-describe('stellar-asset', () => {
+describe('stellar-unit', () => {
   it('should build', () => {
-    expect(new Asset()).toBeTruthy();
+    expect(new Unit()).toBeTruthy();
   });
 
   describe('rendering', () => {
-    let element;
+    let element: HTMLStellarUnitElement;
+    let testWindow: TestWindow;
+
     beforeEach(async () => {
-      element = await render({
-        components: [Asset],
-        html: '<stellar-asset></stellar-asset>'
+      testWindow = new TestWindow();
+      element = await testWindow.load({
+        components: [Unit],
+        html: '<stellar-unit></stellar-unit>'
       });
     });
 
     it('should work without parameters', () => {
-      expect(element.textContent).toEqual('Hello, my name is  ');
+      expect(element.outerHTML.trim()).toEqual('<stellar-unit decimals=\"2\" from=\"B\" to=\"KB\" value=\"1000\" class=\"hydrated\">0.98 KB</stellar-unit>');
     });
   });
 });

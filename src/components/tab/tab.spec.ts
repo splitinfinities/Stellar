@@ -7,35 +7,19 @@ describe('stellar-tab', () => {
   });
 
   describe('rendering', () => {
-    let element;
+    let element: HTMLStellarTabElement;
+    let testWindow: TestWindow;
+
     beforeEach(async () => {
-      element = await render({
+      testWindow = new TestWindow();
+      element = await testWindow.load({
         components: [Tab],
         html: '<stellar-tab></stellar-tab>'
       });
     });
 
     it('should work without parameters', () => {
-      expect(element.textContent).toEqual('Hello, my name is  ');
-    });
-
-    it('should work a first name', async () => {
-      element.first = 'Peter';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter ');
-    });
-
-    it('should work with a last name', async () => {
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is  Parker');
-    });
-
-    it('should work with both a first and a last name', async () => {
-      element.first = 'Peter'
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter Parker');
+      expect(element.outerHTML.trim()).toEqual('<stellar-tab href=\"#\" tag=\"button\" class=\"hydrated\"><div class=\"tab-wrap\"><button href=\"#\" tabindex=\"0\" class=\"tab-button\"><span class=\"title\"></span></button></div></stellar-tab>');
     });
   });
 });

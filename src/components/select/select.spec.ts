@@ -7,35 +7,19 @@ describe('stellar-select', () => {
   });
 
   describe('rendering', () => {
-    let element;
+    let element: HTMLStellarSelectElement;
+    let testWindow: TestWindow;
+
     beforeEach(async () => {
-      element = await render({
+      testWindow = new TestWindow();
+      element = await testWindow.load({
         components: [Select],
         html: '<stellar-select></stellar-select>'
       });
     });
 
     it('should work without parameters', () => {
-      expect(element.textContent).toEqual('Hello, my name is  ');
-    });
-
-    it('should work a first name', async () => {
-      element.first = 'Peter';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter ');
-    });
-
-    it('should work with a last name', async () => {
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is  Parker');
-    });
-
-    it('should work with both a first and a last name', async () => {
-      element.first = 'Peter'
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter Parker');
+      expect(element.outerHTML.trim()).toEqual('<stellar-select value=\"false\" class=\"hydrated\"><div class=\"wrapper\"><div class=\"select\"><button type=\"button\" class=\"select-title\"><stellar-item class=\"current\" tabindex=\"-1\"></stellar-item><stellar-asset name=\"arrow-down\"></stellar-asset><input type=\"text\" tabindex=\"-1\" name=\"select\"></button><stellar-blur vertical=\"0\" class=\"select-list\"><div class=\"select-list-header\"></div><div class=\"select-list-body\"></div></stellar-blur></div></div></stellar-select>');
     });
   });
 });

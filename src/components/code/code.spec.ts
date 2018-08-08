@@ -1,5 +1,6 @@
 import { TestWindow } from '@stencil/core/testing';
 import { Code } from './code';
+import "mutationobserver-shim";
 
 describe('stellar-code', () => {
   it('should build', () => {
@@ -7,35 +8,20 @@ describe('stellar-code', () => {
   });
 
   describe('rendering', () => {
-    let element;
+    let element: HTMLStellarCodeElement;
+    let testWindow: TestWindow;
+
     beforeEach(async () => {
-      element = await render({
+      testWindow = new TestWindow();
+      element = await testWindow.load({
         components: [Code],
         html: '<stellar-code></stellar-code>'
       });
     });
 
     it('should work without parameters', () => {
-      expect(element.textContent).toEqual('Hello, my name is  ');
-    });
-
-    it('should work a first name', async () => {
-      element.first = 'Peter';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter ');
-    });
-
-    it('should work with a last name', async () => {
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is  Parker');
-    });
-
-    it('should work with both a first and a last name', async () => {
-      element.first = 'Peter'
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter Parker');
+      expect(element.outerHTML.trim()).toEqual('<stellar-code language=\"html\" numbers=\"\" class=\"hydrated\"><pre class=\"show-line-numbers language-html\"><code class=\" language-html\"></code><div class=\"hidden\"><slot-fb><template></template></slot-fb></div></pre></stellar-code>');
     });
   });
 });
+

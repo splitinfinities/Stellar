@@ -5,7 +5,7 @@ import { blurringEase } from '../../global/helpers';
   tag: 'stellar-animate-text',
   styleUrl: 'animate-text.css'
 })
-export class Accordion {
+export class AnimateText {
   @Element() element: HTMLElement
   @Prop() method: string|"glitch"|"lettering"|"weight"|"fade" = "lettering"
   @State() verticalBlur: number = 0;

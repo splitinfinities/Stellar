@@ -7,35 +7,19 @@ describe('stellar-header', () => {
   });
 
   describe('rendering', () => {
-    let element;
+    let element: HTMLStellarHeaderElement;
+    let testWindow: TestWindow;
+
     beforeEach(async () => {
-      element = await render({
+      testWindow = new TestWindow();
+      element = await testWindow.load({
         components: [Header],
         html: '<stellar-header></stellar-header>'
       });
     });
 
     it('should work without parameters', () => {
-      expect(element.textContent).toEqual('Hello, my name is  ');
-    });
-
-    it('should work a first name', async () => {
-      element.first = 'Peter';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter ');
-    });
-
-    it('should work with a last name', async () => {
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is  Parker');
-    });
-
-    it('should work with both a first and a last name', async () => {
-      element.first = 'Peter'
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter Parker');
+      expect(element.outerHTML.trim()).toEqual('<stellar-header class=\"hydrated\"><div class=\"content\"><stellar-starscape></stellar-starscape><div class=\"logo\"><h1 class=\"white\">🌌&nbsp;Stellar!</h1></div><div class=\"left\"></div><div class=\"right\"></div></div><stellar-progress max=\"10\" value=\"0\" slender=\"\"></stellar-progress></stellar-header>');
     });
   });
 });

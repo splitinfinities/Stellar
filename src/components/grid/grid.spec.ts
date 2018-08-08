@@ -7,35 +7,19 @@ describe('stellar-grid', () => {
   });
 
   describe('rendering', () => {
-    let element;
+    let element: HTMLStellarGridElement;
+    let testWindow: TestWindow;
+
     beforeEach(async () => {
-      element = await render({
+      testWindow = new TestWindow();
+      element = await testWindow.load({
         components: [Grid],
         html: '<stellar-grid></stellar-grid>'
       });
     });
 
     it('should work without parameters', () => {
-      expect(element.textContent).toEqual('Hello, my name is  ');
-    });
-
-    it('should work a first name', async () => {
-      element.first = 'Peter';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter ');
-    });
-
-    it('should work with a last name', async () => {
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is  Parker');
-    });
-
-    it('should work with both a first and a last name', async () => {
-      element.first = 'Peter'
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter Parker');
+      expect(element.outerHTML.trim()).toEqual('<stellar-grid data-eq-pts=\"tiny: 320, small: 480, medium: 640, large: 800, massive: 1024\" align=\"start\" cols=\"auto\" responsive=\"\" class=\"hydrated\"><div class=\"grid\"></div></stellar-grid>');
     });
   });
 });

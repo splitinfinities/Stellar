@@ -7,16 +7,20 @@ describe('stellar-asset', () => {
   });
 
   describe('rendering', () => {
-    let element;
+    let element: HTMLStellarAssetElement;
+    let testWindow: TestWindow;
+
     beforeEach(async () => {
-      element = await render({
+      testWindow = new TestWindow();
+      element = await testWindow.load({
         components: [Asset],
         html: '<stellar-asset></stellar-asset>'
       });
     });
 
     it('should work without parameters', () => {
-      expect(element.textContent).toEqual('Hello, my name is  ');
+      expect(element.textContent.trim()).toEqual('');
+      expect(element.outerHTML.trim()).toEqual('<stellar-asset language=\"ios-\" class=\"hydrated\"><div class=\"icon-wrap\"><ion-icon></ion-icon></div></stellar-asset>');
     });
   });
 });

@@ -76,14 +76,16 @@ export class Code {
       this.code = this.codeString.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
     } else {
       let code: any = this.element.querySelector('template');
-      const language: any = Array.from(code.classList).filter((s: any) => s.includes('language-'))
-
-      if (language.length === 1) {
-        this.language = language[0].substr(9)
-        this.element.closest('stellar-code-block').language = this.language
-      }
 
       if (code) {
+        const language: any = Array.from(code.classList).filter((s: any) => s.includes('language-'))
+
+        if (language.length === 1) {
+          this.language = language[0].substr(9)
+          this.element.closest('stellar-code-block').language = this.language
+        }
+
+
         if (!code.innerHTML) {
           // @ts-ignore
           code = Array.from(code.children).map((node: any) => {

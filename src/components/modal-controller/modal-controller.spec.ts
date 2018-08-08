@@ -7,35 +7,19 @@ describe('stellar-modal-controller', () => {
   });
 
   describe('rendering', () => {
-    let element;
+    let element: HTMLStellarModalControllerElement;
+    let testWindow: TestWindow;
+
     beforeEach(async () => {
-      element = await render({
+      testWindow = new TestWindow();
+      element = await testWindow.load({
         components: [ModalController],
         html: '<stellar-modal-controller></stellar-modal-controller>'
       });
     });
 
     it('should work without parameters', () => {
-      expect(element.textContent).toEqual('Hello, my name is  ');
-    });
-
-    it('should work a first name', async () => {
-      element.first = 'Peter';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter ');
-    });
-
-    it('should work with a last name', async () => {
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is  Parker');
-    });
-
-    it('should work with both a first and a last name', async () => {
-      element.first = 'Peter'
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter Parker');
+      expect(element.outerHTML.trim()).toEqual('<stellar-modal-controller state=\"empty\" class=\"hydrated\"><stellar-overlay></stellar-overlay><div class=\"modal-controller-wrapper\"></div></stellar-modal-controller>');
     });
   });
 });

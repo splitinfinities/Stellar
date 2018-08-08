@@ -63,10 +63,10 @@ export class Item {
 
 
   @Method()
-  focus() {
+  setFocus() {
     this.focused = true;
     // @ts-ignore
-    this.element.querySelector('.item').focus();
+    this.element.querySelector('.button').focus();
   }
 
   handleClick() {

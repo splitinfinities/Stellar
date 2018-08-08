@@ -28,13 +28,13 @@ export class List {
   }
 
   @Method()
-  append(value) {
+  append_to(value) {
     this.items.push(value);
     this.refresh();
   }
 
   @Method()
-  prepend(value) {
+  prepend_to(value) {
     this.items.unshift(value);
     this.refresh();
   }
@@ -82,8 +82,6 @@ export class List {
   indexChildren() {
     const items = Array.from(this.element.querySelectorAll('stellar-item'));
     let data = [];
-
-    console.log(items);
 
     items.forEach((item) => {
       data.push({

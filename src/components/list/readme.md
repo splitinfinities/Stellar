@@ -31,13 +31,13 @@ number
 
 ## Methods
 
-#### append()
+#### append_to()
 
 
 #### mount()
 
 
-#### prepend()
+#### prepend_to()
 
 
 #### refresh()

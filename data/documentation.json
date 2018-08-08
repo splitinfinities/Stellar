@@ -324,15 +324,15 @@
           "docs": ""
         },
         {
-          "name": "target",
+          "name": "label",
           "type": "string",
-          "attr": "target",
+          "attr": "label",
           "docs": ""
         },
         {
-          "name": "title",
+          "name": "target",
           "type": "string",
-          "attr": "title",
+          "attr": "target",
           "docs": ""
         }
       ],
@@ -385,9 +385,9 @@
           "docs": ""
         },
         {
-          "name": "title",
+          "name": "label",
           "type": "string",
-          "attr": "title",
+          "attr": "label",
           "docs": ""
         }
       ],
@@ -845,21 +845,21 @@
           "docs": ""
         },
         {
+          "name": "feature",
+          "type": "string",
+          "attr": "feature",
+          "docs": ""
+        },
+        {
           "name": "preview",
           "type": "boolean",
           "attr": "preview",
           "docs": ""
         },
         {
-          "name": "subtitle",
+          "name": "property",
           "type": "string",
-          "attr": "subtitle",
-          "docs": ""
-        },
-        {
-          "name": "title",
-          "type": "string",
-          "attr": "title",
+          "attr": "property",
           "docs": ""
         },
         {
@@ -875,15 +875,6 @@
           "docs": ""
         }
       ],
-      "events": [],
-      "styles": []
-    },
-    {
-      "tag": "stellar-documentation-site",
-      "readme": "# stellar-documentation-site\n\n\n",
-      "usage": {},
-      "props": [],
-      "methods": [],
       "events": [],
       "styles": []
     },
@@ -1343,6 +1334,10 @@
       ],
       "methods": [
         {
+          "name": "getId",
+          "docs": ""
+        },
+        {
           "name": "getStrength",
           "docs": ""
         },
@@ -1460,7 +1455,7 @@
           "docs": ""
         },
         {
-          "name": "focus",
+          "name": "setFocus",
           "docs": ""
         }
       ],
@@ -1565,7 +1560,7 @@
       ],
       "methods": [
         {
-          "name": "append",
+          "name": "append_to",
           "docs": ""
         },
         {
@@ -1573,7 +1568,7 @@
           "docs": ""
         },
         {
-          "name": "prepend",
+          "name": "prepend_to",
           "docs": ""
         },
         {

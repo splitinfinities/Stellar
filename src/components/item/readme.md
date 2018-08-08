@@ -128,7 +128,7 @@ string
 #### data()
 
 
-#### focus()
+#### setFocus()
 
 
 

@@ -4,7 +4,7 @@ import { Component, Element, Prop } from '@stencil/core'
   tag: 'stellar-scatter',
   styleUrl: 'scatter.css'
 })
-export class Accordion {
+export class Scatter {
   @Element() element: HTMLElement
 
   @Prop({reflectToAttr: true}) float: boolean = false;

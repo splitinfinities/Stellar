@@ -1,41 +1,25 @@
 import { TestWindow } from '@stencil/core/testing';
-import { Avatar } from './avatar';
+import { GroupOverflow } from './group-overflow';
 
-describe('stellar-avatar', () => {
+describe('stellar-group-overflow', () => {
   it('should build', () => {
-    expect(new Avatar()).toBeTruthy();
+    expect(new GroupOverflow()).toBeTruthy();
   });
 
   describe('rendering', () => {
-    let element;
+    let element: HTMLStellarGroupOverflowElement;
+    let testWindow: TestWindow;
+
     beforeEach(async () => {
-      element = await render({
-        components: [Avatar],
-        html: '<stellar-avatar></stellar-avatar>'
+      testWindow = new TestWindow();
+      element = await testWindow.load({
+        components: [GroupOverflow],
+        html: '<stellar-group-overflow></stellar-group-overflow>'
       });
     });
 
     it('should work without parameters', () => {
-      expect(element.textContent).toEqual('Hello, my name is  ');
-    });
-
-    it('should work a first name', async () => {
-      element.first = 'Peter';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter ');
-    });
-
-    it('should work with a last name', async () => {
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is  Parker');
-    });
-
-    it('should work with both a first and a last name', async () => {
-      element.first = 'Peter'
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter Parker');
+      expect(element.outerHTML.trim()).toEqual('<stellar-group-overflow size=\"medium\" class=\"hydrated\"><div class=\"wrapper\"><div class=\"content\"><div class=\"count\">+ more</div><div class=\"spacer\"></div></div><stellar-tooltip></stellar-tooltip></div></stellar-group-overflow>');
     });
   });
 });

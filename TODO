@@ -30,24 +30,24 @@ Minimum Lovable Product:
     ☐ codepen
     ✔ color-library @done (18-06-22 16:39)
     ✔ color-picker @done (18-06-22 16:39)
-    ☐ comment
-    ☐ comments
-    ☐ copy-wrap
+    ✔ comment @done (18-08-07 19:26)
+    ✔ comments @done (18-08-07 19:26)
+    ✔ copy-wrap @done (18-08-07 19:26)
     ✔ date-picker @done (18-06-22 16:39)
     ☐ datetime-picker
     ☐ device
     ☐ divider
     ✔ documentation @done (18-06-22 16:39)
     ✔ dropdown @done (18-06-22 16:39)
-    ☐ dummy-copy
-    ☐ dummy-img
+    ✔ skeleton-text @done (18-08-07 19:27)
+    ✔ skeleton-img @done (18-08-07 19:27)
     ☐ empty
     ☐ fab
     ☐ file-group
     ☐ file-tree
     ☐ fitted-text
     ☐ footer
-    ☐ form
+    ✔ form @done (18-08-07 19:27)
     ☐ git-commit
     ☐ git-history
     ☐ graphql
@@ -56,9 +56,9 @@ Minimum Lovable Product:
     ✔ group-overflow @done (18-06-22 16:40)
     ☐ header
     ☐ hero
-    ☐ image
+    ✔ image @done (18-08-07 19:27)
     ✔ input @done (18-06-22 16:40)
-    ☐ item
+    ✔ item @done (18-08-07 19:27)
     ☐ layout
     ✔ list @done (18-06-22 16:40)
     ☐ live-demo
@@ -77,8 +77,8 @@ Minimum Lovable Product:
     ☐ overlay
     ☐ overlay-controller
     ✔ pagination @done (18-06-22 16:41)
-    ☐ parallax
-    ☐ parallax-section
+    ✔ parallax @done (18-08-07 19:27)
+    ✔ parallax-section @done (18-08-07 19:27)
     ☐ playlist
     ☐ podcast
     ☐ podcast-episode
@@ -94,11 +94,11 @@ Minimum Lovable Product:
     ☐ scrollspy
     ✔ select @done (18-06-22 16:42)
     ☐ select-add-more
-    ☐ carousel
-    ☐ carousel-slide
+    ✔ slider @done (18-08-07 19:27)
+    ✔ slider-slide @done (18-08-07 19:27)
     ☐ song
-    ☐ step
-    ☐ steps
+    ✔ step @done (18-08-07 19:27)
+    ✔ steps @done (18-08-07 19:27)
     ☐ stripe
     ☐ swiper
     ☐ swiper-item
@@ -114,15 +114,14 @@ Minimum Lovable Product:
     ☐ toggle-option
     ✔ tooltip @done (18-06-22 16:42)
     ☐ tweet
-    ☐ video
+    ✔ video @done (18-08-07 19:28)
     ☐ video-player
     ☐ video-playlist
-    ☐ virtual-list
     ☐ wakatime-stats
     ☐ xray
 
 Products (dog fooding):
- ☐ Portfolio site
+ ✔ Portfolio site @done (18-08-07 19:28)
  ☐ Cosmic (git app)
  ☐ New Tab page
  ☐ WordPress Theme

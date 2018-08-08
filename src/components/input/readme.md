@@ -270,6 +270,9 @@ Public: Changed event
 
 ## Methods
 
+#### getId()
+
+
 #### getStrength()
 
 

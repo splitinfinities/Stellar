@@ -1,41 +1,25 @@
 import { TestWindow } from '@stencil/core/testing';
-import { ActionShelf } from './action-shelf';
+import { Tooltip } from './tooltip';
 
-describe('stellar-action-shelf', () => {
+describe('stellar-tooltip', () => {
   it('should build', () => {
-    expect(new action-shelf()).toBeTruthy();
+    expect(new Tooltip()).toBeTruthy();
   });
 
   describe('rendering', () => {
-    let element;
+    let element: HTMLStellarTooltipElement;
+    let testWindow: TestWindow;
+
     beforeEach(async () => {
-      element = await render({
-        components: [ActionShelf],
-        html: '<stellar-action-shelf></stellar-action-shelf>'
+      testWindow = new TestWindow();
+      element = await testWindow.load({
+        components: [Tooltip],
+        html: '<stellar-tooltip></stellar-tooltip>'
       });
     });
 
     it('should work without parameters', () => {
-      expect(element.textContent).toEqual('Hello, my name is  ');
-    });
-
-    it('should work a first name', async () => {
-      element.first = 'Peter';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter ');
-    });
-
-    it('should work with a last name', async () => {
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is  Parker');
-    });
-
-    it('should work with both a first and a last name', async () => {
-      element.first = 'Peter'
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter Parker');
+      expect(element.outerHTML.trim()).toEqual('<stellar-tooltip align=\"center\" class=\"hydrated\"><div class=\"wrap\"><div class=\"after\"></div></div></stellar-tooltip>');
     });
   });
 });

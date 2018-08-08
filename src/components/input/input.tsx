@@ -192,6 +192,11 @@ export class Input {
   }
 
   @Method()
+  getId() {
+    return this.generatedId
+  }
+
+  @Method()
   val() {
     return this.value;
   }

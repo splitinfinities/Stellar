@@ -7,35 +7,20 @@ describe('stellar-color-picker', () => {
   });
 
   describe('rendering', () => {
-    let element;
+    let element: HTMLStellarColorPickerElement;
+    let testWindow: TestWindow;
+
     beforeEach(async () => {
-      element = await render({
+      testWindow = new TestWindow();
+      element = await testWindow.load({
         components: [ColorPicker],
         html: '<stellar-color-picker></stellar-color-picker>'
       });
     });
 
     it('should work without parameters', () => {
-      expect(element.textContent).toEqual('Hello, my name is  ');
-    });
-
-    it('should work a first name', async () => {
-      element.first = 'Peter';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter ');
-    });
-
-    it('should work with a last name', async () => {
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is  Parker');
-    });
-
-    it('should work with both a first and a last name', async () => {
-      element.first = 'Peter'
-      element.last = 'Parker';
-      await flush(element);
-      expect(element.textContent).toEqual('Hello, my name is Peter Parker');
+      expect(element.outerHTML.trim()).toEqual('<stellar-color-picker class=\"hydrated\"><div class=\"wrap\"><button value=\"default\" class=\"default\"></button><div class=\"placeholder\"></div></div></stellar-color-picker>');
     });
   });
 });
+

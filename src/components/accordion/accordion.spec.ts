@@ -1,5 +1,6 @@
 import { TestWindow } from '@stencil/core/testing';
 import { Accordion } from './accordion';
+import "mutationobserver-shim";
 
 describe('stellar-accordion', () => {
   it('should build', () => {
@@ -19,8 +20,7 @@ describe('stellar-accordion', () => {
     });
 
     it('should work without parameters', () => {
-      console.log(element.textContent.trim())
-      expect(element.textContent.trim()).toEqual('Hello, World! I\'m');
+      expect(element.textContent.trim()).toEqual('More Details');
     });
   });
 });
