@@ -8,8 +8,12 @@ stellar-code-block {
 }
 
 stellar-code-block stellar-code {
-  padding: 2rem 0 4rem;
+  padding: 2rem;
   overflow-y: hidden;
+}
+
+stellar-code-block stellar-card {
+  --border: 0;
 }
 
 stellar-code-block h6 {

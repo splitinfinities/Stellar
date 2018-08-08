@@ -3,6 +3,7 @@ stellar-code {
   width: 100%;
   overflow: auto;
   background: var(--gray9);
+  letter-spacing: 0;
 }
 
 stellar-code .hidden {

@@ -1,7 +1,7 @@
 {
   "name": "@stellar-design/core",
   "version": "0.0.20",
-  "description": "Stellar is a beautiful, complete design system for your next product 🌌",
+  "description": "A Beautiful, Complete Design System",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
@@ -11,24 +11,18 @@
   ],
   "scripts": {
     "start": "npm run dev",
-
-    "prepare": "npm run build:prod",
-
-    "build": "stencil build",
+    "build": "stencil build --docs",
     "build:prod": "npm run test && stencil build --prod --stats --docs && npm run organize",
-
-    "dev": "stencil build --dev --watch --serve",
+    "dev": "npm run organize && stencil build --dev --es5 --watch --serve",
     "dev:prod": "stencil build --prod --watch --serve",
-
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-
-    "organize": "npm run organize:coverage && npm run organize:sketch && npm run organize:collection && npm run organize:package",
+    "organize": "npm run organize:coverage && npm run organize:sketch && npm run organize:collection && npm run organize:package && npm run organize:into-src",
     "organize:coverage": "cp ./coverage/coverage-summary.json ./data/test-coverage.json",
     "organize:sketch": "cp ./sketch/*.asketch.json ./data/design/",
     "organize:collection": "cp ./dist/collection/collection-manifest.json ./data/collection.json",
     "organize:package": "cp ./package.json ./data/package.json",
-
+    "organize:into-src": "cp -R ./data ./src/global",
     "sketch:accordions": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/component/accordion accordion",
     "sketch:assets": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/component/assets assets",
     "sketch:avatar": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/component/avatar avatar",
@@ -45,6 +39,7 @@
     "sketch:tooltip": "node ./sketch/html-to-sketch/src/inject.js http://localhost:3333/component/tooltip tooltip"
   },
   "dependencies": {
+    "@stencil/router": "^0.2.5",
     "@shopify/draggable": "^1.0.0-beta.7",
     "await-delay": "^1.0.0",
     "convert-units": "^2.3.4",

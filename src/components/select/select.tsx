@@ -1,5 +1,5 @@
 import { Component, Prop, State, Listen, Watch, Element, Event, EventEmitter, Method } from '@stencil/core';
-// import { blurringEase } from '../../global/helpers';
+import { blurringEase } from '../../global/helpers';
 
 @Component({
   tag: 'stellar-select',
@@ -49,15 +49,15 @@ export class Select {
     // @ts-ignore
     this.element.querySelector('button.select-title').focus()
 
-    // if (!this.open) {
-    //   blurringEase((data: number) => {
-    //     this.blur = data * 5;
-    //   }, 100)
-    // } else {
-    //   blurringEase((data: number) => {
-    //     this.blur = data * 5;
-    //   }, 200)
-    // }
+    if (!this.open) {
+      blurringEase((data: number) => {
+        this.blur = data * 5;
+      }, 200, 220)
+    } else {
+      blurringEase((data: number) => {
+        this.blur = data * 5;
+      }, 200)
+    }
   }
 
   @Listen('selectionChanged')
@@ -78,7 +78,9 @@ export class Select {
         this.current.apply(element.data());
       }
 
-      // this.open = false;
+      setTimeout(() => {
+        this.open = false;
+      }, 200)
 
       // @ts-ignore
       this.element.querySelector('button.select-title').focus()

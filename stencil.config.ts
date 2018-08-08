@@ -14,14 +14,14 @@ export const config: Config = {
     { src: "global/images" },
     { src: "global/video" },
     { src: "global/vector" },
+    { src: "global/data" },
     { src: "*.html" },
     { src: "**/*.md" },
-    { src: "data" },
   ],
   outputTargets: [
     { type: "stats", file: "/data/stats.json" },
     { type: "docs", jsonFile: "/data/documentation.json" },
-    { type: "www" },
+    { type: "www", serviceWorker: false },
     { type: "dist" }
   ],
   plugins: [

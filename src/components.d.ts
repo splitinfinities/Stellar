@@ -7,8 +7,13 @@
 import '@stencil/core';
 
 import 'ionicons';
+import '@stencil/router';
+import '@stencil/state-tunnel';
 
 
+import {
+  MatchResults,
+} from '@stencil/router';
 
 
 declare global {
@@ -212,6 +217,7 @@ declare global {
       'codeString': string;
       'copy': boolean;
       'language': string;
+      'numbers': boolean;
       'result': () => any;
       'simple': boolean;
     }
@@ -251,6 +257,27 @@ declare global {
     interface CopyWrap {
       'align': string;
       'full': boolean;
+    }
+
+    interface StellarDocsComponent {
+      'match': MatchResults;
+      'tag': string;
+    }
+
+    interface StellarDocsHome {
+
+    }
+
+    interface StellarDocsNotFound {
+
+    }
+
+    interface StellarDocsPage {
+      'match': MatchResults;
+    }
+
+    interface StellarDocs {
+
     }
 
     interface StellarDocumentation {
@@ -884,6 +911,46 @@ declare global {
     };
     
 
+    interface HTMLStellarDocsComponentElement extends StencilComponents.StellarDocsComponent, HTMLStencilElement {}
+
+    var HTMLStellarDocsComponentElement: {
+      prototype: HTMLStellarDocsComponentElement;
+      new (): HTMLStellarDocsComponentElement;
+    };
+    
+
+    interface HTMLStellarDocsHomeElement extends StencilComponents.StellarDocsHome, HTMLStencilElement {}
+
+    var HTMLStellarDocsHomeElement: {
+      prototype: HTMLStellarDocsHomeElement;
+      new (): HTMLStellarDocsHomeElement;
+    };
+    
+
+    interface HTMLStellarDocsNotFoundElement extends StencilComponents.StellarDocsNotFound, HTMLStencilElement {}
+
+    var HTMLStellarDocsNotFoundElement: {
+      prototype: HTMLStellarDocsNotFoundElement;
+      new (): HTMLStellarDocsNotFoundElement;
+    };
+    
+
+    interface HTMLStellarDocsPageElement extends StencilComponents.StellarDocsPage, HTMLStencilElement {}
+
+    var HTMLStellarDocsPageElement: {
+      prototype: HTMLStellarDocsPageElement;
+      new (): HTMLStellarDocsPageElement;
+    };
+    
+
+    interface HTMLStellarDocsElement extends StencilComponents.StellarDocs, HTMLStencilElement {}
+
+    var HTMLStellarDocsElement: {
+      prototype: HTMLStellarDocsElement;
+      new (): HTMLStellarDocsElement;
+    };
+    
+
     interface HTMLStellarDocumentationElement extends StencilComponents.StellarDocumentation, HTMLStencilElement {}
 
     var HTMLStellarDocumentationElement: {
@@ -1267,6 +1334,11 @@ declare global {
     'stellar-comments': JSXElements.StellarCommentsAttributes;
     'stellar-content': JSXElements.StellarContentAttributes;
     'copy-wrap': JSXElements.CopyWrapAttributes;
+    'stellar-docs-component': JSXElements.StellarDocsComponentAttributes;
+    'stellar-docs-home': JSXElements.StellarDocsHomeAttributes;
+    'stellar-docs-not-found': JSXElements.StellarDocsNotFoundAttributes;
+    'stellar-docs-page': JSXElements.StellarDocsPageAttributes;
+    'stellar-docs': JSXElements.StellarDocsAttributes;
     'stellar-documentation': JSXElements.StellarDocumentationAttributes;
     'stellar-dropdown': JSXElements.StellarDropdownAttributes;
     'stellar-footer': JSXElements.StellarFooterAttributes;
@@ -1497,6 +1569,7 @@ declare global {
       'codeString'?: string;
       'copy'?: boolean;
       'language'?: string;
+      'numbers'?: boolean;
       'simple'?: boolean;
     }
 
@@ -1532,6 +1605,27 @@ declare global {
     export interface CopyWrapAttributes extends HTMLAttributes {
       'align'?: string;
       'full'?: boolean;
+    }
+
+    export interface StellarDocsComponentAttributes extends HTMLAttributes {
+      'match'?: MatchResults;
+      'tag'?: string;
+    }
+
+    export interface StellarDocsHomeAttributes extends HTMLAttributes {
+
+    }
+
+    export interface StellarDocsNotFoundAttributes extends HTMLAttributes {
+
+    }
+
+    export interface StellarDocsPageAttributes extends HTMLAttributes {
+      'match'?: MatchResults;
+    }
+
+    export interface StellarDocsAttributes extends HTMLAttributes {
+
     }
 
     export interface StellarDocumentationAttributes extends HTMLAttributes {
@@ -2000,6 +2094,11 @@ declare global {
     'stellar-comments': HTMLStellarCommentsElement
     'stellar-content': HTMLStellarContentElement
     'copy-wrap': HTMLCopyWrapElement
+    'stellar-docs-component': HTMLStellarDocsComponentElement
+    'stellar-docs-home': HTMLStellarDocsHomeElement
+    'stellar-docs-not-found': HTMLStellarDocsNotFoundElement
+    'stellar-docs-page': HTMLStellarDocsPageElement
+    'stellar-docs': HTMLStellarDocsElement
     'stellar-documentation': HTMLStellarDocumentationElement
     'stellar-dropdown': HTMLStellarDropdownElement
     'stellar-footer': HTMLStellarFooterElement
@@ -2068,6 +2167,11 @@ declare global {
     'stellar-comments': HTMLStellarCommentsElement;
     'stellar-content': HTMLStellarContentElement;
     'copy-wrap': HTMLCopyWrapElement;
+    'stellar-docs-component': HTMLStellarDocsComponentElement;
+    'stellar-docs-home': HTMLStellarDocsHomeElement;
+    'stellar-docs-not-found': HTMLStellarDocsNotFoundElement;
+    'stellar-docs-page': HTMLStellarDocsPageElement;
+    'stellar-docs': HTMLStellarDocsElement;
     'stellar-documentation': HTMLStellarDocumentationElement;
     'stellar-dropdown': HTMLStellarDropdownElement;
     'stellar-footer': HTMLStellarFooterElement;
