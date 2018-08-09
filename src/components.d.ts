@@ -261,11 +261,26 @@ declare global {
 
     interface StellarDocsComponent {
       'match': MatchResults;
-      'tag': string;
+      'pull_data': () => Promise<void>;
+      'show_data': () => any;
+    }
+
+    interface StellarDocsHeader {
+      'invert': boolean;
+      'mark': string;
+      'max': number;
+      'value': number;
     }
 
     interface StellarDocsHome {
 
+    }
+
+    interface StellarDocsNavigation {
+      'invert': boolean;
+      'mark': string;
+      'max': number;
+      'value': number;
     }
 
     interface StellarDocsNotFound {
@@ -394,7 +409,7 @@ declare global {
     interface StellarItem {
       'apply': (data: any) => void;
       'danger': boolean;
-      'data': () => { size: string; value: string; type: "a" | "button"; label: string; danger: boolean; slotted: any; };
+      'data': () => { size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: any; };
       'fit': boolean;
       'focused': boolean;
       'href': string;
@@ -403,7 +418,7 @@ declare global {
       'selected': boolean;
       'setFocus': () => void;
       'size': string;
-      'type': "a"|"button";
+      'type': "a"|"button"|"stencil-route-link";
       'value': string;
     }
 
@@ -430,6 +445,7 @@ declare global {
     }
 
     interface StellarMarkdown {
+      'codeString': string;
       'src': string;
     }
 
@@ -919,11 +935,27 @@ declare global {
     };
     
 
+    interface HTMLStellarDocsHeaderElement extends StencilComponents.StellarDocsHeader, HTMLStencilElement {}
+
+    var HTMLStellarDocsHeaderElement: {
+      prototype: HTMLStellarDocsHeaderElement;
+      new (): HTMLStellarDocsHeaderElement;
+    };
+    
+
     interface HTMLStellarDocsHomeElement extends StencilComponents.StellarDocsHome, HTMLStencilElement {}
 
     var HTMLStellarDocsHomeElement: {
       prototype: HTMLStellarDocsHomeElement;
       new (): HTMLStellarDocsHomeElement;
+    };
+    
+
+    interface HTMLStellarDocsNavigationElement extends StencilComponents.StellarDocsNavigation, HTMLStencilElement {}
+
+    var HTMLStellarDocsNavigationElement: {
+      prototype: HTMLStellarDocsNavigationElement;
+      new (): HTMLStellarDocsNavigationElement;
     };
     
 
@@ -1335,7 +1367,9 @@ declare global {
     'stellar-content': JSXElements.StellarContentAttributes;
     'copy-wrap': JSXElements.CopyWrapAttributes;
     'stellar-docs-component': JSXElements.StellarDocsComponentAttributes;
+    'stellar-docs-header': JSXElements.StellarDocsHeaderAttributes;
     'stellar-docs-home': JSXElements.StellarDocsHomeAttributes;
+    'stellar-docs-navigation': JSXElements.StellarDocsNavigationAttributes;
     'stellar-docs-not-found': JSXElements.StellarDocsNotFoundAttributes;
     'stellar-docs-page': JSXElements.StellarDocsPageAttributes;
     'stellar-docs': JSXElements.StellarDocsAttributes;
@@ -1609,11 +1643,24 @@ declare global {
 
     export interface StellarDocsComponentAttributes extends HTMLAttributes {
       'match'?: MatchResults;
-      'tag'?: string;
+    }
+
+    export interface StellarDocsHeaderAttributes extends HTMLAttributes {
+      'invert'?: boolean;
+      'mark'?: string;
+      'max'?: number;
+      'value'?: number;
     }
 
     export interface StellarDocsHomeAttributes extends HTMLAttributes {
 
+    }
+
+    export interface StellarDocsNavigationAttributes extends HTMLAttributes {
+      'invert'?: boolean;
+      'mark'?: string;
+      'max'?: number;
+      'value'?: number;
     }
 
     export interface StellarDocsNotFoundAttributes extends HTMLAttributes {
@@ -1744,7 +1791,7 @@ declare global {
       'selectable'?: boolean;
       'selected'?: boolean;
       'size'?: string;
-      'type'?: "a"|"button";
+      'type'?: "a"|"button"|"stencil-route-link";
       'value'?: string;
     }
 
@@ -1765,6 +1812,7 @@ declare global {
     }
 
     export interface StellarMarkdownAttributes extends HTMLAttributes {
+      'codeString'?: string;
       'src'?: string;
     }
 
@@ -2095,7 +2143,9 @@ declare global {
     'stellar-content': HTMLStellarContentElement
     'copy-wrap': HTMLCopyWrapElement
     'stellar-docs-component': HTMLStellarDocsComponentElement
+    'stellar-docs-header': HTMLStellarDocsHeaderElement
     'stellar-docs-home': HTMLStellarDocsHomeElement
+    'stellar-docs-navigation': HTMLStellarDocsNavigationElement
     'stellar-docs-not-found': HTMLStellarDocsNotFoundElement
     'stellar-docs-page': HTMLStellarDocsPageElement
     'stellar-docs': HTMLStellarDocsElement
@@ -2168,7 +2218,9 @@ declare global {
     'stellar-content': HTMLStellarContentElement;
     'copy-wrap': HTMLCopyWrapElement;
     'stellar-docs-component': HTMLStellarDocsComponentElement;
+    'stellar-docs-header': HTMLStellarDocsHeaderElement;
     'stellar-docs-home': HTMLStellarDocsHomeElement;
+    'stellar-docs-navigation': HTMLStellarDocsNavigationElement;
     'stellar-docs-not-found': HTMLStellarDocsNotFoundElement;
     'stellar-docs-page': HTMLStellarDocsPageElement;
     'stellar-docs': HTMLStellarDocsElement;

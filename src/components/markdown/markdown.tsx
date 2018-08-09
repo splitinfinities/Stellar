@@ -8,16 +8,33 @@ export class Markdown {
   @Element() element: HTMLElement;
 
   @Prop() src: string;
+  @Prop() codeString: string;
 
   @State() converted: string;
   @State() raw: string;
 
   @State() showdown: any = new showdown.Converter();
 
+  componentWillLoad () {
+    this.convert()
+  }
+
+  @Watch('codeString')
+  onCodeStringChange() {
+    this.convert()
+  }
+
   @Watch('src')
   onSrcChange () {
+    this.convert()
+  }
+
+  convert() {
     if (this.src) {
      this.fetchMarkdown()
+    } else if (this.codeString) {
+      this.raw = this.codeString
+      this.convertMarkdown();
     } else {
       this.getMarkdown();
       this.convertMarkdown();
@@ -50,15 +67,6 @@ export class Markdown {
 
     this.raw = text;
     this.convertMarkdown();
-  }
-
-  componentWillLoad () {
-    if (this.src) {
-     this.fetchMarkdown()
-    } else {
-      this.getMarkdown();
-      this.convertMarkdown();
-    }
   }
 
   render() {

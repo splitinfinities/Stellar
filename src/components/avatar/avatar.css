@@ -3,26 +3,27 @@ stellar-avatar {
   width: var(--avatar-size);
   max-height: var(--avatar-size);
   font-size: var(--avatar-font-size);
-  --avatar-color: var(--red5);
+  --avatar-color: var(--theme-base5, var(--red5));
+  --avatar-color-dark: var(--theme-base6, var(--red6));
   --avatar-font-color: var(--red0);
   --avatar-size: 2.2em;
   --avatar-font-size: 1.8rem;
   filter: drop-shadow(var(--drop-shadow));
 }
 
-stellar-avatar[size="large"] {
+stellar-avatar[size='large'] {
   --avatar-font-size: 3.6rem;
 }
 
-stellar-avatar[size="medium"] {
+stellar-avatar[size='medium'] {
   --avatar-font-size: 1.8rem;
 }
 
-stellar-avatar[size="small"] {
+stellar-avatar[size='small'] {
   --avatar-font-size: 1rem;
 }
 
-stellar-avatar[size="tiny"] {
+stellar-avatar[size='tiny'] {
   --avatar-font-size: .8rem;
 }
 
@@ -89,48 +90,48 @@ stellar-avatar > .wrapper > .content > img {
 /* Shapes */
 
 /* Shapes: Square */
-stellar-avatar[shape="circle"] .wrapper,
-stellar-avatar[shape="circle"] .wrapper .content,
-stellar-avatar[shape="circle"] .wrapper .spacer {
+stellar-avatar[shape='circle'] .wrapper,
+stellar-avatar[shape='circle'] .wrapper .content,
+stellar-avatar[shape='circle'] .wrapper .spacer {
   border-radius: 100%;
 }
 
 /* Shapes: Rectangle */
-stellar-avatar[shape="rectangle"] .wrapper .spacer {
+stellar-avatar[shape='rectangle'] .wrapper .spacer {
   padding-top: 60%;
 }
 
 /* Shapes: Diamond */
-stellar-avatar[shape="diamond"] .wrapper .spacer {
+stellar-avatar[shape='diamond'] .wrapper .spacer {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 /* Shapes: Diamond */
-stellar-avatar[shape="hexagon"] .wrapper .spacer {
+stellar-avatar[shape='hexagon'] .wrapper .spacer {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 /* Shapes: Star */
-stellar-avatar[shape="star"] .wrapper .spacer {
+stellar-avatar[shape='star'] .wrapper .spacer {
   clip-path: polygon(50% 0%, 64% 27%, 98% 35%, 74% 57%, 79% 91%, 50% 76%, 21% 91%, 25% 57%, 2% 35%, 36% 28%);
 }
 
 /* Shapes: Message */
-stellar-avatar[shape="message"] .wrapper .spacer {
+stellar-avatar[shape='message'] .wrapper .spacer {
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
 
 }
 
 /* Processing */
-stellar-avatar[processing="true"] .wrapper .letter {
+stellar-avatar[processing] .wrapper .letter {
   background: url("spinner.svg") no-repeat 50% 50%/50% 50%;
   color: transparent;
 }
 
-stellar-avatar[processing="true"][size="large"] .wrapper .letter {
+stellar-avatar[processing][size='large'] .wrapper .letter {
   background-size: 32px;
 }
 
-stellar-avatar[processing="true"][size="medium"] .wrapper .letter {
+stellar-avatar[processing][size='medium'] .wrapper .letter {
   background-size: 16px;
 }

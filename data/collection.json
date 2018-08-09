@@ -824,7 +824,6 @@
       "tag": "stellar-code-block",
       "dependencies": [
         "stellar-button",
-        "stellar-callout",
         "stellar-card",
         "stellar-code",
         "stellar-tag"
@@ -853,6 +852,11 @@
           "name": "language",
           "type": "String",
           "attr": "language"
+        },
+        {
+          "name": "numbers",
+          "type": "Boolean",
+          "attr": "numbers"
         },
         {
           "name": "simple",
@@ -1041,21 +1045,9 @@
     {
       "tag": "stellar-docs",
       "dependencies": [
-        "copy-wrap",
-        "stellar-asset",
-        "stellar-button",
-        "stellar-card",
         "stellar-footer",
-        "stellar-grid",
-        "stellar-item",
-        "stellar-layout",
-        "stellar-message",
-        "stellar-select",
-        "stellar-starscape",
-        "stellar-tag",
-        "stellar-toggle",
-        "stellar-toggle-option",
         "stencil-route",
+        "stencil-route-link",
         "stencil-route-switch",
         "stencil-router"
       ],
@@ -1067,22 +1059,23 @@
             "components/docs/root/root.css"
           ]
         }
-      },
-      "states": [
-        {
-          "name": "load"
-        },
-        {
-          "name": "themeComplement"
-        },
-        {
-          "name": "themePrimary"
-        }
-      ]
+      }
     },
     {
       "tag": "stellar-docs-component",
-      "dependencies": [],
+      "dependencies": [
+        "stellar-accordion",
+        "stellar-card",
+        "stellar-content",
+        "stellar-docs-header",
+        "stellar-docs-navigation",
+        "stellar-documentation",
+        "stellar-item",
+        "stellar-layout",
+        "stellar-markdown",
+        "stellar-tab",
+        "stellar-tabs"
+      ],
       "componentClass": "DocsComponent",
       "componentPath": "components/docs/component/component.js",
       "styles": {
@@ -1097,12 +1090,82 @@
           "name": "match",
           "attr": "match"
         }
+      ],
+      "states": [
+        {
+          "name": "data"
+        }
+      ],
+      "methods": [
+        {
+          "name": "pull_data"
+        },
+        {
+          "name": "show_data"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-docs-header",
+      "dependencies": [
+        "copy-wrap",
+        "stellar-asset",
+        "stellar-button",
+        "stellar-card",
+        "stellar-code-block",
+        "stellar-grid",
+        "stellar-item",
+        "stellar-layout",
+        "stellar-message",
+        "stellar-select",
+        "stellar-starscape",
+        "stellar-tag",
+        "stellar-toggle",
+        "stellar-toggle-option"
+      ],
+      "componentClass": "DocsHeader",
+      "componentPath": "components/docs/header/header.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/docs/header/header.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "invert",
+          "type": "Boolean",
+          "attr": "invert"
+        },
+        {
+          "name": "mark",
+          "type": "String",
+          "attr": "mark"
+        },
+        {
+          "name": "max",
+          "type": "Number",
+          "attr": "max"
+        },
+        {
+          "name": "value",
+          "type": "Number",
+          "attr": "value"
+        }
+      ],
+      "states": [
+        {
+          "name": "data"
+        }
       ]
     },
     {
       "tag": "stellar-docs-home",
       "dependencies": [
-        "stencil-route-link"
+        "stellar-docs-header",
+        "stellar-docs-navigation",
+        "stellar-layout"
       ],
       "componentClass": "DocsHome",
       "componentPath": "components/docs/home/home.js",
@@ -1113,6 +1176,52 @@
           ]
         }
       }
+    },
+    {
+      "tag": "stellar-docs-navigation",
+      "dependencies": [
+        "copy-wrap",
+        "stellar-accordion",
+        "stellar-card",
+        "stellar-item",
+        "stellar-tag"
+      ],
+      "componentClass": "DocsNavigation",
+      "componentPath": "components/docs/navigation/navigation.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/docs/navigation/navigation.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "invert",
+          "type": "Boolean",
+          "attr": "invert"
+        },
+        {
+          "name": "mark",
+          "type": "String",
+          "attr": "mark"
+        },
+        {
+          "name": "max",
+          "type": "Number",
+          "attr": "max"
+        },
+        {
+          "name": "value",
+          "type": "Number",
+          "attr": "value"
+        }
+      ],
+      "states": [
+        {
+          "name": "data"
+        }
+      ]
     },
     {
       "tag": "stellar-docs-not-found",
@@ -1129,7 +1238,9 @@
     },
     {
       "tag": "stellar-docs-page",
-      "dependencies": [],
+      "dependencies": [
+        "stellar-docs-header"
+      ],
       "componentClass": "DocsPage",
       "componentPath": "components/docs/page/page.js",
       "styles": {
@@ -2046,6 +2157,14 @@
       "componentPath": "components/markdown/markdown.js",
       "styles": {},
       "props": [
+        {
+          "name": "codeString",
+          "type": "String",
+          "attr": "code-string",
+          "watch": [
+            "onCodeStringChange"
+          ]
+        },
         {
           "name": "src",
           "type": "String",

@@ -8,7 +8,7 @@ export class Item {
   @Element() element: HTMLElement;
   @Prop({mutable: true}) size: string;
   @Prop({reflectToAttr: true, mutable: true}) value: string;
-  @Prop({reflectToAttr: true, mutable: true}) type: "a"|"button" = "button";
+  @Prop({reflectToAttr: true, mutable: true}) type: "a"|"button"|"stencil-route-link" = "button";
   @Prop({reflectToAttr: true, mutable: true}) label: string;
   @Prop({reflectToAttr: true, mutable: true}) href: string = "#";
 
@@ -93,7 +93,7 @@ export class Item {
 
   render () {
     return (
-      <this.type class="button" type="button" href={this.href} tabindex="0" value={this.value} title={this.label} onClick={ () => this.handleClick()} onBlur={() => this.handleBlur()} onFocus={() => this.handleFocus()}>
+      <this.type class="button" type="button" href={this.href} url={this.href} tabindex="0" value={this.value} title={this.label} onClick={ () => this.handleClick()} onBlur={() => this.handleBlur()} onFocus={() => this.handleFocus()}>
         <slot></slot>
         { this.selected && <stellar-asset class="selected" name="checkmark" block></stellar-asset> }
       </this.type>

@@ -38,6 +38,11 @@ stellar-item .button {
   text-decoration: none;
 }
 
+stellar-item .button a {
+  color: inherit;
+  text-decoration: none;
+}
+
 stellar-item .button stellar-avatar {
   flex: 0 0 var(--avatar-size);
   margin-right: .5rem;

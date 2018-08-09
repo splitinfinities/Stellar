@@ -13,8 +13,8 @@ export class DocsPage {
   render() {
     if (this.match && this.match.params.name) {
       return (
-        <div class='app-profile'>
-          This is a page!
+        <div>
+          <stellar-docs-header></stellar-docs-header>
         </div>
       );
     }

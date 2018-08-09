@@ -14,11 +14,12 @@ export class Header {
     return [
         <div class="content">
           <stellar-starscape></stellar-starscape>
-          <div class="logo">
-            <h1 class="white">🌌&nbsp;Stellar!</h1>
-          </div>
           <div class="left">
-            <slot name="left"></slot>
+            <slot name="left">
+              <div class="logo">
+                <h1 class="white">🌌&nbsp;Stellar!</h1>
+              </div>
+            </slot>
           </div>
           <div class="right">
             <slot></slot>

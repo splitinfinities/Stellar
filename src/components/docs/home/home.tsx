@@ -8,19 +8,16 @@ export class DocsHome {
 
   render() {
     return (
-      <div class='app-home'>
-        <p>
-          Welcome to the Stencil App Starter.
-          You can use this starter to build entire apps all with
-          web components using Stencil!
-          Check out our docs on <a href='https://stenciljs.com'>stenciljs.com</a> to get started.
-        </p>
-
-        <stencil-route-link url='/component/accordion'>
-          <button>
-            Profile page
-          </button>
-        </stencil-route-link>
+      <div>
+        <stellar-docs-header></stellar-docs-header>
+        <stellar-layout type="sidebar">
+          <aside>
+            <stellar-docs-navigation />
+          </aside>
+          <main>
+            <h1>nce</h1>
+          </main>
+        </stellar-layout>
       </div>
     );
   }

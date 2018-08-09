@@ -1,3 +1,5 @@
+import Dexie from 'dexie';
+
 export class Load {
   path = '/global/data';
 
@@ -6,74 +8,119 @@ export class Load {
   package;
   coverage;
   stats;
+  db;
 
-  async perform() {
-    await this.fetchPackage();
-    await this.fetchCollection();
-    await this.fetchDocumentation();
-    await this.fetchCoverage();
-    await this.fetchStats();
-
-    console.debug(this.collection, this.documentation, this.package, this.coverage, this.stats)
+  constructor () {
+    this.database()
   }
 
-  async fetchPackage() {
+  database() {
+    this.db = new Dexie("components");
+    this.db.version(1).stores({
+      tags: '++id, tag',
+      package: '++id, version'
+    });
+  }
+
+  async perform () {
+    this.package = await this.fetchPackage();
+    this.collection = await this.fetchCollection();
+    this.documentation = await this.fetchDocumentation();
+    this.coverage = await this.fetchCoverage();
+    this.stats = await this.fetchStats();
+
+    return this;
+  }
+
+  async fetchPackage () {
+    let pkg = await this.db.package.orderBy('version').last();
+
     const request = await fetch(`${this.path}/package.json`);
-    this.package = await request.json();
-  }
+    const new_pkg = await request.json();
 
-  async fetchCollection() {
-    const request = await fetch(`${this.path}/collection.json`);
-    this.collection = await request.json();
-  }
-
-  async fetchDocumentation() {
-    const request = await fetch(`${this.path}/documentation.json`);
-    this.documentation = await request.json();
-  }
-
-  async fetchCoverage() {
-    const request = await fetch(`${this.path}/test-coverage.json`);
-    this.coverage = await request.json();
-  }
-
-  async fetchStats() {
-    const request = await fetch(`${this.path}/stats.json`);
-    this.stats = await request.json();
-  }
-
-  getUsageCount (tag: string) {
-    let number;
-
-    this.documentation.components.forEach((item) => {
-      if (item.tag === tag) {
-        number = Object.keys(item.usage).length
-      }
-    })
-
-    return number;
-  }
-
-  async getAllForTag(tag: string) {
-
-    let documentation = {}
-    let collection = {}
-    let coverage = {}
-    let stats = {}
-
-    this.documentation.components.find((item) => {
-      if (item.tag === tag) {
-        documentation = item
-        console.log(documentation)
-      }
-    })
-
-    return {
-      collection,
-      documentation,
-      coverage,
-      stats
+    if (!pkg || pkg.version !== new_pkg.version) {
+      this.db.package.put(new_pkg);
+      pkg = new_pkg;
     }
+
+    return pkg;
+  }
+
+  async fetchCollection () {
+    const request = await fetch(`${this.path}/collection.json`);
+    return await request.json();
+  }
+
+  async fetchDocumentation () {
+    const request = await fetch(`${this.path}/documentation.json`);
+    return await request.json();
+  }
+
+  async fetchCoverage () {
+    const request = await fetch(`${this.path}/test-coverage.json`);
+    return await request.json();
+  }
+
+  async fetchStats () {
+    const request = await fetch(`${this.path}/stats.json`);
+    return await request.json();
+  }
+
+  async getUsageCount (tag: string) {
+    const data = await this.getAllForTag(tag)
+    return Object.keys(data.documentation.usage).length;
+  }
+
+  async getAllForTag (tag: string) {
+    const edited_tag = `stellar-${tag}`;
+    let data = await this.db.tags.where('tag').equals(edited_tag).first();
+
+    if (!data) {
+      await this.perform();
+
+      let documentation = {}
+      let collection = {}
+      let coverage = []
+      let stats = {}
+
+      documentation = this.documentation.components.find((item) => {
+        return (item.tag === edited_tag);
+      })
+
+      collection = this.collection.components.find((item) => {
+        return (item.tag.indexOf(edited_tag) !== -1);
+      })
+
+      coverage = Object.keys(this.coverage).map((item) => {
+        if (item.indexOf(tag) !== -1) {
+          return { file: item, results: this.coverage[item] }
+        }
+      }).filter(Boolean)
+
+      stats = this.stats.entries.map((entries) => {
+        let results = entries.components.map((entry) => {
+          if (entry.tag.indexOf(edited_tag) !== -1) {
+            return entry
+          }
+        }).filter(Boolean)
+
+        if (results.length !== 0) {
+           return entries;
+        }
+      }).filter(Boolean);
+
+      data = {
+        tag: edited_tag,
+        collection,
+        documentation,
+        coverage,
+        stats
+      }
+
+      this.db.tags.put(data)
+    }
+
+    return data;
   }
 
   getVersion () {
@@ -85,13 +132,12 @@ export class Load {
 export const Dependencies = (function () {
     var instance;
 
-    function create() {
-        var object = new Load();
-        return object;
+    const create = () => {
+        return new Load();
     }
 
     return {
-        get: function () {
+        get() {
             if (!instance) {
                 instance = create();
             }
