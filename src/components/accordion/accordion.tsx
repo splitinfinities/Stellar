@@ -4,7 +4,8 @@ import { blurringEase } from '../../global/helpers';
 
 @Component({
   tag: 'stellar-accordion',
-  styleUrl: 'accordion.css'
+  styleUrl: 'accordion.css',
+  shadow: true
 })
 export class Accordion {
   @Element() element: HTMLElement;
@@ -20,6 +21,7 @@ export class Accordion {
   @State() observer: MutationObserver;
 
   componentWillLoad() {
+
     var callback = (mutationsList) => {
         for (var mutation of mutationsList) {
             if (mutation.type == 'childList') {
@@ -32,7 +34,7 @@ export class Accordion {
   }
 
   componentDidLoad() {
-    this.expander = this.element.querySelector(".expander");
+    this.expander = this.element.shadowRoot.querySelector(".expander");
     this.refresh();
     this.attachObserver();
   }
@@ -46,7 +48,7 @@ export class Accordion {
 
   attachObserver() {
     // Start observing the target node for configured mutations
-    this.observer.observe(this.element, { childList: true, subtree: true });
+    this.observer.observe(this.element.shadowRoot, { childList: true, subtree: true });
   }
 
   componentWillUnload() {

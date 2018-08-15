@@ -1,0 +1,16 @@
+stellar-accordion + stellar-accordion,
+stellar-item + stellar-accordion,
+stellar-accordion + stellar-item {
+  border-top: 1px solid var(--gray1);
+}
+
+
+stellar-dropdown + stellar-dropdown {
+  margin-left: 3rem !important;
+}
+
+
+stellar-header[invert] stellar-dropdown {
+  --dropdown-color: white;
+  --dropdown-hover-color: white;
+}

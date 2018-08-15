@@ -1,5 +1,5 @@
-<stellar-tag color="base5">Theming</stellar-tag>
-<stellar-tag color="complement5">Theming</stellar-tag>
+<stellar-tag color="theme-base5">Theming</stellar-tag>
+<stellar-tag color="theme-complement5">Theming</stellar-tag>
 
 <stellar-tag color="red5">Awesome</stellar-tag>
 <stellar-tag color="orange5">Awesome</stellar-tag>

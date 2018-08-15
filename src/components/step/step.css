@@ -19,6 +19,7 @@ stellar-step button {
 
 stellar-step stellar-button {
 	position: relative;
+  transform: none !important;
 }
 
 stellar-steps stellar-step:first-of-type {
@@ -29,16 +30,23 @@ stellar-steps stellar-step:last-of-type {
 	clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 2rem 50%, 0% 0%);
 }
 
-stellar-step button.button:active {
-	transform: none;
-}
-
-stellar-step[open] button .content {
-	position: relative;
+stellar-step .title {
 	z-index: 1;
 }
 
-stellar-step button.button::after {
+stellar-step .title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+stellar-step stellar-button::after {
 	content: "";
 	position: absolute;
 	width: 140%;
@@ -53,7 +61,7 @@ stellar-step button.button::after {
 	animation: moveStripes 10s linear both infinite;
 }
 
-stellar-step[open] button.button::after {
+stellar-step[open] stellar-button::after {
 	opacity: 1;
 }
 

@@ -59,9 +59,9 @@ export class DocsComponent {
       return (
         <div>
           <stellar-docs-header></stellar-docs-header>
-          <stellar-layout type="sidebar" size="full" align="baseline">
+          <stellar-layout size="large" type="sidebar" align="baseline">
             <aside>
-              <stellar-docs-navigation></stellar-docs-navigation>
+              <stellar-docs-navigation />
             </aside>
             <main class="min-vh-100">
               <stellar-markdown codeString={this.data.documentation && this.data.documentation.readme || "Readme to come..."} />
@@ -88,16 +88,19 @@ export class DocsComponent {
                   <aside>
                     <stellar-card padding="small">
                       <h4>Bundles</h4>
-
-                    </stellar-card>
-                    <stellar-card padding="tiny">
                       <stellar-accordion tight={true}>
                         <stellar-item slot="label">Loads {this.data.collection && this.data.collection.dependencies && this.data.collection.dependencies.length || "0"}</stellar-item>
-
+                        {this.data.collection && this.data.collection.dependencies && this.data.collection.dependencies.map((component) => {
+                          const name = component.replace("stellar-", "")
+                          return <stellar-item type="a" href={`/component/${name}`} route={true}>{name}</stellar-item>
+                        })}
                       </stellar-accordion>
                       <stellar-accordion tight={true}>
                         <stellar-item slot="label">Loaded by {this.data.collection && this.data.collection.dependencyOf && this.data.collection.dependencyOf.length || "0"}</stellar-item>
-
+                        {this.data.collection && this.data.collection.dependencyOf && this.data.collection.dependencyOf.map((component) => {
+                          const name = component.replace("stellar-", "")
+                          return <stellar-item type="a" href={`/component/${name}`} route={true}>{name}</stellar-item>
+                        })}
                       </stellar-accordion>
                     </stellar-card>
                   </aside>
@@ -110,3 +113,4 @@ export class DocsComponent {
     }
   }
 }
+

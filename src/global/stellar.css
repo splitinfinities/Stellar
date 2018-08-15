@@ -1,6 +1,7 @@
 @import "./normalize.css";
 @import "./theming.css";
 @import "./type-treatment.css";
+@import "./automation.css";
 @import "./tachyons/_aspect-ratios.css";
 @import "./tachyons/_background-position.css";
 @import "./tachyons/_background-size.css";

@@ -52,7 +52,7 @@
     "focus-within": "^2.0.0",
     "highcharts": "^6.1.0",
     "hyperlist": "^1.0.0-beta",
-    "ionicons": "^4.1.2",
+    "ionicons": "^4.3.0",
     "medium-zoom": "^0.4.0",
     "node-vibrant": "^3.0.0",
     "parent-node-selector": "^0.1.1",
@@ -67,7 +67,7 @@
   },
   "devDependencies": {
     "@brainly/html-sketchapp": "^3.2.0",
-    "@stencil/core": "^0.11.3",
+    "@stencil/core": "^0.11.4",
     "@stencil/dev-server": "latest",
     "@stencil/postcss": "^0.1.0",
     "@stencil/sass": "^0.1.0",

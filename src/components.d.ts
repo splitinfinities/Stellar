@@ -12,7 +12,9 @@ import '@stencil/state-tunnel';
 
 
 import {
+  LocationSegments,
   MatchResults,
+  RouterHistory,
 } from '@stencil/router';
 
 
@@ -49,6 +51,7 @@ declare global {
 
     interface StellarAsset {
       'align': string;
+      'ariaLabel': string;
       'block': boolean;
       'language': string;
       'name': string;
@@ -266,9 +269,11 @@ declare global {
     }
 
     interface StellarDocsHeader {
+      'complement': string;
       'invert': boolean;
       'mark': string;
       'max': number;
+      'theme': string;
       'value': number;
     }
 
@@ -277,10 +282,7 @@ declare global {
     }
 
     interface StellarDocsNavigation {
-      'invert': boolean;
-      'mark': string;
-      'max': number;
-      'value': number;
+
     }
 
     interface StellarDocsNotFound {
@@ -409,16 +411,19 @@ declare global {
     interface StellarItem {
       'apply': (data: any) => void;
       'danger': boolean;
-      'data': () => { size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: any; };
+      'data': () => { size: string; value: string; type: "a" | "button"; label: string; danger: boolean; slotted: any; };
       'fit': boolean;
       'focused': boolean;
+      'history': RouterHistory;
       'href': string;
       'label': string;
+      'location': LocationSegments;
+      'route': boolean;
       'selectable': boolean;
       'selected': boolean;
       'setFocus': () => void;
       'size': string;
-      'type': "a"|"button"|"stencil-route-link";
+      'type': "a"|"button";
       'value': string;
     }
 
@@ -489,7 +494,6 @@ declare global {
        * Public: Sets the max cap of pages you can skip through
        */
       'pages': number;
-      'skip': boolean;
       'type': "full"|"compact";
       'url': any;
     }
@@ -1440,6 +1444,7 @@ declare global {
 
     export interface StellarAssetAttributes extends HTMLAttributes {
       'align'?: string;
+      'ariaLabel'?: string;
       'block'?: boolean;
       'language'?: string;
       'name'?: string;
@@ -1646,9 +1651,11 @@ declare global {
     }
 
     export interface StellarDocsHeaderAttributes extends HTMLAttributes {
+      'complement'?: string;
       'invert'?: boolean;
       'mark'?: string;
       'max'?: number;
+      'theme'?: string;
       'value'?: number;
     }
 
@@ -1657,10 +1664,7 @@ declare global {
     }
 
     export interface StellarDocsNavigationAttributes extends HTMLAttributes {
-      'invert'?: boolean;
-      'mark'?: string;
-      'max'?: number;
-      'value'?: number;
+
     }
 
     export interface StellarDocsNotFoundAttributes extends HTMLAttributes {
@@ -1783,15 +1787,18 @@ declare global {
       'danger'?: boolean;
       'fit'?: boolean;
       'focused'?: boolean;
+      'history'?: RouterHistory;
       'href'?: string;
       'label'?: string;
+      'location'?: LocationSegments;
       'onBlurChanged'?: (event: CustomEvent) => void;
       'onFocusChanged'?: (event: CustomEvent) => void;
       'onSelectionChanged'?: (event: CustomEvent) => void;
+      'route'?: boolean;
       'selectable'?: boolean;
       'selected'?: boolean;
       'size'?: string;
-      'type'?: "a"|"button"|"stencil-route-link";
+      'type'?: "a"|"button";
       'value'?: string;
     }
 
@@ -1853,7 +1860,6 @@ declare global {
        * Public: Sets the max cap of pages you can skip through
        */
       'pages'?: number;
-      'skip'?: boolean;
       'type'?: "full"|"compact";
       'url'?: any;
     }

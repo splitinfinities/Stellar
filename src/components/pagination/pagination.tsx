@@ -12,15 +12,13 @@ export class Pagination {
   /**
    * Public: Sets the max cap of pages you can skip through
    */
-  @Prop() pages: number = 1;
-  @Prop() type: "full"|"compact" = "full";
-  @Prop() current: number = 1;
-  @Prop() padding: number = 2;
+  @Prop({reflectToAttr: true, mutable: true}) pages: number = 1;
+  @Prop({reflectToAttr: true, mutable: true}) type: "full"|"compact" = "full";
+  @Prop({reflectToAttr: true, mutable: true}) current: number = 1;
+  @Prop({reflectToAttr: true, mutable: true}) padding: number = 2;
   @Prop() color: string = "gray";
 
   @Prop() url: any = "#page-{0}";
-
-  @Prop() skip: boolean = false;
 
   @State() __surroundingPages: any;
 
@@ -41,6 +39,7 @@ export class Pagination {
 
   @Watch('__current')
   currentObserver(current: number) {
+    this.current = current;
     this.__previous = (current > this.__first) ? current - 1 : false;
     this.__next = (current < this.pages) ? current + 1 : false;
 
@@ -60,9 +59,11 @@ export class Pagination {
     setTimeout(() => {
       const distance: HTMLElement = this.element.querySelector('.current-number')
 
-      properties.set({
-        "--indicator-left": `${distance.offsetLeft}px`
-      }, this.element);
+      if (distance) {
+        properties.set({
+          "--indicator-left": `${distance.offsetLeft}px`
+        }, this.element);
+      }
     }, 300)
   }
 
@@ -74,12 +75,20 @@ export class Pagination {
     this.__last = this.pages;
 
     this.updateSurroundingPages();
+  }
 
-    const distance: HTMLElement = this.element.querySelector('.current-number')
+  componentDidLoad () {
+    setTimeout(() => {
+      const distance: HTMLElement = this.element.querySelector('.current-number')
 
-    properties.set({
-      "--indicator-left": `${distance.offsetLeft}px`
-    }, this.element);
+      console.log(distance)
+
+      if (distance) {
+        properties.set({
+          "--indicator-left": `${distance.offsetLeft}px`
+        }, this.element);
+      }
+    }, 300)
   }
 
   updateSurroundingPages() {
@@ -173,7 +182,7 @@ export class Pagination {
   renderPagesList () {
     return this.__surroundingPages.map((page) => {
       return (
-        <a href={page.url} data-page={page.number} data-visible={page.visible} data-current={page.current} onClick={(event: UIEvent) => this.handleClick(event)} class={(page.number === this.__current) ? 'current-number number' : 'number' }>
+        <a href={page.url} data-page={page.number} data-visible={page.visible} data-current={page.current} onClick={(event: UIEvent) => this.handleClick(event)} class={(page.number === this.__current || page.number === this.current) ? 'current-number number' : 'number' }>
           {page.number}
         </a>);
     });

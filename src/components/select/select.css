@@ -42,7 +42,6 @@ stellar-select .select-title {
   outline: none;
   border: 1px solid var(--gray1);
   padding: 0;
-  padding-right: 1rem;
   width: 100%;
   height: 4rem;
   overflow: hidden;
@@ -54,6 +53,16 @@ stellar-select .select-title {
 
 stellar-select .select-title input {
   display: none;
+}
+
+stellar-select .select-title stellar-asset {
+  position: absolute;
+  right: 2rem;
+  transition: all 100ms var(--ease) 0s;
+}
+
+stellar-select[open] .select-title stellar-asset {
+  transform: rotate(180deg);
 }
 
 stellar-select .label {
@@ -120,13 +129,17 @@ stellar-select[size="small"] .select-title {
   height: 2.5rem;
 }
 
+stellar-select[size="small"] .select-title stellar-asset {
+  right: 1rem;
+}
+
 stellar-select[size="small"] .label {
   font-size: 0.75rem;
 }
 
 stellar-select[size="small"] stellar-item {
   --font-size: 1rem;
-  --item-size: 2rem;
+  --item-size: 2.5rem;
 }
 
 stellar-select[size="small"][open] .select-list,

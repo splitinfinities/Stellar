@@ -1,15 +1,25 @@
-import { Component, Prop, State } from '@stencil/core';
+import { Component, Prop, State, Watch } from '@stencil/core';
 
 @Component({
   tag: 'stellar-docs-header',
   styleUrl: 'header.css'
 })
 export class DocsHeader {
-  @Prop() invert: boolean = false;
+  @Prop({mutable: true}) theme: string = "red";
+  @Prop({mutable: true}) complement: string = "indigo";
+  @Prop({mutable: true}) invert: boolean = false;
   @Prop() mark: string;
   @Prop() max: number = 10;
   @Prop() value: number = 0;
   @State() data;
+
+  @Watch('theme')
+  @Watch('complement')
+  @Watch('invert')
+  handleTheming() {
+    console.log(this.theme, this.complement, this.invert)
+    document.querySelector('body').setAttribute('class', `theme-${this.theme} complement-${this.complement} ${this.invert ? "inverted" : ""}`);
+  }
 
   async componentWillLoad() {
     this.data = await window["deps"].fetchPackage();
@@ -22,7 +32,7 @@ export class DocsHeader {
         <p>Stellar is still an alpha product - some things may change! We'll do out best to notify you when something changes.</p>
         <stellar-button size="tiny" pill>See change log <stellar-asset name="arrow-forward" align="right"></stellar-asset></stellar-button>
       </stellar-message>,
-      <stellar-layout size="full" class="relative mb5" type="sidebar-right">
+      <stellar-layout size="large" class="relative mb5" type="sidebar-right">
         <stellar-starscape></stellar-starscape>
         <copy-wrap class="invert mv5">
           <slot name="title">
@@ -34,14 +44,14 @@ export class DocsHeader {
               <div>
                 <h1 class="fs-large white lh-solid">Stellar!</h1>
                 <h3 class="fs1 db w-100 gray2">A Beautiful, Complete Design System</h3>
-                <stellar-code-block simple={true} class="w-60" codeString={`npm install @stellar-design/core}`} language="bash"></stellar-code-block>
+                <stellar-code-block simple={true} class="w-60" codeString={`npm install @stellar-design/core`} language="bash"></stellar-code-block>
               </div>
             </h1>
           </slot>
         </copy-wrap>
         <stellar-card>
           <stellar-grid compact>
-            <stellar-select label="Primary color" onChange={(e) => { console.log(e.detail); }} size="small" overlay>
+            <stellar-select label="Primary color" onChange={(e) => { this.theme = e.detail }} size="small" overlay>
               <stellar-item value="red" selected>Red</stellar-item>
               <stellar-item value="orange">Orange</stellar-item>
               <stellar-item value="yellow">Yellow</stellar-item>
@@ -57,7 +67,7 @@ export class DocsHeader {
               <stellar-item value="gray">Gray</stellar-item>
             </stellar-select>
 
-            <stellar-select label="Secondary color" onChange={(e) => { console.log(e.detail); }} size="small" overlay>
+            <stellar-select label="Secondary color" onChange={(e) => { this.complement = e.detail }} size="small" overlay>
               <stellar-item value="red">Red</stellar-item>
               <stellar-item value="orange">Orange</stellar-item>
               <stellar-item value="yellow">Yellow</stellar-item>

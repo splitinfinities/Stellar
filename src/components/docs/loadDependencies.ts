@@ -68,7 +68,7 @@ export class Load {
 
   async getUsageCount (tag: string) {
     const data = await this.getAllForTag(tag)
-    return Object.keys(data.documentation.usage).length;
+    return data.documentation && data.documentation.usage && Object.keys(data.documentation.usage).length || 0;
   }
 
   async getAllForTag (tag: string) {

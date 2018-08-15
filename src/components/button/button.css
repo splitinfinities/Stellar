@@ -81,6 +81,10 @@
   --font-size: 2rem;
 }
 
+:host(:active) {
+  transform: scale(0.925)
+}
+
 :host .button {
   cursor: pointer;
   display: inline-flex;
@@ -108,11 +112,6 @@
   border: var(--active-border);
   background-color: var(--active-background);
   color: var(--active-color);
-}
-
-
-:host .button:active {
-  transform: scale(0.925)
 }
 
 :host .button .content {

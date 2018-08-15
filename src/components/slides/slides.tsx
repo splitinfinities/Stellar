@@ -272,9 +272,9 @@ export class Slides {
 
     blurringEase((data: number) => {
       this.slides.forEach((slide) => {
-        slide.motion = data * 30
+        slide.motion = data * 10
       })
-    }, this.speed * 0.25, 0, 'linear', { endToEnd: true })
+    }, this.speed * 0.15, 0, 'quadratic', { endToEnd: true })
   }
 
   blurEnd() {
@@ -393,6 +393,7 @@ export class Slides {
     const eventOptions = {
       on: {
         slideChangeStart: () => {
+          this.blurStart()
           this.ionSlideWillChange.emit
         },
         slideChangeEnd: () => {
@@ -411,7 +412,6 @@ export class Slides {
           this.ionSlidePrevEnd.emit
         },
         transitionStart: () => {
-          this.blurStart()
           this.ionSlideTransitionStart.emit
         },
         transitionEnd: () => {

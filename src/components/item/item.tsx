@@ -1,4 +1,6 @@
 import { Component, Prop, State, Element, Method, Event, EventEmitter} from '@stencil/core';
+import { RouterHistory, LocationSegments, injectHistory } from '@stencil/router';
+
 
 @Component({
   tag: 'stellar-item',
@@ -8,7 +10,7 @@ export class Item {
   @Element() element: HTMLElement;
   @Prop({mutable: true}) size: string;
   @Prop({reflectToAttr: true, mutable: true}) value: string;
-  @Prop({reflectToAttr: true, mutable: true}) type: "a"|"button"|"stencil-route-link" = "button";
+  @Prop({reflectToAttr: true, mutable: true}) type: "a"|"button" = "button";
   @Prop({reflectToAttr: true, mutable: true}) label: string;
   @Prop({reflectToAttr: true, mutable: true}) href: string = "#";
 
@@ -16,8 +18,12 @@ export class Item {
   @Prop({reflectToAttr: true, mutable: true}) danger: boolean = false;
 
   @Prop({reflectToAttr: true, mutable: true}) selected: boolean;
-  @Prop({reflectToAttr: true, mutable: true}) selectable: boolean = true;
+  @Prop({reflectToAttr: true, mutable: true}) selectable: boolean = false;
   @Prop({reflectToAttr: true, mutable: true}) focused: boolean = false;
+
+  @Prop() route: boolean = false;
+  @Prop() history: RouterHistory;
+  @Prop() location: LocationSegments;
 
   @State() current: boolean = false;
   @State() slotted: any;
@@ -69,7 +75,12 @@ export class Item {
     this.element.querySelector('.button').focus();
   }
 
-  handleClick() {
+  handleClick(e) {
+    if (this.route) {
+      e.preventDefault()
+      this.history.push(this.href, {});
+    }
+
     if (!this.current) {
       this.selectionChanged.emit(this);
     }
@@ -93,10 +104,12 @@ export class Item {
 
   render () {
     return (
-      <this.type class="button" type="button" href={this.href} url={this.href} tabindex="0" value={this.value} title={this.label} onClick={ () => this.handleClick()} onBlur={() => this.handleBlur()} onFocus={() => this.handleFocus()}>
+      <this.type class="button" type="button" href={this.href} tabindex="0" value={this.value} title={this.label} onClick={(e) => this.handleClick(e)} onBlur={() => this.handleBlur()} onFocus={() => this.handleFocus()}>
         <slot></slot>
         { this.selected && <stellar-asset class="selected" name="checkmark" block></stellar-asset> }
       </this.type>
     )
   }
 }
+
+injectHistory(Item);

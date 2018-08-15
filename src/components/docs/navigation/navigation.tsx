@@ -1,55 +1,60 @@
-import { Component, Prop, State } from '@stencil/core';
-import '@stencil/router'
+import { Component, State } from '@stencil/core';
 
 @Component({
   tag: 'stellar-docs-navigation',
   styleUrl: 'navigation.css'
 })
 export class DocsNavigation {
-  @Prop() invert: boolean = false;
-  @Prop() mark: string;
-  @Prop() max: number = 10;
-  @Prop() value: number = 0;
   @State() data;
+  @State() documentation;
 
-  async componentWillLoad() {
+  componentWillLoad() {
+    this.loadData()
+  }
+
+  async loadData() {
     this.data = await window["deps"].fetchCollection();
+    this.documentation = await window["deps"].fetchDocumentation();
+  }
 
+  usage(tag: string) {
+    const details = this.documentation.components.find((element) => {
+      return element.tag === tag
+    })
+
+    return details && details.usage && Object.keys(details.usage).length || false;
+  }
+
+  renderItem(component) {
+    const name = component.tag.replace("stellar-", "")
+    return this.usage(component.tag) && (
+      <stellar-item type="a" route={true} href={`/component/${name}`}>
+        <copy-wrap>
+          {component.componentClass}
+          <small class="db theme-base5">{`<${component.tag}>`}</small>
+        </copy-wrap>
+        <stellar-tag pill>{this.usage(component.tag)}</stellar-tag>
+      </stellar-item>
+    )
   }
 
   render() {
-    return [
-      <stellar-card padding="small">
-        <stellar-item type="stencil-route-link" href="/">Home</stellar-item>
-        <stellar-accordion tight label="Introduction">
-          <stellar-item type="stencil-route-link" href="/design-principles">Design Principles</stellar-item>
-          <stellar-item type="stencil-route-link" href="/installation">Installation</stellar-item>
-          <stellar-item type="stencil-route-link" href="/tutorial">Tutorial</stellar-item>
-          <stellar-item type="stencil-route-link" href="/deploying">Deploying</stellar-item>
-          <stellar-item type="stencil-route-link" href="/browser-support">Browser Support</stellar-item>
+    return this.data && (
+      <stellar-card padding="tiny">
+        <stellar-item type="a" route={true} href="/">Home</stellar-item>
+        <stellar-accordion tight>
+          <stellar-item type="button" slot="label">Introduction</stellar-item>
+          <stellar-item type="a" route={true} href="/design-principles">Design Principles</stellar-item>
+          <stellar-item type="a" route={true} href="/installation">Installation</stellar-item>
+          <stellar-item type="a" route={true} href="/tutorial">Tutorial</stellar-item>
+          <stellar-item type="a" route={true} href="/deploying">Deploying</stellar-item>
+          <stellar-item type="a" route={true} href="/browser-support">Browser Support</stellar-item>
         </stellar-accordion>
-        { this.data && <stellar-accordion tight={true}>
+        <stellar-accordion tight>
           <stellar-item slot="label">Components <stellar-tag size="small" color="blue8" class="self-end maa mr0" pill>{this.data.components.length}</stellar-tag></stellar-item>
-            {this.data.components.map((component) => {
-              const name = component.tag.replace("stellar-", "")
-
-              return (
-                <stellar-item type="stencil-route-link" href={`/component/${name}`}>
-                  <copy-wrap>
-                    {component.componentClass}
-                    <small class="db theme-base5">{`<${component.tag}>`}</small>
-                  </copy-wrap>
-                </stellar-item>
-              )
-            })}
-          </stellar-accordion>
-        }
+            {this.data.components.map( (component) => this.renderItem(component) )}
+        </stellar-accordion>
       </stellar-card>
-    ];
+    );
   }
 }
-
-
-
-
-

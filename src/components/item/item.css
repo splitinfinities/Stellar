@@ -9,6 +9,7 @@ stellar-item {
   visibility: visible !important;
   font-size: var(--font-size);
   text-align: left;
+  transition: all 100ms ease 0s;
 }
 
 stellar-item[fit] {
@@ -83,15 +84,16 @@ stellar-item .selected {
   color: var(--white);
 }
 
-stellar-item[selectable] .button:focus,
-stellar-item[selectable] .button:hover,
-stellar-item[selectable]:hover,
-stellar-item[selectable]:focus-within {
+stellar-item .button:focus,
+stellar-item .button:hover,
+stellar-item:hover,
+stellar-item:focus-within {
   color: var(--theme-base7);
+  background: var(--theme-base0);
 }
 
-stellar-item[selectable][danger] .button:focus,
-stellar-item[selectable][danger] .button:hover  {
+stellar-item[danger] .button:focus,
+stellar-item[danger] .button:hover  {
   background: var(--red5);
   color: white;
 }

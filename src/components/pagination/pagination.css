@@ -23,6 +23,7 @@ stellar-pagination .indicator {
   height: 1.6rem;
   background: var(--theme-base5);
   z-index: 0;
+  border-radius: 100%;
 }
 
 stellar-pagination stellar-blur[horizontal="0"] .indicator {
@@ -86,21 +87,26 @@ stellar-pagination .number {
   color: currentColor;
   font-weight: 700;
   overflow: hidden;
-  transition: all 200ms var(--ease) 0s;
+  transition: all 200ms var(--ease) 0ms;
   margin: 1rem 0;
-  width: 2rem;
-  height: 2rem;
+  width: 0;
+  height: 0;
   opacity: 1;
   z-index: 1;
-  transform: scale(1);
+  padding: 0;
+  transform: scale(0);
 }
 
 stellar-pagination .number[data-visible="false"] {
-  width: 0;
-  height: 0;
-  opacity: 0;
-  padding: 0;
   transform: scale(0);
+}
+
+stellar-pagination .number[data-visible] {
+  width: 2rem;
+  height: 2rem;
+  opacity: 1;
+  padding: 0;
+  transform: scale(1);
 }
 
 stellar-pagination .number:hover,
@@ -131,4 +137,10 @@ stellar-pagination .compact-pagination-container stellar-input {
   width: 4rem;
   --padding: 0 1rem;
   margin: 0 1rem;
+}
+
+stellar-pagination stellar-blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }

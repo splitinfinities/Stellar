@@ -165,7 +165,8 @@
       ],
       "hostElement": {
         "name": "element"
-      }
+      },
+      "shadow": true
     },
     {
       "tag": "stellar-animate-text",
@@ -219,6 +220,11 @@
           "name": "align",
           "type": "String",
           "attr": "align"
+        },
+        {
+          "name": "ariaLabel",
+          "type": "String",
+          "attr": "aria-label"
         },
         {
           "name": "block",
@@ -1045,9 +1051,7 @@
     {
       "tag": "stellar-docs",
       "dependencies": [
-        "stellar-footer",
         "stencil-route",
-        "stencil-route-link",
         "stencil-route-switch",
         "stencil-router"
       ],
@@ -1134,9 +1138,22 @@
       },
       "props": [
         {
+          "name": "complement",
+          "type": "String",
+          "mutable": true,
+          "attr": "complement",
+          "watch": [
+            "handleTheming"
+          ]
+        },
+        {
           "name": "invert",
           "type": "Boolean",
-          "attr": "invert"
+          "mutable": true,
+          "attr": "invert",
+          "watch": [
+            "handleTheming"
+          ]
         },
         {
           "name": "mark",
@@ -1147,6 +1164,15 @@
           "name": "max",
           "type": "Number",
           "attr": "max"
+        },
+        {
+          "name": "theme",
+          "type": "String",
+          "mutable": true,
+          "attr": "theme",
+          "watch": [
+            "handleTheming"
+          ]
         },
         {
           "name": "value",
@@ -1195,31 +1221,12 @@
           ]
         }
       },
-      "props": [
-        {
-          "name": "invert",
-          "type": "Boolean",
-          "attr": "invert"
-        },
-        {
-          "name": "mark",
-          "type": "String",
-          "attr": "mark"
-        },
-        {
-          "name": "max",
-          "type": "Number",
-          "attr": "max"
-        },
-        {
-          "name": "value",
-          "type": "Number",
-          "attr": "value"
-        }
-      ],
       "states": [
         {
           "name": "data"
+        },
+        {
+          "name": "documentation"
         }
       ]
     },
@@ -1239,7 +1246,9 @@
     {
       "tag": "stellar-docs-page",
       "dependencies": [
-        "stellar-docs-header"
+        "stellar-docs-header",
+        "stellar-docs-navigation",
+        "stellar-layout"
       ],
       "componentClass": "DocsPage",
       "componentPath": "components/docs/page/page.js",
@@ -1355,11 +1364,15 @@
           "name": "open",
           "type": "Boolean",
           "mutable": true,
-          "attr": "open"
+          "attr": "open",
+          "watch": [
+            "observeOpen"
+          ]
         },
         {
           "name": "position",
           "type": "String",
+          "mutable": true,
           "attr": "position"
         }
       ],
@@ -1944,6 +1957,10 @@
           "attr": "focused"
         },
         {
+          "name": "history",
+          "attr": "history"
+        },
+        {
           "name": "href",
           "type": "String",
           "mutable": true,
@@ -1954,6 +1971,15 @@
           "type": "String",
           "mutable": true,
           "attr": "label"
+        },
+        {
+          "name": "location",
+          "attr": "location"
+        },
+        {
+          "name": "route",
+          "type": "Boolean",
+          "attr": "route"
         },
         {
           "name": "selectable",
@@ -2409,26 +2435,25 @@
         {
           "name": "current",
           "type": "Number",
+          "mutable": true,
           "attr": "current"
         },
         {
           "name": "padding",
           "type": "Number",
+          "mutable": true,
           "attr": "padding"
         },
         {
           "name": "pages",
           "type": "Number",
+          "mutable": true,
           "attr": "pages"
-        },
-        {
-          "name": "skip",
-          "type": "Boolean",
-          "attr": "skip"
         },
         {
           "name": "type",
           "type": "String",
+          "mutable": true,
           "attr": "type"
         },
         {
@@ -3855,7 +3880,7 @@
   ],
   "compiler": {
     "name": "@stencil/core",
-    "version": "0.11.2",
+    "version": "0.11.4",
     "typescriptVersion": "2.9.2"
   },
   "bundles": []

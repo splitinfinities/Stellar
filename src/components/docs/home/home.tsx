@@ -10,12 +10,12 @@ export class DocsHome {
     return (
       <div>
         <stellar-docs-header></stellar-docs-header>
-        <stellar-layout type="sidebar">
+        <stellar-layout size="large" type="sidebar">
           <aside>
             <stellar-docs-navigation />
           </aside>
           <main>
-            <h1>nce</h1>
+            <h1>Home!</h1>
           </main>
         </stellar-layout>
       </div>

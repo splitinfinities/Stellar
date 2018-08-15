@@ -7,7 +7,6 @@ import { MatchResults } from '@stencil/router';
   styleUrl: 'page.css'
 })
 export class DocsPage {
-
   @Prop() match: MatchResults;
 
   render() {
@@ -15,6 +14,14 @@ export class DocsPage {
       return (
         <div>
           <stellar-docs-header></stellar-docs-header>
+          <stellar-layout size="large" type="sidebar">
+            <aside>
+              <stellar-docs-navigation />
+            </aside>
+            <main>
+              <stellar-markdown src={`/global/data/markdown/${this.match.params.name}`}></stellar-markdown>
+            </main>
+          </stellar-layout>
         </div>
       );
     }

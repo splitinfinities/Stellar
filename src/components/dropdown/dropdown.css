@@ -9,6 +9,7 @@ stellar-dropdown {
   outline: 0;
   height: 100%;
   color: var(--dropdown-color);
+  transition: z-index 0ms linear 200ms
 }
 
 stellar-dropdown stellar-blur {
@@ -16,8 +17,16 @@ stellar-dropdown stellar-blur {
 }
 
 stellar-dropdown .list-wrap {
-  display: initial;
+  position: absolute;
+  top: calc(100% - .5rem);
+  right: 50%;
+  left: 50%;
+  transition: all 110ms var(--ease) 250ms;
   z-index: 10;
+  width: var(--dropdown-width);
+  height: auto;
+  display: initial;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 stellar-header[invert] stellar-dropdown {
@@ -32,16 +41,6 @@ stellar-header[invert] stellar-dropdown .toggle > stellar-button {
 
 stellar-dropdown + stellar-dropdown {
   margin-left: 3rem !important;
-}
-
-stellar-dropdown::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin-bottom: -2rem;
-  width: 100%;
-  height: 2rem;
 }
 
 stellar-dropdown .caret {
@@ -87,12 +86,12 @@ stellar-dropdown.toggle:active::after {
 stellar-dropdown:hover .list-wrap,
 stellar-dropdown:active .list-wrap,
 stellar-dropdown:focus-within .list-wrap {
-  transform: scale(1, 1) translateX(-50%) translateY(0%) translateZ(0);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 stellar-dropdown.toggle:active + .list-wrap,
 stellar-dropdown.toggle:hover + .list-wrap {
-  transform: scale(1, 1) translateX(-50%) translateY(0%) translateZ(0);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 stellar-dropdown .dropdown-placeholder {
@@ -127,19 +126,6 @@ stellar-dropdown .toggle .hidden {
   display: inline-block !important;
 }
 
-stellar-dropdown .list-wrap {
-  position: absolute;
-  top: calc(100% - .5rem);
-  right: 50%;
-  left: 50%;
-  transform: scale(1,0) translateX(-50%) translateY(0%) translateZ(0);
-  transform-origin: 0% -.5rem;
-  transition: transform 110ms var(--ease) 250ms;
-  z-index: 6;
-  width: var(--dropdown-width);
-  height: auto;
-}
-
 stellar-dropdown .list {
   margin-top: 0;
   margin-left: 0;
@@ -151,15 +137,8 @@ stellar-dropdown .list {
   padding: 1rem;
 }
 
-stellar-dropdown:hover .list-wrap,
-stellar-dropdown:active .list-wrap {
-  transition: transform 150ms var(--ease) 50ms;
-}
-
-stellar-dropdown:focus .list-wrap,
-stellar-dropdown:focus-within .list-wrap,
-stellar-dropdown[focus-within] .list-wrap {
-  transition: transform 150ms var(--ease) 0ms;
+stellar-dropdown .list stellar-item {
+  --item-size: 3.25rem;
 }
 
 stellar-dropdown .list .loader {
@@ -231,19 +210,10 @@ stellar-dropdown[position="left"] {
 stellar-dropdown[position="left"] .list-wrap {
   left: 0;
   right: auto;
-  transform-origin: 4rem -.5rem;
-  transform: scale(1,0) translateX(0%) translateY(0%) translateZ(0);
 }
 
 stellar-dropdown[position="left"][icon] .list-wrap {
   left: var(--dropdown-offset, -3rem);
-}
-
-stellar-dropdown[position="left"]:hover .list-wrap,
-stellar-dropdown[position="left"]:active .list-wrap,
-stellar-dropdown[position="left"]:focus-within .list-wrap,
-stellar-dropdown[position="left"][focus-within] .list-wrap {
-  transform: scale(1, 1) translateX(0%) translateY(0%) translateZ(0);
 }
 
 stellar-dropdown[position="left"] .list::after {
@@ -264,19 +234,10 @@ stellar-dropdown[position="right"] {
 stellar-dropdown[position="right"] .list-wrap {
   left: auto;
   right: 0;
-  transform-origin: calc(100% - 4rem) -.5rem;
-  transform: scale(1,0) translateX(0%) translateY(0%) translateZ(0);
 }
 
 stellar-dropdown[position="right"][icon] .list-wrap {
   right: var(--dropdown-offset, 3rem);
-}
-
-stellar-dropdown[position="right"]:hover .list-wrap,
-stellar-dropdown[position="right"]:active .list-wrap,
-stellar-dropdown[position="right"]:focus-within .list-wrap,
-stellar-dropdown[position="right"][focus-within] .list-wrap {
-    transform: scale(1, 1) translateX(0%) translateY(0%) translateZ(0);
 }
 
 stellar-dropdown[position="right"] .list::after {
