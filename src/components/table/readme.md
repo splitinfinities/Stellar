@@ -7,47 +7,12 @@
 
 ## Properties
 
-#### chart
-
-boolean
-
-
-#### name
-
-string
-
-
-#### striped
-
-boolean
-
-
-#### upgrade
-
-boolean
-
-
-## Attributes
-
-#### chart
-
-boolean
-
-
-#### name
-
-string
-
-
-#### striped
-
-boolean
-
-
-#### upgrade
-
-boolean
-
+| Property  | Attribute | Description | Type      |
+| --------- | --------- | ----------- | --------- |
+| `chart`   | `chart`   |             | `boolean` |
+| `name`    | `name`    |             | `string`  |
+| `striped` | `striped` |             | `boolean` |
+| `upgrade` | `upgrade` |             | `boolean` |
 
 
 ----------------------------------------------

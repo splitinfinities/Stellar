@@ -7,17 +7,17 @@
 
 ## Properties
 
-#### match
-
-MatchResults
-
-
-## Attributes
-
-#### match
+| Property | Attribute | Description | Type           |
+| -------- | --------- | ----------- | -------------- |
+| `match`  | --        |             | `MatchResults` |
 
 
+## Methods
 
+| Method      | Description |
+| ----------- | ----------- |
+| `pull_data` |             |
+| `show_data` |             |
 
 
 ----------------------------------------------

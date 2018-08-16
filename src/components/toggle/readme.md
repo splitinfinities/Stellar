@@ -7,107 +7,18 @@
 
 ## Properties
 
-#### card
-
-string
-
-
-#### flip
-
-boolean
-
-
-#### label
-
-string
-
-
-#### name
-
-string
-
-
-#### required
-
-boolean
-
-
-#### single
-
-boolean
-
-
-#### size
-
-string
-
-
-#### stacked
-
-boolean
-
-
-#### type
-
-string
-
-
-#### value
-
-string
-
-
-## Attributes
-
-#### card
-
-string
-
-
-#### flip
-
-boolean
-
-
-#### label
-
-string
-
-
-#### name
-
-string
-
-
-#### required
-
-boolean
-
-
-#### single
-
-boolean
-
-
-#### size
-
-string
-
-
-#### stacked
-
-boolean
-
-
-#### type
-
-string
-
-
-#### value
-
-string
-
+| Property   | Attribute  | Description | Type                                                       |
+| ---------- | ---------- | ----------- | ---------------------------------------------------------- |
+| `card`     | `card`     |             | `string`                                                   |
+| `flip`     | `flip`     |             | `boolean`                                                  |
+| `label`    | `label`    |             | `string`                                                   |
+| `name`     | `name`     |             | `string`                                                   |
+| `required` | `required` |             | `boolean`                                                  |
+| `single`   | `single`   |             | `boolean`                                                  |
+| `size`     | `size`     |             | `string`                                                   |
+| `stacked`  | `stacked`  |             | `boolean`                                                  |
+| `type`     | `type`     |             | `string|"checkbox"|"radio"|"radio-block"|"checkbox-block"` |
+| `value`    | `value`    |             | `string`                                                   |
 
 
 ----------------------------------------------

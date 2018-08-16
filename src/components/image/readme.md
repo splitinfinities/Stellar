@@ -7,52 +7,19 @@
 
 ## Properties
 
-#### bg
-
-string
-
-
-#### height
-
-number
-
-
-#### preload
-
-string
-
-
-#### width
-
-number
-
-
-## Attributes
-
-#### bg
-
-string
-
-
-#### height
-
-number
-
-
-#### preload
-
-string
-
-
-#### width
-
-number
+| Property  | Attribute | Description | Type     |
+| --------- | --------- | ----------- | -------- |
+| `bg`      | `bg`      |             | `string` |
+| `height`  | `height`  |             | `number` |
+| `preload` | `preload` |             | `string` |
+| `width`   | `width`   |             | `number` |
 
 
 ## Methods
 
-#### medium()
-
+| Method   | Description |
+| -------- | ----------- |
+| `medium` |             |
 
 
 ----------------------------------------------

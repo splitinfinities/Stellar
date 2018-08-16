@@ -7,17 +7,9 @@
 
 ## Properties
 
-#### align
-
-string
-
-
-## Attributes
-
-#### align
-
-string
-
+| Property | Attribute | Description | Type                      |
+| -------- | --------- | ----------- | ------------------------- |
+| `align`  | `align`   |             | `"left"|"center"|"right"` |
 
 
 ----------------------------------------------

@@ -7,105 +7,25 @@
 
 ## Properties
 
-#### acceptCharset
-
-string
-
-
-#### action
-
-string
-
-
-#### ajax
-
-boolean
-
-
-#### autocomplete
-
-string
-
-
-#### enctype
-
-string
-
-
-#### method
-
-string
-
-
-#### name
-
-string
-
-
-#### novalidate
-
-boolean
-
-
-#### target
-
-string
-
-
-## Attributes
-
-#### accept-charset
-
-string
-
-
-#### action
-
-string
-
-
-#### ajax
-
-boolean
-
-
-#### autocomplete
-
-string
-
-
-#### enctype
-
-string
-
-
-#### method
-
-string
-
-
-#### name
-
-string
-
-
-#### novalidate
-
-boolean
-
-
-#### target
-
-string
+| Property        | Attribute        | Description | Type      |
+| --------------- | ---------------- | ----------- | --------- |
+| `acceptCharset` | `accept-charset` |             | `string`  |
+| `action`        | `action`         |             | `string`  |
+| `ajax`          | `ajax`           |             | `boolean` |
+| `autocomplete`  | `autocomplete`   |             | `string`  |
+| `enctype`       | `enctype`        |             | `string`  |
+| `method`        | `method`         |             | `string`  |
+| `name`          | `name`           |             | `string`  |
+| `novalidate`    | `novalidate`     |             | `boolean` |
+| `target`        | `target`         |             | `string`  |
 
 
 ## Methods
 
-#### refresh()
-
-
-#### submit()
-
+| Method    | Description |
+| --------- | ----------- |
+| `refresh` |             |
+| `submit`  |             |
 
 
 ----------------------------------------------

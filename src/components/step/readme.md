@@ -7,42 +7,18 @@
 
 ## Properties
 
-#### disabled
-
-boolean
-
-
-#### href
-
-string
-
-
-#### open
-
-boolean
-
-
-## Attributes
-
-#### disabled
-
-boolean
-
-
-#### href
-
-string
-
-
-#### open
-
-boolean
+| Property   | Attribute  | Description | Type      |
+| ---------- | ---------- | ----------- | --------- |
+| `disabled` | `disabled` |             | `boolean` |
+| `href`     | `href`     |             | `string`  |
+| `open`     | `open`     |             | `boolean` |
 
 
 ## Events
 
-#### contentChange
-
+| Event           | Description |
+| --------------- | ----------- |
+| `contentChange` |             |
 
 
 ----------------------------------------------

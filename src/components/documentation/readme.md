@@ -7,62 +7,20 @@
 
 ## Properties
 
-#### codeString
-
-string
-
-
-#### feature
-
-string
-
-
-#### preview
-
-boolean
-
-
-#### property
-
-string
-
-
-#### type
-
-string
-
-
-## Attributes
-
-#### code-string
-
-string
-
-
-#### feature
-
-string
-
-
-#### preview
-
-boolean
-
-
-#### property
-
-string
-
-
-#### type
-
-string
+| Property     | Attribute     | Description | Type      |
+| ------------ | ------------- | ----------- | --------- |
+| `codeString` | `code-string` |             | `string`  |
+| `feature`    | `feature`     |             | `string`  |
+| `preview`    | `preview`     |             | `boolean` |
+| `property`   | `property`    |             | `string`  |
+| `type`       | `type`        |             | `string`  |
 
 
 ## Methods
 
-#### reload()
-
+| Method   | Description |
+| -------- | ----------- |
+| `reload` |             |
 
 
 ----------------------------------------------

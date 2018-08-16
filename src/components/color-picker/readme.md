@@ -7,22 +7,16 @@
 
 ## Properties
 
-#### value
-
-string
-
-
-## Attributes
-
-#### value
-
-string
+| Property | Attribute | Description | Type     |
+| -------- | --------- | ----------- | -------- |
+| `value`  | `value`   |             | `string` |
 
 
 ## Events
 
-#### colorChanged
-
+| Event          | Description |
+| -------------- | ----------- |
+| `colorChanged` |             |
 
 
 ----------------------------------------------

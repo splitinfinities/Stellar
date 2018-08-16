@@ -7,67 +7,14 @@
 
 ## Properties
 
-#### colors
-
-boolean
-
-
-#### float
-
-boolean
-
-
-#### max
-
-number
-
-
-#### min
-
-number
-
-
-#### scatter
-
-number
-
-
-#### sizes
-
-boolean
-
-
-## Attributes
-
-#### colors
-
-boolean
-
-
-#### float
-
-boolean
-
-
-#### max
-
-number
-
-
-#### min
-
-number
-
-
-#### scatter
-
-number
-
-
-#### sizes
-
-boolean
-
+| Property  | Attribute | Description | Type      |
+| --------- | --------- | ----------- | --------- |
+| `colors`  | `colors`  |             | `boolean` |
+| `float`   | `float`   |             | `boolean` |
+| `max`     | `max`     |             | `number`  |
+| `min`     | `min`     |             | `number`  |
+| `scatter` | `scatter` |             | `number`  |
+| `sizes`   | `sizes`   |             | `boolean` |
 
 
 ----------------------------------------------

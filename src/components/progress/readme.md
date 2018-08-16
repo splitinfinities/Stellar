@@ -7,49 +7,11 @@
 
 ## Properties
 
-#### max
-
-number
-
-Sets the maximum cap for steps in the progress bar
-
-
-#### slender
-
-boolean
-
-Renders if this element is slender or not
-
-
-#### value
-
-number
-
-Sets the value of the progress bar
-
-
-## Attributes
-
-#### max
-
-number
-
-Sets the maximum cap for steps in the progress bar
-
-
-#### slender
-
-boolean
-
-Renders if this element is slender or not
-
-
-#### value
-
-number
-
-Sets the value of the progress bar
-
+| Property  | Attribute | Description                                        | Type      |
+| --------- | --------- | -------------------------------------------------- | --------- |
+| `max`     | `max`     | Sets the maximum cap for steps in the progress bar | `number`  |
+| `slender` | `slender` | Renders if this element is slender or not          | `boolean` |
+| `value`   | `value`   | Sets the value of the progress bar                 | `number`  |
 
 
 ----------------------------------------------

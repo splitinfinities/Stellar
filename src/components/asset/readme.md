@@ -7,57 +7,14 @@
 
 ## Properties
 
-#### align
-
-string
-
-
-#### block
-
-boolean
-
-
-#### language
-
-string
-
-
-#### name
-
-string
-
-
-#### src
-
-string
-
-
-## Attributes
-
-#### align
-
-string
-
-
-#### block
-
-boolean
-
-
-#### language
-
-string
-
-
-#### name
-
-string
-
-
-#### src
-
-string
-
+| Property    | Attribute    | Description | Type      |
+| ----------- | ------------ | ----------- | --------- |
+| `align`     | `align`      |             | `string`  |
+| `ariaLabel` | `aria-label` |             | `string`  |
+| `block`     | `block`      |             | `boolean` |
+| `language`  | `language`   |             | `string`  |
+| `name`      | `name`       |             | `string`  |
+| `src`       | `src`        |             | `string`  |
 
 
 ----------------------------------------------

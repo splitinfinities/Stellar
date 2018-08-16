@@ -7,52 +7,20 @@
 
 ## Properties
 
-#### codeString
-
-string
-
-
-#### copy
-
-boolean
-
-
-#### language
-
-string
-
-
-#### simple
-
-boolean
-
-
-## Attributes
-
-#### code-string
-
-string
-
-
-#### copy
-
-boolean
-
-
-#### language
-
-string
-
-
-#### simple
-
-boolean
+| Property     | Attribute     | Description | Type      |
+| ------------ | ------------- | ----------- | --------- |
+| `codeString` | `code-string` |             | `string`  |
+| `copy`       | `copy`        |             | `boolean` |
+| `language`   | `language`    |             | `string`  |
+| `numbers`    | `numbers`     |             | `boolean` |
+| `simple`     | `simple`      |             | `boolean` |
 
 
 ## Methods
 
-#### result()
-
+| Method   | Description |
+| -------- | ----------- |
+| `result` |             |
 
 
 ----------------------------------------------

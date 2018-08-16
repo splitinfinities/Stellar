@@ -7,17 +7,9 @@
 
 ## Properties
 
-#### content
-
-string
-
-
-## Attributes
-
-#### content
-
-string
-
+| Property  | Attribute | Description | Type     |
+| --------- | --------- | ----------- | -------- |
+| `content` | `content` |             | `string` |
 
 
 ----------------------------------------------

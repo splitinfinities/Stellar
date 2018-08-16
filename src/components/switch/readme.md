@@ -7,17 +7,9 @@
 
 ## Properties
 
-#### checked
-
-boolean
-
-
-## Attributes
-
-#### checked
-
-boolean
-
+| Property  | Attribute | Description | Type      |
+| --------- | --------- | ----------- | --------- |
+| `checked` | `checked` |             | `boolean` |
 
 
 ----------------------------------------------

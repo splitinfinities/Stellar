@@ -7,37 +7,11 @@
 
 ## Properties
 
-#### count
-
-number
-
-
-#### overflow
-
-boolean
-
-
-#### size
-
-string
-
-
-## Attributes
-
-#### count
-
-number
-
-
-#### overflow
-
-boolean
-
-
-#### size
-
-string
-
+| Property   | Attribute  | Description | Type      |
+| ---------- | ---------- | ----------- | --------- |
+| `count`    | `count`    |             | `number`  |
+| `overflow` | `overflow` |             | `boolean` |
+| `size`     | `size`     |             | `string`  |
 
 
 ----------------------------------------------

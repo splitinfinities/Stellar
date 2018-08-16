@@ -7,61 +7,22 @@
 
 ## Properties
 
-#### for
-
-string
-
-
-#### random
-
-boolean
-
-
-#### remote
-
-string
-
-
-#### type
-
-string
-
-
-## Attributes
-
-#### for
-
-string
-
-
-#### random
-
-boolean
-
-
-#### remote
-
-string
-
-
-#### type
-
-string
+| Property | Attribute | Description | Type      |
+| -------- | --------- | ----------- | --------- |
+| `for`    | `for`     |             | `string`  |
+| `random` | `random`  |             | `boolean` |
+| `remote` | `remote`  |             | `string`  |
+| `type`   | `type`    |             | `string`  |
 
 
 ## Methods
 
-#### data()
-
-
-#### options()
-
-
-#### refresh()
-
-
-#### series()
-
+| Method    | Description |
+| --------- | ----------- |
+| `data`    |             |
+| `options` |             |
+| `refresh` |             |
+| `series`  |             |
 
 
 ----------------------------------------------

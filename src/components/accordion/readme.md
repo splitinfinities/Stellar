@@ -7,52 +7,19 @@
 
 ## Properties
 
-#### label
-
-string
-
-
-#### name
-
-string
-
-
-#### open
-
-boolean
-
-
-#### tight
-
-boolean
-
-
-## Attributes
-
-#### label
-
-string
-
-
-#### name
-
-string
-
-
-#### open
-
-boolean
-
-
-#### tight
-
-boolean
+| Property | Attribute | Description | Type      |
+| -------- | --------- | ----------- | --------- |
+| `label`  | `label`   |             | `string`  |
+| `name`   | `name`    |             | `string`  |
+| `open`   | `open`    |             | `boolean` |
+| `tight`  | `tight`   |             | `boolean` |
 
 
 ## Methods
 
-#### refresh()
-
+| Method    | Description |
+| --------- | ----------- |
+| `refresh` |             |
 
 
 ----------------------------------------------

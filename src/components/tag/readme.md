@@ -7,57 +7,13 @@
 
 ## Properties
 
-#### color
-
-string
-
-
-#### outline
-
-boolean
-
-
-#### pill
-
-boolean
-
-
-#### size
-
-string
-
-
-#### textColor
-
-string
-
-
-## Attributes
-
-#### color
-
-string
-
-
-#### outline
-
-boolean
-
-
-#### pill
-
-boolean
-
-
-#### size
-
-string
-
-
-#### text-color
-
-string
-
+| Property    | Attribute    | Description | Type      |
+| ----------- | ------------ | ----------- | --------- |
+| `color`     | `color`      |             | `string`  |
+| `outline`   | `outline`    |             | `boolean` |
+| `pill`      | `pill`       |             | `boolean` |
+| `size`      | `size`       |             | `string`  |
+| `textColor` | `text-color` |             | `string`  |
 
 
 ----------------------------------------------

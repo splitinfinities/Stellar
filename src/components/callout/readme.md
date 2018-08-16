@@ -7,17 +7,9 @@
 
 ## Properties
 
-#### type
-
-string
-
-
-## Attributes
-
-#### type
-
-string
-
+| Property | Attribute | Description | Type                               |
+| -------- | --------- | ----------- | ---------------------------------- |
+| `type`   | `type`    |             | `"alert"|"error"|"info"|"success"` |
 
 
 ----------------------------------------------

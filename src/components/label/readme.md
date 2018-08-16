@@ -7,17 +7,9 @@
 
 ## Properties
 
-#### for
-
-string
-
-
-## Attributes
-
-#### for
-
-string
-
+| Property | Attribute | Description | Type     |
+| -------- | --------- | ----------- | -------- |
+| `for`    | `for`     |             | `string` |
 
 
 ----------------------------------------------

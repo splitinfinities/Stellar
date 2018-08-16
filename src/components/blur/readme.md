@@ -7,32 +7,17 @@
 
 ## Properties
 
-#### horizontal
-
-number
-
-
-#### vertical
-
-number
-
-
-## Attributes
-
-#### horizontal
-
-number
-
-
-#### vertical
-
-number
+| Property     | Attribute    | Description | Type     |
+| ------------ | ------------ | ----------- | -------- |
+| `horizontal` | `horizontal` |             | `number` |
+| `vertical`   | `vertical`   |             | `number` |
 
 
 ## Methods
 
-#### setBlurFilter()
-
+| Method          | Description |
+| --------------- | ----------- |
+| `setBlurFilter` |             |
 
 
 ----------------------------------------------

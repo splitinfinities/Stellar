@@ -7,65 +7,21 @@
 
 ## Properties
 
-#### block
-
-boolean
-
-
-#### blurring
-
-number
-
-
-#### height
-
-string
-
-
-#### name
-
-string
-
-
-#### noanimation
-
-boolean
-
-
-## Attributes
-
-#### block
-
-boolean
-
-
-#### blurring
-
-number
-
-
-#### height
-
-string
-
-
-#### name
-
-string
-
-
-#### noanimation
-
-boolean
+| Property      | Attribute     | Description | Type      |
+| ------------- | ------------- | ----------- | --------- |
+| `block`       | `block`       |             | `boolean` |
+| `blurring`    | `blurring`    |             | `number`  |
+| `height`      | `height`      |             | `string`  |
+| `name`        | `name`        |             | `string`  |
+| `noanimation` | `noanimation` |             | `boolean` |
 
 
 ## Methods
 
-#### contents()
-
-
-#### tabs()
-
+| Method     | Description |
+| ---------- | ----------- |
+| `contents` |             |
+| `tabs`     |             |
 
 
 ----------------------------------------------

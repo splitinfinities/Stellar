@@ -7,77 +7,15 @@
 
 ## Properties
 
-#### color
-
-string
-
-
-#### description
-
-string
-
-
-#### home
-
-string
-
-
-#### icon
-
-string
-
-
-#### icon_size
-
-number
-
-
-#### icon_src
-
-string
-
-
-#### label
-
-string
-
-
-## Attributes
-
-#### color
-
-string
-
-
-#### description
-
-string
-
-
-#### home
-
-string
-
-
-#### icon
-
-string
-
-
-#### icon_size
-
-number
-
-
-#### icon_src
-
-string
-
-
-#### label
-
-string
-
+| Property      | Attribute     | Description | Type     |
+| ------------- | ------------- | ----------- | -------- |
+| `color`       | `color`       |             | `string` |
+| `description` | `description` |             | `string` |
+| `home`        | `home`        |             | `string` |
+| `icon_size`   | `icon_size`   |             | `number` |
+| `icon_src`    | `icon_src`    |             | `string` |
+| `icon`        | `icon`        |             | `string` |
+| `label`       | `label`       |             | `string` |
 
 
 ----------------------------------------------

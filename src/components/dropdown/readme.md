@@ -7,47 +7,12 @@
 
 ## Properties
 
-#### icon
-
-boolean
-
-
-#### label
-
-string
-
-
-#### open
-
-boolean
-
-
-#### position
-
-string
-
-
-## Attributes
-
-#### icon
-
-boolean
-
-
-#### label
-
-string
-
-
-#### open
-
-boolean
-
-
-#### position
-
-string
-
+| Property   | Attribute  | Description | Type                      |
+| ---------- | ---------- | ----------- | ------------------------- |
+| `icon`     | `icon`     |             | `boolean`                 |
+| `label`    | `label`    |             | `string`                  |
+| `open`     | `open`     |             | `boolean`                 |
+| `position` | `position` |             | `"left"|"center"|"right"` |
 
 
 ----------------------------------------------

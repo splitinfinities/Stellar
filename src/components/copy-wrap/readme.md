@@ -7,27 +7,10 @@
 
 ## Properties
 
-#### align
-
-string
-
-
-#### full
-
-boolean
-
-
-## Attributes
-
-#### align
-
-string
-
-
-#### full
-
-boolean
-
+| Property | Attribute | Description | Type      |
+| -------- | --------- | ----------- | --------- |
+| `align`  | `align`   |             | `string`  |
+| `full`   | `full`    |             | `boolean` |
 
 
 ----------------------------------------------

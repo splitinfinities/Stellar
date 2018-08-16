@@ -165,14 +165,12 @@ export class Button {
   }
 
   render() {
-    return (
-      <div data-processing={this.processing}>
-        { this.tag === "button" && this.renderButton() }
-        { this.tag === "submit" && this.renderSubmit() }
-        { this.tag === "link" && this.renderLink() }
-        { this.tag === "span" && this.renderSpan() }
-      </div>
-    )
+    return [
+      this.tag === "button" && this.renderButton(),
+      this.tag === "submit" && this.renderSubmit(),
+      this.tag === "link" && this.renderLink(),
+      this.tag === "span" && this.renderSpan()
+    ]
   }
 
 }

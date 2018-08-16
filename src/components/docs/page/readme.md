@@ -7,17 +7,9 @@
 
 ## Properties
 
-#### match
-
-MatchResults
-
-
-## Attributes
-
-#### match
-
-
-
+| Property | Attribute | Description | Type           |
+| -------- | --------- | ----------- | -------------- |
+| `match`  | --        |             | `MatchResults` |
 
 
 ----------------------------------------------

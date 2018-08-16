@@ -7,51 +7,21 @@
 
 ## Properties
 
-#### codeString
-
-string
-
-
-#### language
-
-string
-
-
-#### numbers
-
-boolean
-
-
-## Attributes
-
-#### code-string
-
-string
-
-
-#### language
-
-string
-
-
-#### numbers
-
-boolean
+| Property     | Attribute     | Description | Type      |
+| ------------ | ------------- | ----------- | --------- |
+| `codeString` | `code-string` |             | `string`  |
+| `language`   | `language`    |             | `string`  |
+| `numbers`    | `numbers`     |             | `boolean` |
 
 
 ## Methods
 
-#### copy()
-
-
-#### highlight()
-
-
-#### result()
-
-
-#### setCode()
-
+| Method      | Description |
+| ----------- | ----------- |
+| `copy`      |             |
+| `highlight` |             |
+| `result`    |             |
+| `setCode`   |             |
 
 
 ----------------------------------------------

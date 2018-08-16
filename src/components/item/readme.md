@@ -7,129 +7,39 @@
 
 ## Properties
 
-#### danger
-
-boolean
-
-
-#### fit
-
-boolean
-
-
-#### focused
-
-boolean
-
-
-#### href
-
-string
-
-
-#### label
-
-string
-
-
-#### selectable
-
-boolean
-
-
-#### selected
-
-boolean
-
-
-#### size
-
-string
-
-
-#### type
-
-string
-
-
-#### value
-
-string
-
-
-## Attributes
-
-#### danger
-
-boolean
-
-
-#### fit
-
-boolean
-
-
-#### focused
-
-boolean
-
-
-#### href
-
-string
-
-
-#### label
-
-string
-
-
-#### selectable
-
-boolean
-
-
-#### selected
-
-boolean
-
-
-#### size
-
-string
-
-
-#### type
-
-string
-
-
-#### value
-
-string
+| Property     | Attribute    | Description | Type               |
+| ------------ | ------------ | ----------- | ------------------ |
+| `danger`     | `danger`     |             | `boolean`          |
+| `fit`        | `fit`        |             | `boolean`          |
+| `focused`    | `focused`    |             | `boolean`          |
+| `history`    | --           |             | `RouterHistory`    |
+| `href`       | `href`       |             | `string`           |
+| `label`      | `label`      |             | `string`           |
+| `location`   | --           |             | `LocationSegments` |
+| `route`      | `route`      |             | `boolean`          |
+| `selectable` | `selectable` |             | `boolean`          |
+| `selected`   | `selected`   |             | `boolean`          |
+| `size`       | `size`       |             | `string`           |
+| `type`       | `type`       |             | `"a"|"button"`     |
+| `value`      | `value`      |             | `string`           |
 
 
 ## Events
 
-#### blurChanged
-
-
-#### focusChanged
-
-
-#### selectionChanged
+| Event              | Description |
+| ------------------ | ----------- |
+| `blurChanged`      |             |
+| `focusChanged`     |             |
+| `selectionChanged` |             |
 
 
 ## Methods
 
-#### apply()
-
-
-#### data()
-
-
-#### setFocus()
-
+| Method     | Description |
+| ---------- | ----------- |
+| `apply`    |             |
+| `data`     |             |
+| `setFocus` |             |
 
 
 ----------------------------------------------

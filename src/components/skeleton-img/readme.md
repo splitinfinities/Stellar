@@ -7,47 +7,12 @@
 
 ## Properties
 
-#### height
-
-number
-
-
-#### icon
-
-boolean
-
-
-#### loading
-
-boolean
-
-
-#### width
-
-number
-
-
-## Attributes
-
-#### height
-
-number
-
-
-#### icon
-
-boolean
-
-
-#### loading
-
-boolean
-
-
-#### width
-
-number
-
+| Property  | Attribute | Description | Type      |
+| --------- | --------- | ----------- | --------- |
+| `height`  | `height`  |             | `number`  |
+| `icon`    | `icon`    |             | `boolean` |
+| `loading` | `loading` |             | `boolean` |
+| `width`   | `width`   |             | `number`  |
 
 
 ----------------------------------------------

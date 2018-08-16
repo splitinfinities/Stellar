@@ -7,137 +7,34 @@
 
 ## Properties
 
-#### checked
-
-boolean
-
-
-#### default
-
-string
-
-
-#### for
-
-string
-
-
-#### icon
-
-boolean
-
-
-#### inline
-
-boolean
-
-
-#### name
-
-string
-
-
-#### required
-
-boolean
-
-
-#### selectedCopy
-
-string
-
-
-#### single
-
-boolean
-
-
-#### size
-
-boolean
-
-
-#### type
-
-string
-
-
-#### value
-
-string
-
-
-## Attributes
-
-#### checked
-
-boolean
-
-
-#### default
-
-string
-
-
-#### for
-
-string
-
-
-#### icon
-
-boolean
-
-
-#### inline
-
-boolean
-
-
-#### name
-
-string
-
-
-#### required
-
-boolean
-
-
-#### selected-copy
-
-string
-
-
-#### single
-
-boolean
-
-
-#### size
-
-boolean
-
-
-#### type
-
-string
-
-
-#### value
-
-string
+| Property       | Attribute       | Description | Type      |
+| -------------- | --------------- | ----------- | --------- |
+| `checked`      | `checked`       |             | `boolean` |
+| `default`      | `default`       |             | `string`  |
+| `for`          | `for`           |             | `string`  |
+| `icon`         | `icon`          |             | `boolean` |
+| `inline`       | `inline`        |             | `boolean` |
+| `name`         | `name`          |             | `string`  |
+| `required`     | `required`      |             | `boolean` |
+| `selectedCopy` | `selected-copy` |             | `string`  |
+| `single`       | `single`        |             | `boolean` |
+| `size`         | `size`          |             | `boolean` |
+| `type`         | `type`          |             | `string`  |
+| `value`        | `value`         |             | `string`  |
 
 
 ## Events
 
-#### toggleChanged
+| Event           | Description |
+| --------------- | ----------- |
+| `toggleChanged` |             |
 
 
 ## Methods
 
-#### updateSelected()
-
+| Method           | Description |
+| ---------------- | ----------- |
+| `updateSelected` |             |
 
 
 ----------------------------------------------

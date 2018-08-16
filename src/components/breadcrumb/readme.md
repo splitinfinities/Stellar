@@ -7,57 +7,13 @@
 
 ## Properties
 
-#### color
-
-string
-
-
-#### disabled
-
-boolean
-
-
-#### href
-
-string
-
-
-#### label
-
-string
-
-
-#### target
-
-string
-
-
-## Attributes
-
-#### color
-
-string
-
-
-#### disabled
-
-boolean
-
-
-#### href
-
-string
-
-
-#### label
-
-string
-
-
-#### target
-
-string
-
+| Property   | Attribute  | Description | Type      |
+| ---------- | ---------- | ----------- | --------- |
+| `color`    | `color`    |             | `string`  |
+| `disabled` | `disabled` |             | `boolean` |
+| `href`     | `href`     |             | `string`  |
+| `label`    | `label`    |             | `string`  |
+| `target`   | `target`   |             | `string`  |
 
 
 ----------------------------------------------

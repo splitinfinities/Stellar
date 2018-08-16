@@ -7,77 +7,15 @@
 
 ## Properties
 
-#### closable
-
-boolean
-
-
-#### name
-
-string
-
-
-#### remember
-
-boolean
-
-
-#### size
-
-string
-
-
-#### striped
-
-boolean
-
-
-#### type
-
-string
-
-
-#### visible
-
-boolean
-
-
-## Attributes
-
-#### closable
-
-boolean
-
-
-#### name
-
-string
-
-
-#### remember
-
-boolean
-
-
-#### size
-
-string
-
-
-#### striped
-
-boolean
-
-
-#### type
-
-string
-
-
-#### visible
-
-boolean
-
+| Property   | Attribute  | Description | Type                               |
+| ---------- | ---------- | ----------- | ---------------------------------- |
+| `closable` | `closable` |             | `boolean`                          |
+| `name`     | `name`     |             | `string`                           |
+| `remember` | `remember` |             | `boolean`                          |
+| `size`     | `size`     |             | `"full"|"default"`                 |
+| `striped`  | `striped`  |             | `boolean`                          |
+| `type`     | `type`     |             | `"alert"|"error"|"info"|"success"` |
+| `visible`  | `visible`  |             | `boolean`                          |
 
 
 ----------------------------------------------

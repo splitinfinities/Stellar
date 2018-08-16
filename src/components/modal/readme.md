@@ -7,65 +7,21 @@
 
 ## Properties
 
-#### active
-
-boolean
-
-
-#### cloned
-
-boolean
-
-
-#### header
-
-boolean
-
-
-#### name
-
-string
-
-
-#### size
-
-string
-
-
-## Attributes
-
-#### active
-
-boolean
-
-
-#### cloned
-
-boolean
-
-
-#### header
-
-boolean
-
-
-#### name
-
-string
-
-
-#### size
-
-string
+| Property | Attribute | Description | Type      |
+| -------- | --------- | ----------- | --------- |
+| `active` | `active`  |             | `boolean` |
+| `cloned` | `cloned`  |             | `boolean` |
+| `header` | `header`  |             | `boolean` |
+| `name`   | `name`    |             | `string`  |
+| `size`   | `size`    |             | `string`  |
 
 
 ## Methods
 
-#### close()
-
-
-#### open()
-
+| Method  | Description |
+| ------- | ----------- |
+| `close` |             |
+| `open`  |             |
 
 
 ----------------------------------------------

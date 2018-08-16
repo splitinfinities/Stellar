@@ -7,37 +7,11 @@
 
 ## Properties
 
-#### as
-
-string
-
-
-#### loading
-
-boolean
-
-
-#### width
-
-number
-
-
-## Attributes
-
-#### as
-
-string
-
-
-#### loading
-
-boolean
-
-
-#### width
-
-number
-
+| Property  | Attribute | Description | Type                                       |
+| --------- | --------- | ----------- | ------------------------------------------ |
+| `as`      | `as`      |             | `string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p'` |
+| `loading` | `loading` |             | `boolean`                                  |
+| `width`   | `width`   |             | `number`                                   |
 
 
 ----------------------------------------------

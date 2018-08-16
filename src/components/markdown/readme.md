@@ -7,17 +7,10 @@
 
 ## Properties
 
-#### src
-
-string
-
-
-## Attributes
-
-#### src
-
-string
-
+| Property     | Attribute     | Description | Type     |
+| ------------ | ------------- | ----------- | -------- |
+| `codeString` | `code-string` |             | `string` |
+| `src`        | `src`         |             | `string` |
 
 
 ----------------------------------------------

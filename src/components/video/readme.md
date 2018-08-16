@@ -7,97 +7,17 @@
 
 ## Properties
 
-#### autoplay
-
-boolean
-
-
-#### controls
-
-boolean
-
-
-#### height
-
-number
-
-
-#### muted
-
-boolean
-
-
-#### overlay
-
-boolean
-
-
-#### playsinline
-
-boolean
-
-
-#### poster
-
-string
-
-
-#### preload
-
-string
-
-
-#### width
-
-number
-
-
-## Attributes
-
-#### autoplay
-
-boolean
-
-
-#### controls
-
-boolean
-
-
-#### height
-
-number
-
-
-#### muted
-
-boolean
-
-
-#### overlay
-
-boolean
-
-
-#### playsinline
-
-boolean
-
-
-#### poster
-
-string
-
-
-#### preload
-
-string
-
-
-#### width
-
-number
-
+| Property      | Attribute     | Description | Type      |
+| ------------- | ------------- | ----------- | --------- |
+| `autoplay`    | `autoplay`    |             | `boolean` |
+| `controls`    | `controls`    |             | `boolean` |
+| `height`      | `height`      |             | `number`  |
+| `muted`       | `muted`       |             | `boolean` |
+| `overlay`     | `overlay`     |             | `boolean` |
+| `playsinline` | `playsinline` |             | `boolean` |
+| `poster`      | `poster`      |             | `string`  |
+| `preload`     | `preload`     |             | `string`  |
+| `width`       | `width`       |             | `number`  |
 
 
 ----------------------------------------------

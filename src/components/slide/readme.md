@@ -12,17 +12,9 @@ See the [Slides API Docs](../Slides) for more usage information.
 
 ## Properties
 
-#### motion
-
-number
-
-
-## Attributes
-
-#### motion
-
-number
-
+| Property | Attribute | Description | Type     |
+| -------- | --------- | ----------- | -------- |
+| `motion` | `motion`  |             | `number` |
 
 
 ----------------------------------------------

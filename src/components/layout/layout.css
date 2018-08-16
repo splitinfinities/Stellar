@@ -8,7 +8,7 @@
   grid-gap: 3rem;
   margin: 0 auto;
   padding: 4rem 0;
-  width: 90%;
+  width: 95%;
   max-width: 1024px;
   min-height: 0;
   min-width: 0;
@@ -79,13 +79,17 @@
   order: 1;
 }
 
+:host ::slotted(*) {
+  min-width: 0;
+}
+
 @media (min-width: 700px) {
   :host([type="sidebar-right"]) .layout {
-    grid-template-columns: auto 275px;
+    grid-template-columns: 3fr 1fr;
   }
 
   :host([type="sidebar"]) .layout {
-    grid-template-columns: 275px auto;
+    grid-template-columns: 1fr 3fr;
   }
 
   :host([type="supporting-content"]) .layout {

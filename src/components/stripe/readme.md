@@ -7,38 +7,19 @@
 
 ## Properties
 
-#### name
-
-string
-
-
-#### token
-
-string
-
-
-## Attributes
-
-#### name
-
-string
-
-
-#### token
-
-string
+| Property | Attribute | Description | Type     |
+| -------- | --------- | ----------- | -------- |
+| `name`   | `name`    |             | `string` |
+| `token`  | `token`   |             | `string` |
 
 
 ## Methods
 
-#### connect()
-
-
-#### getToken()
-
-
-#### setError()
-
+| Method     | Description |
+| ---------- | ----------- |
+| `connect`  |             |
+| `getToken` |             |
+| `setError` |             |
 
 
 ----------------------------------------------

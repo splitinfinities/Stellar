@@ -1248,7 +1248,8 @@
       "dependencies": [
         "stellar-docs-header",
         "stellar-docs-navigation",
-        "stellar-layout"
+        "stellar-layout",
+        "stellar-markdown"
       ],
       "componentClass": "DocsPage",
       "componentPath": "components/docs/page/page.js",

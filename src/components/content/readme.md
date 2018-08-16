@@ -7,37 +7,11 @@
 
 ## Properties
 
-#### for
-
-string
-
-
-#### name
-
-string
-
-
-#### open
-
-boolean
-
-
-## Attributes
-
-#### for
-
-string
-
-
-#### name
-
-string
-
-
-#### open
-
-boolean
-
+| Property | Attribute | Description | Type      |
+| -------- | --------- | ----------- | --------- |
+| `for`    | `for`     |             | `string`  |
+| `name`   | `name`    |             | `string`  |
+| `open`   | `open`    |             | `boolean` |
 
 
 ----------------------------------------------

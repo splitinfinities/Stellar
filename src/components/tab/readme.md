@@ -7,62 +7,20 @@
 
 ## Properties
 
-#### disabled
-
-boolean
-
-
-#### href
-
-string
-
-
-#### notifications
-
-any
-
-
-#### open
-
-boolean
-
-
-#### tag
-
-string
-
-
-## Attributes
-
-#### disabled
-
-boolean
-
-
-#### href
-
-string
-
-
-#### notifications
-
-any
-
-
-#### open
-
-boolean
-
-
-#### tag
-
-string
+| Property        | Attribute  | Description | Type             |
+| --------------- | ---------- | ----------- | ---------------- |
+| `disabled`      | `disabled` |             | `boolean`        |
+| `href`          | `href`     |             | `string`         |
+| `notifications` | --         |             | `boolean|number` |
+| `open`          | `open`     |             | `boolean`        |
+| `tag`           | `tag`      |             | `string`         |
 
 
 ## Events
 
-#### contentChange
-
+| Event           | Description |
+| --------------- | ----------- |
+| `contentChange` |             |
 
 
 ----------------------------------------------

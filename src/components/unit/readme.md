@@ -7,57 +7,13 @@
 
 ## Properties
 
-#### decimals
-
-number
-
-
-#### from
-
-string
-
-
-#### round
-
-boolean
-
-
-#### to
-
-string
-
-
-#### value
-
-number
-
-
-## Attributes
-
-#### decimals
-
-number
-
-
-#### from
-
-string
-
-
-#### round
-
-boolean
-
-
-#### to
-
-string
-
-
-#### value
-
-number
-
+| Property   | Attribute  | Description | Type      |
+| ---------- | ---------- | ----------- | --------- |
+| `decimals` | `decimals` |             | `number`  |
+| `from`     | `from`     |             | `string`  |
+| `round`    | `round`    |             | `boolean` |
+| `to`       | `to`       |             | `string`  |
+| `value`    | `value`    |             | `number`  |
 
 
 ----------------------------------------------

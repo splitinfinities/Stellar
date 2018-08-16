@@ -17,6 +17,7 @@ export const config: Config = {
     { src: "global/data" },
     { src: "*.html" },
     { src: "**/*.md" },
+    { src: "components/**/*" },
   ],
   outputTargets: [
     { type: "stats", file: "/data/stats.json" },

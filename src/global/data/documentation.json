@@ -153,12 +153,20 @@
     {
       "tag": "stellar-asset",
       "readme": "# stellar-asset\n\n\n",
-      "usage": {},
+      "usage": {
+        "default": "<stellar-asset-library></stellar-asset-library>\n"
+      },
       "props": [
         {
           "name": "align",
           "type": "string",
           "attr": "align",
+          "docs": ""
+        },
+        {
+          "name": "ariaLabel",
+          "type": "string",
+          "attr": "aria-label",
           "docs": ""
         },
         {
@@ -724,6 +732,12 @@
           "docs": ""
         },
         {
+          "name": "numbers",
+          "type": "boolean",
+          "attr": "numbers",
+          "docs": ""
+        },
+        {
           "name": "simple",
           "type": "boolean",
           "attr": "simple",
@@ -835,7 +849,7 @@
     },
     {
       "tag": "stellar-docs",
-      "readme": "",
+      "readme": "# stellar-docs\n\n\n",
       "usage": {},
       "props": [],
       "methods": [],
@@ -844,7 +858,7 @@
     },
     {
       "tag": "stellar-docs-component",
-      "readme": "",
+      "readme": "# stellar-docs-component\n\n\n",
       "usage": {},
       "props": [
         {
@@ -854,12 +868,79 @@
           "docs": ""
         }
       ],
+      "methods": [
+        {
+          "name": "pull_data",
+          "docs": ""
+        },
+        {
+          "name": "show_data",
+          "docs": ""
+        }
+      ],
+      "events": [],
+      "styles": []
+    },
+    {
+      "tag": "stellar-docs-header",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "complement",
+          "type": "string",
+          "mutable": true,
+          "attr": "complement",
+          "docs": ""
+        },
+        {
+          "name": "invert",
+          "type": "boolean",
+          "mutable": true,
+          "attr": "invert",
+          "docs": ""
+        },
+        {
+          "name": "mark",
+          "type": "string",
+          "attr": "mark",
+          "docs": ""
+        },
+        {
+          "name": "max",
+          "type": "number",
+          "attr": "max",
+          "docs": ""
+        },
+        {
+          "name": "theme",
+          "type": "string",
+          "mutable": true,
+          "attr": "theme",
+          "docs": ""
+        },
+        {
+          "name": "value",
+          "type": "number",
+          "attr": "value",
+          "docs": ""
+        }
+      ],
       "methods": [],
       "events": [],
       "styles": []
     },
     {
       "tag": "stellar-docs-home",
+      "readme": "# stellar-docs-home\n\n\n",
+      "usage": {},
+      "props": [],
+      "methods": [],
+      "events": [],
+      "styles": []
+    },
+    {
+      "tag": "stellar-docs-navigation",
       "readme": "",
       "usage": {},
       "props": [],
@@ -869,7 +950,7 @@
     },
     {
       "tag": "stellar-docs-not-found",
-      "readme": "",
+      "readme": "# stellar-docs-not-found\n\n\n",
       "usage": {},
       "props": [],
       "methods": [],
@@ -878,7 +959,7 @@
     },
     {
       "tag": "stellar-docs-page",
-      "readme": "",
+      "readme": "# stellar-docs-page\n\n\n",
       "usage": {},
       "props": [
         {
@@ -967,6 +1048,7 @@
         {
           "name": "position",
           "type": "string",
+          "mutable": true,
           "attr": "position",
           "docs": ""
         }
@@ -1455,6 +1537,12 @@
           "docs": ""
         },
         {
+          "name": "history",
+          "type": "RouterHistory",
+          "attr": "history",
+          "docs": ""
+        },
+        {
           "name": "href",
           "type": "string",
           "mutable": true,
@@ -1466,6 +1554,18 @@
           "type": "string",
           "mutable": true,
           "attr": "label",
+          "docs": ""
+        },
+        {
+          "name": "location",
+          "type": "LocationSegments",
+          "attr": "location",
+          "docs": ""
+        },
+        {
+          "name": "route",
+          "type": "boolean",
+          "attr": "route",
           "docs": ""
         },
         {
@@ -1650,6 +1750,12 @@
         "template": "<stellar-markdown>\n  <template>\n# Heading\n## Very cool!\n- item one\n- item two\n- item three\n  </template>\n</stellar-markdown>\n"
       },
       "props": [
+        {
+          "name": "codeString",
+          "type": "string",
+          "attr": "code-string",
+          "docs": ""
+        },
         {
           "name": "src",
           "type": "string",
@@ -1840,30 +1946,28 @@
         {
           "name": "current",
           "type": "number",
+          "mutable": true,
           "attr": "current",
           "docs": ""
         },
         {
           "name": "padding",
           "type": "number",
+          "mutable": true,
           "attr": "padding",
           "docs": ""
         },
         {
           "name": "pages",
           "type": "number",
+          "mutable": true,
           "attr": "pages",
           "docs": "Public: Sets the max cap of pages you can skip through"
         },
         {
-          "name": "skip",
-          "type": "boolean",
-          "attr": "skip",
-          "docs": ""
-        },
-        {
           "name": "type",
           "type": "string",
+          "mutable": true,
           "attr": "type",
           "docs": ""
         },
@@ -2684,7 +2788,7 @@
       "tag": "stellar-tag",
       "readme": "# stellar-tag\n\n\n",
       "usage": {
-        "colors": "<stellar-tag color=\"base5\">Theming</stellar-tag>\n<stellar-tag color=\"complement5\">Theming</stellar-tag>\n\n<stellar-tag color=\"red5\">Awesome</stellar-tag>\n<stellar-tag color=\"orange5\">Awesome</stellar-tag>\n<stellar-tag color=\"yellow5\">Awesome</stellar-tag>\n<stellar-tag color=\"lime5\">Awesome</stellar-tag>\n<stellar-tag color=\"green5\">Awesome</stellar-tag>\n<stellar-tag color=\"cyan5\">Awesome</stellar-tag>\n<stellar-tag color=\"blue5\">Awesome</stellar-tag>\n<stellar-tag color=\"indigo5\">Awesome</stellar-tag>\n<stellar-tag color=\"violet5\">Awesome</stellar-tag>\n<stellar-tag color=\"fuchsia5\">Awesome</stellar-tag>\n<stellar-tag color=\"pink5\">Awesome</stellar-tag>\n<stellar-tag color=\"gray5\">Awesome</stellar-tag>\n",
+        "colors": "<stellar-tag color=\"theme-base5\">Theming</stellar-tag>\n<stellar-tag color=\"theme-complement5\">Theming</stellar-tag>\n\n<stellar-tag color=\"red5\">Awesome</stellar-tag>\n<stellar-tag color=\"orange5\">Awesome</stellar-tag>\n<stellar-tag color=\"yellow5\">Awesome</stellar-tag>\n<stellar-tag color=\"lime5\">Awesome</stellar-tag>\n<stellar-tag color=\"green5\">Awesome</stellar-tag>\n<stellar-tag color=\"cyan5\">Awesome</stellar-tag>\n<stellar-tag color=\"blue5\">Awesome</stellar-tag>\n<stellar-tag color=\"indigo5\">Awesome</stellar-tag>\n<stellar-tag color=\"violet5\">Awesome</stellar-tag>\n<stellar-tag color=\"fuchsia5\">Awesome</stellar-tag>\n<stellar-tag color=\"pink5\">Awesome</stellar-tag>\n<stellar-tag color=\"gray5\">Awesome</stellar-tag>\n",
         "default": "<stellar-tag>Awesome</stellar-tag>\n",
         "pill": "<stellar-tag size=\"tiny\" pill>Awesome</stellar-tag>\n<stellar-tag size=\"small\" pill>Awesome</stellar-tag>\n<stellar-tag pill>Awesome</stellar-tag>\n<stellar-tag size=\"medium\" pill>Awesome</stellar-tag>\n<stellar-tag size=\"large\" pill>Awesome</stellar-tag>\n",
         "sizes": "<stellar-tag size=\"tiny\">Awesome</stellar-tag>\n<stellar-tag size=\"small\">Awesome</stellar-tag>\n<stellar-tag>Awesome</stellar-tag>\n<stellar-tag size=\"medium\">Awesome</stellar-tag>\n<stellar-tag size=\"large\">Awesome</stellar-tag>\n"

@@ -7,47 +7,12 @@
 
 ## Properties
 
-#### invert
-
-boolean
-
-
-#### mark
-
-string
-
-
-#### max
-
-number
-
-
-#### value
-
-number
-
-
-## Attributes
-
-#### invert
-
-boolean
-
-
-#### mark
-
-string
-
-
-#### max
-
-number
-
-
-#### value
-
-number
-
+| Property | Attribute | Description | Type      |
+| -------- | --------- | ----------- | --------- |
+| `invert` | `invert`  |             | `boolean` |
+| `mark`   | `mark`    |             | `string`  |
+| `max`    | `max`     |             | `number`  |
+| `value`  | `value`   |             | `number`  |
 
 
 ----------------------------------------------

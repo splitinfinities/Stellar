@@ -7,27 +7,10 @@
 
 ## Properties
 
-#### count
-
-number
-
-
-#### size
-
-string
-
-
-## Attributes
-
-#### count
-
-number
-
-
-#### size
-
-string
-
+| Property | Attribute | Description | Type     |
+| -------- | --------- | ----------- | -------- |
+| `count`  | `count`   |             | `number` |
+| `size`   | `size`    |             | `string` |
 
 
 ----------------------------------------------

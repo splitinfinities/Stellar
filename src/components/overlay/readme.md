@@ -7,17 +7,9 @@
 
 ## Properties
 
-#### open
-
-boolean
-
-
-## Attributes
-
-#### open
-
-boolean
-
+| Property | Attribute | Description | Type      |
+| -------- | --------- | ----------- | --------- |
+| `open`   | `open`    |             | `boolean` |
 
 
 ----------------------------------------------

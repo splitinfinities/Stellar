@@ -7,44 +7,21 @@
 
 ## Properties
 
-#### itemHeight
-
-number
-
-
-#### items
-
-Array<any>
-
-
-## Attributes
-
-#### item-height
-
-number
-
-
-#### items
-
-
+| Property     | Attribute     | Description | Type         |
+| ------------ | ------------- | ----------- | ------------ |
+| `itemHeight` | `item-height` |             | `number`     |
+| `items`      | --            |             | `Array<any>` |
 
 
 ## Methods
 
-#### append_to()
-
-
-#### mount()
-
-
-#### prepend_to()
-
-
-#### refresh()
-
-
-#### updateConfig()
-
+| Method         | Description |
+| -------------- | ----------- |
+| `append_to`    |             |
+| `mount`        |             |
+| `prepend_to`   |             |
+| `refresh`      |             |
+| `updateConfig` |             |
 
 
 ----------------------------------------------

@@ -7,45 +7,19 @@
 
 ## Properties
 
-#### size
-
-string
-
-
-#### state
-
-string
-
-
-#### timing
-
-number
-
-
-## Attributes
-
-#### size
-
-string
-
-
-#### state
-
-string
-
-
-#### timing
-
-number
+| Property | Attribute | Description | Type                                                 |
+| -------- | --------- | ----------- | ---------------------------------------------------- |
+| `size`   | `size`    |             | `string`                                             |
+| `state`  | `state`   |             | `string|"opening"|"open"|"closing"|"closed"|"empty"` |
+| `timing` | `timing`  |             | `number`                                             |
 
 
 ## Methods
 
-#### close()
-
-
-#### open()
-
+| Method  | Description |
+| ------- | ----------- |
+| `close` |             |
+| `open`  |             |
 
 
 ----------------------------------------------

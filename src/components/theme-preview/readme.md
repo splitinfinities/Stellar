@@ -7,27 +7,10 @@
 
 ## Properties
 
-#### base
-
-string
-
-
-#### complement
-
-string
-
-
-## Attributes
-
-#### base
-
-string
-
-
-#### complement
-
-string
-
+| Property     | Attribute    | Description | Type     |
+| ------------ | ------------ | ----------- | -------- |
+| `base`       | `base`       |             | `string` |
+| `complement` | `complement` |             | `string` |
 
 
 ----------------------------------------------

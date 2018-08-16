@@ -7,87 +7,16 @@
 
 ## Properties
 
-#### color
-
-string
-
-
-#### initials
-
-string
-
-
-#### name
-
-string
-
-
-#### notooltip
-
-boolean
-
-
-#### processing
-
-boolean
-
-
-#### shape
-
-string
-
-
-#### size
-
-string
-
-
-#### src
-
-string
-
-
-## Attributes
-
-#### color
-
-string
-
-
-#### initials
-
-string
-
-
-#### name
-
-string
-
-
-#### notooltip
-
-boolean
-
-
-#### processing
-
-boolean
-
-
-#### shape
-
-string
-
-
-#### size
-
-string
-
-
-#### src
-
-string
-
+| Property     | Attribute    | Description | Type                                                                 |
+| ------------ | ------------ | ----------- | -------------------------------------------------------------------- |
+| `color`      | `color`      |             | `string`                                                             |
+| `initials`   | `initials`   |             | `string`                                                             |
+| `name`       | `name`       |             | `string`                                                             |
+| `notooltip`  | `notooltip`  |             | `boolean`                                                            |
+| `processing` | `processing` |             | `boolean`                                                            |
+| `shape`      | `shape`      |             | `"circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message"` |
+| `size`       | `size`       |             | `string`                                                             |
+| `src`        | `src`        |             | `string`                                                             |
 
 
 ----------------------------------------------

@@ -7,37 +7,11 @@
 
 ## Properties
 
-#### layer
-
-number
-
-
-#### percentage
-
-number
-
-
-#### speed
-
-number
-
-
-## Attributes
-
-#### layer
-
-number
-
-
-#### percentage
-
-number
-
-
-#### speed
-
-number
-
+| Property     | Attribute    | Description | Type     |
+| ------------ | ------------ | ----------- | -------- |
+| `layer`      | `layer`      |             | `number` |
+| `percentage` | `percentage` |             | `number` |
+| `speed`      | `speed`      |             | `number` |
 
 
 ----------------------------------------------

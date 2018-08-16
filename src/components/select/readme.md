@@ -7,157 +7,36 @@
 
 ## Properties
 
-#### focused
-
-boolean
-
-
-#### footer
-
-boolean
-
-
-#### inline
-
-boolean
-
-
-#### label
-
-string
-
-
-#### multiple
-
-boolean
-
-
-#### name
-
-string
-
-
-#### open
-
-boolean
-
-
-#### other
-
-boolean
-
-
-#### overlay
-
-boolean
-
-
-#### placeholder
-
-string
-
-
-#### processing
-
-boolean
-
-
-#### required
-
-boolean
-
-
-#### size
-
-string
-
-
-#### value
-
-any
-
-
-## Attributes
-
-#### focused
-
-boolean
-
-
-#### footer
-
-boolean
-
-
-#### inline
-
-boolean
-
-
-#### label
-
-string
-
-
-#### multiple
-
-boolean
-
-
-#### name
-
-string
-
-
-#### open
-
-boolean
-
-
-#### other
-
-boolean
-
-
-#### overlay
-
-boolean
-
-
-#### placeholder
-
-string
-
-
-#### processing
-
-boolean
-
-
-#### required
-
-boolean
-
-
-#### size
-
-string
-
-
-#### value
-
-any
+| Property      | Attribute     | Description | Type      |
+| ------------- | ------------- | ----------- | --------- |
+| `focused`     | `focused`     |             | `boolean` |
+| `footer`      | `footer`      |             | `boolean` |
+| `inline`      | `inline`      |             | `boolean` |
+| `label`       | `label`       |             | `string`  |
+| `multiple`    | `multiple`    |             | `boolean` |
+| `name`        | `name`        |             | `string`  |
+| `open`        | `open`        |             | `boolean` |
+| `other`       | `other`       |             | `boolean` |
+| `overlay`     | `overlay`     |             | `boolean` |
+| `placeholder` | `placeholder` |             | `string`  |
+| `processing`  | `processing`  |             | `boolean` |
+| `required`    | `required`    |             | `boolean` |
+| `size`        | `size`        |             | `string`  |
+| `value`       | --            |             | `any`     |
 
 
 ## Events
 
-#### change
+| Event    | Description |
+| -------- | ----------- |
+| `change` |             |
 
 
 ## Methods
 
-#### validate()
-
+| Method     | Description |
+| ---------- | ----------- |
+| `validate` |             |
 
 
 ----------------------------------------------

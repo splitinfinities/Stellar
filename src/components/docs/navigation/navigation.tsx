@@ -33,7 +33,7 @@ export class DocsNavigation {
           {component.componentClass}
           <small class="db theme-base5">{`<${component.tag}>`}</small>
         </copy-wrap>
-        <stellar-tag pill>{this.usage(component.tag)}</stellar-tag>
+        <stellar-tag pill color="theme-complement7">{this.usage(component.tag)}</stellar-tag>
       </stellar-item>
     )
   }
@@ -51,7 +51,7 @@ export class DocsNavigation {
           <stellar-item type="a" route={true} href="/browser-support">Browser Support</stellar-item>
         </stellar-accordion>
         <stellar-accordion tight>
-          <stellar-item slot="label">Components <stellar-tag size="small" color="blue8" class="self-end maa mr0" pill>{this.data.components.length}</stellar-tag></stellar-item>
+          <stellar-item slot="label">Components <stellar-tag size="small" color="theme-complement8" class="self-end maa mr0" pill>{this.data.components.length}</stellar-tag></stellar-item>
             {this.data.components.map( (component) => this.renderItem(component) )}
         </stellar-accordion>
       </stellar-card>

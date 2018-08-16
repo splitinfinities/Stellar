@@ -7,52 +7,19 @@
 
 ## Properties
 
-#### align
-
-string
-
-
-#### padding
-
-string
-
-
-#### size
-
-string
-
-
-#### type
-
-string
-
-
-## Attributes
-
-#### align
-
-string
-
-
-#### padding
-
-string
-
-
-#### size
-
-string
-
-
-#### type
-
-string
+| Property  | Attribute | Description | Type                                             |
+| --------- | --------- | ----------- | ------------------------------------------------ |
+| `align`   | `align`   |             | `"baseline"|"center"|"top"|"bottom"`             |
+| `padding` | `padding` |             | `"tiny"|"small"|"medium"|"large"`                |
+| `size`    | `size`    |             | `"tiny"|"small"|"medium"|"large"|"full"|"flush"` |
+| `type`    | `type`    |             | `string`                                         |
 
 
 ## Methods
 
-#### refresh()
-
+| Method    | Description |
+| --------- | ----------- |
+| `refresh` |             |
 
 
 ----------------------------------------------

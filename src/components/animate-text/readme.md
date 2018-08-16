@@ -7,17 +7,9 @@
 
 ## Properties
 
-#### method
-
-string
-
-
-## Attributes
-
-#### method
-
-string
-
+| Property | Attribute | Description | Type                                          |
+| -------- | --------- | ----------- | --------------------------------------------- |
+| `method` | `method`  |             | `string|"glitch"|"lettering"|"weight"|"fade"` |
 
 
 ----------------------------------------------

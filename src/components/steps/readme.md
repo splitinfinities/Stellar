@@ -7,25 +7,17 @@
 
 ## Properties
 
-#### name
-
-string
-
-
-## Attributes
-
-#### name
-
-string
+| Property | Attribute | Description | Type     |
+| -------- | --------- | ----------- | -------- |
+| `name`   | `name`    |             | `string` |
 
 
 ## Methods
 
-#### contents()
-
-
-#### steps()
-
+| Method     | Description |
+| ---------- | ----------- |
+| `contents` |             |
+| `steps`    |             |
 
 
 ----------------------------------------------

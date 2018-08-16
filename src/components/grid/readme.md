@@ -7,62 +7,20 @@
 
 ## Properties
 
-#### align
-
-string
-
-
-#### cols
-
-any
-
-
-#### compact
-
-boolean
-
-
-#### padding
-
-boolean
-
-
-#### responsive
-
-boolean
-
-
-## Attributes
-
-#### align
-
-string
-
-
-#### cols
-
-any
-
-
-#### compact
-
-boolean
-
-
-#### padding
-
-boolean
-
-
-#### responsive
-
-boolean
+| Property     | Attribute    | Description | Type            |
+| ------------ | ------------ | ----------- | --------------- |
+| `align`      | `align`      |             | `string`        |
+| `cols`       | --           |             | `number|string` |
+| `compact`    | `compact`    |             | `boolean`       |
+| `padding`    | `padding`    |             | `boolean`       |
+| `responsive` | `responsive` |             | `boolean`       |
 
 
 ## Methods
 
-#### refresh()
-
+| Method    | Description |
+| --------- | ----------- |
+| `refresh` |             |
 
 
 ----------------------------------------------

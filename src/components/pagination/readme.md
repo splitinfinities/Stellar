@@ -7,86 +7,21 @@
 
 ## Properties
 
-#### color
-
-string
-
-
-#### current
-
-number
-
-
-#### padding
-
-number
-
-
-#### pages
-
-number
-
-Public: Sets the max cap of pages you can skip through
-
-
-#### skip
-
-boolean
-
-
-#### type
-
-string
-
-
-#### url
-
-any
-
-
-## Attributes
-
-#### color
-
-string
-
-
-#### current
-
-number
-
-
-#### padding
-
-number
-
-
-#### pages
-
-number
-
-Public: Sets the max cap of pages you can skip through
-
-
-#### skip
-
-boolean
-
-
-#### type
-
-string
-
-
-#### url
-
-any
+| Property  | Attribute | Description                                            | Type               |
+| --------- | --------- | ------------------------------------------------------ | ------------------ |
+| `color`   | `color`   |                                                        | `string`           |
+| `current` | `current` |                                                        | `number`           |
+| `padding` | `padding` |                                                        | `number`           |
+| `pages`   | `pages`   | Public: Sets the max cap of pages you can skip through | `number`           |
+| `type`    | `type`    |                                                        | `"full"|"compact"` |
+| `url`     | --        |                                                        | `any`              |
 
 
 ## Events
 
-#### changed
-
+| Event     | Description |
+| --------- | ----------- |
+| `changed` |             |
 
 
 ----------------------------------------------
