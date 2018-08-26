@@ -1,0 +1,8 @@
+stellar-chart {
+  display: block;
+}
+
+stellar-chart .highcharts-tooltip * {
+  margin: 0;
+  text-align: center;
+}

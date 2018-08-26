@@ -1,0 +1,9 @@
+stellar-360-image {
+  display: block;
+}
+
+stellar-360-image canvas {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+}

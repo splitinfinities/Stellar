@@ -1,0 +1,9 @@
+stellar-blur {
+	filter: var(--blur-url);
+	display: block;
+	overflow: initial;
+}
+
+stellar-blur .blur-svg {
+	display: none;
+}

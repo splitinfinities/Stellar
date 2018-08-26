@@ -1,0 +1,9 @@
+stellar-list {
+  display: block;
+  height: 600px;
+  width: 100%;
+}
+
+stellar-list .list {
+  overflow-x: hidden !important;
+}

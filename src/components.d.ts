@@ -454,6 +454,14 @@ declare global {
       'src': string;
     }
 
+    interface Stellar360Image {
+      'src': string;
+    }
+
+    interface Stellar360Video {
+      'src': string;
+    }
+
     interface StellarMessage {
       'closable': boolean;
       'name': string;
@@ -767,6 +775,69 @@ declare global {
       'poster': string;
       'preload': string;
       'width': number;
+    }
+
+    interface WebAudioDebugger {
+      'addHistory': (string: History) => void;
+      'count': number;
+    }
+
+    interface WebAudioEffect {
+      'attachEffect': (context: any, source: any) => string;
+      'axis': string;
+      'method': string;
+      'midicontroller': number;
+      'responds': string;
+      'type': string;
+      'use': string;
+      'value': number;
+    }
+
+    interface WebAudioSequencer {
+      'autoplay': boolean;
+      'custom': Function;
+      'name': string;
+      'play': () => void;
+      'stop': () => void;
+      'taps': number;
+      'tempo': number;
+    }
+
+    interface WebAudioSource {
+      'assignBuffer': (webAudio: any, buffer: any) => void;
+      'effectsvolume': number;
+      'gain': (place?: string) => GainNode;
+      'getBuffer': () => AudioBuffer;
+      'inert': boolean;
+      'midichannel': number;
+      'midikey': number;
+      'name': string;
+      'play': () => void;
+      'src': string;
+      'webAudio': () => HTMLElement;
+    }
+
+    interface WebAudioVisualizerShader {
+      'type': string;
+    }
+
+    interface WebAudioVisualizer {
+      'connect': (context: AudioContext, destination: any) => this;
+      'for': string;
+      'height': number;
+      'renderer': AnalyserNode;
+      'size': number;
+      'smoothing': number;
+      'type': string;
+      'width': number;
+    }
+
+    interface WebAudio {
+      'autoplay': Boolean;
+      'is_prepared': () => Boolean;
+      'midi': Boolean;
+      'name': string;
+      'source': (name: any) => string;
     }
   }
 
@@ -1107,6 +1178,22 @@ declare global {
     };
     
 
+    interface HTMLStellar360ImageElement extends StencilComponents.Stellar360Image, HTMLStencilElement {}
+
+    var HTMLStellar360ImageElement: {
+      prototype: HTMLStellar360ImageElement;
+      new (): HTMLStellar360ImageElement;
+    };
+    
+
+    interface HTMLStellar360VideoElement extends StencilComponents.Stellar360Video, HTMLStencilElement {}
+
+    var HTMLStellar360VideoElement: {
+      prototype: HTMLStellar360VideoElement;
+      new (): HTMLStellar360VideoElement;
+    };
+    
+
     interface HTMLStellarMessageElement extends StencilComponents.StellarMessage, HTMLStencilElement {}
 
     var HTMLStellarMessageElement: {
@@ -1347,6 +1434,62 @@ declare global {
     };
     
 
+    interface HTMLWebAudioDebuggerElement extends StencilComponents.WebAudioDebugger, HTMLStencilElement {}
+
+    var HTMLWebAudioDebuggerElement: {
+      prototype: HTMLWebAudioDebuggerElement;
+      new (): HTMLWebAudioDebuggerElement;
+    };
+    
+
+    interface HTMLWebAudioEffectElement extends StencilComponents.WebAudioEffect, HTMLStencilElement {}
+
+    var HTMLWebAudioEffectElement: {
+      prototype: HTMLWebAudioEffectElement;
+      new (): HTMLWebAudioEffectElement;
+    };
+    
+
+    interface HTMLWebAudioSequencerElement extends StencilComponents.WebAudioSequencer, HTMLStencilElement {}
+
+    var HTMLWebAudioSequencerElement: {
+      prototype: HTMLWebAudioSequencerElement;
+      new (): HTMLWebAudioSequencerElement;
+    };
+    
+
+    interface HTMLWebAudioSourceElement extends StencilComponents.WebAudioSource, HTMLStencilElement {}
+
+    var HTMLWebAudioSourceElement: {
+      prototype: HTMLWebAudioSourceElement;
+      new (): HTMLWebAudioSourceElement;
+    };
+    
+
+    interface HTMLWebAudioVisualizerShaderElement extends StencilComponents.WebAudioVisualizerShader, HTMLStencilElement {}
+
+    var HTMLWebAudioVisualizerShaderElement: {
+      prototype: HTMLWebAudioVisualizerShaderElement;
+      new (): HTMLWebAudioVisualizerShaderElement;
+    };
+    
+
+    interface HTMLWebAudioVisualizerElement extends StencilComponents.WebAudioVisualizer, HTMLStencilElement {}
+
+    var HTMLWebAudioVisualizerElement: {
+      prototype: HTMLWebAudioVisualizerElement;
+      new (): HTMLWebAudioVisualizerElement;
+    };
+    
+
+    interface HTMLWebAudioElement extends StencilComponents.WebAudio, HTMLStencilElement {}
+
+    var HTMLWebAudioElement: {
+      prototype: HTMLWebAudioElement;
+      new (): HTMLWebAudioElement;
+    };
+    
+
   namespace JSX {
     interface Element {}
     export interface IntrinsicElements {
@@ -1392,6 +1535,8 @@ declare global {
     'stellar-layout': JSXElements.StellarLayoutAttributes;
     'stellar-list': JSXElements.StellarListAttributes;
     'stellar-markdown': JSXElements.StellarMarkdownAttributes;
+    'stellar-360-image': JSXElements.Stellar360ImageAttributes;
+    'stellar-360-video': JSXElements.Stellar360VideoAttributes;
     'stellar-message': JSXElements.StellarMessageAttributes;
     'stellar-modal-controller': JSXElements.StellarModalControllerAttributes;
     'stellar-modal': JSXElements.StellarModalAttributes;
@@ -1422,6 +1567,13 @@ declare global {
     'stellar-tooltip': JSXElements.StellarTooltipAttributes;
     'stellar-unit': JSXElements.StellarUnitAttributes;
     'stellar-video': JSXElements.StellarVideoAttributes;
+    'web-audio-debugger': JSXElements.WebAudioDebuggerAttributes;
+    'web-audio-effect': JSXElements.WebAudioEffectAttributes;
+    'web-audio-sequencer': JSXElements.WebAudioSequencerAttributes;
+    'web-audio-source': JSXElements.WebAudioSourceAttributes;
+    'web-audio-visualizer-shader': JSXElements.WebAudioVisualizerShaderAttributes;
+    'web-audio-visualizer': JSXElements.WebAudioVisualizerAttributes;
+    'web-audio': JSXElements.WebAudioAttributes;
     }
   }
 
@@ -1823,6 +1975,14 @@ declare global {
       'src'?: string;
     }
 
+    export interface Stellar360ImageAttributes extends HTMLAttributes {
+      'src'?: string;
+    }
+
+    export interface Stellar360VideoAttributes extends HTMLAttributes {
+      'src'?: string;
+    }
+
     export interface StellarMessageAttributes extends HTMLAttributes {
       'closable'?: boolean;
       'name'?: string;
@@ -2125,6 +2285,57 @@ declare global {
       'preload'?: string;
       'width'?: number;
     }
+
+    export interface WebAudioDebuggerAttributes extends HTMLAttributes {
+      'count'?: number;
+    }
+
+    export interface WebAudioEffectAttributes extends HTMLAttributes {
+      'axis'?: string;
+      'method'?: string;
+      'midicontroller'?: number;
+      'responds'?: string;
+      'type'?: string;
+      'use'?: string;
+      'value'?: number;
+    }
+
+    export interface WebAudioSequencerAttributes extends HTMLAttributes {
+      'autoplay'?: boolean;
+      'custom'?: Function;
+      'name'?: string;
+      'taps'?: number;
+      'tempo'?: number;
+    }
+
+    export interface WebAudioSourceAttributes extends HTMLAttributes {
+      'effectsvolume'?: number;
+      'inert'?: boolean;
+      'midichannel'?: number;
+      'midikey'?: number;
+      'name'?: string;
+      'src'?: string;
+    }
+
+    export interface WebAudioVisualizerShaderAttributes extends HTMLAttributes {
+      'type'?: string;
+    }
+
+    export interface WebAudioVisualizerAttributes extends HTMLAttributes {
+      'for'?: string;
+      'height'?: number;
+      'renderer'?: AnalyserNode;
+      'size'?: number;
+      'smoothing'?: number;
+      'type'?: string;
+      'width'?: number;
+    }
+
+    export interface WebAudioAttributes extends HTMLAttributes {
+      'autoplay'?: Boolean;
+      'midi'?: Boolean;
+      'name'?: string;
+    }
   }
 
   interface HTMLElementTagNameMap {
@@ -2170,6 +2381,8 @@ declare global {
     'stellar-layout': HTMLStellarLayoutElement
     'stellar-list': HTMLStellarListElement
     'stellar-markdown': HTMLStellarMarkdownElement
+    'stellar-360-image': HTMLStellar360ImageElement
+    'stellar-360-video': HTMLStellar360VideoElement
     'stellar-message': HTMLStellarMessageElement
     'stellar-modal-controller': HTMLStellarModalControllerElement
     'stellar-modal': HTMLStellarModalElement
@@ -2200,6 +2413,13 @@ declare global {
     'stellar-tooltip': HTMLStellarTooltipElement
     'stellar-unit': HTMLStellarUnitElement
     'stellar-video': HTMLStellarVideoElement
+    'web-audio-debugger': HTMLWebAudioDebuggerElement
+    'web-audio-effect': HTMLWebAudioEffectElement
+    'web-audio-sequencer': HTMLWebAudioSequencerElement
+    'web-audio-source': HTMLWebAudioSourceElement
+    'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement
+    'web-audio-visualizer': HTMLWebAudioVisualizerElement
+    'web-audio': HTMLWebAudioElement
   }
 
   interface ElementTagNameMap {
@@ -2245,6 +2465,8 @@ declare global {
     'stellar-layout': HTMLStellarLayoutElement;
     'stellar-list': HTMLStellarListElement;
     'stellar-markdown': HTMLStellarMarkdownElement;
+    'stellar-360-image': HTMLStellar360ImageElement;
+    'stellar-360-video': HTMLStellar360VideoElement;
     'stellar-message': HTMLStellarMessageElement;
     'stellar-modal-controller': HTMLStellarModalControllerElement;
     'stellar-modal': HTMLStellarModalElement;
@@ -2275,6 +2497,13 @@ declare global {
     'stellar-tooltip': HTMLStellarTooltipElement;
     'stellar-unit': HTMLStellarUnitElement;
     'stellar-video': HTMLStellarVideoElement;
+    'web-audio-debugger': HTMLWebAudioDebuggerElement;
+    'web-audio-effect': HTMLWebAudioEffectElement;
+    'web-audio-sequencer': HTMLWebAudioSequencerElement;
+    'web-audio-source': HTMLWebAudioSourceElement;
+    'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement;
+    'web-audio-visualizer': HTMLWebAudioVisualizerElement;
+    'web-audio': HTMLWebAudioElement;
   }
 }
 declare global { namespace JSX { interface StencilJSX {} } }

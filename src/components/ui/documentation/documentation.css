@@ -1,0 +1,19 @@
+stellar-documentation {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+stellar-documentation .preview {
+  background: var(--gray0);
+  padding: 5rem 3rem;
+}
+
+stellar-documentation stellar-code-block > div {
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+stellar-documentation header {
+  background: white;
+}

@@ -1,0 +1,9 @@
+stellar-360-video {
+  display: block;
+}
+
+stellar-360-video canvas {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+}

@@ -1,0 +1,27 @@
+# stellar-image
+
+
+
+<!-- Auto Generated Below -->
+
+
+## Properties
+
+| Property  | Attribute | Description | Type     |
+| --------- | --------- | ----------- | -------- |
+| `bg`      | `bg`      |             | `string` |
+| `height`  | `height`  |             | `number` |
+| `preload` | `preload` |             | `string` |
+| `width`   | `width`   |             | `number` |
+
+
+## Methods
+
+| Method   | Description |
+| -------- | ----------- |
+| `medium` |             |
+
+
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

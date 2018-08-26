@@ -883,7 +883,7 @@
     },
     {
       "tag": "stellar-docs-header",
-      "readme": "",
+      "readme": "# stellar-docs-header\n\n\n",
       "usage": {},
       "props": [
         {
@@ -941,7 +941,7 @@
     },
     {
       "tag": "stellar-docs-navigation",
-      "readme": "",
+      "readme": "# stellar-docs-navigation\n\n\n",
       "usage": {},
       "props": [],
       "methods": [],

@@ -1,0 +1,70 @@
+stellar-quick-actions {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  transition: width 0.35s var(--ease) 0s;
+  padding-top: 40px;
+  width: 50px;
+  height: 100px;
+  overflow: hidden;
+}
+
+stellar-quick-actions > .wrap {
+  display: flex;
+  transform: translate3d(calc(-100% + 50px), 0, 0);
+  transition: all 0.35s var(--ease) 0s;
+  width: calc(var(--shelf-width) + 20px);
+}
+
+stellar-quick-actions > .wrap > .actions {
+  display: flex;
+  align-items: center;
+  transition: all 0.35s var(--ease) 0s;
+  background: white;
+  padding: 9px 12px;
+}
+
+stellar-quick-actions > .wrap > .actions > * {
+  margin-left: 12px;
+}
+
+stellar-quick-actions > .wrap > .button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  outline: 0;
+  border: 0;
+  border-radius: 0 500px 500px 0;
+  background-color: var(--blue90);
+  padding-right: 15px;
+  width: 50px;
+  height: 58px;
+}
+
+stellar-quick-actions > .wrap > .button:hover {
+  background-color: var(--blue);
+}
+
+stellar-quick-actions > .wrap > .button > .chevron {
+  transform: rotate(-180deg);
+  transition: all 200ms var(--ease) 0s;
+  color: white;
+}
+
+/* Open State */
+
+stellar-quick-actions[open] {
+  width: calc(var(--shelf-width) + 20px);
+}
+
+stellar-quick-actions[open] > .wrap {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+stellar-quick-actions[open] > .wrap > .button > .chevron {
+  transform: rotate(0deg);
+}

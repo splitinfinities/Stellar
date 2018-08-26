@@ -1,0 +1,152 @@
+stellar-color-picker {
+  display: block;
+  width: 34px;
+  height: 76px;
+  background: var(--selected-color, var(--red5));
+}
+
+stellar-color-picker .wrap {
+  width: 34px;
+  height: 76px;
+}
+
+stellar-color-picker .placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 200ms var(--ease, ease-out) 100ms, width 200ms var(--ease, ease-out) 100ms, z-index 200ms var(--ease, ease-out) 100ms;
+  opacity: 1;
+  z-index: 0;
+  background: white;
+  width: 38px;
+  height: 76px;
+  border: 1px solid var(--gray1);
+}
+
+stellar-color-picker .placeholder[data-selected="true"] {
+  opacity: 1;
+  z-index: 9;
+}
+
+stellar-color-picker button {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  transition: all 400ms var(--ease, ease-out) 100ms;
+  opacity: 0;
+  border: 0;
+  width: 38px;
+  height: 76px;
+  border: 2px solid rgba(0,0,0,0.2);
+}
+
+stellar-color-picker button.current {
+  position: relative;
+  border: 2px solid var(--gray2);
+  background: var(--white);
+  overflow: hidden;
+}
+
+stellar-color-picker button.current::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: -16px;
+  transform: rotate(-45deg);
+  background: var(--red);
+  width: 60px;
+  height: 4px;
+}
+
+stellar-color-picker button[data-selected="true"] {
+  opacity: 1;
+  z-index: 9;
+}
+
+stellar-color-picker .wrap {
+  position: relative;
+}
+
+stellar-color-picker .wrap .placeholder {
+  opacity: 0;
+  z-index: -1;
+}
+
+stellar-color-picker .wrap:hover button {
+  opacity: 1;
+  z-index: 99;
+  transform-origin: 50% 100%;
+  height: 76px;
+}
+
+stellar-color-picker .wrap:hover button:nth-of-type(1) {
+  transform-origin: 0% 100%;
+  transform: translate3d(-52px, -60px, 0) rotate(-77deg);
+}
+
+stellar-color-picker .wrap:hover button:nth-of-type(2) {
+  transform-origin: 7.692307692% 100%;
+  transform: translate3d(-44px, -68px, 0) rotate(-63deg);
+}
+
+stellar-color-picker .wrap:hover button:nth-of-type(3) {
+  transform-origin: 15.384615384% 100%;
+  transform: translate3d(-36px, -74px, 0) rotate(-49deg);
+}
+
+stellar-color-picker .wrap:hover button:nth-of-type(4) {
+  transform-origin: 23.076923076% 100%;
+  transform: translate3d(-28px, -82px, 0) rotate(-35deg);
+}
+
+stellar-color-picker .wrap:hover button:nth-of-type(5) {
+  transform-origin: 30.769230768% 100%;
+  transform: translate3d(-20px, -86px, 0) rotate(-21deg);
+}
+
+stellar-color-picker .wrap:hover button:nth-of-type(6) {
+  transform-origin: 38.46153846% 100%;
+  transform: translate3d(-12px, -92px, 0) rotate(-7deg);
+}
+
+stellar-color-picker .wrap:hover button:nth-of-type(7) {
+  transform-origin: 53.846153844% 100%;
+  transform: translate3d(0px, -96px, 0) rotate(0deg);
+}
+
+stellar-color-picker .wrap:hover button:nth-of-type(8) {
+  transform-origin: 61.538461536% 100%;
+  transform: translate3d(12px, -92px, 0) rotate(7deg);
+}
+
+stellar-color-picker .wrap:hover button:nth-of-type(9) {
+  transform-origin: 69.230769228% 100%;
+  transform: translate3d(20px, -86px, 0) rotate(21deg);
+}
+
+stellar-color-picker .wrap:hover button:nth-of-type(10) {
+  transform-origin: 76.92307692% 100%;
+  transform: translate3d(28px, -82px, 0) rotate(35deg);
+}
+
+stellar-color-picker .wrap:hover button:nth-of-type(11) {
+  transform-origin: 84.615384612% 100%;
+  transform: translate3d(36px, -74px, 0) rotate(49deg);
+}
+
+stellar-color-picker .wrap:hover button:nth-of-type(12) {
+  transform-origin: 92.307692304% 100%;
+  transform: translate3d(44px, -68px, 0) rotate(63deg);
+}
+
+stellar-color-picker .wrap:hover button:nth-of-type(13) {
+  transform: translate3d(52px, -60px, 0) rotate(77deg);
+  transform-origin: 100% 100%;
+}
+
+stellar-color-picker .wrap stellar-input {
+  transform: translate3d(0px, 0px, 0);
+  opacity: 1;
+  box-shadow: 0 0 0 4px white;
+}

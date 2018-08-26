@@ -1,0 +1,127 @@
+stellar-grid {
+  display: block;
+
+  --width: var(--grid-width, 200px);
+}
+
+stellar-grid + stellar-grid > .grid {
+  margin-top: 2rem;
+}
+
+stellar-grid + stellar-grid[compact] > .grid {
+  margin-top: 1rem;
+}
+
+stellar-grid + stellar-grid[padding] > .grid {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+stellar-grid > .grid {
+  display: flex;
+  display: grid;
+  flex-wrap: wrap;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(var(--width), 1fr));
+}
+
+stellar-grid[compact] > .grid {
+  grid-gap: 1rem;
+}
+
+stellar-grid[padding] > .grid {
+  padding: 2rem;
+}
+
+stellar-grid[compact][padding] > .grid {
+  padding: 1rem;
+}
+
+/* Non-Responsive Grid */
+stellar-grid[responsive="false"] > .grid {
+  grid-template-columns: repeat(auto-fit, minmax(var(--width), 1fr));
+}
+
+stellar-grid[responsive="false"][cols="1"] > .grid {
+  grid-template-columns: 1fr;
+}
+
+stellar-grid[responsive="false"][cols="2"] > .grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+stellar-grid[responsive="false"][cols="3"] > .grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+stellar-grid[responsive="false"][cols="4"] > .grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+stellar-grid[responsive="false"][cols="5"] > .grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+stellar-grid[responsive="false"][cols="6"] > .grid {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* Responsive Grid */
+stellar-grid[data-eq-state$="small"] > .grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+stellar-grid[data-eq-state$="small"][cols="3"] > .grid,
+stellar-grid[data-eq-state$="small"][cols="5"] > .grid,
+stellar-grid[data-eq-state$="small"][cols="6"] > .grid {
+  grid-template-columns: repeat(2, minmax(calc(50% - 30px), 1fr));
+}
+
+stellar-grid[data-eq-state$="medium"][cols="2"] > .grid,
+stellar-grid[data-eq-state$="medium"][cols="3"] > .grid,
+stellar-grid[data-eq-state$="medium"][cols="4"] > .grid {
+  grid-template-columns: repeat(2, minmax(calc(50% - 30px), 1fr));
+}
+
+stellar-grid[data-eq-state$="medium"][cols="5"] > .grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+stellar-grid[data-eq-state$="large"][cols="2"] > .grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+stellar-grid[data-eq-state$="large"][cols="4"] > .grid,
+stellar-grid[data-eq-state$="large"][cols="3"] > .grid {
+  grid-template-columns: repeat(3, minmax(calc(33.333333% - 30px), 1fr));
+}
+
+stellar-grid[data-eq-state$="large"][cols="5"] > .grid,
+stellar-grid[data-eq-state$="large"][cols="6"] > .grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+stellar-grid[data-eq-state$="massive"][cols="2"] > .grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+stellar-grid[data-eq-state$="massive"][cols="3"] > .grid {
+  grid-template-columns: repeat(3, minmax(calc(33.333333% - 30px), 1fr));
+}
+
+stellar-grid[data-eq-state$="massive"][cols="4"] > .grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+stellar-grid[data-eq-state$="massive"][cols="5"] > .grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+stellar-grid[data-eq-state$="massive"][cols="6"] > .grid {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+
+stellar-grid .grid stellar-card + stellar-card {
+  margin: 0;
+}
