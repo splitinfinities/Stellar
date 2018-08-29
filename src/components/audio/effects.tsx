@@ -44,7 +44,7 @@ const responsiveTo = function (effect, effectWC) {
 };
 
 const handleMouseMove = function (event) {
-	var dot, eventDoc, doc, body, pageX, pageY;
+	var eventDoc, doc, body;
 
 	event = event || window.event; // IE-ism
 
@@ -64,7 +64,7 @@ const handleMouseMove = function (event) {
 		(doc && doc.clientTop  || body && body.clientTop  || 0 );
 	}
 
-	window.mousePos = {
+	return {
 		toTop: event.pageY,
 		toRight: (window.innerWidth - event.pageX),
 		toBottom: (window.innerHeight - event.pageY),
@@ -73,8 +73,8 @@ const handleMouseMove = function (event) {
 }
 
 const getMousePosition = function () {
-	if (window.mousePos) {
-		var event = new CustomEvent('mouse-update', { detail: window.mousePos });
+	if (window["mousePos"]) {
+		var event = new CustomEvent('mouse-update', { detail: window["mousePos"] });
 		document.dispatchEvent(event);
 	}
 }
@@ -105,8 +105,8 @@ const biquadResponsiveToMouse = function (effect, effectWC) {
 	}, false);
 
 	(function() {
-		if (!window.mouseInitialized) {
-			window.mouseInitialized = true;
+		if (!window["mouseInitialized"]) {
+			window["mouseInitialized"] = true;
 
 			document.onmousemove = handleMouseMove;
 			setInterval(getMousePosition, 100); // setInterval repeats every X ms

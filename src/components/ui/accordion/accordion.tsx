@@ -1,6 +1,6 @@
 import { Component, Element, Prop, State, Method } from '@stencil/core'
 import properties from 'css-custom-properties'
-import { blurringEase } from '../../global/helpers';
+import { blurringEase } from '../../../global/helpers';
 
 @Component({
   tag: 'stellar-accordion',
@@ -48,7 +48,7 @@ export class Accordion {
 
   attachObserver() {
     // Start observing the target node for configured mutations
-    this.observer.observe(this.element.shadowRoot, { childList: true, subtree: true });
+    this.observer.observe(this.element, { childList: true, subtree: true });
   }
 
   componentWillUnload() {

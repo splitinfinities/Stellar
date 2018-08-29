@@ -1,6 +1,6 @@
 import { Component, Element, Event, EventEmitter, Method, Prop, State, Watch } from '@stencil/core'
 import { Swiper }  from './vendor/swiper.js'
-import { blurringEase } from '../../global/helpers';
+import { blurringEase } from '../../../global/helpers';
 
 @Component({
   tag: 'stellar-slides',

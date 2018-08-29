@@ -1,0 +1,17 @@
+web-audio-debugger {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 160px;
+  height: 300px;
+  overflow: auto;
+  text-align: right;
+  padding: 1rem;
+  border: 2px solid black;
+}
+
+web-audio-debugger p {
+  font-size: 12px;
+  margin: 0 0 1em 0;
+}

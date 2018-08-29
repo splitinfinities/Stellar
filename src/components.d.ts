@@ -33,20 +33,222 @@ declare global {
 
   namespace StencilComponents {
 
-    interface StellarAccordion {
-      'label': string;
+    interface WebAudioDebugger {
+      'addHistory': (string: History) => void;
+      'count': number;
+    }
+
+    interface WebAudioEffect {
+      'attachEffect': (context: any, source: any) => string;
+      'axis': string;
+      'method': string;
+      'midicontroller': number;
+      'responds': string;
+      'type': string;
+      'use': string;
+      'value': number;
+    }
+
+    interface WebAudioSequencer {
+      'autoplay': boolean;
+      'custom': Function;
       'name': string;
-      'open': boolean;
-      'refresh': () => void;
-      'tight': boolean;
+      'play': () => void;
+      'stop': () => void;
+      'taps': number;
+      'tempo': number;
+    }
+
+    interface WebAudioSource {
+      'assignBuffer': (webAudio: any, buffer: any) => void;
+      'effectsvolume': number;
+      'gain': (place?: string) => GainNode;
+      'getBuffer': () => AudioBuffer;
+      'getDuration': () => number;
+      'inert': boolean;
+      'midichannel': number;
+      'midikey': number;
+      'name': string;
+      'pause': () => void;
+      'play': () => void;
+      'playing': boolean;
+      'prepare': () => void;
+      'skipTo': (time: any) => void;
+      'src': string;
+      'stop': () => void;
+      'toggle': () => void;
+      'webAudio': () => HTMLElement;
+    }
+
+    interface WebAudioVisualizerShader {
+      'type': string;
+    }
+
+    interface WebAudioVisualizer {
+      'color': string;
+      'connect': (context: AudioContext, destination: any) => this;
+      'for': string;
+      'height': number;
+      'renderer': AnalyserNode;
+      'size': number;
+      'smoothing': number;
+      'type': string;
+      'width': number;
+    }
+
+    interface WebAudio {
+      'autoplay': Boolean;
+      'connect_the_world': () => Promise<boolean>;
+      'get_context': () => AudioContext;
+      'is_prepared': () => Boolean;
+      'midi': Boolean;
+      'name': string;
+      'source': (name: any) => any;
+    }
+
+    interface StellarAssetLibrary {
+
+    }
+
+    interface StellarColorLibrary {
+
+    }
+
+    interface StellarMarkdown {
+      'codeString': string;
+      'src': string;
+    }
+
+    interface StellarScatter {
+      'colors': boolean;
+      'float': boolean;
+      'max': number;
+      'min': number;
+      'scatter': number;
+      'sizes': boolean;
+    }
+
+    interface StellarStarscape {
+
+    }
+
+    interface StellarStory {
+      'target': string;
+    }
+
+    interface StellarStripe {
+      'connect': () => void;
+      'getToken': () => Promise<boolean>;
+      'name': string;
+      'setError': (error: string) => void;
+      'token': string;
+    }
+
+    interface StellarThemePreview {
+      'base': string;
+      'complement': string;
+    }
+
+    interface StellarUnit {
+      'decimals': number;
+      'from': string;
+      'round': boolean;
+      'to': string;
+      'value': number;
+    }
+
+    interface Stellar360Image {
+      'height': number;
+      'src': string;
+      'width': number;
+    }
+
+    interface Stellar360Video {
+      'height': number;
+      'src': string;
+      'width': number;
+    }
+
+    interface StellarImage {
+      'bg': string;
+      'height': number;
+      'medium': () => any;
+      'nozoom': boolean;
+      'preload': string;
+      'width': number;
+    }
+
+    interface StellarInterviewLine {
+      'complement': boolean;
+      'in': number;
+      'out': number;
+    }
+
+    interface StellarInterview {
+      'aspectRatio': number;
+      'debug': boolean;
+      'height': number;
+      'label': string;
+      'pause': () => void;
+      'play': () => void;
+      'playing': boolean;
+      'skipTo': (time: number) => void;
+      'src': string;
+      'toggle': () => void;
+      'width': number;
+    }
+
+    interface SkeletonImg {
+      'height': number;
+      'icon': boolean;
+      'loading': boolean;
+      'width': number;
+    }
+
+    interface SkeletonText {
+      'as': string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p';
+      'loading': boolean;
+      'width': number;
+    }
+
+    interface StellarVideo {
+      'autoplay': boolean;
+      'controls': boolean;
+      'height': number;
+      'muted': boolean;
+      'overlay': boolean;
+      'playsinline': boolean;
+      'poster': string;
+      'preload': string;
+      'width': number;
     }
 
     interface StellarAnimateText {
       'method': string|"glitch"|"lettering"|"weight"|"fade";
     }
 
-    interface StellarAssetLibrary {
+    interface StellarBlur {
+      'horizontal': number;
+      'setBlurFilter': () => void;
+      'vertical': number;
+    }
 
+    interface StellarParallaxSection {
+      'layer': number;
+      'percentage': number;
+      'speed': number;
+    }
+
+    interface StellarParallax {
+      'reload': () => void;
+    }
+
+    interface StellarAccordion {
+      'label': string;
+      'name': string;
+      'open': boolean;
+      'refresh': () => void;
+      'tight': boolean;
     }
 
     interface StellarAsset {
@@ -67,12 +269,6 @@ declare global {
       'shape': "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
       'size': string;
       'src': string;
-    }
-
-    interface StellarBlur {
-      'horizontal': number;
-      'setBlurFilter': () => void;
-      'vertical': number;
     }
 
     interface StellarBreadcrumb {
@@ -235,10 +431,6 @@ declare global {
       'setCode': (code: any) => void;
     }
 
-    interface StellarColorLibrary {
-
-    }
-
     interface StellarColorPicker {
       'value': string;
     }
@@ -358,14 +550,6 @@ declare global {
       'value': number;
     }
 
-    interface StellarImage {
-      'bg': string;
-      'height': number;
-      'medium': () => any;
-      'preload': string;
-      'width': number;
-    }
-
     interface StellarInput {
       'autocomplete': string;
       'autofocus': boolean;
@@ -449,19 +633,6 @@ declare global {
       'updateConfig': (config: any) => void;
     }
 
-    interface StellarMarkdown {
-      'codeString': string;
-      'src': string;
-    }
-
-    interface Stellar360Image {
-      'src': string;
-    }
-
-    interface Stellar360Video {
-      'src': string;
-    }
-
     interface StellarMessage {
       'closable': boolean;
       'name': string;
@@ -506,21 +677,20 @@ declare global {
       'url': any;
     }
 
-    interface StellarParallaxSection {
-      'layer': number;
-      'percentage': number;
-      'speed': number;
-    }
-
-    interface StellarParallax {
-      'reload': () => void;
-    }
-
     interface StellarProgress {
+      'blurable': boolean;
+      /**
+       * Allows the progress bar to be clicked on, to help the user to navigate through the progressing content.
+       */
+      'editable': boolean;
       /**
        * Sets the maximum cap for steps in the progress bar
        */
       'max': number;
+      /**
+       * eliminates the easing in the css so you can apply value updates without jitter.
+       */
+      'noease': boolean;
       /**
        * Renders if this element is slender or not
        */
@@ -533,15 +703,6 @@ declare global {
 
     interface StellarQuickActions {
       'open': boolean;
-    }
-
-    interface StellarScatter {
-      'colors': boolean;
-      'float': boolean;
-      'max': number;
-      'min': number;
-      'scatter': number;
-      'sizes': boolean;
     }
 
     interface StellarSelect {
@@ -560,19 +721,6 @@ declare global {
       'size': string;
       'validate': () => { errors?: any; valid?: boolean; level?: number; };
       'value': any;
-    }
-
-    interface SkeletonImg {
-      'height': number;
-      'icon': boolean;
-      'loading': boolean;
-      'width': number;
-    }
-
-    interface SkeletonText {
-      'as': string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p';
-      'loading': boolean;
-      'width': number;
     }
 
     interface StellarSlide {
@@ -658,10 +806,6 @@ declare global {
       'watchSlidesVisibility': boolean;
     }
 
-    interface StellarStarscape {
-
-    }
-
     interface StellarStep {
       'disabled': boolean;
       'href': string;
@@ -672,14 +816,6 @@ declare global {
       'contents': () => NodeListOf<any>;
       'name': string;
       'steps': () => NodeListOf<any>;
-    }
-
-    interface StellarStripe {
-      'connect': () => void;
-      'getToken': () => Promise<boolean>;
-      'name': string;
-      'setError': (error: string) => void;
-      'token': string;
     }
 
     interface StellarSwitch {
@@ -719,11 +855,6 @@ declare global {
       'textColor': string;
     }
 
-    interface StellarThemePreview {
-      'base': string;
-      'complement': string;
-    }
-
     interface StellarToggleOption {
       'checked': boolean;
       'default': string;
@@ -756,97 +887,198 @@ declare global {
     interface StellarTooltip {
       'align': "left"|"center"|"right";
     }
-
-    interface StellarUnit {
-      'decimals': number;
-      'from': string;
-      'round': boolean;
-      'to': string;
-      'value': number;
-    }
-
-    interface StellarVideo {
-      'autoplay': boolean;
-      'controls': boolean;
-      'height': number;
-      'muted': boolean;
-      'overlay': boolean;
-      'playsinline': boolean;
-      'poster': string;
-      'preload': string;
-      'width': number;
-    }
-
-    interface WebAudioDebugger {
-      'addHistory': (string: History) => void;
-      'count': number;
-    }
-
-    interface WebAudioEffect {
-      'attachEffect': (context: any, source: any) => string;
-      'axis': string;
-      'method': string;
-      'midicontroller': number;
-      'responds': string;
-      'type': string;
-      'use': string;
-      'value': number;
-    }
-
-    interface WebAudioSequencer {
-      'autoplay': boolean;
-      'custom': Function;
-      'name': string;
-      'play': () => void;
-      'stop': () => void;
-      'taps': number;
-      'tempo': number;
-    }
-
-    interface WebAudioSource {
-      'assignBuffer': (webAudio: any, buffer: any) => void;
-      'effectsvolume': number;
-      'gain': (place?: string) => GainNode;
-      'getBuffer': () => AudioBuffer;
-      'inert': boolean;
-      'midichannel': number;
-      'midikey': number;
-      'name': string;
-      'play': () => void;
-      'src': string;
-      'webAudio': () => HTMLElement;
-    }
-
-    interface WebAudioVisualizerShader {
-      'type': string;
-    }
-
-    interface WebAudioVisualizer {
-      'connect': (context: AudioContext, destination: any) => this;
-      'for': string;
-      'height': number;
-      'renderer': AnalyserNode;
-      'size': number;
-      'smoothing': number;
-      'type': string;
-      'width': number;
-    }
-
-    interface WebAudio {
-      'autoplay': Boolean;
-      'is_prepared': () => Boolean;
-      'midi': Boolean;
-      'name': string;
-      'source': (name: any) => string;
-    }
   }
 
 
-    interface HTMLStellarAccordionElement extends StencilComponents.StellarAccordion, HTMLStencilElement {}
+    interface HTMLWebAudioDebuggerElement extends StencilComponents.WebAudioDebugger, HTMLStencilElement {}
 
-    var HTMLStellarAccordionElement: {
-      prototype: HTMLStellarAccordionElement;
-      new (): HTMLStellarAccordionElement;
+    var HTMLWebAudioDebuggerElement: {
+      prototype: HTMLWebAudioDebuggerElement;
+      new (): HTMLWebAudioDebuggerElement;
+    };
+    
+
+    interface HTMLWebAudioEffectElement extends StencilComponents.WebAudioEffect, HTMLStencilElement {}
+
+    var HTMLWebAudioEffectElement: {
+      prototype: HTMLWebAudioEffectElement;
+      new (): HTMLWebAudioEffectElement;
+    };
+    
+
+    interface HTMLWebAudioSequencerElement extends StencilComponents.WebAudioSequencer, HTMLStencilElement {}
+
+    var HTMLWebAudioSequencerElement: {
+      prototype: HTMLWebAudioSequencerElement;
+      new (): HTMLWebAudioSequencerElement;
+    };
+    
+
+    interface HTMLWebAudioSourceElement extends StencilComponents.WebAudioSource, HTMLStencilElement {}
+
+    var HTMLWebAudioSourceElement: {
+      prototype: HTMLWebAudioSourceElement;
+      new (): HTMLWebAudioSourceElement;
+    };
+    
+
+    interface HTMLWebAudioVisualizerShaderElement extends StencilComponents.WebAudioVisualizerShader, HTMLStencilElement {}
+
+    var HTMLWebAudioVisualizerShaderElement: {
+      prototype: HTMLWebAudioVisualizerShaderElement;
+      new (): HTMLWebAudioVisualizerShaderElement;
+    };
+    
+
+    interface HTMLWebAudioVisualizerElement extends StencilComponents.WebAudioVisualizer, HTMLStencilElement {}
+
+    var HTMLWebAudioVisualizerElement: {
+      prototype: HTMLWebAudioVisualizerElement;
+      new (): HTMLWebAudioVisualizerElement;
+    };
+    
+
+    interface HTMLWebAudioElement extends StencilComponents.WebAudio, HTMLStencilElement {}
+
+    var HTMLWebAudioElement: {
+      prototype: HTMLWebAudioElement;
+      new (): HTMLWebAudioElement;
+    };
+    
+
+    interface HTMLStellarAssetLibraryElement extends StencilComponents.StellarAssetLibrary, HTMLStencilElement {}
+
+    var HTMLStellarAssetLibraryElement: {
+      prototype: HTMLStellarAssetLibraryElement;
+      new (): HTMLStellarAssetLibraryElement;
+    };
+    
+
+    interface HTMLStellarColorLibraryElement extends StencilComponents.StellarColorLibrary, HTMLStencilElement {}
+
+    var HTMLStellarColorLibraryElement: {
+      prototype: HTMLStellarColorLibraryElement;
+      new (): HTMLStellarColorLibraryElement;
+    };
+    
+
+    interface HTMLStellarMarkdownElement extends StencilComponents.StellarMarkdown, HTMLStencilElement {}
+
+    var HTMLStellarMarkdownElement: {
+      prototype: HTMLStellarMarkdownElement;
+      new (): HTMLStellarMarkdownElement;
+    };
+    
+
+    interface HTMLStellarScatterElement extends StencilComponents.StellarScatter, HTMLStencilElement {}
+
+    var HTMLStellarScatterElement: {
+      prototype: HTMLStellarScatterElement;
+      new (): HTMLStellarScatterElement;
+    };
+    
+
+    interface HTMLStellarStarscapeElement extends StencilComponents.StellarStarscape, HTMLStencilElement {}
+
+    var HTMLStellarStarscapeElement: {
+      prototype: HTMLStellarStarscapeElement;
+      new (): HTMLStellarStarscapeElement;
+    };
+    
+
+    interface HTMLStellarStoryElement extends StencilComponents.StellarStory, HTMLStencilElement {}
+
+    var HTMLStellarStoryElement: {
+      prototype: HTMLStellarStoryElement;
+      new (): HTMLStellarStoryElement;
+    };
+    
+
+    interface HTMLStellarStripeElement extends StencilComponents.StellarStripe, HTMLStencilElement {}
+
+    var HTMLStellarStripeElement: {
+      prototype: HTMLStellarStripeElement;
+      new (): HTMLStellarStripeElement;
+    };
+    
+
+    interface HTMLStellarThemePreviewElement extends StencilComponents.StellarThemePreview, HTMLStencilElement {}
+
+    var HTMLStellarThemePreviewElement: {
+      prototype: HTMLStellarThemePreviewElement;
+      new (): HTMLStellarThemePreviewElement;
+    };
+    
+
+    interface HTMLStellarUnitElement extends StencilComponents.StellarUnit, HTMLStencilElement {}
+
+    var HTMLStellarUnitElement: {
+      prototype: HTMLStellarUnitElement;
+      new (): HTMLStellarUnitElement;
+    };
+    
+
+    interface HTMLStellar360ImageElement extends StencilComponents.Stellar360Image, HTMLStencilElement {}
+
+    var HTMLStellar360ImageElement: {
+      prototype: HTMLStellar360ImageElement;
+      new (): HTMLStellar360ImageElement;
+    };
+    
+
+    interface HTMLStellar360VideoElement extends StencilComponents.Stellar360Video, HTMLStencilElement {}
+
+    var HTMLStellar360VideoElement: {
+      prototype: HTMLStellar360VideoElement;
+      new (): HTMLStellar360VideoElement;
+    };
+    
+
+    interface HTMLStellarImageElement extends StencilComponents.StellarImage, HTMLStencilElement {}
+
+    var HTMLStellarImageElement: {
+      prototype: HTMLStellarImageElement;
+      new (): HTMLStellarImageElement;
+    };
+    
+
+    interface HTMLStellarInterviewLineElement extends StencilComponents.StellarInterviewLine, HTMLStencilElement {}
+
+    var HTMLStellarInterviewLineElement: {
+      prototype: HTMLStellarInterviewLineElement;
+      new (): HTMLStellarInterviewLineElement;
+    };
+    
+
+    interface HTMLStellarInterviewElement extends StencilComponents.StellarInterview, HTMLStencilElement {}
+
+    var HTMLStellarInterviewElement: {
+      prototype: HTMLStellarInterviewElement;
+      new (): HTMLStellarInterviewElement;
+    };
+    
+
+    interface HTMLSkeletonImgElement extends StencilComponents.SkeletonImg, HTMLStencilElement {}
+
+    var HTMLSkeletonImgElement: {
+      prototype: HTMLSkeletonImgElement;
+      new (): HTMLSkeletonImgElement;
+    };
+    
+
+    interface HTMLSkeletonTextElement extends StencilComponents.SkeletonText, HTMLStencilElement {}
+
+    var HTMLSkeletonTextElement: {
+      prototype: HTMLSkeletonTextElement;
+      new (): HTMLSkeletonTextElement;
+    };
+    
+
+    interface HTMLStellarVideoElement extends StencilComponents.StellarVideo, HTMLStencilElement {}
+
+    var HTMLStellarVideoElement: {
+      prototype: HTMLStellarVideoElement;
+      new (): HTMLStellarVideoElement;
     };
     
 
@@ -858,11 +1090,35 @@ declare global {
     };
     
 
-    interface HTMLStellarAssetLibraryElement extends StencilComponents.StellarAssetLibrary, HTMLStencilElement {}
+    interface HTMLStellarBlurElement extends StencilComponents.StellarBlur, HTMLStencilElement {}
 
-    var HTMLStellarAssetLibraryElement: {
-      prototype: HTMLStellarAssetLibraryElement;
-      new (): HTMLStellarAssetLibraryElement;
+    var HTMLStellarBlurElement: {
+      prototype: HTMLStellarBlurElement;
+      new (): HTMLStellarBlurElement;
+    };
+    
+
+    interface HTMLStellarParallaxSectionElement extends StencilComponents.StellarParallaxSection, HTMLStencilElement {}
+
+    var HTMLStellarParallaxSectionElement: {
+      prototype: HTMLStellarParallaxSectionElement;
+      new (): HTMLStellarParallaxSectionElement;
+    };
+    
+
+    interface HTMLStellarParallaxElement extends StencilComponents.StellarParallax, HTMLStencilElement {}
+
+    var HTMLStellarParallaxElement: {
+      prototype: HTMLStellarParallaxElement;
+      new (): HTMLStellarParallaxElement;
+    };
+    
+
+    interface HTMLStellarAccordionElement extends StencilComponents.StellarAccordion, HTMLStencilElement {}
+
+    var HTMLStellarAccordionElement: {
+      prototype: HTMLStellarAccordionElement;
+      new (): HTMLStellarAccordionElement;
     };
     
 
@@ -879,14 +1135,6 @@ declare global {
     var HTMLStellarAvatarElement: {
       prototype: HTMLStellarAvatarElement;
       new (): HTMLStellarAvatarElement;
-    };
-    
-
-    interface HTMLStellarBlurElement extends StencilComponents.StellarBlur, HTMLStencilElement {}
-
-    var HTMLStellarBlurElement: {
-      prototype: HTMLStellarBlurElement;
-      new (): HTMLStellarBlurElement;
     };
     
 
@@ -951,14 +1199,6 @@ declare global {
     var HTMLStellarCodeElement: {
       prototype: HTMLStellarCodeElement;
       new (): HTMLStellarCodeElement;
-    };
-    
-
-    interface HTMLStellarColorLibraryElement extends StencilComponents.StellarColorLibrary, HTMLStencilElement {}
-
-    var HTMLStellarColorLibraryElement: {
-      prototype: HTMLStellarColorLibraryElement;
-      new (): HTMLStellarColorLibraryElement;
     };
     
 
@@ -1122,14 +1362,6 @@ declare global {
     };
     
 
-    interface HTMLStellarImageElement extends StencilComponents.StellarImage, HTMLStencilElement {}
-
-    var HTMLStellarImageElement: {
-      prototype: HTMLStellarImageElement;
-      new (): HTMLStellarImageElement;
-    };
-    
-
     interface HTMLStellarInputElement extends StencilComponents.StellarInput, HTMLStencilElement {}
 
     var HTMLStellarInputElement: {
@@ -1167,30 +1399,6 @@ declare global {
     var HTMLStellarListElement: {
       prototype: HTMLStellarListElement;
       new (): HTMLStellarListElement;
-    };
-    
-
-    interface HTMLStellarMarkdownElement extends StencilComponents.StellarMarkdown, HTMLStencilElement {}
-
-    var HTMLStellarMarkdownElement: {
-      prototype: HTMLStellarMarkdownElement;
-      new (): HTMLStellarMarkdownElement;
-    };
-    
-
-    interface HTMLStellar360ImageElement extends StencilComponents.Stellar360Image, HTMLStencilElement {}
-
-    var HTMLStellar360ImageElement: {
-      prototype: HTMLStellar360ImageElement;
-      new (): HTMLStellar360ImageElement;
-    };
-    
-
-    interface HTMLStellar360VideoElement extends StencilComponents.Stellar360Video, HTMLStencilElement {}
-
-    var HTMLStellar360VideoElement: {
-      prototype: HTMLStellar360VideoElement;
-      new (): HTMLStellar360VideoElement;
     };
     
 
@@ -1234,22 +1442,6 @@ declare global {
     };
     
 
-    interface HTMLStellarParallaxSectionElement extends StencilComponents.StellarParallaxSection, HTMLStencilElement {}
-
-    var HTMLStellarParallaxSectionElement: {
-      prototype: HTMLStellarParallaxSectionElement;
-      new (): HTMLStellarParallaxSectionElement;
-    };
-    
-
-    interface HTMLStellarParallaxElement extends StencilComponents.StellarParallax, HTMLStencilElement {}
-
-    var HTMLStellarParallaxElement: {
-      prototype: HTMLStellarParallaxElement;
-      new (): HTMLStellarParallaxElement;
-    };
-    
-
     interface HTMLStellarProgressElement extends StencilComponents.StellarProgress, HTMLStencilElement {}
 
     var HTMLStellarProgressElement: {
@@ -1266,35 +1458,11 @@ declare global {
     };
     
 
-    interface HTMLStellarScatterElement extends StencilComponents.StellarScatter, HTMLStencilElement {}
-
-    var HTMLStellarScatterElement: {
-      prototype: HTMLStellarScatterElement;
-      new (): HTMLStellarScatterElement;
-    };
-    
-
     interface HTMLStellarSelectElement extends StencilComponents.StellarSelect, HTMLStencilElement {}
 
     var HTMLStellarSelectElement: {
       prototype: HTMLStellarSelectElement;
       new (): HTMLStellarSelectElement;
-    };
-    
-
-    interface HTMLSkeletonImgElement extends StencilComponents.SkeletonImg, HTMLStencilElement {}
-
-    var HTMLSkeletonImgElement: {
-      prototype: HTMLSkeletonImgElement;
-      new (): HTMLSkeletonImgElement;
-    };
-    
-
-    interface HTMLSkeletonTextElement extends StencilComponents.SkeletonText, HTMLStencilElement {}
-
-    var HTMLSkeletonTextElement: {
-      prototype: HTMLSkeletonTextElement;
-      new (): HTMLSkeletonTextElement;
     };
     
 
@@ -1314,14 +1482,6 @@ declare global {
     };
     
 
-    interface HTMLStellarStarscapeElement extends StencilComponents.StellarStarscape, HTMLStencilElement {}
-
-    var HTMLStellarStarscapeElement: {
-      prototype: HTMLStellarStarscapeElement;
-      new (): HTMLStellarStarscapeElement;
-    };
-    
-
     interface HTMLStellarStepElement extends StencilComponents.StellarStep, HTMLStencilElement {}
 
     var HTMLStellarStepElement: {
@@ -1335,14 +1495,6 @@ declare global {
     var HTMLStellarStepsElement: {
       prototype: HTMLStellarStepsElement;
       new (): HTMLStellarStepsElement;
-    };
-    
-
-    interface HTMLStellarStripeElement extends StencilComponents.StellarStripe, HTMLStencilElement {}
-
-    var HTMLStellarStripeElement: {
-      prototype: HTMLStellarStripeElement;
-      new (): HTMLStellarStripeElement;
     };
     
 
@@ -1386,14 +1538,6 @@ declare global {
     };
     
 
-    interface HTMLStellarThemePreviewElement extends StencilComponents.StellarThemePreview, HTMLStencilElement {}
-
-    var HTMLStellarThemePreviewElement: {
-      prototype: HTMLStellarThemePreviewElement;
-      new (): HTMLStellarThemePreviewElement;
-    };
-    
-
     interface HTMLStellarToggleOptionElement extends StencilComponents.StellarToggleOption, HTMLStencilElement {}
 
     var HTMLStellarToggleOptionElement: {
@@ -1418,87 +1562,40 @@ declare global {
     };
     
 
-    interface HTMLStellarUnitElement extends StencilComponents.StellarUnit, HTMLStencilElement {}
-
-    var HTMLStellarUnitElement: {
-      prototype: HTMLStellarUnitElement;
-      new (): HTMLStellarUnitElement;
-    };
-    
-
-    interface HTMLStellarVideoElement extends StencilComponents.StellarVideo, HTMLStencilElement {}
-
-    var HTMLStellarVideoElement: {
-      prototype: HTMLStellarVideoElement;
-      new (): HTMLStellarVideoElement;
-    };
-    
-
-    interface HTMLWebAudioDebuggerElement extends StencilComponents.WebAudioDebugger, HTMLStencilElement {}
-
-    var HTMLWebAudioDebuggerElement: {
-      prototype: HTMLWebAudioDebuggerElement;
-      new (): HTMLWebAudioDebuggerElement;
-    };
-    
-
-    interface HTMLWebAudioEffectElement extends StencilComponents.WebAudioEffect, HTMLStencilElement {}
-
-    var HTMLWebAudioEffectElement: {
-      prototype: HTMLWebAudioEffectElement;
-      new (): HTMLWebAudioEffectElement;
-    };
-    
-
-    interface HTMLWebAudioSequencerElement extends StencilComponents.WebAudioSequencer, HTMLStencilElement {}
-
-    var HTMLWebAudioSequencerElement: {
-      prototype: HTMLWebAudioSequencerElement;
-      new (): HTMLWebAudioSequencerElement;
-    };
-    
-
-    interface HTMLWebAudioSourceElement extends StencilComponents.WebAudioSource, HTMLStencilElement {}
-
-    var HTMLWebAudioSourceElement: {
-      prototype: HTMLWebAudioSourceElement;
-      new (): HTMLWebAudioSourceElement;
-    };
-    
-
-    interface HTMLWebAudioVisualizerShaderElement extends StencilComponents.WebAudioVisualizerShader, HTMLStencilElement {}
-
-    var HTMLWebAudioVisualizerShaderElement: {
-      prototype: HTMLWebAudioVisualizerShaderElement;
-      new (): HTMLWebAudioVisualizerShaderElement;
-    };
-    
-
-    interface HTMLWebAudioVisualizerElement extends StencilComponents.WebAudioVisualizer, HTMLStencilElement {}
-
-    var HTMLWebAudioVisualizerElement: {
-      prototype: HTMLWebAudioVisualizerElement;
-      new (): HTMLWebAudioVisualizerElement;
-    };
-    
-
-    interface HTMLWebAudioElement extends StencilComponents.WebAudio, HTMLStencilElement {}
-
-    var HTMLWebAudioElement: {
-      prototype: HTMLWebAudioElement;
-      new (): HTMLWebAudioElement;
-    };
-    
-
   namespace JSX {
     interface Element {}
     export interface IntrinsicElements {
-    'stellar-accordion': JSXElements.StellarAccordionAttributes;
-    'stellar-animate-text': JSXElements.StellarAnimateTextAttributes;
+    'web-audio-debugger': JSXElements.WebAudioDebuggerAttributes;
+    'web-audio-effect': JSXElements.WebAudioEffectAttributes;
+    'web-audio-sequencer': JSXElements.WebAudioSequencerAttributes;
+    'web-audio-source': JSXElements.WebAudioSourceAttributes;
+    'web-audio-visualizer-shader': JSXElements.WebAudioVisualizerShaderAttributes;
+    'web-audio-visualizer': JSXElements.WebAudioVisualizerAttributes;
+    'web-audio': JSXElements.WebAudioAttributes;
     'stellar-asset-library': JSXElements.StellarAssetLibraryAttributes;
+    'stellar-color-library': JSXElements.StellarColorLibraryAttributes;
+    'stellar-markdown': JSXElements.StellarMarkdownAttributes;
+    'stellar-scatter': JSXElements.StellarScatterAttributes;
+    'stellar-starscape': JSXElements.StellarStarscapeAttributes;
+    'stellar-story': JSXElements.StellarStoryAttributes;
+    'stellar-stripe': JSXElements.StellarStripeAttributes;
+    'stellar-theme-preview': JSXElements.StellarThemePreviewAttributes;
+    'stellar-unit': JSXElements.StellarUnitAttributes;
+    'stellar-360-image': JSXElements.Stellar360ImageAttributes;
+    'stellar-360-video': JSXElements.Stellar360VideoAttributes;
+    'stellar-image': JSXElements.StellarImageAttributes;
+    'stellar-interview-line': JSXElements.StellarInterviewLineAttributes;
+    'stellar-interview': JSXElements.StellarInterviewAttributes;
+    'skeleton-img': JSXElements.SkeletonImgAttributes;
+    'skeleton-text': JSXElements.SkeletonTextAttributes;
+    'stellar-video': JSXElements.StellarVideoAttributes;
+    'stellar-animate-text': JSXElements.StellarAnimateTextAttributes;
+    'stellar-blur': JSXElements.StellarBlurAttributes;
+    'stellar-parallax-section': JSXElements.StellarParallaxSectionAttributes;
+    'stellar-parallax': JSXElements.StellarParallaxAttributes;
+    'stellar-accordion': JSXElements.StellarAccordionAttributes;
     'stellar-asset': JSXElements.StellarAssetAttributes;
     'stellar-avatar': JSXElements.StellarAvatarAttributes;
-    'stellar-blur': JSXElements.StellarBlurAttributes;
     'stellar-breadcrumb': JSXElements.StellarBreadcrumbAttributes;
     'stellar-breadcrumbs': JSXElements.StellarBreadcrumbsAttributes;
     'stellar-button': JSXElements.StellarButtonAttributes;
@@ -1507,7 +1604,6 @@ declare global {
     'stellar-chart': JSXElements.StellarChartAttributes;
     'stellar-code-block': JSXElements.StellarCodeBlockAttributes;
     'stellar-code': JSXElements.StellarCodeAttributes;
-    'stellar-color-library': JSXElements.StellarColorLibraryAttributes;
     'stellar-color-picker': JSXElements.StellarColorPickerAttributes;
     'stellar-comment': JSXElements.StellarCommentAttributes;
     'stellar-comments': JSXElements.StellarCommentsAttributes;
@@ -1528,70 +1624,223 @@ declare global {
     'stellar-group-overflow': JSXElements.StellarGroupOverflowAttributes;
     'stellar-group': JSXElements.StellarGroupAttributes;
     'stellar-header': JSXElements.StellarHeaderAttributes;
-    'stellar-image': JSXElements.StellarImageAttributes;
     'stellar-input': JSXElements.StellarInputAttributes;
     'stellar-item': JSXElements.StellarItemAttributes;
     'stellar-label': JSXElements.StellarLabelAttributes;
     'stellar-layout': JSXElements.StellarLayoutAttributes;
     'stellar-list': JSXElements.StellarListAttributes;
-    'stellar-markdown': JSXElements.StellarMarkdownAttributes;
-    'stellar-360-image': JSXElements.Stellar360ImageAttributes;
-    'stellar-360-video': JSXElements.Stellar360VideoAttributes;
     'stellar-message': JSXElements.StellarMessageAttributes;
     'stellar-modal-controller': JSXElements.StellarModalControllerAttributes;
     'stellar-modal': JSXElements.StellarModalAttributes;
     'stellar-overlay': JSXElements.StellarOverlayAttributes;
     'stellar-pagination': JSXElements.StellarPaginationAttributes;
-    'stellar-parallax-section': JSXElements.StellarParallaxSectionAttributes;
-    'stellar-parallax': JSXElements.StellarParallaxAttributes;
     'stellar-progress': JSXElements.StellarProgressAttributes;
     'stellar-quick-actions': JSXElements.StellarQuickActionsAttributes;
-    'stellar-scatter': JSXElements.StellarScatterAttributes;
     'stellar-select': JSXElements.StellarSelectAttributes;
-    'skeleton-img': JSXElements.SkeletonImgAttributes;
-    'skeleton-text': JSXElements.SkeletonTextAttributes;
     'stellar-slide': JSXElements.StellarSlideAttributes;
     'stellar-slides': JSXElements.StellarSlidesAttributes;
-    'stellar-starscape': JSXElements.StellarStarscapeAttributes;
     'stellar-step': JSXElements.StellarStepAttributes;
     'stellar-steps': JSXElements.StellarStepsAttributes;
-    'stellar-stripe': JSXElements.StellarStripeAttributes;
     'stellar-switch': JSXElements.StellarSwitchAttributes;
     'stellar-tab': JSXElements.StellarTabAttributes;
     'stellar-table': JSXElements.StellarTableAttributes;
     'stellar-tabs': JSXElements.StellarTabsAttributes;
     'stellar-tag': JSXElements.StellarTagAttributes;
-    'stellar-theme-preview': JSXElements.StellarThemePreviewAttributes;
     'stellar-toggle-option': JSXElements.StellarToggleOptionAttributes;
     'stellar-toggle': JSXElements.StellarToggleAttributes;
     'stellar-tooltip': JSXElements.StellarTooltipAttributes;
-    'stellar-unit': JSXElements.StellarUnitAttributes;
-    'stellar-video': JSXElements.StellarVideoAttributes;
-    'web-audio-debugger': JSXElements.WebAudioDebuggerAttributes;
-    'web-audio-effect': JSXElements.WebAudioEffectAttributes;
-    'web-audio-sequencer': JSXElements.WebAudioSequencerAttributes;
-    'web-audio-source': JSXElements.WebAudioSourceAttributes;
-    'web-audio-visualizer-shader': JSXElements.WebAudioVisualizerShaderAttributes;
-    'web-audio-visualizer': JSXElements.WebAudioVisualizerAttributes;
-    'web-audio': JSXElements.WebAudioAttributes;
     }
   }
 
   namespace JSXElements {
 
-    export interface StellarAccordionAttributes extends HTMLAttributes {
-      'label'?: string;
+    export interface WebAudioDebuggerAttributes extends HTMLAttributes {
+      'count'?: number;
+    }
+
+    export interface WebAudioEffectAttributes extends HTMLAttributes {
+      'axis'?: string;
+      'method'?: string;
+      'midicontroller'?: number;
+      'responds'?: string;
+      'type'?: string;
+      'use'?: string;
+      'value'?: number;
+    }
+
+    export interface WebAudioSequencerAttributes extends HTMLAttributes {
+      'autoplay'?: boolean;
+      'custom'?: Function;
       'name'?: string;
-      'open'?: boolean;
-      'tight'?: boolean;
+      'taps'?: number;
+      'tempo'?: number;
+    }
+
+    export interface WebAudioSourceAttributes extends HTMLAttributes {
+      'effectsvolume'?: number;
+      'inert'?: boolean;
+      'midichannel'?: number;
+      'midikey'?: number;
+      'name'?: string;
+      'onTimeupdate'?: (event: CustomEvent) => void;
+      'playing'?: boolean;
+      'src'?: string;
+    }
+
+    export interface WebAudioVisualizerShaderAttributes extends HTMLAttributes {
+      'type'?: string;
+    }
+
+    export interface WebAudioVisualizerAttributes extends HTMLAttributes {
+      'color'?: string;
+      'for'?: string;
+      'height'?: number;
+      'renderer'?: AnalyserNode;
+      'size'?: number;
+      'smoothing'?: number;
+      'type'?: string;
+      'width'?: number;
+    }
+
+    export interface WebAudioAttributes extends HTMLAttributes {
+      'autoplay'?: Boolean;
+      'midi'?: Boolean;
+      'name'?: string;
+    }
+
+    export interface StellarAssetLibraryAttributes extends HTMLAttributes {
+
+    }
+
+    export interface StellarColorLibraryAttributes extends HTMLAttributes {
+
+    }
+
+    export interface StellarMarkdownAttributes extends HTMLAttributes {
+      'codeString'?: string;
+      'src'?: string;
+    }
+
+    export interface StellarScatterAttributes extends HTMLAttributes {
+      'colors'?: boolean;
+      'float'?: boolean;
+      'max'?: number;
+      'min'?: number;
+      'scatter'?: number;
+      'sizes'?: boolean;
+    }
+
+    export interface StellarStarscapeAttributes extends HTMLAttributes {
+
+    }
+
+    export interface StellarStoryAttributes extends HTMLAttributes {
+      'target'?: string;
+    }
+
+    export interface StellarStripeAttributes extends HTMLAttributes {
+      'name'?: string;
+      'token'?: string;
+    }
+
+    export interface StellarThemePreviewAttributes extends HTMLAttributes {
+      'base'?: string;
+      'complement'?: string;
+    }
+
+    export interface StellarUnitAttributes extends HTMLAttributes {
+      'decimals'?: number;
+      'from'?: string;
+      'round'?: boolean;
+      'to'?: string;
+      'value'?: number;
+    }
+
+    export interface Stellar360ImageAttributes extends HTMLAttributes {
+      'height'?: number;
+      'src'?: string;
+      'width'?: number;
+    }
+
+    export interface Stellar360VideoAttributes extends HTMLAttributes {
+      'height'?: number;
+      'src'?: string;
+      'width'?: number;
+    }
+
+    export interface StellarImageAttributes extends HTMLAttributes {
+      'bg'?: string;
+      'height'?: number;
+      'nozoom'?: boolean;
+      'preload'?: string;
+      'width'?: number;
+    }
+
+    export interface StellarInterviewLineAttributes extends HTMLAttributes {
+      'complement'?: boolean;
+      'in'?: number;
+      'out'?: number;
+    }
+
+    export interface StellarInterviewAttributes extends HTMLAttributes {
+      'aspectRatio'?: number;
+      'debug'?: boolean;
+      'height'?: number;
+      'label'?: string;
+      'playing'?: boolean;
+      'src'?: string;
+      'width'?: number;
+    }
+
+    export interface SkeletonImgAttributes extends HTMLAttributes {
+      'height'?: number;
+      'icon'?: boolean;
+      'loading'?: boolean;
+      'width'?: number;
+    }
+
+    export interface SkeletonTextAttributes extends HTMLAttributes {
+      'as'?: string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p';
+      'loading'?: boolean;
+      'width'?: number;
+    }
+
+    export interface StellarVideoAttributes extends HTMLAttributes {
+      'autoplay'?: boolean;
+      'controls'?: boolean;
+      'height'?: number;
+      'muted'?: boolean;
+      'overlay'?: boolean;
+      'playsinline'?: boolean;
+      'poster'?: string;
+      'preload'?: string;
+      'width'?: number;
     }
 
     export interface StellarAnimateTextAttributes extends HTMLAttributes {
       'method'?: string|"glitch"|"lettering"|"weight"|"fade";
     }
 
-    export interface StellarAssetLibraryAttributes extends HTMLAttributes {
+    export interface StellarBlurAttributes extends HTMLAttributes {
+      'horizontal'?: number;
+      'vertical'?: number;
+    }
 
+    export interface StellarParallaxSectionAttributes extends HTMLAttributes {
+      'layer'?: number;
+      'percentage'?: number;
+      'speed'?: number;
+    }
+
+    export interface StellarParallaxAttributes extends HTMLAttributes {
+
+    }
+
+    export interface StellarAccordionAttributes extends HTMLAttributes {
+      'label'?: string;
+      'name'?: string;
+      'open'?: boolean;
+      'tight'?: boolean;
     }
 
     export interface StellarAssetAttributes extends HTMLAttributes {
@@ -1612,11 +1861,6 @@ declare global {
       'shape'?: "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
       'size'?: string;
       'src'?: string;
-    }
-
-    export interface StellarBlurAttributes extends HTMLAttributes {
-      'horizontal'?: number;
-      'vertical'?: number;
     }
 
     export interface StellarBreadcrumbAttributes extends HTMLAttributes {
@@ -1770,10 +2014,6 @@ declare global {
       'numbers'?: boolean;
     }
 
-    export interface StellarColorLibraryAttributes extends HTMLAttributes {
-
-    }
-
     export interface StellarColorPickerAttributes extends HTMLAttributes {
       'onColorChanged'?: (event: CustomEvent) => void;
       'value'?: string;
@@ -1888,13 +2128,6 @@ declare global {
       'value'?: number;
     }
 
-    export interface StellarImageAttributes extends HTMLAttributes {
-      'bg'?: string;
-      'height'?: number;
-      'preload'?: string;
-      'width'?: number;
-    }
-
     export interface StellarInputAttributes extends HTMLAttributes {
       'autocomplete'?: string;
       'autofocus'?: boolean;
@@ -1970,19 +2203,6 @@ declare global {
       'items'?: Array<any>;
     }
 
-    export interface StellarMarkdownAttributes extends HTMLAttributes {
-      'codeString'?: string;
-      'src'?: string;
-    }
-
-    export interface Stellar360ImageAttributes extends HTMLAttributes {
-      'src'?: string;
-    }
-
-    export interface Stellar360VideoAttributes extends HTMLAttributes {
-      'src'?: string;
-    }
-
     export interface StellarMessageAttributes extends HTMLAttributes {
       'closable'?: boolean;
       'name'?: string;
@@ -2024,21 +2244,21 @@ declare global {
       'url'?: any;
     }
 
-    export interface StellarParallaxSectionAttributes extends HTMLAttributes {
-      'layer'?: number;
-      'percentage'?: number;
-      'speed'?: number;
-    }
-
-    export interface StellarParallaxAttributes extends HTMLAttributes {
-
-    }
-
     export interface StellarProgressAttributes extends HTMLAttributes {
+      'blurable'?: boolean;
+      /**
+       * Allows the progress bar to be clicked on, to help the user to navigate through the progressing content.
+       */
+      'editable'?: boolean;
       /**
        * Sets the maximum cap for steps in the progress bar
        */
       'max'?: number;
+      /**
+       * eliminates the easing in the css so you can apply value updates without jitter.
+       */
+      'noease'?: boolean;
+      'onValueChange'?: (event: CustomEvent) => void;
       /**
        * Renders if this element is slender or not
        */
@@ -2051,15 +2271,6 @@ declare global {
 
     export interface StellarQuickActionsAttributes extends HTMLAttributes {
       'open'?: boolean;
-    }
-
-    export interface StellarScatterAttributes extends HTMLAttributes {
-      'colors'?: boolean;
-      'float'?: boolean;
-      'max'?: number;
-      'min'?: number;
-      'scatter'?: number;
-      'sizes'?: boolean;
     }
 
     export interface StellarSelectAttributes extends HTMLAttributes {
@@ -2078,19 +2289,6 @@ declare global {
       'required'?: boolean;
       'size'?: string;
       'value'?: any;
-    }
-
-    export interface SkeletonImgAttributes extends HTMLAttributes {
-      'height'?: number;
-      'icon'?: boolean;
-      'loading'?: boolean;
-      'width'?: number;
-    }
-
-    export interface SkeletonTextAttributes extends HTMLAttributes {
-      'as'?: string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p';
-      'loading'?: boolean;
-      'width'?: number;
     }
 
     export interface StellarSlideAttributes extends HTMLAttributes {
@@ -2172,10 +2370,6 @@ declare global {
       'watchSlidesVisibility'?: boolean;
     }
 
-    export interface StellarStarscapeAttributes extends HTMLAttributes {
-
-    }
-
     export interface StellarStepAttributes extends HTMLAttributes {
       'disabled'?: boolean;
       'href'?: string;
@@ -2185,11 +2379,6 @@ declare global {
 
     export interface StellarStepsAttributes extends HTMLAttributes {
       'name'?: string;
-    }
-
-    export interface StellarStripeAttributes extends HTMLAttributes {
-      'name'?: string;
-      'token'?: string;
     }
 
     export interface StellarSwitchAttributes extends HTMLAttributes {
@@ -2228,11 +2417,6 @@ declare global {
       'textColor'?: string;
     }
 
-    export interface StellarThemePreviewAttributes extends HTMLAttributes {
-      'base'?: string;
-      'complement'?: string;
-    }
-
     export interface StellarToggleOptionAttributes extends HTMLAttributes {
       'checked'?: boolean;
       'default'?: string;
@@ -2265,86 +2449,40 @@ declare global {
     export interface StellarTooltipAttributes extends HTMLAttributes {
       'align'?: "left"|"center"|"right";
     }
-
-    export interface StellarUnitAttributes extends HTMLAttributes {
-      'decimals'?: number;
-      'from'?: string;
-      'round'?: boolean;
-      'to'?: string;
-      'value'?: number;
-    }
-
-    export interface StellarVideoAttributes extends HTMLAttributes {
-      'autoplay'?: boolean;
-      'controls'?: boolean;
-      'height'?: number;
-      'muted'?: boolean;
-      'overlay'?: boolean;
-      'playsinline'?: boolean;
-      'poster'?: string;
-      'preload'?: string;
-      'width'?: number;
-    }
-
-    export interface WebAudioDebuggerAttributes extends HTMLAttributes {
-      'count'?: number;
-    }
-
-    export interface WebAudioEffectAttributes extends HTMLAttributes {
-      'axis'?: string;
-      'method'?: string;
-      'midicontroller'?: number;
-      'responds'?: string;
-      'type'?: string;
-      'use'?: string;
-      'value'?: number;
-    }
-
-    export interface WebAudioSequencerAttributes extends HTMLAttributes {
-      'autoplay'?: boolean;
-      'custom'?: Function;
-      'name'?: string;
-      'taps'?: number;
-      'tempo'?: number;
-    }
-
-    export interface WebAudioSourceAttributes extends HTMLAttributes {
-      'effectsvolume'?: number;
-      'inert'?: boolean;
-      'midichannel'?: number;
-      'midikey'?: number;
-      'name'?: string;
-      'src'?: string;
-    }
-
-    export interface WebAudioVisualizerShaderAttributes extends HTMLAttributes {
-      'type'?: string;
-    }
-
-    export interface WebAudioVisualizerAttributes extends HTMLAttributes {
-      'for'?: string;
-      'height'?: number;
-      'renderer'?: AnalyserNode;
-      'size'?: number;
-      'smoothing'?: number;
-      'type'?: string;
-      'width'?: number;
-    }
-
-    export interface WebAudioAttributes extends HTMLAttributes {
-      'autoplay'?: Boolean;
-      'midi'?: Boolean;
-      'name'?: string;
-    }
   }
 
   interface HTMLElementTagNameMap {
-    'stellar-accordion': HTMLStellarAccordionElement
-    'stellar-animate-text': HTMLStellarAnimateTextElement
+    'web-audio-debugger': HTMLWebAudioDebuggerElement
+    'web-audio-effect': HTMLWebAudioEffectElement
+    'web-audio-sequencer': HTMLWebAudioSequencerElement
+    'web-audio-source': HTMLWebAudioSourceElement
+    'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement
+    'web-audio-visualizer': HTMLWebAudioVisualizerElement
+    'web-audio': HTMLWebAudioElement
     'stellar-asset-library': HTMLStellarAssetLibraryElement
+    'stellar-color-library': HTMLStellarColorLibraryElement
+    'stellar-markdown': HTMLStellarMarkdownElement
+    'stellar-scatter': HTMLStellarScatterElement
+    'stellar-starscape': HTMLStellarStarscapeElement
+    'stellar-story': HTMLStellarStoryElement
+    'stellar-stripe': HTMLStellarStripeElement
+    'stellar-theme-preview': HTMLStellarThemePreviewElement
+    'stellar-unit': HTMLStellarUnitElement
+    'stellar-360-image': HTMLStellar360ImageElement
+    'stellar-360-video': HTMLStellar360VideoElement
+    'stellar-image': HTMLStellarImageElement
+    'stellar-interview-line': HTMLStellarInterviewLineElement
+    'stellar-interview': HTMLStellarInterviewElement
+    'skeleton-img': HTMLSkeletonImgElement
+    'skeleton-text': HTMLSkeletonTextElement
+    'stellar-video': HTMLStellarVideoElement
+    'stellar-animate-text': HTMLStellarAnimateTextElement
+    'stellar-blur': HTMLStellarBlurElement
+    'stellar-parallax-section': HTMLStellarParallaxSectionElement
+    'stellar-parallax': HTMLStellarParallaxElement
+    'stellar-accordion': HTMLStellarAccordionElement
     'stellar-asset': HTMLStellarAssetElement
     'stellar-avatar': HTMLStellarAvatarElement
-    'stellar-blur': HTMLStellarBlurElement
     'stellar-breadcrumb': HTMLStellarBreadcrumbElement
     'stellar-breadcrumbs': HTMLStellarBreadcrumbsElement
     'stellar-button': HTMLStellarButtonElement
@@ -2353,7 +2491,6 @@ declare global {
     'stellar-chart': HTMLStellarChartElement
     'stellar-code-block': HTMLStellarCodeBlockElement
     'stellar-code': HTMLStellarCodeElement
-    'stellar-color-library': HTMLStellarColorLibraryElement
     'stellar-color-picker': HTMLStellarColorPickerElement
     'stellar-comment': HTMLStellarCommentElement
     'stellar-comments': HTMLStellarCommentsElement
@@ -2374,61 +2511,65 @@ declare global {
     'stellar-group-overflow': HTMLStellarGroupOverflowElement
     'stellar-group': HTMLStellarGroupElement
     'stellar-header': HTMLStellarHeaderElement
-    'stellar-image': HTMLStellarImageElement
     'stellar-input': HTMLStellarInputElement
     'stellar-item': HTMLStellarItemElement
     'stellar-label': HTMLStellarLabelElement
     'stellar-layout': HTMLStellarLayoutElement
     'stellar-list': HTMLStellarListElement
-    'stellar-markdown': HTMLStellarMarkdownElement
-    'stellar-360-image': HTMLStellar360ImageElement
-    'stellar-360-video': HTMLStellar360VideoElement
     'stellar-message': HTMLStellarMessageElement
     'stellar-modal-controller': HTMLStellarModalControllerElement
     'stellar-modal': HTMLStellarModalElement
     'stellar-overlay': HTMLStellarOverlayElement
     'stellar-pagination': HTMLStellarPaginationElement
-    'stellar-parallax-section': HTMLStellarParallaxSectionElement
-    'stellar-parallax': HTMLStellarParallaxElement
     'stellar-progress': HTMLStellarProgressElement
     'stellar-quick-actions': HTMLStellarQuickActionsElement
-    'stellar-scatter': HTMLStellarScatterElement
     'stellar-select': HTMLStellarSelectElement
-    'skeleton-img': HTMLSkeletonImgElement
-    'skeleton-text': HTMLSkeletonTextElement
     'stellar-slide': HTMLStellarSlideElement
     'stellar-slides': HTMLStellarSlidesElement
-    'stellar-starscape': HTMLStellarStarscapeElement
     'stellar-step': HTMLStellarStepElement
     'stellar-steps': HTMLStellarStepsElement
-    'stellar-stripe': HTMLStellarStripeElement
     'stellar-switch': HTMLStellarSwitchElement
     'stellar-tab': HTMLStellarTabElement
     'stellar-table': HTMLStellarTableElement
     'stellar-tabs': HTMLStellarTabsElement
     'stellar-tag': HTMLStellarTagElement
-    'stellar-theme-preview': HTMLStellarThemePreviewElement
     'stellar-toggle-option': HTMLStellarToggleOptionElement
     'stellar-toggle': HTMLStellarToggleElement
     'stellar-tooltip': HTMLStellarTooltipElement
-    'stellar-unit': HTMLStellarUnitElement
-    'stellar-video': HTMLStellarVideoElement
-    'web-audio-debugger': HTMLWebAudioDebuggerElement
-    'web-audio-effect': HTMLWebAudioEffectElement
-    'web-audio-sequencer': HTMLWebAudioSequencerElement
-    'web-audio-source': HTMLWebAudioSourceElement
-    'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement
-    'web-audio-visualizer': HTMLWebAudioVisualizerElement
-    'web-audio': HTMLWebAudioElement
   }
 
   interface ElementTagNameMap {
-    'stellar-accordion': HTMLStellarAccordionElement;
-    'stellar-animate-text': HTMLStellarAnimateTextElement;
+    'web-audio-debugger': HTMLWebAudioDebuggerElement;
+    'web-audio-effect': HTMLWebAudioEffectElement;
+    'web-audio-sequencer': HTMLWebAudioSequencerElement;
+    'web-audio-source': HTMLWebAudioSourceElement;
+    'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement;
+    'web-audio-visualizer': HTMLWebAudioVisualizerElement;
+    'web-audio': HTMLWebAudioElement;
     'stellar-asset-library': HTMLStellarAssetLibraryElement;
+    'stellar-color-library': HTMLStellarColorLibraryElement;
+    'stellar-markdown': HTMLStellarMarkdownElement;
+    'stellar-scatter': HTMLStellarScatterElement;
+    'stellar-starscape': HTMLStellarStarscapeElement;
+    'stellar-story': HTMLStellarStoryElement;
+    'stellar-stripe': HTMLStellarStripeElement;
+    'stellar-theme-preview': HTMLStellarThemePreviewElement;
+    'stellar-unit': HTMLStellarUnitElement;
+    'stellar-360-image': HTMLStellar360ImageElement;
+    'stellar-360-video': HTMLStellar360VideoElement;
+    'stellar-image': HTMLStellarImageElement;
+    'stellar-interview-line': HTMLStellarInterviewLineElement;
+    'stellar-interview': HTMLStellarInterviewElement;
+    'skeleton-img': HTMLSkeletonImgElement;
+    'skeleton-text': HTMLSkeletonTextElement;
+    'stellar-video': HTMLStellarVideoElement;
+    'stellar-animate-text': HTMLStellarAnimateTextElement;
+    'stellar-blur': HTMLStellarBlurElement;
+    'stellar-parallax-section': HTMLStellarParallaxSectionElement;
+    'stellar-parallax': HTMLStellarParallaxElement;
+    'stellar-accordion': HTMLStellarAccordionElement;
     'stellar-asset': HTMLStellarAssetElement;
     'stellar-avatar': HTMLStellarAvatarElement;
-    'stellar-blur': HTMLStellarBlurElement;
     'stellar-breadcrumb': HTMLStellarBreadcrumbElement;
     'stellar-breadcrumbs': HTMLStellarBreadcrumbsElement;
     'stellar-button': HTMLStellarButtonElement;
@@ -2437,7 +2578,6 @@ declare global {
     'stellar-chart': HTMLStellarChartElement;
     'stellar-code-block': HTMLStellarCodeBlockElement;
     'stellar-code': HTMLStellarCodeElement;
-    'stellar-color-library': HTMLStellarColorLibraryElement;
     'stellar-color-picker': HTMLStellarColorPickerElement;
     'stellar-comment': HTMLStellarCommentElement;
     'stellar-comments': HTMLStellarCommentsElement;
@@ -2458,52 +2598,31 @@ declare global {
     'stellar-group-overflow': HTMLStellarGroupOverflowElement;
     'stellar-group': HTMLStellarGroupElement;
     'stellar-header': HTMLStellarHeaderElement;
-    'stellar-image': HTMLStellarImageElement;
     'stellar-input': HTMLStellarInputElement;
     'stellar-item': HTMLStellarItemElement;
     'stellar-label': HTMLStellarLabelElement;
     'stellar-layout': HTMLStellarLayoutElement;
     'stellar-list': HTMLStellarListElement;
-    'stellar-markdown': HTMLStellarMarkdownElement;
-    'stellar-360-image': HTMLStellar360ImageElement;
-    'stellar-360-video': HTMLStellar360VideoElement;
     'stellar-message': HTMLStellarMessageElement;
     'stellar-modal-controller': HTMLStellarModalControllerElement;
     'stellar-modal': HTMLStellarModalElement;
     'stellar-overlay': HTMLStellarOverlayElement;
     'stellar-pagination': HTMLStellarPaginationElement;
-    'stellar-parallax-section': HTMLStellarParallaxSectionElement;
-    'stellar-parallax': HTMLStellarParallaxElement;
     'stellar-progress': HTMLStellarProgressElement;
     'stellar-quick-actions': HTMLStellarQuickActionsElement;
-    'stellar-scatter': HTMLStellarScatterElement;
     'stellar-select': HTMLStellarSelectElement;
-    'skeleton-img': HTMLSkeletonImgElement;
-    'skeleton-text': HTMLSkeletonTextElement;
     'stellar-slide': HTMLStellarSlideElement;
     'stellar-slides': HTMLStellarSlidesElement;
-    'stellar-starscape': HTMLStellarStarscapeElement;
     'stellar-step': HTMLStellarStepElement;
     'stellar-steps': HTMLStellarStepsElement;
-    'stellar-stripe': HTMLStellarStripeElement;
     'stellar-switch': HTMLStellarSwitchElement;
     'stellar-tab': HTMLStellarTabElement;
     'stellar-table': HTMLStellarTableElement;
     'stellar-tabs': HTMLStellarTabsElement;
     'stellar-tag': HTMLStellarTagElement;
-    'stellar-theme-preview': HTMLStellarThemePreviewElement;
     'stellar-toggle-option': HTMLStellarToggleOptionElement;
     'stellar-toggle': HTMLStellarToggleElement;
     'stellar-tooltip': HTMLStellarTooltipElement;
-    'stellar-unit': HTMLStellarUnitElement;
-    'stellar-video': HTMLStellarVideoElement;
-    'web-audio-debugger': HTMLWebAudioDebuggerElement;
-    'web-audio-effect': HTMLWebAudioEffectElement;
-    'web-audio-sequencer': HTMLWebAudioSequencerElement;
-    'web-audio-source': HTMLWebAudioSourceElement;
-    'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement;
-    'web-audio-visualizer': HTMLWebAudioVisualizerElement;
-    'web-audio': HTMLWebAudioElement;
   }
 }
 declare global { namespace JSX { interface StencilJSX {} } }

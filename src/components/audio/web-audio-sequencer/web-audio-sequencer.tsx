@@ -1,14 +1,7 @@
 import { Component, Prop, State, Method } from '@stencil/core'
 
-interface MyWindow extends Window {
-  myFunction(): void
-}
-
-declare var window
-
 @Component({
   tag: 'web-audio-sequencer',
-  styleUrl: 'web-audio-sequencer.scss',
   shadow: true
 })
 export class WebAudioSequencer {
@@ -18,7 +11,10 @@ export class WebAudioSequencer {
   @Prop() taps: number = 4
   @Prop() tempo: number
 
-  @State() context: any = () => { return window.audio_context }
+  @State() context: any = () => {
+    // @ts-ignore
+    return document.querySelector('web-audio').get_context()
+  }
 
   @State() iterations: number
   @State() startTime: number
@@ -29,7 +25,6 @@ export class WebAudioSequencer {
   @Prop() custom: Function = () => {
     // do nothing
   }
-
 
   @State() timer: any
 
@@ -78,6 +73,11 @@ export class WebAudioSequencer {
 
   @Method()
   play () {
+    if (!this.context()) {
+      // @ts-ignore
+      document.querySelector('web-audio').connect_the_world();
+    }
+
     this.iterations = 0
     this.startTime = this.context().currentTime + 0.005 || 0.005
     this.schedule()
@@ -89,5 +89,12 @@ export class WebAudioSequencer {
     this.startTime = null
     this.currentTap = 0
     clearTimeout(this.timer)
+  }
+
+  render() {
+    return [
+      <button class="play" onClick={() => { this.play() }}>Play</button>,
+      <button class="stop" onClick={() => { this.stop() }}>Stop</button>
+    ]
   }
 }

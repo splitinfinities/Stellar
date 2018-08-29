@@ -9,8 +9,417 @@
   <link rel="stylesheet" href="/global/fonts/hanken-sans/hanken-sans.css" />
   <script src="/build/stellar.js"></script>
 </head>
-<body class="hanken-sans">
-  <stellar-360-image src="./global/images/Carmelo.jpg"></stellar-360-image>
-  <stellar-360-video src="./global/video/Carmelo.mp4"></stellar-360-video>
+<body class="hanken-sans theme-yellow complement-red">
+  <stellar-story target="story">
+    <stellar-layout>
+      <copy-wrap full align="right">
+        <h1>Words Words Words</h1>
+        <p class="lh-copy" columns="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </copy-wrap>
+    </stellar-layout>
+
+    <stellar-layout>
+      <stellar-documentation feature="360 Images">
+        <template>
+          <stellar-360-image class="mt4" src="./global/images/Carmelo.jpg" width="800" height="800"></stellar-360-image>
+        </template>
+      </stellar-documentation>
+    </stellar-layout>
+
+    <stellar-layout>
+      <stellar-documentation feature="360 Videos">
+        <template>
+          <stellar-360-video class="mt4" src="./global/video/Carmelo.mp4" width="800" height="800"></stellar-360-video>
+        </template>
+      </stellar-documentation>
+    </stellar-layout>
+
+    <stellar-layout>
+      <stellar-documentation feature="Interview" width="5472" height="3648">
+        <template>
+          <stellar-interview class="mt5" src="./global/audio/carmelo_07.mp3">
+            <copy-wrap align="center" slot="transcript">
+              <!-- In are the milliseconds when copy should be displayed, out is the  -->
+
+              <stellar-interview-line in="1496" out="5010">
+                <h4 class="white fw7 lh-solid">Interviewer: Has anyone ever tried to come and buy your property?</h4>
+              </stellar-interview-line>
+
+
+              <stellar-interview-line in="8374" out="13290">
+                <h4 class="white fw7 lh-solid">Carmelo: Me han dado un cheque en blanco [para] comprar mi propiedad.</h4>
+              </stellar-interview-line>
+
+              <stellar-interview-line in="13484" out="17811">
+                <h4 class="white fw7 lh-solid">Translator: They have given me a blank check in order to buy my property.</h4>
+              </stellar-interview-line>
+
+            </copy-wrap>
+            <stellar-image nozoom width="5472" height="3648">
+              <source srcset="./global/images/Carmelo_Flat.jpg">
+            </stellar-image>
+          </stellar-interview>
+        </template>
+      </stellar-documentation>
+    </stellar-layout>
+
+
+    <stellar-layout>
+      <stellar-interview class="mt5" src="./global/audio/take_me_out.mp3">
+        <div slot="transcript">
+          <!-- In are the milliseconds when copy should be displayed, out is the  -->
+
+          <!-- Introduction -->
+          <stellar-interview-line in="5800" out="8300">
+            <h1 class="white fw9 center">So if you&rsquo;re&nbsp;lonely</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="8800" out="12300">
+            <h1 class="white fw9 center">You know I&rsquo;m here waiting for&nbsp;you</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="12400" out="15600">
+            <h1 class="white fw9 center">I&rsquo;m just a cross&nbsp;hair</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="16000" out="19200">
+            <h1 class="white fw9 center">I&rsquo;m just a shot away from&nbsp;you</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="19500" out="22100">
+            <h1 class="white fw9 center">And if you leave&nbsp;here</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="22500" out="25700">
+            <h1 class="white fw9 center">You leave me broken, shattered, I&nbsp;lie</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="26000" out="28500">
+            <h1 class="white fw9 center">I&rsquo;m just a cross&nbsp;hair</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="29000" out="33400">
+            <h1 class="white fw9 center">I&rsquo;m just a shot, then we can&nbsp;die</h1>
+          </stellar-interview-line>
+
+          <!-- Bridge -->
+
+          <stellar-interview-line in="34000" out="37400">
+            <h1 class="white fw9 center">Ahhhh</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="40919" out="41900">
+            <h1 class="white fw9 center">I&nbsp;know</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="42000" out="46000">
+            <h1 class="white fw9 center">I won&rsquo;t be leaving&nbsp;here</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="46516" out="49000">
+            <h1 class="white fw9 center">With&nbsp;you</h1>
+          </stellar-interview-line>
+
+          <!-- Four Items -->
+
+          <stellar-interview-line in="82500" out="84200">
+            <h1 class="white fw9 center">I say don&rsquo;t you&nbsp;know</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="84600" out="86800">
+            <h1 class="white fw9 center">You say you don&rsquo;t&nbsp;know</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="87200" out="88800">
+            <h1 class="white fw9 center">I&nbsp;say</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="90400" out="91800">
+            <h1 class="white fw9 center">Take me&nbsp;out!</h1>
+          </stellar-interview-line>
+
+          <!-- Four Items -->
+
+          <stellar-interview-line in="92100" out="93800">
+            <h1 class="white fw9 center">I say you don&rsquo;t&nbsp;show</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="94300" out="96400">
+            <h1 class="white fw9 center">Don&rsquo;t move, time is&nbsp;slow</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="96600" out="97600">
+            <h1 class="white fw9 center">I&nbsp;say</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="99600" out="101600">
+            <h1 class="white fw9 center">Take me&nbsp;out!</h1>
+          </stellar-interview-line>
+
+          <!-- Four Items -->
+
+          <stellar-interview-line in="110200" out="112000">
+            <h1 class="white fw9 center">I say you don&rsquo;t&nbsp;know</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="112500" out="114400">
+            <h1 class="white fw9 center">You say you don&rsquo;t&nbsp;know</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="115000" out="116000">
+            <h1 class="white fw9 center">I&nbsp;say</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="118100" out="119200">
+            <h1 class="white fw9 center">Take me&nbsp;out!</h1>
+          </stellar-interview-line>
+
+          <!-- Four Items -->
+
+          <stellar-interview-line in="119400" out="121200">
+            <h1 class="white fw9 center">If I move this could&nbsp;die</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="121400" out="123800">
+            <h1 class="white fw9 center">Eyes move this can&nbsp;die</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="124200" out="126100">
+            <h1 class="white fw9 center">I want&nbsp;you</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="127100" out="128800">
+            <h1 class="white fw9 center">To take me&nbsp;out!</h1>
+          </stellar-interview-line>
+
+          <!-- Chorus -->
+
+          <stellar-interview-line in="132999" out="136427">
+            <h1 class="white fw9 center">I know I won&rsquo;t be leaving&nbsp;here</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="136999" out="138193" complement>
+            <h1 class="white fw9 center">(with&nbsp;you)</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="137457" out="141467">
+            <h1 class="white fw9 center">I know I won&rsquo;t be leaving&nbsp;here</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="142019" out="145643">
+            <h1 class="white fw9 center">I know I won&rsquo;t be leaving&nbsp;here</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="145607" out="147500" complement>
+            <h1 class="white fw9 center">(with&nbsp;you)</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="146481" out="149611">
+            <h1 class="white fw9 center">I know I won&rsquo;t be leaving&nbsp;here</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="150242" out="151923">
+            <h1 class="white fw9 center">with&nbsp;you</h1>
+          </stellar-interview-line>
+
+          <!-- 4 lines -->
+          <stellar-interview-line in="160204" out="162115">
+            <h1 class="white fw9 center">I say don&rsquo;t you&nbsp;know</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="162415" out="164720">
+            <h1 class="white fw9 center">You say you don&rsquo;t&nbsp;know</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="164911" out="166189">
+            <h1 class="white fw9 center">I&nbsp;say</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="168030" out="169412">
+            <h1 class="white fw9 center">Take me&nbsp;out!</h1>
+          </stellar-interview-line>
+
+          <!-- 4 lines -->
+          <stellar-interview-line in="169561" out="171551">
+            <h1 class="white fw9 center">If I wane this could&nbsp;die</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="171861" out="173867">
+            <h1 class="white fw9 center">I wait this could&nbsp;die</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="174116" out="176224">
+            <h1 class="white fw9 center">I want&nbsp;you</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="177066" out="178843">
+            <h1 class="white fw9 center">To take me&nbsp;out!</h1>
+          </stellar-interview-line>
+
+          <!-- 4 lines -->
+          <stellar-interview-line in="178815" out="180871">
+            <h1 class="white fw9 center">If I move this could&nbsp;die</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="181073" out="183184">
+            <h1 class="white fw9 center">Eyes move this can&nbsp;die</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="183456" out="185523">
+            <h1 class="white fw9 center">Come&nbsp;on!</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="186434" out="188138">
+            <h1 class="white fw9 center">Take me&nbsp;out!</h1>
+          </stellar-interview-line>
+
+          <!-- Chorus -->
+
+          <stellar-interview-line in="201620" out="205487">
+            <h1 class="white fw9 center">I know I won&rsquo;t be leaving&nbsp;here</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="205574" out="206648" complement>
+            <h1 class="white fw9 center">(with you)</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="206291" out="209480">
+            <h1 class="white fw9 center">I know I won&rsquo;t be leaving&nbsp;here</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="210396" out="214304">
+            <h1 class="white fw9 center">I know I won&rsquo;t be leaving&nbsp;here</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="214413" out="216088" complement>
+            <h1 class="white fw9 center">(with&nbsp;you)</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="215190" out="218324">
+            <h1 class="white fw9 center">I know I won&rsquo;t be leaving&nbsp;here</h1>
+          </stellar-interview-line>
+
+          <stellar-interview-line in="218401" out="220204">
+            <h1 class="white fw9 center">with you</h1>
+          </stellar-interview-line>
+        </div>
+        <stellar-360-image src="./global/images/Carmelo.jpg" width="800" height="800"></stellar-360-image>
+      </stellar-interview>
+    </stellar-layout>
+
+
+    <stellar-layout>
+      <copy-wrap full align="right">
+        <h1>Words Words Words</h1>
+        <p class="lh-copy" columns="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </copy-wrap>
+    </stellar-layout>
+
+    <stellar-layout>
+      <copy-wrap full align="left">
+        <h1>Words Words Words</h1>
+        <p class="lh-copy" columns="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </copy-wrap>
+    </stellar-layout>
+
+    <stellar-layout>
+      <copy-wrap full align="right">
+        <h1>Words Words Words</h1>
+        <p class="lh-copy" columns="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </copy-wrap>
+    </stellar-layout>
+
+    <stellar-layout>
+      <copy-wrap full align="left">
+        <h1>Words Words Words</h1>
+        <p class="lh-copy" columns="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </copy-wrap>
+    </stellar-layout>
+  </stellar-story>
 </body>
 </html>

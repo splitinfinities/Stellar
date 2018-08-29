@@ -141,3 +141,13 @@ hr.vertical {
   display: inline-block;
 }
 
+*[columns] {
+  column-count: 2;
+  column-gap: 3rem;
+  column-rule: 1px solid var(--theme-base5);
+  column-span: all;
+}
+
+*[columns="3"] {
+  column-count: 3;
+}

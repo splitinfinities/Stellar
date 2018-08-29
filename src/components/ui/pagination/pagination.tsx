@@ -81,8 +81,6 @@ export class Pagination {
     setTimeout(() => {
       const distance: HTMLElement = this.element.querySelector('.current-number')
 
-      console.log(distance)
-
       if (distance) {
         properties.set({
           "--indicator-left": `${distance.offsetLeft}px`

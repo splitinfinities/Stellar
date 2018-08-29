@@ -19,7 +19,7 @@ describe('stellar-dropdown', () => {
     });
 
     it('should work without parameters', () => {
-      expect(element.outerHTML.trim()).toEqual('<stellar-dropdown class=\"hydrated\"><div aria-label=\"Dropdown\" class=\"dropdown\" title=\"Dropdown\"><div class=\"toggle\"><stellar-asset name=\"arrow-down\" class=\"caret\"></stellar-asset></div><stellar-blur vertical=\"0\"><div class=\"list-wrap\"><ul class=\"list\"><div class=\"footer\"></div></ul></div></stellar-blur></div></stellar-dropdown>');
+      expect(element.outerHTML.trim()).toEqual('<stellar-dropdown position=\"center\" class=\"hydrated\"><div aria-label=\"Dropdown\" class=\"dropdown\" title=\"Dropdown\"><div class=\"toggle\"><stellar-asset name=\"arrow-down\" class=\"caret\"></stellar-asset></div><stellar-blur vertical=\"0\"><div class=\"list-wrap\"><ul class=\"list\"><div class=\"footer\"></div></ul></div></stellar-blur></div></stellar-dropdown>');
     });
   });
 });

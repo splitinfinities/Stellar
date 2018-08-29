@@ -126,22 +126,22 @@
   width: 100%;
 }
 
-:host .button img,
-:host .button stellar-asset {
+:host ::slotted(img),
+:host ::slotted(stellar-asset) {
   display: inline-block;
   float: none;
   width: 1em;
   height: 1em;
 }
 
-:host .button img[align="left"],
-:host .button stellar-asset[align="left"] {
+:host ::slotted(img[align="left"]),
+:host ::slotted(stellar-asset[align="left"]) {
   order: -1;
   margin-right: 0.75em;
 }
 
-:host .button img[align="right"],
-:host .button stellar-asset[align="right"] {
+:host ::slotted(img[align="right"]),
+:host ::slotted(stellar-asset[align="right"]) {
   order: 2;
   margin-left: 0.75em;
 }

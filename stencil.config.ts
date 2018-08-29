@@ -15,6 +15,7 @@ export const config: Config = {
     { src: "global/video" },
     { src: "global/vector" },
     { src: "global/data" },
+    { src: "global/audio" },
     { src: "*.html" },
     { src: "**/*.md" },
     { src: "components/**/*" },

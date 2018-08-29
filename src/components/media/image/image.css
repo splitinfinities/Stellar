@@ -22,6 +22,12 @@
 	transform: scale(1.025);
 }
 
+
+:host([nozoom]) figure {
+  transform: none !important;
+  cursor: default !important;
+}
+
 :host figure:active {
   transform: scale(0.975);
 }

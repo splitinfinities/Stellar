@@ -2,7 +2,7 @@ import { Component, State, Prop, Method } from '@stencil/core';
 
 @Component({
   tag: 'web-audio-debugger',
-  styleUrl: 'web-audio-debugger.scss',
+  styleUrl: 'web-audio-debugger.css',
   shadow: true
 })
 

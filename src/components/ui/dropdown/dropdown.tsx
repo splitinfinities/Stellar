@@ -1,6 +1,6 @@
 import { Component, Element, Prop, State, Watch } from '@stencil/core'
 import focusWithin from 'focus-within'
-import { blurringEase } from '../../global/helpers';
+import { blurringEase } from '../../../global/helpers';
 
 focusWithin(document)
 

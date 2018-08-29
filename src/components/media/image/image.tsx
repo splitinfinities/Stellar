@@ -19,6 +19,8 @@ export class StellarImage {
   @Prop() width: number;
   @Prop() height: number;
 
+  @Prop({reflectToAttr: true}) nozoom: boolean = false;
+
   @Prop() bg: string = "auto";
 
   @State() aspectRatio: number;
@@ -59,7 +61,10 @@ export class StellarImage {
 
   handleImage() {
     this.active = true;
-    setTimeout(() => { this.mountZoom(); }, 100);
+
+    if (!this.nozoom) {
+      setTimeout(() => { this.mountZoom(); }, 350);
+    }
   }
 
   addIntersectionObserver() {
@@ -148,7 +153,7 @@ export class StellarImage {
     if (this.active) {
       return [
         this.sources.map((source) =>
-          <source srcSet={source.srcset} media={source.media} />
+          <source srcSet={source.srcset} media={source.media ? source.media : false} />
         ),
         <img src={this.sources[0].srcset} class="final_image" />
       ]

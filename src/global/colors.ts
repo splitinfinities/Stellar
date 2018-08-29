@@ -1,2 +1,8 @@
 import * as c from './_colors.js';
-export const colors = c;
+let color = c;
+
+if (window) {
+  color = window["exports"]["default"]
+}
+
+export const colors = color;

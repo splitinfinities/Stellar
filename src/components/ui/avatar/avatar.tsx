@@ -2,7 +2,7 @@ import { Component, Element, Prop, State, Watch } from '@stencil/core';
 import titleCase from 'title-case'
 import properties from 'css-custom-properties'
 import isHexColor from 'validator/lib/isHexColor';
-import { colors } from '../../global/colors';
+import { colors } from '../../../global/colors';
 
 @Component({
   tag: 'stellar-avatar',

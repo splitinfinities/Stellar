@@ -1,13 +1,12 @@
 import { Component, Prop, State, Method, Element } from '@stencil/core';
-import { assert } from '../../helpers'
+import { assert } from '../helpers'
 
-import { buildBiquadFilterNode, buildDelayNode, buildReverbNode } from '../../effects'
+import { buildBiquadFilterNode, buildDelayNode, buildReverbNode } from '../effects'
 import { WebAudio } from '../web-audio/web-audio'
 import { WebAudioSource } from '../web-audio-source/web-audio-source'
 
 @Component({
   tag: 'web-audio-effect',
-  styleUrl: 'web-audio-effect.scss',
   shadow: true
 })
 

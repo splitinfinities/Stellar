@@ -1,5 +1,5 @@
 import { Component } from '@stencil/core';
-import { colors } from '../../global/colors';
+import { colors } from '../../../global/colors';
 
 @Component({
   tag: 'stellar-color-library',

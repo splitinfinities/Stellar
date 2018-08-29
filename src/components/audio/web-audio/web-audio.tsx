@@ -1,12 +1,12 @@
 import { Component, Prop, State, Method, Element } from '@stencil/core'
 import { WebAudioVisualizer } from '../web-audio-visualizer/web-audio-visualizer'
 import { WebAudioSource } from '../web-audio-source/web-audio-source'
-import { WebAudioDebugger } from '../web-audio-debugger/web-audio-debugger'
-import { BufferLoader } from '../../bufferloader'
-import { forEach, delay } from '../../helpers'
+import '../web-audio-debugger/web-audio-debugger'
+import { BufferLoader } from '../bufferloader'
+import { delay } from '../helpers'
 import webmidi from 'webmidi';
 
-interface MyCustomEvent extends CustomEvent {
+interface WebAudioCustomEvent extends CustomEvent {
   note: {
     number: number,
     octave: number,
@@ -14,21 +14,11 @@ interface MyCustomEvent extends CustomEvent {
   },
   channel: number,
   data: object
-}
-
-interface MyWindow extends Window {
-  myFunction(): void
-}
-
-declare var window
-
+};
 
 @Component({
-  tag: 'web-audio',
-  styleUrl: 'web-audio.scss',
-  shadow: true
+  tag: 'web-audio'
 })
-
 export class WebAudio {
   // This instance of the element
   @Element() element: HTMLElement
@@ -44,21 +34,26 @@ export class WebAudio {
   @State() context: AudioContext
   @State() gain: GainNode
 
-  @State() sources: Array<string> = []
-  @State() _sources: NodeList
+  @State() sources: Array<HTMLWebAudioSourceElement> = []
+  @State() _sources: Array<Node>
   @State() _currentSource: WebAudioSource
 
   @State() keys: Object = {}
 
   @State() externalFiles: Array<string>
 
-  @State() visualizers: NodeListOf<Element>
+  @State() visualizers: Array<WebAudioVisualizer>
   @State() previousVisualizer: WebAudioVisualizer
   @State() visualizerNodes: Array<string>
 
   @Method()
   source (name) {
     return this.sources[name];
+  }
+
+  @Method()
+  get_context () {
+    return this.context;
   }
 
   @Method()
@@ -71,31 +66,27 @@ export class WebAudio {
    **/
   componentDidLoad() {
     this.connect_debugger()
+  }
 
+  @Method()
+  async connect_the_world() {
     this.connect_context()
 
     this.gain = this.context.createGain()
 
     this.connect_visualizers();
-    this.connect_sources()
-    this.connect_midi()
+    this.connect_sources();
+    this.connect_midi();
+
+    this.prepared = true;
+
+    return true
   }
 
   connect_context () {
-    var AudioContext = window.AudioContext
-        || window.webkitAudioContext
-        || window.audio_context
-
-    if (AudioContext) {
-        window.audio_context = new AudioContext
-        this.log("Set window.audio_context")
-    } else {
-      this.log("The Web Audio API is not supported by your browser.")
-    }
-
-    this.context = window.audio_context
-
-    this.log("Connected to window.audio_context")
+    // @ts-ignore
+    this.context = (window["webkitAudioContext"]) ? new webkitAudioContext : new AudioContext ;
+    this.log("Connected to this.context")
   }
 
   connect_sources () {
@@ -105,14 +96,18 @@ export class WebAudio {
   async build_sources () {
     this.log("Building sources")
 
-    this._sources = this.element.querySelectorAll('web-audio-source')
+    this._sources = Array.from(this.element.querySelectorAll('web-audio-source'))
 
     this.externalFiles = []
 
-    forEach(this._sources, (index, source) => {
-      this.log(`Preparing ${source.name}`)
+    this._sources.forEach((source, index) => {
+      // @ts-ignore
+      this.log(`(${index}) Preparing ${source.name}`)
+
+      // @ts-ignore
       this.sources[source.name] = source
 
+      // @ts-ignore
       let bufferLoader = new BufferLoader( this.context, [source.src], (bufferList) => {
         this.cache_sources(bufferList, source)
       })
@@ -143,20 +138,18 @@ export class WebAudio {
     })
 
     this._currentSource = null
-
-    this.prepared = true
-
   }
 
   async connect_visualizers () {
     await delay(20)
 
-    this.visualizers = document.querySelectorAll(`web-audio-visualizer[for="${this.name}"]`)
+    // @ts-ignore
+    this.visualizers = Array.from(document.querySelectorAll(`web-audio-visualizer[for="${this.name}"]`))
 
     if (this.visualizers) {
       this.log(`Attaching visualizers`)
 
-      forEach(this.visualizers, (index, visualizer) => {
+      this.visualizers.forEach((visualizer, index) => {
         if (index === 0) {
           visualizer = visualizer.connect(this.context, this.context.destination)
         } else {
@@ -164,7 +157,7 @@ export class WebAudio {
         }
 
         this.previousVisualizer = visualizer
-      }, this)
+      });
     } else {
       this.log(`No visualizers for ${this.name}`)
     }
@@ -200,7 +193,7 @@ export class WebAudio {
         var input = webmidi.inputs[0];
 
         if (input) {
-          input.addListener('noteon', 'all', (e: MyCustomEvent) => {
+          input.addListener('noteon', 'all', (e: WebAudioCustomEvent) => {
             this.log(`KEY: Channel: ${e.channel}, Note: ${e.note.number}, Name: ${e.note.name}, Oct: ${e.note.octave}`)
 
             if (this.keys[e.channel]) {

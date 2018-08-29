@@ -1,8 +1,8 @@
-import { Component, Prop, State, Method, Element } from '@stencil/core';
+import { Component, Prop, State, Method, Element, Event, EventEmitter } from '@stencil/core';
+import raf from 'raf'
 
 @Component({
   tag: 'web-audio-source',
-  styleUrl: 'web-audio-source.scss',
   shadow: true
 })
 
@@ -11,16 +11,16 @@ export class WebAudioSource {
   @Element() element: HTMLElement;
   @State() webAudioWrapper: HTMLElement;
 
-  @Prop() src: string;
-  @Prop() name: string;
+  @Prop({ mutable: true, reflectToAttr: true }) src: string;
+  @Prop({ mutable: true, reflectToAttr: true }) name: string;
 
   @Prop() inert: boolean = false;
 
-  @Prop() midikey: number = 0;
-  @Prop() midichannel: number = 1;
+  @Prop({ mutable: true, reflectToAttr: true }) midikey: number = 0;
+  @Prop({ mutable: true, reflectToAttr: true }) midichannel: number = 1;
 
   @State() status: string = "paused";
-  @Prop() effectsvolume: number = 100;
+  @Prop({ mutable: true, reflectToAttr: true }) effectsvolume: number = 100;
 
   @State() context: AudioContext;
   @State() masterGain: GainNode;
@@ -32,6 +32,13 @@ export class WebAudioSource {
   @State() source: AudioBufferSourceNode;
   @State() buffer: AudioBuffer;
   @State() entry: string;
+  @State() duration: number = 0.0;
+  @State() startTime: number = 0.0;
+  @State() pausedTime: number = 0.0;
+  @State() elapsedTime: number = 0.0;
+  @Prop({ mutable: true }) playing: boolean = false;
+
+  @Event() timeupdate: EventEmitter;
 
   @Method()
   getBuffer() {
@@ -55,7 +62,30 @@ export class WebAudioSource {
   }
 
   @Method()
-  play() {
+  getDuration() {
+    return this.duration
+  }
+
+  currentTime () {
+    let current = 0;
+
+    if (this.pausedTime) {
+        current = this.pausedTime;
+    } else {
+      if (this.startTime) {
+          current = this.context.currentTime - this.startTime;
+      }
+    }
+
+    if (current >= this.duration) {
+      current = this.duration;
+    }
+
+    return current;
+  };
+
+  @Method()
+  prepare () {
     if (!this.inert) {
       this.source = this.context.createBufferSource();
 
@@ -68,16 +98,81 @@ export class WebAudioSource {
         this.dryGain.gain.value = 1;
       }
 
-
       if (this.wetGain) {
         this.source.connect(this.wetGain);
       }
 
       this.source.connect(this.dryGain);
 
-      this.source.start(0);
+      this.duration = this.source.buffer.duration;
+    }
+  }
+
+  @Method()
+  play() {
+    if (!this.inert) {
+      this.prepare();
+
+      this.source.start(0, this.pausedTime);
+
+      this.startTime = this.context.currentTime - this.pausedTime;
+      this.pausedTime = 0;
+      this.playing = true;
+
+      this.tick()
+
+      raf(() => { this.tick() })
+
     } else {
       throw "Cannot play inert media."
+    }
+  }
+
+  @Method()
+  skipTo (time) {
+    this.stop();
+    this.pausedTime = time / 1000
+    this.play();
+  }
+
+  @Method()
+  pause () {
+    this.elapsedTime = this.context.currentTime - this.startTime;
+    this.stop();
+    this.pausedTime = this.elapsedTime;
+    this.playing = false;
+  }
+
+  @Method()
+  toggle () {
+    if (this.playing) {
+      this.pause()
+    } else {
+      this.play()
+    }
+  }
+
+  @Method()
+  stop () {
+    if (this.source) {
+      this.source.disconnect();
+      this.source.stop();
+    }
+
+    this.source = null;
+    this.pausedTime = 0;
+    this.startTime = 0;
+    this.playing = false;
+  }
+
+  tick() {
+    this.timeupdate.emit({
+      time: this.currentTime(),
+      duration: this.duration
+    })
+
+    if (this.source) {
+      raf(() => { this.tick() })
     }
   }
 

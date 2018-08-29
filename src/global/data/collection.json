@@ -4,11 +4,11 @@
       "tag": "copy-wrap",
       "dependencies": [],
       "componentClass": "CopyWrap",
-      "componentPath": "components/copy-wrap/copy-wrap.js",
+      "componentPath": "components/ui/copy-wrap/copy-wrap.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/copy-wrap/copy-wrap.css"
+            "components/ui/copy-wrap/copy-wrap.css"
           ]
         }
       },
@@ -31,11 +31,11 @@
         "stellar-asset"
       ],
       "componentClass": "SkeletonImg",
-      "componentPath": "components/skeleton-img/skeleton-img.js",
+      "componentPath": "components/media/skeleton-img/skeleton-img.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/skeleton-img/skeleton-img.css"
+            "components/media/skeleton-img/skeleton-img.css"
           ]
         }
       },
@@ -74,11 +74,11 @@
       "tag": "skeleton-text",
       "dependencies": [],
       "componentClass": "SkeletonText",
-      "componentPath": "components/skeleton-text/skeleton-text.js",
+      "componentPath": "components/media/skeleton-text/skeleton-text.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/skeleton-text/skeleton-text.css"
+            "components/media/skeleton-text/skeleton-text.css"
           ]
         }
       },
@@ -109,6 +109,88 @@
       }
     },
     {
+      "tag": "stellar-360-image",
+      "dependencies": [],
+      "componentClass": "Image360",
+      "componentPath": "components/media/360-image/360-image.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/media/360-image/360-image.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "height",
+          "type": "Number",
+          "attr": "height"
+        },
+        {
+          "name": "src",
+          "type": "String",
+          "attr": "src"
+        },
+        {
+          "name": "width",
+          "type": "Number",
+          "attr": "width"
+        }
+      ],
+      "states": [
+        {
+          "name": "image"
+        },
+        {
+          "name": "viewer"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-360-video",
+      "dependencies": [],
+      "componentClass": "Video360",
+      "componentPath": "components/media/360-video/360-video.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/media/360-video/360-video.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "height",
+          "type": "Number",
+          "attr": "height"
+        },
+        {
+          "name": "src",
+          "type": "String",
+          "attr": "src"
+        },
+        {
+          "name": "width",
+          "type": "Number",
+          "attr": "width"
+        }
+      ],
+      "states": [
+        {
+          "name": "video"
+        },
+        {
+          "name": "viewer"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
       "tag": "stellar-accordion",
       "dependencies": [
         "stellar-asset",
@@ -116,11 +198,11 @@
         "stellar-button"
       ],
       "componentClass": "Accordion",
-      "componentPath": "components/accordion/accordion.js",
+      "componentPath": "components/ui/accordion/accordion.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/accordion/accordion.css"
+            "components/ui/accordion/accordion.css"
           ]
         }
       },
@@ -174,11 +256,11 @@
         "stellar-blur"
       ],
       "componentClass": "AnimateText",
-      "componentPath": "components/animate-text/animate-text.js",
+      "componentPath": "components/motion/animate-text/animate-text.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/animate-text/animate-text.css"
+            "components/motion/animate-text/animate-text.css"
           ]
         }
       },
@@ -207,11 +289,11 @@
         "ion-icon"
       ],
       "componentClass": "Asset",
-      "componentPath": "components/asset/asset.js",
+      "componentPath": "components/ui/asset/asset.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/asset/asset.css"
+            "components/ui/asset/asset.css"
           ]
         }
       },
@@ -255,7 +337,7 @@
         "stellar-grid"
       ],
       "componentClass": "AssetLibrary",
-      "componentPath": "components/asset-library/asset-library.js",
+      "componentPath": "components/helpers/asset-library/asset-library.js",
       "styles": {},
       "states": [
         {
@@ -275,11 +357,11 @@
         "stellar-tooltip"
       ],
       "componentClass": "Avatar",
-      "componentPath": "components/avatar/avatar.js",
+      "componentPath": "components/ui/avatar/avatar.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/avatar/avatar.css"
+            "components/ui/avatar/avatar.css"
           ]
         }
       },
@@ -353,11 +435,11 @@
       "tag": "stellar-blur",
       "dependencies": [],
       "componentClass": "Blur",
-      "componentPath": "components/blur/blur.js",
+      "componentPath": "components/motion/blur/blur.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/blur/blur.css"
+            "components/motion/blur/blur.css"
           ]
         }
       },
@@ -393,11 +475,11 @@
       "tag": "stellar-breadcrumb",
       "dependencies": [],
       "componentClass": "Breadcrumb",
-      "componentPath": "components/breadcrumb/breadcrumb.js",
+      "componentPath": "components/ui/breadcrumb/breadcrumb.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/breadcrumb/breadcrumb.css"
+            "components/ui/breadcrumb/breadcrumb.css"
           ]
         }
       },
@@ -436,11 +518,11 @@
         "stellar-breadcrumb"
       ],
       "componentClass": "Breadcrumbs",
-      "componentPath": "components/breadcrumbs/breadcrumbs.js",
+      "componentPath": "components/ui/breadcrumbs/breadcrumbs.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/breadcrumbs/breadcrumbs.css"
+            "components/ui/breadcrumbs/breadcrumbs.css"
           ]
         }
       },
@@ -488,11 +570,11 @@
         "stellar-asset"
       ],
       "componentClass": "Button",
-      "componentPath": "components/button/button.js",
+      "componentPath": "components/ui/button/button.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/button/button.css"
+            "components/ui/button/button.css"
           ]
         }
       },
@@ -607,11 +689,11 @@
       "tag": "stellar-callout",
       "dependencies": [],
       "componentClass": "Callout",
-      "componentPath": "components/callout/callout.js",
+      "componentPath": "components/ui/callout/callout.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/callout/callout.css"
+            "components/ui/callout/callout.css"
           ]
         }
       },
@@ -632,11 +714,11 @@
       "tag": "stellar-card",
       "dependencies": [],
       "componentClass": "Card",
-      "componentPath": "components/card/card.js",
+      "componentPath": "components/ui/card/card.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/card/card.css"
+            "components/ui/card/card.css"
           ]
         }
       },
@@ -708,11 +790,11 @@
       "tag": "stellar-chart",
       "dependencies": [],
       "componentClass": "Chart",
-      "componentPath": "components/chart/chart.js",
+      "componentPath": "components/ui/chart/chart.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/chart/chart.css"
+            "components/ui/chart/chart.css"
           ]
         }
       },
@@ -777,11 +859,11 @@
       "tag": "stellar-code",
       "dependencies": [],
       "componentClass": "Code",
-      "componentPath": "components/code/code.js",
+      "componentPath": "components/ui/code/code.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/code/code.css"
+            "components/ui/code/code.css"
           ]
         }
       },
@@ -835,11 +917,11 @@
         "stellar-tag"
       ],
       "componentClass": "CodeBlock",
-      "componentPath": "components/code-block/code-block.js",
+      "componentPath": "components/ui/code-block/code-block.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/code-block/code-block.css"
+            "components/ui/code-block/code-block.css"
           ]
         }
       },
@@ -891,11 +973,11 @@
         "stellar-grid"
       ],
       "componentClass": "ColorLibrary",
-      "componentPath": "components/color-library/color-library.js",
+      "componentPath": "components/helpers/color-library/color-library.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/color-library/color-library.css"
+            "components/helpers/color-library/color-library.css"
           ]
         }
       }
@@ -904,11 +986,11 @@
       "tag": "stellar-color-picker",
       "dependencies": [],
       "componentClass": "ColorPicker",
-      "componentPath": "components/color-picker/color-picker.js",
+      "componentPath": "components/ui/color-picker/color-picker.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/color-picker/color-picker.css"
+            "components/ui/color-picker/color-picker.css"
           ]
         }
       },
@@ -949,11 +1031,11 @@
       "tag": "stellar-comment",
       "dependencies": [],
       "componentClass": "Comment",
-      "componentPath": "components/comment/comment.js",
+      "componentPath": "components/ui/comment/comment.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/comment/comment.css"
+            "components/ui/comment/comment.css"
           ]
         }
       },
@@ -977,11 +1059,11 @@
       "tag": "stellar-comments",
       "dependencies": [],
       "componentClass": "Comments",
-      "componentPath": "components/comments/comments.js",
+      "componentPath": "components/ui/comments/comments.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/comments/comments.css"
+            "components/ui/comments/comments.css"
           ]
         }
       },
@@ -997,11 +1079,11 @@
         "stellar-blur"
       ],
       "componentClass": "Content",
-      "componentPath": "components/content/content.js",
+      "componentPath": "components/ui/content/content.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/content/content.css"
+            "components/ui/content/content.css"
           ]
         }
       },
@@ -1056,11 +1138,11 @@
         "stencil-router"
       ],
       "componentClass": "DocsRoot",
-      "componentPath": "components/docs/root/root.js",
+      "componentPath": "components/ui/docs/root/root.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/docs/root/root.css"
+            "components/ui/docs/root/root.css"
           ]
         }
       }
@@ -1081,11 +1163,11 @@
         "stellar-tabs"
       ],
       "componentClass": "DocsComponent",
-      "componentPath": "components/docs/component/component.js",
+      "componentPath": "components/ui/docs/component/component.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/docs/component/component.css"
+            "components/ui/docs/component/component.css"
           ]
         }
       },
@@ -1128,11 +1210,11 @@
         "stellar-toggle-option"
       ],
       "componentClass": "DocsHeader",
-      "componentPath": "components/docs/header/header.js",
+      "componentPath": "components/ui/docs/header/header.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/docs/header/header.css"
+            "components/ui/docs/header/header.css"
           ]
         }
       },
@@ -1194,11 +1276,11 @@
         "stellar-layout"
       ],
       "componentClass": "DocsHome",
-      "componentPath": "components/docs/home/home.js",
+      "componentPath": "components/ui/docs/home/home.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/docs/home/home.css"
+            "components/ui/docs/home/home.css"
           ]
         }
       }
@@ -1213,11 +1295,11 @@
         "stellar-tag"
       ],
       "componentClass": "DocsNavigation",
-      "componentPath": "components/docs/navigation/navigation.js",
+      "componentPath": "components/ui/docs/navigation/navigation.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/docs/navigation/navigation.css"
+            "components/ui/docs/navigation/navigation.css"
           ]
         }
       },
@@ -1234,11 +1316,11 @@
       "tag": "stellar-docs-not-found",
       "dependencies": [],
       "componentClass": "DocsNotFound",
-      "componentPath": "components/docs/not-found/not-found.js",
+      "componentPath": "components/ui/docs/not-found/not-found.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/docs/not-found/not-found.css"
+            "components/ui/docs/not-found/not-found.css"
           ]
         }
       }
@@ -1252,11 +1334,11 @@
         "stellar-markdown"
       ],
       "componentClass": "DocsPage",
-      "componentPath": "components/docs/page/page.js",
+      "componentPath": "components/ui/docs/page/page.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/docs/page/page.css"
+            "components/ui/docs/page/page.css"
           ]
         }
       },
@@ -1274,11 +1356,11 @@
         "stellar-code-block"
       ],
       "componentClass": "Documentation",
-      "componentPath": "components/documentation/documentation.js",
+      "componentPath": "components/ui/documentation/documentation.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/documentation/documentation.css"
+            "components/ui/documentation/documentation.css"
           ]
         }
       },
@@ -1342,11 +1424,11 @@
         "stellar-blur"
       ],
       "componentClass": "Dropdown",
-      "componentPath": "components/dropdown/dropdown.js",
+      "componentPath": "components/ui/dropdown/dropdown.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/dropdown/dropdown.css"
+            "components/ui/dropdown/dropdown.css"
           ]
         }
       },
@@ -1393,11 +1475,11 @@
       "tag": "stellar-footer",
       "dependencies": [],
       "componentClass": "Footer",
-      "componentPath": "components/footer/footer.js",
+      "componentPath": "components/ui/footer/footer.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/footer/footer.css"
+            "components/ui/footer/footer.css"
           ]
         }
       }
@@ -1406,11 +1488,11 @@
       "tag": "stellar-form",
       "dependencies": [],
       "componentClass": "Form",
-      "componentPath": "components/form/form.js",
+      "componentPath": "components/ui/form/form.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/form/form.css"
+            "components/ui/form/form.css"
           ]
         }
       },
@@ -1493,11 +1575,11 @@
       "tag": "stellar-grid",
       "dependencies": [],
       "componentClass": "Grid",
-      "componentPath": "components/grid/grid.js",
+      "componentPath": "components/ui/grid/grid.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/grid/grid.css"
+            "components/ui/grid/grid.css"
           ]
         }
       },
@@ -1543,11 +1625,11 @@
         "stellar-group-overflow"
       ],
       "componentClass": "Group",
-      "componentPath": "components/group/group.js",
+      "componentPath": "components/ui/group/group.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/group/group.css"
+            "components/ui/group/group.css"
           ]
         }
       },
@@ -1584,11 +1666,11 @@
         "stellar-tooltip"
       ],
       "componentClass": "GroupOverflow",
-      "componentPath": "components/group-overflow/group-overflow.js",
+      "componentPath": "components/ui/group-overflow/group-overflow.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/group-overflow/group-overflow.css"
+            "components/ui/group-overflow/group-overflow.css"
           ]
         }
       },
@@ -1616,11 +1698,11 @@
         "stellar-starscape"
       ],
       "componentClass": "Header",
-      "componentPath": "components/header/header.js",
+      "componentPath": "components/ui/header/header.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/header/header.css"
+            "components/ui/header/header.css"
           ]
         }
       },
@@ -1651,16 +1733,16 @@
       "tag": "stellar-image",
       "dependencies": [],
       "componentClass": "StellarImage",
-      "componentPath": "components/image/image.js",
+      "componentPath": "components/media/image/image.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/image/image.css"
+            "components/media/image/image.css"
           ]
         }
       },
       "assetPaths": [
-        "components/image/vendor"
+        "components/media/image/vendor"
       ],
       "props": [
         {
@@ -1725,11 +1807,11 @@
         "stellar-label"
       ],
       "componentClass": "Input",
-      "componentPath": "components/input/input.js",
+      "componentPath": "components/ui/input/input.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/input/input.css"
+            "components/ui/input/input.css"
           ]
         }
       },
@@ -1925,16 +2007,145 @@
       ]
     },
     {
+      "tag": "stellar-interview",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-card",
+        "stellar-progress",
+        "stellar-unit",
+        "web-audio",
+        "web-audio-debugger",
+        "web-audio-source",
+        "web-audio-visualizer"
+      ],
+      "componentClass": "Interview",
+      "componentPath": "components/media/interview/interview.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/media/interview/interview.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "debug",
+          "type": "Boolean",
+          "attr": "debug"
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "attr": "label"
+        },
+        {
+          "name": "playing",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "playing"
+        },
+        {
+          "name": "src",
+          "type": "String",
+          "attr": "src"
+        }
+      ],
+      "states": [
+        {
+          "name": "audio"
+        },
+        {
+          "name": "current"
+        },
+        {
+          "name": "duration"
+        },
+        {
+          "name": "interviewLines"
+        },
+        {
+          "name": "io"
+        },
+        {
+          "name": "loaded"
+        },
+        {
+          "name": "loading"
+        },
+        {
+          "name": "updateFunc"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "timeupdate",
+          "method": "handleTimeUpdate",
+          "passive": false,
+          "capture": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "pause"
+        },
+        {
+          "name": "play"
+        },
+        {
+          "name": "skipTo"
+        },
+        {
+          "name": "toggle"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-interview-line",
+      "dependencies": [],
+      "componentClass": "InterviewLine",
+      "componentPath": "components/media/interview-line/interview-line.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/media/interview-line/interview-line.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "complement",
+          "type": "Boolean",
+          "attr": "complement"
+        },
+        {
+          "name": "in",
+          "type": "Number",
+          "attr": "in"
+        },
+        {
+          "name": "out",
+          "type": "Number",
+          "attr": "out"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
       "tag": "stellar-item",
       "dependencies": [
         "stellar-asset"
       ],
       "componentClass": "Item",
-      "componentPath": "components/item/item.js",
+      "componentPath": "components/ui/item/item.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/item/item.css"
+            "components/ui/item/item.css"
           ]
         }
       },
@@ -2051,11 +2262,11 @@
       "tag": "stellar-label",
       "dependencies": [],
       "componentClass": "Label",
-      "componentPath": "components/label/label.js",
+      "componentPath": "components/ui/label/label.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/label/label.css"
+            "components/ui/label/label.css"
           ]
         }
       },
@@ -2071,11 +2282,11 @@
       "tag": "stellar-layout",
       "dependencies": [],
       "componentClass": "Layout",
-      "componentPath": "components/layout/layout.js",
+      "componentPath": "components/ui/layout/layout.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/layout/layout.css"
+            "components/ui/layout/layout.css"
           ]
         }
       },
@@ -2117,11 +2328,11 @@
         "stellar-item"
       ],
       "componentClass": "List",
-      "componentPath": "components/list/list.js",
+      "componentPath": "components/ui/list/list.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/list/list.css"
+            "components/ui/list/list.css"
           ]
         }
       },
@@ -2181,7 +2392,7 @@
         "copy-wrap"
       ],
       "componentClass": "Markdown",
-      "componentPath": "components/markdown/markdown.js",
+      "componentPath": "components/helpers/markdown/markdown.js",
       "styles": {},
       "props": [
         {
@@ -2223,11 +2434,11 @@
         "stellar-button"
       ],
       "componentClass": "Message",
-      "componentPath": "components/message/message.js",
+      "componentPath": "components/ui/message/message.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/message/message.css"
+            "components/ui/message/message.css"
           ]
         }
       },
@@ -2286,11 +2497,11 @@
         "stellar-card"
       ],
       "componentClass": "Modal",
-      "componentPath": "components/modal/modal.js",
+      "componentPath": "components/ui/modal/modal.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/modal/modal.css"
+            "components/ui/modal/modal.css"
           ]
         }
       },
@@ -2344,11 +2555,11 @@
         "stellar-overlay"
       ],
       "componentClass": "ModalController",
-      "componentPath": "components/modal-controller/modal-controller.js",
+      "componentPath": "components/ui/modal-controller/modal-controller.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/modal-controller/modal-controller.css"
+            "components/ui/modal-controller/modal-controller.css"
           ]
         }
       },
@@ -2395,11 +2606,11 @@
       "tag": "stellar-overlay",
       "dependencies": [],
       "componentClass": "Overlay",
-      "componentPath": "components/overlay/overlay.js",
+      "componentPath": "components/ui/overlay/overlay.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/overlay/overlay.css"
+            "components/ui/overlay/overlay.css"
           ]
         }
       },
@@ -2419,11 +2630,11 @@
         "stellar-input"
       ],
       "componentClass": "Pagination",
-      "componentPath": "components/pagination/pagination.js",
+      "componentPath": "components/ui/pagination/pagination.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/pagination/pagination.css"
+            "components/ui/pagination/pagination.css"
           ]
         }
       },
@@ -2499,11 +2710,11 @@
       "tag": "stellar-parallax",
       "dependencies": [],
       "componentClass": "Parallax",
-      "componentPath": "components/parallax/parallax.js",
+      "componentPath": "components/motion/parallax/parallax.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/parallax/parallax.css"
+            "components/motion/parallax/parallax.css"
           ]
         }
       },
@@ -2522,11 +2733,11 @@
       "tag": "stellar-parallax-section",
       "dependencies": [],
       "componentClass": "ParallaxSection",
-      "componentPath": "components/parallax-section/parallax-section.js",
+      "componentPath": "components/motion/parallax-section/parallax-section.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/parallax-section/parallax-section.css"
+            "components/motion/parallax-section/parallax-section.css"
           ]
         }
       },
@@ -2553,23 +2764,36 @@
     },
     {
       "tag": "stellar-progress",
-      "dependencies": [
-        "stellar-blur"
-      ],
+      "dependencies": [],
       "componentClass": "Progress",
-      "componentPath": "components/progress/progress.js",
+      "componentPath": "components/ui/progress/progress.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/progress/progress.css"
+            "components/ui/progress/progress.css"
           ]
         }
       },
       "props": [
         {
+          "name": "blurable",
+          "type": "Boolean",
+          "attr": "blurable"
+        },
+        {
+          "name": "editable",
+          "type": "Boolean",
+          "attr": "editable"
+        },
+        {
           "name": "max",
           "type": "Number",
           "attr": "max"
+        },
+        {
+          "name": "noease",
+          "type": "Boolean",
+          "attr": "noease"
         },
         {
           "name": "slender",
@@ -2582,13 +2806,24 @@
           "mutable": true,
           "attr": "value",
           "watch": [
-            "valueChange"
+            "observeValue"
           ]
         }
       ],
       "states": [
         {
           "name": "blur"
+        },
+        {
+          "name": "wrapper"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "events": [
+        {
+          "event": "valueChange"
         }
       ]
     },
@@ -2598,11 +2833,11 @@
         "stellar-asset"
       ],
       "componentClass": "QuickActions",
-      "componentPath": "components/quick-actions/quick-actions.js",
+      "componentPath": "components/ui/quick-actions/quick-actions.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/quick-actions/quick-actions.css"
+            "components/ui/quick-actions/quick-actions.css"
           ]
         }
       },
@@ -2622,11 +2857,11 @@
       "tag": "stellar-scatter",
       "dependencies": [],
       "componentClass": "Scatter",
-      "componentPath": "components/scatter/scatter.js",
+      "componentPath": "components/helpers/scatter/scatter.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/scatter/scatter.css"
+            "components/helpers/scatter/scatter.css"
           ]
         }
       },
@@ -2675,11 +2910,11 @@
         "stellar-label"
       ],
       "componentClass": "Select",
-      "componentPath": "components/select/select.js",
+      "componentPath": "components/ui/select/select.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/select/select.css"
+            "components/ui/select/select.css"
           ]
         }
       },
@@ -2832,11 +3067,11 @@
         "stellar-blur"
       ],
       "componentClass": "Slide",
-      "componentPath": "components/slide/slide.js",
+      "componentPath": "components/ui/slide/slide.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/slide/slide.scss"
+            "components/ui/slide/slide.scss"
           ]
         }
       },
@@ -2852,16 +3087,16 @@
       "tag": "stellar-slides",
       "dependencies": [],
       "componentClass": "Slides",
-      "componentPath": "components/slides/slides.js",
+      "componentPath": "components/ui/slides/slides.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/slides/slides.scss"
+            "components/ui/slides/slides.scss"
           ]
         }
       },
       "assetPaths": [
-        "components/slides/vendor"
+        "components/ui/slides/vendor"
       ],
       "props": [
         {
@@ -3072,11 +3307,11 @@
         "stellar-parallax-section"
       ],
       "componentClass": "Starscape",
-      "componentPath": "components/starscape/starscape.js",
+      "componentPath": "components/helpers/starscape/starscape.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/starscape/starscape.css"
+            "components/helpers/starscape/starscape.css"
           ]
         }
       },
@@ -3090,11 +3325,11 @@
         "stellar-button"
       ],
       "componentClass": "Step",
-      "componentPath": "components/step/step.js",
+      "componentPath": "components/ui/step/step.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/step/step.css"
+            "components/ui/step/step.css"
           ]
         }
       },
@@ -3135,11 +3370,11 @@
       "tag": "stellar-steps",
       "dependencies": [],
       "componentClass": "Steps",
-      "componentPath": "components/steps/steps.js",
+      "componentPath": "components/ui/steps/steps.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/steps/steps.css"
+            "components/ui/steps/steps.css"
           ]
         }
       },
@@ -3172,17 +3407,31 @@
       }
     },
     {
+      "tag": "stellar-story",
+      "dependencies": [],
+      "componentClass": "Story",
+      "componentPath": "components/helpers/story/story.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "target",
+          "type": "String",
+          "attr": "target"
+        }
+      ]
+    },
+    {
       "tag": "stellar-stripe",
       "dependencies": [
         "stellar-grid",
         "stellar-input"
       ],
       "componentClass": "Card",
-      "componentPath": "components/stripe/stripe.js",
+      "componentPath": "components/helpers/stripe/stripe.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/stripe/stripe.css"
+            "components/helpers/stripe/stripe.css"
           ]
         }
       },
@@ -3240,11 +3489,11 @@
       "tag": "stellar-switch",
       "dependencies": [],
       "componentClass": "Switch",
-      "componentPath": "components/switch/switch.js",
+      "componentPath": "components/ui/switch/switch.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/switch/switch.css"
+            "components/ui/switch/switch.css"
           ]
         }
       },
@@ -3266,11 +3515,11 @@
         "stellar-tag"
       ],
       "componentClass": "Tab",
-      "componentPath": "components/tab/tab.js",
+      "componentPath": "components/ui/tab/tab.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/tab/tab.css"
+            "components/ui/tab/tab.css"
           ]
         }
       },
@@ -3331,11 +3580,11 @@
         "stellar-chart"
       ],
       "componentClass": "Table",
-      "componentPath": "components/table/table.js",
+      "componentPath": "components/ui/table/table.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/table/table.css"
+            "components/ui/table/table.css"
           ]
         }
       },
@@ -3379,11 +3628,11 @@
         "stellar-blur"
       ],
       "componentClass": "Tabs",
-      "componentPath": "components/tabs/tabs.js",
+      "componentPath": "components/ui/tabs/tabs.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/tabs/tabs.css"
+            "components/ui/tabs/tabs.css"
           ]
         }
       },
@@ -3441,11 +3690,11 @@
       "tag": "stellar-tag",
       "dependencies": [],
       "componentClass": "Tag",
-      "componentPath": "components/tag/tag.js",
+      "componentPath": "components/ui/tag/tag.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/tag/tag.css"
+            "components/ui/tag/tag.css"
           ]
         }
       },
@@ -3488,11 +3737,11 @@
         "stellar-grid"
       ],
       "componentClass": "ThemePreview",
-      "componentPath": "components/theme-preview/theme-preview.js",
+      "componentPath": "components/helpers/theme-preview/theme-preview.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/theme-preview/theme-preview.css"
+            "components/helpers/theme-preview/theme-preview.css"
           ]
         }
       },
@@ -3517,11 +3766,11 @@
         "stellar-grid"
       ],
       "componentClass": "Toggle",
-      "componentPath": "components/toggle/toggle.js",
+      "componentPath": "components/ui/toggle/toggle.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/toggle/toggle.css"
+            "components/ui/toggle/toggle.css"
           ]
         }
       },
@@ -3611,11 +3860,11 @@
         "stellar-tag"
       ],
       "componentClass": "ToggleOption",
-      "componentPath": "components/toggle-option/toggle-option.js",
+      "componentPath": "components/ui/toggle-option/toggle-option.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/toggle-option/toggle-option.css"
+            "components/ui/toggle-option/toggle-option.css"
           ]
         }
       },
@@ -3714,11 +3963,11 @@
       "tag": "stellar-tooltip",
       "dependencies": [],
       "componentClass": "Tooltip",
-      "componentPath": "components/tooltip/tooltip.js",
+      "componentPath": "components/ui/tooltip/tooltip.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/tooltip/tooltip.css"
+            "components/ui/tooltip/tooltip.css"
           ]
         }
       },
@@ -3737,11 +3986,11 @@
       "tag": "stellar-unit",
       "dependencies": [],
       "componentClass": "Unit",
-      "componentPath": "components/unit/unit.js",
+      "componentPath": "components/helpers/unit/unit.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/unit/unit.css"
+            "components/helpers/unit/unit.css"
           ]
         }
       },
@@ -3777,11 +4026,11 @@
       "tag": "stellar-video",
       "dependencies": [],
       "componentClass": "Video",
-      "componentPath": "components/video/video.js",
+      "componentPath": "components/media/video/video.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/video/video.css"
+            "components/media/video/video.css"
           ]
         }
       },
@@ -3845,6 +4094,519 @@
       "hostElement": {
         "name": "element"
       }
+    },
+    {
+      "tag": "web-audio",
+      "dependencies": [],
+      "componentClass": "WebAudio",
+      "componentPath": "components/audio/web-audio/web-audio.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "autoplay",
+          "attr": "autoplay"
+        },
+        {
+          "name": "midi",
+          "attr": "midi"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        }
+      ],
+      "states": [
+        {
+          "name": "_currentSource"
+        },
+        {
+          "name": "_sources"
+        },
+        {
+          "name": "context"
+        },
+        {
+          "name": "debugger"
+        },
+        {
+          "name": "externalFiles"
+        },
+        {
+          "name": "gain"
+        },
+        {
+          "name": "keys"
+        },
+        {
+          "name": "prepared"
+        },
+        {
+          "name": "previousVisualizer"
+        },
+        {
+          "name": "sources"
+        },
+        {
+          "name": "visualizerNodes"
+        },
+        {
+          "name": "visualizers"
+        }
+      ],
+      "methods": [
+        {
+          "name": "connect_the_world"
+        },
+        {
+          "name": "get_context"
+        },
+        {
+          "name": "is_prepared"
+        },
+        {
+          "name": "source"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "web-audio-debugger",
+      "dependencies": [],
+      "componentClass": "WebAudioDebugger",
+      "componentPath": "components/audio/web-audio-debugger/web-audio-debugger.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/audio/web-audio-debugger/web-audio-debugger.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "count",
+          "type": "Number",
+          "attr": "count"
+        }
+      ],
+      "states": [
+        {
+          "name": "history"
+        }
+      ],
+      "methods": [
+        {
+          "name": "addHistory"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "web-audio-effect",
+      "dependencies": [],
+      "componentClass": "WebAudioEffect",
+      "componentPath": "components/audio/web-audio-effect/web-audio-effect.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "axis",
+          "type": "String",
+          "attr": "axis"
+        },
+        {
+          "name": "method",
+          "type": "String",
+          "attr": "method"
+        },
+        {
+          "name": "midicontroller",
+          "type": "Number",
+          "attr": "midicontroller"
+        },
+        {
+          "name": "responds",
+          "type": "String",
+          "attr": "responds"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "attr": "type"
+        },
+        {
+          "name": "use",
+          "type": "String",
+          "attr": "use"
+        },
+        {
+          "name": "value",
+          "type": "Number",
+          "attr": "value"
+        }
+      ],
+      "states": [
+        {
+          "name": "_use"
+        },
+        {
+          "name": "context"
+        },
+        {
+          "name": "effect"
+        },
+        {
+          "name": "parent"
+        },
+        {
+          "name": "source"
+        }
+      ],
+      "methods": [
+        {
+          "name": "attachEffect"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "shadow": true
+    },
+    {
+      "tag": "web-audio-sequencer",
+      "dependencies": [],
+      "componentClass": "WebAudioSequencer",
+      "componentPath": "components/audio/web-audio-sequencer/web-audio-sequencer.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "autoplay",
+          "type": "Boolean",
+          "attr": "autoplay"
+        },
+        {
+          "name": "custom",
+          "attr": "custom"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        },
+        {
+          "name": "taps",
+          "type": "Number",
+          "attr": "taps"
+        },
+        {
+          "name": "tempo",
+          "type": "Number",
+          "attr": "tempo"
+        }
+      ],
+      "states": [
+        {
+          "name": "context"
+        },
+        {
+          "name": "currentTap"
+        },
+        {
+          "name": "iterations"
+        },
+        {
+          "name": "noteTime"
+        },
+        {
+          "name": "startTime"
+        },
+        {
+          "name": "timer"
+        },
+        {
+          "name": "totalPlayTime"
+        }
+      ],
+      "methods": [
+        {
+          "name": "play"
+        },
+        {
+          "name": "stop"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "web-audio-source",
+      "dependencies": [],
+      "componentClass": "WebAudioSource",
+      "componentPath": "components/audio/web-audio-source/web-audio-source.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "effectsvolume",
+          "type": "Number",
+          "mutable": true,
+          "attr": "effectsvolume"
+        },
+        {
+          "name": "inert",
+          "type": "Boolean",
+          "attr": "inert"
+        },
+        {
+          "name": "midichannel",
+          "type": "Number",
+          "mutable": true,
+          "attr": "midichannel"
+        },
+        {
+          "name": "midikey",
+          "type": "Number",
+          "mutable": true,
+          "attr": "midikey"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "mutable": true,
+          "attr": "name"
+        },
+        {
+          "name": "playing",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "playing"
+        },
+        {
+          "name": "src",
+          "type": "String",
+          "mutable": true,
+          "attr": "src"
+        }
+      ],
+      "states": [
+        {
+          "name": "buffer"
+        },
+        {
+          "name": "channelGain"
+        },
+        {
+          "name": "context"
+        },
+        {
+          "name": "dryGain"
+        },
+        {
+          "name": "duration"
+        },
+        {
+          "name": "effects"
+        },
+        {
+          "name": "elapsedTime"
+        },
+        {
+          "name": "entry"
+        },
+        {
+          "name": "masterGain"
+        },
+        {
+          "name": "pausedTime"
+        },
+        {
+          "name": "source"
+        },
+        {
+          "name": "startTime"
+        },
+        {
+          "name": "status"
+        },
+        {
+          "name": "webAudioWrapper"
+        },
+        {
+          "name": "wetGain"
+        }
+      ],
+      "methods": [
+        {
+          "name": "assignBuffer"
+        },
+        {
+          "name": "gain"
+        },
+        {
+          "name": "getBuffer"
+        },
+        {
+          "name": "getDuration"
+        },
+        {
+          "name": "pause"
+        },
+        {
+          "name": "play"
+        },
+        {
+          "name": "prepare"
+        },
+        {
+          "name": "skipTo"
+        },
+        {
+          "name": "stop"
+        },
+        {
+          "name": "toggle"
+        },
+        {
+          "name": "webAudio"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "events": [
+        {
+          "event": "timeupdate"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "web-audio-visualizer",
+      "dependencies": [],
+      "componentClass": "WebAudioVisualizer",
+      "componentPath": "components/audio/web-audio-visualizer/web-audio-visualizer.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/audio/web-audio-visualizer/web-audio-visualizer.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "color",
+          "type": "String",
+          "attr": "color"
+        },
+        {
+          "name": "for",
+          "type": "String",
+          "mutable": true,
+          "attr": "for"
+        },
+        {
+          "name": "height",
+          "type": "Number",
+          "mutable": true,
+          "attr": "height"
+        },
+        {
+          "name": "renderer",
+          "attr": "renderer"
+        },
+        {
+          "name": "size",
+          "type": "Number",
+          "attr": "size"
+        },
+        {
+          "name": "smoothing",
+          "type": "Number",
+          "attr": "smoothing"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "mutable": true,
+          "attr": "type"
+        },
+        {
+          "name": "width",
+          "type": "Number",
+          "mutable": true,
+          "attr": "width"
+        }
+      ],
+      "states": [
+        {
+          "name": "_bufferLength"
+        },
+        {
+          "name": "_dataArray"
+        },
+        {
+          "name": "analyser"
+        },
+        {
+          "name": "canvas"
+        },
+        {
+          "name": "canvasCTX"
+        },
+        {
+          "name": "context"
+        },
+        {
+          "name": "fragment"
+        },
+        {
+          "name": "fragShader"
+        },
+        {
+          "name": "fragSpectrum"
+        },
+        {
+          "name": "fragSpectrumArray"
+        },
+        {
+          "name": "fragTime"
+        },
+        {
+          "name": "freqs"
+        },
+        {
+          "name": "times"
+        },
+        {
+          "name": "vertex"
+        },
+        {
+          "name": "vertexShader"
+        }
+      ],
+      "methods": [
+        {
+          "name": "connect"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "shadow": true
+    },
+    {
+      "tag": "web-audio-visualizer-shader",
+      "dependencies": [],
+      "componentClass": "WebAudioVisualizerShader",
+      "componentPath": "components/audio/web-audio-visualizer-shader/web-audio-visualizer-shader.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "type",
+          "type": "String",
+          "attr": "type"
+        }
+      ],
+      "shadow": true
     }
   ],
   "collections": [

@@ -1,5 +1,5 @@
 import { Component, Prop, State, Listen, Watch, Element, Event, EventEmitter, Method } from '@stencil/core';
-import { blurringEase } from '../../global/helpers';
+import { blurringEase } from '../../../global/helpers';
 
 @Component({
   tag: 'stellar-select',

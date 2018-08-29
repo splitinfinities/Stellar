@@ -1,6 +1,6 @@
 import { Component, Prop, State, Element, Listen, Event, EventEmitter } from '@stencil/core'
 import properties from 'css-custom-properties'
-import { blurringEase } from '../../global/helpers';
+import { blurringEase } from '../../../global/helpers';
 
 @Component({
   tag: 'stellar-tab',

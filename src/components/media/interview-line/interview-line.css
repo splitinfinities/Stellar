@@ -1,0 +1,16 @@
+stellar-interview-line {
+  display: block;
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+stellar-interview-line[complement] {
+  opacity: 0.825;
+  bottom: 1rem;
+  transform: scale(0.5);
+}

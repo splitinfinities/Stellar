@@ -93,6 +93,38 @@
       "styles": []
     },
     {
+      "tag": "stellar-360-image",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "src",
+          "type": "string",
+          "attr": "src",
+          "docs": ""
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": []
+    },
+    {
+      "tag": "stellar-360-video",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "src",
+          "type": "string",
+          "attr": "src",
+          "docs": ""
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": []
+    },
+    {
       "tag": "stellar-accordion",
       "readme": "# stellar-accordian\n\n\n",
       "usage": {
@@ -3150,6 +3182,318 @@
           "type": "number",
           "mutable": true,
           "attr": "width",
+          "docs": ""
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "styles": []
+    },
+    {
+      "tag": "web-audio",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "autoplay",
+          "type": "Boolean",
+          "attr": "autoplay",
+          "docs": ""
+        },
+        {
+          "name": "midi",
+          "type": "Boolean",
+          "attr": "midi",
+          "docs": ""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "attr": "name",
+          "docs": ""
+        }
+      ],
+      "methods": [
+        {
+          "name": "connect_the_world",
+          "docs": ""
+        },
+        {
+          "name": "get_context",
+          "docs": ""
+        },
+        {
+          "name": "is_prepared",
+          "docs": ""
+        },
+        {
+          "name": "source",
+          "docs": ""
+        }
+      ],
+      "events": [],
+      "styles": []
+    },
+    {
+      "tag": "web-audio-debugger",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "count",
+          "type": "number",
+          "attr": "count",
+          "docs": ""
+        }
+      ],
+      "methods": [
+        {
+          "name": "addHistory",
+          "docs": ""
+        }
+      ],
+      "events": [],
+      "styles": []
+    },
+    {
+      "tag": "web-audio-effect",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "axis",
+          "type": "string",
+          "attr": "axis",
+          "docs": ""
+        },
+        {
+          "name": "method",
+          "type": "string",
+          "attr": "method",
+          "docs": ""
+        },
+        {
+          "name": "midicontroller",
+          "type": "number",
+          "attr": "midicontroller",
+          "docs": ""
+        },
+        {
+          "name": "responds",
+          "type": "string",
+          "attr": "responds",
+          "docs": ""
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "attr": "type",
+          "docs": ""
+        },
+        {
+          "name": "use",
+          "type": "string",
+          "attr": "use",
+          "docs": ""
+        },
+        {
+          "name": "value",
+          "type": "number",
+          "attr": "value",
+          "docs": ""
+        }
+      ],
+      "methods": [
+        {
+          "name": "attachEffect",
+          "docs": ""
+        }
+      ],
+      "events": [],
+      "styles": []
+    },
+    {
+      "tag": "web-audio-sequencer",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "autoplay",
+          "type": "boolean",
+          "attr": "autoplay",
+          "docs": ""
+        },
+        {
+          "name": "custom",
+          "type": "Function",
+          "attr": "custom",
+          "docs": ""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "attr": "name",
+          "docs": ""
+        },
+        {
+          "name": "taps",
+          "type": "number",
+          "attr": "taps",
+          "docs": ""
+        },
+        {
+          "name": "tempo",
+          "type": "number",
+          "attr": "tempo",
+          "docs": ""
+        }
+      ],
+      "methods": [
+        {
+          "name": "play",
+          "docs": ""
+        },
+        {
+          "name": "stop",
+          "docs": ""
+        }
+      ],
+      "events": [],
+      "styles": []
+    },
+    {
+      "tag": "web-audio-source",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "effectsvolume",
+          "type": "number",
+          "attr": "effectsvolume",
+          "docs": ""
+        },
+        {
+          "name": "inert",
+          "type": "boolean",
+          "attr": "inert",
+          "docs": ""
+        },
+        {
+          "name": "midichannel",
+          "type": "number",
+          "attr": "midichannel",
+          "docs": ""
+        },
+        {
+          "name": "midikey",
+          "type": "number",
+          "attr": "midikey",
+          "docs": ""
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "attr": "name",
+          "docs": ""
+        },
+        {
+          "name": "src",
+          "type": "string",
+          "attr": "src",
+          "docs": ""
+        }
+      ],
+      "methods": [
+        {
+          "name": "assignBuffer",
+          "docs": ""
+        },
+        {
+          "name": "gain",
+          "docs": ""
+        },
+        {
+          "name": "getBuffer",
+          "docs": ""
+        },
+        {
+          "name": "play",
+          "docs": ""
+        },
+        {
+          "name": "webAudio",
+          "docs": ""
+        }
+      ],
+      "events": [],
+      "styles": []
+    },
+    {
+      "tag": "web-audio-visualizer",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "for",
+          "type": "string",
+          "attr": "for",
+          "docs": ""
+        },
+        {
+          "name": "height",
+          "type": "number",
+          "attr": "height",
+          "docs": ""
+        },
+        {
+          "name": "renderer",
+          "type": "AnalyserNode",
+          "attr": "renderer",
+          "docs": ""
+        },
+        {
+          "name": "size",
+          "type": "number",
+          "attr": "size",
+          "docs": ""
+        },
+        {
+          "name": "smoothing",
+          "type": "number",
+          "attr": "smoothing",
+          "docs": ""
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "attr": "type",
+          "docs": ""
+        },
+        {
+          "name": "width",
+          "type": "number",
+          "attr": "width",
+          "docs": ""
+        }
+      ],
+      "methods": [
+        {
+          "name": "connect",
+          "docs": ""
+        }
+      ],
+      "events": [],
+      "styles": []
+    },
+    {
+      "tag": "web-audio-visualizer-shader",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "type",
+          "type": "string",
+          "attr": "type",
           "docs": ""
         }
       ],
