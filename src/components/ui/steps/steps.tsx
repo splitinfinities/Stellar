@@ -10,13 +10,13 @@ export class Steps {
 
   @Prop({mutable: true, reflectToAttr: true}) name: string
 
-  @State() stepsList: NodeListOf<any>
-  @State() contentsList: NodeListOf<any>
+  @State() stepsList: Array<HTMLStellarStepElement>
+  @State() contentsList: Array<HTMLStellarContentElement>
 
   @Method()
   steps() {
-    if (this.stepsList.length === 0) {
-      this.stepsList = this.element.querySelectorAll('stellar-step')
+    if (!this.stepsList || this.stepsList.length === 0) {
+      this.stepsList = Array.from(this.element.querySelectorAll('stellar-step'))
     }
 
     return this.stepsList
@@ -24,17 +24,24 @@ export class Steps {
 
   @Method()
   contents() {
-    this.contentsList = document.querySelectorAll(`stellar-content[for='${this.name}']`);
+    this.contentsList = Array.from(document.querySelectorAll(`stellar-content[for='${this.name}']`));
     return this.contentsList;
   }
 
   componentWillLoad () {
-    this.stepsList = this.element.querySelectorAll('stellar-step')
+    this.steps()
+
+    const stepCount = this.steps().length;
+
+    this.steps().forEach((step, index) => {
+      step.order = index + 1;
+      step.tabCount = stepCount;
+    })
   }
 
   render() {
     return (
-      <div class="step-list">
+      <div class="step-list" role="tablist">
         <slot></slot>
       </div>
     )

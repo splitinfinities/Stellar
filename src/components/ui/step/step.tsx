@@ -13,6 +13,9 @@ export class Step {
   @Prop() disabled: boolean = false
   @Prop({mutable: true, reflectToAttr: true}) open: boolean = false
 
+  @Prop({reflectToAttr: true}) order: number
+  @Prop({reflectToAttr: true}) tabCount: number
+
   @State() parent: any
 
   @Event() contentChange: EventEmitter;
@@ -44,9 +47,9 @@ export class Step {
 
   render() {
     return (
-      <stellar-button block href={this.href} tabindex="0" class="step-button" onClick={() => this.handleClick()}>
-        {this.renderTitle()}
-      </stellar-button>
+      <button role="tab" aria-selected={this.open ? "true" : "false" } aria-setsize={this.tabCount} aria-posinset={this.order} tabindex="0" class="step-button" onClick={() => this.handleClick()}>
+        <stellar-label>{this.renderTitle()}</stellar-label>
+      </button>
     )
   }
 }

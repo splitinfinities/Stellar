@@ -105,7 +105,7 @@ export class Code {
     var classes = this.numbers ? `show-line-numbers` : ``;
 
     return (
-      <pre class={classes}>
+      <pre class={classes} aria-label={`The ${this.language} code`} tabindex={0}>
         <code class={`language-${this.language}`} innerHTML={this.code}></code>
 
         <div class="hidden"><slot><template><p>There's no code here!</p></template></slot></div>

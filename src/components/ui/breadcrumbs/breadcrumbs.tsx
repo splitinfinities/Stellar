@@ -20,8 +20,9 @@ export class Breadcrumbs {
     return (
       <div id="breadcumb_wrapper" class="breadcrumbs">
         <div class="flush-left"></div>
-        <stellar-breadcrumb label={this.label}>
+        <stellar-breadcrumb>
           <stellar-asset id="icon" name={this.icon} src={this.icon_src} color={this.color}></stellar-asset>
+          <stellar-label>{this.label}</stellar-label>
         </stellar-breadcrumb>
         <slot></slot>
         <div class="flush"></div>

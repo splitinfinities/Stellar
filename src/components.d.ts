@@ -436,7 +436,8 @@ declare global {
     }
 
     interface StellarComment {
-      'content': string;
+      'content': any;
+      'name': any;
     }
 
     interface StellarComments {
@@ -810,12 +811,14 @@ declare global {
       'disabled': boolean;
       'href': string;
       'open': boolean;
+      'order': number;
+      'tabCount': number;
     }
 
     interface StellarSteps {
-      'contents': () => NodeListOf<any>;
+      'contents': () => any[];
       'name': string;
-      'steps': () => NodeListOf<any>;
+      'steps': () => any[];
     }
 
     interface StellarSwitch {
@@ -827,6 +830,8 @@ declare global {
       'href': string;
       'notifications': boolean|number;
       'open': boolean;
+      'order': number;
+      'tabCount': number;
       'tag': string;
     }
 
@@ -840,11 +845,11 @@ declare global {
     interface StellarTabs {
       'block': boolean;
       'blurring': number;
-      'contents': () => NodeListOf<any>;
+      'contents': () => any[];
       'height': string;
       'name': string;
       'noanimation': boolean;
-      'tabs': () => NodeListOf<any>;
+      'tabs': () => any[];
     }
 
     interface StellarTag {
@@ -2020,7 +2025,8 @@ declare global {
     }
 
     export interface StellarCommentAttributes extends HTMLAttributes {
-      'content'?: string;
+      'content'?: any;
+      'name'?: any;
     }
 
     export interface StellarCommentsAttributes extends HTMLAttributes {
@@ -2375,6 +2381,8 @@ declare global {
       'href'?: string;
       'onContentChange'?: (event: CustomEvent) => void;
       'open'?: boolean;
+      'order'?: number;
+      'tabCount'?: number;
     }
 
     export interface StellarStepsAttributes extends HTMLAttributes {
@@ -2391,6 +2399,8 @@ declare global {
       'notifications'?: boolean|number;
       'onContentChange'?: (event: CustomEvent) => void;
       'open'?: boolean;
+      'order'?: number;
+      'tabCount'?: number;
       'tag'?: string;
     }
 

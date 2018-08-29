@@ -14,6 +14,12 @@ stellar-breadcrumbs stellar-asset {
 	line-height: 0;
 }
 
+stellar-breadcrumbs stellar-label {
+  line-height: 1;
+  margin: 0 0 0 0.25rem;
+  color: white;
+}
+
 stellar-breadcrumbs .breadcrumbs {
 	display: inline-flex;
 	position: relative;

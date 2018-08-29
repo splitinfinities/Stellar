@@ -41,7 +41,7 @@ export class Content {
 
   render() {
     return (
-      <stellar-blur vertical={this.blur} class="wrap">
+      <stellar-blur vertical={this.blur} class="wrap" role="tabpanel" aria-hidden={!this.open ? "true" : "false"}>
         <slot></slot>
       </stellar-blur>
     );

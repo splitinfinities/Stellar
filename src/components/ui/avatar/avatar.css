@@ -35,6 +35,9 @@ stellar-avatar > .wrapper {
   max-width: 2.2em;
   font: inherit;
   font-size: var(--avatar-font-size);
+  appearance: none;
+  border: none;
+  padding: 0;
 }
 
 stellar-avatar > .wrapper > .content {

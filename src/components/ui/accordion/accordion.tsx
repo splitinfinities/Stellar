@@ -20,8 +20,9 @@ export class Accordion {
   @State() expander: HTMLElement;
   @State() observer: MutationObserver;
 
-  componentWillLoad() {
+  @State() els: any;
 
+  componentWillLoad() {
     var callback = (mutationsList) => {
         for (var mutation of mutationsList) {
             if (mutation.type == 'childList') {
@@ -37,6 +38,8 @@ export class Accordion {
     this.expander = this.element.shadowRoot.querySelector(".expander");
     this.refresh();
     this.attachObserver();
+    this.els = Array.from(this.element.querySelectorAll("*:not([slot='label'])"));
+    this.updateTabIndex();
   }
 
   @Method()
@@ -63,8 +66,16 @@ export class Accordion {
     return (this.open) ? "open" : ""
   }
 
+  updateTabIndex() {
+    this.els.forEach((element) => {
+      element.tabIndex = !this.open ? -1 : 0;
+    })
+  }
+
   handleClick() {
     this.open = !this.open
+
+    this.updateTabIndex();
 
     blurringEase((e: number) => {
       this.blur = e * 10
@@ -74,7 +85,7 @@ export class Accordion {
   render() {
     return (
       <div class="wrap">
-        <div class="button-wrap" onClick={ () => this.handleClick() }>
+        <div class="button-wrap" title="Selecting this opens the content of this accordion" onClick={ () => this.handleClick() }>
           <slot name="label">
             <stellar-button id="button" tag="button" ghost label={this.label}>{this.label}</stellar-button>
           </slot>
@@ -82,7 +93,7 @@ export class Accordion {
         </div>
 
         <stellar-blur vertical={this.blur}>
-          <div class={this.currentClasses()}>
+          <div class={this.currentClasses()} tabIndex={!this.open ? -1 : 0} >
             <slot></slot>
           </div>
         </stellar-blur>

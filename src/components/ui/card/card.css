@@ -35,14 +35,14 @@ stellar-card > .item {
 }
 
 stellar-card > a.item {
-  transform: scale(1) translateZ(10px);
+  transform: scale(1) translateZ(1px);
 }
 
 stellar-card > button.item:hover,
 stellar-card > button.item:active,
 stellar-card > a.item:hover,
 stellar-card > a.item:active {
-  transform: scale(1.0025) var(--card-transform) translateZ(20px);
+  transform: scale(1.0025) var(--card-transform) translateZ(2px);
   box-shadow: var(--card-hover-right, 1.6rem) var(--card-hover-top, 3rem) 1rem -.5rem var(--theme-base8);
 }
 
@@ -52,11 +52,11 @@ stellar-card > a.item:active {
 }
 
 stellar-card > a.item:active {
-  transform: scale(.9875) var(--card-transform) translateZ(20px);
+  transform: scale(.9875) var(--card-transform) translateZ(2px);
 }
 
 stellar-card > a.item:active > * {
-  transform: scale(.9875) var(--card-transform) translateZ(100px);
+  transform: scale(.9875) var(--card-transform) translateZ(10px);
 }
 
 stellar-card[shadow="light"] {

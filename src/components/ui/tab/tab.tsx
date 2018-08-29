@@ -16,6 +16,9 @@ export class Tab {
   @Prop({mutable: true, reflectToAttr: true}) open: boolean = false
   @Prop() notifications: boolean|number = false
 
+  @Prop({reflectToAttr: true}) order: number
+  @Prop({reflectToAttr: true}) tabCount: number
+
   @State() parent: any
 
   @Event() contentChange: EventEmitter;
@@ -82,7 +85,7 @@ export class Tab {
   render() {
     return (
       <div class="tab-wrap">
-        <this.tag href={this.href} tabindex="0" class="tab-button" onClick={(e) => this.handleClick(e)}>
+        <this.tag role="tab" aria-selected={this.open ? "true" : "false" } aria-setsize={this.tabCount} aria-posinset={this.order} href={this.href} tabindex="0" class="tab-button" onClick={(e) => this.handleClick(e)}>
           {this.renderNotifications()}
           {this.renderTitle()}
         </this.tag>

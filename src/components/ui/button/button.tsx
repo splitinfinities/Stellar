@@ -157,7 +157,7 @@ export class Button {
 
   renderSpan() {
     return (
-      <span class="button" title={this.label} data-disabled={this.disabled} onClick={() => { this.click() }}>
+      <span class="button" title={this.label} data-disabled={this.disabled} aria-label={`Button ${this.label} ${this.element.textContent}`} tabIndex={0} onClick={() => { this.click() }}>
         <div class="content"><slot>Submit</slot></div>
         {this.processing && <div class="processing">{this.renderSVG()}</div>}
       </span>

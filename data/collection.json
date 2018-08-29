@@ -1756,6 +1756,11 @@
           "attr": "height"
         },
         {
+          "name": "nozoom",
+          "type": "Boolean",
+          "attr": "nozoom"
+        },
+        {
           "name": "preload",
           "type": "String",
           "attr": "preload"
@@ -2010,7 +2015,6 @@
       "tag": "stellar-interview",
       "dependencies": [
         "stellar-asset",
-        "stellar-card",
         "stellar-progress",
         "stellar-unit",
         "web-audio",
@@ -2029,9 +2033,21 @@
       },
       "props": [
         {
+          "name": "aspectRatio",
+          "type": "Number",
+          "mutable": true,
+          "attr": "aspect-ratio"
+        },
+        {
           "name": "debug",
           "type": "Boolean",
           "attr": "debug"
+        },
+        {
+          "name": "height",
+          "type": "Number",
+          "mutable": true,
+          "attr": "height"
         },
         {
           "name": "label",
@@ -2048,6 +2064,12 @@
           "name": "src",
           "type": "String",
           "attr": "src"
+        },
+        {
+          "name": "width",
+          "type": "Number",
+          "mutable": true,
+          "attr": "width"
         }
       ],
       "states": [
@@ -2071,6 +2093,9 @@
         },
         {
           "name": "loading"
+        },
+        {
+          "name": "randomId"
         },
         {
           "name": "updateFunc"

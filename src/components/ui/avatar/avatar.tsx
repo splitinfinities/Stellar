@@ -91,7 +91,7 @@ export class Avatar {
 
   render() {
     return (
-      <div class="wrapper">
+      <button class="wrapper" title={`You tabbed on an Avatar for ${this.name}`}>
         {this.processing && <div class="processing"><stellar-avatar src="Loading" /></div>}
         <div class="content">
           <div class="letter" title={this.name}>{this.initials}</div>
@@ -99,7 +99,7 @@ export class Avatar {
           <div class="spacer"></div>
         </div>
         {!this.notooltip && <stellar-tooltip>{this.name}</stellar-tooltip>}
-      </div>
+      </button>
     );
   }
 }

@@ -14,15 +14,15 @@ export class Tabs {
 
   @Prop({reflectToAttr: true}) block: boolean = false;
 
-  @State() tabsList: NodeListOf<any>;
-  @State() contentsList: NodeListOf<any>;
+  @State() tabsList: Array<HTMLStellarTabElement>;
+  @State() contentsList: Array<HTMLStellarContentElement>;
 
   @Prop({mutable: true}) blurring: number = 0;
 
   @Method()
   tabs() {
-    if (this.tabsList.length === 0) {
-      this.tabsList = this.element.querySelectorAll('stellar-tab');
+    if (!this.tabsList || this.tabsList.length === 0) {
+      this.tabsList = Array.from(this.element.querySelectorAll('stellar-tab'));
     }
 
     return this.tabsList;
@@ -30,13 +30,13 @@ export class Tabs {
 
   @Method()
   contents() {
-    this.contentsList = document.querySelectorAll(`stellar-content[for='${this.name}']`);
+    this.contentsList = Array.from(document.querySelectorAll(`stellar-content[for='${this.name}']`));
     return this.contentsList;
   }
 
   componentWillLoad () {
-    this.tabsList = this.element.querySelectorAll('stellar-tab');
-    this.contentsList = document.querySelectorAll(`stellar-content[for='${this.name}']`);
+    this.tabs();
+    this.contents();
   }
 
   componentDidLoad () {
@@ -47,12 +47,19 @@ export class Tabs {
         this.element.querySelector('.indicator').classList.add('ready');
       }, 100)
     }
+
+    const tabCount = this.tabs().length;
+
+    this.tabs().forEach((tab, index) => {
+      tab.order = index + 1;
+      tab.tabCount = tabCount;
+    })
   }
 
   render() {
     return (
       <div class="tab-wrap">
-        <div class="tab-list">
+        <div class="tab-list" role="tablist">
           <slot></slot>
           <stellar-blur horizontal={this.blurring}><div class="indicator"></div></stellar-blur>
         </div>

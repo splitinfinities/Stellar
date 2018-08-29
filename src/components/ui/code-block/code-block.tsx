@@ -39,7 +39,7 @@ export class CodeBlock {
   render() {
     if (this.simple) {
       return (
-        <stellar-card padding="none">
+        <stellar-card padding="none" aria-label={`A code example in ${this.language}`} tabindex={0}>
           <stellar-code codeString={this.codeString} numbers={false}>
             <slot></slot>
           </stellar-code>
@@ -48,9 +48,9 @@ export class CodeBlock {
       );
     } else {
       return (
-        <stellar-card padding="tiny">
+        <stellar-card padding="tiny" aria-label={`A code example in ${this.language}`} tabindex={0}>
           <stellar-tag>{this.language}</stellar-tag>
-          <stellar-button onClick={ () => this.handleCopyClick() } ghost>{this.copied ? "👍" : "Copy" }</stellar-button>
+          <stellar-button onClick={ () => this.handleCopyClick() } ghost label={`A code example in ${this.language}`}>{this.copied ? "👍" : "Copy" }</stellar-button>
           <stellar-code codeString={this.codeString} numbers={this.numbers}>
             <slot></slot>
           </stellar-code>
