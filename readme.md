@@ -33,18 +33,21 @@
   </a>
 </div>
 
+
 <div align="center">
   <h3>
+   <!--
     <a href="https://stellar.desi/gn">
       Website
     </a>
+    -->
     <!--
     <span> | </span>
       <a href="https://stellar.desi/gn/guide">
         Guide
       </a>
-    -->
     <span> | </span>
+    -->
     <!-- <a href="https://github.com/trainyard/choo-cli"> -->
     <!--   CLI -->
     <!-- </a> -->
