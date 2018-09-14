@@ -1166,11 +1166,11 @@
         "stencil-router"
       ],
       "componentClass": "DocsRoot",
-      "componentPath": "components/ui/docs/root/root.js",
+      "componentPath": "components/docs/root/root.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/ui/docs/root/root.css"
+            "components/docs/root/root.css"
           ]
         }
       }
@@ -1191,11 +1191,11 @@
         "stellar-tabs"
       ],
       "componentClass": "DocsComponent",
-      "componentPath": "components/ui/docs/component/component.js",
+      "componentPath": "components/docs/component/component.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/ui/docs/component/component.css"
+            "components/docs/component/component.css"
           ]
         }
       },
@@ -1238,11 +1238,11 @@
         "stellar-toggle-option"
       ],
       "componentClass": "DocsHeader",
-      "componentPath": "components/ui/docs/header/header.js",
+      "componentPath": "components/docs/header/header.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/ui/docs/header/header.css"
+            "components/docs/header/header.css"
           ]
         }
       },
@@ -1304,11 +1304,11 @@
         "stellar-layout"
       ],
       "componentClass": "DocsHome",
-      "componentPath": "components/ui/docs/home/home.js",
+      "componentPath": "components/docs/home/home.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/ui/docs/home/home.css"
+            "components/docs/home/home.css"
           ]
         }
       }
@@ -1323,11 +1323,11 @@
         "stellar-tag"
       ],
       "componentClass": "DocsNavigation",
-      "componentPath": "components/ui/docs/navigation/navigation.js",
+      "componentPath": "components/docs/navigation/navigation.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/ui/docs/navigation/navigation.css"
+            "components/docs/navigation/navigation.css"
           ]
         }
       },
@@ -1344,11 +1344,11 @@
       "tag": "stellar-docs-not-found",
       "dependencies": [],
       "componentClass": "DocsNotFound",
-      "componentPath": "components/ui/docs/not-found/not-found.js",
+      "componentPath": "components/docs/not-found/not-found.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/ui/docs/not-found/not-found.css"
+            "components/docs/not-found/not-found.css"
           ]
         }
       }
@@ -1362,11 +1362,11 @@
         "stellar-markdown"
       ],
       "componentClass": "DocsPage",
-      "componentPath": "components/ui/docs/page/page.js",
+      "componentPath": "components/docs/page/page.js",
       "styles": {
         "$": {
           "stylePaths": [
-            "components/ui/docs/page/page.css"
+            "components/docs/page/page.css"
           ]
         }
       },
