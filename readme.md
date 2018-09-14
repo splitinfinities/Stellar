@@ -1,5 +1,5 @@
 <h1 align="center">Stellar 🌌</h1>
-<h3 align="center">A Complete, Beautiful Design System</h3>
+<h3 align="center">A Beautiful, Complete Design System</h3>
 
 <br />
 
