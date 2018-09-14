@@ -11,9 +11,9 @@
   ],
   "scripts": {
     "start": "npm run dev",
-    "release": "npm version patch && release",
-    "release:minor": "npm version minor && release",
-    "release:major": "npm version major && release",
+    "release": "git status && npm version patch && release",
+    "release:minor": "git status && npm version minor && release",
+    "release:major": "git status && npm version major && release",
     "build": "stencil build --docs",
     "build:prod": "npm run test && stencil build --prod --stats --docs && npm run organize",
     "dev": "npm run organize && stencil build --watch --serve",
