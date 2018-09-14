@@ -15,19 +15,18 @@
       alt="NPM version" />
   </a>
   <!-- Build Status -->
-  <!-- 
-  <a href="https://travis-ci.org/choojs/choo">
-    <img src="https://img.shields.io/travis/choojs/choo/master.svg?style=flat-square"
+
+  <a href="https://travis-ci.org/splitinfinities/Stellar">
+    <img src="https://img.shields.io/travis/splitinfinities/Stellar/master.svg?style=flat-square"
       alt="Build Status" />
   </a>
-  -->
+
   <!-- Test Coverage -->
-  <!-- 
-  <a href="https://codecov.io/github/choojs/choo">
-    <img src="https://img.shields.io/codecov/c/github/choojs/choo/master.svg?style=flat-square"
+  <a href="https://codecov.io/github/splitinfinities/Stellar">
+    <img src="https://img.shields.io/codecov/c/github/splitinfinities/Stellar/master.svg?style=flat-square"
       alt="Test Coverage" />
   </a>
-  -->
+
   <!-- Downloads -->
   <a href="https://npmjs.org/package/@stellar-design/core">
     <img src="https://img.shields.io/npm/dt/@stellar-design/core.svg?style=flat-square"
@@ -60,7 +59,7 @@
 <div align="center">
   <sub>Built with ❤︎ by
   <a href="https://twitter.com/splitinfinities">William M. Riley</a> and
-  <a href="https://github.com/splitinfinities/Stellar/graphs/contributors">contributors</a>. 
+  <a href="https://github.com/splitinfinities/Stellar/graphs/contributors">contributors</a>.
   Readme format based on <a href="https://github.com/choo/choojs">Choo</a> ❤︎
 </div>
 
