@@ -35,12 +35,12 @@
 
 <div align="center">
   <h3>
-    <a href="https://stellar.desi/gn">
+    <a href="https://stellar.design">
       Website
     </a>
     <!--
     <span> | </span>
-      <a href="https://stellar.desi/gn/guide">
+      <a href="https://stellar.design/guide">
         Guide
       </a>
     -->
