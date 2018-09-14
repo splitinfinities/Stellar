@@ -6,9 +6,9 @@
 
 import '@stencil/core';
 
-import 'ionicons';
 import '@stencil/router';
 import '@stencil/state-tunnel';
+import 'ionicons';
 
 
 import {
@@ -104,6 +104,41 @@ declare global {
       'midi': Boolean;
       'name': string;
       'source': (name: any) => any;
+    }
+
+    interface StellarDocsComponent {
+      'match': MatchResults;
+      'pull_data': () => Promise<void>;
+      'show_data': () => any;
+    }
+
+    interface StellarDocsHeader {
+      'complement': string;
+      'invert': boolean;
+      'mark': string;
+      'max': number;
+      'theme': string;
+      'value': number;
+    }
+
+    interface StellarDocsHome {
+
+    }
+
+    interface StellarDocsNavigation {
+
+    }
+
+    interface StellarDocsNotFound {
+
+    }
+
+    interface StellarDocsPage {
+      'match': MatchResults;
+    }
+
+    interface StellarDocs {
+
     }
 
     interface StellarAssetLibrary {
@@ -455,41 +490,6 @@ declare global {
     interface CopyWrap {
       'align': string;
       'full': boolean;
-    }
-
-    interface StellarDocsComponent {
-      'match': MatchResults;
-      'pull_data': () => Promise<void>;
-      'show_data': () => any;
-    }
-
-    interface StellarDocsHeader {
-      'complement': string;
-      'invert': boolean;
-      'mark': string;
-      'max': number;
-      'theme': string;
-      'value': number;
-    }
-
-    interface StellarDocsHome {
-
-    }
-
-    interface StellarDocsNavigation {
-
-    }
-
-    interface StellarDocsNotFound {
-
-    }
-
-    interface StellarDocsPage {
-      'match': MatchResults;
-    }
-
-    interface StellarDocs {
-
     }
 
     interface StellarDocumentation {
@@ -953,6 +953,62 @@ declare global {
     };
     
 
+    interface HTMLStellarDocsComponentElement extends StencilComponents.StellarDocsComponent, HTMLStencilElement {}
+
+    var HTMLStellarDocsComponentElement: {
+      prototype: HTMLStellarDocsComponentElement;
+      new (): HTMLStellarDocsComponentElement;
+    };
+    
+
+    interface HTMLStellarDocsHeaderElement extends StencilComponents.StellarDocsHeader, HTMLStencilElement {}
+
+    var HTMLStellarDocsHeaderElement: {
+      prototype: HTMLStellarDocsHeaderElement;
+      new (): HTMLStellarDocsHeaderElement;
+    };
+    
+
+    interface HTMLStellarDocsHomeElement extends StencilComponents.StellarDocsHome, HTMLStencilElement {}
+
+    var HTMLStellarDocsHomeElement: {
+      prototype: HTMLStellarDocsHomeElement;
+      new (): HTMLStellarDocsHomeElement;
+    };
+    
+
+    interface HTMLStellarDocsNavigationElement extends StencilComponents.StellarDocsNavigation, HTMLStencilElement {}
+
+    var HTMLStellarDocsNavigationElement: {
+      prototype: HTMLStellarDocsNavigationElement;
+      new (): HTMLStellarDocsNavigationElement;
+    };
+    
+
+    interface HTMLStellarDocsNotFoundElement extends StencilComponents.StellarDocsNotFound, HTMLStencilElement {}
+
+    var HTMLStellarDocsNotFoundElement: {
+      prototype: HTMLStellarDocsNotFoundElement;
+      new (): HTMLStellarDocsNotFoundElement;
+    };
+    
+
+    interface HTMLStellarDocsPageElement extends StencilComponents.StellarDocsPage, HTMLStencilElement {}
+
+    var HTMLStellarDocsPageElement: {
+      prototype: HTMLStellarDocsPageElement;
+      new (): HTMLStellarDocsPageElement;
+    };
+    
+
+    interface HTMLStellarDocsElement extends StencilComponents.StellarDocs, HTMLStencilElement {}
+
+    var HTMLStellarDocsElement: {
+      prototype: HTMLStellarDocsElement;
+      new (): HTMLStellarDocsElement;
+    };
+    
+
     interface HTMLStellarAssetLibraryElement extends StencilComponents.StellarAssetLibrary, HTMLStencilElement {}
 
     var HTMLStellarAssetLibraryElement: {
@@ -1249,62 +1305,6 @@ declare global {
     };
     
 
-    interface HTMLStellarDocsComponentElement extends StencilComponents.StellarDocsComponent, HTMLStencilElement {}
-
-    var HTMLStellarDocsComponentElement: {
-      prototype: HTMLStellarDocsComponentElement;
-      new (): HTMLStellarDocsComponentElement;
-    };
-    
-
-    interface HTMLStellarDocsHeaderElement extends StencilComponents.StellarDocsHeader, HTMLStencilElement {}
-
-    var HTMLStellarDocsHeaderElement: {
-      prototype: HTMLStellarDocsHeaderElement;
-      new (): HTMLStellarDocsHeaderElement;
-    };
-    
-
-    interface HTMLStellarDocsHomeElement extends StencilComponents.StellarDocsHome, HTMLStencilElement {}
-
-    var HTMLStellarDocsHomeElement: {
-      prototype: HTMLStellarDocsHomeElement;
-      new (): HTMLStellarDocsHomeElement;
-    };
-    
-
-    interface HTMLStellarDocsNavigationElement extends StencilComponents.StellarDocsNavigation, HTMLStencilElement {}
-
-    var HTMLStellarDocsNavigationElement: {
-      prototype: HTMLStellarDocsNavigationElement;
-      new (): HTMLStellarDocsNavigationElement;
-    };
-    
-
-    interface HTMLStellarDocsNotFoundElement extends StencilComponents.StellarDocsNotFound, HTMLStencilElement {}
-
-    var HTMLStellarDocsNotFoundElement: {
-      prototype: HTMLStellarDocsNotFoundElement;
-      new (): HTMLStellarDocsNotFoundElement;
-    };
-    
-
-    interface HTMLStellarDocsPageElement extends StencilComponents.StellarDocsPage, HTMLStencilElement {}
-
-    var HTMLStellarDocsPageElement: {
-      prototype: HTMLStellarDocsPageElement;
-      new (): HTMLStellarDocsPageElement;
-    };
-    
-
-    interface HTMLStellarDocsElement extends StencilComponents.StellarDocs, HTMLStencilElement {}
-
-    var HTMLStellarDocsElement: {
-      prototype: HTMLStellarDocsElement;
-      new (): HTMLStellarDocsElement;
-    };
-    
-
     interface HTMLStellarDocumentationElement extends StencilComponents.StellarDocumentation, HTMLStencilElement {}
 
     var HTMLStellarDocumentationElement: {
@@ -1579,6 +1579,13 @@ declare global {
     'web-audio-visualizer-shader': JSXElements.WebAudioVisualizerShaderAttributes;
     'web-audio-visualizer': JSXElements.WebAudioVisualizerAttributes;
     'web-audio': JSXElements.WebAudioAttributes;
+    'stellar-docs-component': JSXElements.StellarDocsComponentAttributes;
+    'stellar-docs-header': JSXElements.StellarDocsHeaderAttributes;
+    'stellar-docs-home': JSXElements.StellarDocsHomeAttributes;
+    'stellar-docs-navigation': JSXElements.StellarDocsNavigationAttributes;
+    'stellar-docs-not-found': JSXElements.StellarDocsNotFoundAttributes;
+    'stellar-docs-page': JSXElements.StellarDocsPageAttributes;
+    'stellar-docs': JSXElements.StellarDocsAttributes;
     'stellar-asset-library': JSXElements.StellarAssetLibraryAttributes;
     'stellar-color-library': JSXElements.StellarColorLibraryAttributes;
     'stellar-markdown': JSXElements.StellarMarkdownAttributes;
@@ -1616,13 +1623,6 @@ declare global {
     'stellar-comments': JSXElements.StellarCommentsAttributes;
     'stellar-content': JSXElements.StellarContentAttributes;
     'copy-wrap': JSXElements.CopyWrapAttributes;
-    'stellar-docs-component': JSXElements.StellarDocsComponentAttributes;
-    'stellar-docs-header': JSXElements.StellarDocsHeaderAttributes;
-    'stellar-docs-home': JSXElements.StellarDocsHomeAttributes;
-    'stellar-docs-navigation': JSXElements.StellarDocsNavigationAttributes;
-    'stellar-docs-not-found': JSXElements.StellarDocsNotFoundAttributes;
-    'stellar-docs-page': JSXElements.StellarDocsPageAttributes;
-    'stellar-docs': JSXElements.StellarDocsAttributes;
     'stellar-documentation': JSXElements.StellarDocumentationAttributes;
     'stellar-dropdown': JSXElements.StellarDropdownAttributes;
     'stellar-footer': JSXElements.StellarFooterAttributes;
@@ -1713,6 +1713,39 @@ declare global {
       'autoplay'?: Boolean;
       'midi'?: Boolean;
       'name'?: string;
+    }
+
+    export interface StellarDocsComponentAttributes extends HTMLAttributes {
+      'match'?: MatchResults;
+    }
+
+    export interface StellarDocsHeaderAttributes extends HTMLAttributes {
+      'complement'?: string;
+      'invert'?: boolean;
+      'mark'?: string;
+      'max'?: number;
+      'theme'?: string;
+      'value'?: number;
+    }
+
+    export interface StellarDocsHomeAttributes extends HTMLAttributes {
+
+    }
+
+    export interface StellarDocsNavigationAttributes extends HTMLAttributes {
+
+    }
+
+    export interface StellarDocsNotFoundAttributes extends HTMLAttributes {
+
+    }
+
+    export interface StellarDocsPageAttributes extends HTMLAttributes {
+      'match'?: MatchResults;
+    }
+
+    export interface StellarDocsAttributes extends HTMLAttributes {
+
     }
 
     export interface StellarAssetLibraryAttributes extends HTMLAttributes {
@@ -2046,39 +2079,6 @@ declare global {
     export interface CopyWrapAttributes extends HTMLAttributes {
       'align'?: string;
       'full'?: boolean;
-    }
-
-    export interface StellarDocsComponentAttributes extends HTMLAttributes {
-      'match'?: MatchResults;
-    }
-
-    export interface StellarDocsHeaderAttributes extends HTMLAttributes {
-      'complement'?: string;
-      'invert'?: boolean;
-      'mark'?: string;
-      'max'?: number;
-      'theme'?: string;
-      'value'?: number;
-    }
-
-    export interface StellarDocsHomeAttributes extends HTMLAttributes {
-
-    }
-
-    export interface StellarDocsNavigationAttributes extends HTMLAttributes {
-
-    }
-
-    export interface StellarDocsNotFoundAttributes extends HTMLAttributes {
-
-    }
-
-    export interface StellarDocsPageAttributes extends HTMLAttributes {
-      'match'?: MatchResults;
-    }
-
-    export interface StellarDocsAttributes extends HTMLAttributes {
-
     }
 
     export interface StellarDocumentationAttributes extends HTMLAttributes {
@@ -2473,6 +2473,13 @@ declare global {
     'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement
     'web-audio-visualizer': HTMLWebAudioVisualizerElement
     'web-audio': HTMLWebAudioElement
+    'stellar-docs-component': HTMLStellarDocsComponentElement
+    'stellar-docs-header': HTMLStellarDocsHeaderElement
+    'stellar-docs-home': HTMLStellarDocsHomeElement
+    'stellar-docs-navigation': HTMLStellarDocsNavigationElement
+    'stellar-docs-not-found': HTMLStellarDocsNotFoundElement
+    'stellar-docs-page': HTMLStellarDocsPageElement
+    'stellar-docs': HTMLStellarDocsElement
     'stellar-asset-library': HTMLStellarAssetLibraryElement
     'stellar-color-library': HTMLStellarColorLibraryElement
     'stellar-markdown': HTMLStellarMarkdownElement
@@ -2510,13 +2517,6 @@ declare global {
     'stellar-comments': HTMLStellarCommentsElement
     'stellar-content': HTMLStellarContentElement
     'copy-wrap': HTMLCopyWrapElement
-    'stellar-docs-component': HTMLStellarDocsComponentElement
-    'stellar-docs-header': HTMLStellarDocsHeaderElement
-    'stellar-docs-home': HTMLStellarDocsHomeElement
-    'stellar-docs-navigation': HTMLStellarDocsNavigationElement
-    'stellar-docs-not-found': HTMLStellarDocsNotFoundElement
-    'stellar-docs-page': HTMLStellarDocsPageElement
-    'stellar-docs': HTMLStellarDocsElement
     'stellar-documentation': HTMLStellarDocumentationElement
     'stellar-dropdown': HTMLStellarDropdownElement
     'stellar-footer': HTMLStellarFooterElement
@@ -2560,6 +2560,13 @@ declare global {
     'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement;
     'web-audio-visualizer': HTMLWebAudioVisualizerElement;
     'web-audio': HTMLWebAudioElement;
+    'stellar-docs-component': HTMLStellarDocsComponentElement;
+    'stellar-docs-header': HTMLStellarDocsHeaderElement;
+    'stellar-docs-home': HTMLStellarDocsHomeElement;
+    'stellar-docs-navigation': HTMLStellarDocsNavigationElement;
+    'stellar-docs-not-found': HTMLStellarDocsNotFoundElement;
+    'stellar-docs-page': HTMLStellarDocsPageElement;
+    'stellar-docs': HTMLStellarDocsElement;
     'stellar-asset-library': HTMLStellarAssetLibraryElement;
     'stellar-color-library': HTMLStellarColorLibraryElement;
     'stellar-markdown': HTMLStellarMarkdownElement;
@@ -2597,13 +2604,6 @@ declare global {
     'stellar-comments': HTMLStellarCommentsElement;
     'stellar-content': HTMLStellarContentElement;
     'copy-wrap': HTMLCopyWrapElement;
-    'stellar-docs-component': HTMLStellarDocsComponentElement;
-    'stellar-docs-header': HTMLStellarDocsHeaderElement;
-    'stellar-docs-home': HTMLStellarDocsHomeElement;
-    'stellar-docs-navigation': HTMLStellarDocsNavigationElement;
-    'stellar-docs-not-found': HTMLStellarDocsNotFoundElement;
-    'stellar-docs-page': HTMLStellarDocsPageElement;
-    'stellar-docs': HTMLStellarDocsElement;
     'stellar-documentation': HTMLStellarDocumentationElement;
     'stellar-dropdown': HTMLStellarDropdownElement;
     'stellar-footer': HTMLStellarFooterElement;

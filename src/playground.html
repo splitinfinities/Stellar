@@ -8,17 +8,8 @@
   <link rel="stylesheet" href="/global/fonts/exodus-display/exodus-display.css" />
   <link rel="stylesheet" href="/global/fonts/hanken-sans/hanken-sans.css" />
   <script src="/build/stellar.js"></script>
-  <script src="https://unpkg.com/pizzicato@0.6.3/distr/Pizzicato.min.js"></script>
 </head>
 <body class="hanken-sans theme-yellow complement-red">
-  <script>
-    var voice = new Pizzicato.Sound({
-      source: 'input',
-      options: { volume: 0.8 }
-    });
-
-    voice.play();
-  </script>
 
   <stellar-story target="story">
     <stellar-layout>
@@ -48,7 +39,7 @@
     <stellar-layout>
       <stellar-documentation feature="360 Images">
         <template>
-          <stellar-360-image class="mt4" src="./global/images/Carmelo.jpg" width="800" height="800"></stellar-360-image>
+          <stellar-360-image class="mt4" src="./global/images/_images/Carmelo.jpg" width="800" height="800"></stellar-360-image>
         </template>
       </stellar-documentation>
     </stellar-layout>
@@ -56,7 +47,7 @@
     <stellar-layout>
       <stellar-documentation feature="360 Videos">
         <template>
-          <stellar-360-video class="mt4" src="./global/video/Carmelo.mp4" width="800" height="800"></stellar-360-video>
+          <stellar-360-video class="mt4" src="./global/video/_video/Carmelo.mp4" width="800" height="800"></stellar-360-video>
         </template>
       </stellar-documentation>
     </stellar-layout>
@@ -64,7 +55,7 @@
     <stellar-layout>
       <stellar-documentation feature="Interview" width="5472" height="3648">
         <template>
-          <stellar-interview class="mt5" src="./global/audio/carmelo_07.mp3">
+          <stellar-interview class="mt5" src="./global/audio/_audio/carmelo_07.mp3">
             <copy-wrap align="center" slot="transcript">
               <!-- In are the milliseconds when copy should be displayed, out is the  -->
 
@@ -83,22 +74,22 @@
 
             </copy-wrap>
             <stellar-image nozoom width="5472" height="3648">
-              <source srcset="./global/images/Carmelo_Flat.jpg">
+              <source srcset="./global/images/_images/Carmelo_Flat.jpg">
             </stellar-image>
           </stellar-interview>
         </template>
       </stellar-documentation>
     </stellar-layout>
 
-    <stellar-interview class="mt5" label="V-A-L-H-A-L-L-A from Wolfenstein 2: The New Colossus" src="./global/audio/v-a-l-h-a-l-l-a.mp3">
-      <stellar-image poster="./global/images/wolfenstein.jpg" width="3840" height="2160">
-        <source srcset="./global/images/wolfenstein.jpg" media="" />
-        <source srcset="./global/images/wolfenstein.jpg" media="" />
+    <stellar-interview class="mt5" label="V-A-L-H-A-L-L-A from Wolfenstein 2: The New Colossus" src="./global/audio/_audio/v-a-l-h-a-l-l-a.mp3">
+      <stellar-image poster="./global/images/_images/wolfenstein.jpg" width="3840" height="2160">
+        <source srcset="./global/images/_images/wolfenstein.jpg" media="" />
+        <source srcset="./global/images/_images/wolfenstein.jpg" media="" />
       </stellar-image>
     </stellar-interview>
 
     <stellar-layout>
-      <stellar-interview class="mt5" src="./global/audio/take_me_out.mp3">
+      <stellar-interview class="mt5" src="./global/audio/_audio/take_me_out.mp3">
         <div slot="transcript">
           <!-- In are the milliseconds when copy should be displayed, out is the  -->
 
@@ -336,7 +327,7 @@
             <h1 class="white fw9 center">with you</h1>
           </stellar-interview-line>
         </div>
-        <stellar-360-image src="./global/images/Carmelo.jpg" width="800" height="800"></stellar-360-image>
+        <stellar-360-image src="./global/images/_images/Carmelo.jpg" width="800" height="800"></stellar-360-image>
       </stellar-interview>
     </stellar-layout>
 
