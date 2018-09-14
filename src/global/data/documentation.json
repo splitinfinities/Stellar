@@ -94,13 +94,31 @@
     },
     {
       "tag": "stellar-360-image",
-      "readme": "",
+      "readme": "# stellar-360-image\n\n\n",
       "usage": {},
       "props": [
+        {
+          "name": "height",
+          "type": "number",
+          "attr": "height",
+          "docs": ""
+        },
+        {
+          "name": "poster",
+          "type": "string",
+          "attr": "poster",
+          "docs": ""
+        },
         {
           "name": "src",
           "type": "string",
           "attr": "src",
+          "docs": ""
+        },
+        {
+          "name": "width",
+          "type": "number",
+          "attr": "width",
           "docs": ""
         }
       ],
@@ -110,13 +128,31 @@
     },
     {
       "tag": "stellar-360-video",
-      "readme": "",
+      "readme": "# stellar-360-video\n\n\n",
       "usage": {},
       "props": [
+        {
+          "name": "height",
+          "type": "number",
+          "attr": "height",
+          "docs": ""
+        },
+        {
+          "name": "poster",
+          "type": "string",
+          "attr": "poster",
+          "docs": ""
+        },
         {
           "name": "src",
           "type": "string",
           "attr": "src",
+          "docs": ""
+        },
+        {
+          "name": "width",
+          "type": "number",
+          "attr": "width",
           "docs": ""
         }
       ],
@@ -366,6 +402,7 @@
         {
           "name": "label",
           "type": "string",
+          "mutable": true,
           "attr": "label",
           "docs": ""
         },
@@ -828,8 +865,16 @@
       "props": [
         {
           "name": "content",
-          "type": "string",
+          "type": "any",
+          "mutable": true,
           "attr": "content",
+          "docs": ""
+        },
+        {
+          "name": "name",
+          "type": "any",
+          "mutable": true,
+          "attr": "name",
           "docs": ""
         }
       ],
@@ -1328,9 +1373,15 @@
           "docs": ""
         },
         {
-          "name": "preload",
+          "name": "nozoom",
+          "type": "boolean",
+          "attr": "nozoom",
+          "docs": ""
+        },
+        {
+          "name": "poster",
           "type": "string",
-          "attr": "preload",
+          "attr": "poster",
           "docs": ""
         },
         {
@@ -1540,6 +1591,107 @@
           "docs": "Public: Changed event"
         }
       ],
+      "styles": []
+    },
+    {
+      "tag": "stellar-interview",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "aspectRatio",
+          "type": "number",
+          "mutable": true,
+          "attr": "aspect-ratio",
+          "docs": ""
+        },
+        {
+          "name": "debug",
+          "type": "boolean",
+          "attr": "debug",
+          "docs": ""
+        },
+        {
+          "name": "height",
+          "type": "number",
+          "mutable": true,
+          "attr": "height",
+          "docs": ""
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "attr": "label",
+          "docs": ""
+        },
+        {
+          "name": "playing",
+          "type": "boolean",
+          "mutable": true,
+          "attr": "playing",
+          "docs": ""
+        },
+        {
+          "name": "src",
+          "type": "string",
+          "attr": "src",
+          "docs": ""
+        },
+        {
+          "name": "width",
+          "type": "number",
+          "mutable": true,
+          "attr": "width",
+          "docs": ""
+        }
+      ],
+      "methods": [
+        {
+          "name": "pause",
+          "docs": ""
+        },
+        {
+          "name": "play",
+          "docs": ""
+        },
+        {
+          "name": "skipTo",
+          "docs": ""
+        },
+        {
+          "name": "toggle",
+          "docs": ""
+        }
+      ],
+      "events": [],
+      "styles": []
+    },
+    {
+      "tag": "stellar-interview-line",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "complement",
+          "type": "boolean",
+          "attr": "complement",
+          "docs": ""
+        },
+        {
+          "name": "in",
+          "type": "number",
+          "attr": "in",
+          "docs": ""
+        },
+        {
+          "name": "out",
+          "type": "number",
+          "attr": "out",
+          "docs": ""
+        }
+      ],
+      "methods": [],
+      "events": [],
       "styles": []
     },
     {
@@ -2074,10 +2226,28 @@
       },
       "props": [
         {
+          "name": "blurable",
+          "type": "boolean",
+          "attr": "blurable",
+          "docs": ""
+        },
+        {
+          "name": "editable",
+          "type": "boolean",
+          "attr": "editable",
+          "docs": "Allows the progress bar to be clicked on, to help the user to navigate through the progressing content."
+        },
+        {
           "name": "max",
           "type": "number",
           "attr": "max",
           "docs": "Sets the maximum cap for steps in the progress bar"
+        },
+        {
+          "name": "noease",
+          "type": "boolean",
+          "attr": "noease",
+          "docs": "eliminates the easing in the css so you can apply value updates without jitter."
         },
         {
           "name": "slender",
@@ -2094,7 +2264,15 @@
         }
       ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "valueChange",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": ""
+        }
+      ],
       "styles": []
     },
     {
@@ -2577,6 +2755,18 @@
           "mutable": true,
           "attr": "open",
           "docs": ""
+        },
+        {
+          "name": "order",
+          "type": "number",
+          "attr": "order",
+          "docs": ""
+        },
+        {
+          "name": "tabCount",
+          "type": "number",
+          "attr": "tab-count",
+          "docs": ""
         }
       ],
       "methods": [],
@@ -2616,6 +2806,22 @@
           "docs": ""
         }
       ],
+      "events": [],
+      "styles": []
+    },
+    {
+      "tag": "stellar-story",
+      "readme": "",
+      "usage": {},
+      "props": [
+        {
+          "name": "target",
+          "type": "string",
+          "attr": "target",
+          "docs": ""
+        }
+      ],
+      "methods": [],
       "events": [],
       "styles": []
     },
@@ -2703,6 +2909,18 @@
           "type": "boolean",
           "mutable": true,
           "attr": "open",
+          "docs": ""
+        },
+        {
+          "name": "order",
+          "type": "number",
+          "attr": "order",
+          "docs": ""
+        },
+        {
+          "name": "tabCount",
+          "type": "number",
+          "attr": "tab-count",
           "docs": ""
         },
         {
@@ -3191,7 +3409,7 @@
     },
     {
       "tag": "web-audio",
-      "readme": "",
+      "readme": "# web-audio\n\n\n",
       "usage": {},
       "props": [
         {
@@ -3236,7 +3454,7 @@
     },
     {
       "tag": "web-audio-debugger",
-      "readme": "",
+      "readme": "# web-audio-debugger\n\n\n",
       "usage": {},
       "props": [
         {
@@ -3257,7 +3475,7 @@
     },
     {
       "tag": "web-audio-effect",
-      "readme": "",
+      "readme": "# web-audio-effect\n\n\n",
       "usage": {},
       "props": [
         {
@@ -3314,7 +3532,7 @@
     },
     {
       "tag": "web-audio-sequencer",
-      "readme": "",
+      "readme": "# web-audio-sequencer\n\n\n",
       "usage": {},
       "props": [
         {
@@ -3363,12 +3581,13 @@
     },
     {
       "tag": "web-audio-source",
-      "readme": "",
+      "readme": "# web-audio-source\n\n\n",
       "usage": {},
       "props": [
         {
           "name": "effectsvolume",
           "type": "number",
+          "mutable": true,
           "attr": "effectsvolume",
           "docs": ""
         },
@@ -3381,24 +3600,35 @@
         {
           "name": "midichannel",
           "type": "number",
+          "mutable": true,
           "attr": "midichannel",
           "docs": ""
         },
         {
           "name": "midikey",
           "type": "number",
+          "mutable": true,
           "attr": "midikey",
           "docs": ""
         },
         {
           "name": "name",
           "type": "string",
+          "mutable": true,
           "attr": "name",
+          "docs": ""
+        },
+        {
+          "name": "playing",
+          "type": "boolean",
+          "mutable": true,
+          "attr": "playing",
           "docs": ""
         },
         {
           "name": "src",
           "type": "string",
+          "mutable": true,
           "attr": "src",
           "docs": ""
         }
@@ -3417,7 +3647,31 @@
           "docs": ""
         },
         {
+          "name": "getDuration",
+          "docs": ""
+        },
+        {
+          "name": "pause",
+          "docs": ""
+        },
+        {
           "name": "play",
+          "docs": ""
+        },
+        {
+          "name": "prepare",
+          "docs": ""
+        },
+        {
+          "name": "skipTo",
+          "docs": ""
+        },
+        {
+          "name": "stop",
+          "docs": ""
+        },
+        {
+          "name": "toggle",
           "docs": ""
         },
         {
@@ -3425,23 +3679,39 @@
           "docs": ""
         }
       ],
-      "events": [],
+      "events": [
+        {
+          "event": "timeupdate",
+          "bubbles": true,
+          "cancelable": true,
+          "composed": true,
+          "docs": ""
+        }
+      ],
       "styles": []
     },
     {
       "tag": "web-audio-visualizer",
-      "readme": "",
+      "readme": "# web-audio-visualizer\n\n\n",
       "usage": {},
       "props": [
         {
+          "name": "color",
+          "type": "string",
+          "attr": "color",
+          "docs": ""
+        },
+        {
           "name": "for",
           "type": "string",
+          "mutable": true,
           "attr": "for",
           "docs": ""
         },
         {
           "name": "height",
           "type": "number",
+          "mutable": true,
           "attr": "height",
           "docs": ""
         },
@@ -3466,12 +3736,14 @@
         {
           "name": "type",
           "type": "string",
+          "mutable": true,
           "attr": "type",
           "docs": ""
         },
         {
           "name": "width",
           "type": "number",
+          "mutable": true,
           "attr": "width",
           "docs": ""
         }
@@ -3487,7 +3759,7 @@
     },
     {
       "tag": "web-audio-visualizer-shader",
-      "readme": "",
+      "readme": "# web-audio-visualizer-shader\n\n\n",
       "usage": {},
       "props": [
         {
