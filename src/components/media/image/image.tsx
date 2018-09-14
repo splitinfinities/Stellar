@@ -14,7 +14,7 @@ export class StellarImage {
   @Element() element: HTMLElement;
   @State() figure: HTMLElement;
 
-  @Prop() preload: string;
+  @Prop() poster: string;
 
   @Prop() width: number;
   @Prop() height: number;
@@ -48,7 +48,7 @@ export class StellarImage {
     let zoomable = this.element.shadowRoot.querySelector('img');
 
     this.zoom = mediumZoom(zoomable, {
-      background: `rgb(${this.palette[0][0]}, ${this.palette[0][1]}, ${this.palette[0][2]})`,
+      background: `${this.bg}`,
       scrollOffset: 1,
       margin: 0
     });
@@ -96,22 +96,27 @@ export class StellarImage {
   }
 
   getPictureColor() {
+    console.log("picture color")
     const img = new Image(80, 80);
+
     img.onload = () => {
       const cf = new ColorThief();
-      this.palette = cf.getPalette(img)
+      this.palette = cf.getColor(img)
+
+      console.log(this.palette);
 
       properties.set({
-        "--bg": `rgb(${this.palette[0][0]}, ${this.palette[0][1]}, ${this.palette[0][2]})`
+        "--bg": `rgb(${this.palette[0]}, ${this.palette[1]}, ${this.palette[2]})`
       }, this.element);
 
-      if (this.zoom) {
+      if (!this.nozoom && this.zoom) {
         this.zoom.update({
-          background: `rgb(${this.palette[0][0]}, ${this.palette[0][1]}, ${this.palette[0][2]})`
+          background: `rgb(${this.palette[0]}, ${this.palette[1]}, ${this.palette[2]})`
         })
       }
     }
-    img.src = this.preload;
+
+    img.src = this.poster;
     img.crossOrigin = "Anonymous";
   }
 
@@ -167,7 +172,7 @@ export class StellarImage {
         <picture>
           { this.renderPicture() }
         </picture>
-        <div class="placeholder" style={{"background-image": `url(${this.preload})`}} />
+        <div class="placeholder" style={{"background-image": `url(${this.poster})`}} />
       </figure>
     );
   }

@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type     |
-| --------- | --------- | ----------- | -------- |
-| `content` | `content` |             | `string` |
+| Property  | Attribute | Description | Type  |
+| --------- | --------- | ----------- | ----- |
+| `content` | --        |             | `any` |
+| `name`    | --        |             | `any` |
 
 
 ----------------------------------------------

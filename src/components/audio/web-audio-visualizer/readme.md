@@ -7,15 +7,16 @@
 
 ## Properties
 
-| Property    | Attribute   | Description | Type           |
-| ----------- | ----------- | ----------- | -------------- |
-| `for`       | `for`       |             | `string`       |
-| `height`    | `height`    |             | `number`       |
-| `renderer`  | --          |             | `AnalyserNode` |
-| `size`      | `size`      |             | `number`       |
-| `smoothing` | `smoothing` |             | `number`       |
-| `type`      | `type`      |             | `string`       |
-| `width`     | `width`     |             | `number`       |
+| Property    | Attribute   | Description | Type                           |
+| ----------- | ----------- | ----------- | ------------------------------ |
+| `color`     | `color`     |             | `string`                       |
+| `for`       | `for`       |             | `string`                       |
+| `height`    | `height`    |             | `number`                       |
+| `renderer`  | --          |             | `AnalyserNode`                 |
+| `size`      | `size`      |             | `number`                       |
+| `smoothing` | `smoothing` |             | `number`                       |
+| `type`      | `type`      |             | `string|"wave"|"bars"|"webgl"` |
+| `width`     | `width`     |             | `number`                       |
 
 
 ## Methods

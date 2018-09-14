@@ -14,7 +14,15 @@
 | `midichannel`   | `midichannel`   |             | `number`  |
 | `midikey`       | `midikey`       |             | `number`  |
 | `name`          | `name`          |             | `string`  |
+| `playing`       | `playing`       |             | `boolean` |
 | `src`           | `src`           |             | `string`  |
+
+
+## Events
+
+| Event        | Description |
+| ------------ | ----------- |
+| `timeupdate` |             |
 
 
 ## Methods
@@ -24,7 +32,13 @@
 | `assignBuffer` |             |
 | `gain`         |             |
 | `getBuffer`    |             |
+| `getDuration`  |             |
+| `pause`        |             |
 | `play`         |             |
+| `prepare`      |             |
+| `skipTo`       |             |
+| `stop`         |             |
+| `toggle`       |             |
 | `webAudio`     |             |
 
 

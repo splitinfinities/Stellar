@@ -23,5 +23,7 @@ src/site
 *.mp4
 .stencil
 coverage
-src/global/fonts
-src/global/_fonts
+src/global/fonts/*
+*.mp3
+*.jpg
+*.png

@@ -26,6 +26,19 @@ stellar-interview div.card header {
   justify-content: space-between;
 }
 
+stellar-interview div.card header h2 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+stellar-interview div.card header .wave-wrapper {
+  height: 3.5rem;
+  width: 7rem;
+  display: flex;
+  align-items: center;
+}
+
 stellar-interview div.card section {
   height: inherit;
   display: block;

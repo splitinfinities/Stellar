@@ -9,7 +9,10 @@
 
 | Property | Attribute | Description | Type     |
 | -------- | --------- | ----------- | -------- |
+| `height` | `height`  |             | `number` |
+| `poster` | `poster`  |             | `string` |
 | `src`    | `src`     |             | `string` |
+| `width`  | `width`   |             | `number` |
 
 
 ----------------------------------------------

@@ -59,6 +59,7 @@
     "node-vibrant": "^3.0.0",
     "parallaxis": "^1.2.1",
     "parent-node-selector": "^0.1.1",
+    "pizzicato": "^0.6.3",
     "prismjs": "^1.14.0",
     "raf": "^3.4.0",
     "rellax": "^1.6.2",

@@ -16,8 +16,8 @@ export class WebAudioVisualizer {
 
   @Prop({ mutable: true, reflectToAttr: true }) for: string = "web_audio";
 
-  @Prop({ mutable: true, reflectToAttr: true }) type: string = "wave";
-  @Prop() smoothing: number = 0.2;
+  @Prop({ mutable: true, reflectToAttr: true }) type: string|"wave"|"bars"|"webgl" = "wave";
+  @Prop() smoothing: number = 0.7;
   @Prop() size: number = 1024;
   @Prop() color: string = "red";
   @State() freqs: Uint8Array;
@@ -84,15 +84,15 @@ export class WebAudioVisualizer {
 
     switch (this.type) {
       case "wave":
-      this.wave();
+        this.wave();
       break;
 
       case "bars":
-      this.bars();
+        this.bars();
       break;
 
       case "webgl":
-      this.webgl();
+        this.webgl();
       break;
     }
 

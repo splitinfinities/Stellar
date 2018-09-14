@@ -127,6 +127,11 @@
           "attr": "height"
         },
         {
+          "name": "poster",
+          "type": "String",
+          "attr": "poster"
+        },
+        {
           "name": "src",
           "type": "String",
           "attr": "src"
@@ -166,6 +171,11 @@
           "name": "height",
           "type": "Number",
           "attr": "height"
+        },
+        {
+          "name": "poster",
+          "type": "String",
+          "attr": "poster"
         },
         {
           "name": "src",
@@ -232,6 +242,9 @@
       "states": [
         {
           "name": "blur"
+        },
+        {
+          "name": "els"
         },
         {
           "name": "expander"
@@ -502,6 +515,7 @@
         {
           "name": "label",
           "type": "String",
+          "mutable": true,
           "attr": "label"
         },
         {
@@ -509,13 +523,17 @@
           "type": "String",
           "attr": "target"
         }
-      ]
+      ],
+      "hostElement": {
+        "name": "element"
+      }
     },
     {
       "tag": "stellar-breadcrumbs",
       "dependencies": [
         "stellar-asset",
-        "stellar-breadcrumb"
+        "stellar-breadcrumb",
+        "stellar-label"
       ],
       "componentClass": "Breadcrumbs",
       "componentPath": "components/ui/breadcrumbs/breadcrumbs.js",
@@ -708,7 +726,10 @@
         {
           "name": "theme"
         }
-      ]
+      ],
+      "hostElement": {
+        "name": "element"
+      }
     },
     {
       "tag": "stellar-card",
@@ -1042,8 +1063,15 @@
       "props": [
         {
           "name": "content",
-          "type": "String",
+          "type": "Any",
+          "mutable": true,
           "attr": "content"
+        },
+        {
+          "name": "name",
+          "type": "Any",
+          "mutable": true,
+          "attr": "name"
         }
       ],
       "states": [
@@ -1761,9 +1789,9 @@
           "attr": "nozoom"
         },
         {
-          "name": "preload",
+          "name": "poster",
           "type": "String",
-          "attr": "preload"
+          "attr": "poster"
         },
         {
           "name": "width",
@@ -3347,7 +3375,7 @@
     {
       "tag": "stellar-step",
       "dependencies": [
-        "stellar-button"
+        "stellar-label"
       ],
       "componentClass": "Step",
       "componentPath": "components/ui/step/step.js",
@@ -3375,6 +3403,16 @@
           "type": "Boolean",
           "mutable": true,
           "attr": "open"
+        },
+        {
+          "name": "order",
+          "type": "Number",
+          "attr": "order"
+        },
+        {
+          "name": "tabCount",
+          "type": "Number",
+          "attr": "tab-count"
         }
       ],
       "states": [
@@ -3570,6 +3608,16 @@
           "type": "Boolean",
           "mutable": true,
           "attr": "open"
+        },
+        {
+          "name": "order",
+          "type": "Number",
+          "attr": "order"
+        },
+        {
+          "name": "tabCount",
+          "type": "Number",
+          "attr": "tab-count"
         },
         {
           "name": "tag",

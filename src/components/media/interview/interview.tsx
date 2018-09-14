@@ -294,8 +294,8 @@ export class Interview {
       <div class="card" onDblClick={() => { this.handleClick() }}>
         <header>
           <h2>{this.label}</h2>
-          <div class="w4 h3 db">
-            <web-audio-visualizer for={`interview-${this.randomId}`} type="wave" width={512} height={512} size={64} />
+          <div class="wave-wrapper">
+            <web-audio-visualizer for={`interview-${this.randomId}`} type="wave" width={512} height={256} size={512} smoothing={0.0} />
           </div>
         </header>
         <section>

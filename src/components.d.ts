@@ -92,7 +92,7 @@ declare global {
       'renderer': AnalyserNode;
       'size': number;
       'smoothing': number;
-      'type': string;
+      'type': string|"wave"|"bars"|"webgl";
       'width': number;
     }
 
@@ -159,12 +159,14 @@ declare global {
 
     interface Stellar360Image {
       'height': number;
+      'poster': string;
       'src': string;
       'width': number;
     }
 
     interface Stellar360Video {
       'height': number;
+      'poster': string;
       'src': string;
       'width': number;
     }
@@ -174,7 +176,7 @@ declare global {
       'height': number;
       'medium': () => any;
       'nozoom': boolean;
-      'preload': string;
+      'poster': string;
       'width': number;
     }
 
@@ -1703,7 +1705,7 @@ declare global {
       'renderer'?: AnalyserNode;
       'size'?: number;
       'smoothing'?: number;
-      'type'?: string;
+      'type'?: string|"wave"|"bars"|"webgl";
       'width'?: number;
     }
 
@@ -1763,12 +1765,14 @@ declare global {
 
     export interface Stellar360ImageAttributes extends HTMLAttributes {
       'height'?: number;
+      'poster'?: string;
       'src'?: string;
       'width'?: number;
     }
 
     export interface Stellar360VideoAttributes extends HTMLAttributes {
       'height'?: number;
+      'poster'?: string;
       'src'?: string;
       'width'?: number;
     }
@@ -1777,7 +1781,7 @@ declare global {
       'bg'?: string;
       'height'?: number;
       'nozoom'?: boolean;
-      'preload'?: string;
+      'poster'?: string;
       'width'?: number;
     }
 

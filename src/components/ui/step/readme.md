@@ -7,11 +7,13 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type      |
-| ---------- | ---------- | ----------- | --------- |
-| `disabled` | `disabled` |             | `boolean` |
-| `href`     | `href`     |             | `string`  |
-| `open`     | `open`     |             | `boolean` |
+| Property   | Attribute   | Description | Type      |
+| ---------- | ----------- | ----------- | --------- |
+| `disabled` | `disabled`  |             | `boolean` |
+| `href`     | `href`      |             | `string`  |
+| `open`     | `open`      |             | `boolean` |
+| `order`    | `order`     |             | `number`  |
+| `tabCount` | `tab-count` |             | `number`  |
 
 
 ## Events

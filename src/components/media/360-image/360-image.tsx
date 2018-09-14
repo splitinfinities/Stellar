@@ -9,6 +9,7 @@ export class Image360 {
   @Element() element: HTMLElement;
 
   @Prop({reflectToAttr: true}) src: string;
+  @Prop({reflectToAttr: true}) poster: string;
   @Prop({reflectToAttr: true}) width: number = 1280;
   @Prop({reflectToAttr: true}) height: number = 720;
 

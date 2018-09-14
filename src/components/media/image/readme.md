@@ -7,12 +7,13 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type     |
-| --------- | --------- | ----------- | -------- |
-| `bg`      | `bg`      |             | `string` |
-| `height`  | `height`  |             | `number` |
-| `preload` | `preload` |             | `string` |
-| `width`   | `width`   |             | `number` |
+| Property | Attribute | Description | Type      |
+| -------- | --------- | ----------- | --------- |
+| `bg`     | `bg`      |             | `string`  |
+| `height` | `height`  |             | `number`  |
+| `nozoom` | `nozoom`  |             | `boolean` |
+| `poster` | `poster`  |             | `string`  |
+| `width`  | `width`   |             | `number`  |
 
 
 ## Methods
