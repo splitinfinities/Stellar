@@ -15,15 +15,14 @@
       alt="NPM version" />
   </a>
   <!-- Build Status -->
-
   <a href="https://travis-ci.org/splitinfinities/Stellar">
-    <img src="https://img.shields.io/travis/splitinfinities/Stellar/master.svg?style=flat-square"
+    <img src="https://travis-ci.org/splitinfinities/Stellar.svg?branch=core"
       alt="Build Status" />
   </a>
 
   <!-- Test Coverage -->
   <a href="https://codecov.io/github/splitinfinities/Stellar">
-    <img src="https://img.shields.io/codecov/c/github/splitinfinities/Stellar/master.svg?style=flat-square"
+    <img src="https://codecov.io/gh/splitinfinities/Stellar/branch/core/graph/badge.svg"
       alt="Test Coverage" />
   </a>
 
