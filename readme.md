@@ -62,7 +62,7 @@
   <sub>Built with ❤︎ by
   <a href="https://twitter.com/splitinfinities">William M. Riley</a> and
   <a href="https://github.com/splitinfinities/Stellar/graphs/contributors">contributors</a>.
-  Readme format based on <a href="https://github.com/choo/choojs">Choo</a> ❤︎
+  Readme format based on <a href="https://github.com/choojs/choo">Choo</a> ❤︎
 </div>
 
 ## License
