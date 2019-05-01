@@ -1,5 +1,5 @@
 import { newE2EPage } from '@stencil/core/testing';
-import {renderToSketch} from '../../utils/test'
+import {renderToSketch} from '../../../utils/test'
 
 describe('copy-wrap', () => {
   it('renders normally', async () => {

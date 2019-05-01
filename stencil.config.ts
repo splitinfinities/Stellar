@@ -38,7 +38,6 @@ export const config: Config = {
     ]
   },
   copy: [
-    { src: "global/fonts" },
     { src: "global/images" },
     { src: "global/video" },
     { src: "global/vector" },
