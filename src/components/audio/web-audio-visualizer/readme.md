@@ -7,21 +7,23 @@
 
 ## Properties
 
-| Property    | Attribute   | Description | Type           | Default       |
-| ----------- | ----------- | ----------- | -------------- | ------------- |
-| `color`     | `color`     |             | `string`       | `"gray"`      |
-| `for`       | `for`       |             | `string`       | `"web_audio"` |
-| `height`    | `height`    |             | `number`       | `1024`        |
-| `renderer`  | --          |             | `AnalyserNode` | `undefined`   |
-| `size`      | `size`      |             | `number`       | `1024`        |
-| `smoothing` | `smoothing` |             | `number`       | `0.7`         |
-| `type`      | `type`      |             | `string`       | `"wave"`      |
-| `width`     | `width`     |             | `number`       | `1024`        |
+| Property    | Attribute   | Description | Type               | Default       |
+| ----------- | ----------- | ----------- | ------------------ | ------------- |
+| `analyser`  | --          |             | `AnalyserNode`     | `undefined`   |
+| `color`     | `color`     |             | `string`           | `"gray"`      |
+| `for`       | `for`       |             | `string`           | `"web_audio"` |
+| `height`    | `height`    |             | `number`           | `1024`        |
+| `renderer`  | --          |             | `AnalyserNode`     | `undefined`   |
+| `size`      | `size`      |             | `number`           | `1024`        |
+| `smoothing` | `smoothing` |             | `number`           | `0.7`         |
+| `tag`       | --          |             | `HTMLAudioElement` | `undefined`   |
+| `type`      | `type`      |             | `string`           | `"wave"`      |
+| `width`     | `width`     |             | `number`           | `1024`        |
 
 
 ## Methods
 
-### `connect(context: AudioContext, destination: any) => this`
+### `connect(context: AudioContext, destination?: any) => this`
 
 
 

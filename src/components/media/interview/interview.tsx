@@ -242,7 +242,9 @@ export class Interview {
   @Method()
   play() {
     if (this.audio) {
-      this.audio.source("interview").play()
+      if (this.audio.source("interview")) {
+        this.audio.source("interview").play()
+      }
       this.playing = this.audio.source("interview").playing;
     }
   }
@@ -250,7 +252,9 @@ export class Interview {
   @Method()
   skipTo(time: number) {
     if (this.audio) {
-      this.audio.source("interview").skipTo(time)
+      if (this.audio.source("interview")) {
+        this.audio.source("interview").skipTo(time)
+      }
       this.playing = this.audio.source("interview").playing;
     }
   }
@@ -258,7 +262,9 @@ export class Interview {
   @Method()
   pause() {
     if (this.audio) {
-      this.audio.source("interview").pause()
+      if (this.audio.source("interview")) {
+        this.audio.source("interview").pause()
+      }
       this.playing = this.audio.source("interview").playing;
     }
   }
@@ -266,7 +272,9 @@ export class Interview {
   @Method()
   toggle() {
     if (this.audio) {
-      this.audio.source("interview").toggle()
+      if (this.audio.source("interview")) {
+        this.audio.source("interview").toggle()
+      }
       this.playing = this.audio.source("interview").playing;
     }
   }

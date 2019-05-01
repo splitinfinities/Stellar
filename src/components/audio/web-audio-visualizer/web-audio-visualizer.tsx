@@ -20,6 +20,7 @@ export class WebAudioVisualizer {
   @Prop() smoothing: number = 0.7;
   @Prop() size: number = 1024;
   @Prop() color: string = "gray";
+  @Prop() tag: HTMLAudioElement;
   @State() freqs: Uint8Array;
   @State() times: Uint8Array;
 
@@ -27,7 +28,7 @@ export class WebAudioVisualizer {
   @Prop({ mutable: true, reflectToAttr: true }) height: number = 1024;
 
   @State() context: AudioContext;
-  @State() analyser: AnalyserNode;
+  @Prop({mutable: true}) analyser: AnalyserNode;
   @Prop() renderer: AnalyserNode;
 
   @State() vertex: string;
@@ -43,15 +44,17 @@ export class WebAudioVisualizer {
 
   componentDidLoad() {
     this.canvas = this.element.shadowRoot.querySelector('canvas');
-    // this.width = this.element.outerWidth
   }
 
   @Method()
-  connect (context: AudioContext, destination) {
+  connect (context: AudioContext, destination?) {
     this.context = context;
 
     this.analyser = this.context.createAnalyser();
-    this.analyser.connect(destination);
+
+    if (destination) {
+      this.analyser.connect(destination);
+    }
 
     this.freqs = new Uint8Array(this.analyser.frequencyBinCount);
     this.times = new Uint8Array(this.analyser.frequencyBinCount);

@@ -1,0 +1,131 @@
+:host {
+	display: block;
+	width: 100%;
+	flex: 0 0 100%;
+}
+
+:host button {
+	background: none;
+	width: 100%;
+	border: 0;
+	outline: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	display: flex;
+	padding: 0;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+	overflow: hidden;
+	border-top: 1px solid var(--color-line);
+}
+
+:host button:hover,
+:host button:focus {
+	background: var(--color-bg-active);
+}
+
+:host([playing]) button {
+	background: var(--color-bg-playing) !important;
+}
+
+:host .index {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 45px;
+	width: 55px;
+	flex: 0 0 55px;
+	border-right: 1px solid var(--color-line);
+	font-size: 0.75rem;
+	margin: 0;
+	margin-right: 20px;
+	text-transform: uppercase;
+	color: var(--color-two);
+	letter-spacing: .23em;
+	z-index: 1;
+	font-weight: 900;
+}
+
+:host([playing]) .index {
+	font-size: 1.5rem;
+}
+
+:host img.preview-image {
+	width: 2rem;
+	height: 2rem;
+	display: inline-block;
+	margin-right: 10px;
+
+	transition: all .15s ease-in-out 0s;
+	filter: grayscale(100%);
+	padding: 0;
+	background: white;
+	border-radius: 4px;
+	z-index: 1;
+}
+
+:host([playing]) img.preview-image {
+	filter: grayscale(0%);
+}
+
+:host h2 {
+	z-index: 1;
+	color: var(--color-four);
+	font-size: 14px;
+	font-weight: 400;
+	margin: 0;
+	line-height: 1;
+	margin-top: -3px;
+	white-space: nowrap;
+}
+
+:host h2 span {
+	color: var(--color-two);
+}
+
+:host .tracklisting {
+	overflow: auto;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 46px;
+}
+
+:host .tracklisting::after {
+	content: "";
+	display: block;
+	width: 30px;
+	height: 30px;
+	flex: 0 0 30px;
+}
+
+:host img.backdrop {
+	position: absolute;
+	width: 100%;
+	filter: blur(20px) grayscale(75%);
+	opacity: 0.15;
+	z-index: 0;
+	mix-blend-mode: color;
+}
+
+:host button[data-playing="true"] {
+
+}
+
+:host button[data-playing="true"] img.preview-image {
+	width: 30px;
+	height: 30px;
+	filter: grayscale(0%);
+}
+
+:host button[data-playing="true"] img.backdrop {
+	opacity: 1;
+}
+
+:host button[data-playing="true"] h2 span,
+:host button[data-playing="true"] .index {
+	color: var(--color-three) !important;
+}

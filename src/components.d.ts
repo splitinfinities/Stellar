@@ -105,23 +105,27 @@ export namespace Components {
   }
 
   interface WebAudioVisualizer {
+    'analyser': AnalyserNode;
     'color': string;
-    'connect': (context: AudioContext, destination: any) => this;
+    'connect': (context: AudioContext, destination?: any) => this;
     'for': string;
     'height': number;
     'renderer': AnalyserNode;
     'size': number;
     'smoothing': number;
+    'tag': HTMLAudioElement;
     'type': string|"wave"|"bars"|"webgl";
     'width': number;
   }
   interface WebAudioVisualizerAttributes extends StencilHTMLAttributes {
+    'analyser'?: AnalyserNode;
     'color'?: string;
     'for'?: string;
     'height'?: number;
     'renderer'?: AnalyserNode;
     'size'?: number;
     'smoothing'?: number;
+    'tag'?: HTMLAudioElement;
     'type'?: string|"wave"|"bars"|"webgl";
     'width'?: number;
   }
@@ -913,6 +917,32 @@ export namespace Components {
     'width'?: number;
   }
 
+  interface StellarPlaylist {
+    'artwork': boolean;
+    'autoplay': boolean;
+    'dark': Boolean;
+    'next': () => void;
+    'pause': () => void;
+    'play': () => void;
+    'playing': boolean;
+    'playlist': string;
+    'prepare': (element: any) => void;
+    'previous': () => void;
+    'remember': boolean;
+    'title': string;
+    'view': "playlist"|"art";
+  }
+  interface StellarPlaylistAttributes extends StencilHTMLAttributes {
+    'artwork'?: boolean;
+    'autoplay'?: boolean;
+    'dark'?: Boolean;
+    'playing'?: boolean;
+    'playlist'?: string;
+    'remember'?: boolean;
+    'title'?: string;
+    'view'?: "playlist"|"art";
+  }
+
   interface SkeletonImg {
     'height': number;
     'icon': boolean;
@@ -935,6 +965,24 @@ export namespace Components {
     'as'?: string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p';
     'loading'?: boolean;
     'width'?: number;
+  }
+
+  interface StellarSong {
+    'artwork': boolean;
+    'details': () => { 'title': string; 'album': string; 'genre': string; 'artist': string; 'picture': string; };
+    'getIndex': () => number;
+    'play': () => void;
+    'playing': boolean;
+    'preload': () => void;
+    'setIndex': (value: any) => void;
+    'src': string;
+    'switching': () => void;
+  }
+  interface StellarSongAttributes extends StencilHTMLAttributes {
+    'artwork'?: boolean;
+    'onSongChanged'?: (event: CustomEvent) => void;
+    'playing'?: boolean;
+    'src'?: string;
   }
 
   interface StellarVideo {
@@ -1626,8 +1674,10 @@ declare global {
     'StellarImage': Components.StellarImage;
     'StellarInterviewLine': Components.StellarInterviewLine;
     'StellarInterview': Components.StellarInterview;
+    'StellarPlaylist': Components.StellarPlaylist;
     'SkeletonImg': Components.SkeletonImg;
     'SkeletonText': Components.SkeletonText;
+    'StellarSong': Components.StellarSong;
     'StellarVideo': Components.StellarVideo;
     'StellarAnimateText': Components.StellarAnimateText;
     'StellarBlur': Components.StellarBlur;
@@ -1698,8 +1748,10 @@ declare global {
     'stellar-image': Components.StellarImageAttributes;
     'stellar-interview-line': Components.StellarInterviewLineAttributes;
     'stellar-interview': Components.StellarInterviewAttributes;
+    'stellar-playlist': Components.StellarPlaylistAttributes;
     'skeleton-img': Components.SkeletonImgAttributes;
     'skeleton-text': Components.SkeletonTextAttributes;
+    'stellar-song': Components.StellarSongAttributes;
     'stellar-video': Components.StellarVideoAttributes;
     'stellar-animate-text': Components.StellarAnimateTextAttributes;
     'stellar-blur': Components.StellarBlurAttributes;
@@ -1945,6 +1997,12 @@ declare global {
     new (): HTMLStellarInterviewElement;
   };
 
+  interface HTMLStellarPlaylistElement extends Components.StellarPlaylist, HTMLStencilElement {}
+  var HTMLStellarPlaylistElement: {
+    prototype: HTMLStellarPlaylistElement;
+    new (): HTMLStellarPlaylistElement;
+  };
+
   interface HTMLSkeletonImgElement extends Components.SkeletonImg, HTMLStencilElement {}
   var HTMLSkeletonImgElement: {
     prototype: HTMLSkeletonImgElement;
@@ -1955,6 +2013,12 @@ declare global {
   var HTMLSkeletonTextElement: {
     prototype: HTMLSkeletonTextElement;
     new (): HTMLSkeletonTextElement;
+  };
+
+  interface HTMLStellarSongElement extends Components.StellarSong, HTMLStencilElement {}
+  var HTMLStellarSongElement: {
+    prototype: HTMLStellarSongElement;
+    new (): HTMLStellarSongElement;
   };
 
   interface HTMLStellarVideoElement extends Components.StellarVideo, HTMLStencilElement {}
@@ -2185,8 +2249,10 @@ declare global {
     'stellar-image': HTMLStellarImageElement
     'stellar-interview-line': HTMLStellarInterviewLineElement
     'stellar-interview': HTMLStellarInterviewElement
+    'stellar-playlist': HTMLStellarPlaylistElement
     'skeleton-img': HTMLSkeletonImgElement
     'skeleton-text': HTMLSkeletonTextElement
+    'stellar-song': HTMLStellarSongElement
     'stellar-video': HTMLStellarVideoElement
     'stellar-animate-text': HTMLStellarAnimateTextElement
     'stellar-blur': HTMLStellarBlurElement
@@ -2257,8 +2323,10 @@ declare global {
     'stellar-image': HTMLStellarImageElement;
     'stellar-interview-line': HTMLStellarInterviewLineElement;
     'stellar-interview': HTMLStellarInterviewElement;
+    'stellar-playlist': HTMLStellarPlaylistElement;
     'skeleton-img': HTMLSkeletonImgElement;
     'skeleton-text': HTMLSkeletonTextElement;
+    'stellar-song': HTMLStellarSongElement;
     'stellar-video': HTMLStellarVideoElement;
     'stellar-animate-text': HTMLStellarAnimateTextElement;
     'stellar-blur': HTMLStellarBlurElement;

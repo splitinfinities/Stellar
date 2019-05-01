@@ -12,7 +12,6 @@ import TinyDatePicker from 'tiny-date-picker';
 import moment from 'moment';
 import mediumZoom from 'medium-zoom';
 
-
 export function rIC(callback: () => void) {
   if ('requestIdleCallback' in window) {
     (window as any).requestIdleCallback(callback);
@@ -242,6 +241,36 @@ var supportsPseudo = function (pseudoClass) {
 if (document && document.styleSheets && !supportsPseudo(':host-context(.dark-mode)')) {
   document.querySelector('html').classList.add('no-host-context')
 }
+
+export const asTime = function (float) {
+	var sec_num = float;
+	var hours   = Math.floor(sec_num / 3600);
+	var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+	var seconds: string|number = sec_num - (hours * 3600) - (minutes * 60);
+
+	seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+	var count = (minutes+":"+seconds).split('.')
+
+	return count[0];
+}
+
+
+export const leadingZeroIndex = function (index) {
+	var s = index+"";
+	while (s.length < 2) s = "0" + s;
+	return s;
+}
+
+export const relPathAsAbs = function (sRelPath) {
+	var nUpLn, sDir = "", sPath = location.pathname.replace(/[^\/]*$/, sRelPath.replace(/(\/|^)(?:\.?\/+)+/g, "$1"));
+	for (var nEnd, nStart = 0; nEnd = sPath.indexOf("/../", nStart), nEnd > -1; nStart = nEnd + nUpLn) {
+		nUpLn = /^\/(?:\.\.\/)*/.exec(sPath.slice(nEnd))[0].length;
+		sDir = (sDir + sPath.substring(nStart, nEnd)).replace(new RegExp("(?:\\\/+[^\\\/]*){0," + ((nUpLn - 1) / 3) + "}$"), "/");
+	}
+	return sDir + sPath.substr(nStart);
+}
+
 
 
 export {
