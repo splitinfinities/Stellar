@@ -7,21 +7,36 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type       |
-| ---------- | ---------- | ----------- | ---------- |
-| `autoplay` | `autoplay` |             | `boolean`  |
-| `custom`   | --         |             | `Function` |
-| `name`     | `name`     |             | `string`   |
-| `taps`     | `taps`     |             | `number`   |
-| `tempo`    | `tempo`    |             | `number`   |
+| Property   | Attribute  | Description | Type       | Default                         |
+| ---------- | ---------- | ----------- | ---------- | ------------------------------- |
+| `autoplay` | `autoplay` |             | `boolean`  | `false`                         |
+| `custom`   | --         |             | `Function` | `() => {     // do nothing   }` |
+| `name`     | `name`     |             | `string`   | `"web_audio_sequencer"`         |
+| `taps`     | `taps`     |             | `number`   | `4`                             |
+| `tempo`    | `tempo`    |             | `number`   | `undefined`                     |
 
 
 ## Methods
 
-| Method | Description |
-| ------ | ----------- |
-| `play` |             |
-| `stop` |             |
+### `play() => void`
+
+
+
+#### Returns
+
+Type: `void`
+
+
+
+### `stop() => void`
+
+
+
+#### Returns
+
+Type: `void`
+
+
 
 
 ----------------------------------------------

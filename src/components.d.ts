@@ -7,9 +7,9 @@
 
 import '@stencil/core';
 
-import 'ionicons';
 import '@stencil/router';
 import '@stencil/state-tunnel';
+import 'ionicons';
 import {
   LocationSegments,
   RouterHistory,

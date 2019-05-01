@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     |
-| -------- | --------- | ----------- | -------- |
-| `type`   | `type`    |             | `string` |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `type`   | `type`    |             | `string` | `undefined` |
 
 
 ----------------------------------------------

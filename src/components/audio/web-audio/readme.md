@@ -7,21 +7,60 @@
 
 ## Properties
 
-| Property   | Attribute | Description | Type      |
-| ---------- | --------- | ----------- | --------- |
-| `autoplay` | --        |             | `Boolean` |
-| `midi`     | --        |             | `Boolean` |
-| `name`     | `name`    |             | `string`  |
+| Property   | Attribute | Description | Type      | Default       |
+| ---------- | --------- | ----------- | --------- | ------------- |
+| `autoplay` | --        |             | `Boolean` | `undefined`   |
+| `midi`     | --        |             | `Boolean` | `false`       |
+| `name`     | `name`    |             | `string`  | `"web_audio"` |
 
 
 ## Methods
 
-| Method              | Description |
-| ------------------- | ----------- |
-| `connect_the_world` |             |
-| `get_context`       |             |
-| `is_prepared`       |             |
-| `source`            |             |
+### `connect_the_world() => Promise<boolean>`
+
+
+
+#### Returns
+
+Type: `Promise<boolean>`
+
+
+
+### `get_context() => AudioContext`
+
+
+
+#### Returns
+
+Type: `AudioContext`
+
+
+
+### `is_prepared() => Boolean`
+
+
+
+#### Returns
+
+Type: `Boolean`
+
+
+
+### `source(name: any) => any`
+
+
+
+#### Parameters
+
+| Name   | Type  | Description |
+| ------ | ----- | ----------- |
+| `name` | `any` |             |
+
+#### Returns
+
+Type: `any`
+
+
 
 
 ----------------------------------------------

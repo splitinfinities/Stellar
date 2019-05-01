@@ -7,13 +7,13 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type      |
-| ---------- | ---------- | ----------- | --------- |
-| `decimals` | `decimals` |             | `number`  |
-| `from`     | `from`     |             | `string`  |
-| `round`    | `round`    |             | `boolean` |
-| `to`       | `to`       |             | `string`  |
-| `value`    | `value`    |             | `number`  |
+| Property   | Attribute  | Description | Type      | Default |
+| ---------- | ---------- | ----------- | --------- | ------- |
+| `decimals` | `decimals` |             | `number`  | `2`     |
+| `from`     | `from`     |             | `string`  | `"B"`   |
+| `round`    | `round`    |             | `boolean` | `false` |
+| `to`       | `to`       |             | `string`  | `"KB"`  |
+| `value`    | `value`    |             | `number`  | `1000`  |
 
 
 ----------------------------------------------

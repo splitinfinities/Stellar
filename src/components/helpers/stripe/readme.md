@@ -7,19 +7,49 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     |
-| -------- | --------- | ----------- | -------- |
-| `name`   | `name`    |             | `string` |
-| `token`  | `token`   |             | `string` |
+| Property | Attribute | Description | Type     | Default                              |
+| -------- | --------- | ----------- | -------- | ------------------------------------ |
+| `name`   | `name`    |             | `string` | `'stripe'`                           |
+| `token`  | `token`   |             | `string` | `'pk_test_6pRNASCoBOKtIshFeQd4XMUh'` |
 
 
 ## Methods
 
-| Method     | Description |
-| ---------- | ----------- |
-| `connect`  |             |
-| `getToken` |             |
-| `setError` |             |
+### `connect() => void`
+
+
+
+#### Returns
+
+Type: `void`
+
+
+
+### `getToken() => Promise<boolean>`
+
+
+
+#### Returns
+
+Type: `Promise<boolean>`
+
+
+
+### `setError(error: string) => void`
+
+
+
+#### Parameters
+
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `error` | `string` |             |
+
+#### Returns
+
+Type: `void`
+
+
 
 
 ----------------------------------------------

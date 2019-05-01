@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     |
-| -------- | --------- | ----------- | -------- |
-| `target` | `target`  |             | `string` |
+| Property | Attribute | Description | Type     | Default   |
+| -------- | --------- | ----------- | -------- | --------- |
+| `target` | `target`  |             | `string` | `"story"` |
 
 
 ----------------------------------------------

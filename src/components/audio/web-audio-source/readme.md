@@ -7,39 +7,154 @@
 
 ## Properties
 
-| Property        | Attribute       | Description | Type      |
-| --------------- | --------------- | ----------- | --------- |
-| `effectsvolume` | `effectsvolume` |             | `number`  |
-| `inert`         | `inert`         |             | `boolean` |
-| `midichannel`   | `midichannel`   |             | `number`  |
-| `midikey`       | `midikey`       |             | `number`  |
-| `name`          | `name`          |             | `string`  |
-| `playing`       | `playing`       |             | `boolean` |
-| `src`           | `src`           |             | `string`  |
+| Property        | Attribute       | Description | Type      | Default     |
+| --------------- | --------------- | ----------- | --------- | ----------- |
+| `effectsvolume` | `effectsvolume` |             | `number`  | `100`       |
+| `inert`         | `inert`         |             | `boolean` | `false`     |
+| `midichannel`   | `midichannel`   |             | `number`  | `1`         |
+| `midikey`       | `midikey`       |             | `number`  | `0`         |
+| `name`          | `name`          |             | `string`  | `undefined` |
+| `playing`       | `playing`       |             | `boolean` | `false`     |
+| `src`           | `src`           |             | `string`  | `undefined` |
 
 
 ## Events
 
-| Event        | Description |
-| ------------ | ----------- |
-| `timeupdate` |             |
+| Event        | Description | Type                |
+| ------------ | ----------- | ------------------- |
+| `timeupdate` |             | `CustomEvent<void>` |
 
 
 ## Methods
 
-| Method         | Description |
-| -------------- | ----------- |
-| `assignBuffer` |             |
-| `gain`         |             |
-| `getBuffer`    |             |
-| `getDuration`  |             |
-| `pause`        |             |
-| `play`         |             |
-| `prepare`      |             |
-| `skipTo`       |             |
-| `stop`         |             |
-| `toggle`       |             |
-| `webAudio`     |             |
+### `assignBuffer(webAudio: any, buffer: any) => void`
+
+
+
+#### Parameters
+
+| Name       | Type  | Description |
+| ---------- | ----- | ----------- |
+| `webAudio` | `any` |             |
+| `buffer`   | `any` |             |
+
+#### Returns
+
+Type: `void`
+
+
+
+### `gain(place?: string) => GainNode`
+
+
+
+#### Parameters
+
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `place` | `string` |             |
+
+#### Returns
+
+Type: `GainNode`
+
+
+
+### `getBuffer() => AudioBuffer`
+
+
+
+#### Returns
+
+Type: `AudioBuffer`
+
+
+
+### `getDuration() => number`
+
+
+
+#### Returns
+
+Type: `number`
+
+
+
+### `pause() => void`
+
+
+
+#### Returns
+
+Type: `void`
+
+
+
+### `play() => void`
+
+
+
+#### Returns
+
+Type: `void`
+
+
+
+### `prepare() => void`
+
+
+
+#### Returns
+
+Type: `void`
+
+
+
+### `skipTo(time: any) => void`
+
+
+
+#### Parameters
+
+| Name   | Type  | Description |
+| ------ | ----- | ----------- |
+| `time` | `any` |             |
+
+#### Returns
+
+Type: `void`
+
+
+
+### `stop() => void`
+
+
+
+#### Returns
+
+Type: `void`
+
+
+
+### `toggle() => void`
+
+
+
+#### Returns
+
+Type: `void`
+
+
+
+### `webAudio() => HTMLElement`
+
+
+
+#### Returns
+
+Type: `HTMLElement`
+
+
 
 
 ----------------------------------------------
