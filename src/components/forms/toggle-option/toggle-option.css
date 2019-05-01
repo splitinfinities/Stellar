@@ -1,0 +1,337 @@
+stellar-toggle-option {
+  --background: var(--gray0);
+  --hover-background: var(--gray1);
+  --border: var(--gray1);
+  --focus: var(--gray5);
+  --check-bg: var(--white);
+  --check-subject-bg: var(--theme-base5);
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  position: relative;
+}
+
+stellar-toggle-option[type*="block"] {
+  overflow: hidden;
+}
+
+stellar-toggle-option * {
+  box-sizing: border-box;
+}
+
+stellar-toggle-option + stellar-toggle-option {
+  margin-top: 10px;
+}
+
+stellar-toggle-option[type="radio-block"] + stellar-toggle-option[type="radio-block"],
+stellar-toggle-option[type="checkbox-block"] + stellar-toggle-option[type="checkbox-block"] {
+  margin-top: 0;
+}
+
+stellar-toggle-option stellar-asset {
+  --icon-color: white;
+}
+
+stellar-toggle-option input {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+stellar-toggle-option span {
+  color: var(--gray9);
+  font-weight: 300;
+}
+
+stellar-toggle-option .box {
+  display: inline-flex;
+  position: relative;
+  flex: 0 0 2rem;
+  align-items: center;
+  justify-content: center;
+  transition: all 150ms var(--ease) 0s;
+  margin: 0 7.5px 0 0.2px;
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--border);
+  background: var(--check-bg) 50% 50% / 5px 4px no-repeat;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+stellar-toggle-option:focus-within .box,
+stellar-toggle-option[checked] .box,
+stellar-toggle-option:hover .box {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--focus), 0 0 0 3px rgba(0, 0, 0, .125);
+}
+
+stellar-toggle-option .box .indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: 50% 50%;
+  transition: all 150ms var(--ease) 0s;
+}
+
+stellar-toggle-option img {
+  min-width: 4rem;
+}
+
+stellar-toggle-option .box .indicator * {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+stellar-toggle-option .box.focus {
+  border: 1px solid black;
+  box-shadow: 0 0 0 2px var(--theme-base3);
+}
+
+stellar-toggle-option label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+stellar-toggle-option[type="radio"] .box .bg,
+stellar-toggle-option[type*="checkbox"] .box .bg {
+  background: var(--check-subject-bg);
+  color: var(--background);
+}
+
+stellar-toggle-option[type="radio"] .box .active,
+stellar-toggle-option[type*="checkbox"] .box .active {
+  transform: translate(-50%, -50%) scale(1);
+  background: var(--check-subject-bg);
+  color: var(--background);
+  width: calc(100% - 0.5rem);
+  height: calc(100% - 0.5rem);
+  border-radius: 100%;
+}
+
+stellar-toggle-option[type*="checkbox"] .box .active {
+  border-radius: 2px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+}
+
+stellar-toggle-option[type*="checkbox"] .box {
+  flex: 0 0 2rem;
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+  color: var(--check-bg);
+  border-radius: 0.3rem;
+}
+
+stellar-toggle-option[type*="checkbox"] .box stellar-asset {
+  transition: transform 350ms var(--ease) 0ms;
+  transform: scale(0);
+}
+
+stellar-toggle-option[type="checkbox-block"] .box stellar-asset {
+  height: 3rem;
+  width: 3rem;
+  font-size: 3rem;
+  align-self: center;
+  margin: auto;
+  display: flex;
+}
+
+stellar-toggle-option .status stellar-tag {
+  display: block;
+}
+
+stellar-toggle-option .status {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(calc(100% + 1rem), 0%);
+  transition: all 125ms var(--ease) 0ms;
+}
+
+stellar-toggle-option .status.active {
+  transform: translate(0%, 0%);
+}
+
+stellar-toggle-option[type="checkbox"] .box .active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+stellar-toggle-option[type*="checkbox"] .box .active stellar-asset {
+  transform: scale(1);
+}
+
+stellar-toggle-option[type*="block"] label {
+  position: relative;
+  border: 1px solid var(--border);
+  transition: all 200ms var(--ease) 0s;
+  width: 100%;
+  height: 100%;
+}
+
+stellar-toggle-option[type*="block"] label .wrapper {
+  transition: all 200ms var(--ease) 0s;
+}
+
+stellar-toggle-option[type*="block"]:hover,
+stellar-toggle-option[type*="block"]:focus {
+  box-shadow: 0 2px 6px 0 rgba(72, 72, 73, 0.15);
+}
+
+stellar-toggle-option[type*="block"]:focus-within .wrapper,
+stellar-toggle-option[type*="block"] label:hover .wrapper,
+stellar-toggle-option[type*="block"] label:focus .wrapper {
+  background: var(--hover-background);
+}
+
+stellar-toggle-option[type*="block"] label:active {
+  border-color: var(--gray2);
+}
+
+stellar-toggle-option[type*="block"] .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--background);
+  padding: 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+stellar-toggle-option[type*="block"] .block-content {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10px;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+stellar-toggle-option[type*="block"] .box {
+  flex: 0 0 3rem;
+  order: -1;
+  margin-right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  color: var(--theme-base5);
+  background: var(--check-bg);
+}
+
+stellar-toggle-option[type*="block"] .box .active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+stellar-toggle-option[type*="block"][icon] .wrapper {
+  justify-content: space-between;
+}
+
+stellar-toggle-option[type*="block"][icon] .block-content {
+  justify-content: space-between;
+  grid-template-columns: 1fr 4fr;
+}
+
+stellar-toggle-option[type*="block"][icon] .box {
+  order: 3;
+  margin-right: 0;
+  margin-left: 1.5rem;
+}
+
+stellar-toggle-option[type*="block"] copy-wrap {
+  position: relative;
+  z-index: 2;
+}
+
+stellar-toggle-option[type*="block"][inline] {
+  margin: 0;
+}
+
+stellar-toggle-option[type*="block"][inline] label {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+stellar-toggle-option[type*="block"][size="small"] label {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+stellar-toggle-option[type*="block"][checked] {
+  z-index: 3;
+  border-color: var(--background);
+}
+
+stellar-toggle-option[type*="block"][checked] .box {
+  border: 0;
+  box-shadow: 0 0 0 1px var(--border);
+  background: var(--background);
+  color: white;
+}
+
+stellar-toggle-option[type="radio-block"] .box .active {
+  transform: translate(-50%, -50%) scale(1);
+  background: var(--theme-base5);
+  width: calc(100% - 0.5rem);
+  height: calc(100% - 0.5rem);
+  border-radius: 100%;
+}
+
+stellar-toggle-option[type="radio-block"][checked] .box .indicator {
+  background: white;
+}
+
+stellar-toggle-option[inline] {
+  margin-top: 0;
+  margin-right: 3rem;
+}
+
+stellar-toggle-option[single] {
+  margin: 0;
+}
+
+stellar-toggle-option[inline] label {
+  display: inline-flex;
+}
+
+stellar-toggle-option[single] .box {
+  margin: 0;
+}
+
+stellar-toggle-option[disabled] {
+  opacity: 0.75;
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+
+stellar-toggle-option copy-wrap * {
+  color: var(--black);
+}
+
+.dark-mode stellar-toggle-option {
+  --background: var(--black-alt);
+  --hover-background: var(--black-alt);
+  --border: var(--gray9)
+}
+
+.dark-mode stellar-toggle-option copy-wrap * {
+  color: white;
+}
+
+
+.dark-mode stellar-toggle-option .box {
+  background: var(--black)
+}
+
+.dark-mode stellar-toggle-option[type*="checkbox"] .box .active stellar-asset {
+  color: var(--black);
+}

@@ -1,0 +1,4747 @@
+{
+  "components": [
+    {
+      "tag": "copy-wrap",
+      "dependencies": [],
+      "componentClass": "CopyWrap",
+      "componentPath": "components/ui/copy-wrap/copy-wrap.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/copy-wrap/copy-wrap.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "align",
+          "type": "String",
+          "attr": "align"
+        },
+        {
+          "name": "full",
+          "type": "Boolean",
+          "attr": "full"
+        }
+      ]
+    },
+    {
+      "tag": "skeleton-img",
+      "dependencies": [
+        "stellar-asset"
+      ],
+      "componentClass": "SkeletonImg",
+      "componentPath": "components/media/skeleton-img/skeleton-img.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/media/skeleton-img/skeleton-img.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "height",
+          "type": "Number",
+          "attr": "height"
+        },
+        {
+          "name": "icon",
+          "type": "Boolean",
+          "attr": "icon"
+        },
+        {
+          "name": "loading",
+          "type": "Boolean",
+          "attr": "loading"
+        },
+        {
+          "name": "width",
+          "type": "Number",
+          "attr": "width"
+        }
+      ],
+      "states": [
+        {
+          "name": "observer"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "skeleton-text",
+      "dependencies": [],
+      "componentClass": "SkeletonText",
+      "componentPath": "components/media/skeleton-text/skeleton-text.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/media/skeleton-text/skeleton-text.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "as",
+          "type": "String",
+          "attr": "as"
+        },
+        {
+          "name": "loading",
+          "type": "Boolean",
+          "attr": "loading"
+        },
+        {
+          "name": "width",
+          "type": "Number",
+          "attr": "width"
+        }
+      ],
+      "states": [
+        {
+          "name": "observer"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-360-image",
+      "dependencies": [],
+      "componentClass": "Image360",
+      "componentPath": "components/media/360-image/360-image.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/media/360-image/360-image.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "height",
+          "type": "Number",
+          "attr": "height"
+        },
+        {
+          "name": "poster",
+          "type": "String",
+          "attr": "poster"
+        },
+        {
+          "name": "src",
+          "type": "String",
+          "attr": "src"
+        },
+        {
+          "name": "width",
+          "type": "Number",
+          "attr": "width"
+        }
+      ],
+      "states": [
+        {
+          "name": "image"
+        },
+        {
+          "name": "viewer"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-360-video",
+      "dependencies": [],
+      "componentClass": "Video360",
+      "componentPath": "components/media/360-video/360-video.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/media/360-video/360-video.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "height",
+          "type": "Number",
+          "attr": "height"
+        },
+        {
+          "name": "poster",
+          "type": "String",
+          "attr": "poster"
+        },
+        {
+          "name": "src",
+          "type": "String",
+          "attr": "src"
+        },
+        {
+          "name": "width",
+          "type": "Number",
+          "attr": "width"
+        }
+      ],
+      "states": [
+        {
+          "name": "video"
+        },
+        {
+          "name": "viewer"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-accordion",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-blur",
+        "stellar-button"
+      ],
+      "componentClass": "Accordion",
+      "componentPath": "components/ui/accordion/accordion.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/accordion/accordion.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "label",
+          "type": "String",
+          "attr": "label"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        },
+        {
+          "name": "open",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "open"
+        },
+        {
+          "name": "tight",
+          "type": "Boolean",
+          "attr": "tight"
+        }
+      ],
+      "states": [
+        {
+          "name": "blur"
+        },
+        {
+          "name": "els"
+        },
+        {
+          "name": "expander"
+        },
+        {
+          "name": "observer"
+        }
+      ],
+      "methods": [
+        {
+          "name": "refresh"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "shadow": true
+    },
+    {
+      "tag": "stellar-animate-text",
+      "dependencies": [
+        "stellar-blur"
+      ],
+      "componentClass": "AnimateText",
+      "componentPath": "components/motion/animate-text/animate-text.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/motion/animate-text/animate-text.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "method",
+          "type": "String",
+          "attr": "method"
+        }
+      ],
+      "states": [
+        {
+          "name": "horizontalBlur"
+        },
+        {
+          "name": "verticalBlur"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-asset",
+      "dependencies": [
+        "ion-icon"
+      ],
+      "componentClass": "Asset",
+      "componentPath": "components/ui/asset/asset.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/asset/asset.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "align",
+          "type": "String",
+          "attr": "align"
+        },
+        {
+          "name": "ariaLabel",
+          "type": "String",
+          "attr": "aria-label"
+        },
+        {
+          "name": "block",
+          "type": "Boolean",
+          "attr": "block"
+        },
+        {
+          "name": "language",
+          "type": "String",
+          "attr": "language"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        },
+        {
+          "name": "src",
+          "type": "String",
+          "attr": "src"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-asset-library",
+      "dependencies": [
+        "stellar-documentation",
+        "stellar-grid"
+      ],
+      "componentClass": "AssetLibrary",
+      "componentPath": "components/helpers/asset-library/asset-library.js",
+      "styles": {},
+      "states": [
+        {
+          "name": "icons"
+        },
+        {
+          "name": "kind"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-avatar",
+      "dependencies": [
+        "stellar-tooltip"
+      ],
+      "componentClass": "Avatar",
+      "componentPath": "components/ui/avatar/avatar.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/avatar/avatar.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "color",
+          "type": "String",
+          "mutable": true,
+          "attr": "color",
+          "watch": [
+            "updateColor"
+          ]
+        },
+        {
+          "name": "initials",
+          "type": "String",
+          "mutable": true,
+          "attr": "initials"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "mutable": true,
+          "attr": "name",
+          "watch": [
+            "formatName"
+          ]
+        },
+        {
+          "name": "notooltip",
+          "type": "Boolean",
+          "attr": "notooltip"
+        },
+        {
+          "name": "processing",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "processing"
+        },
+        {
+          "name": "shape",
+          "type": "String",
+          "mutable": true,
+          "attr": "shape"
+        },
+        {
+          "name": "size",
+          "type": "String",
+          "mutable": true,
+          "attr": "size"
+        },
+        {
+          "name": "src",
+          "type": "String",
+          "attr": "src"
+        }
+      ],
+      "states": [
+        {
+          "name": "colorAuto"
+        },
+        {
+          "name": "colors"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-blur",
+      "dependencies": [],
+      "componentClass": "Blur",
+      "componentPath": "components/motion/blur/blur.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/motion/blur/blur.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "horizontal",
+          "type": "Number",
+          "mutable": true,
+          "attr": "horizontal"
+        },
+        {
+          "name": "vertical",
+          "type": "Number",
+          "mutable": true,
+          "attr": "vertical"
+        }
+      ],
+      "states": [
+        {
+          "name": "generatedId"
+        }
+      ],
+      "methods": [
+        {
+          "name": "setBlurFilter"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-breadcrumb",
+      "dependencies": [],
+      "componentClass": "Breadcrumb",
+      "componentPath": "components/ui/breadcrumb/breadcrumb.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/breadcrumb/breadcrumb.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "color",
+          "type": "String",
+          "attr": "color"
+        },
+        {
+          "name": "disabled",
+          "type": "Boolean",
+          "attr": "disabled"
+        },
+        {
+          "name": "href",
+          "type": "String",
+          "attr": "href"
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "mutable": true,
+          "attr": "label"
+        },
+        {
+          "name": "target",
+          "type": "String",
+          "attr": "target"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-breadcrumbs",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-breadcrumb",
+        "stellar-label"
+      ],
+      "componentClass": "Breadcrumbs",
+      "componentPath": "components/ui/breadcrumbs/breadcrumbs.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/breadcrumbs/breadcrumbs.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "color",
+          "type": "String",
+          "attr": "color"
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "attr": "description"
+        },
+        {
+          "name": "home",
+          "type": "String",
+          "attr": "home"
+        },
+        {
+          "name": "icon",
+          "type": "String",
+          "attr": "icon"
+        },
+        {
+          "name": "icon_size",
+          "type": "Number",
+          "attr": "icon_size"
+        },
+        {
+          "name": "icon_src",
+          "type": "String",
+          "attr": "icon_src"
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "attr": "label"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-button",
+      "dependencies": [
+        "stellar-asset"
+      ],
+      "componentClass": "Button",
+      "componentPath": "components/ui/button/button.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/button/button.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "active",
+          "type": "Boolean",
+          "attr": "active"
+        },
+        {
+          "name": "block",
+          "type": "Boolean",
+          "attr": "block"
+        },
+        {
+          "name": "danger",
+          "type": "Boolean",
+          "attr": "danger"
+        },
+        {
+          "name": "disabled",
+          "type": "Boolean",
+          "attr": "disabled"
+        },
+        {
+          "name": "for",
+          "type": "String",
+          "attr": "for"
+        },
+        {
+          "name": "ghost",
+          "type": "Boolean",
+          "attr": "ghost"
+        },
+        {
+          "name": "href",
+          "type": "String",
+          "attr": "href"
+        },
+        {
+          "name": "icon",
+          "type": "Boolean",
+          "attr": "icon"
+        },
+        {
+          "name": "invert",
+          "type": "Boolean",
+          "attr": "invert"
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "attr": "label"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        },
+        {
+          "name": "outline",
+          "type": "Boolean",
+          "attr": "outline"
+        },
+        {
+          "name": "padding",
+          "type": "String",
+          "attr": "padding"
+        },
+        {
+          "name": "pill",
+          "type": "Boolean",
+          "attr": "pill"
+        },
+        {
+          "name": "processable",
+          "type": "Boolean",
+          "attr": "processable"
+        },
+        {
+          "name": "size",
+          "type": "String",
+          "attr": "size"
+        },
+        {
+          "name": "tag",
+          "type": "String",
+          "attr": "tag"
+        },
+        {
+          "name": "target",
+          "type": "String",
+          "attr": "target"
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "attr": "value"
+        }
+      ],
+      "states": [
+        {
+          "name": "processing"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "shadow": true
+    },
+    {
+      "tag": "stellar-callout",
+      "dependencies": [],
+      "componentClass": "Callout",
+      "componentPath": "components/ui/callout/callout.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/callout/callout.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "type",
+          "type": "String",
+          "attr": "type"
+        }
+      ],
+      "states": [
+        {
+          "name": "theme"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-card",
+      "dependencies": [],
+      "componentClass": "Card",
+      "componentPath": "components/ui/card/card.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/card/card.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "for",
+          "type": "String",
+          "attr": "for"
+        },
+        {
+          "name": "href",
+          "type": "String",
+          "attr": "href"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        },
+        {
+          "name": "padding",
+          "type": "String",
+          "attr": "padding"
+        },
+        {
+          "name": "shadow",
+          "type": "String",
+          "attr": "shadow"
+        },
+        {
+          "name": "tag",
+          "type": "String",
+          "attr": "tag"
+        },
+        {
+          "name": "transition",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "transition"
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "attr": "value"
+        }
+      ],
+      "states": [
+        {
+          "name": "height"
+        },
+        {
+          "name": "middleX"
+        },
+        {
+          "name": "middleY"
+        },
+        {
+          "name": "rotationLimit"
+        },
+        {
+          "name": "width"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-chart",
+      "dependencies": [],
+      "componentClass": "Chart",
+      "componentPath": "components/ui/chart/chart.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/chart/chart.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "for",
+          "type": "String",
+          "attr": "for"
+        },
+        {
+          "name": "random",
+          "type": "Boolean",
+          "attr": "random"
+        },
+        {
+          "name": "remote",
+          "type": "String",
+          "attr": "remote"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "attr": "type"
+        }
+      ],
+      "states": [
+        {
+          "name": "__chart"
+        },
+        {
+          "name": "__data"
+        },
+        {
+          "name": "__highchart"
+        },
+        {
+          "name": "__informant"
+        },
+        {
+          "name": "__options"
+        }
+      ],
+      "methods": [
+        {
+          "name": "data"
+        },
+        {
+          "name": "options"
+        },
+        {
+          "name": "refresh"
+        },
+        {
+          "name": "series"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-code",
+      "dependencies": [],
+      "componentClass": "Code",
+      "componentPath": "components/ui/code/code.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/code/code.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "codeString",
+          "type": "String",
+          "attr": "code-string"
+        },
+        {
+          "name": "language",
+          "type": "String",
+          "mutable": true,
+          "attr": "language"
+        },
+        {
+          "name": "numbers",
+          "type": "Boolean",
+          "attr": "numbers"
+        }
+      ],
+      "states": [
+        {
+          "name": "code"
+        }
+      ],
+      "methods": [
+        {
+          "name": "copy"
+        },
+        {
+          "name": "highlight"
+        },
+        {
+          "name": "result"
+        },
+        {
+          "name": "setCode"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-code-block",
+      "dependencies": [
+        "stellar-button",
+        "stellar-card",
+        "stellar-code",
+        "stellar-tag"
+      ],
+      "componentClass": "CodeBlock",
+      "componentPath": "components/ui/code-block/code-block.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/code-block/code-block.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "codeString",
+          "type": "String",
+          "attr": "code-string"
+        },
+        {
+          "name": "copy",
+          "type": "Boolean",
+          "attr": "copy"
+        },
+        {
+          "name": "expandable",
+          "type": "Boolean",
+          "attr": "expandable"
+        },
+        {
+          "name": "expanded",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "expanded"
+        },
+        {
+          "name": "language",
+          "type": "String",
+          "attr": "language"
+        },
+        {
+          "name": "numbers",
+          "type": "Boolean",
+          "attr": "numbers"
+        },
+        {
+          "name": "simple",
+          "type": "Boolean",
+          "attr": "simple"
+        }
+      ],
+      "states": [
+        {
+          "name": "copied"
+        }
+      ],
+      "methods": [
+        {
+          "name": "result"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-color-library",
+      "dependencies": [
+        "stellar-card",
+        "stellar-grid"
+      ],
+      "componentClass": "ColorLibrary",
+      "componentPath": "components/helpers/color-library/color-library.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/helpers/color-library/color-library.css"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "stellar-color-picker",
+      "dependencies": [],
+      "componentClass": "ColorPicker",
+      "componentPath": "components/ui/color-picker/color-picker.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/color-picker/color-picker.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "value",
+          "type": "String",
+          "mutable": true,
+          "attr": "value",
+          "watch": [
+            "valueChangedHandler"
+          ]
+        }
+      ],
+      "states": [
+        {
+          "name": "options"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "inputValueChanged",
+          "method": "inputChangedHandler",
+          "passive": false,
+          "capture": false
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "events": [
+        {
+          "event": "colorChanged"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-comment",
+      "dependencies": [],
+      "componentClass": "Comment",
+      "componentPath": "components/ui/comment/comment.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/comment/comment.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "content",
+          "type": "Any",
+          "mutable": true,
+          "attr": "content"
+        },
+        {
+          "name": "name",
+          "type": "Any",
+          "mutable": true,
+          "attr": "name"
+        }
+      ],
+      "states": [
+        {
+          "name": "empty"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-comments",
+      "dependencies": [],
+      "componentClass": "Comments",
+      "componentPath": "components/ui/comments/comments.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/comments/comments.css"
+          ]
+        }
+      },
+      "states": [
+        {
+          "name": "comments"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-content",
+      "dependencies": [
+        "stellar-blur"
+      ],
+      "componentClass": "Content",
+      "componentPath": "components/ui/content/content.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/content/content.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "for",
+          "type": "String",
+          "mutable": true,
+          "attr": "for"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "mutable": true,
+          "attr": "name"
+        },
+        {
+          "name": "open",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "open",
+          "watch": [
+            "onOpenChange"
+          ]
+        }
+      ],
+      "states": [
+        {
+          "name": "blur"
+        },
+        {
+          "name": "parent"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "document:contentChange",
+          "method": "handleActive",
+          "passive": false,
+          "capture": false
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-docs",
+      "dependencies": [
+        "stencil-route",
+        "stencil-route-switch",
+        "stencil-router"
+      ],
+      "componentClass": "DocsRoot",
+      "componentPath": "components/docs/root/root.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/docs/root/root.css"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "stellar-docs-component",
+      "dependencies": [
+        "stellar-accordion",
+        "stellar-card",
+        "stellar-content",
+        "stellar-docs-header",
+        "stellar-docs-navigation",
+        "stellar-documentation",
+        "stellar-item",
+        "stellar-layout",
+        "stellar-markdown",
+        "stellar-tab",
+        "stellar-tabs"
+      ],
+      "componentClass": "DocsComponent",
+      "componentPath": "components/docs/component/component.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/docs/component/component.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "match",
+          "attr": "match"
+        }
+      ],
+      "states": [
+        {
+          "name": "data"
+        }
+      ],
+      "methods": [
+        {
+          "name": "pull_data"
+        },
+        {
+          "name": "show_data"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-docs-header",
+      "dependencies": [
+        "copy-wrap",
+        "stellar-asset",
+        "stellar-button",
+        "stellar-card",
+        "stellar-code-block",
+        "stellar-grid",
+        "stellar-item",
+        "stellar-layout",
+        "stellar-message",
+        "stellar-select",
+        "stellar-starscape",
+        "stellar-tag",
+        "stellar-toggle",
+        "stellar-toggle-option"
+      ],
+      "componentClass": "DocsHeader",
+      "componentPath": "components/docs/header/header.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/docs/header/header.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "complement",
+          "type": "String",
+          "mutable": true,
+          "attr": "complement",
+          "watch": [
+            "handleTheming"
+          ]
+        },
+        {
+          "name": "invert",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "invert",
+          "watch": [
+            "handleTheming"
+          ]
+        },
+        {
+          "name": "mark",
+          "type": "String",
+          "attr": "mark"
+        },
+        {
+          "name": "max",
+          "type": "Number",
+          "attr": "max"
+        },
+        {
+          "name": "theme",
+          "type": "String",
+          "mutable": true,
+          "attr": "theme",
+          "watch": [
+            "handleTheming"
+          ]
+        },
+        {
+          "name": "value",
+          "type": "Number",
+          "attr": "value"
+        }
+      ],
+      "states": [
+        {
+          "name": "data"
+        }
+      ],
+      "hostElement": {
+        "name": "el"
+      }
+    },
+    {
+      "tag": "stellar-docs-home",
+      "dependencies": [
+        "stellar-docs-header",
+        "stellar-docs-navigation",
+        "stellar-layout"
+      ],
+      "componentClass": "DocsHome",
+      "componentPath": "components/docs/home/home.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/docs/home/home.css"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "stellar-docs-navigation",
+      "dependencies": [
+        "copy-wrap",
+        "stellar-accordion",
+        "stellar-card",
+        "stellar-item",
+        "stellar-tag"
+      ],
+      "componentClass": "DocsNavigation",
+      "componentPath": "components/docs/navigation/navigation.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/docs/navigation/navigation.css"
+          ]
+        }
+      },
+      "states": [
+        {
+          "name": "data"
+        },
+        {
+          "name": "documentation"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-docs-not-found",
+      "dependencies": [],
+      "componentClass": "DocsNotFound",
+      "componentPath": "components/docs/not-found/not-found.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/docs/not-found/not-found.css"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "stellar-docs-page",
+      "dependencies": [
+        "stellar-docs-header",
+        "stellar-docs-navigation",
+        "stellar-layout",
+        "stellar-markdown"
+      ],
+      "componentClass": "DocsPage",
+      "componentPath": "components/docs/page/page.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/docs/page/page.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "match",
+          "attr": "match"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-documentation",
+      "dependencies": [
+        "stellar-card",
+        "stellar-code-block"
+      ],
+      "componentClass": "Documentation",
+      "componentPath": "components/ui/documentation/documentation.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/documentation/documentation.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "codeString",
+          "type": "String",
+          "attr": "code-string"
+        },
+        {
+          "name": "expandable",
+          "type": "Boolean",
+          "attr": "expandable"
+        },
+        {
+          "name": "expanded",
+          "type": "Boolean",
+          "attr": "expanded"
+        },
+        {
+          "name": "feature",
+          "type": "String",
+          "attr": "feature"
+        },
+        {
+          "name": "preview",
+          "type": "Boolean",
+          "attr": "preview"
+        },
+        {
+          "name": "property",
+          "type": "String",
+          "attr": "property"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "attr": "type"
+        }
+      ],
+      "states": [
+        {
+          "name": "code"
+        },
+        {
+          "name": "observer"
+        },
+        {
+          "name": "randomName"
+        },
+        {
+          "name": "result"
+        },
+        {
+          "name": "templates"
+        }
+      ],
+      "methods": [
+        {
+          "name": "reload"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-dropdown",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-blur"
+      ],
+      "componentClass": "Dropdown",
+      "componentPath": "components/ui/dropdown/dropdown.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/dropdown/dropdown.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "icon",
+          "type": "Boolean",
+          "attr": "icon"
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "attr": "label"
+        },
+        {
+          "name": "open",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "open",
+          "watch": [
+            "observeOpen"
+          ]
+        },
+        {
+          "name": "position",
+          "type": "String",
+          "mutable": true,
+          "attr": "position"
+        }
+      ],
+      "states": [
+        {
+          "name": "blur"
+        },
+        {
+          "name": "timeout"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-footer",
+      "dependencies": [],
+      "componentClass": "Footer",
+      "componentPath": "components/ui/footer/footer.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/footer/footer.css"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "stellar-form",
+      "dependencies": [],
+      "componentClass": "Form",
+      "componentPath": "components/ui/form/form.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/form/form.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "acceptCharset",
+          "type": "String",
+          "attr": "accept-charset"
+        },
+        {
+          "name": "action",
+          "type": "String",
+          "attr": "action"
+        },
+        {
+          "name": "ajax",
+          "type": "Boolean",
+          "attr": "ajax"
+        },
+        {
+          "name": "autocomplete",
+          "type": "String",
+          "attr": "autocomplete"
+        },
+        {
+          "name": "enctype",
+          "type": "String",
+          "attr": "enctype"
+        },
+        {
+          "name": "method",
+          "type": "String",
+          "attr": "method"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        },
+        {
+          "name": "novalidate",
+          "type": "Boolean",
+          "attr": "novalidate"
+        },
+        {
+          "name": "target",
+          "type": "String",
+          "attr": "target"
+        }
+      ],
+      "states": [
+        {
+          "name": "results"
+        },
+        {
+          "name": "valid"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "keydown.enter",
+          "method": "handleEnter",
+          "passive": false,
+          "capture": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "refresh"
+        },
+        {
+          "name": "submit"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-grid",
+      "dependencies": [],
+      "componentClass": "Grid",
+      "componentPath": "components/ui/grid/grid.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/grid/grid.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "align",
+          "type": "String",
+          "attr": "align"
+        },
+        {
+          "name": "cols",
+          "type": "Any",
+          "attr": "cols"
+        },
+        {
+          "name": "compact",
+          "type": "Boolean",
+          "attr": "compact"
+        },
+        {
+          "name": "padding",
+          "type": "Boolean",
+          "attr": "padding"
+        },
+        {
+          "name": "responsive",
+          "type": "Boolean",
+          "attr": "responsive"
+        }
+      ],
+      "methods": [
+        {
+          "name": "refresh"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-group",
+      "dependencies": [
+        "stellar-group-overflow"
+      ],
+      "componentClass": "Group",
+      "componentPath": "components/ui/group/group.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/group/group.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "count",
+          "type": "Number",
+          "attr": "count"
+        },
+        {
+          "name": "overflow",
+          "type": "Boolean",
+          "attr": "overflow"
+        },
+        {
+          "name": "size",
+          "type": "String",
+          "mutable": true,
+          "attr": "size"
+        }
+      ],
+      "states": [
+        {
+          "name": "extras"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-group-overflow",
+      "dependencies": [
+        "stellar-tooltip"
+      ],
+      "componentClass": "GroupOverflow",
+      "componentPath": "components/ui/group-overflow/group-overflow.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/group-overflow/group-overflow.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "count",
+          "type": "Number",
+          "attr": "count"
+        },
+        {
+          "name": "size",
+          "type": "String",
+          "mutable": true,
+          "attr": "size"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-header",
+      "dependencies": [
+        "stellar-progress",
+        "stellar-starscape"
+      ],
+      "componentClass": "Header",
+      "componentPath": "components/ui/header/header.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/header/header.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "invert",
+          "type": "Boolean",
+          "attr": "invert"
+        },
+        {
+          "name": "mark",
+          "type": "String",
+          "attr": "mark"
+        },
+        {
+          "name": "max",
+          "type": "Number",
+          "attr": "max"
+        },
+        {
+          "name": "value",
+          "type": "Number",
+          "attr": "value"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-image",
+      "dependencies": [],
+      "componentClass": "StellarImage",
+      "componentPath": "components/media/image/image.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/media/image/image.css"
+          ]
+        }
+      },
+      "assetPaths": [
+        "components/media/image/vendor"
+      ],
+      "props": [
+        {
+          "name": "bg",
+          "type": "String",
+          "attr": "bg"
+        },
+        {
+          "name": "height",
+          "type": "Number",
+          "attr": "height"
+        },
+        {
+          "name": "nozoom",
+          "type": "Boolean",
+          "attr": "nozoom"
+        },
+        {
+          "name": "poster",
+          "type": "String",
+          "attr": "poster"
+        },
+        {
+          "name": "width",
+          "type": "Number",
+          "attr": "width"
+        }
+      ],
+      "states": [
+        {
+          "name": "active"
+        },
+        {
+          "name": "aspectRatio"
+        },
+        {
+          "name": "figure"
+        },
+        {
+          "name": "io"
+        },
+        {
+          "name": "palette"
+        },
+        {
+          "name": "sources"
+        },
+        {
+          "name": "zoom"
+        }
+      ],
+      "methods": [
+        {
+          "name": "medium"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "shadow": true
+    },
+    {
+      "tag": "stellar-input",
+      "dependencies": [
+        "copy-wrap",
+        "stellar-asset",
+        "stellar-label"
+      ],
+      "componentClass": "Input",
+      "componentPath": "components/ui/input/input.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/input/input.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "autocomplete",
+          "type": "String",
+          "attr": "autocomplete"
+        },
+        {
+          "name": "autofocus",
+          "type": "Boolean",
+          "attr": "autofocus"
+        },
+        {
+          "name": "color",
+          "type": "String",
+          "attr": "color"
+        },
+        {
+          "name": "cols",
+          "type": "Number",
+          "attr": "cols"
+        },
+        {
+          "name": "disabled",
+          "type": "Boolean",
+          "attr": "disabled"
+        },
+        {
+          "name": "focused",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "focused"
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "attr": "label"
+        },
+        {
+          "name": "match",
+          "type": "String",
+          "attr": "match"
+        },
+        {
+          "name": "max",
+          "type": "Number",
+          "attr": "max"
+        },
+        {
+          "name": "maxlength",
+          "type": "Number",
+          "attr": "maxlength"
+        },
+        {
+          "name": "min",
+          "type": "Number",
+          "attr": "min"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        },
+        {
+          "name": "novalidation",
+          "type": "Boolean",
+          "attr": "novalidation"
+        },
+        {
+          "name": "placeholder",
+          "type": "String",
+          "attr": "placeholder"
+        },
+        {
+          "name": "readonly",
+          "type": "Boolean",
+          "attr": "readonly"
+        },
+        {
+          "name": "required",
+          "type": "Boolean",
+          "attr": "required"
+        },
+        {
+          "name": "rows",
+          "type": "Number",
+          "attr": "rows"
+        },
+        {
+          "name": "size",
+          "type": "String",
+          "mutable": true,
+          "attr": "size"
+        },
+        {
+          "name": "spellcheck",
+          "type": "Boolean",
+          "attr": "spellcheck"
+        },
+        {
+          "name": "step",
+          "type": "Number",
+          "attr": "step"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "attr": "type"
+        },
+        {
+          "name": "validates",
+          "type": "String",
+          "attr": "validates"
+        },
+        {
+          "name": "value",
+          "type": "Any",
+          "mutable": true,
+          "attr": "value"
+        },
+        {
+          "name": "wrap",
+          "type": "String",
+          "attr": "wrap"
+        }
+      ],
+      "states": [
+        {
+          "name": "__match"
+        },
+        {
+          "name": "__previousValue"
+        },
+        {
+          "name": "generatedId"
+        },
+        {
+          "name": "input"
+        },
+        {
+          "name": "level"
+        },
+        {
+          "name": "status"
+        },
+        {
+          "name": "strength"
+        },
+        {
+          "name": "tokenField"
+        },
+        {
+          "name": "validator"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "keydown",
+          "method": "handleKeyDown",
+          "passive": false,
+          "capture": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "getId"
+        },
+        {
+          "name": "getStrength"
+        },
+        {
+          "name": "invalid"
+        },
+        {
+          "name": "setStrength"
+        },
+        {
+          "name": "val"
+        },
+        {
+          "name": "validate"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "events": [
+        {
+          "event": "valueChanged"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-interview",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-progress",
+        "stellar-unit",
+        "web-audio",
+        "web-audio-debugger",
+        "web-audio-source",
+        "web-audio-visualizer"
+      ],
+      "componentClass": "Interview",
+      "componentPath": "components/media/interview/interview.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/media/interview/interview.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "aspectRatio",
+          "type": "Number",
+          "mutable": true,
+          "attr": "aspect-ratio"
+        },
+        {
+          "name": "debug",
+          "type": "Boolean",
+          "attr": "debug"
+        },
+        {
+          "name": "height",
+          "type": "Number",
+          "mutable": true,
+          "attr": "height"
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "attr": "label"
+        },
+        {
+          "name": "playing",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "playing"
+        },
+        {
+          "name": "src",
+          "type": "String",
+          "attr": "src"
+        },
+        {
+          "name": "width",
+          "type": "Number",
+          "mutable": true,
+          "attr": "width"
+        }
+      ],
+      "states": [
+        {
+          "name": "audio"
+        },
+        {
+          "name": "current"
+        },
+        {
+          "name": "duration"
+        },
+        {
+          "name": "interviewLines"
+        },
+        {
+          "name": "io"
+        },
+        {
+          "name": "loaded"
+        },
+        {
+          "name": "loading"
+        },
+        {
+          "name": "randomId"
+        },
+        {
+          "name": "updateFunc"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "timeupdate",
+          "method": "handleTimeUpdate",
+          "passive": false,
+          "capture": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "pause"
+        },
+        {
+          "name": "play"
+        },
+        {
+          "name": "skipTo"
+        },
+        {
+          "name": "toggle"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-interview-line",
+      "dependencies": [],
+      "componentClass": "InterviewLine",
+      "componentPath": "components/media/interview-line/interview-line.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/media/interview-line/interview-line.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "complement",
+          "type": "Boolean",
+          "attr": "complement"
+        },
+        {
+          "name": "in",
+          "type": "Number",
+          "attr": "in"
+        },
+        {
+          "name": "out",
+          "type": "Number",
+          "attr": "out"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-item",
+      "dependencies": [
+        "stellar-asset"
+      ],
+      "componentClass": "Item",
+      "componentPath": "components/ui/item/item.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/item/item.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "danger",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "danger"
+        },
+        {
+          "name": "fit",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "fit"
+        },
+        {
+          "name": "focused",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "focused"
+        },
+        {
+          "name": "history",
+          "attr": "history"
+        },
+        {
+          "name": "href",
+          "type": "String",
+          "mutable": true,
+          "attr": "href"
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "mutable": true,
+          "attr": "label"
+        },
+        {
+          "name": "location",
+          "attr": "location"
+        },
+        {
+          "name": "route",
+          "type": "Boolean",
+          "attr": "route"
+        },
+        {
+          "name": "selectable",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "selectable"
+        },
+        {
+          "name": "selected",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "selected"
+        },
+        {
+          "name": "size",
+          "type": "String",
+          "mutable": true,
+          "attr": "size"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "mutable": true,
+          "attr": "type"
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "mutable": true,
+          "attr": "value"
+        }
+      ],
+      "states": [
+        {
+          "name": "current"
+        },
+        {
+          "name": "slotted"
+        }
+      ],
+      "methods": [
+        {
+          "name": "apply"
+        },
+        {
+          "name": "data"
+        },
+        {
+          "name": "setFocus"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "events": [
+        {
+          "event": "blurChanged"
+        },
+        {
+          "event": "focusChanged"
+        },
+        {
+          "event": "selectionChanged"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-label",
+      "dependencies": [],
+      "componentClass": "Label",
+      "componentPath": "components/ui/label/label.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/label/label.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "for",
+          "type": "String",
+          "attr": "for"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-layout",
+      "dependencies": [],
+      "componentClass": "Layout",
+      "componentPath": "components/ui/layout/layout.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/layout/layout.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "align",
+          "type": "String",
+          "attr": "align"
+        },
+        {
+          "name": "padding",
+          "type": "String",
+          "attr": "padding"
+        },
+        {
+          "name": "size",
+          "type": "String",
+          "attr": "size"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "attr": "type"
+        }
+      ],
+      "methods": [
+        {
+          "name": "refresh"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "shadow": true
+    },
+    {
+      "tag": "stellar-list",
+      "dependencies": [
+        "stellar-item"
+      ],
+      "componentClass": "List",
+      "componentPath": "components/ui/list/list.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/list/list.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "itemHeight",
+          "type": "Number",
+          "attr": "item-height"
+        },
+        {
+          "name": "items",
+          "mutable": true,
+          "attr": "items",
+          "watch": [
+            "dataObserver"
+          ]
+        }
+      ],
+      "states": [
+        {
+          "name": "config"
+        },
+        {
+          "name": "container"
+        },
+        {
+          "name": "indexed"
+        },
+        {
+          "name": "list"
+        }
+      ],
+      "methods": [
+        {
+          "name": "append_to"
+        },
+        {
+          "name": "mount"
+        },
+        {
+          "name": "prepend_to"
+        },
+        {
+          "name": "refresh"
+        },
+        {
+          "name": "updateConfig"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-markdown",
+      "dependencies": [
+        "copy-wrap"
+      ],
+      "componentClass": "Markdown",
+      "componentPath": "components/helpers/markdown/markdown.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "codeString",
+          "type": "String",
+          "attr": "code-string",
+          "watch": [
+            "onCodeStringChange"
+          ]
+        },
+        {
+          "name": "src",
+          "type": "String",
+          "attr": "src",
+          "watch": [
+            "onSrcChange"
+          ]
+        }
+      ],
+      "states": [
+        {
+          "name": "converted"
+        },
+        {
+          "name": "raw"
+        },
+        {
+          "name": "showdown"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-message",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-button"
+      ],
+      "componentClass": "Message",
+      "componentPath": "components/ui/message/message.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/message/message.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "closable",
+          "type": "Boolean",
+          "attr": "closable"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "mutable": true,
+          "attr": "name"
+        },
+        {
+          "name": "remember",
+          "type": "Boolean",
+          "attr": "remember"
+        },
+        {
+          "name": "size",
+          "type": "String",
+          "attr": "size"
+        },
+        {
+          "name": "striped",
+          "type": "Boolean",
+          "attr": "striped"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "attr": "type"
+        },
+        {
+          "name": "visible",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "visible"
+        }
+      ],
+      "states": [
+        {
+          "name": "theme"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-modal",
+      "dependencies": [
+        "stellar-button",
+        "stellar-card"
+      ],
+      "componentClass": "Modal",
+      "componentPath": "components/ui/modal/modal.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/modal/modal.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "active",
+          "type": "Boolean",
+          "attr": "active"
+        },
+        {
+          "name": "cloned",
+          "type": "Boolean",
+          "attr": "cloned"
+        },
+        {
+          "name": "header",
+          "type": "Boolean",
+          "attr": "header"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        },
+        {
+          "name": "size",
+          "type": "String",
+          "attr": "size"
+        }
+      ],
+      "states": [
+        {
+          "name": "originalContent"
+        }
+      ],
+      "methods": [
+        {
+          "name": "close"
+        },
+        {
+          "name": "open"
+        }
+      ],
+      "hostElement": {
+        "name": "el"
+      }
+    },
+    {
+      "tag": "stellar-modal-controller",
+      "dependencies": [
+        "stellar-overlay"
+      ],
+      "componentClass": "ModalController",
+      "componentPath": "components/ui/modal-controller/modal-controller.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/modal-controller/modal-controller.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "size",
+          "type": "String",
+          "mutable": true,
+          "attr": "size"
+        },
+        {
+          "name": "state",
+          "type": "String",
+          "mutable": true,
+          "attr": "state"
+        },
+        {
+          "name": "timing",
+          "type": "Number",
+          "attr": "timing"
+        }
+      ],
+      "states": [
+        {
+          "name": "current"
+        },
+        {
+          "name": "event"
+        }
+      ],
+      "methods": [
+        {
+          "name": "close"
+        },
+        {
+          "name": "open"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-overlay",
+      "dependencies": [],
+      "componentClass": "Overlay",
+      "componentPath": "components/ui/overlay/overlay.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/overlay/overlay.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "open",
+          "type": "Boolean",
+          "attr": "open"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-pagination",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-blur",
+        "stellar-input"
+      ],
+      "componentClass": "Pagination",
+      "componentPath": "components/ui/pagination/pagination.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/pagination/pagination.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "color",
+          "type": "String",
+          "attr": "color"
+        },
+        {
+          "name": "current",
+          "type": "Number",
+          "mutable": true,
+          "attr": "current"
+        },
+        {
+          "name": "padding",
+          "type": "Number",
+          "mutable": true,
+          "attr": "padding"
+        },
+        {
+          "name": "pages",
+          "type": "Number",
+          "mutable": true,
+          "attr": "pages"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "mutable": true,
+          "attr": "type"
+        },
+        {
+          "name": "url",
+          "type": "Any",
+          "attr": "url"
+        }
+      ],
+      "states": [
+        {
+          "name": "__current"
+        },
+        {
+          "name": "__first"
+        },
+        {
+          "name": "__last"
+        },
+        {
+          "name": "__next"
+        },
+        {
+          "name": "__previous"
+        },
+        {
+          "name": "__surroundingPages"
+        },
+        {
+          "name": "blur"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "events": [
+        {
+          "event": "changed"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-parallax",
+      "dependencies": [],
+      "componentClass": "Parallax",
+      "componentPath": "components/motion/parallax/parallax.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/motion/parallax/parallax.css"
+          ]
+        }
+      },
+      "states": [
+        {
+          "name": "relax"
+        }
+      ],
+      "methods": [
+        {
+          "name": "reload"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-parallax-section",
+      "dependencies": [],
+      "componentClass": "ParallaxSection",
+      "componentPath": "components/motion/parallax-section/parallax-section.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/motion/parallax-section/parallax-section.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "layer",
+          "type": "Number",
+          "attr": "layer"
+        },
+        {
+          "name": "percentage",
+          "type": "Number",
+          "attr": "percentage"
+        },
+        {
+          "name": "speed",
+          "type": "Number",
+          "attr": "speed"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-progress",
+      "dependencies": [],
+      "componentClass": "Progress",
+      "componentPath": "components/ui/progress/progress.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/progress/progress.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "blurable",
+          "type": "Boolean",
+          "attr": "blurable"
+        },
+        {
+          "name": "editable",
+          "type": "Boolean",
+          "attr": "editable"
+        },
+        {
+          "name": "max",
+          "type": "Number",
+          "attr": "max"
+        },
+        {
+          "name": "noease",
+          "type": "Boolean",
+          "attr": "noease"
+        },
+        {
+          "name": "slender",
+          "type": "Boolean",
+          "attr": "slender"
+        },
+        {
+          "name": "value",
+          "type": "Number",
+          "mutable": true,
+          "attr": "value",
+          "watch": [
+            "observeValue"
+          ]
+        }
+      ],
+      "states": [
+        {
+          "name": "blur"
+        },
+        {
+          "name": "wrapper"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "events": [
+        {
+          "event": "valueChange"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-quick-actions",
+      "dependencies": [
+        "stellar-asset"
+      ],
+      "componentClass": "QuickActions",
+      "componentPath": "components/ui/quick-actions/quick-actions.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/quick-actions/quick-actions.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "open",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "open"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-scatter",
+      "dependencies": [],
+      "componentClass": "Scatter",
+      "componentPath": "components/helpers/scatter/scatter.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/helpers/scatter/scatter.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "colors",
+          "type": "Boolean",
+          "attr": "colors"
+        },
+        {
+          "name": "float",
+          "type": "Boolean",
+          "attr": "float"
+        },
+        {
+          "name": "max",
+          "type": "Number",
+          "attr": "max"
+        },
+        {
+          "name": "min",
+          "type": "Number",
+          "attr": "min"
+        },
+        {
+          "name": "scatter",
+          "type": "Number",
+          "attr": "scatter"
+        },
+        {
+          "name": "sizes",
+          "type": "Boolean",
+          "attr": "sizes"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-select",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-blur",
+        "stellar-item",
+        "stellar-label"
+      ],
+      "componentClass": "Select",
+      "componentPath": "components/ui/select/select.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/select/select.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "focused",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "focused"
+        },
+        {
+          "name": "footer",
+          "type": "Boolean",
+          "attr": "footer"
+        },
+        {
+          "name": "inline",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "inline"
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "mutable": true,
+          "attr": "label"
+        },
+        {
+          "name": "multiple",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "multiple"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        },
+        {
+          "name": "open",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "open",
+          "watch": [
+            "handleOpenChange"
+          ]
+        },
+        {
+          "name": "other",
+          "type": "Boolean",
+          "attr": "other"
+        },
+        {
+          "name": "overlay",
+          "type": "Boolean",
+          "attr": "overlay"
+        },
+        {
+          "name": "placeholder",
+          "type": "String",
+          "mutable": true,
+          "attr": "placeholder"
+        },
+        {
+          "name": "processing",
+          "type": "Boolean",
+          "attr": "processing"
+        },
+        {
+          "name": "required",
+          "type": "Boolean",
+          "attr": "required"
+        },
+        {
+          "name": "size",
+          "type": "String",
+          "mutable": true,
+          "attr": "size"
+        },
+        {
+          "name": "value",
+          "type": "Any",
+          "mutable": true,
+          "attr": "value"
+        }
+      ],
+      "states": [
+        {
+          "name": "blur"
+        },
+        {
+          "name": "current"
+        },
+        {
+          "name": "status"
+        },
+        {
+          "name": "values"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "blurChanged",
+          "method": "selectedBlurChangedHandler",
+          "passive": false,
+          "capture": false
+        },
+        {
+          "event": "focusChanged",
+          "method": "selectedFocusChangedHandler",
+          "passive": false,
+          "capture": false
+        },
+        {
+          "event": "keydown",
+          "method": "handleArrowKeys",
+          "passive": false,
+          "capture": false
+        },
+        {
+          "event": "keydown.escape",
+          "method": "handleEscapeKey",
+          "passive": false,
+          "capture": false
+        },
+        {
+          "event": "selectionChanged",
+          "method": "selectionChangedHandler",
+          "passive": false,
+          "capture": false
+        }
+      ],
+      "methods": [
+        {
+          "name": "validate"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "events": [
+        {
+          "event": "change"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-slide",
+      "dependencies": [
+        "stellar-blur"
+      ],
+      "componentClass": "Slide",
+      "componentPath": "components/ui/slide/slide.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/slide/slide.scss"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "motion",
+          "type": "Number",
+          "attr": "motion"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-slides",
+      "dependencies": [],
+      "componentClass": "Slides",
+      "componentPath": "components/ui/slides/slides.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/slides/slides.scss"
+          ]
+        }
+      },
+      "assetPaths": [
+        "components/ui/slides/vendor"
+      ],
+      "props": [
+        {
+          "name": "autoHeight",
+          "type": "Boolean",
+          "attr": "auto-height",
+          "watch": [
+            "updateSwiperOptions"
+          ]
+        },
+        {
+          "name": "centeredSlides",
+          "type": "Boolean",
+          "attr": "centered-slides",
+          "watch": [
+            "updateSwiperOptions"
+          ]
+        },
+        {
+          "name": "direction",
+          "type": "String",
+          "attr": "direction",
+          "watch": [
+            "updateSwiperOptions"
+          ]
+        },
+        {
+          "name": "effect",
+          "type": "String",
+          "attr": "effect",
+          "watch": [
+            "updateSwiperOptions"
+          ]
+        },
+        {
+          "name": "loop",
+          "type": "Boolean",
+          "attr": "loop",
+          "watch": [
+            "updateSwiperOptions"
+          ]
+        },
+        {
+          "name": "nested",
+          "type": "Boolean",
+          "attr": "nested",
+          "watch": [
+            "updateSwiperOptions"
+          ]
+        },
+        {
+          "name": "options",
+          "type": "Any",
+          "attr": "options",
+          "watch": [
+            "updateSwiperOptions"
+          ]
+        },
+        {
+          "name": "pager",
+          "type": "Boolean",
+          "attr": "pager"
+        },
+        {
+          "name": "pagination",
+          "type": "Boolean",
+          "attr": "pagination",
+          "watch": [
+            "updateSwiperOptions"
+          ]
+        },
+        {
+          "name": "slidesPerView",
+          "type": "Number",
+          "attr": "slides-per-view",
+          "watch": [
+            "updateSwiperOptions"
+          ]
+        },
+        {
+          "name": "spaceBetween",
+          "type": "Number",
+          "attr": "space-between"
+        },
+        {
+          "name": "speed",
+          "type": "Number",
+          "attr": "speed",
+          "watch": [
+            "updateSwiperOptions"
+          ]
+        },
+        {
+          "name": "watchSlidesProgress",
+          "type": "Boolean",
+          "attr": "watch-slides-progress",
+          "watch": [
+            "updateSwiperOptions"
+          ]
+        },
+        {
+          "name": "watchSlidesVisibility",
+          "type": "Boolean",
+          "attr": "watch-slides-visibility",
+          "watch": [
+            "updateSwiperOptions"
+          ]
+        }
+      ],
+      "states": [
+        {
+          "name": "slides"
+        }
+      ],
+      "methods": [
+        {
+          "name": "getActiveIndex"
+        },
+        {
+          "name": "getPreviousIndex"
+        },
+        {
+          "name": "isBeginning"
+        },
+        {
+          "name": "isEnd"
+        },
+        {
+          "name": "length"
+        },
+        {
+          "name": "lockSwipes"
+        },
+        {
+          "name": "lockSwipeToNext"
+        },
+        {
+          "name": "lockSwipeToPrev"
+        },
+        {
+          "name": "slideNext"
+        },
+        {
+          "name": "slidePrev"
+        },
+        {
+          "name": "slideTo"
+        },
+        {
+          "name": "startAutoplay"
+        },
+        {
+          "name": "stopAutoplay"
+        },
+        {
+          "name": "update"
+        }
+      ],
+      "hostElement": {
+        "name": "el"
+      },
+      "events": [
+        {
+          "event": "ionSlideDidChange"
+        },
+        {
+          "event": "ionSlideDrag"
+        },
+        {
+          "event": "ionSlideNextEnd"
+        },
+        {
+          "event": "ionSlideNextStart"
+        },
+        {
+          "event": "ionSlidePrevEnd"
+        },
+        {
+          "event": "ionSlidePrevStart"
+        },
+        {
+          "event": "ionSlideReachEnd"
+        },
+        {
+          "event": "ionSlideReachStart"
+        },
+        {
+          "event": "ionSlideTouchEnd"
+        },
+        {
+          "event": "ionSlideTouchStart"
+        },
+        {
+          "event": "ionSlideTransitionEnd"
+        },
+        {
+          "event": "ionSlideTransitionStart"
+        },
+        {
+          "event": "ionSlideWillChange"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-starscape",
+      "dependencies": [
+        "stellar-parallax",
+        "stellar-parallax-section"
+      ],
+      "componentClass": "Starscape",
+      "componentPath": "components/helpers/starscape/starscape.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/helpers/starscape/starscape.css"
+          ]
+        }
+      },
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-step",
+      "dependencies": [
+        "stellar-label"
+      ],
+      "componentClass": "Step",
+      "componentPath": "components/ui/step/step.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/step/step.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "disabled",
+          "type": "Boolean",
+          "attr": "disabled"
+        },
+        {
+          "name": "href",
+          "type": "String",
+          "mutable": true,
+          "attr": "href"
+        },
+        {
+          "name": "open",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "open"
+        },
+        {
+          "name": "order",
+          "type": "Number",
+          "attr": "order"
+        },
+        {
+          "name": "tabCount",
+          "type": "Number",
+          "attr": "tab-count"
+        }
+      ],
+      "states": [
+        {
+          "name": "parent"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "events": [
+        {
+          "event": "contentChange"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-steps",
+      "dependencies": [],
+      "componentClass": "Steps",
+      "componentPath": "components/ui/steps/steps.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/steps/steps.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "name",
+          "type": "String",
+          "mutable": true,
+          "attr": "name"
+        }
+      ],
+      "states": [
+        {
+          "name": "contentsList"
+        },
+        {
+          "name": "stepsList"
+        }
+      ],
+      "methods": [
+        {
+          "name": "contents"
+        },
+        {
+          "name": "steps"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-story",
+      "dependencies": [],
+      "componentClass": "Story",
+      "componentPath": "components/helpers/story/story.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "target",
+          "type": "String",
+          "attr": "target"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-stripe",
+      "dependencies": [
+        "stellar-grid",
+        "stellar-input"
+      ],
+      "componentClass": "Card",
+      "componentPath": "components/helpers/stripe/stripe.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/helpers/stripe/stripe.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        },
+        {
+          "name": "token",
+          "type": "String",
+          "attr": "token"
+        }
+      ],
+      "states": [
+        {
+          "name": "card"
+        },
+        {
+          "name": "cardData"
+        },
+        {
+          "name": "error"
+        },
+        {
+          "name": "input"
+        },
+        {
+          "name": "state"
+        },
+        {
+          "name": "stripe"
+        },
+        {
+          "name": "value"
+        }
+      ],
+      "methods": [
+        {
+          "name": "connect"
+        },
+        {
+          "name": "getToken"
+        },
+        {
+          "name": "setError"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-switch",
+      "dependencies": [],
+      "componentClass": "Switch",
+      "componentPath": "components/ui/switch/switch.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/switch/switch.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "checked",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "checked"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-tab",
+      "dependencies": [
+        "stellar-tag"
+      ],
+      "componentClass": "Tab",
+      "componentPath": "components/ui/tab/tab.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/tab/tab.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "disabled",
+          "type": "Boolean",
+          "attr": "disabled"
+        },
+        {
+          "name": "href",
+          "type": "String",
+          "mutable": true,
+          "attr": "href"
+        },
+        {
+          "name": "notifications",
+          "type": "Any",
+          "attr": "notifications"
+        },
+        {
+          "name": "open",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "open"
+        },
+        {
+          "name": "order",
+          "type": "Number",
+          "attr": "order"
+        },
+        {
+          "name": "tabCount",
+          "type": "Number",
+          "attr": "tab-count"
+        },
+        {
+          "name": "tag",
+          "type": "String",
+          "mutable": true,
+          "attr": "tag"
+        }
+      ],
+      "states": [
+        {
+          "name": "parent"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "window:resize",
+          "method": "handleResize",
+          "capture": false
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "events": [
+        {
+          "event": "contentChange"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-table",
+      "dependencies": [
+        "stellar-chart"
+      ],
+      "componentClass": "Table",
+      "componentPath": "components/ui/table/table.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/table/table.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "chart",
+          "type": "Boolean",
+          "attr": "chart"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        },
+        {
+          "name": "striped",
+          "type": "Boolean",
+          "attr": "striped"
+        },
+        {
+          "name": "upgrade",
+          "type": "Boolean",
+          "attr": "upgrade"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "change",
+          "method": "tableChangeHandler",
+          "passive": false,
+          "capture": false
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-tabs",
+      "dependencies": [
+        "stellar-blur"
+      ],
+      "componentClass": "Tabs",
+      "componentPath": "components/ui/tabs/tabs.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/tabs/tabs.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "block",
+          "type": "Boolean",
+          "attr": "block"
+        },
+        {
+          "name": "blurring",
+          "type": "Number",
+          "mutable": true,
+          "attr": "blurring"
+        },
+        {
+          "name": "height",
+          "type": "String",
+          "attr": "height"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "mutable": true,
+          "attr": "name"
+        },
+        {
+          "name": "noanimation",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "noanimation"
+        }
+      ],
+      "states": [
+        {
+          "name": "contentsList"
+        },
+        {
+          "name": "tabsList"
+        }
+      ],
+      "methods": [
+        {
+          "name": "contents"
+        },
+        {
+          "name": "tabs"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-tag",
+      "dependencies": [],
+      "componentClass": "Tag",
+      "componentPath": "components/ui/tag/tag.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/tag/tag.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "color",
+          "type": "String",
+          "attr": "color"
+        },
+        {
+          "name": "outline",
+          "type": "Boolean",
+          "attr": "outline"
+        },
+        {
+          "name": "pill",
+          "type": "Boolean",
+          "attr": "pill"
+        },
+        {
+          "name": "size",
+          "type": "String",
+          "attr": "size"
+        },
+        {
+          "name": "textColor",
+          "type": "String",
+          "attr": "text-color"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-theme-preview",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-color-picker",
+        "stellar-grid"
+      ],
+      "componentClass": "ThemePreview",
+      "componentPath": "components/helpers/theme-preview/theme-preview.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/helpers/theme-preview/theme-preview.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "base",
+          "type": "String",
+          "mutable": true,
+          "attr": "base"
+        },
+        {
+          "name": "complement",
+          "type": "String",
+          "mutable": true,
+          "attr": "complement"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-toggle",
+      "dependencies": [
+        "stellar-grid"
+      ],
+      "componentClass": "Toggle",
+      "componentPath": "components/ui/toggle/toggle.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/toggle/toggle.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "card",
+          "type": "String",
+          "attr": "card"
+        },
+        {
+          "name": "flip",
+          "type": "Boolean",
+          "attr": "flip"
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "attr": "label"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "mutable": true,
+          "attr": "name"
+        },
+        {
+          "name": "required",
+          "type": "Boolean",
+          "attr": "required"
+        },
+        {
+          "name": "single",
+          "type": "Boolean",
+          "attr": "single"
+        },
+        {
+          "name": "size",
+          "type": "String",
+          "attr": "size"
+        },
+        {
+          "name": "stacked",
+          "type": "Boolean",
+          "attr": "stacked"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "mutable": true,
+          "attr": "type"
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "mutable": true,
+          "attr": "value"
+        }
+      ],
+      "states": [
+        {
+          "name": "error"
+        },
+        {
+          "name": "form"
+        },
+        {
+          "name": "valid"
+        }
+      ],
+      "listeners": [
+        {
+          "event": "toggleChanged",
+          "method": "toggleChangedHandler",
+          "passive": false,
+          "capture": false
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-toggle-option",
+      "dependencies": [
+        "stellar-asset",
+        "stellar-blur",
+        "stellar-tag"
+      ],
+      "componentClass": "ToggleOption",
+      "componentPath": "components/ui/toggle-option/toggle-option.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/toggle-option/toggle-option.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "checked",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "checked"
+        },
+        {
+          "name": "default",
+          "type": "String",
+          "attr": "default"
+        },
+        {
+          "name": "for",
+          "type": "String",
+          "attr": "for"
+        },
+        {
+          "name": "icon",
+          "type": "Boolean",
+          "attr": "icon"
+        },
+        {
+          "name": "inline",
+          "type": "Boolean",
+          "attr": "inline"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        },
+        {
+          "name": "required",
+          "type": "Boolean",
+          "attr": "required"
+        },
+        {
+          "name": "selectedCopy",
+          "type": "String",
+          "attr": "selected-copy"
+        },
+        {
+          "name": "single",
+          "type": "Boolean",
+          "attr": "single"
+        },
+        {
+          "name": "size",
+          "type": "Boolean",
+          "attr": "size"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "attr": "type"
+        },
+        {
+          "name": "value",
+          "type": "String",
+          "attr": "value"
+        }
+      ],
+      "states": [
+        {
+          "name": "_type"
+        },
+        {
+          "name": "blur"
+        },
+        {
+          "name": "focused"
+        },
+        {
+          "name": "input"
+        }
+      ],
+      "methods": [
+        {
+          "name": "updateSelected"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "events": [
+        {
+          "event": "toggleChanged"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-tooltip",
+      "dependencies": [],
+      "componentClass": "Tooltip",
+      "componentPath": "components/ui/tooltip/tooltip.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/ui/tooltip/tooltip.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "align",
+          "type": "String",
+          "attr": "align"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "stellar-unit",
+      "dependencies": [],
+      "componentClass": "Unit",
+      "componentPath": "components/helpers/unit/unit.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/helpers/unit/unit.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "decimals",
+          "type": "Number",
+          "attr": "decimals"
+        },
+        {
+          "name": "from",
+          "type": "String",
+          "attr": "from"
+        },
+        {
+          "name": "round",
+          "type": "Boolean",
+          "attr": "round"
+        },
+        {
+          "name": "to",
+          "type": "String",
+          "attr": "to"
+        },
+        {
+          "name": "value",
+          "type": "Number",
+          "attr": "value"
+        }
+      ]
+    },
+    {
+      "tag": "stellar-video",
+      "dependencies": [],
+      "componentClass": "Video",
+      "componentPath": "components/media/video/video.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/media/video/video.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "autoplay",
+          "type": "Boolean",
+          "attr": "autoplay"
+        },
+        {
+          "name": "controls",
+          "type": "Boolean",
+          "attr": "controls"
+        },
+        {
+          "name": "height",
+          "type": "Number",
+          "mutable": true,
+          "attr": "height"
+        },
+        {
+          "name": "muted",
+          "type": "Boolean",
+          "attr": "muted"
+        },
+        {
+          "name": "overlay",
+          "type": "Boolean",
+          "attr": "overlay"
+        },
+        {
+          "name": "playsinline",
+          "type": "Boolean",
+          "attr": "playsinline"
+        },
+        {
+          "name": "poster",
+          "type": "String",
+          "attr": "poster"
+        },
+        {
+          "name": "preload",
+          "type": "String",
+          "attr": "preload"
+        },
+        {
+          "name": "width",
+          "type": "Number",
+          "mutable": true,
+          "attr": "width"
+        }
+      ],
+      "states": [
+        {
+          "name": "io"
+        },
+        {
+          "name": "video"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "web-audio",
+      "dependencies": [],
+      "componentClass": "WebAudio",
+      "componentPath": "components/audio/web-audio/web-audio.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "autoplay",
+          "attr": "autoplay"
+        },
+        {
+          "name": "midi",
+          "attr": "midi"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        }
+      ],
+      "states": [
+        {
+          "name": "_currentSource"
+        },
+        {
+          "name": "_sources"
+        },
+        {
+          "name": "context"
+        },
+        {
+          "name": "debugger"
+        },
+        {
+          "name": "externalFiles"
+        },
+        {
+          "name": "gain"
+        },
+        {
+          "name": "keys"
+        },
+        {
+          "name": "prepared"
+        },
+        {
+          "name": "previousVisualizer"
+        },
+        {
+          "name": "sources"
+        },
+        {
+          "name": "visualizerNodes"
+        },
+        {
+          "name": "visualizers"
+        }
+      ],
+      "methods": [
+        {
+          "name": "connect_the_world"
+        },
+        {
+          "name": "get_context"
+        },
+        {
+          "name": "is_prepared"
+        },
+        {
+          "name": "source"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      }
+    },
+    {
+      "tag": "web-audio-debugger",
+      "dependencies": [],
+      "componentClass": "WebAudioDebugger",
+      "componentPath": "components/audio/web-audio-debugger/web-audio-debugger.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/audio/web-audio-debugger/web-audio-debugger.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "count",
+          "type": "Number",
+          "attr": "count"
+        }
+      ],
+      "states": [
+        {
+          "name": "history"
+        }
+      ],
+      "methods": [
+        {
+          "name": "addHistory"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "web-audio-effect",
+      "dependencies": [],
+      "componentClass": "WebAudioEffect",
+      "componentPath": "components/audio/web-audio-effect/web-audio-effect.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "axis",
+          "type": "String",
+          "attr": "axis"
+        },
+        {
+          "name": "method",
+          "type": "String",
+          "attr": "method"
+        },
+        {
+          "name": "midicontroller",
+          "type": "Number",
+          "attr": "midicontroller"
+        },
+        {
+          "name": "responds",
+          "type": "String",
+          "attr": "responds"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "attr": "type"
+        },
+        {
+          "name": "use",
+          "type": "String",
+          "attr": "use"
+        },
+        {
+          "name": "value",
+          "type": "Number",
+          "attr": "value"
+        }
+      ],
+      "states": [
+        {
+          "name": "_use"
+        },
+        {
+          "name": "context"
+        },
+        {
+          "name": "effect"
+        },
+        {
+          "name": "parent"
+        },
+        {
+          "name": "source"
+        }
+      ],
+      "methods": [
+        {
+          "name": "attachEffect"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "shadow": true
+    },
+    {
+      "tag": "web-audio-sequencer",
+      "dependencies": [],
+      "componentClass": "WebAudioSequencer",
+      "componentPath": "components/audio/web-audio-sequencer/web-audio-sequencer.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "autoplay",
+          "type": "Boolean",
+          "attr": "autoplay"
+        },
+        {
+          "name": "custom",
+          "attr": "custom"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "attr": "name"
+        },
+        {
+          "name": "taps",
+          "type": "Number",
+          "attr": "taps"
+        },
+        {
+          "name": "tempo",
+          "type": "Number",
+          "attr": "tempo"
+        }
+      ],
+      "states": [
+        {
+          "name": "context"
+        },
+        {
+          "name": "currentTap"
+        },
+        {
+          "name": "iterations"
+        },
+        {
+          "name": "noteTime"
+        },
+        {
+          "name": "startTime"
+        },
+        {
+          "name": "timer"
+        },
+        {
+          "name": "totalPlayTime"
+        }
+      ],
+      "methods": [
+        {
+          "name": "play"
+        },
+        {
+          "name": "stop"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "web-audio-source",
+      "dependencies": [],
+      "componentClass": "WebAudioSource",
+      "componentPath": "components/audio/web-audio-source/web-audio-source.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "effectsvolume",
+          "type": "Number",
+          "mutable": true,
+          "attr": "effectsvolume"
+        },
+        {
+          "name": "inert",
+          "type": "Boolean",
+          "attr": "inert"
+        },
+        {
+          "name": "midichannel",
+          "type": "Number",
+          "mutable": true,
+          "attr": "midichannel"
+        },
+        {
+          "name": "midikey",
+          "type": "Number",
+          "mutable": true,
+          "attr": "midikey"
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "mutable": true,
+          "attr": "name"
+        },
+        {
+          "name": "playing",
+          "type": "Boolean",
+          "mutable": true,
+          "attr": "playing"
+        },
+        {
+          "name": "src",
+          "type": "String",
+          "mutable": true,
+          "attr": "src"
+        }
+      ],
+      "states": [
+        {
+          "name": "buffer"
+        },
+        {
+          "name": "channelGain"
+        },
+        {
+          "name": "context"
+        },
+        {
+          "name": "dryGain"
+        },
+        {
+          "name": "duration"
+        },
+        {
+          "name": "effects"
+        },
+        {
+          "name": "elapsedTime"
+        },
+        {
+          "name": "entry"
+        },
+        {
+          "name": "masterGain"
+        },
+        {
+          "name": "pausedTime"
+        },
+        {
+          "name": "source"
+        },
+        {
+          "name": "startTime"
+        },
+        {
+          "name": "status"
+        },
+        {
+          "name": "webAudioWrapper"
+        },
+        {
+          "name": "wetGain"
+        }
+      ],
+      "methods": [
+        {
+          "name": "assignBuffer"
+        },
+        {
+          "name": "gain"
+        },
+        {
+          "name": "getBuffer"
+        },
+        {
+          "name": "getDuration"
+        },
+        {
+          "name": "pause"
+        },
+        {
+          "name": "play"
+        },
+        {
+          "name": "prepare"
+        },
+        {
+          "name": "skipTo"
+        },
+        {
+          "name": "stop"
+        },
+        {
+          "name": "toggle"
+        },
+        {
+          "name": "webAudio"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "events": [
+        {
+          "event": "timeupdate"
+        }
+      ],
+      "shadow": true
+    },
+    {
+      "tag": "web-audio-visualizer",
+      "dependencies": [],
+      "componentClass": "WebAudioVisualizer",
+      "componentPath": "components/audio/web-audio-visualizer/web-audio-visualizer.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/audio/web-audio-visualizer/web-audio-visualizer.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "color",
+          "type": "String",
+          "attr": "color"
+        },
+        {
+          "name": "for",
+          "type": "String",
+          "mutable": true,
+          "attr": "for"
+        },
+        {
+          "name": "height",
+          "type": "Number",
+          "mutable": true,
+          "attr": "height"
+        },
+        {
+          "name": "renderer",
+          "attr": "renderer"
+        },
+        {
+          "name": "size",
+          "type": "Number",
+          "attr": "size"
+        },
+        {
+          "name": "smoothing",
+          "type": "Number",
+          "attr": "smoothing"
+        },
+        {
+          "name": "type",
+          "type": "String",
+          "mutable": true,
+          "attr": "type"
+        },
+        {
+          "name": "width",
+          "type": "Number",
+          "mutable": true,
+          "attr": "width"
+        }
+      ],
+      "states": [
+        {
+          "name": "_bufferLength"
+        },
+        {
+          "name": "_dataArray"
+        },
+        {
+          "name": "analyser"
+        },
+        {
+          "name": "canvas"
+        },
+        {
+          "name": "canvasCTX"
+        },
+        {
+          "name": "context"
+        },
+        {
+          "name": "fragment"
+        },
+        {
+          "name": "fragShader"
+        },
+        {
+          "name": "fragSpectrum"
+        },
+        {
+          "name": "fragSpectrumArray"
+        },
+        {
+          "name": "fragTime"
+        },
+        {
+          "name": "freqs"
+        },
+        {
+          "name": "times"
+        },
+        {
+          "name": "vertex"
+        },
+        {
+          "name": "vertexShader"
+        }
+      ],
+      "methods": [
+        {
+          "name": "connect"
+        }
+      ],
+      "hostElement": {
+        "name": "element"
+      },
+      "shadow": true
+    },
+    {
+      "tag": "web-audio-visualizer-shader",
+      "dependencies": [],
+      "componentClass": "WebAudioVisualizerShader",
+      "componentPath": "components/audio/web-audio-visualizer-shader/web-audio-visualizer-shader.js",
+      "styles": {},
+      "props": [
+        {
+          "name": "type",
+          "type": "String",
+          "attr": "type"
+        }
+      ],
+      "shadow": true
+    }
+  ],
+  "collections": [
+    {
+      "name": "@stencil/router",
+      "tags": [
+        "stencil-async-content",
+        "stencil-route",
+        "stencil-route-link",
+        "stencil-route-switch",
+        "stencil-route-title",
+        "stencil-router",
+        "stencil-router-redirect",
+        "test-app",
+        "test-deep-component",
+        "test-demo-four",
+        "test-demo-seven",
+        "test-demo-six",
+        "test-demo-three"
+      ]
+    },
+    {
+      "name": "@stencil/state-tunnel",
+      "tags": [
+        "context-consumer"
+      ]
+    },
+    {
+      "name": "ionicons",
+      "tags": [
+        "ion-icon"
+      ]
+    }
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.11.4",
+    "typescriptVersion": "2.9.2"
+  },
+  "bundles": []
+}

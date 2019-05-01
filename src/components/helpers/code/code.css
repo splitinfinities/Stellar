@@ -1,0 +1,358 @@
+:host, :host *, :host *:before, :host *:after {
+  box-sizing: border-box;
+}
+
+:host ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  cursor: pointer;
+  width: 6px;
+  height: 6px;
+}
+
+:host ::-webkit-scrollbar-track {
+  background: transparent;
+  mix-blend-mode: hard-light;
+  background: var(--theme-base0, var(--gray0));
+}
+
+:host ::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  display: block;
+  background: var(--theme-base7, var(--gray7));
+}
+
+:host ::-webkit-scrollbar-thumb:window-inactive {
+  background: transparent;
+}
+
+:host ::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background: var(--theme-base5, var(--gray5));
+}
+
+:host {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  background: var(--gray0);
+  letter-spacing: 0;
+}
+
+:host stellar-card {
+  --background: var(--white);
+}
+
+:host([simple]) {
+  padding: 1rem;
+}
+
+:host header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+:host footer {
+  width: 100%;
+  overflow: auto;
+  background: var(--gray0);
+}
+
+:host .hidden {
+  display: none;
+}
+
+:host pre {
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+  tab-size: 4;
+  word-break: break-word;
+  white-space: pre-wrap;
+  color: var(--gray1);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+:host code[class*=language-],
+:host pre[class*=language-] {
+  background: none;
+  text-align: left;
+  text-shadow: 0 1px var(--gray1);
+  line-height: 1.5rem;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  word-break: normal;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: pre;
+  color: var(--gray9);
+  font-family: "Hack", monospace;
+  font-size: 1rem;
+  width: 0;
+}
+
+:host code {
+  display: block;
+}
+
+:host span {
+  font-size: 1rem;
+}
+
+:host pre > .token {
+  display: inline-block;
+}
+
+:host pre .token {
+  line-height: 1.5rem !important;
+  font-family: "Hack", monospace;
+  font-size: 1rem !important;
+}
+
+:host pre .token.comment,
+:host pre .token.prolog,
+:host pre .token.doctype,
+:host pre .token.cdata {
+  color: var(--gray7);
+}
+
+:host pre .token.punctuation {
+  color: var(--gray7);
+}
+
+:host pre .namespace {
+  opacity: 0.7;
+}
+
+:host pre .token.property,
+:host pre .token.tag,
+:host pre .token.boolean,
+:host pre .token.number,
+:host pre .token.constant,
+:host pre .token.symbol,
+:host pre .token.deleted {
+  color: var(--cyan5);
+}
+
+:host pre .token.selector,
+:host pre .token.attr-name,
+:host pre .token.string,
+:host pre .token.char,
+:host pre .token.builtin,
+:host pre .token.inserted {
+  color: var(--green5);
+}
+
+:host pre .token.operator,
+:host pre .token.entity,
+:host pre .token.url,
+:host pre.language-css .token.string,
+:host pre.style .token.string {
+  color: var(--yellow5);
+  font-family: "Hack", monospace;
+}
+
+:host pre .token.atrule,
+:host pre .token.attr-value,
+:host pre .token.keyword {
+  color: var(--cyan5);
+}
+
+:host pre .token.function {
+  color: var(--blue5);
+}
+
+:host pre .token.regex,
+:host pre .token.important,
+:host pre .token.variable {
+  color: var(--red5);
+}
+
+:host pre .token.important,
+:host pre .token.bold {
+  font-weight: bold;
+}
+
+:host pre .token.italic {
+  font-style: italic;
+}
+
+:host pre .token.entity {
+  cursor: help;
+}
+
+:host pre.show-line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+:host pre.show-line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+:host pre.show-line-numbers .line-numbers-rows {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  top: 0.125em;
+  left: -3.8em;
+  border-right: 1px solid var(--gray8);
+  width: 3em;
+  line-height: 1.5rem;
+  letter-spacing: -1px;
+  font-size: 1rem;
+}
+
+:host pre.show-line-numbers .line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+:host pre.show-line-numbers .line-numbers-rows > span::before {
+  content: counter(linenumber);
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+  line-height: 1.5rem;
+  color: var(--gray8);
+  font-size: 1rem;
+}
+
+:host .token.tab:not(:empty),
+:host .token.cr,
+:host .token.lf,
+:host .token.space {
+  display: inline;
+  position: relative;
+}
+
+:host .token.tab:not(:empty)::before,
+:host .token.cr::before,
+:host .token.lf::before,
+:host .token.space::before {
+  position: absolute;
+  color: var(--gray8);
+}
+
+:host pre.show-invisibles .token.tab:not(:empty)::before {
+  content: "────";
+}
+
+:host pre.show-invisibles .token.cr::before {
+  content: "␍";
+}
+
+:host pre.show-invisibles .token.crlf::before {
+  content: "␍␊";
+}
+
+:host pre.show-invisibles .token.lf::before {
+  content: "␊";
+}
+
+:host pre.show-invisibles .token.space::before {
+  content: "·";
+}
+
+:host-context(.dark-mode),
+:host-context(.dark-mode) footer {
+  background: var(--gray9);
+}
+
+:host-context(.dark-mode) stellar-card {
+  --background: var(--black);
+}
+
+:host-context(.dark-mode) code[class*=language-],
+:host-context(.dark-mode) pre[class*=language-] {
+  color: var(--gray1);
+  text-shadow: 0 1px var(--gray9);
+}
+
+:host-context(.dark-mode) pre .token.comment,
+:host-context(.dark-mode) pre .token.prolog,
+:host-context(.dark-mode) pre .token.doctype,
+:host-context(.dark-mode) pre .token.cdata {
+  color: var(--gray5);
+}
+
+:host pre .token.punctuation {
+  color: var(--gray5);
+}
+
+:host-context(.dark-mode) pre .token.property,
+:host-context(.dark-mode) pre .token.tag,
+:host-context(.dark-mode) pre .token.boolean,
+:host-context(.dark-mode) pre .token.number,
+:host-context(.dark-mode) pre .token.constant,
+:host-context(.dark-mode) pre .token.symbol,
+:host-context(.dark-mode) pre .token.deleted {
+  color: var(--cyan5);
+}
+
+:host-context(.dark-mode) pre .token.selector,
+:host-context(.dark-mode) pre .token.attr-name,
+:host-context(.dark-mode) pre .token.string,
+:host-context(.dark-mode) pre .token.char,
+:host-context(.dark-mode) pre .token.builtin,
+:host-context(.dark-mode) pre .token.inserted {
+  color: var(--green5);
+}
+
+:host-context(.dark-mode) pre .token.operator,
+:host-context(.dark-mode) pre .token.entity,
+:host-context(.dark-mode) pre .token.url,
+:host-context(.dark-mode) pre.language-css .token.string,
+:host-context(.dark-mode) pre.style .token.string {
+  color: var(--yellow5);
+  font-family: "Hack", monospace;
+}
+
+:host-context(.dark-mode) pre .token.atrule,
+:host-context(.dark-mode) pre .token.attr-value,
+:host-context(.dark-mode) pre .token.keyword {
+  color: var(--cyan5);
+}
+
+:host-context(.dark-mode) pre .token.function {
+  color: var(--blue5);
+}
+
+:host-context(.dark-mode) pre .token.regex,
+:host-context(.dark-mode) pre .token.important,
+:host-context(.dark-mode) pre .token.variable {
+  color: var(--red5);
+}
+
+:host-context(.dark-mode) pre .token.regex,
+:host-context(.dark-mode) pre .token.important,
+:host-context(.dark-mode) pre .token.variable {
+  color: var(--red5);
+}
+
+:host-context(.dark-mode) pre.show-line-numbers .line-numbers-rows {
+  color: var(--gray2);
+}
+
+:host-context(.dark-mode) pre.show-line-numbers .line-numbers-rows > span::before {
+  color: var(--gray2);
+}
+
+:host-context(.dark-mode) .token.tab:not(:empty)::before,
+:host-context(.dark-mode) .token.cr::before,
+:host-context(.dark-mode) .token.lf::before,
+:host-context(.dark-mode) .token.space::before {
+  color: var(--gray2);
+}

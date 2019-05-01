@@ -1,0 +1,94 @@
+:host, :host *, :host *:before, :host *:after {
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  --accordion-height: 200vh;
+}
+
+:host .expander {
+  transition: all 0.35s ease-out 0.1s, opacity 0.25s ease-out 0s;
+  opacity: 0;
+  padding: 0;
+  width: 100%;
+  max-height: 50vh;
+  height: 0;
+  overflow: hidden;
+  transform: translateY(-60px);
+}
+
+:host .expander.open {
+  transition: all 0.35s ease-in-out 0s, opacity 0.175s ease-in-out 0.175s, overflow 0s ease-in-out 0.2s;
+  opacity: 1;
+  height: calc(var(--accordion-height) + 6rem);
+  overflow: auto;
+  transform: translateY(0px);
+}
+
+:host .expander stellar-item {
+  padding-left: 1rem;
+}
+
+:host .expander stellar-item:last-of-type {
+  margin-bottom: .5rem;
+}
+
+
+:host([tight]) .expander ::slotted(stellar-item) {
+  padding: 0 1.5rem;
+}
+
+:host([tight]) .expander ::slotted(stellar-item) {
+  padding: 0 0.75rem;
+}
+
+:host .wrap {
+  transform: translateZ(0);
+}
+
+:host .wrap .button-wrap {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9;
+  min-height: 3rem;
+  padding: 1rem 0;
+  color: var(--theme-base9);
+  background: linear-gradient(var(--white), transparent);
+}
+
+:host .wrap .button-wrap stellar-item button.button {
+  padding: 0;
+}
+
+:host .chevron {
+  position: absolute;
+  right: 1rem;
+  color: var(--gray4);
+  margin-left: auto;
+  transition: all 350ms ease-in-out 0s;
+}
+
+:host([open]) .chevron {
+  transform: rotate(180deg);
+}
+
+:host .wrap .button-wrap stellar-button {
+  --color: var(--gray9);
+}
+
+:host ::slotted(stellar-item[slot="label"]) {
+  padding-right: 2rem;
+}
+
+
+:host-context(.dark-mode):host .wrap .button-wrap {
+  background: linear-gradient(var(--black), transparent);
+  color: var(--theme-base5);
+}

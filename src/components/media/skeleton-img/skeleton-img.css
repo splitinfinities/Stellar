@@ -1,0 +1,76 @@
+skeleton-img {
+  user-select: none;
+  pointer-events: none;
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  width: var(--width);
+  height: var(--height);
+  margin: auto;
+}
+
+skeleton-img svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+skeleton-img svg rect {
+  fill: var(--theme-base5);
+}
+
+skeleton-img[loading] {
+  position: relative;
+}
+
+skeleton-img[loading]::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -100%;
+  background-color: var(--theme-base5);
+  background-image: linear-gradient(45deg, var(--theme-base5) 0%, var(--theme-base5) 20%, var(--theme-base3) 40%, var(--theme-base4) 61%, var(--theme-base5) 80%, var(--theme-base5) 100%);
+  width: 300%;
+  height: 100%;
+  transform: translateX(calc(var(--width) * -1.75));
+}
+
+skeleton-img[loading].visible::before {
+  animation: 1.25s linear 0s shimmer infinite forwards;
+}
+
+skeleton-img stellar-asset {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--icon-width);
+  height: var(--icon-height);
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 0;
+    transform: translateX(calc(var(--width) * -1.75));
+  }
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(calc(var(--width) * 1.75));
+  }
+}

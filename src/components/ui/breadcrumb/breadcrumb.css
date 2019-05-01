@@ -1,0 +1,108 @@
+:host, :host *, :host *:before, :host *:after {
+    box-sizing: border-box;
+}
+
+:host {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	clip-path: polygon(1em 100%, 0% 0%, calc(100% - 1em) 0%, 100% 100%, calc(100% - 1em) 100%, 0% 100%);
+	clip-path: polygon(calc(100% - .5em) 0, 100% 50%, calc(100% - 0.5em) 100%, 0 100%, calc(0% + 0.5em) 50%, 0 0);
+	margin: 0 0 0 -0.35em;
+	background: var(--white);
+	text-align: center;
+	text-decoration: none;
+	color: var(--theme-base8);
+}
+
+:host a:hover,
+:host a:focus,
+:host(:focus-within) {
+	background: var(--theme-base5);
+	color: white;
+}
+
+:host a {
+	display: flex;
+	align-items: center;
+	padding: 1em 1.75em;
+	height: auto;
+	text-decoration: none;
+	white-space: nowrap;
+	color: currentColor;
+	font-size: var(--font-size);
+	font-weight: 600;
+}
+
+:host a stellar-asset {
+	margin-right: .25em;
+}
+
+:host(:hover),
+:host(:focus) {
+	color: var(--white);
+	background: var(--theme-base5);
+}
+
+:host([first]) {
+	background: var(--theme-base7);
+	color: var(--white);
+	margin: 0 -0.25rem 0 -0.15em;
+    position: sticky;
+    left: -.5rem;
+    z-index: 2;
+}
+
+:host([first]) a {
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+}
+
+:host([first]) a stellar-asset {
+	margin: 0;
+}
+
+:host([last]) {
+	color: var(--gray9);
+	background: var(--white);
+}
+
+:host([last]:hover),
+:host([last]:focus),
+:host([last]) a:hover,
+:host([last]) a:focus {
+	background: white;
+	color: var(--gray9);
+}
+
+:host-context(.dark-mode) {
+	background: var(--black);
+	color: var(--theme-base0)
+}
+
+:host-context(.dark-mode):host(:hover),
+:host-context(.dark-mode):host(:focus),
+:host-context(.dark-mode):host a:hover,
+:host-context(.dark-mode):host a:focus,
+:host-context(.dark-mode):host(:focus-within) {
+	color: var(--white);
+	background: var(--theme-base7);
+}
+
+:host-context(.dark-mode):host([last]) {
+	color: white;
+	background: var(--black);
+}
+
+:host-context(.dark-mode):host([first]) {
+	background: var(--theme-base9);
+}
+
+:host-context(.dark-mode):host([last]:hover),
+:host-context(.dark-mode):host([last]:focus),
+:host-context(.dark-mode):host([last]) a:hover,
+:host-context(.dark-mode):host([last]) a:focus {
+	background: var(--black);
+	color: white;
+}

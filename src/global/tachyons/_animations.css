@@ -1,0 +1,176 @@
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(0, 15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+    transform: translate(0, 15px);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(0, 0px);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate(0, -15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translate(0, -15px);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(0, 0px);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(50%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes spin {
+  from { transform:rotate(0deg); }
+  to { transform:rotate(360deg); }
+}
+
+@keyframes gradient {
+  to {
+    background-position: 0 75vh;
+  }
+}
+
+
+@keyframes floating-x {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
+}
+@keyframes floating-x-rel {
+  from {
+    transform: translate(0, 0%);
+  }
+  65% {
+    transform: translate(0, -50%);
+  }
+  to {
+    transform: translate(0, 0%);
+  }
+}
+@keyframes floating-x-spin {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px) rotate(0deg);
+  }
+  75% {
+    transform: translate(0, 15px) rotate(15deg);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
+}
+@keyframes floating-x-spin-rel {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, -50%) rotate(0deg);
+  }
+  75% {
+    transform: translate(0, -50%) rotate(15deg);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
+}
+@keyframes floating-x-full-spin {
+  from {
+    transform: translate(0, 0px) rotate(0deg);
+  }
+  65% {
+    transform: translate(0, 15px) rotate(234deg);
+  }
+  to {
+    transform: translate(0, 0px) rotate(360deg);
+  }
+}
+@keyframes floating-x-full-spin-rel {
+  from {
+    transform: translate(0, 0px) rotate(0deg);
+  }
+  65% {
+    transform: translate(0, -50%) rotate(-234deg);
+  }
+  to {
+    transform: translate(0, 0px) rotate(-360deg);
+  }
+}
+
+
+@keyframes moveStripes {
+  from {
+    background-position-x: 0;
+  }
+
+  to {
+    background-position-x: 5.5rem;
+  }
+}

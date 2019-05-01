@@ -1,0 +1,167 @@
+:host {
+  --font-size: 1rem;
+  font-size: var(--font-size);
+  display: block;
+  position: relative;
+  margin: 0;
+  width: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-x: repeat(10%);
+  font-family: var(--font-primary);
+  border-bottom: 1px solid var(--theme-base1);
+  background: var(--white);
+  height: 4em;
+  margin-bottom: 4rem;
+}
+
+:host([size="tiny"]) {
+  --font-size: .75rem;
+}
+
+:host([size="small"]) {
+  --font-size: .875rem;
+}
+
+:host([size="medium"]) {
+  --font-size: 1.25rem;
+}
+
+:host([size="large"]) {
+  --font-size: 1.5rem;
+}
+
+:host stellar-blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+:host .indicator {
+  display: block;
+  position: absolute;
+  bottom: -.1em;
+  left: var(--tab-left, 0);
+  background: var(--theme-base5);
+  width: var(--tab-width, 0);
+  height: 0.4em;
+}
+
+:host .indicator.ready {
+  transition: all .35s var(--ease);
+}
+
+:host .tab-wrap {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+}
+
+:host .tab-list {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  white-space: nowrap;
+  height: 100%;
+  width: 100%;
+}
+
+:host .tab-wrap[scrollable="false"] {
+  overflow: visible;
+}
+
+:host .tab-wrap[height="flex"],
+:host .tab-wrap[height="flex"] .tab-list {
+  height: 100%;
+}
+
+:host .tab-wrap[height="flex"] ::slotted(stellar-tab) {
+  height: 100%;
+}
+
+:host(:not([vertical])) ::slotted(stellar-tab + stellar-tab) {
+  margin-left: 1em;
+}
+
+:host([block]) {
+  overflow: hidden;
+  border: 1px solid var(--theme-base0);
+  width: 100%;
+}
+
+:host([block]) .tab-wrap {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+:host([block]) .tab-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 3px;
+}
+
+:host([block]) .tab-list ::slotted(stellar-tab) {
+  width: 100%;
+  flex: 12 12 100%;
+}
+
+:host([block]) ::slotted(stellar-tab[open="true"]) {
+  color: var(--theme-base5) !important;
+}
+
+:host([block]) .indicator {
+  height: calc(100% - 6px);
+  background: var(--theme-base1);
+  top: 3px;
+  bottom: 3px;
+  transition: all .35s var(--ease);
+}
+
+:host([vertical]) {
+  height: auto;
+  border-right: 1px solid var(--theme-base1);
+  border-bottom: none;
+}
+
+:host([vertical]) .indicator {
+  width: 0.4em;
+  top: var(--tab-top);
+  height: var(--tab-height);
+}
+
+:host([vertical]) .tab-list {
+  flex-direction: column;
+}
+
+:host([vertical]) .tab-list ::slotted(stellar-tab) {
+  height: 4rem;
+}
+
+:host([height="auto"]) {
+  height: 100%;
+}
+
+
+:host-context(.dark-mode) {
+  border-bottom: 1px solid var(--theme-base9);
+  background: var(--black);
+}
+
+:host-context(.dark-mode) .indicator {
+  background: var(--theme-base5);
+}
+
+:host-context(.dark-mode):host([block]) {
+  border: 1px solid var(--theme-base9);
+}

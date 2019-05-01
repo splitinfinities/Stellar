@@ -1,0 +1,11 @@
+<stellar-card>
+    <header>
+        <h6>header</h6>
+    </header>
+    <section>
+        <h6>body</h6>
+    </section>
+    <footer>
+        <h6>footer</h6>
+    </footer>
+</stellar-card>

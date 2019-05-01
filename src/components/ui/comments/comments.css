@@ -1,0 +1,11 @@
+:host, :host *, :host *:before, :host *:after {
+	box-sizing: border-box;
+}
+
+:host {
+	display: block;
+}
+
+:host ::slotted(stellar-comment) {
+	margin-top: 1rem;
+}

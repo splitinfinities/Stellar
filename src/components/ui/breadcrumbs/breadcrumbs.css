@@ -1,0 +1,58 @@
+:host, :host *, :host *:before, :host *:after {
+    box-sizing: border-box;
+}
+
+:host {
+	--background: linear-gradient(45deg, var(--theme-base7) 0%, var(--theme-base0) 100%);
+	display: inline-block;
+	border-bottom: 1px solid var(--background);
+	background: var(--white);
+	height: 3rem;
+	overflow-x: auto;
+	overflow-y: hidden;
+	font-size: var(--font-size, 1rem);
+    clip-path: polygon(calc(100% - .5em) 0, 100% 50%, calc(100% - 0.5em) 100%, 0 100%, 0% 50%, 0 0);
+}
+
+:host stellar-asset {
+	font-size: 2rem;
+	line-height: 0;
+}
+
+:host stellar-label {
+  line-height: 1;
+  margin: 0 0 0 0.25rem;
+  color: white;
+}
+
+:host .breadcrumbs {
+	display: inline-flex;
+	position: relative;
+	background: var(--background);
+	width: auto;
+	height: 100%;
+}
+
+:host .breadcrumbs .flush {
+	display: block;
+	right: 0;
+	flex: 0 0 2rem;
+	margin-left: -2rem;
+	background: transparent;
+	width: 2rem;
+	height: inherit;
+}
+
+:host .breadcrumbs .flush-left {
+	display: block;
+	left: 0;
+	flex: 0 0 2rem;
+	margin-right: -2.5rem;
+	background: transparent;
+	width: 2rem;
+	height: inherit;
+}
+
+:host-context(.dark-mode) {
+	--background: linear-gradient(45deg, var(--theme-base7) 0%, var(--theme-base9) 100%);
+}

@@ -1,0 +1,20 @@
+stellar-blur, stellar-blur *, stellar-blur *:before, stellar-blur *:after {
+	box-sizing: border-box;
+}
+
+stellar-blur {
+	filter: var(--blur-url);
+	display: block;
+	overflow: initial;
+}
+
+stellar-blur .blur-svg {
+	display: none;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+	stellar-blur {
+		filter: none !important;
+	}
+}

@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  --animation: fadeIn;
+}
+
+:host ::slotted(*) {
+  opacity: 0;
+}
+
+:host([active]) ::slotted(*) {
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-timing-function: var(--ease);
+  animation-name: var(--animation);
+}

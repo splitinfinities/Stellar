@@ -1,0 +1,153 @@
+:host, :host *, :host *:before, :host *:after {
+    box-sizing: border-box;
+}
+
+:host {
+    display: inline-block;
+    width: var(--avatar-size);
+    max-height: var(--avatar-size);
+    font-size: var(--avatar-font-size);
+    --avatar-color: var(--theme-base7, var(--red7));
+    --avatar-color-dark: var(--theme-base5, var(--red5));
+    --avatar-font-color: var(--white);
+    --avatar-size: 2.2em;
+    --avatar-font-size: 1.8rem;
+    --avatar-text-shadow: 0 0 0px rgba(255, 255, 255, .4);
+    filter: drop-shadow(var(--drop-shadow));
+}
+
+:host([size='large']) {
+    --avatar-font-size: 3.6rem;
+}
+
+:host([size='medium']) {
+    --avatar-font-size: 1.8rem;
+}
+
+:host([size='small']) {
+    --avatar-font-size: 1rem;
+}
+
+:host([size='tiny']) {
+    --avatar-font-size: .8rem;
+}
+
+:host .wrapper {
+    display: block;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    max-width: 2.2em;
+    font: inherit;
+    font-size: var(--avatar-font-size);
+    appearance: none;
+    border: none;
+    padding: 0;
+    background: transparent;
+}
+
+:host .content {
+    overflow: hidden;
+    position: relative;
+}
+
+:host .spacer {
+    display: block;
+    background: var(--avatar-color);
+    background: linear-gradient(45deg, var(--avatar-color) 0%, var(--avatar-color-dark) 100%);;
+    padding-top: 100%;
+    width: 100%;
+    height: 0;
+}
+
+:host .letter {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-transform: lowercase;
+    line-height: 100%;
+    padding: 0.35em 0.4em 0.2em;
+    color: var(--avatar-font-color);
+    font-size: var(--avatar-font-size);
+    font-weight: 600;
+    text-shadow: var(--avatar-text-shadow);
+}
+
+:host img {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: inherit;
+    background: var(--white);
+    width: 100%;
+    height: auto;
+    color: transparent;
+    object-fit: cover;
+}
+
+/* Shapes */
+
+/* Shapes: Square */
+:host([shape='circle']) .wrapper,
+:host([shape='circle']) .content,
+:host([shape='circle']) .spacer {
+    border-radius: 100%;
+}
+
+/* Shapes: Rectangle */
+:host([shape='rectangle']) .spacer {
+    padding-top: 60%;
+}
+
+/* Shapes: Diamond */
+:host([shape='diamond']) .spacer {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* Shapes: Diamond */
+:host([shape='hexagon']) .spacer {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* Shapes: Star */
+:host([shape='star']) .spacer {
+    clip-path: polygon(50% 0%, 64% 27%, 98% 35%, 74% 57%, 79% 91%, 50% 76%, 21% 91%, 25% 57%, 2% 35%, 36% 28%);
+}
+
+/* Shapes: Message */
+:host([shape='message']) .spacer {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+/* Processing */
+:host([processing]) .letter {
+    background: url("spinner.svg") no-repeat 50% 50%/50% 50%;
+    color: transparent;
+}
+
+:host([processing][size='large']) .letter {
+    background-size: 32px;
+}
+
+:host([processing][size='medium']) .letter {
+    background-size: 16px;
+}
+
+
+:host-context(.dark-mode):host {
+    --avatar-color: var(--theme-base8, var(--red8));
+    --avatar-color-dark: var(--theme-base6, var(--red6));
+    --avatar-font-color: var(--black);
+    --avatar-text-shadow: 0 0 0px rgba(0, 0, 0, .4)
+}

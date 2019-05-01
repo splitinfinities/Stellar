@@ -1,0 +1,220 @@
+:host {
+  --color: var(--black);
+  --border-radius: 0.3rem;
+  --item-size: 4.25rem;
+  --background: var(--white);
+  --border-color: var(--gray1);
+
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  position: relative;
+}
+
+:host(:not(.hydrated)) {
+  display: none;
+}
+
+:host stellar-item,
+:host ::slotted(stellar-item) {
+  --item-size: 4.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+:host ::selection,
+:host *::selection {
+  background: var(--theme-base0) !important;
+}
+
+:host *,
+:host *::after,
+:host *::before {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+:host .select {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+:host .select-title {
+  cursor: pointer;
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  outline: none;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 0;
+  width: 100%;
+  height: var(--item-size);
+  overflow: hidden;
+  line-height: 1.4;
+  color: var(--color);
+  font-weight: 500;
+  background: var(--background);
+}
+
+:host([focused]) .select-title,
+:host .select-title:focus,
+:host .wrapper:hover .select-title {
+  border-color: var(--theme-base5);
+  box-shadow: 0 0 0 1px var(--theme-base5);
+}
+
+:host .select-title stellar-item {
+  background: var(--background) !important;
+  color: var(--color) !important;
+}
+
+:host .select-title input {
+  display: none;
+}
+
+:host .select-title stellar-asset {
+  position: absolute;
+  right: 2rem;
+  transition: transform 100ms var(--ease) 0s;
+  font-size: 1.6rem;
+  color: var(--theme-base5);
+  background: transparent;
+  border: 0;
+}
+
+:host .select-title .button stellar-asset {
+  display: none;
+}
+
+:host([open]) .select-title stellar-asset {
+  transform: rotate(180deg);
+}
+
+:host .select-list {
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  transform-origin: 50% 0;
+  transition: transform 200ms var(--ease) 350ms, opacity 250ms var(--ease) 350ms, max-height 200ms var(--ease) 350ms;
+  opacity: 0;
+  z-index: 3;
+  background: var(--background);
+  width: 100%;
+  max-height: 0rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  color: var(--theme-base5);
+  border: 1px solid var(--border-color);
+  pointer-events: none;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  border-radius: 0.3rem;
+}
+
+:host .select-list ::slotted(stellar-item) {
+  color: var(--color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+:host .select-list ::slotted(stellar-item:last-child) {
+  border-bottom: none;
+}
+
+:host .label-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  height: 1.8rem;
+}
+
+:host .label-wrapper stellar-label {
+  margin: 0;
+}
+
+:host .select-list-footer {
+  order: 3;
+  height: 4rem;
+  border-top: 1px solid var(--theme-base5);
+}
+
+stellar-input .validation {
+  margin-bottom: 0;
+  color: var(--red5);
+  font-size: var(--complementing-font-size);
+  font-weight: 500;
+}
+
+stellar-input .validation span {
+  display: block;
+  padding: 1.4rem 0;
+  line-height: 1.4;
+}
+
+stellar-input .validation span + span {
+  border-top: 1px solid var(--border-color);
+}
+
+:host([open]) .select-list,
+:host .select-list:focus-within {
+  transition: transform 200ms var(--ease) 0ms, opacity 250ms var(--ease) 0ms, max-height 200ms var(--ease) 0ms;
+  opacity: 1;
+  pointer-events: initial;
+  max-height: 20rem;
+  overflow-y: auto;
+}
+
+:host([size="small"]) .select-title {
+  height: 3.5rem;
+}
+
+:host([size="small"]) .select-title stellar-asset {
+  right: 1rem;
+}
+
+:host([size="small"]) .label {
+  font-size: 0.75rem;
+}
+
+:host([size="small"]) stellar-item {
+  --font-size: 1.4rem;
+  --item-size: 3.5rem;
+}
+
+:host([size="small"][open]) .select-list,
+:host([size="small"]) .select-list:focus-within {
+  max-height: 11rem;
+}
+
+:host([overlay]) .select-list {
+  position: absolute;
+  top: calc((var(--item-size) * .75) + 0.5rem);
+}
+
+:host stellar-tooltip {
+  cursor: pointer;
+}
+
+:host stellar-item stellar-tooltip {
+  display: none;
+}
+
+
+:host-context(.dark-mode) {
+  --background: var(--black-alt);
+  --color: var(--white);
+  --border-color: var(--gray9);
+}
+
+:host ::selection,
+:host *::selection {
+  background: var(--theme-base0) !important;
+}

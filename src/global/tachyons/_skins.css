@@ -1,0 +1,480 @@
+/*
+
+   SKINS
+   Docs: http://tachyons.io/docs/themes/skins/
+
+   Classes for setting foreground and background colors on elements.
+   If you haven't declared a border color, but set border on an element, it will
+   be set to the current text color.
+
+*/
+
+/* Text colors */
+
+.base {
+  color: var(--base);
+}
+.black {
+  color: var(--black);
+}
+.white {
+  color: var(--white);
+}
+
+.gray0 {
+  color: var(--gray0);
+}
+.gray1 {
+  color: var(--gray1);
+}
+.gray2 {
+  color: var(--gray2);
+}
+.gray3 {
+  color: var(--gray3);
+}
+.gray4 {
+  color: var(--gray4);
+}
+.gray5 {
+  color: var(--gray5);
+}
+.gray6 {
+  color: var(--gray6);
+}
+.gray7 {
+  color: var(--gray7);
+}
+.gray8 {
+  color: var(--gray8);
+}
+.gray9 {
+  color: var(--gray9);
+}
+
+
+.theme-base0 {
+  color: var(--theme-base0);
+}
+.theme-base1 {
+  color: var(--theme-base1);
+}
+.theme-base2 {
+  color: var(--theme-base2);
+}
+.theme-base3 {
+  color: var(--theme-base3);
+}
+.theme-base4 {
+  color: var(--theme-base4);
+}
+.theme-base5 {
+  color: var(--theme-base5);
+}
+.theme-base6 {
+  color: var(--theme-base6);
+}
+.theme-base7 {
+  color: var(--theme-base7);
+}
+.theme-base8 {
+  color: var(--theme-base8);
+}
+.theme-base9 {
+  color: var(--theme-base9);
+}
+
+
+.theme-complement0 {
+  color: var(--theme-complement0);
+}
+.theme-complement1 {
+  color: var(--theme-complement1);
+}
+.theme-complement2 {
+  color: var(--theme-complement2);
+}
+.theme-complement3 {
+  color: var(--theme-complement3);
+}
+.theme-complement4 {
+  color: var(--theme-complement4);
+}
+.theme-complement5 {
+  color: var(--theme-complement5);
+}
+.theme-complement6 {
+  color: var(--theme-complement6);
+}
+.theme-complement7 {
+  color: var(--theme-complement7);
+}
+.theme-complement8 {
+  color: var(--theme-complement8);
+}
+.theme-complement9 {
+  color: var(--theme-complement9);
+}
+
+
+.transparent {
+  color: transparent;
+}
+.current {
+  color: currentColor;
+}
+.inherit {
+  color: inherit;
+}
+
+
+/* Background Color */
+
+.bg-base {
+  background-color: var(--base);
+}
+.bg-black {
+  background-color: var(--black);
+}
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-gray0 {
+  background-color: var(--gray0);
+}
+.bg-gray1 {
+  background-color: var(--gray1);
+}
+.bg-gray2 {
+  background-color: var(--gray2);
+}
+.bg-gray3 {
+  background-color: var(--gray3);
+}
+.bg-gray4 {
+  background-color: var(--gray4);
+}
+.bg-gray5 {
+  background-color: var(--gray5);
+}
+.bg-gray6 {
+  background-color: var(--gray6);
+}
+.bg-gray7 {
+  background-color: var(--gray7);
+}
+.bg-gray8 {
+  background-color: var(--gray8);
+}
+.bg-gray9 {
+  background-color: var(--gray9);
+}
+
+
+.bg-theme-base0 {
+  background-color: var(--theme-base0);
+}
+.bg-theme-base1 {
+  background-color: var(--theme-base1);
+}
+.bg-theme-base2 {
+  background-color: var(--theme-base2);
+}
+.bg-theme-base3 {
+  background-color: var(--theme-base3);
+}
+.bg-theme-base4 {
+  background-color: var(--theme-base4);
+}
+.bg-theme-base5 {
+  background-color: var(--theme-base5);
+}
+.bg-theme-base6 {
+  background-color: var(--theme-base6);
+}
+.bg-theme-base7 {
+  background-color: var(--theme-base7);
+}
+.bg-theme-base8 {
+  background-color: var(--theme-base8);
+}
+.bg-theme-base9 {
+  background-color: var(--theme-base9);
+}
+
+.bg-theme-complement0 {
+  background-color: var(--theme-complement0);
+}
+.bg-theme-complement1 {
+  background-color: var(--theme-complement1);
+}
+.bg-theme-complement2 {
+  background-color: var(--theme-complement2);
+}
+.bg-theme-complement3 {
+  background-color: var(--theme-complement3);
+}
+.bg-theme-complement4 {
+  background-color: var(--theme-complement4);
+}
+.bg-theme-complement5 {
+  background-color: var(--theme-complement5);
+}
+.bg-theme-complement6 {
+  background-color: var(--theme-complement6);
+}
+.bg-theme-complement7 {
+  background-color: var(--theme-complement7);
+}
+.bg-theme-complement8 {
+  background-color: var(--theme-complement8);
+}
+.bg-theme-complement9 {
+  background-color: var(--theme-complement9);
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-current {
+  background-color: currentColor;
+}
+.bg-inherit {
+  background-color: inherit;
+}
+
+/* Fill */
+.fill-base {
+  fill: var(--base);
+}
+.fill-black {
+  fill: var(--black);
+}
+.fill-white {
+  fill: var(--white);
+}
+
+.fill-gray0 {
+  fill: var(--gray0);
+}
+.fill-gray1 {
+  fill: var(--gray1);
+}
+.fill-gray2 {
+  fill: var(--gray2);
+}
+.fill-gray3 {
+  fill: var(--gray3);
+}
+.fill-gray4 {
+  fill: var(--gray4);
+}
+.fill-gray5 {
+  fill: var(--gray5);
+}
+.fill-gray6 {
+  fill: var(--gray6);
+}
+.fill-gray7 {
+  fill: var(--gray7);
+}
+.fill-gray8 {
+  fill: var(--gray8);
+}
+.fill-gray9 {
+  fill: var(--gray9);
+}
+
+
+.fill-theme-base0 {
+  fill: var(--theme-base0);
+}
+.fill-theme-base1 {
+  fill: var(--theme-base1);
+}
+.fill-theme-base2 {
+  fill: var(--theme-base2);
+}
+.fill-theme-base3 {
+  fill: var(--theme-base3);
+}
+.fill-theme-base4 {
+  fill: var(--theme-base4);
+}
+.fill-theme-base5 {
+  fill: var(--theme-base5);
+}
+.fill-theme-base6 {
+  fill: var(--theme-base6);
+}
+.fill-theme-base7 {
+  fill: var(--theme-base7);
+}
+.fill-theme-base8 {
+  fill: var(--theme-base8);
+}
+.fill-theme-base9 {
+  fill: var(--theme-base9);
+}
+
+.fill-theme-complement0 {
+  fill: var(--theme-complement0);
+}
+.fill-theme-complement1 {
+  fill: var(--theme-complement1);
+}
+.fill-theme-complement2 {
+  fill: var(--theme-complement2);
+}
+.fill-theme-complement3 {
+  fill: var(--theme-complement3);
+}
+.fill-theme-complement4 {
+  fill: var(--theme-complement4);
+}
+.fill-theme-complement5 {
+  fill: var(--theme-complement5);
+}
+.fill-theme-complement6 {
+  fill: var(--theme-complement6);
+}
+.fill-theme-complement7 {
+  fill: var(--theme-complement7);
+}
+.fill-theme-complement8 {
+  fill: var(--theme-complement8);
+}
+.fill-theme-complement9 {
+  fill: var(--theme-complement9);
+}
+
+.fill-transparent {
+  fill: transparent;
+}
+.fill-current {
+  fill: currentColor;
+}
+.fill-inherit {
+  fill: inherit;
+}
+
+
+/* Stroke */
+.stroke-base {
+  stroke: var(--base);
+}
+.stroke-black {
+  stroke: var(--black);
+}
+.stroke-white {
+  stroke: var(--white);
+}
+
+.stroke-gray0 {
+  stroke: var(--gray0);
+}
+.stroke-gray1 {
+  stroke: var(--gray1);
+}
+.stroke-gray2 {
+  stroke: var(--gray2);
+}
+.stroke-gray3 {
+  stroke: var(--gray3);
+}
+.stroke-gray4 {
+  stroke: var(--gray4);
+}
+.stroke-gray5 {
+  stroke: var(--gray5);
+}
+.stroke-gray6 {
+  stroke: var(--gray6);
+}
+.stroke-gray7 {
+  stroke: var(--gray7);
+}
+.stroke-gray8 {
+  stroke: var(--gray8);
+}
+.stroke-gray9 {
+  stroke: var(--gray9);
+}
+
+
+.stroke-theme-base0 {
+  stroke: var(--theme-base0);
+}
+.stroke-theme-base1 {
+  stroke: var(--theme-base1);
+}
+.stroke-theme-base2 {
+  stroke: var(--theme-base2);
+}
+.stroke-theme-base3 {
+  stroke: var(--theme-base3);
+}
+.stroke-theme-base4 {
+  stroke: var(--theme-base4);
+}
+.stroke-theme-base5 {
+  stroke: var(--theme-base5);
+}
+.stroke-theme-base6 {
+  stroke: var(--theme-base6);
+}
+.stroke-theme-base7 {
+  stroke: var(--theme-base7);
+}
+.stroke-theme-base8 {
+  stroke: var(--theme-base8);
+}
+.stroke-theme-base9 {
+  stroke: var(--theme-base9);
+}
+
+.stroke-theme-complement0 {
+  stroke: var(--theme-complement0);
+}
+.stroke-theme-complement1 {
+  stroke: var(--theme-complement1);
+}
+.stroke-theme-complement2 {
+  stroke: var(--theme-complement2);
+}
+.stroke-theme-complement3 {
+  stroke: var(--theme-complement3);
+}
+.stroke-theme-complement4 {
+  stroke: var(--theme-complement4);
+}
+.stroke-theme-complement5 {
+  stroke: var(--theme-complement5);
+}
+.stroke-theme-complement6 {
+  stroke: var(--theme-complement6);
+}
+.stroke-theme-complement7 {
+  stroke: var(--theme-complement7);
+}
+.stroke-theme-complement8 {
+  stroke: var(--theme-complement8);
+}
+.stroke-theme-complement9 {
+  stroke: var(--theme-complement9);
+}
+
+.stroke-transparent {
+  stroke: transparent;
+}
+.stroke-current {
+  stroke: currentColor;
+}
+.stroke-inherit {
+  stroke: inherit;
+}
+
+.stroke-none {
+  stroke: none;
+}

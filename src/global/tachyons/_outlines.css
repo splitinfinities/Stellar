@@ -1,0 +1,56 @@
+/*
+
+   OUTLINES
+
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
+
+*/
+
+.outline {
+  outline: 1px solid;
+}
+.outline-transparent {
+  outline: 1px solid transparent;
+}
+.outline-0 {
+  outline: 0;
+}
+
+@media (min-width: 480px) {
+  .outline-ns {
+    outline: 1px solid;
+  }
+  .outline-transparent-ns {
+    outline: 1px solid transparent;
+  }
+  .outline-0-ns {
+    outline: 0;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 960px) {
+  .outline-m {
+    outline: 1px solid;
+  }
+  .outline-transparent-m {
+    outline: 1px solid transparent;
+  }
+  .outline-0-m {
+    outline: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  .outline-l {
+    outline: 1px solid;
+  }
+  .outline-transparent-l {
+    outline: 1px solid transparent;
+  }
+  .outline-0-l {
+    outline: 0;
+  }
+}

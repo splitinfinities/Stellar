@@ -1,0 +1,9 @@
+<stellar-grid>
+    <stellar-card>nice</stellar-card>
+    <stellar-card>nice</stellar-card>
+    <stellar-card>nice</stellar-card>
+    <stellar-card>nice</stellar-card>
+    <stellar-card>nice</stellar-card>
+    <stellar-card>nice</stellar-card>
+    <stellar-card>nice</stellar-card>
+</stellar-grid>

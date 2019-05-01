@@ -1,0 +1,200 @@
+:host, :host *, :host *:before, :host *:after {
+    box-sizing: border-box;
+}
+
+:host {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: var(--wrap-display, inline-block);
+    font-family: inherit;
+    text-align: center;
+    vertical-align: middle;
+    align-self: center;
+
+    --width: auto;
+    --padding: 1.0625em 2em 1.1em 2em;
+    --background: var(--theme-base5);
+    --color: var(--white);
+    --border: none;
+    --active-background: var(--theme-base7);
+    --active-color: var(--white);
+    --active-border: none;
+    --border: none;
+    --border-radius: 0;
+    --font-size: 1.3rem;
+    --text-decoration: none;
+}
+
+:host([outline]) {
+    --background: transparent;
+    --color: var(--theme-base5);
+    --border: 2px solid currentColor;
+    --active-background: var(--theme-base0);
+    --active-color: var(--theme-base7);
+    --active-border: 2px solid currentColor;
+}
+
+:host([ghost]) {
+    --padding: 0.05em 0 0.125em;
+    --background: none;
+    --color: var(--theme-base5);
+    --border: none;
+    --active-background: none;
+    --active-color: var(--theme-base7);
+    --active-border: none;
+}
+
+:host([outline][invert]) {
+    --background: transparent;
+    --border: 2px solid currentColor;
+    --active-background: var(--theme-base0);
+    --active-border: 2px solid currentColor;
+}
+
+:host([ghost][invert]) {
+    --background: none;
+    --color: var(--theme-base2);
+    --border: none;
+    --active-background: none;
+    --active-color: var(--theme-base5);
+    --active-border: none;
+}
+
+:host([invert]) {
+    --background: var(--white);
+    --color: var(--theme-base2);
+    --border: none;
+    --active-background: var(--theme-base0);
+    --active-color: var(--theme-base5);
+    --active-border: none;
+}
+
+:host([pill]) {
+    --border-radius: 1000px;
+}
+
+:host([size="tiny"]) {
+    --font-size: .75rem;
+}
+
+:host([size="small"]) {
+    --font-size: 1rem;
+}
+
+:host([size="large"]) {
+    --font-size: 2rem;
+}
+
+:host([padding="tiny"]) {
+    --padding: .55em 1.125em .61875em;
+}
+
+:host([padding="small"]) {
+    --padding: .7875em 1.5em .825em;
+}
+
+:host([padding="large"]) {
+    --padding: 1.3125em 2.5em 1.375em;
+}
+
+:host(:active) {
+    transform: scale(0.925)
+}
+
+:host .button {
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    outline: 0;
+    border: var(--border);
+    background: var(--background);
+    padding: var(--padding);
+    width: var(--width);
+    height: auto;
+    vertical-align: bottom;
+    text-decoration: var(--text-decoration);
+    line-height: 1;
+    letter-spacing: var(--letter-spacing, 0.0275em);;
+    white-space: nowrap;
+    color: var(--color);
+    font-family: var(--font-system);
+    font-size: var(--font-size);
+    font-weight: 500;
+    border-radius: var(--border-radius, 0);
+}
+
+:host a.button,
+:host span.button {
+    width: auto;
+}
+
+:host .button:hover,
+:host .button:focus {
+    border: var(--active-border);
+    background-color: var(--active-background);
+    color: var(--active-color);
+}
+
+:host .button .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:host([block]),
+:host([block]) .button {
+    display: block;
+    width: 100%;
+}
+
+:host ::slotted(img),
+:host ::slotted(stellar-asset) {
+    display: inline-block;
+    float: none;
+    width: 1em;
+    height: 1em;
+}
+
+:host ::slotted(img[align="left"]),
+:host ::slotted(stellar-asset[align="left"]) {
+    order: -1;
+    margin-right: 0.75em;
+}
+
+:host ::slotted(img[align="right"]),
+:host ::slotted(stellar-asset[align="right"]) {
+    order: 2;
+    margin-left: 0.75em;
+}
+
+:host-context(.dark-mode) {
+    --background: var(--theme-base7);
+    --color: var(--white);
+    --active-background: var(--theme-base9);
+    --active-color: var(--white);
+    --active-border: none;
+}
+
+:host-context(.dark-mode):host([outline]) {
+    --background: transparent;
+    --color: var(--white);
+    --border: 2px solid var(--theme-base5);
+    --active-background: var(--theme-base9);
+    --active-color: var(--theme-base0);
+    --active-border: 2px solid var(--theme-base9);
+}
+
+:host-context(.dark-mode):host([ghost]) {
+    --padding: 0.05em 0 0.125em;
+    --background: none;
+    --color: var(--theme-base5);
+    --border: none;
+    --active-background: none;
+    --active-color: var(--theme-base7);
+    --active-border: none;
+}

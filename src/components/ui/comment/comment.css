@@ -1,0 +1,81 @@
+:host, :host *, :host *:before, :host *:after {
+	box-sizing: border-box;
+  }
+
+:host {
+	display: block;
+}
+
+:host stellar-avatar {
+	margin-right: 1rem;
+	float: left;
+}
+
+:host .comment > .content {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	background: white;
+	border: 1px solid var(--gray2);
+}
+
+:host .comment > .thread {
+	margin: 0 0 0 3rem;
+	position: relative;
+}
+
+:host .comment ::slotted([slot="avatar"]) {
+	margin-right: 1rem;
+}
+
+:host .comment > .thread::after {
+	content: "";
+	width: 0.4rem;
+	height: calc(100% - .5rem);
+	position: absolute;
+	left: -1.25rem;
+	top: -1.5rem;
+	z-index: 0;
+	background: var(--theme-complement4);
+	background: linear-gradient(135deg, var(--theme-complement4) 0%, var(--theme-base4) calc(100% - 2rem), var(--theme-base4) 100%);
+}
+
+:host .comment > .thread::before {
+	content: "";
+	width: 20rem;
+	height: .4rem;
+	position: absolute;
+	left: -1.25rem;
+    bottom: 2rem;
+	z-index: 0;
+	background: var(--theme-base4);
+}
+
+
+:host .comment.empty > .content {
+	margin: 0;
+}
+
+:host .comment.empty > .thread {
+	display: none !important;
+}
+
+:host ::slotted(stellar-comment) {
+	margin-top: 1rem;
+}
+
+:host-context(.dark-mode):host .comment > .content {
+	background: var(--gray9);
+	border: 1px solid var(--gray8);
+}
+
+:host-context(.dark-mode):host .comment > .thread::after {
+	background: var(--theme-complement9);
+	background: linear-gradient(135deg, var(--theme-complement9) 0%, var(--theme-base9) calc(100% - 2rem), var(--theme-base9) 100%);
+}
+
+:host-context(.dark-mode):host .comment > .thread::before {
+	background: var(--theme-base9);
+}

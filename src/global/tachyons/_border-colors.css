@@ -1,0 +1,132 @@
+/*
+
+   BORDER COLORS
+   Docs: http://tachyons.io/docs/themes/borders/
+
+   Border colors can be used to extend the base
+   border classes ba,bt,bb,br,bl found in the _borders.css file.
+
+   The base border class by default will set the color of the border
+   to that of the current text color. These classes are for the cases
+   where you desire for the text and border colors to be different.
+
+   Base:
+     b = border
+
+   Modifiers:
+   --color-name = each color variable name is also a border color name
+
+*/
+
+.b--base {
+   border-color: var(--base);
+}
+.b--black {
+   border-color: var(--black);
+}
+.b--white {
+   border-color: var(--white);
+}
+
+.b--gray0 {
+   border-color: var(--gray0);
+}
+.b--gray1 {
+   border-color: var(--gray1);
+}
+.b--gray2 {
+   border-color: var(--gray2);
+}
+.b--gray3 {
+   border-color: var(--gray3);
+}
+.b--gray4 {
+   border-color: var(--gray4);
+}
+.b--gray5 {
+   border-color: var(--gray5);
+}
+.b--gray6 {
+   border-color: var(--gray6);
+}
+.b--gray7 {
+   border-color: var(--gray7);
+}
+.b--gray8 {
+   border-color: var(--gray8);
+}
+.b--gray9 {
+   border-color: var(--gray9);
+}
+
+.b--theme-base0 {
+   border-color: var(--theme-base0);
+}
+.b--theme-base1 {
+   border-color: var(--theme-base1);
+}
+.b--theme-base2 {
+   border-color: var(--theme-base2);
+}
+.b--theme-base3 {
+   border-color: var(--theme-base3);
+}
+.b--theme-base4 {
+   border-color: var(--theme-base4);
+}
+.b--theme-base5 {
+   border-color: var(--theme-base5);
+}
+.b--theme-base6 {
+   border-color: var(--theme-base6);
+}
+.b--theme-base7 {
+   border-color: var(--theme-base7);
+}
+.b--theme-base8 {
+   border-color: var(--theme-base8);
+}
+.b--theme-base9 {
+   border-color: var(--theme-base9);
+}
+
+.b--theme-complement0 {
+   border-color: var(--theme-complement0);
+}
+.b--theme-complement1 {
+   border-color: var(--theme-complement1);
+}
+.b--theme-complement2 {
+   border-color: var(--theme-complement2);
+}
+.b--theme-complement3 {
+   border-color: var(--theme-complement3);
+}
+.b--theme-complement4 {
+   border-color: var(--theme-complement4);
+}
+.b--theme-complement5 {
+   border-color: var(--theme-complement5);
+}
+.b--theme-complement6 {
+   border-color: var(--theme-complement6);
+}
+.b--theme-complement7 {
+   border-color: var(--theme-complement7);
+}
+.b--theme-complement8 {
+   border-color: var(--theme-complement8);
+}
+.b-theme-complement9 {
+   border-color: var(--theme-complement9);
+}
+
+.b--transparent {
+   border-color: transparent;
+}
+.b--current {
+   border-color: currentColor;
+}
+.b--inherit {
+   border-color: inherit;
+}

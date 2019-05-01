@@ -1,0 +1,36 @@
+:host, :host *, :host *:before, :host *:after {
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+}
+
+:host-context(.dark-mode):host .highcharts-background {
+  fill: var(--black) !important
+}
+
+:host-context(.dark-mode):host .highcharts-title,
+:host-context(.dark-mode):host .highcharts-subtitle,
+:host-context(.dark-mode):host .highcharts-legend-item text,
+:host-context(.dark-mode):host .highcharts-axis-labels text,
+:host-context(.dark-mode):host .highcharts-axis-title {
+  fill: var(--white) !important
+}
+
+:host-context(.dark-mode):host .highcharts-legend-box {
+  fill: transparent !important
+}
+
+:host-context(.dark-mode):host .highcharts-grid path,
+:host-context(.dark-mode):host .highcharts-axis path {
+  stroke: rgba(255, 255, 255, 0.2) !important
+}
+
+:host-context(.dark-mode):host .highcharts-tooltip text {
+  fill: var(--black) !important
+}
+
+:host-context(.dark-mode):host .highcharts-series rect {
+  stroke: var(--black) !important
+}

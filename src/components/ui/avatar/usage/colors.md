@@ -1,0 +1,13 @@
+<stellar-avatar name="William M. Riley" color="red"></stellar-avatar>
+<stellar-avatar name="William M. Riley" color="orange"></stellar-avatar>
+<stellar-avatar name="William M. Riley" color="yellow"></stellar-avatar>
+<stellar-avatar name="William M. Riley" color="lime"></stellar-avatar>
+<stellar-avatar name="William M. Riley" color="green"></stellar-avatar>
+<stellar-avatar name="William M. Riley" color="teal"></stellar-avatar>
+<stellar-avatar name="William M. Riley" color="cyan"></stellar-avatar>
+<stellar-avatar name="William M. Riley" color="blue"></stellar-avatar>
+<stellar-avatar name="William M. Riley" color="indigo"></stellar-avatar>
+<stellar-avatar name="William M. Riley" color="violet"></stellar-avatar>
+<stellar-avatar name="William M. Riley" color="fuschia"></stellar-avatar>
+<stellar-avatar name="William M. Riley" color="pink"></stellar-avatar>
+<stellar-avatar name="William M. Riley" color="gray"></stellar-avatar>

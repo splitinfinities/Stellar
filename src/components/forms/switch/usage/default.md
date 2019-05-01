@@ -1,0 +1,1 @@
+<stellar-switch></stellar-switch>

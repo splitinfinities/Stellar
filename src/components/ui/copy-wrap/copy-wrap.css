@@ -1,0 +1,60 @@
+:host, :host *, :host *:before, :host *:after {
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+}
+
+:host([align="left"]) {
+  text-align: left !important;
+}
+
+:host([align="left"]) ::slotted(*) {
+  margin-right: auto !important;
+}
+
+:host([align="center"]) {
+  text-align: center !important;
+}
+
+:host([align="center"]) ::slotted(*) {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+:host([align="right"]) {
+  text-align: right !important;
+}
+
+:host([align="right"]) ::slotted(*) {
+  margin-left: auto !important;
+}
+
+:host ::slotted(stellar-button) {
+  display: inline-block;
+}
+
+:host ::slotted(img),
+:host ::slotted(stellar-code-block) {
+  margin-bottom: 2rem ;
+}
+
+:host ::slotted(*:last-child) {
+  margin-bottom: 0 ;
+}
+
+:host([full]) ::slotted(*) {
+  max-width: 100% ;
+}
+
+:host ::slotted(ul),
+:host ::slotted(ol) {
+  margin: .25em 0 ;
+  display: inline-block ;
+  text-align: left ;
+}
+
+:host ::slotted(li) {
+  margin-top: 0.5em ;
+}

@@ -1,0 +1,204 @@
+:host, :host *, :host *:before, :host *:after {
+    box-sizing: border-box;
+}
+
+:host {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+    font-size: 1rem;
+}
+
+:host .wrap {
+    pointer-events: none;
+    white-space: nowrap;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: scale(0.7) translateY(-80%) translateX(-50%) translateZ(0);
+    transform-origin: 0 10px;
+    transition: all 250ms var(--ease) 50ms;
+    opacity: 0;
+    margin: 0 auto;
+    background: var(--theme-complement9);
+    padding: .65em .65em;
+    width: auto;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color: white;
+}
+
+:host .wrap .after {
+    position: absolute;
+    right: 0;
+    bottom: -0.475em;
+    left: 0;
+    transform: rotate(45deg);
+    margin: 0 auto;
+    background: var(--theme-complement9);
+    width: 1em;
+    height: 1em;
+    z-index: -1;
+}
+
+:host(:hover) .wrap,
+:host([hover]) .wrap {
+    transform: scale(1) translateY(-100%) translateX(-50%) translateZ(0);
+    opacity: 1;
+}
+
+/* Left */
+:host([align="left"]) .wrap,
+:host([align="top-left"]) .wrap {
+    transform: scale(0.7) translateY(-100%) translateX(0) translateZ(0);
+    left: 0;
+    transform-origin: 22px 22px;
+}
+
+:host([align="left"]) .wrap .after,
+:host([align="top-left"]) .wrap .after {
+    right: auto;
+    left: 1rem;
+}
+
+:host([align="left"]:hover) .wrap,
+:host([align="left"][hover]) .wrap,
+:host([align="top-left"]:hover) .wrap,
+:host([align="top-left"][hover]) .wrap {
+    transform: scale(1) translateY(-100%) translateX(0) translateZ(0);
+}
+
+/* Right */
+:host([align="right"]) .wrap,
+:host([align="top-right"]) .wrap {
+    transform: scale(0.7) translateY(-100%) translateX(-100%) translateZ(0);
+    left: 100%;
+    transform-origin: -22px 22px;
+}
+
+:host([align="right"]) .wrap .after,
+:host([align="top-right"]) .wrap .after {
+    right: 1rem;
+    left: auto;
+}
+
+:host([align="right"]:hover) .wrap,
+:host([align="top-right"]:hover) .wrap,
+:host([align="right"][hover]) .wrap,
+:host([align="top-right"][hover]) .wrap {
+    transform: scale(1) translateY(-100%) translateX(-100%) translateZ(0);
+}
+
+/* Middle left */
+:host([align="middle-left"]) .wrap {
+    transform: scale(0.7) translateY(-50%) translateX(-100%) translateZ(0);
+    top: 50%;
+    left: 0;
+    transform-origin: -30px 0;
+}
+
+:host([align="middle-left"]) .wrap .after {
+    right: auto;
+    left: calc(100% - 8px);
+    top: calc(50% - 8px);
+}
+
+:host([align="middle-left"]:hover) .wrap,
+:host([align="middle-left"][hover]) .wrap {
+    transform: scale(1) translateY(-50%) translateX(calc(-100% - 22px)) translateZ(0);
+}
+
+/* Middle right */
+:host([align="middle-right"]) .wrap {
+    transform: scale(0.7) translateY(-50%) translateX(100%) translateZ(0);
+    top: 50%;
+    right: 0;
+    left: auto;
+    transform-origin: 30px 0;
+}
+
+:host([align="middle-right"]) .wrap .after {
+    left: auto;
+    right: calc(100% - 8px);
+    top: calc(50% - 8px);
+}
+
+:host([align="middle-right"]:hover) .wrap,
+:host([align="middle-right"][hover]) .wrap {
+    transform: scale(1) translateY(-50%) translateX(calc(100% + 22px)) translateZ(0);
+}
+
+/* Bottom left */
+:host([align="bottom-left"]) .wrap {
+    transform: scale(0.7) translateY(100%) translateX(0) translateZ(0);
+    top: auto;
+    bottom: -1.2rem;
+    left: 0;
+    transform-origin: 22px 22px;
+}
+
+:host([align="bottom-left"]) .wrap .after {
+    right: auto;
+    left: 16px;
+    top: -0.475em;
+    bottom: auto;
+}
+
+:host([align="bottom-left"]:hover) .wrap,
+:host([align="bottom-left"][hover]) .wrap {
+    transform: scale(1) translateY(100%) translateX(0) translateZ(0);
+}
+
+/* Bottom center */
+:host([align="bottom-center"]) .wrap {
+    transform: scale(0.7) translateY(100%) translateX(-50%) translateZ(0);
+    top: auto;
+    bottom: -1.2rem;
+}
+
+:host([align="bottom-center"]) .wrap .after {
+    right: auto;
+    left: calc(50% - 8px);
+    top: -0.475em;
+    bottom: auto;
+}
+
+:host([align="bottom-center"]:hover) .wrap,
+:host([align="bottom-center"][hover]) .wrap {
+    transform: scale(1) translateY(100%) translateX(-50%) translateZ(0);
+}
+
+/* Bottom right */
+:host([align="bottom-right"]) .wrap {
+    transform: scale(0.7) translateY(100%) translateX(-100%) translateZ(0);
+    top: auto;
+    bottom: -1.2rem;
+    left: 100%;
+    transform-origin: -22px 22px;
+}
+
+:host([align="bottom-right"]) .wrap .after {
+    left: auto;
+    right: 16px;
+    top: -0.475em;
+    bottom: auto;
+}
+
+:host([align="bottom-right"]:hover) .wrap,
+:host([align="bottom-right"][hover]) .wrap {
+    transform: scale(1) translateY(100%) translateX(-100%) translateZ(0);
+}
+
+:host-context(.dark-mode):host .wrap {
+    background: var(--theme-complement7);
+}
+
+:host-context(.dark-mode):host .wrap .after {
+    background: var(--theme-complement7);
+}

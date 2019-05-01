@@ -1,0 +1,9 @@
+@import "slides-vendor.css";
+
+stellar-slides {
+  display: block;
+}
+
+stellar-slides stellar-slide > * {
+	width: 100%;
+}

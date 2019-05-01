@@ -1,0 +1,26 @@
+:host, :host *, :host *:before, :host *:after {
+    box-sizing: border-box;
+}
+
+:host {
+	display: block;
+	padding: 2rem;
+	background-color: var(--theme-base4);
+}
+
+:host .callout-wrap {
+	display: flex;
+	align-items: center;
+}
+
+:host(.db) .callout-wrap {
+	display: block;
+}
+
+:host ::slotted(*) {
+	color: var(--gray9);
+}
+
+:host-context(.dark-mode):host {
+	background-color: var(--theme-base6);
+}

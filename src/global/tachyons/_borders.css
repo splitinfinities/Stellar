@@ -1,0 +1,129 @@
+/*
+
+    BORDERS
+    Docs: http://tachyons.io/docs/themes/borders/
+
+    Base:
+      b = border
+
+    Modifiers:
+      a = all
+      t = top
+      r = right
+      b = bottom
+      l = left
+      n = none
+
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
+
+*/
+
+.ba {
+  border-width: 1px;
+  border-style: solid;
+}
+.bt {
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+.br {
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+.bb {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+.bl {
+  border-left-width: 1px;
+  border-left-style: solid;
+}
+.bn {
+  border-width: 0;
+  border-style: none;
+}
+
+
+@media (min-width: 480px) {
+  .ba-ns {
+    border-width: 1px;
+    border-style: solid;
+  }
+  .bt-ns {
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+  .br-ns {
+    border-right-width: 1px;
+    border-right-style: solid;
+  }
+  .bb-ns {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+  .bl-ns {
+    border-left-width: 1px;
+    border-left-style: solid;
+  }
+  .bn-ns {
+    border-width: 0;
+    border-style: none;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 960px) {
+  .ba-m {
+    border-width: 1px;
+    border-style: solid;
+  }
+  .bt-m {
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+  .br-m {
+    border-right-width: 1px;
+    border-right-style: solid;
+  }
+  .bb-m {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+  .bl-m {
+    border-left-width: 1px;
+    border-left-style: solid;
+  }
+  .bn-m {
+    border-width: 0;
+    border-style: none;
+  }
+}
+
+@media (min-width: 960px) {
+  .ba-l {
+    border-width: 1px;
+    border-style: solid;
+  }
+  .bt-l {
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+  .br-l {
+    border-right-width: 1px;
+    border-right-style: solid;
+  }
+  .bb-l {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+  .bl-l {
+    border-left-width: 1px;
+    border-left-style: solid;
+  }
+  .bn-l {
+    border-width: 0;
+    border-style: none;
+  }
+}

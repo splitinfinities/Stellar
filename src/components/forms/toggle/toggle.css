@@ -1,0 +1,62 @@
+stellar-toggle {
+  box-sizing: border-box;
+  display: block;
+  font-family: inherit;
+}
+
+stellar-toggle + stellar-toggle {
+  margin-top: 3rem;
+}
+
+stellar-grid stellar-toggle + stellar-toggle {
+  margin-top: 0 !important;
+}
+
+stellar-toggle * {
+  box-sizing: border-box;
+}
+
+stellar-toggle ::selection,
+stellar-toggle *::selection {
+  background: var(--theme-base2) !important;
+}
+
+stellar-toggle .label {
+  margin-bottom: .5rem;
+  line-height: 1.69;
+  color: var(--gray9);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+stellar-toggle stellar-card .item {
+  padding: 1rem;
+}
+
+stellar-toggle stellar-grid {
+  width: 100%;
+  --width: 18.5rem;
+}
+
+stellar-toggle[stacked] stellar-grid {
+  --width: 100%;
+}
+
+stellar-toggle[stacked] stellar-grid .grid {
+  width: 100%;
+  grid-gap: 0;
+}
+
+stellar-toggle[stacked] stellar-toggle-option label {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+stellar-toggle[stacked] stellar-toggle-option + stellar-toggle-option label {
+  border-top: 1px solid var(--gray2);
+}
+
+.dark-mode stellar-toggle[stacked] stellar-toggle-option + stellar-toggle-option label {
+  border-top: 1px solid var(--black);
+}

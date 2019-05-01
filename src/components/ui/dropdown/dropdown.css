@@ -1,0 +1,250 @@
+:host, :host *, :host *:before, :host *:after {
+  box-sizing: border-box;
+}
+
+:host {
+  --dropdown-color: var(--theme-base7);
+  --dropdown-hover-color: var(--theme-base8);
+  --dropdown-width: 20rem;
+  cursor: pointer;
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  outline: 0;
+  height: 100%;
+  color: var(--dropdown-color);
+  transition: z-index 0ms linear 200ms
+}
+
+:host stellar-blur {
+  width: var(--dropdown-width)
+}
+
+:host .list-wrap {
+  position: absolute;
+  top: calc(100% - .5rem);
+  right: 50%;
+  left: 50%;
+  transition: all 110ms var(--ease) 250ms;
+  z-index: 10;
+  width: var(--dropdown-width);
+  height: auto;
+  display: initial;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+:host .caret {
+  color: var(--dropdown-color);
+  margin-left: 1.5rem;
+  transition: all 210ms var(--ease);
+}
+
+:host(:hover) .caret,
+:host(:focus-within) .caret {
+  transform: scale(1) rotate(180deg);
+  color: var(--dropdown-hover-color);
+}
+
+:host(:hover),
+:host(:active),
+:host(:focus-within) {
+  z-index: 6;
+  color: var(--dropdown-hover-color);
+}
+
+:host(:hover) .toggle::after,
+:host(:active) .toggle::after,
+:host(:focus-within) .toggle::after {
+  margin-top: -2px;
+  background: var(--dropdown-hover-color);
+  height: 2px;
+}
+
+:host(.toggle:hover),
+:host(.toggle:active) {
+  z-index: 6;
+  color: var(--dropdown-hover-color);
+}
+
+:host(.toggle:hover::after),
+:host(.toggle:active::after) {
+  margin-top: -2px;
+  background: var(--dropdown-hover-color);
+  height: 2px;
+}
+
+:host(:hover) .list-wrap,
+:host(:active) .list-wrap,
+:host(:focus-within) .list-wrap {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+:host .dropdown-placeholder {
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+}
+
+:host .toggle {
+  display: flex;
+  position: relative;
+  align-items: center;
+  min-height: 3rem;
+}
+
+:host stellar-asset[slot="handle"] {
+  color: var(--dropdown-color);
+}
+
+:host stellar-asset[slot="handle"]:hover,
+:host stellar-asset[slot="handle"]:active,
+:host(:focus-within) stellar-asset[slot="handle"],
+:host([focus-within]) stellar-asset[slot="handle"] {
+  color: var(--dropdown-color);
+}
+
+:host .toggle span {
+  color: inherit;
+}
+
+:host .toggle .hidden {
+  display: inline-block !important;
+}
+
+:host .list {
+  margin-top: 0;
+  margin-left: 0;
+  transition: all 110ms var(--ease) 250ms;
+  box-shadow: 0 0 2px 0 rgba(128, 128, 128, .35);
+  background: white;
+  list-style-type: none;
+  padding: 0;
+}
+
+:host .list ::slotted(stellar-item) {
+  --item-size: 3.25rem;
+}
+
+:host .list .loader {
+  cursor: wait;
+  display: none;
+}
+
+:host .list .separator {
+  position: relative;
+}
+
+:host .list .separator::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: calc(50% - .5px);
+  background: var(--gray5);
+  width: 100%;
+  height: .1rem;
+}
+
+:host .icon {
+  flex: 0 0 2.25em;
+  order: -1;
+  transition: all .05s var(--ease) 0s;
+  margin-right: 1em;
+}
+
+:host .thumb {
+  flex: 0 0 2.25em;
+  order: -1;
+  transition: all .05s var(--ease) 0s;
+  margin-right: 1rem;
+  width: 2.25em;
+  height: 2.25em;
+}
+
+:host .notification {
+  display: inline-block;
+  margin: 0 0 0 .8rem;
+  border-radius: 50%;
+  background: var(--yellow5);
+  width: .8rem;
+  height: .8rem;
+}
+
+:host ::slotted(stellar-item) {
+  border: 0;
+  overflow: hidden;
+  color: var(--gray9);
+  font-size: 1rem;
+}
+
+:host .footer {
+  border-top: 1px solid var(--theme-base1);
+  margin-top: 0.5rem;
+}
+
+:host .footer ::slotted(*) {
+  background: transparent !important;
+}
+
+:host .footer:empty {
+  display: none;
+}
+
+/* Left */
+:host([position="left"]) {
+
+}
+
+:host([position="left"]) .list-wrap {
+  left: 0;
+  right: auto;
+}
+
+:host([position="left"][icon]) .list-wrap {
+  left: var(--dropdown-offset, -3rem);
+}
+
+:host([position="left"]) .list::after {
+  right: 0;
+  left: 4rem;
+}
+
+:host([position="left"]) .list::before {
+  right: 0;
+  left: 4rem;
+}
+
+/* Right */
+:host([position="right"]) {
+
+}
+
+:host([position="right"]) .list-wrap {
+  left: auto;
+  right: 0;
+}
+
+:host([position="right"][icon]) .list-wrap {
+  right: var(--dropdown-offset, 3rem);
+}
+
+:host([position="right"]) .list::after {
+  right: 3rem;
+  left: auto;
+}
+
+:host([position="right"]) .list::before {
+  right: 3rem;
+  left: auto;
+}
+
+:host-context(.dark-mode):host .list {
+  background: var(--gray9);
+}
+
+:host-context(.dark-mode):host ::slotted(stellar-item) {
+  color: var(--gray0);
+}
+
+:host-context(.dark-mode):host .footer {
+  border-top-color: var(--black);
+}

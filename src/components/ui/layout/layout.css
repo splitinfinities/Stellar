@@ -1,0 +1,139 @@
+:host, :host *, :host *:before, :host *:after {
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+  font-family: inherit;
+  --grid-gap: 3rem;
+}
+
+:host .layout {
+  display: grid;
+  grid-gap: var(--grid-gap, 3rem);
+  margin: 0 auto;
+  padding: 4rem 0;
+  width: 95%;
+  max-width: 1024px;
+  min-height: 0;
+  min-width: 0;
+}
+
+:host .layout > * {
+  min-width: 0;
+}
+
+:host([size="tiny"]) .layout {
+  max-width: 420px;
+}
+
+:host([size="small"]) .layout {
+  max-width: 700px;
+}
+
+:host([size="medium"]) .layout {
+  max-width: 1024px;
+}
+
+:host([size="large"]) .layout {
+  max-width: 1200px;
+}
+
+:host([size="full"]) .layout {
+  max-width: 100%;
+}
+
+:host([size="flush"]) .layout {
+  max-width: 100%;
+  width: 100%;
+}
+
+:host([padding="none"]) .layout {
+  padding: 0;
+}
+
+:host([padding="tiny"]) .layout {
+  padding: 0.5rem 0;
+}
+
+:host([padding="small"]) .layout {
+  padding: 1rem 0;
+}
+
+:host([padding="medium"]) .layout {
+  padding: 2rem 0;
+}
+
+:host([padding="large"]) .layout {
+  padding: 4rem 0;
+}
+
+:host([type="copy"]) .layout {
+  padding: 3rem 0;
+}
+
+:host([align="top"]) .layout {
+  align-items: flex-start;
+}
+
+:host([align="center"]) .layout {
+  align-items: center;
+}
+
+:host([align="baseline"]) .layout {
+  align-items: baseline;
+}
+
+:host([type="supporting-content-right"]) ::slotted(aside) {
+  order: 1;
+}
+
+:host ::slotted(*) {
+  min-width: 0;
+}
+
+@media (min-width: 700px) {
+  :host([type="sidebar-right"]) .layout {
+    grid-template-columns: 3fr 1fr;
+  }
+
+  :host([type="sidebar"]) .layout {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  :host([type="half"]) .layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  :host([type="supporting-content"]) .layout {
+    grid-template-columns: 6fr 4fr;
+  }
+
+  :host([type="supporting-content-right"]) .layout {
+    grid-template-columns: 4fr 6fr;
+  }
+
+  :host([type="supporting-content-right"]) ::slotted(aside) {
+    order: -1;
+  }
+}
+
+
+
+
+/*
+
+stellar-header + :host .layout {
+  padding-top: 3rem;
+}
+
+:host + :host .layout {
+  padding-top: 0;
+}
+
+main > :host:first-of-type > .layout {
+  padding-top: 0;
+}
+
+
+ */

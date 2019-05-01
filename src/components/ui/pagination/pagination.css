@@ -1,0 +1,168 @@
+:host, :host *, :host *:before, :host *:after {
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+  color: var(--color);
+  font-size: 1.6rem;
+  --color: var(--theme-base6);
+  --hover: var(--theme-base9);
+  text-align: center;
+}
+
+:host .pagination-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+:host .indicator {
+  position: absolute;
+  top: .2rem;
+  left: var(--indicator-left, 50%);
+  transition: all 220ms var(--ease) 0s;
+  width: 2.4rem;
+  height: 1.6rem;
+  margin-left: -0.125em;
+  background: var(--theme-base5);
+  z-index: 0;
+  border-radius: 100%;
+}
+
+:host stellar-blur[horizontal="0"] .indicator {
+  height: 2.4rem;
+  top: -0.2rem;
+}
+
+:host .pagination-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+:host a {
+  text-decoration: none;
+  border-radius: 100%;
+}
+
+:host a.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: var(--color);
+}
+
+:host a.icon:hover,
+:host a.icon:active {
+  color: var(--hover);
+}
+
+:host a.current-number:hover,
+:host a.current-number:active,
+:host a.current-number:focus {
+  color: white;
+}
+
+:host .ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.25rem;
+}
+
+:host .pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
+  position: relative;
+  transition: all 200ms var(--ease) 0s;
+}
+
+:host .number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: currentColor;
+  font-weight: 700;
+  transition: all 200ms var(--ease) 0ms;
+  margin: 1rem 0;
+  width: 0;
+  height: 0;
+  opacity: 1;
+  z-index: 1;
+  padding: 0;
+  transform: scale(0);
+}
+
+:host .number[data-visible="false"] {
+  transform: scale(0);
+}
+
+:host .number[data-visible] {
+  width: 2rem;
+  height: 2rem;
+  opacity: 1;
+  padding: 0;
+  margin: 0 0.25em;
+  transform: scale(1);
+}
+
+:host .number:hover,
+:host .number:active {
+  color: var(--hover);
+}
+
+:host .current-number {
+  margin: 1rem;
+  color: white;
+}
+
+:host .skip-button {
+  margin-left: 36px;
+  line-height: 0;
+}
+
+:host *[data-hidden=yes] {
+  display: none !important;
+}
+
+:host .compact-pagination-container {
+  display: flex;
+  align-items: baseline;
+}
+
+:host .compact-pagination-container stellar-input {
+  width: 5rem;
+  --padding: 0 1rem;
+  margin: 0 1rem;
+}
+
+:host stellar-blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+:host-context(.dark-mode):host a.number:hover,
+:host-context(.dark-mode):host a.number:active,
+:host-context(.dark-mode):host a.number:focus {
+  color: white;
+}
+
+:host-context(.dark-mode):host .current-number {
+  color: var(--gray9) !important;
+}
+
+:host-context(.dark-mode):host a.icon:hover,
+:host-context(.dark-mode):host a.icon:active,
+:host-context(.dark-mode):host a.icon:focus {
+  color: white;
+}

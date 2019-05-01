@@ -1,0 +1,23 @@
+stellar-360-image {
+  display: block;
+  position: relative;
+}
+
+stellar-360-image canvas {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+}
+
+stellar-360-image .overlay {
+  opacity: 0.3;
+  z-index: 3;
+  pointer-events: none;
+  background: var(--gradient, none);
+  mix-blend-mode: var(--blend, multiply);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

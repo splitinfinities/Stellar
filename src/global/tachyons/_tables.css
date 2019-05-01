@@ -1,0 +1,19 @@
+/*
+
+  TABLES
+  Docs: http://tachyons.io/docs/elements/tables/
+
+*/
+
+.collapse {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.striped--gray1:nth-child(odd) {
+  background-color: var(--gray1);
+}
+
+.striped--gray2:nth-child(odd) {
+  background-color: var(--gray2);
+}

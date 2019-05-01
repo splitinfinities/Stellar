@@ -1,0 +1,189 @@
+:host, :host *, :host *:before, :host *:after {
+  box-sizing: border-box;
+}
+
+:host {
+  --item-size: 2.356em;
+  --font-size: 1.4rem;
+  display: block;
+  width: 100%;
+  height: var(--item-size);
+  color: var(--theme-base9);
+  font-family: inherit;
+  visibility: visible !important;
+  font-size: var(--font-size);
+  text-align: left;
+  position: relative;
+}
+
+:host([fit]) {
+  --item-size: auto;
+}
+
+:host([fit]) a.button,
+:host([fit]) button.button,
+:host([fit]) stencil-route-link a {
+  padding: 1.4rem 0 1.4rem 1.4rem;
+}
+
+:host([wrap]) .button {
+  white-space: normal;
+  text-align: left;
+}
+
+:host([danger]) .button {
+  color: var(--red5);
+}
+
+:host a.button,
+:host button.button,
+:host stencil-route-link a {
+  text-decoration: none;
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  padding: 0 0 0 .6rem;
+  width: 100%;
+  height: calc(var(--item-size) - 1px);
+  color: currentColor;
+  font-weight: 500;
+  font-size: inherit;
+}
+
+:host stencil-route-link {
+  padding: 0;
+}
+
+:host .button a {
+  color: inherit;
+  background: inherit;
+  text-decoration: none;
+}
+
+:host .button ::slotted(stellar-avatar) {
+  /* flex: 0 0 var(--avatar-size); */
+  margin-right: .5rem;
+}
+
+:host .button ::slotted(stellar-avatar) {
+  background: var(--theme-base9);
+  visibility: visible !important;
+  display: block !important;
+  width: 2rem;
+  height: 2rem;
+}
+
+:host .button stellar-tag {
+  margin: auto 0.5rem auto auto;
+}
+
+:host .button stellar-asset {
+  margin-left: 1rem;
+}
+
+:host .button span {
+  margin: auto auto auto 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+:host([size="small"]) .button {
+  padding: 0 1rem;
+  height: 3rem;
+}
+
+:host .selected {
+  animation: fadeInLeft 200ms ease;
+  font-size: var(--item-size);
+  margin-left: auto !important;
+  background: transparent;
+  color: var(--theme-base5);
+  height: calc(var(--item-size) - 1px);
+}
+
+:host(:hover) .selected,
+:host(:focus) .selected,
+:host(:focus-within) .selected {
+  color: white;
+}
+
+:host([fit]) .selected {
+  position: absolute;
+  top: .625rem;
+  right: .25rem;
+  font-size: 3rem;
+}
+
+:host([fit][multiple]) .selected {
+  right: initial;
+}
+
+:host .button:focus,
+:host .button:hover,
+:host(:hover),
+:host(:focus-within) {
+  background: var(--theme-base1);
+}
+
+:host(.current) {
+  background: white
+}
+
+:host([danger]) .button:focus,
+:host([danger]) .button:hover  {
+  background: var(--red5);
+  color: white;
+}
+
+:host([simple]) .button {
+  background: white !important;
+}
+
+:host(.current) stellar-asset {
+  display: none;
+}
+
+:host stellar-asset.multiple {
+  border: 1px solid var(--border-color);
+  background: var(--background);
+  border-radius: 4px;
+  font-size: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 0 0 auto;
+  left: -1rem;
+  position: relative;
+  color: transparent;
+}
+
+:host stellar-asset.multiple.selected {
+  color: var(--theme-base5);
+}
+
+
+:host(.current) .button:focus,
+:host(.current) .button:hover,
+:host(.current:hover),
+:host(.current:focus-within) {
+  background: transparent;
+}
+
+:host-context(.dark-mode):host .button:focus,
+:host-context(.dark-mode):host .button:hover,
+:host-context(.dark-mode):host(:hover),
+:host-context(.dark-mode):host(:focus-within) {
+  background: var(--theme-base8);
+}
+
+:host-context(.dark-mode):host(.current) .button:focus,
+:host-context(.dark-mode):host(.current) .button:hover,
+:host-context(.dark-mode):host(.current:hover),
+:host-context(.dark-mode):host(.current:focus-within) {
+  background: transparent;
+}

@@ -1,0 +1,135 @@
+stellar-interview {
+  --width: 800px;
+  --height: 800px;
+  display: block;
+}
+
+stellar-interview div.card {
+  position: relative;
+  display: block;
+  width: auto;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+stellar-interview div.card section {
+  height: inherit;
+  display: block;
+  position: relative;
+  padding-top: 0 !important;
+}
+
+stellar-interview web-audio-visualizer[type="bars"] {
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+stellar-interview stellar-image,
+stellar-interview stellar-360-image,
+stellar-interview stellar-video,
+stellar-interview stellar-360-video {
+  --gradient: radial-gradient(circle at 30% 107%, var(--theme-base5) 0%, var(--theme-base8) 5%, var(--theme-complement8) 45%, var(--theme-complement5) 60%, var(--theme-base5) 90%);
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+stellar-interview stellar-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+stellar-interview stellar-progress .progress {
+  border: 0;
+}
+
+stellar-interview stellar-unit {
+  position: absolute;
+  bottom: 1rem;
+  z-index: 2;
+  color: white !important;
+  font-weight: 700;
+}
+
+stellar-interview stellar-unit.current {
+  left: 1rem;
+}
+
+stellar-interview stellar-unit.duration {
+  right: 1rem;
+}
+
+stellar-interview .transcript {
+  position: absolute;
+  bottom: 0;
+  width: 70%;
+  left: 15%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+stellar-interview .button {
+  position: absolute;
+  transition: all .35s var(--ease) 0s, background .175s var(--ease) 0s;
+  width: 9rem;
+  height: 9rem;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border-radius: 100%;
+  padding: 0;
+  border: 0;
+  z-index: 3;
+  appearance: none;
+  background: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  outline: 0;
+  cursor: pointer;
+  padding-left: 1rem;
+  mix-blend-mode: soft-light;
+}
+
+stellar-interview .button:hover,
+stellar-interview .button:focus {
+  transform: translate(50%, -50%) scale(1.1);
+  mix-blend-mode: hard-light;
+}
+
+stellar-interview .button stellar-asset {
+  font-size: 7rem;
+  margin: auto;
+  display: block;
+}
+
+stellar-interview .button.loading {
+  padding: 0;
+}
+
+stellar-interview .button.playing {
+  width: 2.8rem;
+  height: 2.8rem;
+  top: 2.2rem;
+  right: 1.8rem;
+  padding: 0;
+  background: transparent;
+  transition: all .35s var(--ease) 0s, background .175s var(--ease) 0s;
+}
+
+stellar-interview .button.playing stellar-asset {
+  font-size: 2.8rem;
+}

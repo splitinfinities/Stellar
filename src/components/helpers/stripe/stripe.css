@@ -1,0 +1,116 @@
+stellar-stripe {
+  display: block;
+}
+
+stellar-stripe .field {
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+stellar-stripe label {
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1.69;
+  color: #484849;
+  color: var(--gray5);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+stellar-stripe .input {
+  border: 1px solid var(--gray2);
+  border-radius: 4px;
+}
+
+stellar-stripe .input::-webkit-input-placeholder {
+  transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: transparent;
+}
+
+stellar-stripe .input::-moz-placeholder {
+  transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: transparent;
+}
+
+stellar-stripe .input:-ms-input-placeholder {
+  transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: transparent;
+}
+
+stellar-stripe .input.StripeElement {
+  display: flex;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
+}
+
+stellar-stripe .input.StripeElement > div {
+  width: 100%;
+}
+
+stellar-stripe .input.focused::-webkit-input-placeholder,
+stellar-stripe .input:not(.empty)::-webkit-input-placeholder {
+  color: var(--gray2);
+}
+
+stellar-stripe .input.focused::-moz-placeholder,
+stellar-stripe .input:not(.empty)::-moz-placeholder {
+  color: var(--gray2);
+}
+
+stellar-stripe .input.focused:-ms-input-placeholder,
+stellar-stripe .input:not(.empty):-ms-input-placeholder {
+  color: var(--gray2);
+}
+
+stellar-stripe .input.focused + label,
+stellar-stripe .input:not(.empty) + label {
+  cursor: default;
+  transform: scale(0.85) translateY(-25px);
+  color: #aab7c4;
+}
+
+stellar-stripe .input.focused + label {
+  color: #24b47e;
+}
+
+stellar-stripe .input.invalid + label {
+  color: #ffa27b;
+}
+
+stellar-stripe .input.focused + label + .baseline {
+  background-color: #24b47e;
+}
+
+stellar-stripe .input.focused.invalid + label + .baseline {
+  background-color: #e25950;
+}
+
+stellar-stripe .input input {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border-style: none;
+  -moz-appearance: none;
+}
+
+stellar-stripe .validation {
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: var(--red5);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+stellar-stripe .validation span {
+  display: block;
+  padding: 10px 0;
+  line-height: 1.4;
+}
+
+stellar-stripe .validation span + span {
+  border-top: 1px solid var(--gray1);
+}

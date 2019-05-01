@@ -1,0 +1,92 @@
+stellar-step {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  height: inherit;
+  position: relative;
+  text-decoration: none;
+  cursor: default;
+  margin-right: calc(-2rem + 2px);
+  clip-path: polygon(calc(100% - 2rem) 0%, 100% 50%, calc(100% - 2rem) 100%, 0% 100%, 2rem 50%, 0% 0%);
+}
+
+stellar-step button {
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  padding: 0;
+  border: 0;
+  position: relative;
+  background: var(--theme-base5);
+  cursor: pointer;
+}
+
+stellar-step button:hover,
+stellar-step button:focus {
+  background: var(--theme-base6);
+}
+
+stellar-step stellar-label {
+  margin: 0;
+  color: white;
+  z-index: 1;
+  position: relative;
+  transition: all 150ms ease 0s;
+}
+
+stellar-steps stellar-step:first-of-type {
+  clip-path: polygon(calc(100% - 2rem) 0%, 100% 50%, calc(100% - 2rem) 100%, 0% 100%, 0% 0%);
+}
+
+stellar-steps stellar-step:last-of-type {
+  clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 2rem 50%, 0% 0%);
+}
+
+stellar-step .title {
+  z-index: 1;
+}
+
+stellar-step .title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+stellar-step button::after {
+  content: "";
+  position: absolute;
+  width: 140%;
+  top: 0;
+  left: -30%;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0;
+  background: repeating-linear-gradient(45deg, var(--theme-base1), var(--theme-base1) 2rem, var(--theme-base2) 0, var(--theme-base2) 4rem);
+  mix-blend-mode: multiply;
+  animation: moveStripes 10s linear both infinite;
+}
+
+stellar-step[open] button::after {
+  opacity: 1;
+}
+
+stellar-step[open] stellar-label {
+  transform: scale(1.25);
+}
+
+@keyframes moveStripes {
+  from {
+   background-position-x: 0;
+  }
+
+  to {
+   background-position-x: 5.5rem;
+  }
+}

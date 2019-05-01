@@ -1,0 +1,66 @@
+:host, :host *, :host *:before, :host *:after {
+    box-sizing: border-box;
+}
+
+:host {
+	display: inline-flex;
+	align-items: stretch;
+	justify-content: center;
+	height: auto;
+}
+
+:host([fill]) {
+	display: flex;
+	width: 100%;
+}
+
+:host ::slotted(*) {
+	height: auto;
+}
+
+:host([fill]) ::slotted(*) {
+	width: 100%;
+}
+
+:host ::slotted(stellar-button),
+:host ::slotted(stellar-input),
+:host ::slotted(stellar-card) {
+	--border-radius: 0;
+	margin: 0;
+}
+
+:host ::slotted(*:nth-of-type(1)) {
+	margin-left: -1px !important;
+}
+
+:host ::slotted([emphasis]) {
+	transform: scale(1.05);
+	z-index: 1;
+}
+
+:host ::slotted(stellar-avatar) {
+	margin-left: 2px;
+	--drop-shadow: none;
+}
+
+:host ::slotted(stellar-avatar) {
+	position: relative;
+	margin-left: -0.5em;
+	--drop-shadow: .1em 0 0 white;
+	transition: all 100ms ease 0s;
+}
+
+:host([overflow]) > *:nth-of-type(1) { z-index: 10; }
+:host([overflow]) > *:nth-of-type(2) { z-index: 9; }
+:host([overflow]) > *:nth-of-type(3) { z-index: 8; }
+:host([overflow]) > *:nth-of-type(4) { z-index: 7; }
+:host([overflow]) > *:nth-of-type(5) { z-index: 6; }
+:host([overflow]) > *:nth-of-type(6) { z-index: 5; }
+:host([overflow]) > *:nth-of-type(7) { z-index: 4; }
+:host([overflow]) > *:nth-of-type(8) { z-index: 3; }
+:host([overflow]) > *:nth-of-type(9) { z-index: 2; }
+:host([overflow]) > *:nth-of-type(10) { z-index: 1; }
+
+:host stellar-group-overflow {
+	margin-left: 0.25em;
+}

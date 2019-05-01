@@ -1,0 +1,147 @@
+stellar-grid, stellar-grid *, stellar-grid *:before, stellar-grid *:after {
+    box-sizing: border-box;
+}
+
+stellar-grid {
+    display: block;
+    --grid-width: 200px;
+    --grid-gap: 2rem;
+}
+
+stellar-grid .grid {
+    position: relative;
+    display: flex;
+    display: grid;
+    flex-wrap: wrap;
+    grid-gap: var(--grid-gap);
+    grid-template-columns: repeat(auto-fit, minmax(var(--grid-width), 1fr));
+}
+
+stellar-grid[padding] .grid {
+    padding: var(--grid-gap);
+}
+
+/* Non-Responsive Grid */
+stellar-grid[responsive="false"] .grid {
+    grid-template-columns: repeat(auto-fit, minmax(var(--grid-width), 1fr));
+}
+
+stellar-grid[responsive="false"][cols="1"] .grid {
+    grid-template-columns: 1fr;
+}
+
+stellar-grid[responsive="false"][cols="2"] .grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+stellar-grid[responsive="false"][cols="3"] .grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+stellar-grid[responsive="false"][cols="4"] .grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+stellar-grid[responsive="false"][cols="5"] .grid {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+stellar-grid[responsive="false"][cols="6"] .grid {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+stellar-grid .grid .size-2 {
+    grid-column: auto / span 2;
+}
+
+stellar-grid .grid .size-3 {
+    grid-column: auto / span 3;
+}
+
+stellar-grid .grid .size-4 {
+    grid-column: auto / span 4;
+}
+
+stellar-grid .grid .size-5 {
+    grid-column: auto / span 5;
+}
+
+stellar-grid .grid .size-6 {
+    grid-column: auto / span 6;
+}
+
+stellar-grid .grid .height-2 {
+    grid-row: auto / span 2;
+}
+
+stellar-grid .grid .height-3 {
+    grid-row: auto / span 3;
+}
+
+stellar-grid .grid .height-4 {
+    grid-row: auto / span 4;
+}
+
+stellar-grid .grid .height-5 {
+    grid-row: auto / span 5;
+}
+
+stellar-grid .grid .height-6 {
+    grid-row: auto / span 6;
+}
+
+stellar-grid .sortableCards-move {
+    transition: transform cubic-bezier(0.22, 0.61, 0.36, 1) 500ms;
+    background-color: #f00;
+}
+stellar-grid .sortableCards-enter,
+stellar-grid .sortableCards-leave-to {
+    transition: 5s;
+    opacity: 0;
+}
+stellar-grid .draggable-source--is-dragging {
+    opacity: 0.6;
+    transform: scale(1.2)
+}
+stellar-grid .draggable-container--over {
+    animation: draggablePulseBg cubic-bezier(0.22, 0.61, 0.36, 1) 1500ms infinite;
+}
+stellar-grid .draggable-mirror {
+    display: none;
+}
+stellar-grid .draggable-source--placed {
+    animation: placedItem cubic-bezier(0.22, 0.61, 0.36, 1) 0.5s;
+}
+stellar-grid .sortableCards-enter-active,
+stellar-grid .sortableCards-leave-to {
+    opacity: 0;
+}
+stellar-grid .sortableCards-leave-active {
+    position: absolute;
+}
+
+@keyframes draggablePulseBg {
+    0% {
+        background-color: transparent;
+        outline: solid 0.1rem transparent;
+    }
+    35% {
+        background-color: rgba(0,0,0,0.05);
+        outline: solid 0.1rem rgba(0,0,0,0.1);
+    }
+    100% {
+        background-color: transparent;
+        outline: solid 0.1rem transparent;
+    }
+}
+
+@keyframes placedItem {
+    from {
+        transform: scale(1.065);
+        box-shadow: 0 0.25rem 2rem rgba(0,0,0,0.25), 0 0.1rem 0.5rem rgba(0,0,0,0.15);
+    }
+    to {
+        transform: scale(1);
+        box-shadow: 0 0.4rem 3rem rgba(0,0,0,0.35), 0 0.1rem 0.5rem rgba(0,0,0,0.2);
+    }
+}

@@ -1,0 +1,225 @@
+:host, :host *, :host *:before, :host *:after {
+    box-sizing: border-box;
+}
+
+:host {
+    appearance: none;
+    -webkit-appearance: none !important;
+    display: block;
+    background: var(--background);
+    border-radius: var(--border-radius);
+    height: 100%;
+
+    --border: 1px solid var(--gray1);
+    --background: var(--white);
+    --flipped-background: var(--white);
+    --flipped-min-height: var(--flipped-min-height, 20rem);
+    --border-radius: var(--border-radius-sm);
+    --padding: 3rem;
+    --min-height: 10rem;
+    --card-width: auto;
+}
+
+:host([tag="a"]) {
+    background: transparent;
+}
+
+:host([padding="small"]) {
+    --padding: 1rem;
+}
+
+:host([padding="medium"]) {
+    --padding: 2rem;
+}
+
+:host([padding="large"]) {
+    --padding: 4rem;
+}
+
+:host .wrap {
+    appearance: none;
+    -webkit-appearance: none !important;
+    display: block;
+    border: var(--border);
+    width: var(--card-width);
+    height: 100%;
+    text-decoration: none;
+    outline: none;
+    display: grid;
+    padding: 0;
+    grid-template-columns: var(--padding) 1fr var(--padding);
+    grid-template-rows: auto var(--padding) 1fr var(--padding) auto;
+    grid-template-areas: "header header header"
+    ". . ."
+    ". section ."
+    ". . ."
+    "footer footer footer";
+    border-radius: var(--border-radius);
+    min-height: var(--min-height);
+}
+
+:host([flippable]) .wrap .front,
+:host([flippable]) .wrap .back {
+    height: auto;
+    display: grid;
+    padding: 0;
+    grid-template-columns: var(--padding) 1fr var(--padding);
+    grid-template-rows: auto var(--padding) 1fr var(--padding) auto;
+    grid-template-areas: "header header header"
+    ". . ."
+    ". section ."
+    ". . ."
+    "footer footer footer";
+    min-height: var(--min-height);
+}
+
+:host .wrap ::slotted(*),
+:host .wrap ::slotted(section) {
+    grid-area: section;
+    max-width: calc(var(--card-width) - (var(--padding) * 2));
+}
+
+:host .wrap ::slotted(header) {
+    padding: 1rem var(--padding);
+    border-bottom: var(--border);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    grid-area: header !important;
+    width: calc(var(--card-width) - 2px);
+    max-width: calc(var(--card-width) - 2px);
+}
+
+:host .wrap ::slotted(header.subhead) {
+    background: var(--theme-base7);
+}
+
+:host .wrap ::slotted(header.sticky) {
+    position: sticky;
+    top: 0;
+    z-index: 999999;
+}
+
+:host .wrap ::slotted(footer) {
+    grid-area: footer !important;
+    padding: 1rem var(--padding);
+    border-top: var(--border);
+    width: calc(var(--card-width) - 2px);
+    max-width: calc(var(--card-width) - 2px);
+}
+
+:host([has*="header"][has*="footer"]) {
+    grid-template-columns: 1rem auto 1rem;
+    grid-template-rows: 1fr auto 1fr;
+}
+
+:host stencil-route-link.wrap a {
+    text-decoration: none;
+}
+
+:host button.wrap:active,
+:host a.wrap:active,
+:host stencil-route-link.wrap:active {
+    background: var(--theme-base0);
+}
+
+:host([shadow="light"]) {
+    box-shadow: 0 .8rem 3rem -2rem var(--gray1);
+}
+
+:host([shadow="heavy"]) {
+    box-shadow: 0 .8rem 3rem -1rem var(--gray1);
+}
+
+:host([rounded="true"]) {
+    border-radius: 1rem;
+}
+
+
+:host([flippable]) {
+    perspective: 3000px;
+    background: transparent;
+}
+
+:host([flippable]) .wrap {
+    display: block;
+    /* transform-style: preserve-3d; */
+    background: var(--background);
+    transition: all 0.5s var(--ease, ease-in-out) 0s, background-color 0s ease 0s;
+}
+
+:host([flippable]) .wrap .front {
+    transition: min-height 0.35s linear 0s, opacity 0.15s linear 0.3s !important;
+    backface-visibility: hidden;
+    z-index: 1;
+    opacity: 1;
+    height: 100%;
+}
+
+:host([flippable]) .wrap .back * {
+    backface-visibility: hidden;
+}
+
+:host([flippable]) .wrap .back {
+    transition: min-height 0.35s linear 0s, opacity 0.15s linear 0.0s !important;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    transform: rotateY(180deg);
+    overflow-y: none;
+    pointer-events: none;
+    opacity: 0;
+}
+
+:host([flippable][flipped]) .wrap .front {
+    transition: min-height 0.35s linear 0s, opacity 0.15s linear 0s !important;
+}
+
+:host([flippable][flipped]) .wrap .back {
+    transition: min-height 0.35s linear 0s, opacity 0.15s linear 0.3s !important;
+}
+
+:host([flippable]) .wrap .flip-button {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    z-index: 1;
+    transform: translateZ(1px)
+}
+
+:host([flippable][flipped]) {
+    --background: var(--flipped-background, white) !important;
+    --min-height: var(--flipped-min-height) !important;
+    z-index: 1;
+}
+
+:host([flippable][flipped]) .wrap {
+    transform: rotateY(180deg);
+}
+
+:host([flippable][flipped]) .wrap .flip-button {
+    transform: translateZ(-1px)
+}
+
+:host([flippable][flipped]) .wrap .front,
+:host([flippable][flipped]) .wrap .back {
+    min-height: var(--min-height);
+}
+
+:host([flippable][flipped]) .wrap .front {
+    pointer-events: none;
+    opacity: 0;
+}
+
+:host([flippable][flipped]) .wrap .back {
+    pointer-events: initial;
+    overflow-y: initial;
+    opacity: 1;
+}
+
+:host-context(.dark-mode) {
+    --border: 1px solid var(--gray8);
+    --background: var(--gray9);
+    --flipped-background: var(--gray9);
+}
