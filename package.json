@@ -1,6 +1,6 @@
 {
   "name": "@stellar-design/core",
-  "version": "1.0.0-4",
+  "version": "1.0.0-5",
   "description": "A Beautiful, Complete Design System",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
