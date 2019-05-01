@@ -6,4 +6,7 @@ www/*
 src/global/images/_images/*
 src/global/video/_video/*
 src/global/audio/_audio/*
+dist/collection/global/images/_images/*
+dist/collection/global/images/_video/*
+dist/collection/global/images/_audio/*
 screenshot/*
