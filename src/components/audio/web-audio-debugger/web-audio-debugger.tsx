@@ -1,4 +1,4 @@
-import { Component, State, Prop, Method } from '@stencil/core';
+import { Component, State, Prop, Method, h } from '@stencil/core';
 
 @Component({
   tag: 'web-audio-debugger',
@@ -12,7 +12,7 @@ export class WebAudioDebugger {
   @Prop() count: number = 50;
 
   @Method()
-  addHistory(string: History) {
+  async addHistory(string: History) {
     let our_history = [
       string,
       ...this.history

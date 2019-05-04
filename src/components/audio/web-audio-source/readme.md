@@ -20,142 +20,136 @@
 
 ## Events
 
-| Event        | Description | Type                |
-| ------------ | ----------- | ------------------- |
-| `timeupdate` |             | `CustomEvent<void>` |
+| Event        | Description | Type               |
+| ------------ | ----------- | ------------------ |
+| `timeupdate` |             | `CustomEvent<any>` |
 
 
 ## Methods
 
-### `assignBuffer(webAudio: any, buffer: any) => void`
-
-
-
-#### Parameters
-
-| Name       | Type  | Description |
-| ---------- | ----- | ----------- |
-| `webAudio` | `any` |             |
-| `buffer`   | `any` |             |
-
-#### Returns
-
-Type: `void`
-
-
-
-### `gain(place?: string) => GainNode`
-
-
-
-#### Parameters
-
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `place` | `string` |             |
-
-#### Returns
-
-Type: `GainNode`
-
-
-
-### `getBuffer() => AudioBuffer`
+### `assignBuffer(webAudio: any, buffer: any) => Promise<void>`
 
 
 
 #### Returns
 
-Type: `AudioBuffer`
+Type: `Promise<void>`
 
 
 
-### `getDuration() => number`
-
-
-
-#### Returns
-
-Type: `number`
-
-
-
-### `pause() => void`
+### `gain(place?: string) => Promise<GainNode>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<GainNode>`
 
 
 
-### `play() => void`
-
-
-
-#### Returns
-
-Type: `void`
-
-
-
-### `prepare() => void`
+### `getBuffer() => Promise<AudioBuffer>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<AudioBuffer>`
 
 
 
-### `skipTo(time: any) => void`
-
-
-
-#### Parameters
-
-| Name   | Type  | Description |
-| ------ | ----- | ----------- |
-| `time` | `any` |             |
-
-#### Returns
-
-Type: `void`
-
-
-
-### `stop() => void`
+### `getDuration() => Promise<number>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<number>`
 
 
 
-### `toggle() => void`
-
-
-
-#### Returns
-
-Type: `void`
-
-
-
-### `webAudio() => HTMLElement`
+### `pause() => Promise<void>`
 
 
 
 #### Returns
 
-Type: `HTMLElement`
+Type: `Promise<void>`
 
 
 
+### `play() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `prepare() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `skipTo(time: any) => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `stop() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `toggle() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `webAudio() => Promise<HTMLElement>`
+
+
+
+#### Returns
+
+Type: `Promise<HTMLElement>`
+
+
+
+
+## Dependencies
+
+### Used by
+
+ - [stellar-interview](../../media/interview)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-interview --> web-audio-source
+  style web-audio-source fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

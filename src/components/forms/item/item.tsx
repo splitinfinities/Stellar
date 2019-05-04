@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method, Event, EventEmitter} from '@stencil/core';
+import { Component, Prop, State, Element, Method, Event, EventEmitter, h} from '@stencil/core';
 import { RouterHistory, LocationSegments, injectHistory } from '@stencil/router';
 
 
@@ -117,7 +117,7 @@ export class Item {
   }
 
   @Method()
-  select_item(state?: {selected: boolean}) {
+  async select_item(state?: {selected: boolean}) {
     if (this.selectable) {
       if (state) {
         if (this.selected !== state.selected) {

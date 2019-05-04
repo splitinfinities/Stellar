@@ -41,17 +41,17 @@ export class WebAudioSource {
   @Event() timeupdate: EventEmitter;
 
   @Method()
-  getBuffer() {
+  async getBuffer() {
     return this.buffer;
   }
 
   @Method()
-  webAudio() {
+  async webAudio() {
     return this.webAudioWrapper;
   }
 
   @Method()
-  gain(place: string = "wet") {
+  async gain(place: string = "wet") {
     if (place === "wet") {
       return this.wetGain;
     } else if (place === "dry") {
@@ -62,7 +62,7 @@ export class WebAudioSource {
   }
 
   @Method()
-  getDuration() {
+  async getDuration() {
     return this.duration
   }
 
@@ -85,7 +85,7 @@ export class WebAudioSource {
   };
 
   @Method()
-  prepare () {
+  async prepare () {
     if (!this.inert) {
       this.source = this.context.createBufferSource();
 
@@ -109,7 +109,7 @@ export class WebAudioSource {
   }
 
   @Method()
-  play() {
+  async play() {
     if (!this.inert) {
       this.prepare();
 
@@ -129,14 +129,14 @@ export class WebAudioSource {
   }
 
   @Method()
-  skipTo (time) {
+  async skipTo (time) {
     this.stop();
     this.pausedTime = time / 1000
     this.play();
   }
 
   @Method()
-  pause () {
+  async pause () {
     this.elapsedTime = this.context.currentTime - this.startTime;
     this.stop();
     this.pausedTime = this.elapsedTime;
@@ -144,7 +144,7 @@ export class WebAudioSource {
   }
 
   @Method()
-  toggle () {
+  async toggle () {
     if (this.playing) {
       this.pause()
     } else {
@@ -153,7 +153,7 @@ export class WebAudioSource {
   }
 
   @Method()
-  stop () {
+  async stop () {
     if (this.source) {
       this.source.disconnect();
       this.source.stop();
@@ -177,7 +177,7 @@ export class WebAudioSource {
   }
 
   @Method()
-  assignBuffer (webAudio, buffer) {
+  async assignBuffer (webAudio, buffer) {
     this.webAudioWrapper = webAudio.element;
     this.context = webAudio.context;
     this.buffer = buffer;
@@ -186,7 +186,7 @@ export class WebAudioSource {
       this.masterGain = webAudio.gain;
       this.channelGain = this.context.createGain();
 
-      this.prepareEffects();
+      await this.prepareEffects();
 
       if (Object.keys(this.effects).length > 0) {
         // Make the source and gain
@@ -212,12 +212,12 @@ export class WebAudioSource {
     }
   }
 
-  prepareEffects () {
+  async prepareEffects () {
     if (this.element.parentElement.nodeName !== "WEB-AUDIO") {
       let element: any = this.element.parentElement;
 
       while (element.nodeName !== "WEB-AUDIO") {
-        this.effects[element.getAttribute("name")] = element.attachEffect(this.context, this.element);
+        this.effects[element.getAttribute("name")] = await element.attachEffect(this.context, this.element);
         element = element.parentElement;
       }
     }

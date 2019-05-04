@@ -20,10 +20,24 @@
 
 ## Events
 
-| Event           | Description | Type                |
-| --------------- | ----------- | ------------------- |
-| `contentChange` |             | `CustomEvent<void>` |
+| Event           | Description | Type               |
+| --------------- | ----------- | ------------------ |
+| `contentChange` |             | `CustomEvent<any>` |
 
+
+## Dependencies
+
+### Depends on
+
+- [stellar-tag](../tag)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-tab --> stellar-tag
+  stellar-tag --> stellar-label
+  style stellar-tab fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

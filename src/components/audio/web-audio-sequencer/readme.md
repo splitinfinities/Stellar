@@ -18,23 +18,23 @@
 
 ## Methods
 
-### `play() => void`
+### `play() => Promise<void>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
-### `stop() => void`
+### `stop() => Promise<void>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 

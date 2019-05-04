@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method } from '@stencil/core'
+import { Component, Prop, State, Element, Method, h } from '@stencil/core'
 
 @Component({
   tag: 'stellar-steps',
@@ -14,7 +14,7 @@ export class Steps {
   @State() contentsList: Array<HTMLStellarContentElement>
 
   @Method()
-  steps() {
+  async steps() {
     if (!this.stepsList || this.stepsList.length === 0) {
       this.stepsList = Array.from(this.element.querySelectorAll('stellar-step'))
     }
@@ -23,17 +23,17 @@ export class Steps {
   }
 
   @Method()
-  contents() {
+  async contents() {
     this.contentsList = Array.from(document.querySelectorAll(`stellar-content[for='${this.name}']`));
     return this.contentsList;
   }
 
-  componentWillLoad () {
-    this.steps()
+  async componentWillLoad () {
+    const steps = await this.steps()
 
-    const stepCount = this.steps().length;
+    const stepCount = steps.length;
 
-    this.steps().forEach((step, index) => {
+    steps.forEach((step, index) => {
       step.order = index + 1;
       step.tabCount = stepCount;
     })

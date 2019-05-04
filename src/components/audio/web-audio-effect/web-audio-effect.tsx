@@ -30,10 +30,11 @@ export class WebAudioEffect {
   @State() parent: WebAudioEffect | WebAudio;
 
   @Method()
-  attachEffect (context, source) {
+  async attachEffect (context, source) {
     this.context = context;
     this.source = source;
-    this._use = source.webAudio().querySelector(`web-audio-source[name=${this.use}]`)
+    const webaudio = await source.webAudio()
+    this._use = webaudio.querySelector(`web-audio-source[name=${this.use}]`)
 
     if (assert(this.type, `"${this.type}" is not a valid effect - Routing around to masterGain."`)) {
       if (this.type === "panner") {
@@ -42,7 +43,7 @@ export class WebAudioEffect {
         // make a AudioListener
       } else if (this.type === "reverb") {
         // make a ConvolverNode
-        this.effect = buildReverbNode(this.context, this);
+        this.effect = await buildReverbNode(this.context, this);
       } else if (this.type === "filter") {
         // make a BiquadFilterNode
         this.effect = buildBiquadFilterNode(this.context, this);

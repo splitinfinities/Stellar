@@ -84,6 +84,20 @@
 | `type`     | `type`     |             | `"alert" \| "error" \| "info" \| "success"` | `undefined` |
 
 
+## Dependencies
+
+### Depends on
+
+- [stellar-asset](../asset)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-message --> stellar-asset
+  stellar-asset --> ion-icon
+  style stellar-message fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

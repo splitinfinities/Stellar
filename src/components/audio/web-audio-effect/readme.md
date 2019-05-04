@@ -20,20 +20,13 @@
 
 ## Methods
 
-### `attachEffect(context: any, source: any) => string`
+### `attachEffect(context: any, source: any) => Promise<string>`
 
 
-
-#### Parameters
-
-| Name      | Type  | Description |
-| --------- | ----- | ----------- |
-| `context` | `any` |             |
-| `source`  | `any` |             |
 
 #### Returns
 
-Type: `string`
+Type: `Promise<string>`
 
 
 

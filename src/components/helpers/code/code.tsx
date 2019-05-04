@@ -1,4 +1,4 @@
-import { Component, Element, State, Prop, Method } from '@stencil/core';
+import { Component, Element, State, Prop, Method, h } from '@stencil/core';
 import Prism from 'prismjs';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.js';
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js';
@@ -58,7 +58,7 @@ export class Code {
   }
 
   @Method()
-  highlight() {
+  async highlight() {
     var block = this.element.shadowRoot.querySelector('code');
     Prism.highlightElement(block, false);
   }
@@ -79,7 +79,7 @@ export class Code {
   }
 
   @Method()
-  setCode(code) {
+  async setCode(code) {
     this.code = code
   }
 

@@ -26,42 +26,49 @@ Type: `Promise<boolean>`
 
 
 
-### `get_context() => AudioContext`
+### `get_context() => Promise<AudioContext>`
 
 
 
 #### Returns
 
-Type: `AudioContext`
+Type: `Promise<AudioContext>`
 
 
 
-### `is_prepared() => Boolean`
+### `is_prepared() => Promise<Boolean>`
 
 
 
 #### Returns
 
-Type: `Boolean`
+Type: `Promise<Boolean>`
 
 
 
-### `source(name: any) => any`
+### `source(name: any) => Promise<any>`
 
 
-
-#### Parameters
-
-| Name   | Type  | Description |
-| ------ | ----- | ----------- |
-| `name` | `any` |             |
 
 #### Returns
 
-Type: `any`
+Type: `Promise<any>`
 
 
 
+
+## Dependencies
+
+### Used by
+
+ - [stellar-interview](../../media/interview)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-interview --> web-audio
+  style web-audio fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

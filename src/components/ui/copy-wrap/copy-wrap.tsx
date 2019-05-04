@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'copy-wrap',
@@ -10,8 +10,6 @@ export class CopyWrap {
   @Prop({reflectToAttr: true}) full: boolean = false;
 
   render () {
-    return (
-      <slot />
-    );
+    return <slot />;
   }
 }

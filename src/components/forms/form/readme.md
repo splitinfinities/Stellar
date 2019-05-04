@@ -22,9 +22,9 @@
 
 ## Events
 
-| Event    | Description | Type                |
-| -------- | ----------- | ------------------- |
-| `submit` |             | `CustomEvent<void>` |
+| Event    | Description | Type               |
+| -------- | ----------- | ------------------ |
+| `submit` |             | `CustomEvent<any>` |
 
 
 ## Methods
@@ -42,12 +42,6 @@ Type: `Promise<void>`
 ### `register(selectors: string[]) => Promise<void>`
 
 
-
-#### Parameters
-
-| Name        | Type       | Description |
-| ----------- | ---------- | ----------- |
-| `selectors` | `string[]` |             |
 
 #### Returns
 

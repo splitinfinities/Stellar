@@ -1,4 +1,4 @@
-import { Component, Element, State, Prop, Method, Watch } from '@stencil/core';
+import { Component, Element, State, Prop, Method, Watch, h } from '@stencil/core';
 import Highcharts from 'highcharts'
 import Data from 'highcharts/modules/data';
 import merge from 'deepmerge';
@@ -45,7 +45,7 @@ export class Chart {
   }
 
   @Method()
-  options(newOptions: any) {
+  async options(newOptions: any) {
     this.__options = {
       ...this.__options,
       chart: {
@@ -71,12 +71,12 @@ export class Chart {
   }
 
   @Method()
-  get_options() {
+  async get_options() {
     return this.__options
   }
 
   @Method()
-  refresh() {
+  async refresh() {
     this.__chart = this.element.shadowRoot.querySelector('.highchart');
     if (this.__chart) {
       this.__highchart = Highcharts.chart(this.__chart, this.__options);

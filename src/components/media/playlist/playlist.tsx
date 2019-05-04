@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method, Listen } from '@stencil/core';
+import { Component, Prop, State, Element, Method, Listen, h } from '@stencil/core';
 import { asTime } from '../../../utils'
 
 @Component({
@@ -9,7 +9,6 @@ import { asTime } from '../../../utils'
 export class Playlist {
   @Element() element: HTMLElement;
 
-  @Prop() title: string = "title";
   @Prop() dark: Boolean = false;
   @Prop() autoplay: boolean = false;
   @State() current: number = 0;
@@ -100,19 +99,15 @@ export class Playlist {
     this.audio.addEventListener('ended', this.next.bind(this));
   }
 
-  @Listen('keydown.space')
-  handleSpacebarKey() {
-    this.pause();
-  }
-
-  @Listen('keydown.left')
-  handleLeftKey() {
-    this.previous();
-  }
-
-  @Listen('keydown.right')
-  handleRightKey() {
-    this.next();
+  @Listen('keydown')
+  handleKeydown(event) {
+    if (event.key === "space") {
+      this.pause();
+    } else if (event.key === "left") {
+      this.previous();
+    } else if (event.key === "right") {
+      this.next();
+    }
   }
 
   loadFromStorage() {
@@ -132,7 +127,7 @@ export class Playlist {
   }
 
   @Method()
-  prepare (element) {
+  async prepare (element) {
     if (this.currentPlaylistItem) {
       this.currentPlaylistItem.switching();
     }
@@ -140,21 +135,20 @@ export class Playlist {
     this.currentPlaylistItem = element;
     this.audio.src = this.currentPlaylistItem.src;
     this.audio.load();
-    this.current = this.currentPlaylistItem.getIndex();
+    this.current = await this.currentPlaylistItem.getIndex();
     this.currentPlaylistItem.playing = true;
-
-    this.currentTrack = this.currentPlaylistItem.details();
+    this.currentTrack = await this.currentPlaylistItem.details();
   }
 
   @Method()
-  play () {
+  async play () {
     this.playing = true;
     this.audio.play();
 
     if (!this.context) {
       var context = new AudioContext();
       const src = context.createMediaElementSource(this.audio);
-      const waanalyser = this.visualizer.connect(context);
+      const waanalyser = await this.visualizer.connect(context);
       src.connect(waanalyser.analyser);
       waanalyser.analyser.connect(context.destination);
       this.context = context;
@@ -162,7 +156,7 @@ export class Playlist {
   }
 
   @Method()
-  pause () {
+  async pause () {
     if (!this.audio.paused) {
       this.playing = false;
       this.audio.pause();
@@ -173,7 +167,7 @@ export class Playlist {
   }
 
   @Method()
-  next() {
+  async next() {
     var song;
 
     song = this.element.querySelector('stellar-song[playing]');
@@ -188,7 +182,7 @@ export class Playlist {
   }
 
   @Method()
-  previous() {
+  async previous() {
     var song;
 
     song = this.element.querySelector('stellar-song[playing]');
@@ -226,7 +220,7 @@ export class Playlist {
     return (
       <div id="player">
         <div class="playlist-title">
-          <h6>{this.title}</h6>
+          <slot name="title"><h6>Playlist</h6></slot>
           <button class="playlist" onClick={ () => this.togglePlaylist() }>
             <h6 class="list">
               <stellar-asset name="musical-notes"></stellar-asset>

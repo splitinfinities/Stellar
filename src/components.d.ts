@@ -5,146 +5,97 @@
  */
 
 
-import '@stencil/core';
-
-import 'ionicons';
-import '@stencil/router';
-import '@stencil/state-tunnel';
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
+import { JSX } from '@stencil/core';
+import {
+  HighchartsModel,
+} from './components/helpers/chart/options';
 import {
   LocationSegments,
   RouterHistory,
 } from '@stencil/router';
-import {
-  HighchartsModel,
-} from './components/helpers/chart/options';
 
 
 export namespace Components {
-
-  interface WebAudioDebugger {
-    'addHistory': (string: History) => void;
-    'count': number;
+  interface CopyWrap {
+    'align': string;
+    'full': boolean;
   }
-  interface WebAudioDebuggerAttributes extends StencilHTMLAttributes {
-    'count'?: number;
-  }
-
-  interface WebAudioEffect {
-    'attachEffect': (context: any, source: any) => string;
-    'axis': string;
-    'method': string;
-    'midicontroller': number;
-    'responds': string;
-    'type': string;
-    'use': string;
-    'value': number;
-  }
-  interface WebAudioEffectAttributes extends StencilHTMLAttributes {
-    'axis'?: string;
-    'method'?: string;
-    'midicontroller'?: number;
-    'responds'?: string;
-    'type'?: string;
-    'use'?: string;
-    'value'?: number;
-  }
-
-  interface WebAudioSequencer {
-    'autoplay': boolean;
-    'custom': Function;
-    'name': string;
-    'play': () => void;
-    'stop': () => void;
-    'taps': number;
-    'tempo': number;
-  }
-  interface WebAudioSequencerAttributes extends StencilHTMLAttributes {
-    'autoplay'?: boolean;
-    'custom'?: Function;
-    'name'?: string;
-    'taps'?: number;
-    'tempo'?: number;
-  }
-
-  interface WebAudioSource {
-    'assignBuffer': (webAudio: any, buffer: any) => void;
-    'effectsvolume': number;
-    'gain': (place?: string) => GainNode;
-    'getBuffer': () => AudioBuffer;
-    'getDuration': () => number;
-    'inert': boolean;
-    'midichannel': number;
-    'midikey': number;
-    'name': string;
-    'pause': () => void;
-    'play': () => void;
-    'playing': boolean;
-    'prepare': () => void;
-    'skipTo': (time: any) => void;
-    'src': string;
-    'stop': () => void;
-    'toggle': () => void;
-    'webAudio': () => HTMLElement;
-  }
-  interface WebAudioSourceAttributes extends StencilHTMLAttributes {
-    'effectsvolume'?: number;
-    'inert'?: boolean;
-    'midichannel'?: number;
-    'midikey'?: number;
-    'name'?: string;
-    'onTimeupdate'?: (event: CustomEvent) => void;
-    'playing'?: boolean;
-    'src'?: string;
-  }
-
-  interface WebAudioVisualizerShader {
-    'type': string;
-  }
-  interface WebAudioVisualizerShaderAttributes extends StencilHTMLAttributes {
-    'type'?: string;
-  }
-
-  interface WebAudioVisualizer {
-    'analyser': AnalyserNode;
-    'color': string;
-    'connect': (context: AudioContext, destination?: any) => this;
-    'for': string;
+  interface SkeletonImg {
     'height': number;
-    'renderer': AnalyserNode;
-    'size': number;
-    'smoothing': number;
-    'tag': HTMLAudioElement;
-    'type': string|"wave"|"bars"|"webgl";
+    'icon': boolean;
+    'loading': boolean;
     'width': number;
   }
-  interface WebAudioVisualizerAttributes extends StencilHTMLAttributes {
-    'analyser'?: AnalyserNode;
-    'color'?: string;
-    'for'?: string;
-    'height'?: number;
-    'renderer'?: AnalyserNode;
-    'size'?: number;
-    'smoothing'?: number;
-    'tag'?: HTMLAudioElement;
-    'type'?: string|"wave"|"bars"|"webgl";
-    'width'?: number;
+  interface SkeletonText {
+    'as': string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p';
+    'loading': boolean;
+    'width': number;
   }
-
-  interface WebAudio {
-    'autoplay': Boolean;
-    'connect_the_world': () => Promise<boolean>;
-    'get_context': () => AudioContext;
-    'is_prepared': () => Boolean;
-    'midi': Boolean;
+  interface Stellar360Image {
+    'height': number;
+    'poster': string;
+    'src': string;
+    'width': number;
+  }
+  interface Stellar360Video {
+    'height': number;
+    'poster': string;
+    'src': string;
+    'width': number;
+  }
+  interface StellarAccordion {
+    'label': string;
     'name': string;
-    'source': (name: any) => any;
+    'open': boolean;
+    'refresh': () => Promise<void>;
+    'tight': boolean;
   }
-  interface WebAudioAttributes extends StencilHTMLAttributes {
-    'autoplay'?: Boolean;
-    'midi'?: Boolean;
-    'name'?: string;
+  interface StellarAnimateText {
+    'method': string|"glitch"|"lettering"|"weight"|"fade";
   }
-
+  interface StellarAsset {
+    'align': string;
+    'ariaLabel': string;
+    'block': boolean;
+    'language': string;
+    'name': string;
+    'src': string;
+  }
+  interface StellarAssetLibrary {}
+  interface StellarAvatar {
+    'color': string;
+    'initials': string;
+    'name': string;
+    'processing': boolean;
+    'shape': "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
+    'size': string;
+    'src': string;
+    'tooltip': boolean;
+  }
+  interface StellarBlur {
+    'horizontal': number;
+    'setBlurFilter': () => Promise<void>;
+    'vertical': number;
+  }
+  interface StellarBreadcrumb {
+    'color': string;
+    'disabled': boolean;
+    'first': boolean;
+    'href': string;
+    'label': string;
+    'last': boolean;
+    'target': string;
+  }
+  interface StellarBreadcrumbs {
+    'color': string;
+    'description': string;
+    'home': string;
+    'icon': string;
+    'icon_size': number;
+    'icon_src': string;
+    'label': string;
+  }
   interface StellarButton {
     /**
     * Sets the button or link as an active state.
@@ -220,7 +171,732 @@ export namespace Components {
     */
     'value': string;
   }
-  interface StellarButtonAttributes extends StencilHTMLAttributes {
+  interface StellarCallout {
+    'type': "alert"|"error"|"info"|"success"|"default";
+  }
+  interface StellarCard {
+    'flip_card': (e?: UIEvent) => Promise<void>;
+    /**
+    * Sets the href on the anchor tag if the button is a link.
+    */
+    'flip_icon': string;
+    /**
+    * Let's a card be flippable
+    */
+    'flippable': boolean;
+    /**
+    * Renders a flipped card
+    */
+    'flipped': boolean;
+    /**
+    * Sets the href on the anchor tag if the button is a link.
+    */
+    'for': string;
+    /**
+    * Sets the href if the card is a link.
+    */
+    'href': string;
+    /**
+    * Sets the name if the card is a button.
+    */
+    'name': string;
+    /**
+    * Sets the padding inside of the button. Can be small, medium, or large.
+    */
+    'padding': string|"small"|"medium"|"large";
+    /**
+    * Renders a shadow on the card
+    */
+    'shadow': string|"light"|"medium"|"heavy";
+    /**
+    * Sets the element to render the card as - an anchor tag, a button, or a div.
+    */
+    'tag': "stencil-route-link"|"a"|"button"|"div";
+    'transition': boolean;
+    /**
+    * Sets the element to render the card as - an anchor tag, a button, or a div.
+    */
+    'type': string;
+    /**
+    * Sets the value if the card is a button.
+    */
+    'value': string;
+  }
+  interface StellarChart {
+    'config': HighchartsModel;
+    'for': string;
+    'get_options': () => Promise<any>;
+    'options': (newOptions: any) => Promise<void>;
+    'refresh': () => Promise<void>;
+    'remote': string;
+    'type': "area"|"areaspline"|"bar"|"bubble"|"column"|"line"|"pie"|"polygon"|"scatter"|"spline"|"waterfall";
+  }
+  interface StellarCode {
+    'clipboard': () => Promise<void>;
+    'codeString': string;
+    'copy': boolean;
+    'expandable': boolean;
+    'expanded': boolean;
+    'feature': boolean;
+    'highlight': () => Promise<void>;
+    'language': string;
+    'preview': boolean;
+    'result': () => Promise<string>;
+    'setCode': (code: any) => Promise<void>;
+    'simple': boolean;
+  }
+  interface StellarColorLibrary {}
+  interface StellarColorPicker {
+    'val': string;
+  }
+  interface StellarComment {
+    'content': any;
+    'name': any;
+  }
+  interface StellarComments {}
+  interface StellarContent {
+    'behavior': string;
+    'for': string;
+    'open': boolean;
+  }
+  interface StellarDropdown {
+    'icon': boolean;
+    'label': string;
+    'open': boolean;
+    'position': "left"|"center"|"right";
+  }
+  interface StellarForm {
+    'acceptCharset': string;
+    'action': string;
+    'ajax': boolean;
+    'autocomplete': string;
+    'enctype': string;
+    'method': string;
+    'name': string;
+    'novalidate': boolean;
+    'refresh': () => Promise<void>;
+    'register': (selectors: string[]) => Promise<void>;
+    'state': () => Promise<{ els: any; json: any; results: FormResult[]; formData: any; valid: boolean; }>;
+    'submit_form': () => Promise<void>;
+    'target': string;
+  }
+  interface StellarGrid {
+    'align': string;
+    'cols': number|string;
+    'compact': boolean;
+    'padding': boolean;
+    'refresh': () => Promise<void>;
+    'responsive': boolean|string;
+    'swappable': boolean;
+    'swappableSelector': string;
+  }
+  interface StellarGroup {
+    'count': number;
+    'overflow': boolean;
+    'size': string;
+  }
+  interface StellarGroupOverflow {
+    'count': number;
+    'size': string;
+  }
+  interface StellarImage {
+    'bg': string;
+    'height': number;
+    'medium': () => Promise<any>;
+    'nozoom': boolean;
+    'poster': string;
+    'width': number;
+  }
+  interface StellarInput {
+    'accept': string;
+    'autocomplete': string;
+    'autofocus': boolean;
+    'color': string;
+    'cols': number;
+    'dateType': "month"|"year"|"day";
+    /**
+    * The pre-set value to pass to the input element
+    */
+    'default': any;
+    'description': string;
+    'disabled': boolean;
+    'droppable': boolean;
+    'files': Array<any>;
+    'focused': boolean;
+    'getDatePicker': () => Promise<any>;
+    'getId': () => Promise<string>;
+    'getStrength': () => Promise<object>;
+    'icon': boolean;
+    'invalid': (message: string | boolean, valid?: boolean, level?: number) => Promise<void>;
+    'label': string;
+    'match': string;
+    'max': number;
+    'maxlength': number;
+    'min': number;
+    'multiple': boolean;
+    'multipleFileCaption': string;
+    /**
+    * The name of the input element
+    */
+    'name': string;
+    'novalidate': boolean;
+    'placeholder': string;
+    'readonly': boolean;
+    'replace_placeholder': string;
+    'required': boolean;
+    /**
+    * The pre-set value to pass to the input element
+    */
+    'requirements': boolean;
+    'rows': number;
+    'setStrength': (value: number) => Promise<void>;
+    'size': string;
+    'spellcheck': boolean;
+    'step': number;
+    'tokenField': any;
+    'tooltip': string;
+    /**
+    * The kind of element that the Input should be rendered as
+    */
+    'type': string;
+    'val': () => Promise<any>;
+    'validate': () => Promise<FormResult>;
+    'validates': string;
+    /**
+    * The pre-set value to pass to the input element
+    */
+    'value': any;
+    'wrap': string;
+  }
+  interface StellarInterview {
+    'aspectRatio': number;
+    'color': string;
+    'debug': boolean;
+    'height': number;
+    'pause': () => Promise<void>;
+    'play': () => Promise<void>;
+    'playing': boolean;
+    'skipTo': (time: number) => Promise<void>;
+    'src': string;
+    'toggle': () => Promise<void>;
+    'width': number;
+  }
+  interface StellarInterviewLine {
+    'complement': boolean;
+    'in': number;
+    'out': number;
+  }
+  interface StellarItem {
+    'apply': (data: any) => Promise<void>;
+    'danger': boolean;
+    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: any; }>;
+    'fit': boolean;
+    'focused': boolean;
+    'history': RouterHistory;
+    'href': string;
+    'label': string;
+    'location': LocationSegments;
+    'multiple': boolean;
+    'route': boolean;
+    'select_item': (state?: { selected: boolean; }) => Promise<void>;
+    'selectable': boolean;
+    'selected': boolean;
+    'setFocus': () => Promise<void>;
+    'simple': boolean;
+    'size': string;
+    'type': "a"|"button"|"stencil-route-link";
+    'value': string;
+    'valueLabel': string;
+    'wrap': boolean;
+  }
+  interface StellarLabel {
+    'for': string;
+    'size': string;
+    'underneath': boolean;
+  }
+  interface StellarLayout {
+    'align': "baseline"|"center"|"top"|"bottom";
+    'padding': "none"|"tiny"|"small"|"medium"|"large";
+    'refresh': () => Promise<void>;
+    'size': "tiny"|"small"|"medium"|"large"|"full"|"flush";
+    'type': string;
+  }
+  interface StellarMarkdown {
+    'codeString': string;
+    'src': string;
+  }
+  interface StellarMessage {
+    'closable': boolean;
+    'name': string;
+    'remember': boolean;
+    'shown': boolean;
+    'size': "full"|"default";
+    'striped': boolean;
+    'type': "alert"|"error"|"info"|"success";
+  }
+  interface StellarPagination {
+    'color': string;
+    'current': number;
+    'padding': number;
+    /**
+    * Public: Sets the max cap of pages you can skip through
+    */
+    'pages': number;
+    'type': "full"|"compact";
+    'url': any;
+  }
+  interface StellarParallax {
+    'reload': () => Promise<void>;
+  }
+  interface StellarParallaxSection {
+    'layer': number;
+    'percentage': number;
+    'speed': number;
+  }
+  interface StellarPasswordRequirements {
+    'for': string;
+    'size': "tiny"|"small"|"large";
+  }
+  interface StellarPlaylist {
+    'artwork': boolean;
+    'autoplay': boolean;
+    'dark': Boolean;
+    'next': () => Promise<void>;
+    'pause': () => Promise<void>;
+    'play': () => Promise<void>;
+    'playing': boolean;
+    'playlist': string;
+    'prepare': (element: any) => Promise<void>;
+    'previous': () => Promise<void>;
+    'remember': boolean;
+    'view': "playlist"|"art";
+  }
+  interface StellarProgress {
+    'blurable': boolean;
+    /**
+    * Allows the progress bar to be clicked on, to help the user to navigate through the progressing content.
+    */
+    'editable': boolean;
+    /**
+    * Sets the maximum cap for steps in the progress bar
+    */
+    'max': number;
+    /**
+    * eliminates the easing in the css so you can apply value updates without jitter.
+    */
+    'noease': boolean;
+    /**
+    * eliminates the easing in the css so you can apply value updates without jitter.
+    */
+    'rounded': boolean;
+    /**
+    * Renders if this element is slender or not
+    */
+    'slender': boolean;
+    /**
+    * Sets the value of the progress bar
+    */
+    'value': number;
+  }
+  interface StellarReveal {
+    'active': boolean;
+    'animation': "fadeIn"|"fadeInUp"|"fadeInDown";
+    'delay': number;
+    'in': () => Promise<void>;
+    'out': () => Promise<void>;
+    'outAnimation': "fadeOut"|"fadeOutUp"|"fadeOutDown";
+    'timing': number;
+  }
+  interface StellarScatter {
+    'colors': boolean;
+    'float': boolean;
+    'max': number;
+    'min': number;
+    'sizes': boolean;
+  }
+  interface StellarSelect {
+    'default': any;
+    'description': string;
+    'focused': boolean;
+    'footer': boolean;
+    'inline': boolean;
+    'label': string;
+    'multiple': boolean;
+    'name': string|boolean;
+    'novalidate': boolean;
+    'open': boolean;
+    'option_elements': () => Promise<NodeListOf<any>>;
+    'options': () => Promise<string[]>;
+    'other': boolean;
+    'overlay': boolean;
+    'placeholder': string;
+    'placeholderInverted': boolean;
+    'processing': boolean;
+    'required': boolean;
+    'size': string;
+    'tooltip': string;
+    'validate': () => Promise<FormResult>;
+    'value': Array<string>|string;
+    'valueLabel': string;
+    'verbiage': string;
+    'verbiageAn': boolean;
+  }
+  interface StellarSlide {}
+  interface StellarSlides {
+    'autoHeight': boolean;
+    'centeredSlides': boolean;
+    'direction': "horizontal"|"vertical";
+    'effect': "slide"|"fade"|"cube"|"coverflow"|"flip";
+    /**
+    * Get the index of the active slide.
+    */
+    'getActiveIndex': () => Promise<number>;
+    /**
+    * Get the index of the previous slide.
+    */
+    'getPreviousIndex': () => Promise<number>;
+    /**
+    * Get whether or not the current slide is the first slide.
+    */
+    'isBeginning': () => Promise<boolean>;
+    /**
+    * Get whether or not the current slide is the last slide.
+    */
+    'isEnd': () => Promise<boolean>;
+    /**
+    * Get the total number of slides.
+    */
+    'length': () => Promise<number>;
+    /**
+    * Lock or unlock the ability to slide to the next slides.
+    */
+    'lockSwipeToNext': (shouldLockSwipeToNext: boolean) => Promise<any>;
+    /**
+    * Lock or unlock the ability to slide to the previous slides.
+    */
+    'lockSwipeToPrev': (shouldLockSwipeToPrev: boolean) => Promise<any>;
+    /**
+    * Lock or unlock the ability to slide to change slides.
+    */
+    'lockSwipes': (shouldLockSwipes: boolean) => Promise<any>;
+    'loop': boolean;
+    'nested': boolean;
+    /**
+    * Options to pass to the swiper instance. See http://idangero.us/swiper/api/ for valid options
+    */
+    'options': any;
+    /**
+    * Show or hide the pager
+    */
+    'pager': boolean;
+    'pagination': boolean;
+    /**
+    * Transition to the next slide.
+    */
+    'slideNext': (speed?: number, runCallbacks?: boolean) => Promise<void>;
+    /**
+    * Transition to the previous slide.
+    */
+    'slidePrev': (speed?: number, runCallbacks?: boolean) => Promise<void>;
+    /**
+    * Transition to the specified slide.
+    */
+    'slideTo': (index: number, speed?: number, runCallbacks?: boolean) => Promise<void>;
+    'slidesPerView': number;
+    'spaceBetween': number;
+    'speed': number;
+    /**
+    * Start auto play.
+    */
+    'startAutoplay': () => Promise<void>;
+    /**
+    * Stop auto play.
+    */
+    'stopAutoplay': () => Promise<void>;
+    /**
+    * Update the underlying slider implementation. Call this if you've added or removed child slides.
+    */
+    'update': () => Promise<void>;
+    'watchSlidesProgress': boolean;
+    'watchSlidesVisibility': boolean;
+  }
+  interface StellarSong {
+    'artwork': boolean;
+    'details': () => Promise<{ 'title': string; 'album': string; 'genre': string; 'artist': string; 'picture': string; }>;
+    'getIndex': () => Promise<number>;
+    'play': () => Promise<void>;
+    'playing': boolean;
+    'preload': () => Promise<void>;
+    'setIndex': (value: any) => Promise<void>;
+    'src': string;
+    'switching': () => Promise<void>;
+  }
+  interface StellarStarscape {}
+  interface StellarStep {
+    'disabled': boolean;
+    'href': string;
+    'open': boolean;
+    'order': number;
+    'tabCount': number;
+  }
+  interface StellarSteps {
+    'contents': () => Promise<any[]>;
+    'name': string;
+    'steps': () => Promise<any[]>;
+  }
+  interface StellarStory {
+    'target': string;
+  }
+  interface StellarStripe {
+    'connect': () => Promise<void>;
+    'getToken': () => Promise<boolean>;
+    'name': string;
+    'setError': (error: string) => Promise<void>;
+    'token': string;
+  }
+  interface StellarSwitch {
+    'activate': () => Promise<void>;
+    'checked': boolean;
+    'checkedDefault': boolean;
+  }
+  interface StellarTab {
+    'disabled': boolean;
+    'href': string;
+    'notifications': boolean|number;
+    'open': boolean;
+    'order': number;
+    'tabCount': number;
+    'tag': string;
+  }
+  interface StellarTable {
+    'chart': boolean;
+    'name': string;
+    'striped': boolean;
+    'upgrade': boolean;
+  }
+  interface StellarTabs {
+    'behavior': string;
+    'block': boolean;
+    'blurring': () => Promise<void>;
+    'contents': () => Promise<any[]>;
+    'height': string;
+    'name': string;
+    'noanimation': boolean;
+    'size': string|"tiny"|"small"|"medium"|"large";
+    'tabs': () => Promise<any[]>;
+    'vertical': boolean;
+  }
+  interface StellarTag {
+    'color': string;
+    'outline': boolean;
+    'pill': boolean;
+    'size': string;
+    'textColor': string;
+  }
+  interface StellarToggle {
+    'card': any;
+    'description': string;
+    'flip': boolean;
+    'label': string;
+    'name': string;
+    'novalidate': boolean;
+    'required': boolean;
+    'single': boolean;
+    'size': string;
+    'stacked': boolean;
+    'type': string|"checkbox"|"radio"|"radio-block"|"checkbox-block";
+    'validate': () => Promise<FormResult>;
+    'value': string|string[];
+  }
+  interface StellarToggleOption {
+    'checked': boolean;
+    'checkedDefault': boolean;
+    'confirm': () => Promise<void>;
+    'default': string;
+    'disabled': boolean;
+    'for': string;
+    'icon': boolean;
+    'inline': boolean;
+    'name': string;
+    'required': boolean;
+    'selectedCopy': string;
+    'single': boolean;
+    'size': boolean;
+    'tooltip': string;
+    'type': string;
+    'updateSelected': (value: boolean) => Promise<void>;
+    'value': string;
+  }
+  interface StellarTooltip {
+    'align': "left"|"center"|"right"|"middle-left"|"middle-center"|"middle-right"|"bottom-left"|"bottom-center"|"bottom-right";
+  }
+  interface StellarUnit {
+    'decimals': number;
+    'from': string;
+    'round': boolean;
+    'to': string;
+    'value': number;
+  }
+  interface StellarVideo {
+    'autoplay': boolean;
+    'controls': boolean;
+    'height': number;
+    'muted': boolean;
+    'overlay': boolean;
+    'playsinline': boolean;
+    'poster': string;
+    'preload': string;
+    'width': number;
+  }
+  interface WebAudio {
+    'autoplay': Boolean;
+    'connect_the_world': () => Promise<boolean>;
+    'get_context': () => Promise<AudioContext>;
+    'is_prepared': () => Promise<Boolean>;
+    'midi': Boolean;
+    'name': string;
+    'source': (name: any) => Promise<any>;
+  }
+  interface WebAudioDebugger {
+    'addHistory': (string: History) => Promise<void>;
+    'count': number;
+  }
+  interface WebAudioEffect {
+    'attachEffect': (context: any, source: any) => Promise<string>;
+    'axis': string;
+    'method': string;
+    'midicontroller': number;
+    'responds': string;
+    'type': string;
+    'use': string;
+    'value': number;
+  }
+  interface WebAudioSequencer {
+    'autoplay': boolean;
+    'custom': Function;
+    'name': string;
+    'play': () => Promise<void>;
+    'stop': () => Promise<void>;
+    'taps': number;
+    'tempo': number;
+  }
+  interface WebAudioSource {
+    'assignBuffer': (webAudio: any, buffer: any) => Promise<void>;
+    'effectsvolume': number;
+    'gain': (place?: string) => Promise<GainNode>;
+    'getBuffer': () => Promise<AudioBuffer>;
+    'getDuration': () => Promise<number>;
+    'inert': boolean;
+    'midichannel': number;
+    'midikey': number;
+    'name': string;
+    'pause': () => Promise<void>;
+    'play': () => Promise<void>;
+    'playing': boolean;
+    'prepare': () => Promise<void>;
+    'skipTo': (time: any) => Promise<void>;
+    'src': string;
+    'stop': () => Promise<void>;
+    'toggle': () => Promise<void>;
+    'webAudio': () => Promise<HTMLElement>;
+  }
+  interface WebAudioVisualizer {
+    'analyser': AnalyserNode;
+    'color': string;
+    'connect': (context: AudioContext, destination?: any) => Promise<this>;
+    'for': string;
+    'height': number;
+    'renderer': AnalyserNode;
+    'size': number;
+    'smoothing': number;
+    'tag': HTMLAudioElement;
+    'type': string|"wave"|"bars"|"webgl";
+    'width': number;
+  }
+  interface WebAudioVisualizerShader {
+    'type': string;
+  }
+}
+
+declare namespace LocalJSX {
+  interface CopyWrap extends JSXBase.HTMLAttributes {
+    'align'?: string;
+    'full'?: boolean;
+  }
+  interface SkeletonImg extends JSXBase.HTMLAttributes {
+    'height'?: number;
+    'icon'?: boolean;
+    'loading'?: boolean;
+    'width'?: number;
+  }
+  interface SkeletonText extends JSXBase.HTMLAttributes {
+    'as'?: string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p';
+    'loading'?: boolean;
+    'width'?: number;
+  }
+  interface Stellar360Image extends JSXBase.HTMLAttributes {
+    'height'?: number;
+    'poster'?: string;
+    'src'?: string;
+    'width'?: number;
+  }
+  interface Stellar360Video extends JSXBase.HTMLAttributes {
+    'height'?: number;
+    'poster'?: string;
+    'src'?: string;
+    'width'?: number;
+  }
+  interface StellarAccordion extends JSXBase.HTMLAttributes {
+    'label'?: string;
+    'name'?: string;
+    'open'?: boolean;
+    'tight'?: boolean;
+  }
+  interface StellarAnimateText extends JSXBase.HTMLAttributes {
+    'method'?: string|"glitch"|"lettering"|"weight"|"fade";
+  }
+  interface StellarAsset extends JSXBase.HTMLAttributes {
+    'align'?: string;
+    'ariaLabel'?: string;
+    'block'?: boolean;
+    'language'?: string;
+    'name'?: string;
+    'src'?: string;
+  }
+  interface StellarAssetLibrary extends JSXBase.HTMLAttributes {}
+  interface StellarAvatar extends JSXBase.HTMLAttributes {
+    'color'?: string;
+    'initials'?: string;
+    'name'?: string;
+    'processing'?: boolean;
+    'shape'?: "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
+    'size'?: string;
+    'src'?: string;
+    'tooltip'?: boolean;
+  }
+  interface StellarBlur extends JSXBase.HTMLAttributes {
+    'horizontal'?: number;
+    'vertical'?: number;
+  }
+  interface StellarBreadcrumb extends JSXBase.HTMLAttributes {
+    'color'?: string;
+    'disabled'?: boolean;
+    'first'?: boolean;
+    'href'?: string;
+    'label'?: string;
+    'last'?: boolean;
+    'target'?: string;
+  }
+  interface StellarBreadcrumbs extends JSXBase.HTMLAttributes {
+    'color'?: string;
+    'description'?: string;
+    'home'?: string;
+    'icon'?: string;
+    'icon_size'?: number;
+    'icon_src'?: string;
+    'label'?: string;
+  }
+  interface StellarButton extends JSXBase.HTMLAttributes {
     /**
     * Sets the button or link as an active state.
     */
@@ -295,31 +971,95 @@ export namespace Components {
     */
     'value'?: string;
   }
-
-  interface StellarColorPicker {
-    'val': string;
+  interface StellarCallout extends JSXBase.HTMLAttributes {
+    'type'?: "alert"|"error"|"info"|"success"|"default";
   }
-  interface StellarColorPickerAttributes extends StencilHTMLAttributes {
-    'onChange'?: (event: CustomEvent) => void;
+  interface StellarCard extends JSXBase.HTMLAttributes {
+    /**
+    * Sets the href on the anchor tag if the button is a link.
+    */
+    'flip_icon'?: string;
+    /**
+    * Let's a card be flippable
+    */
+    'flippable'?: boolean;
+    /**
+    * Renders a flipped card
+    */
+    'flipped'?: boolean;
+    /**
+    * Sets the href on the anchor tag if the button is a link.
+    */
+    'for'?: string;
+    /**
+    * Sets the href if the card is a link.
+    */
+    'href'?: string;
+    /**
+    * Sets the name if the card is a button.
+    */
+    'name'?: string;
+    'onFlip'?: (event: CustomEvent<any>) => void;
+    /**
+    * Sets the padding inside of the button. Can be small, medium, or large.
+    */
+    'padding'?: string|"small"|"medium"|"large";
+    /**
+    * Renders a shadow on the card
+    */
+    'shadow'?: string|"light"|"medium"|"heavy";
+    /**
+    * Sets the element to render the card as - an anchor tag, a button, or a div.
+    */
+    'tag'?: "stencil-route-link"|"a"|"button"|"div";
+    'transition'?: boolean;
+    /**
+    * Sets the element to render the card as - an anchor tag, a button, or a div.
+    */
+    'type'?: string;
+    /**
+    * Sets the value if the card is a button.
+    */
+    'value'?: string;
+  }
+  interface StellarChart extends JSXBase.HTMLAttributes {
+    'config'?: HighchartsModel;
+    'for'?: string;
+    'remote'?: string;
+    'type'?: "area"|"areaspline"|"bar"|"bubble"|"column"|"line"|"pie"|"polygon"|"scatter"|"spline"|"waterfall";
+  }
+  interface StellarCode extends JSXBase.HTMLAttributes {
+    'codeString'?: string;
+    'copy'?: boolean;
+    'expandable'?: boolean;
+    'expanded'?: boolean;
+    'feature'?: boolean;
+    'language'?: string;
+    'preview'?: boolean;
+    'simple'?: boolean;
+  }
+  interface StellarColorLibrary extends JSXBase.HTMLAttributes {}
+  interface StellarColorPicker extends JSXBase.HTMLAttributes {
+    'onChange'?: (event: CustomEvent<any>) => void;
     'val'?: string;
   }
-
-  interface StellarForm {
-    'acceptCharset': string;
-    'action': string;
-    'ajax': boolean;
-    'autocomplete': string;
-    'enctype': string;
-    'method': string;
-    'name': string;
-    'novalidate': boolean;
-    'refresh': () => Promise<void>;
-    'register': (selectors: string[]) => Promise<void>;
-    'state': () => Promise<{ els: any; json: any; results: FormResult[]; formData: any; valid: boolean; }>;
-    'submit_form': () => Promise<void>;
-    'target': string;
+  interface StellarComment extends JSXBase.HTMLAttributes {
+    'content'?: any;
+    'name'?: any;
   }
-  interface StellarFormAttributes extends StencilHTMLAttributes {
+  interface StellarComments extends JSXBase.HTMLAttributes {}
+  interface StellarContent extends JSXBase.HTMLAttributes {
+    'behavior'?: string;
+    'for'?: string;
+    'open'?: boolean;
+  }
+  interface StellarDropdown extends JSXBase.HTMLAttributes {
+    'icon'?: boolean;
+    'label'?: string;
+    'open'?: boolean;
+    'position'?: "left"|"center"|"right";
+  }
+  interface StellarForm extends JSXBase.HTMLAttributes {
     'acceptCharset'?: string;
     'action'?: string;
     'ajax'?: boolean;
@@ -328,72 +1068,36 @@ export namespace Components {
     'method'?: string;
     'name'?: string;
     'novalidate'?: boolean;
-    'onSubmit'?: (event: CustomEvent) => void;
+    'onSubmit'?: (event: CustomEvent<any>) => void;
     'target'?: string;
   }
-
-  interface StellarInput {
-    'accept': string;
-    'autocomplete': string;
-    'autofocus': boolean;
-    'color': string;
-    'cols': number;
-    'dateType': "month"|"year"|"day";
-    /**
-    * The pre-set value to pass to the input element
-    */
-    'default': any;
-    'description': string;
-    'disabled': boolean;
-    'droppable': boolean;
-    'files': Array<any>;
-    'focused': boolean;
-    'getDatePicker': () => Promise<any>;
-    'getId': () => Promise<string>;
-    'getStrength': () => Promise<object>;
-    'icon': boolean;
-    'invalid': (message: string | boolean, valid?: boolean, level?: number) => Promise<void>;
-    'label': string;
-    'match': string;
-    'max': number;
-    'maxlength': number;
-    'min': number;
-    'multiple': boolean;
-    'multipleFileCaption': string;
-    /**
-    * The name of the input element
-    */
-    'name': string;
-    'novalidate': boolean;
-    'placeholder': string;
-    'readonly': boolean;
-    'replace_placeholder': string;
-    'required': boolean;
-    /**
-    * The pre-set value to pass to the input element
-    */
-    'requirements': boolean;
-    'rows': number;
-    'setStrength': (value: number) => Promise<void>;
-    'size': string;
-    'spellcheck': boolean;
-    'step': number;
-    'tokenField': any;
-    'tooltip': string;
-    /**
-    * The kind of element that the Input should be rendered as
-    */
-    'type': string;
-    'val': () => Promise<any>;
-    'validate': () => Promise<FormResult>;
-    'validates': string;
-    /**
-    * The pre-set value to pass to the input element
-    */
-    'value': any;
-    'wrap': string;
+  interface StellarGrid extends JSXBase.HTMLAttributes {
+    'align'?: string;
+    'cols'?: number|string;
+    'compact'?: boolean;
+    'onOrderChanged'?: (event: CustomEvent<any>) => void;
+    'padding'?: boolean;
+    'responsive'?: boolean|string;
+    'swappable'?: boolean;
+    'swappableSelector'?: string;
   }
-  interface StellarInputAttributes extends StencilHTMLAttributes {
+  interface StellarGroup extends JSXBase.HTMLAttributes {
+    'count'?: number;
+    'overflow'?: boolean;
+    'size'?: string;
+  }
+  interface StellarGroupOverflow extends JSXBase.HTMLAttributes {
+    'count'?: number;
+    'size'?: string;
+  }
+  interface StellarImage extends JSXBase.HTMLAttributes {
+    'bg'?: string;
+    'height'?: number;
+    'nozoom'?: boolean;
+    'poster'?: string;
+    'width'?: number;
+  }
+  interface StellarInput extends JSXBase.HTMLAttributes {
     'accept'?: string;
     'autocomplete'?: string;
     'autofocus'?: boolean;
@@ -425,15 +1129,15 @@ export namespace Components {
     /**
     * Public: Blur event
     */
-    'onBluring'?: (event: CustomEvent) => void;
+    'onBluring'?: (event: CustomEvent<any>) => void;
     /**
     * Public: Changed event
     */
-    'onChange'?: (event: CustomEvent) => void;
+    'onChange'?: (event: CustomEvent<any>) => void;
     /**
     * Public: Focus event
     */
-    'onFocusing'?: (event: CustomEvent) => void;
+    'onFocusing'?: (event: CustomEvent<any>) => void;
     'placeholder'?: string;
     'readonly'?: boolean;
     'replace_placeholder'?: string;
@@ -459,31 +1163,21 @@ export namespace Components {
     'value'?: any;
     'wrap'?: string;
   }
-
-  interface StellarItem {
-    'apply': (data: any) => Promise<void>;
-    'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: any; }>;
-    'fit': boolean;
-    'focused': boolean;
-    'history': RouterHistory;
-    'href': string;
-    'label': string;
-    'location': LocationSegments;
-    'multiple': boolean;
-    'route': boolean;
-    'select_item': (state?: { selected: boolean; }) => void;
-    'selectable': boolean;
-    'selected': boolean;
-    'setFocus': () => Promise<void>;
-    'simple': boolean;
-    'size': string;
-    'type': "a"|"button"|"stencil-route-link";
-    'value': string;
-    'valueLabel': string;
-    'wrap': boolean;
+  interface StellarInterview extends JSXBase.HTMLAttributes {
+    'aspectRatio'?: number;
+    'color'?: string;
+    'debug'?: boolean;
+    'height'?: number;
+    'playing'?: boolean;
+    'src'?: string;
+    'width'?: number;
   }
-  interface StellarItemAttributes extends StencilHTMLAttributes {
+  interface StellarInterviewLine extends JSXBase.HTMLAttributes {
+    'complement'?: boolean;
+    'in'?: number;
+    'out'?: number;
+  }
+  interface StellarItem extends JSXBase.HTMLAttributes {
     'danger'?: boolean;
     'fit'?: boolean;
     'focused'?: boolean;
@@ -492,10 +1186,10 @@ export namespace Components {
     'label'?: string;
     'location'?: LocationSegments;
     'multiple'?: boolean;
-    'onBlurChanged'?: (event: CustomEvent) => void;
-    'onFocusChanged'?: (event: CustomEvent) => void;
-    'onMounted'?: (event: CustomEvent) => void;
-    'onSelectionChanged'?: (event: CustomEvent) => void;
+    'onBlurChanged'?: (event: CustomEvent<any>) => void;
+    'onFocusChanged'?: (event: CustomEvent<any>) => void;
+    'onMounted'?: (event: CustomEvent<any>) => void;
+    'onSelectionChanged'?: (event: CustomEvent<any>) => void;
     'route'?: boolean;
     'selectable'?: boolean;
     'selected'?: boolean;
@@ -506,55 +1200,62 @@ export namespace Components {
     'valueLabel'?: string;
     'wrap'?: boolean;
   }
-
-  interface StellarLabel {
-    'for': string;
-    'size': string;
-    'underneath': boolean;
-  }
-  interface StellarLabelAttributes extends StencilHTMLAttributes {
+  interface StellarLabel extends JSXBase.HTMLAttributes {
     'for'?: string;
     'size'?: string;
     'underneath'?: boolean;
   }
-
-  interface StellarPasswordRequirements {
-    'for': string;
-    'size': "tiny"|"small"|"large";
+  interface StellarLayout extends JSXBase.HTMLAttributes {
+    'align'?: "baseline"|"center"|"top"|"bottom";
+    'padding'?: "none"|"tiny"|"small"|"medium"|"large";
+    'size'?: "tiny"|"small"|"medium"|"large"|"full"|"flush";
+    'type'?: string;
   }
-  interface StellarPasswordRequirementsAttributes extends StencilHTMLAttributes {
+  interface StellarMarkdown extends JSXBase.HTMLAttributes {
+    'codeString'?: string;
+    'src'?: string;
+  }
+  interface StellarMessage extends JSXBase.HTMLAttributes {
+    'closable'?: boolean;
+    'name'?: string;
+    'remember'?: boolean;
+    'shown'?: boolean;
+    'size'?: "full"|"default";
+    'striped'?: boolean;
+    'type'?: "alert"|"error"|"info"|"success";
+  }
+  interface StellarPagination extends JSXBase.HTMLAttributes {
+    'color'?: string;
+    'current'?: number;
+    'onChanged'?: (event: CustomEvent<any>) => void;
+    'padding'?: number;
+    /**
+    * Public: Sets the max cap of pages you can skip through
+    */
+    'pages'?: number;
+    'type'?: "full"|"compact";
+    'url'?: any;
+  }
+  interface StellarParallax extends JSXBase.HTMLAttributes {}
+  interface StellarParallaxSection extends JSXBase.HTMLAttributes {
+    'layer'?: number;
+    'percentage'?: number;
+    'speed'?: number;
+  }
+  interface StellarPasswordRequirements extends JSXBase.HTMLAttributes {
     'for'?: string;
     'size'?: "tiny"|"small"|"large";
   }
-
-  interface StellarProgress {
-    'blurable': boolean;
-    /**
-    * Allows the progress bar to be clicked on, to help the user to navigate through the progressing content.
-    */
-    'editable': boolean;
-    /**
-    * Sets the maximum cap for steps in the progress bar
-    */
-    'max': number;
-    /**
-    * eliminates the easing in the css so you can apply value updates without jitter.
-    */
-    'noease': boolean;
-    /**
-    * eliminates the easing in the css so you can apply value updates without jitter.
-    */
-    'rounded': boolean;
-    /**
-    * Renders if this element is slender or not
-    */
-    'slender': boolean;
-    /**
-    * Sets the value of the progress bar
-    */
-    'value': number;
+  interface StellarPlaylist extends JSXBase.HTMLAttributes {
+    'artwork'?: boolean;
+    'autoplay'?: boolean;
+    'dark'?: Boolean;
+    'playing'?: boolean;
+    'playlist'?: string;
+    'remember'?: boolean;
+    'view'?: "playlist"|"art";
   }
-  interface StellarProgressAttributes extends StencilHTMLAttributes {
+  interface StellarProgress extends JSXBase.HTMLAttributes {
     'blurable'?: boolean;
     /**
     * Allows the progress bar to be clicked on, to help the user to navigate through the progressing content.
@@ -568,7 +1269,7 @@ export namespace Components {
     * eliminates the easing in the css so you can apply value updates without jitter.
     */
     'noease'?: boolean;
-    'onValueChange'?: (event: CustomEvent) => void;
+    'onValueChange'?: (event: CustomEvent<any>) => void;
     /**
     * eliminates the easing in the css so you can apply value updates without jitter.
     */
@@ -582,35 +1283,21 @@ export namespace Components {
     */
     'value'?: number;
   }
-
-  interface StellarSelect {
-    'default': any;
-    'description': string;
-    'focused': boolean;
-    'footer': boolean;
-    'inline': boolean;
-    'label': string;
-    'multiple': boolean;
-    'name': string|boolean;
-    'novalidate': boolean;
-    'open': boolean;
-    'option_elements': () => Promise<NodeListOf<any>>;
-    'options': () => Promise<string[]>;
-    'other': boolean;
-    'overlay': boolean;
-    'placeholder': string;
-    'placeholderInverted': boolean;
-    'processing': boolean;
-    'required': boolean;
-    'size': string;
-    'tooltip': string;
-    'validate': () => Promise<FormResult>;
-    'value': Array<string>|string;
-    'valueLabel': string;
-    'verbiage': string;
-    'verbiageAn': boolean;
+  interface StellarReveal extends JSXBase.HTMLAttributes {
+    'active'?: boolean;
+    'animation'?: "fadeIn"|"fadeInUp"|"fadeInDown";
+    'delay'?: number;
+    'outAnimation'?: "fadeOut"|"fadeOutUp"|"fadeOutDown";
+    'timing'?: number;
   }
-  interface StellarSelectAttributes extends StencilHTMLAttributes {
+  interface StellarScatter extends JSXBase.HTMLAttributes {
+    'colors'?: boolean;
+    'float'?: boolean;
+    'max'?: number;
+    'min'?: number;
+    'sizes'?: boolean;
+  }
+  interface StellarSelect extends JSXBase.HTMLAttributes {
     'default'?: any;
     'description'?: string;
     'focused'?: boolean;
@@ -620,7 +1307,7 @@ export namespace Components {
     'multiple'?: boolean;
     'name'?: string|boolean;
     'novalidate'?: boolean;
-    'onChange'?: (event: CustomEvent) => void;
+    'onChange'?: (event: CustomEvent<any>) => void;
     'open'?: boolean;
     'other'?: boolean;
     'overlay'?: boolean;
@@ -635,494 +1322,8 @@ export namespace Components {
     'verbiage'?: string;
     'verbiageAn'?: boolean;
   }
-
-  interface StellarSwitch {
-    'activate': () => Promise<void>;
-    'checked': boolean;
-    'checkedDefault': boolean;
-  }
-  interface StellarSwitchAttributes extends StencilHTMLAttributes {
-    'checked'?: boolean;
-    'checkedDefault'?: boolean;
-    'onChange'?: (event: CustomEvent) => void;
-  }
-
-  interface StellarToggleOption {
-    'checked': boolean;
-    'checkedDefault': boolean;
-    'confirm': () => Promise<void>;
-    'default': string;
-    'disabled': boolean;
-    'for': string;
-    'icon': boolean;
-    'inline': boolean;
-    'name': string;
-    'required': boolean;
-    'selectedCopy': string;
-    'single': boolean;
-    'size': boolean;
-    'tooltip': string;
-    'type': string;
-    'updateSelected': (value: boolean) => void;
-    'value': string;
-  }
-  interface StellarToggleOptionAttributes extends StencilHTMLAttributes {
-    'checked'?: boolean;
-    'checkedDefault'?: boolean;
-    'default'?: string;
-    'disabled'?: boolean;
-    'for'?: string;
-    'icon'?: boolean;
-    'inline'?: boolean;
-    'name'?: string;
-    'onChange'?: (event: CustomEvent) => void;
-    'required'?: boolean;
-    'selectedCopy'?: string;
-    'single'?: boolean;
-    'size'?: boolean;
-    'tooltip'?: string;
-    'type'?: string;
-    'value'?: string;
-  }
-
-  interface StellarToggle {
-    'card': any;
-    'description': string;
-    'flip': boolean;
-    'label': string;
-    'name': string;
-    'novalidate': boolean;
-    'required': boolean;
-    'single': boolean;
-    'size': string;
-    'stacked': boolean;
-    'type': string|"checkbox"|"radio"|"radio-block"|"checkbox-block";
-    'validate': () => Promise<FormResult>;
-    'value': string|string[];
-  }
-  interface StellarToggleAttributes extends StencilHTMLAttributes {
-    'card'?: any;
-    'description'?: string;
-    'flip'?: boolean;
-    'label'?: string;
-    'name'?: string;
-    'novalidate'?: boolean;
-    'onChange'?: (event: CustomEvent) => void;
-    'required'?: boolean;
-    'single'?: boolean;
-    'size'?: string;
-    'stacked'?: boolean;
-    'type'?: string|"checkbox"|"radio"|"radio-block"|"checkbox-block";
-    'value'?: string|string[];
-  }
-
-  interface StellarAssetLibrary {}
-  interface StellarAssetLibraryAttributes extends StencilHTMLAttributes {}
-
-  interface StellarChart {
-    'config': HighchartsModel;
-    'for': string;
-    'get_options': () => any;
-    'options': (newOptions: any) => void;
-    'refresh': () => void;
-    'remote': string;
-    'type': "area"|"areaspline"|"bar"|"bubble"|"column"|"line"|"pie"|"polygon"|"scatter"|"spline"|"waterfall";
-  }
-  interface StellarChartAttributes extends StencilHTMLAttributes {
-    'config'?: HighchartsModel;
-    'for'?: string;
-    'remote'?: string;
-    'type'?: "area"|"areaspline"|"bar"|"bubble"|"column"|"line"|"pie"|"polygon"|"scatter"|"spline"|"waterfall";
-  }
-
-  interface StellarCode {
-    'clipboard': () => Promise<void>;
-    'codeString': string;
-    'copy': boolean;
-    'expandable': boolean;
-    'expanded': boolean;
-    'feature': boolean;
-    'highlight': () => void;
-    'language': string;
-    'preview': boolean;
-    'result': () => Promise<string>;
-    'setCode': (code: any) => void;
-    'simple': boolean;
-  }
-  interface StellarCodeAttributes extends StencilHTMLAttributes {
-    'codeString'?: string;
-    'copy'?: boolean;
-    'expandable'?: boolean;
-    'expanded'?: boolean;
-    'feature'?: boolean;
-    'language'?: string;
-    'preview'?: boolean;
-    'simple'?: boolean;
-  }
-
-  interface StellarColorLibrary {}
-  interface StellarColorLibraryAttributes extends StencilHTMLAttributes {}
-
-  interface StellarMarkdown {
-    'codeString': string;
-    'src': string;
-  }
-  interface StellarMarkdownAttributes extends StencilHTMLAttributes {
-    'codeString'?: string;
-    'src'?: string;
-  }
-
-  interface StellarReveal {
-    'active': boolean;
-    'animation': "fadeIn"|"fadeInUp"|"fadeInDown";
-    'delay': number;
-    'in': () => Promise<void>;
-    'out': () => Promise<void>;
-    'outAnimation': "fadeOut"|"fadeOutUp"|"fadeOutDown";
-    'timing': number;
-  }
-  interface StellarRevealAttributes extends StencilHTMLAttributes {
-    'active'?: boolean;
-    'animation'?: "fadeIn"|"fadeInUp"|"fadeInDown";
-    'delay'?: number;
-    'outAnimation'?: "fadeOut"|"fadeOutUp"|"fadeOutDown";
-    'timing'?: number;
-  }
-
-  interface StellarScatter {
-    'colors': boolean;
-    'float': boolean;
-    'max': number;
-    'min': number;
-    'sizes': boolean;
-  }
-  interface StellarScatterAttributes extends StencilHTMLAttributes {
-    'colors'?: boolean;
-    'float'?: boolean;
-    'max'?: number;
-    'min'?: number;
-    'sizes'?: boolean;
-  }
-
-  interface StellarStarscape {}
-  interface StellarStarscapeAttributes extends StencilHTMLAttributes {}
-
-  interface StellarStory {
-    'target': string;
-  }
-  interface StellarStoryAttributes extends StencilHTMLAttributes {
-    'target'?: string;
-  }
-
-  interface StellarStripe {
-    'connect': () => void;
-    'getToken': () => Promise<boolean>;
-    'name': string;
-    'setError': (error: string) => void;
-    'token': string;
-  }
-  interface StellarStripeAttributes extends StencilHTMLAttributes {
-    'name'?: string;
-    'token'?: string;
-  }
-
-  interface StellarUnit {
-    'decimals': number;
-    'from': string;
-    'round': boolean;
-    'to': string;
-    'value': number;
-  }
-  interface StellarUnitAttributes extends StencilHTMLAttributes {
-    'decimals'?: number;
-    'from'?: string;
-    'round'?: boolean;
-    'to'?: string;
-    'value'?: number;
-  }
-
-  interface Stellar360Image {
-    'height': number;
-    'poster': string;
-    'src': string;
-    'width': number;
-  }
-  interface Stellar360ImageAttributes extends StencilHTMLAttributes {
-    'height'?: number;
-    'poster'?: string;
-    'src'?: string;
-    'width'?: number;
-  }
-
-  interface Stellar360Video {
-    'height': number;
-    'poster': string;
-    'src': string;
-    'width': number;
-  }
-  interface Stellar360VideoAttributes extends StencilHTMLAttributes {
-    'height'?: number;
-    'poster'?: string;
-    'src'?: string;
-    'width'?: number;
-  }
-
-  interface StellarImage {
-    'bg': string;
-    'height': number;
-    'medium': () => Promise<any>;
-    'nozoom': boolean;
-    'poster': string;
-    'width': number;
-  }
-  interface StellarImageAttributes extends StencilHTMLAttributes {
-    'bg'?: string;
-    'height'?: number;
-    'nozoom'?: boolean;
-    'poster'?: string;
-    'width'?: number;
-  }
-
-  interface StellarInterviewLine {
-    'complement': boolean;
-    'in': number;
-    'out': number;
-  }
-  interface StellarInterviewLineAttributes extends StencilHTMLAttributes {
-    'complement'?: boolean;
-    'in'?: number;
-    'out'?: number;
-  }
-
-  interface StellarInterview {
-    'aspectRatio': number;
-    'color': string;
-    'debug': boolean;
-    'height': number;
-    'pause': () => void;
-    'play': () => void;
-    'playing': boolean;
-    'skipTo': (time: number) => void;
-    'src': string;
-    'toggle': () => void;
-    'width': number;
-  }
-  interface StellarInterviewAttributes extends StencilHTMLAttributes {
-    'aspectRatio'?: number;
-    'color'?: string;
-    'debug'?: boolean;
-    'height'?: number;
-    'playing'?: boolean;
-    'src'?: string;
-    'width'?: number;
-  }
-
-  interface StellarPlaylist {
-    'artwork': boolean;
-    'autoplay': boolean;
-    'dark': Boolean;
-    'next': () => void;
-    'pause': () => void;
-    'play': () => void;
-    'playing': boolean;
-    'playlist': string;
-    'prepare': (element: any) => void;
-    'previous': () => void;
-    'remember': boolean;
-    'title': string;
-    'view': "playlist"|"art";
-  }
-  interface StellarPlaylistAttributes extends StencilHTMLAttributes {
-    'artwork'?: boolean;
-    'autoplay'?: boolean;
-    'dark'?: Boolean;
-    'playing'?: boolean;
-    'playlist'?: string;
-    'remember'?: boolean;
-    'title'?: string;
-    'view'?: "playlist"|"art";
-  }
-
-  interface SkeletonImg {
-    'height': number;
-    'icon': boolean;
-    'loading': boolean;
-    'width': number;
-  }
-  interface SkeletonImgAttributes extends StencilHTMLAttributes {
-    'height'?: number;
-    'icon'?: boolean;
-    'loading'?: boolean;
-    'width'?: number;
-  }
-
-  interface SkeletonText {
-    'as': string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p';
-    'loading': boolean;
-    'width': number;
-  }
-  interface SkeletonTextAttributes extends StencilHTMLAttributes {
-    'as'?: string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p';
-    'loading'?: boolean;
-    'width'?: number;
-  }
-
-  interface StellarSong {
-    'artwork': boolean;
-    'details': () => { 'title': string; 'album': string; 'genre': string; 'artist': string; 'picture': string; };
-    'getIndex': () => number;
-    'play': () => void;
-    'playing': boolean;
-    'preload': () => void;
-    'setIndex': (value: any) => void;
-    'src': string;
-    'switching': () => void;
-  }
-  interface StellarSongAttributes extends StencilHTMLAttributes {
-    'artwork'?: boolean;
-    'onSongChanged'?: (event: CustomEvent) => void;
-    'playing'?: boolean;
-    'src'?: string;
-  }
-
-  interface StellarVideo {
-    'autoplay': boolean;
-    'controls': boolean;
-    'height': number;
-    'muted': boolean;
-    'overlay': boolean;
-    'playsinline': boolean;
-    'poster': string;
-    'preload': string;
-    'width': number;
-  }
-  interface StellarVideoAttributes extends StencilHTMLAttributes {
-    'autoplay'?: boolean;
-    'controls'?: boolean;
-    'height'?: number;
-    'muted'?: boolean;
-    'overlay'?: boolean;
-    'playsinline'?: boolean;
-    'poster'?: string;
-    'preload'?: string;
-    'width'?: number;
-  }
-
-  interface StellarAnimateText {
-    'method': string|"glitch"|"lettering"|"weight"|"fade";
-  }
-  interface StellarAnimateTextAttributes extends StencilHTMLAttributes {
-    'method'?: string|"glitch"|"lettering"|"weight"|"fade";
-  }
-
-  interface StellarBlur {
-    'horizontal': number;
-    'setBlurFilter': () => void;
-    'vertical': number;
-  }
-  interface StellarBlurAttributes extends StencilHTMLAttributes {
-    'horizontal'?: number;
-    'vertical'?: number;
-  }
-
-  interface StellarParallaxSection {
-    'layer': number;
-    'percentage': number;
-    'speed': number;
-  }
-  interface StellarParallaxSectionAttributes extends StencilHTMLAttributes {
-    'layer'?: number;
-    'percentage'?: number;
-    'speed'?: number;
-  }
-
-  interface StellarParallax {
-    'reload': () => void;
-  }
-  interface StellarParallaxAttributes extends StencilHTMLAttributes {}
-
-  interface StellarSlide {}
-  interface StellarSlideAttributes extends StencilHTMLAttributes {}
-
-  interface StellarSlides {
-    'autoHeight': boolean;
-    'centeredSlides': boolean;
-    'direction': "horizontal"|"vertical";
-    'effect': "slide"|"fade"|"cube"|"coverflow"|"flip";
-    /**
-    * Get the index of the active slide.
-    */
-    'getActiveIndex': () => Promise<number>;
-    /**
-    * Get the index of the previous slide.
-    */
-    'getPreviousIndex': () => Promise<number>;
-    /**
-    * Get whether or not the current slide is the first slide.
-    */
-    'isBeginning': () => Promise<boolean>;
-    /**
-    * Get whether or not the current slide is the last slide.
-    */
-    'isEnd': () => Promise<boolean>;
-    /**
-    * Get the total number of slides.
-    */
-    'length': () => Promise<number>;
-    /**
-    * Lock or unlock the ability to slide to the next slides.
-    */
-    'lockSwipeToNext': (shouldLockSwipeToNext: boolean) => Promise<any>;
-    /**
-    * Lock or unlock the ability to slide to the previous slides.
-    */
-    'lockSwipeToPrev': (shouldLockSwipeToPrev: boolean) => Promise<any>;
-    /**
-    * Lock or unlock the ability to slide to change slides.
-    */
-    'lockSwipes': (shouldLockSwipes: boolean) => Promise<any>;
-    'loop': boolean;
-    'nested': boolean;
-    /**
-    * Options to pass to the swiper instance. See http://idangero.us/swiper/api/ for valid options
-    */
-    'options': any;
-    /**
-    * Show or hide the pager
-    */
-    'pager': boolean;
-    'pagination': boolean;
-    /**
-    * Transition to the next slide.
-    */
-    'slideNext': (speed?: number, runCallbacks?: boolean) => Promise<void>;
-    /**
-    * Transition to the previous slide.
-    */
-    'slidePrev': (speed?: number, runCallbacks?: boolean) => Promise<void>;
-    /**
-    * Transition to the specified slide.
-    */
-    'slideTo': (index: number, speed?: number, runCallbacks?: boolean) => Promise<void>;
-    'slidesPerView': number;
-    'spaceBetween': number;
-    'speed': number;
-    /**
-    * Start auto play.
-    */
-    'startAutoplay': () => void;
-    /**
-    * Stop auto play.
-    */
-    'stopAutoplay': () => void;
-    /**
-    * Update the underlying slider implementation. Call this if you've added or removed child slides.
-    */
-    'update': () => Promise<void>;
-    'watchSlidesProgress': boolean;
-    'watchSlidesVisibility': boolean;
-  }
-  interface StellarSlidesAttributes extends StencilHTMLAttributes {
+  interface StellarSlide extends JSXBase.HTMLAttributes {}
+  interface StellarSlides extends JSXBase.HTMLAttributes {
     'autoHeight'?: boolean;
     'centeredSlides'?: boolean;
     'direction'?: "horizontal"|"vertical";
@@ -1132,55 +1333,55 @@ export namespace Components {
     /**
     * Emitted after the active slide has changed.
     */
-    'onIonSlideDidChange'?: (event: CustomEvent) => void;
+    'onIonSlideDidChange'?: (event: CustomEvent<any>) => void;
     /**
     * Emitted when the slider is actively being moved.
     */
-    'onIonSlideDrag'?: (event: CustomEvent) => void;
+    'onIonSlideDrag'?: (event: CustomEvent<any>) => void;
     /**
     * Emitted when the next slide has ended.
     */
-    'onIonSlideNextEnd'?: (event: CustomEvent) => void;
+    'onIonSlideNextEnd'?: (event: CustomEvent<any>) => void;
     /**
     * Emitted when the next slide has started.
     */
-    'onIonSlideNextStart'?: (event: CustomEvent) => void;
+    'onIonSlideNextStart'?: (event: CustomEvent<any>) => void;
     /**
     * Emitted when the previous slide has ended.
     */
-    'onIonSlidePrevEnd'?: (event: CustomEvent) => void;
+    'onIonSlidePrevEnd'?: (event: CustomEvent<any>) => void;
     /**
     * Emitted when the previous slide has started.
     */
-    'onIonSlidePrevStart'?: (event: CustomEvent) => void;
+    'onIonSlidePrevStart'?: (event: CustomEvent<any>) => void;
     /**
     * Emitted when the slider is at the last slide.
     */
-    'onIonSlideReachEnd'?: (event: CustomEvent) => void;
+    'onIonSlideReachEnd'?: (event: CustomEvent<any>) => void;
     /**
     * Emitted when the slider is at its initial position.
     */
-    'onIonSlideReachStart'?: (event: CustomEvent) => void;
+    'onIonSlideReachStart'?: (event: CustomEvent<any>) => void;
     /**
     * Emitted when the user releases the touch.
     */
-    'onIonSlideTouchEnd'?: (event: CustomEvent) => void;
+    'onIonSlideTouchEnd'?: (event: CustomEvent<any>) => void;
     /**
     * Emitted when the user first touches the slider.
     */
-    'onIonSlideTouchStart'?: (event: CustomEvent) => void;
+    'onIonSlideTouchStart'?: (event: CustomEvent<any>) => void;
     /**
     * Emitted when the slide transition has ended.
     */
-    'onIonSlideTransitionEnd'?: (event: CustomEvent) => void;
+    'onIonSlideTransitionEnd'?: (event: CustomEvent<any>) => void;
     /**
     * Emitted when the slide transition has started.
     */
-    'onIonSlideTransitionStart'?: (event: CustomEvent) => void;
+    'onIonSlideTransitionStart'?: (event: CustomEvent<any>) => void;
     /**
     * Emitted before the active slide has changed.
     */
-    'onIonSlideWillChange'?: (event: CustomEvent) => void;
+    'onIonSlideWillChange'?: (event: CustomEvent<any>) => void;
     /**
     * Options to pass to the swiper instance. See http://idangero.us/swiper/api/ for valid options
     */
@@ -1196,415 +1397,53 @@ export namespace Components {
     'watchSlidesProgress'?: boolean;
     'watchSlidesVisibility'?: boolean;
   }
-
-  interface StellarAccordion {
-    'label': string;
-    'name': string;
-    'open': boolean;
-    'refresh': () => void;
-    'tight': boolean;
-  }
-  interface StellarAccordionAttributes extends StencilHTMLAttributes {
-    'label'?: string;
-    'name'?: string;
-    'open'?: boolean;
-    'tight'?: boolean;
-  }
-
-  interface StellarAsset {
-    'align': string;
-    'ariaLabel': string;
-    'block': boolean;
-    'language': string;
-    'name': string;
-    'src': string;
-  }
-  interface StellarAssetAttributes extends StencilHTMLAttributes {
-    'align'?: string;
-    'ariaLabel'?: string;
-    'block'?: boolean;
-    'language'?: string;
-    'name'?: string;
+  interface StellarSong extends JSXBase.HTMLAttributes {
+    'artwork'?: boolean;
+    'onSongChanged'?: (event: CustomEvent<any>) => void;
+    'playing'?: boolean;
     'src'?: string;
   }
-
-  interface StellarAvatar {
-    'color': string;
-    'initials': string;
-    'name': string;
-    'processing': boolean;
-    'shape': "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
-    'size': string;
-    'src': string;
-    'tooltip': boolean;
-  }
-  interface StellarAvatarAttributes extends StencilHTMLAttributes {
-    'color'?: string;
-    'initials'?: string;
-    'name'?: string;
-    'processing'?: boolean;
-    'shape'?: "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
-    'size'?: string;
-    'src'?: string;
-    'tooltip'?: boolean;
-  }
-
-  interface StellarBreadcrumb {
-    'color': string;
-    'disabled': boolean;
-    'first': boolean;
-    'href': string;
-    'label': string;
-    'last': boolean;
-    'target': string;
-  }
-  interface StellarBreadcrumbAttributes extends StencilHTMLAttributes {
-    'color'?: string;
-    'disabled'?: boolean;
-    'first'?: boolean;
-    'href'?: string;
-    'label'?: string;
-    'last'?: boolean;
-    'target'?: string;
-  }
-
-  interface StellarBreadcrumbs {
-    'color': string;
-    'description': string;
-    'home': string;
-    'icon': string;
-    'icon_size': number;
-    'icon_src': string;
-    'label': string;
-  }
-  interface StellarBreadcrumbsAttributes extends StencilHTMLAttributes {
-    'color'?: string;
-    'description'?: string;
-    'home'?: string;
-    'icon'?: string;
-    'icon_size'?: number;
-    'icon_src'?: string;
-    'label'?: string;
-  }
-
-  interface StellarCallout {
-    'type': "alert"|"error"|"info"|"success"|"default";
-  }
-  interface StellarCalloutAttributes extends StencilHTMLAttributes {
-    'type'?: "alert"|"error"|"info"|"success"|"default";
-  }
-
-  interface StellarCard {
-    'flip_card': (e?: UIEvent) => Promise<void>;
-    /**
-    * Sets the href on the anchor tag if the button is a link.
-    */
-    'flip_icon': string;
-    /**
-    * Let's a card be flippable
-    */
-    'flippable': boolean;
-    /**
-    * Renders a flipped card
-    */
-    'flipped': boolean;
-    /**
-    * Sets the href on the anchor tag if the button is a link.
-    */
-    'for': string;
-    /**
-    * Sets the href if the card is a link.
-    */
-    'href': string;
-    /**
-    * Sets the name if the card is a button.
-    */
-    'name': string;
-    /**
-    * Sets the padding inside of the button. Can be small, medium, or large.
-    */
-    'padding': string|"small"|"medium"|"large";
-    /**
-    * Renders a shadow on the card
-    */
-    'shadow': string|"light"|"medium"|"heavy";
-    /**
-    * Sets the element to render the card as - an anchor tag, a button, or a div.
-    */
-    'tag': "stencil-route-link"|"a"|"button"|"div";
-    'transition': boolean;
-    /**
-    * Sets the element to render the card as - an anchor tag, a button, or a div.
-    */
-    'type': string;
-    /**
-    * Sets the value if the card is a button.
-    */
-    'value': string;
-  }
-  interface StellarCardAttributes extends StencilHTMLAttributes {
-    /**
-    * Sets the href on the anchor tag if the button is a link.
-    */
-    'flip_icon'?: string;
-    /**
-    * Let's a card be flippable
-    */
-    'flippable'?: boolean;
-    /**
-    * Renders a flipped card
-    */
-    'flipped'?: boolean;
-    /**
-    * Sets the href on the anchor tag if the button is a link.
-    */
-    'for'?: string;
-    /**
-    * Sets the href if the card is a link.
-    */
-    'href'?: string;
-    /**
-    * Sets the name if the card is a button.
-    */
-    'name'?: string;
-    'onFlip'?: (event: CustomEvent) => void;
-    /**
-    * Sets the padding inside of the button. Can be small, medium, or large.
-    */
-    'padding'?: string|"small"|"medium"|"large";
-    /**
-    * Renders a shadow on the card
-    */
-    'shadow'?: string|"light"|"medium"|"heavy";
-    /**
-    * Sets the element to render the card as - an anchor tag, a button, or a div.
-    */
-    'tag'?: "stencil-route-link"|"a"|"button"|"div";
-    'transition'?: boolean;
-    /**
-    * Sets the element to render the card as - an anchor tag, a button, or a div.
-    */
-    'type'?: string;
-    /**
-    * Sets the value if the card is a button.
-    */
-    'value'?: string;
-  }
-
-  interface StellarComment {
-    'content': any;
-    'name': any;
-  }
-  interface StellarCommentAttributes extends StencilHTMLAttributes {
-    'content'?: any;
-    'name'?: any;
-  }
-
-  interface StellarComments {}
-  interface StellarCommentsAttributes extends StencilHTMLAttributes {}
-
-  interface StellarContent {
-    'behavior': string;
-    'for': string;
-    'open': boolean;
-  }
-  interface StellarContentAttributes extends StencilHTMLAttributes {
-    'behavior'?: string;
-    'for'?: string;
-    'open'?: boolean;
-  }
-
-  interface CopyWrap {
-    'align': string;
-    'full': boolean;
-  }
-  interface CopyWrapAttributes extends StencilHTMLAttributes {
-    'align'?: string;
-    'full'?: boolean;
-  }
-
-  interface StellarDropdown {
-    'icon': boolean;
-    'label': string;
-    'open': boolean;
-    'position': "left"|"center"|"right";
-  }
-  interface StellarDropdownAttributes extends StencilHTMLAttributes {
-    'icon'?: boolean;
-    'label'?: string;
-    'open'?: boolean;
-    'position'?: "left"|"center"|"right";
-  }
-
-  interface StellarGrid {
-    'align': string;
-    'cols': number|string;
-    'compact': boolean;
-    'padding': boolean;
-    'refresh': () => Promise<void>;
-    'responsive': boolean|string;
-    'swappable': boolean;
-    'swappableSelector': string;
-  }
-  interface StellarGridAttributes extends StencilHTMLAttributes {
-    'align'?: string;
-    'cols'?: number|string;
-    'compact'?: boolean;
-    'onOrderChanged'?: (event: CustomEvent) => void;
-    'padding'?: boolean;
-    'responsive'?: boolean|string;
-    'swappable'?: boolean;
-    'swappableSelector'?: string;
-  }
-
-  interface StellarGroupOverflow {
-    'count': number;
-    'size': string;
-  }
-  interface StellarGroupOverflowAttributes extends StencilHTMLAttributes {
-    'count'?: number;
-    'size'?: string;
-  }
-
-  interface StellarGroup {
-    'count': number;
-    'overflow': boolean;
-    'size': string;
-  }
-  interface StellarGroupAttributes extends StencilHTMLAttributes {
-    'count'?: number;
-    'overflow'?: boolean;
-    'size'?: string;
-  }
-
-  interface StellarLayout {
-    'align': "baseline"|"center"|"top"|"bottom";
-    'padding': "none"|"tiny"|"small"|"medium"|"large";
-    'refresh': () => void;
-    'size': "tiny"|"small"|"medium"|"large"|"full"|"flush";
-    'type': string;
-  }
-  interface StellarLayoutAttributes extends StencilHTMLAttributes {
-    'align'?: "baseline"|"center"|"top"|"bottom";
-    'padding'?: "none"|"tiny"|"small"|"medium"|"large";
-    'size'?: "tiny"|"small"|"medium"|"large"|"full"|"flush";
-    'type'?: string;
-  }
-
-  interface StellarMessage {
-    'closable': boolean;
-    'name': string;
-    'remember': boolean;
-    'shown': boolean;
-    'size': "full"|"default";
-    'striped': boolean;
-    'type': "alert"|"error"|"info"|"success";
-  }
-  interface StellarMessageAttributes extends StencilHTMLAttributes {
-    'closable'?: boolean;
-    'name'?: string;
-    'remember'?: boolean;
-    'shown'?: boolean;
-    'size'?: "full"|"default";
-    'striped'?: boolean;
-    'type'?: "alert"|"error"|"info"|"success";
-  }
-
-  interface StellarPagination {
-    'color': string;
-    'current': number;
-    'padding': number;
-    /**
-    * Public: Sets the max cap of pages you can skip through
-    */
-    'pages': number;
-    'type': "full"|"compact";
-    'url': any;
-  }
-  interface StellarPaginationAttributes extends StencilHTMLAttributes {
-    'color'?: string;
-    'current'?: number;
-    'onChanged'?: (event: CustomEvent) => void;
-    'padding'?: number;
-    /**
-    * Public: Sets the max cap of pages you can skip through
-    */
-    'pages'?: number;
-    'type'?: "full"|"compact";
-    'url'?: any;
-  }
-
-  interface StellarStep {
-    'disabled': boolean;
-    'href': string;
-    'open': boolean;
-    'order': number;
-    'tabCount': number;
-  }
-  interface StellarStepAttributes extends StencilHTMLAttributes {
+  interface StellarStarscape extends JSXBase.HTMLAttributes {}
+  interface StellarStep extends JSXBase.HTMLAttributes {
     'disabled'?: boolean;
     'href'?: string;
-    'onContentChange'?: (event: CustomEvent) => void;
+    'onContentChange'?: (event: CustomEvent<any>) => void;
     'open'?: boolean;
     'order'?: number;
     'tabCount'?: number;
   }
-
-  interface StellarSteps {
-    'contents': () => any[];
-    'name': string;
-    'steps': () => any[];
-  }
-  interface StellarStepsAttributes extends StencilHTMLAttributes {
+  interface StellarSteps extends JSXBase.HTMLAttributes {
     'name'?: string;
   }
-
-  interface StellarTab {
-    'disabled': boolean;
-    'href': string;
-    'notifications': boolean|number;
-    'open': boolean;
-    'order': number;
-    'tabCount': number;
-    'tag': string;
+  interface StellarStory extends JSXBase.HTMLAttributes {
+    'target'?: string;
   }
-  interface StellarTabAttributes extends StencilHTMLAttributes {
+  interface StellarStripe extends JSXBase.HTMLAttributes {
+    'name'?: string;
+    'token'?: string;
+  }
+  interface StellarSwitch extends JSXBase.HTMLAttributes {
+    'checked'?: boolean;
+    'checkedDefault'?: boolean;
+    'onChange'?: (event: CustomEvent<any>) => void;
+  }
+  interface StellarTab extends JSXBase.HTMLAttributes {
     'disabled'?: boolean;
     'href'?: string;
     'notifications'?: boolean|number;
-    'onContentChange'?: (event: CustomEvent) => void;
+    'onContentChange'?: (event: CustomEvent<any>) => void;
     'open'?: boolean;
     'order'?: number;
     'tabCount'?: number;
     'tag'?: string;
   }
-
-  interface StellarTable {
-    'chart': boolean;
-    'name': string;
-    'striped': boolean;
-    'upgrade': boolean;
-  }
-  interface StellarTableAttributes extends StencilHTMLAttributes {
+  interface StellarTable extends JSXBase.HTMLAttributes {
     'chart'?: boolean;
     'name'?: string;
     'striped'?: boolean;
     'upgrade'?: boolean;
   }
-
-  interface StellarTabs {
-    'behavior': string;
-    'block': boolean;
-    'blurring': () => void;
-    'contents': () => Promise<any[]>;
-    'height': string;
-    'name': string;
-    'noanimation': boolean;
-    'size': string|"tiny"|"small"|"medium"|"large";
-    'tabs': () => Promise<any[]>;
-    'vertical': boolean;
-  }
-  interface StellarTabsAttributes extends StencilHTMLAttributes {
+  interface StellarTabs extends JSXBase.HTMLAttributes {
     'behavior'?: string;
     'block'?: boolean;
     'height'?: string;
@@ -1613,220 +1452,358 @@ export namespace Components {
     'size'?: string|"tiny"|"small"|"medium"|"large";
     'vertical'?: boolean;
   }
-
-  interface StellarTag {
-    'color': string;
-    'outline': boolean;
-    'pill': boolean;
-    'size': string;
-    'textColor': string;
-  }
-  interface StellarTagAttributes extends StencilHTMLAttributes {
+  interface StellarTag extends JSXBase.HTMLAttributes {
     'color'?: string;
     'outline'?: boolean;
     'pill'?: boolean;
     'size'?: string;
     'textColor'?: string;
   }
-
-  interface StellarTooltip {
-    'align': "left"|"center"|"right"|"middle-left"|"middle-center"|"middle-right"|"bottom-left"|"bottom-center"|"bottom-right";
+  interface StellarToggle extends JSXBase.HTMLAttributes {
+    'card'?: any;
+    'description'?: string;
+    'flip'?: boolean;
+    'label'?: string;
+    'name'?: string;
+    'novalidate'?: boolean;
+    'onChange'?: (event: CustomEvent<any>) => void;
+    'required'?: boolean;
+    'single'?: boolean;
+    'size'?: string;
+    'stacked'?: boolean;
+    'type'?: string|"checkbox"|"radio"|"radio-block"|"checkbox-block";
+    'value'?: string|string[];
   }
-  interface StellarTooltipAttributes extends StencilHTMLAttributes {
+  interface StellarToggleOption extends JSXBase.HTMLAttributes {
+    'checked'?: boolean;
+    'checkedDefault'?: boolean;
+    'default'?: string;
+    'disabled'?: boolean;
+    'for'?: string;
+    'icon'?: boolean;
+    'inline'?: boolean;
+    'name'?: string;
+    'onChange'?: (event: CustomEvent<any>) => void;
+    'required'?: boolean;
+    'selectedCopy'?: string;
+    'single'?: boolean;
+    'size'?: boolean;
+    'tooltip'?: string;
+    'type'?: string;
+    'value'?: string;
+  }
+  interface StellarTooltip extends JSXBase.HTMLAttributes {
     'align'?: "left"|"center"|"right"|"middle-left"|"middle-center"|"middle-right"|"bottom-left"|"bottom-center"|"bottom-right";
   }
-}
+  interface StellarUnit extends JSXBase.HTMLAttributes {
+    'decimals'?: number;
+    'from'?: string;
+    'round'?: boolean;
+    'to'?: string;
+    'value'?: number;
+  }
+  interface StellarVideo extends JSXBase.HTMLAttributes {
+    'autoplay'?: boolean;
+    'controls'?: boolean;
+    'height'?: number;
+    'muted'?: boolean;
+    'overlay'?: boolean;
+    'playsinline'?: boolean;
+    'poster'?: string;
+    'preload'?: string;
+    'width'?: number;
+  }
+  interface WebAudio extends JSXBase.HTMLAttributes {
+    'autoplay'?: Boolean;
+    'midi'?: Boolean;
+    'name'?: string;
+  }
+  interface WebAudioDebugger extends JSXBase.HTMLAttributes {
+    'count'?: number;
+  }
+  interface WebAudioEffect extends JSXBase.HTMLAttributes {
+    'axis'?: string;
+    'method'?: string;
+    'midicontroller'?: number;
+    'responds'?: string;
+    'type'?: string;
+    'use'?: string;
+    'value'?: number;
+  }
+  interface WebAudioSequencer extends JSXBase.HTMLAttributes {
+    'autoplay'?: boolean;
+    'custom'?: Function;
+    'name'?: string;
+    'taps'?: number;
+    'tempo'?: number;
+  }
+  interface WebAudioSource extends JSXBase.HTMLAttributes {
+    'effectsvolume'?: number;
+    'inert'?: boolean;
+    'midichannel'?: number;
+    'midikey'?: number;
+    'name'?: string;
+    'onTimeupdate'?: (event: CustomEvent<any>) => void;
+    'playing'?: boolean;
+    'src'?: string;
+  }
+  interface WebAudioVisualizer extends JSXBase.HTMLAttributes {
+    'analyser'?: AnalyserNode;
+    'color'?: string;
+    'for'?: string;
+    'height'?: number;
+    'renderer'?: AnalyserNode;
+    'size'?: number;
+    'smoothing'?: number;
+    'tag'?: HTMLAudioElement;
+    'type'?: string|"wave"|"bars"|"webgl";
+    'width'?: number;
+  }
+  interface WebAudioVisualizerShader extends JSXBase.HTMLAttributes {
+    'type'?: string;
+  }
 
-declare global {
-  interface StencilElementInterfaces {
-    'WebAudioDebugger': Components.WebAudioDebugger;
-    'WebAudioEffect': Components.WebAudioEffect;
-    'WebAudioSequencer': Components.WebAudioSequencer;
-    'WebAudioSource': Components.WebAudioSource;
-    'WebAudioVisualizerShader': Components.WebAudioVisualizerShader;
-    'WebAudioVisualizer': Components.WebAudioVisualizer;
-    'WebAudio': Components.WebAudio;
-    'StellarButton': Components.StellarButton;
-    'StellarColorPicker': Components.StellarColorPicker;
-    'StellarForm': Components.StellarForm;
-    'StellarInput': Components.StellarInput;
-    'StellarItem': Components.StellarItem;
-    'StellarLabel': Components.StellarLabel;
-    'StellarPasswordRequirements': Components.StellarPasswordRequirements;
-    'StellarProgress': Components.StellarProgress;
-    'StellarSelect': Components.StellarSelect;
-    'StellarSwitch': Components.StellarSwitch;
-    'StellarToggleOption': Components.StellarToggleOption;
-    'StellarToggle': Components.StellarToggle;
+  interface ElementInterfaces {
+    'CopyWrap': Components.CopyWrap;
+    'SkeletonImg': Components.SkeletonImg;
+    'SkeletonText': Components.SkeletonText;
+    'Stellar360Image': Components.Stellar360Image;
+    'Stellar360Video': Components.Stellar360Video;
+    'StellarAccordion': Components.StellarAccordion;
+    'StellarAnimateText': Components.StellarAnimateText;
+    'StellarAsset': Components.StellarAsset;
     'StellarAssetLibrary': Components.StellarAssetLibrary;
+    'StellarAvatar': Components.StellarAvatar;
+    'StellarBlur': Components.StellarBlur;
+    'StellarBreadcrumb': Components.StellarBreadcrumb;
+    'StellarBreadcrumbs': Components.StellarBreadcrumbs;
+    'StellarButton': Components.StellarButton;
+    'StellarCallout': Components.StellarCallout;
+    'StellarCard': Components.StellarCard;
     'StellarChart': Components.StellarChart;
     'StellarCode': Components.StellarCode;
     'StellarColorLibrary': Components.StellarColorLibrary;
-    'StellarMarkdown': Components.StellarMarkdown;
-    'StellarReveal': Components.StellarReveal;
-    'StellarScatter': Components.StellarScatter;
-    'StellarStarscape': Components.StellarStarscape;
-    'StellarStory': Components.StellarStory;
-    'StellarStripe': Components.StellarStripe;
-    'StellarUnit': Components.StellarUnit;
-    'Stellar360Image': Components.Stellar360Image;
-    'Stellar360Video': Components.Stellar360Video;
-    'StellarImage': Components.StellarImage;
-    'StellarInterviewLine': Components.StellarInterviewLine;
-    'StellarInterview': Components.StellarInterview;
-    'StellarPlaylist': Components.StellarPlaylist;
-    'SkeletonImg': Components.SkeletonImg;
-    'SkeletonText': Components.SkeletonText;
-    'StellarSong': Components.StellarSong;
-    'StellarVideo': Components.StellarVideo;
-    'StellarAnimateText': Components.StellarAnimateText;
-    'StellarBlur': Components.StellarBlur;
-    'StellarParallaxSection': Components.StellarParallaxSection;
-    'StellarParallax': Components.StellarParallax;
-    'StellarSlide': Components.StellarSlide;
-    'StellarSlides': Components.StellarSlides;
-    'StellarAccordion': Components.StellarAccordion;
-    'StellarAsset': Components.StellarAsset;
-    'StellarAvatar': Components.StellarAvatar;
-    'StellarBreadcrumb': Components.StellarBreadcrumb;
-    'StellarBreadcrumbs': Components.StellarBreadcrumbs;
-    'StellarCallout': Components.StellarCallout;
-    'StellarCard': Components.StellarCard;
+    'StellarColorPicker': Components.StellarColorPicker;
     'StellarComment': Components.StellarComment;
     'StellarComments': Components.StellarComments;
     'StellarContent': Components.StellarContent;
-    'CopyWrap': Components.CopyWrap;
     'StellarDropdown': Components.StellarDropdown;
+    'StellarForm': Components.StellarForm;
     'StellarGrid': Components.StellarGrid;
-    'StellarGroupOverflow': Components.StellarGroupOverflow;
     'StellarGroup': Components.StellarGroup;
+    'StellarGroupOverflow': Components.StellarGroupOverflow;
+    'StellarImage': Components.StellarImage;
+    'StellarInput': Components.StellarInput;
+    'StellarInterview': Components.StellarInterview;
+    'StellarInterviewLine': Components.StellarInterviewLine;
+    'StellarItem': Components.StellarItem;
+    'StellarLabel': Components.StellarLabel;
     'StellarLayout': Components.StellarLayout;
+    'StellarMarkdown': Components.StellarMarkdown;
     'StellarMessage': Components.StellarMessage;
     'StellarPagination': Components.StellarPagination;
+    'StellarParallax': Components.StellarParallax;
+    'StellarParallaxSection': Components.StellarParallaxSection;
+    'StellarPasswordRequirements': Components.StellarPasswordRequirements;
+    'StellarPlaylist': Components.StellarPlaylist;
+    'StellarProgress': Components.StellarProgress;
+    'StellarReveal': Components.StellarReveal;
+    'StellarScatter': Components.StellarScatter;
+    'StellarSelect': Components.StellarSelect;
+    'StellarSlide': Components.StellarSlide;
+    'StellarSlides': Components.StellarSlides;
+    'StellarSong': Components.StellarSong;
+    'StellarStarscape': Components.StellarStarscape;
     'StellarStep': Components.StellarStep;
     'StellarSteps': Components.StellarSteps;
+    'StellarStory': Components.StellarStory;
+    'StellarStripe': Components.StellarStripe;
+    'StellarSwitch': Components.StellarSwitch;
     'StellarTab': Components.StellarTab;
     'StellarTable': Components.StellarTable;
     'StellarTabs': Components.StellarTabs;
     'StellarTag': Components.StellarTag;
+    'StellarToggle': Components.StellarToggle;
+    'StellarToggleOption': Components.StellarToggleOption;
     'StellarTooltip': Components.StellarTooltip;
+    'StellarUnit': Components.StellarUnit;
+    'StellarVideo': Components.StellarVideo;
+    'WebAudio': Components.WebAudio;
+    'WebAudioDebugger': Components.WebAudioDebugger;
+    'WebAudioEffect': Components.WebAudioEffect;
+    'WebAudioSequencer': Components.WebAudioSequencer;
+    'WebAudioSource': Components.WebAudioSource;
+    'WebAudioVisualizer': Components.WebAudioVisualizer;
+    'WebAudioVisualizerShader': Components.WebAudioVisualizerShader;
   }
 
-  interface StencilIntrinsicElements {
-    'web-audio-debugger': Components.WebAudioDebuggerAttributes;
-    'web-audio-effect': Components.WebAudioEffectAttributes;
-    'web-audio-sequencer': Components.WebAudioSequencerAttributes;
-    'web-audio-source': Components.WebAudioSourceAttributes;
-    'web-audio-visualizer-shader': Components.WebAudioVisualizerShaderAttributes;
-    'web-audio-visualizer': Components.WebAudioVisualizerAttributes;
-    'web-audio': Components.WebAudioAttributes;
-    'stellar-button': Components.StellarButtonAttributes;
-    'stellar-color-picker': Components.StellarColorPickerAttributes;
-    'stellar-form': Components.StellarFormAttributes;
-    'stellar-input': Components.StellarInputAttributes;
-    'stellar-item': Components.StellarItemAttributes;
-    'stellar-label': Components.StellarLabelAttributes;
-    'stellar-password-requirements': Components.StellarPasswordRequirementsAttributes;
-    'stellar-progress': Components.StellarProgressAttributes;
-    'stellar-select': Components.StellarSelectAttributes;
-    'stellar-switch': Components.StellarSwitchAttributes;
-    'stellar-toggle-option': Components.StellarToggleOptionAttributes;
-    'stellar-toggle': Components.StellarToggleAttributes;
-    'stellar-asset-library': Components.StellarAssetLibraryAttributes;
-    'stellar-chart': Components.StellarChartAttributes;
-    'stellar-code': Components.StellarCodeAttributes;
-    'stellar-color-library': Components.StellarColorLibraryAttributes;
-    'stellar-markdown': Components.StellarMarkdownAttributes;
-    'stellar-reveal': Components.StellarRevealAttributes;
-    'stellar-scatter': Components.StellarScatterAttributes;
-    'stellar-starscape': Components.StellarStarscapeAttributes;
-    'stellar-story': Components.StellarStoryAttributes;
-    'stellar-stripe': Components.StellarStripeAttributes;
-    'stellar-unit': Components.StellarUnitAttributes;
-    'stellar-360-image': Components.Stellar360ImageAttributes;
-    'stellar-360-video': Components.Stellar360VideoAttributes;
-    'stellar-image': Components.StellarImageAttributes;
-    'stellar-interview-line': Components.StellarInterviewLineAttributes;
-    'stellar-interview': Components.StellarInterviewAttributes;
-    'stellar-playlist': Components.StellarPlaylistAttributes;
-    'skeleton-img': Components.SkeletonImgAttributes;
-    'skeleton-text': Components.SkeletonTextAttributes;
-    'stellar-song': Components.StellarSongAttributes;
-    'stellar-video': Components.StellarVideoAttributes;
-    'stellar-animate-text': Components.StellarAnimateTextAttributes;
-    'stellar-blur': Components.StellarBlurAttributes;
-    'stellar-parallax-section': Components.StellarParallaxSectionAttributes;
-    'stellar-parallax': Components.StellarParallaxAttributes;
-    'stellar-slide': Components.StellarSlideAttributes;
-    'stellar-slides': Components.StellarSlidesAttributes;
-    'stellar-accordion': Components.StellarAccordionAttributes;
-    'stellar-asset': Components.StellarAssetAttributes;
-    'stellar-avatar': Components.StellarAvatarAttributes;
-    'stellar-breadcrumb': Components.StellarBreadcrumbAttributes;
-    'stellar-breadcrumbs': Components.StellarBreadcrumbsAttributes;
-    'stellar-callout': Components.StellarCalloutAttributes;
-    'stellar-card': Components.StellarCardAttributes;
-    'stellar-comment': Components.StellarCommentAttributes;
-    'stellar-comments': Components.StellarCommentsAttributes;
-    'stellar-content': Components.StellarContentAttributes;
-    'copy-wrap': Components.CopyWrapAttributes;
-    'stellar-dropdown': Components.StellarDropdownAttributes;
-    'stellar-grid': Components.StellarGridAttributes;
-    'stellar-group-overflow': Components.StellarGroupOverflowAttributes;
-    'stellar-group': Components.StellarGroupAttributes;
-    'stellar-layout': Components.StellarLayoutAttributes;
-    'stellar-message': Components.StellarMessageAttributes;
-    'stellar-pagination': Components.StellarPaginationAttributes;
-    'stellar-step': Components.StellarStepAttributes;
-    'stellar-steps': Components.StellarStepsAttributes;
-    'stellar-tab': Components.StellarTabAttributes;
-    'stellar-table': Components.StellarTableAttributes;
-    'stellar-tabs': Components.StellarTabsAttributes;
-    'stellar-tag': Components.StellarTagAttributes;
-    'stellar-tooltip': Components.StellarTooltipAttributes;
+  interface IntrinsicElements {
+    'CopyWrap': LocalJSX.CopyWrap;
+    'SkeletonImg': LocalJSX.SkeletonImg;
+    'SkeletonText': LocalJSX.SkeletonText;
+    'Stellar360Image': LocalJSX.Stellar360Image;
+    'Stellar360Video': LocalJSX.Stellar360Video;
+    'StellarAccordion': LocalJSX.StellarAccordion;
+    'StellarAnimateText': LocalJSX.StellarAnimateText;
+    'StellarAsset': LocalJSX.StellarAsset;
+    'StellarAssetLibrary': LocalJSX.StellarAssetLibrary;
+    'StellarAvatar': LocalJSX.StellarAvatar;
+    'StellarBlur': LocalJSX.StellarBlur;
+    'StellarBreadcrumb': LocalJSX.StellarBreadcrumb;
+    'StellarBreadcrumbs': LocalJSX.StellarBreadcrumbs;
+    'StellarButton': LocalJSX.StellarButton;
+    'StellarCallout': LocalJSX.StellarCallout;
+    'StellarCard': LocalJSX.StellarCard;
+    'StellarChart': LocalJSX.StellarChart;
+    'StellarCode': LocalJSX.StellarCode;
+    'StellarColorLibrary': LocalJSX.StellarColorLibrary;
+    'StellarColorPicker': LocalJSX.StellarColorPicker;
+    'StellarComment': LocalJSX.StellarComment;
+    'StellarComments': LocalJSX.StellarComments;
+    'StellarContent': LocalJSX.StellarContent;
+    'StellarDropdown': LocalJSX.StellarDropdown;
+    'StellarForm': LocalJSX.StellarForm;
+    'StellarGrid': LocalJSX.StellarGrid;
+    'StellarGroup': LocalJSX.StellarGroup;
+    'StellarGroupOverflow': LocalJSX.StellarGroupOverflow;
+    'StellarImage': LocalJSX.StellarImage;
+    'StellarInput': LocalJSX.StellarInput;
+    'StellarInterview': LocalJSX.StellarInterview;
+    'StellarInterviewLine': LocalJSX.StellarInterviewLine;
+    'StellarItem': LocalJSX.StellarItem;
+    'StellarLabel': LocalJSX.StellarLabel;
+    'StellarLayout': LocalJSX.StellarLayout;
+    'StellarMarkdown': LocalJSX.StellarMarkdown;
+    'StellarMessage': LocalJSX.StellarMessage;
+    'StellarPagination': LocalJSX.StellarPagination;
+    'StellarParallax': LocalJSX.StellarParallax;
+    'StellarParallaxSection': LocalJSX.StellarParallaxSection;
+    'StellarPasswordRequirements': LocalJSX.StellarPasswordRequirements;
+    'StellarPlaylist': LocalJSX.StellarPlaylist;
+    'StellarProgress': LocalJSX.StellarProgress;
+    'StellarReveal': LocalJSX.StellarReveal;
+    'StellarScatter': LocalJSX.StellarScatter;
+    'StellarSelect': LocalJSX.StellarSelect;
+    'StellarSlide': LocalJSX.StellarSlide;
+    'StellarSlides': LocalJSX.StellarSlides;
+    'StellarSong': LocalJSX.StellarSong;
+    'StellarStarscape': LocalJSX.StellarStarscape;
+    'StellarStep': LocalJSX.StellarStep;
+    'StellarSteps': LocalJSX.StellarSteps;
+    'StellarStory': LocalJSX.StellarStory;
+    'StellarStripe': LocalJSX.StellarStripe;
+    'StellarSwitch': LocalJSX.StellarSwitch;
+    'StellarTab': LocalJSX.StellarTab;
+    'StellarTable': LocalJSX.StellarTable;
+    'StellarTabs': LocalJSX.StellarTabs;
+    'StellarTag': LocalJSX.StellarTag;
+    'StellarToggle': LocalJSX.StellarToggle;
+    'StellarToggleOption': LocalJSX.StellarToggleOption;
+    'StellarTooltip': LocalJSX.StellarTooltip;
+    'StellarUnit': LocalJSX.StellarUnit;
+    'StellarVideo': LocalJSX.StellarVideo;
+    'WebAudio': LocalJSX.WebAudio;
+    'WebAudioDebugger': LocalJSX.WebAudioDebugger;
+    'WebAudioEffect': LocalJSX.WebAudioEffect;
+    'WebAudioSequencer': LocalJSX.WebAudioSequencer;
+    'WebAudioSource': LocalJSX.WebAudioSource;
+    'WebAudioVisualizer': LocalJSX.WebAudioVisualizer;
+    'WebAudioVisualizerShader': LocalJSX.WebAudioVisualizerShader;
+  }
+}
+export { LocalJSX as JSX };
+
+declare module "@stencil/core" {
+  export namespace JSX {
+    interface ElementInterfaces extends LocalJSX.ElementInterfaces {}
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+  }
+}
+
+declare global {
+
+  // Adding a global JSX for backcompatibility with legacy dependencies
+  export namespace JSX {
+    export interface Element {}
   }
 
 
-  interface HTMLWebAudioDebuggerElement extends Components.WebAudioDebugger, HTMLStencilElement {}
-  var HTMLWebAudioDebuggerElement: {
-    prototype: HTMLWebAudioDebuggerElement;
-    new (): HTMLWebAudioDebuggerElement;
+  interface HTMLCopyWrapElement extends Components.CopyWrap, HTMLStencilElement {}
+  var HTMLCopyWrapElement: {
+    prototype: HTMLCopyWrapElement;
+    new (): HTMLCopyWrapElement;
   };
 
-  interface HTMLWebAudioEffectElement extends Components.WebAudioEffect, HTMLStencilElement {}
-  var HTMLWebAudioEffectElement: {
-    prototype: HTMLWebAudioEffectElement;
-    new (): HTMLWebAudioEffectElement;
+  interface HTMLSkeletonImgElement extends Components.SkeletonImg, HTMLStencilElement {}
+  var HTMLSkeletonImgElement: {
+    prototype: HTMLSkeletonImgElement;
+    new (): HTMLSkeletonImgElement;
   };
 
-  interface HTMLWebAudioSequencerElement extends Components.WebAudioSequencer, HTMLStencilElement {}
-  var HTMLWebAudioSequencerElement: {
-    prototype: HTMLWebAudioSequencerElement;
-    new (): HTMLWebAudioSequencerElement;
+  interface HTMLSkeletonTextElement extends Components.SkeletonText, HTMLStencilElement {}
+  var HTMLSkeletonTextElement: {
+    prototype: HTMLSkeletonTextElement;
+    new (): HTMLSkeletonTextElement;
   };
 
-  interface HTMLWebAudioSourceElement extends Components.WebAudioSource, HTMLStencilElement {}
-  var HTMLWebAudioSourceElement: {
-    prototype: HTMLWebAudioSourceElement;
-    new (): HTMLWebAudioSourceElement;
+  interface HTMLStellar360ImageElement extends Components.Stellar360Image, HTMLStencilElement {}
+  var HTMLStellar360ImageElement: {
+    prototype: HTMLStellar360ImageElement;
+    new (): HTMLStellar360ImageElement;
   };
 
-  interface HTMLWebAudioVisualizerShaderElement extends Components.WebAudioVisualizerShader, HTMLStencilElement {}
-  var HTMLWebAudioVisualizerShaderElement: {
-    prototype: HTMLWebAudioVisualizerShaderElement;
-    new (): HTMLWebAudioVisualizerShaderElement;
+  interface HTMLStellar360VideoElement extends Components.Stellar360Video, HTMLStencilElement {}
+  var HTMLStellar360VideoElement: {
+    prototype: HTMLStellar360VideoElement;
+    new (): HTMLStellar360VideoElement;
   };
 
-  interface HTMLWebAudioVisualizerElement extends Components.WebAudioVisualizer, HTMLStencilElement {}
-  var HTMLWebAudioVisualizerElement: {
-    prototype: HTMLWebAudioVisualizerElement;
-    new (): HTMLWebAudioVisualizerElement;
+  interface HTMLStellarAccordionElement extends Components.StellarAccordion, HTMLStencilElement {}
+  var HTMLStellarAccordionElement: {
+    prototype: HTMLStellarAccordionElement;
+    new (): HTMLStellarAccordionElement;
   };
 
-  interface HTMLWebAudioElement extends Components.WebAudio, HTMLStencilElement {}
-  var HTMLWebAudioElement: {
-    prototype: HTMLWebAudioElement;
-    new (): HTMLWebAudioElement;
+  interface HTMLStellarAnimateTextElement extends Components.StellarAnimateText, HTMLStencilElement {}
+  var HTMLStellarAnimateTextElement: {
+    prototype: HTMLStellarAnimateTextElement;
+    new (): HTMLStellarAnimateTextElement;
+  };
+
+  interface HTMLStellarAssetElement extends Components.StellarAsset, HTMLStencilElement {}
+  var HTMLStellarAssetElement: {
+    prototype: HTMLStellarAssetElement;
+    new (): HTMLStellarAssetElement;
+  };
+
+  interface HTMLStellarAssetLibraryElement extends Components.StellarAssetLibrary, HTMLStencilElement {}
+  var HTMLStellarAssetLibraryElement: {
+    prototype: HTMLStellarAssetLibraryElement;
+    new (): HTMLStellarAssetLibraryElement;
+  };
+
+  interface HTMLStellarAvatarElement extends Components.StellarAvatar, HTMLStencilElement {}
+  var HTMLStellarAvatarElement: {
+    prototype: HTMLStellarAvatarElement;
+    new (): HTMLStellarAvatarElement;
+  };
+
+  interface HTMLStellarBlurElement extends Components.StellarBlur, HTMLStencilElement {}
+  var HTMLStellarBlurElement: {
+    prototype: HTMLStellarBlurElement;
+    new (): HTMLStellarBlurElement;
+  };
+
+  interface HTMLStellarBreadcrumbElement extends Components.StellarBreadcrumb, HTMLStencilElement {}
+  var HTMLStellarBreadcrumbElement: {
+    prototype: HTMLStellarBreadcrumbElement;
+    new (): HTMLStellarBreadcrumbElement;
+  };
+
+  interface HTMLStellarBreadcrumbsElement extends Components.StellarBreadcrumbs, HTMLStencilElement {}
+  var HTMLStellarBreadcrumbsElement: {
+    prototype: HTMLStellarBreadcrumbsElement;
+    new (): HTMLStellarBreadcrumbsElement;
   };
 
   interface HTMLStellarButtonElement extends Components.StellarButton, HTMLStencilElement {}
@@ -1835,76 +1812,16 @@ declare global {
     new (): HTMLStellarButtonElement;
   };
 
-  interface HTMLStellarColorPickerElement extends Components.StellarColorPicker, HTMLStencilElement {}
-  var HTMLStellarColorPickerElement: {
-    prototype: HTMLStellarColorPickerElement;
-    new (): HTMLStellarColorPickerElement;
+  interface HTMLStellarCalloutElement extends Components.StellarCallout, HTMLStencilElement {}
+  var HTMLStellarCalloutElement: {
+    prototype: HTMLStellarCalloutElement;
+    new (): HTMLStellarCalloutElement;
   };
 
-  interface HTMLStellarFormElement extends Components.StellarForm, HTMLStencilElement {}
-  var HTMLStellarFormElement: {
-    prototype: HTMLStellarFormElement;
-    new (): HTMLStellarFormElement;
-  };
-
-  interface HTMLStellarInputElement extends Components.StellarInput, HTMLStencilElement {}
-  var HTMLStellarInputElement: {
-    prototype: HTMLStellarInputElement;
-    new (): HTMLStellarInputElement;
-  };
-
-  interface HTMLStellarItemElement extends Components.StellarItem, HTMLStencilElement {}
-  var HTMLStellarItemElement: {
-    prototype: HTMLStellarItemElement;
-    new (): HTMLStellarItemElement;
-  };
-
-  interface HTMLStellarLabelElement extends Components.StellarLabel, HTMLStencilElement {}
-  var HTMLStellarLabelElement: {
-    prototype: HTMLStellarLabelElement;
-    new (): HTMLStellarLabelElement;
-  };
-
-  interface HTMLStellarPasswordRequirementsElement extends Components.StellarPasswordRequirements, HTMLStencilElement {}
-  var HTMLStellarPasswordRequirementsElement: {
-    prototype: HTMLStellarPasswordRequirementsElement;
-    new (): HTMLStellarPasswordRequirementsElement;
-  };
-
-  interface HTMLStellarProgressElement extends Components.StellarProgress, HTMLStencilElement {}
-  var HTMLStellarProgressElement: {
-    prototype: HTMLStellarProgressElement;
-    new (): HTMLStellarProgressElement;
-  };
-
-  interface HTMLStellarSelectElement extends Components.StellarSelect, HTMLStencilElement {}
-  var HTMLStellarSelectElement: {
-    prototype: HTMLStellarSelectElement;
-    new (): HTMLStellarSelectElement;
-  };
-
-  interface HTMLStellarSwitchElement extends Components.StellarSwitch, HTMLStencilElement {}
-  var HTMLStellarSwitchElement: {
-    prototype: HTMLStellarSwitchElement;
-    new (): HTMLStellarSwitchElement;
-  };
-
-  interface HTMLStellarToggleOptionElement extends Components.StellarToggleOption, HTMLStencilElement {}
-  var HTMLStellarToggleOptionElement: {
-    prototype: HTMLStellarToggleOptionElement;
-    new (): HTMLStellarToggleOptionElement;
-  };
-
-  interface HTMLStellarToggleElement extends Components.StellarToggle, HTMLStencilElement {}
-  var HTMLStellarToggleElement: {
-    prototype: HTMLStellarToggleElement;
-    new (): HTMLStellarToggleElement;
-  };
-
-  interface HTMLStellarAssetLibraryElement extends Components.StellarAssetLibrary, HTMLStencilElement {}
-  var HTMLStellarAssetLibraryElement: {
-    prototype: HTMLStellarAssetLibraryElement;
-    new (): HTMLStellarAssetLibraryElement;
+  interface HTMLStellarCardElement extends Components.StellarCard, HTMLStencilElement {}
+  var HTMLStellarCardElement: {
+    prototype: HTMLStellarCardElement;
+    new (): HTMLStellarCardElement;
   };
 
   interface HTMLStellarChartElement extends Components.StellarChart, HTMLStencilElement {}
@@ -1925,184 +1842,10 @@ declare global {
     new (): HTMLStellarColorLibraryElement;
   };
 
-  interface HTMLStellarMarkdownElement extends Components.StellarMarkdown, HTMLStencilElement {}
-  var HTMLStellarMarkdownElement: {
-    prototype: HTMLStellarMarkdownElement;
-    new (): HTMLStellarMarkdownElement;
-  };
-
-  interface HTMLStellarRevealElement extends Components.StellarReveal, HTMLStencilElement {}
-  var HTMLStellarRevealElement: {
-    prototype: HTMLStellarRevealElement;
-    new (): HTMLStellarRevealElement;
-  };
-
-  interface HTMLStellarScatterElement extends Components.StellarScatter, HTMLStencilElement {}
-  var HTMLStellarScatterElement: {
-    prototype: HTMLStellarScatterElement;
-    new (): HTMLStellarScatterElement;
-  };
-
-  interface HTMLStellarStarscapeElement extends Components.StellarStarscape, HTMLStencilElement {}
-  var HTMLStellarStarscapeElement: {
-    prototype: HTMLStellarStarscapeElement;
-    new (): HTMLStellarStarscapeElement;
-  };
-
-  interface HTMLStellarStoryElement extends Components.StellarStory, HTMLStencilElement {}
-  var HTMLStellarStoryElement: {
-    prototype: HTMLStellarStoryElement;
-    new (): HTMLStellarStoryElement;
-  };
-
-  interface HTMLStellarStripeElement extends Components.StellarStripe, HTMLStencilElement {}
-  var HTMLStellarStripeElement: {
-    prototype: HTMLStellarStripeElement;
-    new (): HTMLStellarStripeElement;
-  };
-
-  interface HTMLStellarUnitElement extends Components.StellarUnit, HTMLStencilElement {}
-  var HTMLStellarUnitElement: {
-    prototype: HTMLStellarUnitElement;
-    new (): HTMLStellarUnitElement;
-  };
-
-  interface HTMLStellar360ImageElement extends Components.Stellar360Image, HTMLStencilElement {}
-  var HTMLStellar360ImageElement: {
-    prototype: HTMLStellar360ImageElement;
-    new (): HTMLStellar360ImageElement;
-  };
-
-  interface HTMLStellar360VideoElement extends Components.Stellar360Video, HTMLStencilElement {}
-  var HTMLStellar360VideoElement: {
-    prototype: HTMLStellar360VideoElement;
-    new (): HTMLStellar360VideoElement;
-  };
-
-  interface HTMLStellarImageElement extends Components.StellarImage, HTMLStencilElement {}
-  var HTMLStellarImageElement: {
-    prototype: HTMLStellarImageElement;
-    new (): HTMLStellarImageElement;
-  };
-
-  interface HTMLStellarInterviewLineElement extends Components.StellarInterviewLine, HTMLStencilElement {}
-  var HTMLStellarInterviewLineElement: {
-    prototype: HTMLStellarInterviewLineElement;
-    new (): HTMLStellarInterviewLineElement;
-  };
-
-  interface HTMLStellarInterviewElement extends Components.StellarInterview, HTMLStencilElement {}
-  var HTMLStellarInterviewElement: {
-    prototype: HTMLStellarInterviewElement;
-    new (): HTMLStellarInterviewElement;
-  };
-
-  interface HTMLStellarPlaylistElement extends Components.StellarPlaylist, HTMLStencilElement {}
-  var HTMLStellarPlaylistElement: {
-    prototype: HTMLStellarPlaylistElement;
-    new (): HTMLStellarPlaylistElement;
-  };
-
-  interface HTMLSkeletonImgElement extends Components.SkeletonImg, HTMLStencilElement {}
-  var HTMLSkeletonImgElement: {
-    prototype: HTMLSkeletonImgElement;
-    new (): HTMLSkeletonImgElement;
-  };
-
-  interface HTMLSkeletonTextElement extends Components.SkeletonText, HTMLStencilElement {}
-  var HTMLSkeletonTextElement: {
-    prototype: HTMLSkeletonTextElement;
-    new (): HTMLSkeletonTextElement;
-  };
-
-  interface HTMLStellarSongElement extends Components.StellarSong, HTMLStencilElement {}
-  var HTMLStellarSongElement: {
-    prototype: HTMLStellarSongElement;
-    new (): HTMLStellarSongElement;
-  };
-
-  interface HTMLStellarVideoElement extends Components.StellarVideo, HTMLStencilElement {}
-  var HTMLStellarVideoElement: {
-    prototype: HTMLStellarVideoElement;
-    new (): HTMLStellarVideoElement;
-  };
-
-  interface HTMLStellarAnimateTextElement extends Components.StellarAnimateText, HTMLStencilElement {}
-  var HTMLStellarAnimateTextElement: {
-    prototype: HTMLStellarAnimateTextElement;
-    new (): HTMLStellarAnimateTextElement;
-  };
-
-  interface HTMLStellarBlurElement extends Components.StellarBlur, HTMLStencilElement {}
-  var HTMLStellarBlurElement: {
-    prototype: HTMLStellarBlurElement;
-    new (): HTMLStellarBlurElement;
-  };
-
-  interface HTMLStellarParallaxSectionElement extends Components.StellarParallaxSection, HTMLStencilElement {}
-  var HTMLStellarParallaxSectionElement: {
-    prototype: HTMLStellarParallaxSectionElement;
-    new (): HTMLStellarParallaxSectionElement;
-  };
-
-  interface HTMLStellarParallaxElement extends Components.StellarParallax, HTMLStencilElement {}
-  var HTMLStellarParallaxElement: {
-    prototype: HTMLStellarParallaxElement;
-    new (): HTMLStellarParallaxElement;
-  };
-
-  interface HTMLStellarSlideElement extends Components.StellarSlide, HTMLStencilElement {}
-  var HTMLStellarSlideElement: {
-    prototype: HTMLStellarSlideElement;
-    new (): HTMLStellarSlideElement;
-  };
-
-  interface HTMLStellarSlidesElement extends Components.StellarSlides, HTMLStencilElement {}
-  var HTMLStellarSlidesElement: {
-    prototype: HTMLStellarSlidesElement;
-    new (): HTMLStellarSlidesElement;
-  };
-
-  interface HTMLStellarAccordionElement extends Components.StellarAccordion, HTMLStencilElement {}
-  var HTMLStellarAccordionElement: {
-    prototype: HTMLStellarAccordionElement;
-    new (): HTMLStellarAccordionElement;
-  };
-
-  interface HTMLStellarAssetElement extends Components.StellarAsset, HTMLStencilElement {}
-  var HTMLStellarAssetElement: {
-    prototype: HTMLStellarAssetElement;
-    new (): HTMLStellarAssetElement;
-  };
-
-  interface HTMLStellarAvatarElement extends Components.StellarAvatar, HTMLStencilElement {}
-  var HTMLStellarAvatarElement: {
-    prototype: HTMLStellarAvatarElement;
-    new (): HTMLStellarAvatarElement;
-  };
-
-  interface HTMLStellarBreadcrumbElement extends Components.StellarBreadcrumb, HTMLStencilElement {}
-  var HTMLStellarBreadcrumbElement: {
-    prototype: HTMLStellarBreadcrumbElement;
-    new (): HTMLStellarBreadcrumbElement;
-  };
-
-  interface HTMLStellarBreadcrumbsElement extends Components.StellarBreadcrumbs, HTMLStencilElement {}
-  var HTMLStellarBreadcrumbsElement: {
-    prototype: HTMLStellarBreadcrumbsElement;
-    new (): HTMLStellarBreadcrumbsElement;
-  };
-
-  interface HTMLStellarCalloutElement extends Components.StellarCallout, HTMLStencilElement {}
-  var HTMLStellarCalloutElement: {
-    prototype: HTMLStellarCalloutElement;
-    new (): HTMLStellarCalloutElement;
-  };
-
-  interface HTMLStellarCardElement extends Components.StellarCard, HTMLStencilElement {}
-  var HTMLStellarCardElement: {
-    prototype: HTMLStellarCardElement;
-    new (): HTMLStellarCardElement;
+  interface HTMLStellarColorPickerElement extends Components.StellarColorPicker, HTMLStencilElement {}
+  var HTMLStellarColorPickerElement: {
+    prototype: HTMLStellarColorPickerElement;
+    new (): HTMLStellarColorPickerElement;
   };
 
   interface HTMLStellarCommentElement extends Components.StellarComment, HTMLStencilElement {}
@@ -2123,16 +1866,16 @@ declare global {
     new (): HTMLStellarContentElement;
   };
 
-  interface HTMLCopyWrapElement extends Components.CopyWrap, HTMLStencilElement {}
-  var HTMLCopyWrapElement: {
-    prototype: HTMLCopyWrapElement;
-    new (): HTMLCopyWrapElement;
-  };
-
   interface HTMLStellarDropdownElement extends Components.StellarDropdown, HTMLStencilElement {}
   var HTMLStellarDropdownElement: {
     prototype: HTMLStellarDropdownElement;
     new (): HTMLStellarDropdownElement;
+  };
+
+  interface HTMLStellarFormElement extends Components.StellarForm, HTMLStencilElement {}
+  var HTMLStellarFormElement: {
+    prototype: HTMLStellarFormElement;
+    new (): HTMLStellarFormElement;
   };
 
   interface HTMLStellarGridElement extends Components.StellarGrid, HTMLStencilElement {}
@@ -2141,22 +1884,64 @@ declare global {
     new (): HTMLStellarGridElement;
   };
 
-  interface HTMLStellarGroupOverflowElement extends Components.StellarGroupOverflow, HTMLStencilElement {}
-  var HTMLStellarGroupOverflowElement: {
-    prototype: HTMLStellarGroupOverflowElement;
-    new (): HTMLStellarGroupOverflowElement;
-  };
-
   interface HTMLStellarGroupElement extends Components.StellarGroup, HTMLStencilElement {}
   var HTMLStellarGroupElement: {
     prototype: HTMLStellarGroupElement;
     new (): HTMLStellarGroupElement;
   };
 
+  interface HTMLStellarGroupOverflowElement extends Components.StellarGroupOverflow, HTMLStencilElement {}
+  var HTMLStellarGroupOverflowElement: {
+    prototype: HTMLStellarGroupOverflowElement;
+    new (): HTMLStellarGroupOverflowElement;
+  };
+
+  interface HTMLStellarImageElement extends Components.StellarImage, HTMLStencilElement {}
+  var HTMLStellarImageElement: {
+    prototype: HTMLStellarImageElement;
+    new (): HTMLStellarImageElement;
+  };
+
+  interface HTMLStellarInputElement extends Components.StellarInput, HTMLStencilElement {}
+  var HTMLStellarInputElement: {
+    prototype: HTMLStellarInputElement;
+    new (): HTMLStellarInputElement;
+  };
+
+  interface HTMLStellarInterviewElement extends Components.StellarInterview, HTMLStencilElement {}
+  var HTMLStellarInterviewElement: {
+    prototype: HTMLStellarInterviewElement;
+    new (): HTMLStellarInterviewElement;
+  };
+
+  interface HTMLStellarInterviewLineElement extends Components.StellarInterviewLine, HTMLStencilElement {}
+  var HTMLStellarInterviewLineElement: {
+    prototype: HTMLStellarInterviewLineElement;
+    new (): HTMLStellarInterviewLineElement;
+  };
+
+  interface HTMLStellarItemElement extends Components.StellarItem, HTMLStencilElement {}
+  var HTMLStellarItemElement: {
+    prototype: HTMLStellarItemElement;
+    new (): HTMLStellarItemElement;
+  };
+
+  interface HTMLStellarLabelElement extends Components.StellarLabel, HTMLStencilElement {}
+  var HTMLStellarLabelElement: {
+    prototype: HTMLStellarLabelElement;
+    new (): HTMLStellarLabelElement;
+  };
+
   interface HTMLStellarLayoutElement extends Components.StellarLayout, HTMLStencilElement {}
   var HTMLStellarLayoutElement: {
     prototype: HTMLStellarLayoutElement;
     new (): HTMLStellarLayoutElement;
+  };
+
+  interface HTMLStellarMarkdownElement extends Components.StellarMarkdown, HTMLStencilElement {}
+  var HTMLStellarMarkdownElement: {
+    prototype: HTMLStellarMarkdownElement;
+    new (): HTMLStellarMarkdownElement;
   };
 
   interface HTMLStellarMessageElement extends Components.StellarMessage, HTMLStencilElement {}
@@ -2171,6 +1956,78 @@ declare global {
     new (): HTMLStellarPaginationElement;
   };
 
+  interface HTMLStellarParallaxElement extends Components.StellarParallax, HTMLStencilElement {}
+  var HTMLStellarParallaxElement: {
+    prototype: HTMLStellarParallaxElement;
+    new (): HTMLStellarParallaxElement;
+  };
+
+  interface HTMLStellarParallaxSectionElement extends Components.StellarParallaxSection, HTMLStencilElement {}
+  var HTMLStellarParallaxSectionElement: {
+    prototype: HTMLStellarParallaxSectionElement;
+    new (): HTMLStellarParallaxSectionElement;
+  };
+
+  interface HTMLStellarPasswordRequirementsElement extends Components.StellarPasswordRequirements, HTMLStencilElement {}
+  var HTMLStellarPasswordRequirementsElement: {
+    prototype: HTMLStellarPasswordRequirementsElement;
+    new (): HTMLStellarPasswordRequirementsElement;
+  };
+
+  interface HTMLStellarPlaylistElement extends Components.StellarPlaylist, HTMLStencilElement {}
+  var HTMLStellarPlaylistElement: {
+    prototype: HTMLStellarPlaylistElement;
+    new (): HTMLStellarPlaylistElement;
+  };
+
+  interface HTMLStellarProgressElement extends Components.StellarProgress, HTMLStencilElement {}
+  var HTMLStellarProgressElement: {
+    prototype: HTMLStellarProgressElement;
+    new (): HTMLStellarProgressElement;
+  };
+
+  interface HTMLStellarRevealElement extends Components.StellarReveal, HTMLStencilElement {}
+  var HTMLStellarRevealElement: {
+    prototype: HTMLStellarRevealElement;
+    new (): HTMLStellarRevealElement;
+  };
+
+  interface HTMLStellarScatterElement extends Components.StellarScatter, HTMLStencilElement {}
+  var HTMLStellarScatterElement: {
+    prototype: HTMLStellarScatterElement;
+    new (): HTMLStellarScatterElement;
+  };
+
+  interface HTMLStellarSelectElement extends Components.StellarSelect, HTMLStencilElement {}
+  var HTMLStellarSelectElement: {
+    prototype: HTMLStellarSelectElement;
+    new (): HTMLStellarSelectElement;
+  };
+
+  interface HTMLStellarSlideElement extends Components.StellarSlide, HTMLStencilElement {}
+  var HTMLStellarSlideElement: {
+    prototype: HTMLStellarSlideElement;
+    new (): HTMLStellarSlideElement;
+  };
+
+  interface HTMLStellarSlidesElement extends Components.StellarSlides, HTMLStencilElement {}
+  var HTMLStellarSlidesElement: {
+    prototype: HTMLStellarSlidesElement;
+    new (): HTMLStellarSlidesElement;
+  };
+
+  interface HTMLStellarSongElement extends Components.StellarSong, HTMLStencilElement {}
+  var HTMLStellarSongElement: {
+    prototype: HTMLStellarSongElement;
+    new (): HTMLStellarSongElement;
+  };
+
+  interface HTMLStellarStarscapeElement extends Components.StellarStarscape, HTMLStencilElement {}
+  var HTMLStellarStarscapeElement: {
+    prototype: HTMLStellarStarscapeElement;
+    new (): HTMLStellarStarscapeElement;
+  };
+
   interface HTMLStellarStepElement extends Components.StellarStep, HTMLStencilElement {}
   var HTMLStellarStepElement: {
     prototype: HTMLStellarStepElement;
@@ -2181,6 +2038,24 @@ declare global {
   var HTMLStellarStepsElement: {
     prototype: HTMLStellarStepsElement;
     new (): HTMLStellarStepsElement;
+  };
+
+  interface HTMLStellarStoryElement extends Components.StellarStory, HTMLStencilElement {}
+  var HTMLStellarStoryElement: {
+    prototype: HTMLStellarStoryElement;
+    new (): HTMLStellarStoryElement;
+  };
+
+  interface HTMLStellarStripeElement extends Components.StellarStripe, HTMLStencilElement {}
+  var HTMLStellarStripeElement: {
+    prototype: HTMLStellarStripeElement;
+    new (): HTMLStellarStripeElement;
+  };
+
+  interface HTMLStellarSwitchElement extends Components.StellarSwitch, HTMLStencilElement {}
+  var HTMLStellarSwitchElement: {
+    prototype: HTMLStellarSwitchElement;
+    new (): HTMLStellarSwitchElement;
   };
 
   interface HTMLStellarTabElement extends Components.StellarTab, HTMLStencilElement {}
@@ -2207,167 +2082,223 @@ declare global {
     new (): HTMLStellarTagElement;
   };
 
+  interface HTMLStellarToggleElement extends Components.StellarToggle, HTMLStencilElement {}
+  var HTMLStellarToggleElement: {
+    prototype: HTMLStellarToggleElement;
+    new (): HTMLStellarToggleElement;
+  };
+
+  interface HTMLStellarToggleOptionElement extends Components.StellarToggleOption, HTMLStencilElement {}
+  var HTMLStellarToggleOptionElement: {
+    prototype: HTMLStellarToggleOptionElement;
+    new (): HTMLStellarToggleOptionElement;
+  };
+
   interface HTMLStellarTooltipElement extends Components.StellarTooltip, HTMLStencilElement {}
   var HTMLStellarTooltipElement: {
     prototype: HTMLStellarTooltipElement;
     new (): HTMLStellarTooltipElement;
   };
 
+  interface HTMLStellarUnitElement extends Components.StellarUnit, HTMLStencilElement {}
+  var HTMLStellarUnitElement: {
+    prototype: HTMLStellarUnitElement;
+    new (): HTMLStellarUnitElement;
+  };
+
+  interface HTMLStellarVideoElement extends Components.StellarVideo, HTMLStencilElement {}
+  var HTMLStellarVideoElement: {
+    prototype: HTMLStellarVideoElement;
+    new (): HTMLStellarVideoElement;
+  };
+
+  interface HTMLWebAudioElement extends Components.WebAudio, HTMLStencilElement {}
+  var HTMLWebAudioElement: {
+    prototype: HTMLWebAudioElement;
+    new (): HTMLWebAudioElement;
+  };
+
+  interface HTMLWebAudioDebuggerElement extends Components.WebAudioDebugger, HTMLStencilElement {}
+  var HTMLWebAudioDebuggerElement: {
+    prototype: HTMLWebAudioDebuggerElement;
+    new (): HTMLWebAudioDebuggerElement;
+  };
+
+  interface HTMLWebAudioEffectElement extends Components.WebAudioEffect, HTMLStencilElement {}
+  var HTMLWebAudioEffectElement: {
+    prototype: HTMLWebAudioEffectElement;
+    new (): HTMLWebAudioEffectElement;
+  };
+
+  interface HTMLWebAudioSequencerElement extends Components.WebAudioSequencer, HTMLStencilElement {}
+  var HTMLWebAudioSequencerElement: {
+    prototype: HTMLWebAudioSequencerElement;
+    new (): HTMLWebAudioSequencerElement;
+  };
+
+  interface HTMLWebAudioSourceElement extends Components.WebAudioSource, HTMLStencilElement {}
+  var HTMLWebAudioSourceElement: {
+    prototype: HTMLWebAudioSourceElement;
+    new (): HTMLWebAudioSourceElement;
+  };
+
+  interface HTMLWebAudioVisualizerElement extends Components.WebAudioVisualizer, HTMLStencilElement {}
+  var HTMLWebAudioVisualizerElement: {
+    prototype: HTMLWebAudioVisualizerElement;
+    new (): HTMLWebAudioVisualizerElement;
+  };
+
+  interface HTMLWebAudioVisualizerShaderElement extends Components.WebAudioVisualizerShader, HTMLStencilElement {}
+  var HTMLWebAudioVisualizerShaderElement: {
+    prototype: HTMLWebAudioVisualizerShaderElement;
+    new (): HTMLWebAudioVisualizerShaderElement;
+  };
   interface HTMLElementTagNameMap {
-    'web-audio-debugger': HTMLWebAudioDebuggerElement
-    'web-audio-effect': HTMLWebAudioEffectElement
-    'web-audio-sequencer': HTMLWebAudioSequencerElement
-    'web-audio-source': HTMLWebAudioSourceElement
-    'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement
-    'web-audio-visualizer': HTMLWebAudioVisualizerElement
-    'web-audio': HTMLWebAudioElement
-    'stellar-button': HTMLStellarButtonElement
-    'stellar-color-picker': HTMLStellarColorPickerElement
-    'stellar-form': HTMLStellarFormElement
-    'stellar-input': HTMLStellarInputElement
-    'stellar-item': HTMLStellarItemElement
-    'stellar-label': HTMLStellarLabelElement
-    'stellar-password-requirements': HTMLStellarPasswordRequirementsElement
-    'stellar-progress': HTMLStellarProgressElement
-    'stellar-select': HTMLStellarSelectElement
-    'stellar-switch': HTMLStellarSwitchElement
-    'stellar-toggle-option': HTMLStellarToggleOptionElement
-    'stellar-toggle': HTMLStellarToggleElement
+    'copy-wrap': HTMLCopyWrapElement
+    'skeleton-img': HTMLSkeletonImgElement
+    'skeleton-text': HTMLSkeletonTextElement
+    'stellar-360-image': HTMLStellar360ImageElement
+    'stellar-360-video': HTMLStellar360VideoElement
+    'stellar-accordion': HTMLStellarAccordionElement
+    'stellar-animate-text': HTMLStellarAnimateTextElement
+    'stellar-asset': HTMLStellarAssetElement
     'stellar-asset-library': HTMLStellarAssetLibraryElement
+    'stellar-avatar': HTMLStellarAvatarElement
+    'stellar-blur': HTMLStellarBlurElement
+    'stellar-breadcrumb': HTMLStellarBreadcrumbElement
+    'stellar-breadcrumbs': HTMLStellarBreadcrumbsElement
+    'stellar-button': HTMLStellarButtonElement
+    'stellar-callout': HTMLStellarCalloutElement
+    'stellar-card': HTMLStellarCardElement
     'stellar-chart': HTMLStellarChartElement
     'stellar-code': HTMLStellarCodeElement
     'stellar-color-library': HTMLStellarColorLibraryElement
-    'stellar-markdown': HTMLStellarMarkdownElement
-    'stellar-reveal': HTMLStellarRevealElement
-    'stellar-scatter': HTMLStellarScatterElement
-    'stellar-starscape': HTMLStellarStarscapeElement
-    'stellar-story': HTMLStellarStoryElement
-    'stellar-stripe': HTMLStellarStripeElement
-    'stellar-unit': HTMLStellarUnitElement
-    'stellar-360-image': HTMLStellar360ImageElement
-    'stellar-360-video': HTMLStellar360VideoElement
-    'stellar-image': HTMLStellarImageElement
-    'stellar-interview-line': HTMLStellarInterviewLineElement
-    'stellar-interview': HTMLStellarInterviewElement
-    'stellar-playlist': HTMLStellarPlaylistElement
-    'skeleton-img': HTMLSkeletonImgElement
-    'skeleton-text': HTMLSkeletonTextElement
-    'stellar-song': HTMLStellarSongElement
-    'stellar-video': HTMLStellarVideoElement
-    'stellar-animate-text': HTMLStellarAnimateTextElement
-    'stellar-blur': HTMLStellarBlurElement
-    'stellar-parallax-section': HTMLStellarParallaxSectionElement
-    'stellar-parallax': HTMLStellarParallaxElement
-    'stellar-slide': HTMLStellarSlideElement
-    'stellar-slides': HTMLStellarSlidesElement
-    'stellar-accordion': HTMLStellarAccordionElement
-    'stellar-asset': HTMLStellarAssetElement
-    'stellar-avatar': HTMLStellarAvatarElement
-    'stellar-breadcrumb': HTMLStellarBreadcrumbElement
-    'stellar-breadcrumbs': HTMLStellarBreadcrumbsElement
-    'stellar-callout': HTMLStellarCalloutElement
-    'stellar-card': HTMLStellarCardElement
+    'stellar-color-picker': HTMLStellarColorPickerElement
     'stellar-comment': HTMLStellarCommentElement
     'stellar-comments': HTMLStellarCommentsElement
     'stellar-content': HTMLStellarContentElement
-    'copy-wrap': HTMLCopyWrapElement
     'stellar-dropdown': HTMLStellarDropdownElement
+    'stellar-form': HTMLStellarFormElement
     'stellar-grid': HTMLStellarGridElement
-    'stellar-group-overflow': HTMLStellarGroupOverflowElement
     'stellar-group': HTMLStellarGroupElement
+    'stellar-group-overflow': HTMLStellarGroupOverflowElement
+    'stellar-image': HTMLStellarImageElement
+    'stellar-input': HTMLStellarInputElement
+    'stellar-interview': HTMLStellarInterviewElement
+    'stellar-interview-line': HTMLStellarInterviewLineElement
+    'stellar-item': HTMLStellarItemElement
+    'stellar-label': HTMLStellarLabelElement
     'stellar-layout': HTMLStellarLayoutElement
+    'stellar-markdown': HTMLStellarMarkdownElement
     'stellar-message': HTMLStellarMessageElement
     'stellar-pagination': HTMLStellarPaginationElement
+    'stellar-parallax': HTMLStellarParallaxElement
+    'stellar-parallax-section': HTMLStellarParallaxSectionElement
+    'stellar-password-requirements': HTMLStellarPasswordRequirementsElement
+    'stellar-playlist': HTMLStellarPlaylistElement
+    'stellar-progress': HTMLStellarProgressElement
+    'stellar-reveal': HTMLStellarRevealElement
+    'stellar-scatter': HTMLStellarScatterElement
+    'stellar-select': HTMLStellarSelectElement
+    'stellar-slide': HTMLStellarSlideElement
+    'stellar-slides': HTMLStellarSlidesElement
+    'stellar-song': HTMLStellarSongElement
+    'stellar-starscape': HTMLStellarStarscapeElement
     'stellar-step': HTMLStellarStepElement
     'stellar-steps': HTMLStellarStepsElement
+    'stellar-story': HTMLStellarStoryElement
+    'stellar-stripe': HTMLStellarStripeElement
+    'stellar-switch': HTMLStellarSwitchElement
     'stellar-tab': HTMLStellarTabElement
     'stellar-table': HTMLStellarTableElement
     'stellar-tabs': HTMLStellarTabsElement
     'stellar-tag': HTMLStellarTagElement
+    'stellar-toggle': HTMLStellarToggleElement
+    'stellar-toggle-option': HTMLStellarToggleOptionElement
     'stellar-tooltip': HTMLStellarTooltipElement
+    'stellar-unit': HTMLStellarUnitElement
+    'stellar-video': HTMLStellarVideoElement
+    'web-audio': HTMLWebAudioElement
+    'web-audio-debugger': HTMLWebAudioDebuggerElement
+    'web-audio-effect': HTMLWebAudioEffectElement
+    'web-audio-sequencer': HTMLWebAudioSequencerElement
+    'web-audio-source': HTMLWebAudioSourceElement
+    'web-audio-visualizer': HTMLWebAudioVisualizerElement
+    'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement
   }
 
   interface ElementTagNameMap {
-    'web-audio-debugger': HTMLWebAudioDebuggerElement;
-    'web-audio-effect': HTMLWebAudioEffectElement;
-    'web-audio-sequencer': HTMLWebAudioSequencerElement;
-    'web-audio-source': HTMLWebAudioSourceElement;
-    'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement;
-    'web-audio-visualizer': HTMLWebAudioVisualizerElement;
-    'web-audio': HTMLWebAudioElement;
-    'stellar-button': HTMLStellarButtonElement;
-    'stellar-color-picker': HTMLStellarColorPickerElement;
-    'stellar-form': HTMLStellarFormElement;
-    'stellar-input': HTMLStellarInputElement;
-    'stellar-item': HTMLStellarItemElement;
-    'stellar-label': HTMLStellarLabelElement;
-    'stellar-password-requirements': HTMLStellarPasswordRequirementsElement;
-    'stellar-progress': HTMLStellarProgressElement;
-    'stellar-select': HTMLStellarSelectElement;
-    'stellar-switch': HTMLStellarSwitchElement;
-    'stellar-toggle-option': HTMLStellarToggleOptionElement;
-    'stellar-toggle': HTMLStellarToggleElement;
+    'copy-wrap': HTMLCopyWrapElement;
+    'skeleton-img': HTMLSkeletonImgElement;
+    'skeleton-text': HTMLSkeletonTextElement;
+    'stellar-360-image': HTMLStellar360ImageElement;
+    'stellar-360-video': HTMLStellar360VideoElement;
+    'stellar-accordion': HTMLStellarAccordionElement;
+    'stellar-animate-text': HTMLStellarAnimateTextElement;
+    'stellar-asset': HTMLStellarAssetElement;
     'stellar-asset-library': HTMLStellarAssetLibraryElement;
+    'stellar-avatar': HTMLStellarAvatarElement;
+    'stellar-blur': HTMLStellarBlurElement;
+    'stellar-breadcrumb': HTMLStellarBreadcrumbElement;
+    'stellar-breadcrumbs': HTMLStellarBreadcrumbsElement;
+    'stellar-button': HTMLStellarButtonElement;
+    'stellar-callout': HTMLStellarCalloutElement;
+    'stellar-card': HTMLStellarCardElement;
     'stellar-chart': HTMLStellarChartElement;
     'stellar-code': HTMLStellarCodeElement;
     'stellar-color-library': HTMLStellarColorLibraryElement;
-    'stellar-markdown': HTMLStellarMarkdownElement;
-    'stellar-reveal': HTMLStellarRevealElement;
-    'stellar-scatter': HTMLStellarScatterElement;
-    'stellar-starscape': HTMLStellarStarscapeElement;
-    'stellar-story': HTMLStellarStoryElement;
-    'stellar-stripe': HTMLStellarStripeElement;
-    'stellar-unit': HTMLStellarUnitElement;
-    'stellar-360-image': HTMLStellar360ImageElement;
-    'stellar-360-video': HTMLStellar360VideoElement;
-    'stellar-image': HTMLStellarImageElement;
-    'stellar-interview-line': HTMLStellarInterviewLineElement;
-    'stellar-interview': HTMLStellarInterviewElement;
-    'stellar-playlist': HTMLStellarPlaylistElement;
-    'skeleton-img': HTMLSkeletonImgElement;
-    'skeleton-text': HTMLSkeletonTextElement;
-    'stellar-song': HTMLStellarSongElement;
-    'stellar-video': HTMLStellarVideoElement;
-    'stellar-animate-text': HTMLStellarAnimateTextElement;
-    'stellar-blur': HTMLStellarBlurElement;
-    'stellar-parallax-section': HTMLStellarParallaxSectionElement;
-    'stellar-parallax': HTMLStellarParallaxElement;
-    'stellar-slide': HTMLStellarSlideElement;
-    'stellar-slides': HTMLStellarSlidesElement;
-    'stellar-accordion': HTMLStellarAccordionElement;
-    'stellar-asset': HTMLStellarAssetElement;
-    'stellar-avatar': HTMLStellarAvatarElement;
-    'stellar-breadcrumb': HTMLStellarBreadcrumbElement;
-    'stellar-breadcrumbs': HTMLStellarBreadcrumbsElement;
-    'stellar-callout': HTMLStellarCalloutElement;
-    'stellar-card': HTMLStellarCardElement;
+    'stellar-color-picker': HTMLStellarColorPickerElement;
     'stellar-comment': HTMLStellarCommentElement;
     'stellar-comments': HTMLStellarCommentsElement;
     'stellar-content': HTMLStellarContentElement;
-    'copy-wrap': HTMLCopyWrapElement;
     'stellar-dropdown': HTMLStellarDropdownElement;
+    'stellar-form': HTMLStellarFormElement;
     'stellar-grid': HTMLStellarGridElement;
-    'stellar-group-overflow': HTMLStellarGroupOverflowElement;
     'stellar-group': HTMLStellarGroupElement;
+    'stellar-group-overflow': HTMLStellarGroupOverflowElement;
+    'stellar-image': HTMLStellarImageElement;
+    'stellar-input': HTMLStellarInputElement;
+    'stellar-interview': HTMLStellarInterviewElement;
+    'stellar-interview-line': HTMLStellarInterviewLineElement;
+    'stellar-item': HTMLStellarItemElement;
+    'stellar-label': HTMLStellarLabelElement;
     'stellar-layout': HTMLStellarLayoutElement;
+    'stellar-markdown': HTMLStellarMarkdownElement;
     'stellar-message': HTMLStellarMessageElement;
     'stellar-pagination': HTMLStellarPaginationElement;
+    'stellar-parallax': HTMLStellarParallaxElement;
+    'stellar-parallax-section': HTMLStellarParallaxSectionElement;
+    'stellar-password-requirements': HTMLStellarPasswordRequirementsElement;
+    'stellar-playlist': HTMLStellarPlaylistElement;
+    'stellar-progress': HTMLStellarProgressElement;
+    'stellar-reveal': HTMLStellarRevealElement;
+    'stellar-scatter': HTMLStellarScatterElement;
+    'stellar-select': HTMLStellarSelectElement;
+    'stellar-slide': HTMLStellarSlideElement;
+    'stellar-slides': HTMLStellarSlidesElement;
+    'stellar-song': HTMLStellarSongElement;
+    'stellar-starscape': HTMLStellarStarscapeElement;
     'stellar-step': HTMLStellarStepElement;
     'stellar-steps': HTMLStellarStepsElement;
+    'stellar-story': HTMLStellarStoryElement;
+    'stellar-stripe': HTMLStellarStripeElement;
+    'stellar-switch': HTMLStellarSwitchElement;
     'stellar-tab': HTMLStellarTabElement;
     'stellar-table': HTMLStellarTableElement;
     'stellar-tabs': HTMLStellarTabsElement;
     'stellar-tag': HTMLStellarTagElement;
+    'stellar-toggle': HTMLStellarToggleElement;
+    'stellar-toggle-option': HTMLStellarToggleOptionElement;
     'stellar-tooltip': HTMLStellarTooltipElement;
+    'stellar-unit': HTMLStellarUnitElement;
+    'stellar-video': HTMLStellarVideoElement;
+    'web-audio': HTMLWebAudioElement;
+    'web-audio-debugger': HTMLWebAudioDebuggerElement;
+    'web-audio-effect': HTMLWebAudioEffectElement;
+    'web-audio-sequencer': HTMLWebAudioSequencerElement;
+    'web-audio-source': HTMLWebAudioSourceElement;
+    'web-audio-visualizer': HTMLWebAudioVisualizerElement;
+    'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement;
   }
-
-
-  export namespace JSX {
-    export interface Element {}
-    export interface IntrinsicElements extends StencilIntrinsicElements {
-      [tagName: string]: any;
-    }
-  }
-  export interface HTMLAttributes extends StencilHTMLAttributes {}
-
 }
+

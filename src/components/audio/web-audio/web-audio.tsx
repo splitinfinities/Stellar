@@ -5,6 +5,7 @@ import '../web-audio-debugger/web-audio-debugger'
 import { BufferLoader } from '../bufferloader'
 import { delay } from '../helpers'
 import webmidi, {InputEventNoteon} from 'webmidi';
+import { asyncForEach } from '../../../utils';
 
 @Component({
   tag: 'web-audio'
@@ -37,17 +38,17 @@ export class WebAudio {
   @State() visualizerNodes: Array<string>
 
   @Method()
-  source (name) {
+  async source (name) {
     return this.sources[name];
   }
 
   @Method()
-  get_context () {
+  async get_context () {
     return this.context;
   }
 
   @Method()
-  is_prepared () {
+  async is_prepared () {
     return this.prepared;
   }
 
@@ -137,17 +138,17 @@ export class WebAudio {
     this.visualizers = Array.from(document.querySelectorAll(`web-audio-visualizer[for="${this.name}"]`))
 
     if (this.visualizers) {
-      this.log(`Attaching visualizers`)
+      this.log(`Attaching visualizers`);
 
-      this.visualizers.forEach((visualizer, index) => {
+      asyncForEach(this.visualizers, async (visualizer: WebAudioVisualizer, index) => {
         if (index === 0) {
-          visualizer = visualizer.connect(this.context, this.context.destination)
+          visualizer = await visualizer.connect(this.context, this.context.destination)
         } else {
-          visualizer = visualizer.connect(this.context, this.previousVisualizer.analyser)
+          visualizer = await visualizer.connect(this.context, this.previousVisualizer.analyser)
         }
 
         this.previousVisualizer = visualizer
-      });
+      })
     } else {
       this.log(`No visualizers for ${this.name}`)
     }

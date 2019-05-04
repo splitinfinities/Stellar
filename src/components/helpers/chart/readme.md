@@ -17,42 +17,49 @@
 
 ## Methods
 
-### `get_options() => any`
+### `get_options() => Promise<any>`
 
 
 
 #### Returns
 
-Type: `any`
+Type: `Promise<any>`
 
 
 
-### `options(newOptions: any) => void`
-
-
-
-#### Parameters
-
-| Name         | Type  | Description |
-| ------------ | ----- | ----------- |
-| `newOptions` | `any` |             |
-
-#### Returns
-
-Type: `void`
-
-
-
-### `refresh() => void`
+### `options(newOptions: any) => Promise<void>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
+### `refresh() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
+## Dependencies
+
+### Used by
+
+ - [stellar-table](../../ui/table)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-table --> stellar-chart
+  style stellar-chart fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

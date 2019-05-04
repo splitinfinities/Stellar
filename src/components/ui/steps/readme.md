@@ -50,23 +50,23 @@
 
 ## Methods
 
-### `contents() => any[]`
+### `contents() => Promise<any[]>`
 
 
 
 #### Returns
 
-Type: `any[]`
+Type: `Promise<any[]>`
 
 
 
-### `steps() => any[]`
+### `steps() => Promise<any[]>`
 
 
 
 #### Returns
 
-Type: `any[]`
+Type: `Promise<any[]>`
 
 
 

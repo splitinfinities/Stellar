@@ -1,4 +1,4 @@
-import { Component, Prop, State, Watch, Element, Event, EventEmitter } from '@stencil/core';
+import { Component, Prop, State, Watch, Element, Event, EventEmitter, h } from '@stencil/core';
 import {properties, blurringEase} from '../../../utils'
 
 @Component({

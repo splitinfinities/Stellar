@@ -14,9 +14,9 @@
 
 ## Events
 
-| Event    | Description | Type                |
-| -------- | ----------- | ------------------- |
-| `change` |             | `CustomEvent<void>` |
+| Event    | Description | Type               |
+| -------- | ----------- | ------------------ |
+| `change` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------

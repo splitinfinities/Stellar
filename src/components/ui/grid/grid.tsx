@@ -1,4 +1,4 @@
-import { Component, Prop, Element, Method, Event, EventEmitter, State } from '@stencil/core';
+import { Component, Prop, Element, Method, Event, EventEmitter, State, h } from '@stencil/core';
 import { default as eqjs } from 'eq.js';
 import Sortable from '@shopify/draggable/lib/sortable';
 import SwapAnimation from '@shopify/draggable/lib/plugins/swap-animation';

@@ -19,12 +19,13 @@ export const buildDelayNode = function (context, effectWC) {
 	return delay;
 }
 
-export const buildReverbNode = function (context, effectWC) {
+export const buildReverbNode = async function (context, effectWC) {
 	const convolver = context.createConvolver();
 	var source = effectWC._use
+	const buffer = await source.getBuffer()
 
-	if (source.getBuffer()) {
-		convolver.buffer = source.getBuffer()
+	if (buffer) {
+		convolver.buffer = buffer
 	}
 
 	// responsiveTo(convolver, effectWC)

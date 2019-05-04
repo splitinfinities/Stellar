@@ -1,16 +1,11 @@
-import { Component } from '@stencil/core';
-import { colors } from '../../../global/colors';
-
+import { Component, h } from '@stencil/core';
+import {colors} from '../../../utils'
 @Component({
   tag: 'stellar-color-library',
   styleUrl: 'color-library.css'
 })
 
 export class ColorLibrary {
-
-  componentDidLoad () {
-
-  }
 
   renderColorPallette(color) {
     const range = colors[color]

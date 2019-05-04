@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method, Watch } from '@stencil/core';
+import { Component, Prop, State, Element, Method, Watch, h } from '@stencil/core';
 import { delay, properties, mediumZoom } from '../../../utils';
 import { ColorThief } from './vendor/colorThief.js';
 

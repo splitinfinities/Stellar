@@ -1,4 +1,4 @@
-import { Component, State, Element } from '@stencil/core'
+import { Component, State, Element, h } from '@stencil/core'
 import "ionicons"
 
 @Component({

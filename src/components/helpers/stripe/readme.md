@@ -15,13 +15,13 @@
 
 ## Methods
 
-### `connect() => void`
+### `connect() => Promise<void>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
@@ -35,22 +35,37 @@ Type: `Promise<boolean>`
 
 
 
-### `setError(error: string) => void`
+### `setError(error: string) => Promise<void>`
 
 
-
-#### Parameters
-
-| Name    | Type     | Description |
-| ------- | -------- | ----------- |
-| `error` | `string` |             |
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
+
+## Dependencies
+
+### Depends on
+
+- [stellar-input](../../forms/input)
+- [stellar-grid](../../ui/grid)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-stripe --> stellar-input
+  stellar-stripe --> stellar-grid
+  stellar-input --> stellar-label
+  stellar-input --> copy-wrap
+  stellar-input --> stellar-asset
+  stellar-input --> stellar-unit
+  stellar-input --> stellar-tooltip
+  stellar-asset --> ion-icon
+  style stellar-stripe fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

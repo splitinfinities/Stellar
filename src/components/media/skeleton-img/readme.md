@@ -47,6 +47,20 @@
 | `width`   | `width`   |             | `number`  | `600`   |
 
 
+## Dependencies
+
+### Depends on
+
+- [stellar-asset](../../ui/asset)
+
+### Graph
+```mermaid
+graph TD;
+  skeleton-img --> stellar-asset
+  stellar-asset --> ion-icon
+  style skeleton-img fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

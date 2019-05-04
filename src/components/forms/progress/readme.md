@@ -32,10 +32,23 @@
 
 ## Events
 
-| Event         | Description | Type                |
-| ------------- | ----------- | ------------------- |
-| `valueChange` |             | `CustomEvent<void>` |
+| Event         | Description | Type               |
+| ------------- | ----------- | ------------------ |
+| `valueChange` |             | `CustomEvent<any>` |
 
+
+## Dependencies
+
+### Used by
+
+ - [stellar-interview](../../media/interview)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-interview --> stellar-progress
+  style stellar-progress fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

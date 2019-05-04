@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Watch } from '@stencil/core';
+import { Component, Prop, State, Element, Watch, h } from '@stencil/core';
 
 @Component({
   tag: 'stellar-callout',

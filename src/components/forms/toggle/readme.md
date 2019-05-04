@@ -208,9 +208,9 @@
 
 ## Events
 
-| Event    | Description | Type                |
-| -------- | ----------- | ------------------- |
-| `change` |             | `CustomEvent<void>` |
+| Event    | Description | Type               |
+| -------- | ----------- | ------------------ |
+| `change` |             | `CustomEvent<any>` |
 
 
 ## Methods
@@ -225,6 +225,21 @@ Type: `Promise<FormResult>`
 
 
 
+
+## Dependencies
+
+### Depends on
+
+- [stellar-grid](../../ui/grid)
+- [stellar-label](../label)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-toggle --> stellar-grid
+  stellar-toggle --> stellar-label
+  style stellar-toggle fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

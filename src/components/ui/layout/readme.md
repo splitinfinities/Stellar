@@ -28,13 +28,13 @@
 
 ## Methods
 
-### `refresh() => void`
+### `refresh() => Promise<void>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 

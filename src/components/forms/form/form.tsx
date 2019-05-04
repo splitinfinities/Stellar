@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method, Listen, Event, EventEmitter } from '@stencil/core';
+import { Component, Prop, State, Element, Method, Listen, Event, EventEmitter, h } from '@stencil/core';
 import { asyncForEach, form2js } from '../../../utils';
 
 @Component({
@@ -23,9 +23,11 @@ export class Form {
 
   @Event() submit: EventEmitter;
 
-  @Listen('keydown.enter')
-  handleEnter() {
-    this.submit_form()
+  @Listen('keydown')
+  handleEnter(event) {
+    if (event.key === 'enter') {
+      this.submit_form();
+    }
   }
 
   @Method()

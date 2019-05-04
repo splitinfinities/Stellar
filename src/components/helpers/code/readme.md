@@ -31,13 +31,13 @@ Type: `Promise<void>`
 
 
 
-### `highlight() => void`
+### `highlight() => Promise<void>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
@@ -51,22 +51,33 @@ Type: `Promise<string>`
 
 
 
-### `setCode(code: any) => void`
+### `setCode(code: any) => Promise<void>`
 
 
-
-#### Parameters
-
-| Name   | Type  | Description |
-| ------ | ----- | ----------- |
-| `code` | `any` |             |
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
+
+## Dependencies
+
+### Depends on
+
+- [stellar-card](../../ui/card)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-code --> stellar-card
+  stellar-card --> stellar-button
+  stellar-card --> stellar-asset
+  stellar-button --> stellar-asset
+  stellar-asset --> ion-icon
+  style stellar-code fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

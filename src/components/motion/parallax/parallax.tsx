@@ -1,4 +1,4 @@
-import { Component, State, Method } from '@stencil/core';
+import { Component, State, Method, h } from '@stencil/core';
 import Rellax from 'rellax';
 
 @Component({
@@ -19,7 +19,7 @@ export class Parallax {
 	}
 
 	@Method()
-	reload() {
+	async reload() {
 		this.relax.refresh()
 	}
 

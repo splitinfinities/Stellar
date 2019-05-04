@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method } from '@stencil/core';
+import { Component, Prop, State, Element, Method, h } from '@stencil/core';
 import * as config from './config'
 
 @Component({
@@ -28,7 +28,7 @@ export class Card {
   }
 
   @Method()
-  connect() {
+  async connect() {
     this.stripe = window["Stripe"](this.token);
     this.input = this.element.querySelector('.token');
     this.attachToForm();
@@ -79,7 +79,7 @@ export class Card {
   }
 
   @Method()
-  setError(error: string) {
+  async setError(error: string) {
     this.error = error;
   }
 

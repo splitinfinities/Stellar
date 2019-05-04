@@ -1,4 +1,4 @@
-import { Component, Prop, State, Method } from '@stencil/core'
+import { Component, Prop, State, Method, h } from '@stencil/core'
 
 @Component({
   tag: 'web-audio-sequencer',
@@ -72,10 +72,10 @@ export class WebAudioSequencer {
   }
 
   @Method()
-  play () {
+  async play () {
     if (!this.context()) {
       // @ts-ignore
-      document.querySelector('web-audio').connect_the_world();
+      await document.querySelector('web-audio').connect_the_world();
     }
 
     this.iterations = 0
@@ -84,7 +84,7 @@ export class WebAudioSequencer {
   }
 
   @Method()
-  stop () {
+  async stop () {
     this.iterations = 0
     this.startTime = null
     this.currentTap = 0

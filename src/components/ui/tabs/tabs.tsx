@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method } from '@stencil/core';
+import { Component, Prop, State, Element, Method, h } from '@stencil/core';
 import { blurringEase } from '../../../utils';
 
 @Component({
@@ -52,7 +52,7 @@ export class Tabs {
   }
 
   @Method()
-  blurring() {
+  async blurring() {
     this.ease.start();
   }
 

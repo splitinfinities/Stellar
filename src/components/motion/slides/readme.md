@@ -260,21 +260,21 @@ Licensed under MIT
 
 ## Events
 
-| Event                     | Description                                         | Type                |
-| ------------------------- | --------------------------------------------------- | ------------------- |
-| `ionSlideDidChange`       | Emitted after the active slide has changed.         | `CustomEvent<void>` |
-| `ionSlideDrag`            | Emitted when the slider is actively being moved.    | `CustomEvent<void>` |
-| `ionSlideNextEnd`         | Emitted when the next slide has ended.              | `CustomEvent<void>` |
-| `ionSlideNextStart`       | Emitted when the next slide has started.            | `CustomEvent<void>` |
-| `ionSlidePrevEnd`         | Emitted when the previous slide has ended.          | `CustomEvent<void>` |
-| `ionSlidePrevStart`       | Emitted when the previous slide has started.        | `CustomEvent<void>` |
-| `ionSlideReachEnd`        | Emitted when the slider is at the last slide.       | `CustomEvent<void>` |
-| `ionSlideReachStart`      | Emitted when the slider is at its initial position. | `CustomEvent<void>` |
-| `ionSlideTouchEnd`        | Emitted when the user releases the touch.           | `CustomEvent<void>` |
-| `ionSlideTouchStart`      | Emitted when the user first touches the slider.     | `CustomEvent<void>` |
-| `ionSlideTransitionEnd`   | Emitted when the slide transition has ended.        | `CustomEvent<void>` |
-| `ionSlideTransitionStart` | Emitted when the slide transition has started.      | `CustomEvent<void>` |
-| `ionSlideWillChange`      | Emitted before the active slide has changed.        | `CustomEvent<void>` |
+| Event                     | Description                                         | Type               |
+| ------------------------- | --------------------------------------------------- | ------------------ |
+| `ionSlideDidChange`       | Emitted after the active slide has changed.         | `CustomEvent<any>` |
+| `ionSlideDrag`            | Emitted when the slider is actively being moved.    | `CustomEvent<any>` |
+| `ionSlideNextEnd`         | Emitted when the next slide has ended.              | `CustomEvent<any>` |
+| `ionSlideNextStart`       | Emitted when the next slide has started.            | `CustomEvent<any>` |
+| `ionSlidePrevEnd`         | Emitted when the previous slide has ended.          | `CustomEvent<any>` |
+| `ionSlidePrevStart`       | Emitted when the previous slide has started.        | `CustomEvent<any>` |
+| `ionSlideReachEnd`        | Emitted when the slider is at the last slide.       | `CustomEvent<any>` |
+| `ionSlideReachStart`      | Emitted when the slider is at its initial position. | `CustomEvent<any>` |
+| `ionSlideTouchEnd`        | Emitted when the user releases the touch.           | `CustomEvent<any>` |
+| `ionSlideTouchStart`      | Emitted when the user first touches the slider.     | `CustomEvent<any>` |
+| `ionSlideTransitionEnd`   | Emitted when the slide transition has ended.        | `CustomEvent<any>` |
+| `ionSlideTransitionStart` | Emitted when the slide transition has started.      | `CustomEvent<any>` |
+| `ionSlideWillChange`      | Emitted before the active slide has changed.        | `CustomEvent<any>` |
 
 
 ## Methods
@@ -333,12 +333,6 @@ Type: `Promise<number>`
 
 Lock or unlock the ability to slide to the next slides.
 
-#### Parameters
-
-| Name                    | Type      | Description |
-| ----------------------- | --------- | ----------- |
-| `shouldLockSwipeToNext` | `boolean` |             |
-
 #### Returns
 
 Type: `Promise<any>`
@@ -348,12 +342,6 @@ Type: `Promise<any>`
 ### `lockSwipeToPrev(shouldLockSwipeToPrev: boolean) => Promise<any>`
 
 Lock or unlock the ability to slide to the previous slides.
-
-#### Parameters
-
-| Name                    | Type      | Description |
-| ----------------------- | --------- | ----------- |
-| `shouldLockSwipeToPrev` | `boolean` |             |
 
 #### Returns
 
@@ -365,12 +353,6 @@ Type: `Promise<any>`
 
 Lock or unlock the ability to slide to change slides.
 
-#### Parameters
-
-| Name               | Type      | Description |
-| ------------------ | --------- | ----------- |
-| `shouldLockSwipes` | `boolean` |             |
-
 #### Returns
 
 Type: `Promise<any>`
@@ -380,13 +362,6 @@ Type: `Promise<any>`
 ### `slideNext(speed?: number, runCallbacks?: boolean) => Promise<void>`
 
 Transition to the next slide.
-
-#### Parameters
-
-| Name           | Type      | Description |
-| -------------- | --------- | ----------- |
-| `speed`        | `number`  |             |
-| `runCallbacks` | `boolean` |             |
 
 #### Returns
 
@@ -398,13 +373,6 @@ Type: `Promise<void>`
 
 Transition to the previous slide.
 
-#### Parameters
-
-| Name           | Type      | Description |
-| -------------- | --------- | ----------- |
-| `speed`        | `number`  |             |
-| `runCallbacks` | `boolean` |             |
-
 #### Returns
 
 Type: `Promise<void>`
@@ -415,13 +383,15 @@ Type: `Promise<void>`
 
 Transition to the specified slide.
 
-#### Parameters
+#### Returns
 
-| Name           | Type      | Description |
-| -------------- | --------- | ----------- |
-| `index`        | `number`  |             |
-| `speed`        | `number`  |             |
-| `runCallbacks` | `boolean` |             |
+Type: `Promise<void>`
+
+
+
+### `startAutoplay() => Promise<void>`
+
+Start auto play.
 
 #### Returns
 
@@ -429,23 +399,13 @@ Type: `Promise<void>`
 
 
 
-### `startAutoplay() => void`
-
-Start auto play.
-
-#### Returns
-
-Type: `void`
-
-
-
-### `stopAutoplay() => void`
+### `stopAutoplay() => Promise<void>`
 
 Stop auto play.
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
@@ -460,6 +420,19 @@ Type: `Promise<void>`
 
 
 
+
+## Dependencies
+
+### Depends on
+
+- [stellar-blur](../blur)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-slides --> stellar-blur
+  style stellar-slides fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

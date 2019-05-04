@@ -1,4 +1,4 @@
-import { Component, Element, Prop, State, Listen, Method, Event, EventEmitter, Watch } from '@stencil/core';
+import { Component, Element, Prop, State, Listen, Method, Event, EventEmitter, Watch, h } from '@stencil/core';
 import { shouldBeAnInput, hasIncrements, hasValue, isDatePicker, Validator, Tokenfield } from "./lib";
 import { zxcvbn, TinyDatePicker, moment } from '../../../utils'
 

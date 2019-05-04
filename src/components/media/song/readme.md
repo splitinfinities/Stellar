@@ -16,79 +16,87 @@
 
 ## Events
 
-| Event         | Description | Type                |
-| ------------- | ----------- | ------------------- |
-| `songChanged` |             | `CustomEvent<void>` |
+| Event         | Description | Type               |
+| ------------- | ----------- | ------------------ |
+| `songChanged` |             | `CustomEvent<any>` |
 
 
 ## Methods
 
-### `details() => { 'title': string; 'album': string; 'genre': string; 'artist': string; 'picture': string; }`
+### `details() => Promise<{ 'title': string; 'album': string; 'genre': string; 'artist': string; 'picture': string; }>`
 
 
 
 #### Returns
 
-Type: `{ 'title': string; 'album': string; 'genre': string; 'artist': string; 'picture': string; }`
+Type: `Promise<{ 'title': string; 'album': string; 'genre': string; 'artist': string; 'picture': string; }>`
 
 
 
-### `getIndex() => number`
-
-
-
-#### Returns
-
-Type: `number`
-
-
-
-### `play() => void`
+### `getIndex() => Promise<number>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<number>`
 
 
 
-### `preload() => void`
-
-
-
-#### Returns
-
-Type: `void`
-
-
-
-### `setIndex(value: any) => void`
-
-
-
-#### Parameters
-
-| Name    | Type  | Description |
-| ------- | ----- | ----------- |
-| `value` | `any` |             |
-
-#### Returns
-
-Type: `void`
-
-
-
-### `switching() => void`
+### `play() => Promise<void>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
+### `preload() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `setIndex(value: any) => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `switching() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
+## Dependencies
+
+### Depends on
+
+- [stellar-asset](../../ui/asset)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-song --> stellar-asset
+  stellar-asset --> ion-icon
+  style stellar-song fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

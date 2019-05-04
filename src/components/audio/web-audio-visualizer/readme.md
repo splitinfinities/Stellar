@@ -23,23 +23,31 @@
 
 ## Methods
 
-### `connect(context: AudioContext, destination?: any) => this`
+### `connect(context: AudioContext, destination?: any) => Promise<this>`
 
 
-
-#### Parameters
-
-| Name          | Type           | Description |
-| ------------- | -------------- | ----------- |
-| `context`     | `AudioContext` |             |
-| `destination` | `any`          |             |
 
 #### Returns
 
-Type: `this`
+Type: `Promise<this>`
 
 
 
+
+## Dependencies
+
+### Used by
+
+ - [stellar-interview](../../media/interview)
+ - [stellar-playlist](../../media/playlist)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-interview --> web-audio-visualizer
+  stellar-playlist --> web-audio-visualizer
+  style web-audio-visualizer fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

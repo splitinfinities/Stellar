@@ -1,4 +1,4 @@
-import { Component, Element, Prop, State, Method } from '@stencil/core';
+import { Component, Element, Prop, State, Method, h } from '@stencil/core';
 import properties from 'css-custom-properties'
 
 @Component({
@@ -53,7 +53,7 @@ export class Blur {
   }
 
   @Method()
-  setBlurFilter() {
+  async setBlurFilter() {
     properties.set({
       "--blur-url": `url('#${this.generatedId}-filter')`
     }, this.element);

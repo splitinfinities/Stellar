@@ -80,6 +80,24 @@
 | `tooltip`    | `tooltip`    |             | `boolean`                                                                              | `false`     |
 
 
+## Dependencies
+
+### Used by
+
+ - [stellar-avatar]()
+
+### Depends on
+
+- [stellar-avatar]()
+- [stellar-tooltip](../tooltip)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-avatar --> stellar-avatar
+  style stellar-avatar fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method, Event, EventEmitter } from '@stencil/core';
+import { Component, Prop, State, Element, Method, Event, EventEmitter, h } from '@stencil/core';
 import { leadingZeroIndex, relPathAsAbs } from "../../../utils";
 import jsmediatags from 'jsmediatags/dist/jsmediatags.js';
 import smallIndexedDb from 'small-indexeddb'
@@ -96,7 +96,7 @@ export class Song {
 	}
 
 	@Method()
-	details () {
+	async details () {
 		return {
 			'title': this.title,
 			'album': this.album,
@@ -107,7 +107,7 @@ export class Song {
 	}
 
 	@Method()
-	preload () {
+	async preload () {
 		var audio = new Audio();
 		audio.src = this.src;
 		audio.preload = "auto";
@@ -115,7 +115,7 @@ export class Song {
 	}
 
 	@Method()
-	play() {
+	async play() {
 		if (!this.playing) {
 			this.songChangedHandler();
 			this.playing = true;
@@ -125,17 +125,17 @@ export class Song {
 	}
 
 	@Method()
-	switching() {
+	async switching() {
 		this.playing = false;
 	}
 
 	@Method()
-	getIndex() {
+	async getIndex() {
 		return this._index;
 	}
 
 	@Method()
-	setIndex(value) {
+	async setIndex(value) {
 		this._index = value;
 	}
 

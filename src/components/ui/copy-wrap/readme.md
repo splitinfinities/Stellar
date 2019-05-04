@@ -29,6 +29,21 @@
 | `full`   | `full`    |             | `boolean` | `false`  |
 
 
+## Dependencies
+
+### Used by
+
+ - [stellar-input](../../forms/input)
+ - [stellar-markdown](../../helpers/markdown)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-input --> copy-wrap
+  stellar-markdown --> copy-wrap
+  style copy-wrap fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

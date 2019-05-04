@@ -31,16 +31,29 @@
 
 ## Methods
 
-### `reload() => void`
+### `reload() => Promise<void>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
+
+## Dependencies
+
+### Used by
+
+ - [stellar-starscape](../../helpers/starscape)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-starscape --> stellar-parallax
+  style stellar-parallax fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

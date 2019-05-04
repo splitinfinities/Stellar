@@ -1,4 +1,4 @@
-import { Component, Prop, Element, Method } from '@stencil/core';
+import { Component, Prop, Element, Method, h } from '@stencil/core';
 import { default as eqjs } from 'eq.js';
 
 @Component({
@@ -31,7 +31,7 @@ export class Layout {
 	}
 
 	@Method()
-	refresh() {
+	async refresh() {
 		var resizeEvent = window.document.createEvent('UIEvents');
 		resizeEvent.initUIEvent('resize', true, false, window, 0);
 		window.dispatchEvent(resizeEvent);

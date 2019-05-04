@@ -36,9 +36,9 @@
 
 ## Events
 
-| Event          | Description | Type                |
-| -------------- | ----------- | ------------------- |
-| `orderChanged` |             | `CustomEvent<void>` |
+| Event          | Description | Type               |
+| -------------- | ----------- | ------------------ |
+| `orderChanged` |             | `CustomEvent<any>` |
 
 
 ## Methods
@@ -53,6 +53,25 @@ Type: `Promise<void>`
 
 
 
+
+## Dependencies
+
+### Used by
+
+ - [stellar-asset-library](../../helpers/asset-library)
+ - [stellar-color-library](../../helpers/color-library)
+ - [stellar-stripe](../../helpers/stripe)
+ - [stellar-toggle](../../forms/toggle)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-asset-library --> stellar-grid
+  stellar-color-library --> stellar-grid
+  stellar-stripe --> stellar-grid
+  stellar-toggle --> stellar-grid
+  style stellar-grid fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

@@ -1,4 +1,4 @@
-import { Component, Element, State, Prop, Method, Listen } from '@stencil/core';
+import { Component, Element, State, Prop, Method, Listen, h } from '@stencil/core';
 import ezClipboard from 'ez-clipboard';
 import properties from 'css-custom-properties';
 
@@ -21,6 +21,7 @@ export class Interview {
   @Prop({mutable: true}) aspectRatio: number = 100;
 
   @State() audio: HTMLWebAudioElement;
+  @State() audio_source: HTMLWebAudioSourceElement;
   @State() io: IntersectionObserver;
 
   @State() loaded: boolean = false;
@@ -219,19 +220,21 @@ export class Interview {
     return this.current
   }
 
-  handleInScreen(cb = () => {}) {
+  async handleInScreen(cb = () => {}) {
     this.loading = true;
     if (!this.loaded && !this.audio.is_prepared()) {
-      this.audio.connect_the_world().then(() => {
-        this.loaded = true;
+      await this.audio.connect_the_world();
 
-        setTimeout(() => {
-          this.loading = false;
-          this.audio.source("interview").prepare()
-          this.duration = Math.round(this.audio.source("interview").getDuration() * 1000);
-          cb()
-        }, 1000)
-      });
+      this.loaded = true;
+
+      setTimeout(async () => {
+        this.loading = false;
+        this.audio_source = await this.audio.source("interview")
+        this.audio_source.prepare()
+        const duration = await this.audio_source.getDuration()
+        this.duration = Math.round(duration * 1000);
+        cb()
+      }, 1000)
     }
   }
 
@@ -240,42 +243,42 @@ export class Interview {
   }
 
   @Method()
-  play() {
+  async play() {
     if (this.audio) {
-      if (this.audio.source("interview")) {
-        this.audio.source("interview").play()
+      if (this.audio_source) {
+        this.audio_source.play()
       }
-      this.playing = this.audio.source("interview").playing;
+      this.playing = this.audio_source.playing;
     }
   }
 
   @Method()
-  skipTo(time: number) {
+  async skipTo(time: number) {
     if (this.audio) {
-      if (this.audio.source("interview")) {
-        this.audio.source("interview").skipTo(time)
+      if (this.audio_source) {
+        this.audio_source.skipTo(time)
       }
-      this.playing = this.audio.source("interview").playing;
+      this.playing = this.audio_source.playing;
     }
   }
 
   @Method()
-  pause() {
+  async pause() {
     if (this.audio) {
-      if (this.audio.source("interview")) {
-        this.audio.source("interview").pause()
+      if (this.audio_source) {
+        this.audio_source.pause()
       }
-      this.playing = this.audio.source("interview").playing;
+      this.playing = this.audio_source.playing;
     }
   }
 
   @Method()
-  toggle() {
+  async toggle() {
     if (this.audio) {
-      if (this.audio.source("interview")) {
-        this.audio.source("interview").toggle()
+      if (this.audio_source) {
+        this.audio_source.toggle()
       }
-      this.playing = this.audio.source("interview").playing;
+      this.playing = this.audio_source.playing;
     }
   }
 

@@ -2,11 +2,11 @@
   "name": "@stellar-design/core",
   "version": "1.0.0-10",
   "description": "A Beautiful, Complete Design System",
-  "module": "dist/esm/index.js",
+  "module": "dist/index.mjs",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
-  "unpkg": "dist/index.js",
+  "unpkg": "dist/stellar-core.js",
   "files": [
     "dist/"
   ],
@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@brainly/html-sketchapp": "^4.2.0",
-    "@stencil/core": "^0.18.0",
+    "@stencil/core": "^1.0.0-alpha.17",
     "@stencil/postcss": "^0.1.0",
     "@types/jest": "23.3.14",
     "@types/puppeteer": "1.12.1",

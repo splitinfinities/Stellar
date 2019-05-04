@@ -1,5 +1,5 @@
-import { Component, Prop, State, Element, Method } from '@stencil/core';
-import { colors } from '../../../global/colors';
+import { Component, Prop, State, Element, Method, h } from '@stencil/core';
+import { colors } from '../../../utils';
 import hexToHsl from 'hex-to-hsl';
 
 @Component({
@@ -47,7 +47,7 @@ export class WebAudioVisualizer {
   }
 
   @Method()
-  connect (context: AudioContext, destination?) {
+  async connect (context: AudioContext, destination?) {
     this.context = context;
 
     this.analyser = this.context.createAnalyser();

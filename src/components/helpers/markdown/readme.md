@@ -34,6 +34,19 @@
 | `src`        | `src`         |             | `string` | `undefined` |
 
 
+## Dependencies
+
+### Depends on
+
+- [copy-wrap](../../ui/copy-wrap)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-markdown --> copy-wrap
+  style stellar-markdown fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

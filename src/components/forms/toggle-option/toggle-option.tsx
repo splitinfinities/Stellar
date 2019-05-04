@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method, Event, EventEmitter } from "@stencil/core";
+import { Component, Prop, State, Element, Method, Event, EventEmitter, h } from "@stencil/core";
 import { blurringEase } from "../../../utils";
 
 @Component({
@@ -76,7 +76,7 @@ export class ToggleOption {
   }
 
   @Method()
-  updateSelected (value: boolean) {
+  async updateSelected (value: boolean) {
     this.input.checked = value;
     this.checked = value;
     this.change.emit({ element: this.element, value: this.value, checked: this.input.checked });

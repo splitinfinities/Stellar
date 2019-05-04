@@ -20,52 +20,72 @@
 
 ## Methods
 
-### `pause() => void`
+### `pause() => Promise<void>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
-### `play() => void`
-
-
-
-#### Returns
-
-Type: `void`
-
-
-
-### `skipTo(time: number) => void`
-
-
-
-#### Parameters
-
-| Name   | Type     | Description |
-| ------ | -------- | ----------- |
-| `time` | `number` |             |
-
-#### Returns
-
-Type: `void`
-
-
-
-### `toggle() => void`
+### `play() => Promise<void>`
 
 
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
+### `skipTo(time: number) => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `toggle() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
+## Dependencies
+
+### Depends on
+
+- [web-audio](../../audio/web-audio)
+- [web-audio-source](../../audio/web-audio-source)
+- [web-audio-debugger](../../audio/web-audio-debugger)
+- [web-audio-visualizer](../../audio/web-audio-visualizer)
+- [stellar-asset](../../ui/asset)
+- [stellar-unit](../../helpers/unit)
+- [stellar-progress](../../forms/progress)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-interview --> web-audio
+  stellar-interview --> web-audio-source
+  stellar-interview --> web-audio-debugger
+  stellar-interview --> web-audio-visualizer
+  stellar-interview --> stellar-asset
+  stellar-interview --> stellar-unit
+  stellar-interview --> stellar-progress
+  stellar-asset --> ion-icon
+  style stellar-interview fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

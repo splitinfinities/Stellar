@@ -1,4 +1,4 @@
-import { Component, Prop, State, Watch, Element } from '@stencil/core';
+import { Component, Prop, State, Watch, Element, h } from '@stencil/core';
 import { titleCase, colors } from '../../../utils';
 
 @Component({

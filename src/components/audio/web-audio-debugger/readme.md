@@ -14,22 +14,29 @@
 
 ## Methods
 
-### `addHistory(string: History) => void`
+### `addHistory(string: History) => Promise<void>`
 
 
-
-#### Parameters
-
-| Name     | Type      | Description |
-| -------- | --------- | ----------- |
-| `string` | `History` |             |
 
 #### Returns
 
-Type: `void`
+Type: `Promise<void>`
 
 
 
+
+## Dependencies
+
+### Used by
+
+ - [stellar-interview](../../media/interview)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-interview --> web-audio-debugger
+  style web-audio-debugger fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

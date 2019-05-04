@@ -1,4 +1,4 @@
-import { Component, Element, Prop, State, Watch } from '@stencil/core'
+import { Component, Element, Prop, State, Watch, h } from '@stencil/core'
 import { blurringEase, focusWithin } from '../../../utils';
 
 focusWithin(document)
