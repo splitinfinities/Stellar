@@ -3,12 +3,11 @@ skeleton-img {
   pointer-events: none;
   display: block;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   border-radius: 4px;
   overflow: hidden;
-  width: var(--width);
-  height: var(--height);
-  margin: auto;
+  max-width: var(--width);
+  max-height: var(--height);
 }
 
 skeleton-img svg {

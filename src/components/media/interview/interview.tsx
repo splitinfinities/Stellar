@@ -2,6 +2,7 @@ import { Component, Element, State, Prop, Method, Listen, h } from '@stencil/cor
 import ezClipboard from 'ez-clipboard';
 import properties from 'css-custom-properties';
 import {get_interview_lines, update_interview_lines} from './helpers';
+import { delay } from '../../../utils';
 
 @Component({
   tag: 'stellar-interview',
@@ -13,7 +14,6 @@ export class Interview {
   @State() randomId: number = Math.floor(Math.random() * 6) + 1;
 
   @Prop() src: string;
-  @Prop() debug: boolean = false;
   @Prop() color: string = "white";
   @Prop({mutable: true}) playing: boolean = false;
 
@@ -29,6 +29,7 @@ export class Interview {
 
   @State() loaded: boolean = false;
   @State() loading: boolean = false;
+  @State() visible: boolean = false;
 
   @State() updateFunc: Function;
 
@@ -51,8 +52,6 @@ export class Interview {
     }
 
     update_interview_lines(this.interviewLines, this.cache, this.time)
-    this.audio = this.element.querySelector('web-audio');
-    this.audio_source = await this.audio.source("interview")
     this.addIntersectionObserver();
   }
 
@@ -63,7 +62,7 @@ export class Interview {
         // of the element we are observing
         // we can just use data[0]
         if (data[0].isIntersecting) {
-          // this.handleInScreen();
+          this.handleInScreen();
         } else {
           this.handleOffScreen();
         }
@@ -89,25 +88,33 @@ export class Interview {
     return this.current
   }
 
-  async handleInScreen(cb = () => {}) {
-    this.loading = true;
-    if (!this.loaded && !this.audio.is_prepared()) {
+  async handleInScreen() {
+    await delay(1000);
+
+    this.visible = true;
+
+    await delay(100);
+
+    this.audio = this.element.querySelector('web-audio');
+    this.audio_source = await this.audio.source("interview");
+  }
+
+  async attachContext() {
+    if (!this.loaded) {
+      this.loading = true;
       await this.audio.connect_the_world();
 
+
+      if (!this.audio_source) {
+        this.audio_source = await this.audio.source("interview")
+        await this.audio_source.prepare()
+      }
+
+      const duration = await this.audio_source.getDuration()
+      this.duration = Math.round(duration * 1000);
+
       this.loaded = true;
-
-      setTimeout(async () => {
-        this.loading = false;
-
-        if (!this.audio_source) {
-          this.audio_source = await this.audio.source("interview")
-          await this.audio_source.prepare()
-        }
-
-        const duration = await this.audio_source.getDuration()
-        this.duration = Math.round(duration * 1000);
-        cb()
-      }, 1000)
+      this.loading = false;
     }
   }
 
@@ -156,13 +163,8 @@ export class Interview {
   }
 
   async handleClick() {
-    if (!this.audio.is_prepared()) {
-      await this.handleInScreen(() => {
-         this.handleClick()
-       });
-    } else {
-      await this.toggle();
-    }
+    await this.attachContext();
+    await this.toggle();
 
     if (this.current === this.duration) {
       await this.skipTo(0)
@@ -176,7 +178,11 @@ export class Interview {
   render () {
     return (
       <div class="card" onDblClick={() => { this.handleClick() }}>
-        <section>
+        {!this.visible && <div>
+          <skeleton-img width="1050" height="600" loading />
+          <div style={{ "display": "none" }}><slot /></div>
+        </div>}
+        {this.visible && <section>
           <slot />
           <div class="transcript">
             <slot name="transcript"></slot>
@@ -184,7 +190,6 @@ export class Interview {
           <web-audio name={`interview-${this.randomId}`}>
             <web-audio-source src={this.src} name="interview"></web-audio-source>
           </web-audio>
-          { this.debug && <web-audio-debugger /> }
           <web-audio-visualizer for={`interview-${this.randomId}`} type={this.visualization} width="1024" height="1024" color={this.color} />
           <button class={this.loading ? "loading button" : (this.playing ? "playing button" : "button")} onClick={() => { this.handleClick() }}>
             <stellar-asset name={this.loading ? "sync" : (this.playing ? "pause" : "play")} class={this.loading ? "animation-spin" : ""} />
@@ -196,7 +201,7 @@ export class Interview {
             <stellar-unit class="duration" value={this.duration} from="ms" to="s" />
           </h3>
           <stellar-progress value={this.current} max={this.duration} noease={true} blurable={false} slender={true} editable={true} onValueChange={(e) => { this.skipTo(e.detail.value) }} />
-        </section>
+        </section>}
       </div>
     )
   }

@@ -22,6 +22,7 @@ export namespace Components {
     'full': boolean;
   }
   interface SkeletonImg {
+    'block': boolean;
     'height': number;
     'icon': boolean;
     'loading': boolean;
@@ -371,7 +372,6 @@ export namespace Components {
   interface StellarInterview {
     'aspectRatio': number;
     'color': string;
-    'debug': boolean;
     'height': number;
     'pause': () => Promise<void>;
     'play': () => Promise<void>;
@@ -851,6 +851,7 @@ declare namespace LocalJSX {
     'full'?: boolean;
   }
   interface SkeletonImg extends JSXBase.HTMLAttributes {
+    'block'?: boolean;
     'height'?: number;
     'icon'?: boolean;
     'loading'?: boolean;
@@ -1193,7 +1194,6 @@ declare namespace LocalJSX {
   interface StellarInterview extends JSXBase.HTMLAttributes {
     'aspectRatio'?: number;
     'color'?: string;
-    'debug'?: boolean;
     'height'?: number;
     'playing'?: boolean;
     'src'?: string;

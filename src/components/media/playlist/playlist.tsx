@@ -24,6 +24,7 @@ export class Playlist {
   @Prop({mutable: true, reflectToAttr: true}) view: "playlist"|"art" = "playlist";
 
   @Prop({mutable: true, reflectToAttr: true}) playing: boolean = false;
+  @State() load: boolean = false;
   @State() currentTime: number|string;
   @State() duration: number|string;
   @State() visualizer: HTMLWebAudioVisualizerElement;
@@ -238,19 +239,19 @@ export class Playlist {
           }
           </button>
 
-          <div class="playlist-playing-details">
+          {!this.load && <button onClick={() => { this.load = true; }}>Load this playlist</button>}
+
+          {this.load && <div class="playlist-playing-details">
             <h2>{this.currentTrack.title}</h2>
             <h3>{this.currentTrack.artist}</h3>
-          </div>
+          </div>}
 
           {
-            (this.currentTrack.picture !== undefined)
-            ?
+            this.load &&
+            (this.currentTrack.picture !== undefined) &&
               <div class="playlist-playing-image">
                 <img src={this.currentTrack.picture} onClick={ () => this.toggleAlbumArtView() } />
               </div>
-            :
-              <div></div>
           }
 
           <web-audio-visualizer tag={this.audio} type={this.view === "art" ? "circle" : "bars"} />
@@ -276,7 +277,7 @@ export class Playlist {
         </audio>
 
         <div id="playlist" class={`playlist-list ${this.playlist}`}>
-          <slot></slot>
+          {this.load && <slot></slot>}
         </div>
       </div>
     );

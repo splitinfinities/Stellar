@@ -1,6 +1,3 @@
-// Skeleton Text
-// --------------------------------------------------
-
 skeleton-text {
 	user-select: none;
 	pointer-events: none;
@@ -90,4 +87,3 @@ skeleton-text[as="h6"] {
     transform: translateX(calc(var(--width) * 1.75));
   }
 }
-

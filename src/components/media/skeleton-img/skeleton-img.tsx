@@ -8,18 +8,22 @@ import properties from 'css-custom-properties'
 export class SkeletonImg {
 	@Element() element: HTMLElement;
 
-	@Prop() width: number = 600;
-	@Prop() height: number = 300;
-	@Prop() loading: boolean = false;
-	@Prop() icon: boolean = false;
+	@Prop({reflectToAttr: true}) width: number = 600;
+	@Prop({reflectToAttr: true}) height: number = 300;
+	@Prop({reflectToAttr: true}) block: boolean = false;
+	@Prop({reflectToAttr: true}) loading: boolean = false;
+	@Prop({reflectToAttr: true}) icon: boolean = false;
 
 	@State() observer: IntersectionObserver;
 
 	componentWillLoad() {
-		properties.set({
-			'--width': `${this.width}px`,
-			'--height': `${this.height}px`
-		}, this.element)
+		if (this.block) {
+		} else {
+			properties.set({
+				'--width': `${this.width}px`,
+				'--height': `${this.height}px`
+			}, this.element)
+		}
 
 		this.observer = new IntersectionObserver(entries => {
 			entries.forEach(entry => {

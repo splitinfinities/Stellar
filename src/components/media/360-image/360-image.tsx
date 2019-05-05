@@ -15,10 +15,42 @@ export class Image360 {
 
   @State() viewer: any;
   @State() image: HTMLElement;
+  @State() io: IntersectionObserver;
+  @State() ready: boolean = false;
 
   componentDidLoad() {
     this.image = this.element.querySelector(".image")
+    this.addIntersectionObserver();
+  }
 
+  addIntersectionObserver() {
+    if ('IntersectionObserver' in window) {
+      this.io = new IntersectionObserver((data: any) => {
+        // because there will only ever be one instance
+        // of the element we are observing
+        // we can just use data[0]
+        if (data[0].isIntersecting) {
+          this.handleInScreen();
+        } else {
+          this.handleOffScreen();
+        }
+      }, {
+        threshold: [0]
+      })
+
+      this.io.observe(this.element);
+    }
+  }
+
+  handleInScreen() {
+    this.prepare()
+  }
+
+  handleOffScreen() {
+    this.destroy()
+  }
+
+  prepare() {
     this.viewer = new Kaleidoscope.Image({
       source: this.src,
       container: this.image,
@@ -26,13 +58,20 @@ export class Image360 {
       height: this.height,
     });
 
-    this.viewer.render()
+    this.viewer.render();
+    this.ready = true;
+  }
+
+  destroy() {
+    this.viewer.destroy()
+    this.ready = false;
   }
 
   render () {
-    return [
-      <div class="image" />,
+    return <div>
+      <div class="image" />
       <div class="overlay" />
-    ];
+      <skeleton-img width="1200" height="800" />
+    </div>
   }
 }

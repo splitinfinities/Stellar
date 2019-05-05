@@ -2,7 +2,7 @@ import { Component, Element, State, Prop, Method, h } from '@stencil/core';
 import ezClipboard from 'ez-clipboard';
 import properties from 'css-custom-properties';
 import {get_interview_lines, update_interview_lines} from '../interview/helpers';
-
+import { delay } from '../../../utils';
 
 @Component({
   tag: 'stellar-video-interview',
@@ -36,6 +36,8 @@ export class VideoInterview {
 
   @State() interviewLines: any;
 
+  @State() visible: boolean = false;
+
   @State() context: any;
   @State() visualizer: HTMLWebAudioVisualizerElement;
 
@@ -65,7 +67,7 @@ export class VideoInterview {
         // of the element we are observing
         // we can just use data[0]
         if (data[0].isIntersecting) {
-          // this.handleInScreen();
+          this.handleInScreen();
         } else {
           this.handleOffScreen();
         }
@@ -91,6 +93,17 @@ export class VideoInterview {
   }
 
   async handleInScreen() {
+    await delay(1000);
+
+    this.visible = true;
+
+    await delay(100);
+
+    this.visualizer = this.element.querySelector('web-audio-visualizer');
+    this.video = this.element.querySelector('stellar-video');
+  }
+
+  async attachContext() {
     if (!this.context) {
       this.context = new AudioContext();
       const src = this.context.createMediaElementSource(this.video.video_tag);
@@ -110,7 +123,6 @@ export class VideoInterview {
   @Method()
   async play() {
     if (this.video) {
-
       await this.video.play()
     }
   }
@@ -138,6 +150,7 @@ export class VideoInterview {
 
   async handlePlay() {
     await this.handleInScreen();
+    await this.attachContext()
     this.playing = true;
   }
 
@@ -156,7 +169,11 @@ export class VideoInterview {
   render () {
     return (
       <div class="card" onDblClick={() => { this.handleClick() }}>
-        <section>
+        {!this.visible && <div>
+          <skeleton-img width="1050" height="600" loading />
+        </div>
+        }
+        {this.visible && <section>
           <stellar-video controls={false} autoplay={true} trackInView={false} onPlayed={() => {this.handlePlay()}} onPaused={() => {this.playing = false;}} onTimeupdate={(e) => { this.handleTimeUpdate(e) }}>
             <source src={this.src} />
           </stellar-video>
@@ -174,7 +191,7 @@ export class VideoInterview {
             <stellar-unit class="duration" value={this.duration} from="ms" to="s" />
           </h3>
           <stellar-progress value={this.current} max={this.duration} noease={true} blurable={false} slender={true} editable={true} onValueChange={(e) => { this.skipTo(e.detail.value) }} />
-        </section>
+        </section>}
       </div>
     )
   }
