@@ -10,12 +10,12 @@
 | Property    | Attribute   | Description | Type               | Default       |
 | ----------- | ----------- | ----------- | ------------------ | ------------- |
 | `analyser`  | --          |             | `AnalyserNode`     | `undefined`   |
-| `color`     | `color`     |             | `string`           | `"gray"`      |
+| `color`     | `color`     |             | `string`           | `"white"`     |
 | `for`       | `for`       |             | `string`           | `"web_audio"` |
 | `height`    | `height`    |             | `number`           | `1024`        |
 | `renderer`  | --          |             | `AnalyserNode`     | `undefined`   |
 | `size`      | `size`      |             | `number`           | `1024`        |
-| `smoothing` | `smoothing` |             | `number`           | `0.7`         |
+| `smoothing` | `smoothing` |             | `number`           | `1`           |
 | `tag`       | --          |             | `HTMLAudioElement` | `undefined`   |
 | `type`      | `type`      |             | `string`           | `"wave"`      |
 | `width`     | `width`     |             | `number`           | `1024`        |

@@ -39,6 +39,10 @@ export class WebAudio {
 
   @Method()
   async source (name) {
+    if (this.sources.length === 0) {
+      await this.connect_the_world()
+    }
+
     return this.sources[name];
   }
 
@@ -140,7 +144,7 @@ export class WebAudio {
     if (this.visualizers) {
       this.log(`Attaching visualizers`);
 
-      asyncForEach(this.visualizers, async (visualizer: WebAudioVisualizer, index) => {
+      await asyncForEach(this.visualizers, async (visualizer: WebAudioVisualizer, index) => {
         if (index === 0) {
           visualizer = await visualizer.connect(this.context, this.context.destination)
         } else {
@@ -154,9 +158,9 @@ export class WebAudio {
     }
 
     if (this.visualizers.length >= 1) {
-      this.gain.connect(this.previousVisualizer.analyser)
+      await this.gain.connect(this.previousVisualizer.analyser)
     } else {
-      this.gain.connect(this.context.destination)
+      await this.gain.connect(this.context.destination)
     }
   }
 

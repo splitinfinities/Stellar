@@ -39,6 +39,11 @@ export class Progress {
    */
   @Prop({reflectToAttr: true, mutable: true}) value: number = 0;
 
+  /**
+   * Sets the value of the progress bar
+   */
+  @Prop({reflectToAttr: true, mutable: true}) secondary: number = 0;
+
   @Prop() blurable: boolean = true;
   @State() wrapper: "stellar-blur"|"div" = "stellar-blur";
   @State() blur: number = 0;
@@ -96,17 +101,25 @@ export class Progress {
     }
   }
 
-  progress() {
-    let progress = (this.value/this.max) * 100
-    progress = progress < 100 ? progress : 100
-    progress = progress > 0 ? progress : 0
-    return progress
+  progress(secondary?) {
+    if (secondary) {
+      let progress = (this.secondary/this.max) * 100
+      progress = progress < 100 ? progress : 100
+      progress = progress > 0 ? progress : 0
+      return progress
+    } else {
+      let progress = (this.value/this.max) * 100
+      progress = progress < 100 ? progress : 100
+      progress = progress > 0 ? progress : 0
+      return progress
+    }
   }
 
   render() {
     // @ts-ignore
     return (<this.wrapper class="progress" horizontal={this.blur} onClick={(e) => { this.handleClick(e); }}>
         <div class="status" style={{transform: `translate(${this.progress()}%, 0)`}}></div>
+        {this.secondary && <div class="secondary" style={{transform: `translate(${this.progress(true)}%, 0)`}}></div>}
       </this.wrapper>
     )
   }

@@ -379,6 +379,7 @@ export namespace Components {
     'skipTo': (time: number) => Promise<void>;
     'src': string;
     'toggle': () => Promise<void>;
+    'visualization': "circle"|"bars"|"wave"|"bars2";
     'width': number;
   }
   interface StellarInterviewLine {
@@ -389,7 +390,7 @@ export namespace Components {
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: any; }>;
+    'data': () => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: any; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -489,6 +490,10 @@ export namespace Components {
     * eliminates the easing in the css so you can apply value updates without jitter.
     */
     'rounded': boolean;
+    /**
+    * Sets the value of the progress bar
+    */
+    'secondary': number;
     /**
     * Renders if this element is slender or not
     */
@@ -740,12 +745,34 @@ export namespace Components {
   interface StellarVideo {
     'autoplay': boolean;
     'controls': boolean;
+    'getDuration': () => Promise<number>;
     'height': number;
     'muted': boolean;
     'overlay': boolean;
+    'pause': () => Promise<void>;
+    'play': () => Promise<void>;
+    'playing': boolean;
     'playsinline': boolean;
     'poster': string;
     'preload': string;
+    'skipTo': (time: any) => Promise<void>;
+    'stop': () => Promise<void>;
+    'toggle': () => Promise<void>;
+    'trackInView': boolean;
+    'video_tag': HTMLVideoElement;
+    'width': number;
+  }
+  interface StellarVideoInterview {
+    'aspectRatio': number;
+    'color': string;
+    'height': number;
+    'pause': () => Promise<void>;
+    'play': () => Promise<void>;
+    'playing': boolean;
+    'skipTo': (time: number) => Promise<void>;
+    'src': string;
+    'toggle': () => Promise<void>;
+    'visualization': "circle"|"bars"|"wave"|"bars2";
     'width': number;
   }
   interface WebAudio {
@@ -801,6 +828,7 @@ export namespace Components {
     'webAudio': () => Promise<HTMLElement>;
   }
   interface WebAudioVisualizer {
+    '_color': any;
     'analyser': AnalyserNode;
     'color': string;
     'connect': (context: AudioContext, destination?: any) => Promise<this>;
@@ -809,8 +837,7 @@ export namespace Components {
     'renderer': AnalyserNode;
     'size': number;
     'smoothing': number;
-    'tag': HTMLAudioElement;
-    'type': string|"wave"|"bars"|"webgl";
+    'type': string|"wave"|"bars"|"circle"|"bars2";
     'width': number;
   }
   interface WebAudioVisualizerShader {
@@ -1170,6 +1197,7 @@ declare namespace LocalJSX {
     'height'?: number;
     'playing'?: boolean;
     'src'?: string;
+    'visualization'?: "circle"|"bars"|"wave"|"bars2";
     'width'?: number;
   }
   interface StellarInterviewLine extends JSXBase.HTMLAttributes {
@@ -1274,6 +1302,10 @@ declare namespace LocalJSX {
     * eliminates the easing in the css so you can apply value updates without jitter.
     */
     'rounded'?: boolean;
+    /**
+    * Sets the value of the progress bar
+    */
+    'secondary'?: number;
     /**
     * Renders if this element is slender or not
     */
@@ -1507,10 +1539,26 @@ declare namespace LocalJSX {
     'controls'?: boolean;
     'height'?: number;
     'muted'?: boolean;
+    'onLoaded'?: (event: CustomEvent<any>) => void;
+    'onPaused'?: (event: CustomEvent<any>) => void;
+    'onPlayed'?: (event: CustomEvent<any>) => void;
+    'onTimeupdate'?: (event: CustomEvent<any>) => void;
     'overlay'?: boolean;
+    'playing'?: boolean;
     'playsinline'?: boolean;
     'poster'?: string;
     'preload'?: string;
+    'trackInView'?: boolean;
+    'video_tag'?: HTMLVideoElement;
+    'width'?: number;
+  }
+  interface StellarVideoInterview extends JSXBase.HTMLAttributes {
+    'aspectRatio'?: number;
+    'color'?: string;
+    'height'?: number;
+    'playing'?: boolean;
+    'src'?: string;
+    'visualization'?: "circle"|"bars"|"wave"|"bars2";
     'width'?: number;
   }
   interface WebAudio extends JSXBase.HTMLAttributes {
@@ -1548,6 +1596,7 @@ declare namespace LocalJSX {
     'src'?: string;
   }
   interface WebAudioVisualizer extends JSXBase.HTMLAttributes {
+    '_color'?: any;
     'analyser'?: AnalyserNode;
     'color'?: string;
     'for'?: string;
@@ -1555,8 +1604,7 @@ declare namespace LocalJSX {
     'renderer'?: AnalyserNode;
     'size'?: number;
     'smoothing'?: number;
-    'tag'?: HTMLAudioElement;
-    'type'?: string|"wave"|"bars"|"webgl";
+    'type'?: string|"wave"|"bars"|"circle"|"bars2";
     'width'?: number;
   }
   interface WebAudioVisualizerShader extends JSXBase.HTMLAttributes {
@@ -1628,6 +1676,7 @@ declare namespace LocalJSX {
     'StellarTooltip': Components.StellarTooltip;
     'StellarUnit': Components.StellarUnit;
     'StellarVideo': Components.StellarVideo;
+    'StellarVideoInterview': Components.StellarVideoInterview;
     'WebAudio': Components.WebAudio;
     'WebAudioDebugger': Components.WebAudioDebugger;
     'WebAudioEffect': Components.WebAudioEffect;
@@ -1702,6 +1751,7 @@ declare namespace LocalJSX {
     'StellarTooltip': LocalJSX.StellarTooltip;
     'StellarUnit': LocalJSX.StellarUnit;
     'StellarVideo': LocalJSX.StellarVideo;
+    'StellarVideoInterview': LocalJSX.StellarVideoInterview;
     'WebAudio': LocalJSX.WebAudio;
     'WebAudioDebugger': LocalJSX.WebAudioDebugger;
     'WebAudioEffect': LocalJSX.WebAudioEffect;
@@ -2112,6 +2162,12 @@ declare global {
     new (): HTMLStellarVideoElement;
   };
 
+  interface HTMLStellarVideoInterviewElement extends Components.StellarVideoInterview, HTMLStencilElement {}
+  var HTMLStellarVideoInterviewElement: {
+    prototype: HTMLStellarVideoInterviewElement;
+    new (): HTMLStellarVideoInterviewElement;
+  };
+
   interface HTMLWebAudioElement extends Components.WebAudio, HTMLStencilElement {}
   var HTMLWebAudioElement: {
     prototype: HTMLWebAudioElement;
@@ -2218,6 +2274,7 @@ declare global {
     'stellar-tooltip': HTMLStellarTooltipElement
     'stellar-unit': HTMLStellarUnitElement
     'stellar-video': HTMLStellarVideoElement
+    'stellar-video-interview': HTMLStellarVideoInterviewElement
     'web-audio': HTMLWebAudioElement
     'web-audio-debugger': HTMLWebAudioDebuggerElement
     'web-audio-effect': HTMLWebAudioEffectElement
@@ -2292,6 +2349,7 @@ declare global {
     'stellar-tooltip': HTMLStellarTooltipElement;
     'stellar-unit': HTMLStellarUnitElement;
     'stellar-video': HTMLStellarVideoElement;
+    'stellar-video-interview': HTMLStellarVideoInterviewElement;
     'web-audio': HTMLWebAudioElement;
     'web-audio-debugger': HTMLWebAudioDebuggerElement;
     'web-audio-effect': HTMLWebAudioEffectElement;

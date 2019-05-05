@@ -28,6 +28,7 @@ graph TD;
   stellar-card --> stellar-button
   stellar-card --> stellar-asset
   stellar-button --> stellar-asset
+  stellar-button --> stencil-route-link
   stellar-asset --> ion-icon
   style stellar-color-library fill:#f9f,stroke:#333,stroke-width:4px
 ```

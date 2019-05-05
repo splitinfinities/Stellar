@@ -253,7 +253,7 @@ export class Playlist {
               <div></div>
           }
 
-          <web-audio-visualizer tag={this.audio} type="bars" />
+          <web-audio-visualizer tag={this.audio} type={this.view === "art" ? "circle" : "bars"} />
         </div>
 
         <div id="controls" class="controls">

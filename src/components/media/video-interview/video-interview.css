@@ -1,10 +1,10 @@
-stellar-interview {
+stellar-video-interview {
   --width: 800px;
   --height: 800px;
   display: block;
 }
 
-stellar-interview div.card {
+stellar-video-interview div.card {
   position: relative;
   display: block;
   width: auto;
@@ -13,14 +13,14 @@ stellar-interview div.card {
   overflow: hidden;
 }
 
-stellar-interview div.card section {
+stellar-video-interview div.card section {
   height: inherit;
   display: block;
   position: relative;
   padding-top: 0 !important;
 }
 
-stellar-interview web-audio-visualizer {
+stellar-video-interview web-audio-visualizer {
   position: absolute;
   top: auto;
   left: 0;
@@ -32,44 +32,45 @@ stellar-interview web-audio-visualizer {
   z-index: 2;
 }
 
-stellar-interview web-audio-visualizer[type="circle"] {
+stellar-video-interview web-audio-visualizer[type="circle"] {
   height: 100%;
 }
 
 
-stellar-interview web-audio-visualizer[type="bars2"] {
+stellar-video-interview web-audio-visualizer[type="bars2"] {
   width: 80%;
   left: 10%;
   right: 10%;
 }
 
-stellar-interview stellar-image,
-stellar-interview stellar-360-image,
-stellar-interview stellar-video,
-stellar-interview stellar-360-video {
+stellar-video-interview stellar-image,
+stellar-video-interview stellar-360-image,
+stellar-video-interview stellar-video,
+stellar-video-interview stellar-360-video {
   --gradient: radial-gradient(circle at 30% 107%, var(--theme-base5) 0%, var(--theme-base8) 5%, var(--theme-complement8) 45%, var(--theme-complement5) 60%, var(--theme-base5) 90%);
   position: relative;
   z-index: 1;
   display: block;
 }
 
-stellar-interview stellar-progress {
+stellar-video-interview stellar-progress {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9;
+  --border-radius: 0;
 }
 
-stellar-interview stellar-progress .progress {
+stellar-video-interview stellar-progress .progress {
   border: 0;
 }
 
-stellar-interview h3 {
+stellar-video-interview h3 {
   color: white;
 }
 
-stellar-interview stellar-unit {
+stellar-video-interview stellar-unit {
   position: absolute;
   bottom: 1rem;
   z-index: 2;
@@ -77,15 +78,15 @@ stellar-interview stellar-unit {
   font-weight: 700;
 }
 
-stellar-interview stellar-unit.current {
+stellar-video-interview stellar-unit.current {
   left: 1rem;
 }
 
-stellar-interview stellar-unit.duration {
+stellar-video-interview stellar-unit.duration {
   right: 1rem;
 }
 
-stellar-interview .transcript {
+stellar-video-interview .transcript {
   position: absolute;
   bottom: 0;
   width: 70%;
@@ -94,7 +95,7 @@ stellar-interview .transcript {
   pointer-events: none;
 }
 
-stellar-interview .button {
+stellar-video-interview .button {
   position: absolute;
   transition: all .35s var(--ease) 0s, background .175s var(--ease) 0s;
   width: 9rem;
@@ -119,23 +120,23 @@ stellar-interview .button {
   mix-blend-mode: soft-light;
 }
 
-stellar-interview .button:hover,
-stellar-interview .button:focus {
+stellar-video-interview .button:hover,
+stellar-video-interview .button:focus {
   transform: translate(50%, -50%) scale(1.1);
   mix-blend-mode: hard-light;
 }
 
-stellar-interview .button stellar-asset {
+stellar-video-interview .button stellar-asset {
   font-size: 7rem;
   margin: auto;
   display: block;
 }
 
-stellar-interview .button.loading {
+stellar-video-interview .button.loading {
   padding: 0;
 }
 
-stellar-interview .button.playing {
+stellar-video-interview .button.playing {
   width: 2.8rem;
   height: 2.8rem;
   top: 2.2rem;
@@ -145,6 +146,6 @@ stellar-interview .button.playing {
   transition: all .35s var(--ease) 0s, background .175s var(--ease) 0s;
 }
 
-stellar-interview .button.playing stellar-asset {
+stellar-video-interview .button.playing stellar-asset {
   font-size: 2.8rem;
 }

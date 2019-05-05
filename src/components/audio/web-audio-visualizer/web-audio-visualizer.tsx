@@ -1,5 +1,6 @@
 import { Component, Prop, State, Element, Method, h } from '@stencil/core';
-import { colors } from '../../../utils';
+import {bars, wave, circle, bars2} from './visualizations';
+import {colors} from '../../../utils'
 import hexToHsl from 'hex-to-hsl';
 
 @Component({
@@ -16,11 +17,10 @@ export class WebAudioVisualizer {
 
   @Prop({ mutable: true, reflectToAttr: true }) for: string = "web_audio";
 
-  @Prop({ mutable: true, reflectToAttr: true }) type: string|"wave"|"bars"|"webgl" = "wave";
+  @Prop({ mutable: true, reflectToAttr: true }) type: string|"wave"|"bars"|"circle"|"bars2" = "wave";
   @Prop() smoothing: number = 0.7;
   @Prop() size: number = 1024;
-  @Prop() color: string = "gray";
-  @Prop() tag: HTMLAudioElement;
+  @Prop() color: string = "white";
   @State() freqs: Uint8Array;
   @State() times: Uint8Array;
 
@@ -41,6 +41,15 @@ export class WebAudioVisualizer {
 
   @State() _bufferLength: AnalyserNode;
   @State() _dataArray: AnalyserNode;
+  @Prop({mutable: true}) _color: any;
+
+  componentWillLoad() {
+    if (["white", "black", "black-alt"].includes(this.color)) {
+      this._color = hexToHsl(colors[this.color])
+    } else {
+      this._color = hexToHsl(colors[this.color][5]);
+    }
+  }
 
   componentDidLoad() {
     this.canvas = this.element.shadowRoot.querySelector('canvas');
@@ -59,12 +68,7 @@ export class WebAudioVisualizer {
     this.freqs = new Uint8Array(this.analyser.frequencyBinCount);
     this.times = new Uint8Array(this.analyser.frequencyBinCount);
 
-    if (this.type === "webgl") {
-      this.canvasCTX = this.canvas.getContext('webgl') || this.canvas.getContext('experimental-webgl');
-      this.__prepareWebGL();
-    } else {
-      this.canvasCTX = this.canvas.getContext('2d');
-    }
+    this.canvasCTX = this.canvas.getContext('2d');
 
     requestAnimationFrame(this.draw.bind(this));
 
@@ -79,69 +83,30 @@ export class WebAudioVisualizer {
     this.analyser.getByteFrequencyData(this.freqs);
     this.analyser.getByteTimeDomainData(this.times);
 
-    if (this.type !== "webgl") {
-      var width = Math.floor(this.freqs.length);
-      this.canvas.width = width || this.width;
-      this.canvas.height = this.height;
-    }
+    var width = Math.floor(this.freqs.length);
+    this.canvas.width = width || this.width;
+    this.canvas.height = this.height;
 
-    switch (this.type) {
-      case "wave":
-        this.wave();
-      break;
+    this.clearBackground()
 
-      case "bars":
-        this.bars();
-      break;
-
-      case "webgl":
-        this.webgl();
-      break;
+    if (this.type === "wave") {
+      wave(this);
+    } else if (this.type === "bars") {
+      bars(this);
+    } else if (this.type === "bars2") {
+      bars2(this);
+    } else if (this.type === "circle") {
+      circle(this);
     }
 
     requestAnimationFrame(this.draw.bind(this));
   }
 
-  wave () {
-    // Draw the time domain chart.
-    for (var i = 0; i < this.analyser.frequencyBinCount; i++) {
-      var value = this.times[i];
-      var percent = value / 256;
-      var height = this.height * percent;
-      var offset = this.height - height;
-      var barWidth =  this.width / this.analyser.frequencyBinCount + 16;
-
-      var color = hexToHsl(colors[this.color][5])
-
-      this.canvasCTX.fillStyle = `hsl(${color[0]}, ${color[1]}%, ${percent * 100}%)`;
-      this.canvasCTX.fillRect(i * barWidth, offset, 24, 24);
-    }
+  clearBackground = () => {
+    this.canvasCTX.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.canvasCTX.fillStyle = "transparent";
+    this.canvasCTX.fillRect(0, 0, this.canvas.width, this.canvas.height);
   }
-
-  bars () {
-    // Draw the frequency domain chart.
-    for (var i = 0; i < this.analyser.frequencyBinCount; i++) {
-      var value = this.freqs[i];
-      var percent = value / 256;
-      var height = this.height * percent;
-      var offset = this.height - height;
-      var barWidth = (this.width/this.analyser.frequencyBinCount) + 24;
-
-      var color = hexToHsl(colors[this.color][5])
-
-      this.canvasCTX.fillStyle = `hsl(${color[0]}, ${color[1]}%, ${percent * 100}%)`;
-      this.canvasCTX.fillRect(i * barWidth, offset, barWidth, height);
-    }
-  }
-
-  webgl () {
-    this.canvasCTX.uniform1f(this.fragTime, this.context.currentTime)
-    this.canvasCTX.fillStyle = 'black';
-
-    this.__copyAudioDataToTexture();
-    this.__renderQuad();
-  }
-
 
   getFrequencyValue (freq) {
     var nyquist = this.context.sampleRate / 2;
@@ -149,88 +114,9 @@ export class WebAudioVisualizer {
     return this.freqs[index];
   }
 
-  // Private
-  __prepareWebGL() {
-    const vbo = this.canvasCTX.createBuffer();
-    this.canvasCTX.bindBuffer(this.canvasCTX.ARRAY_BUFFER, vbo);
-    const vertices = new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]);
-    this.canvasCTX.bufferData(this.canvasCTX.ARRAY_BUFFER, vertices, this.canvasCTX.STATIC_DRAW)
-    this.canvasCTX.vertexAttribPointer(0, 2, this.canvasCTX.FLOAT, false, 0, 0)
-
-    let vertex: any = this.element.querySelector('web-audio-visualizer-shader[type="vertex"]');
-    this.vertex = vertex.innerText;
-
-    let fragment: any = this.element.querySelector('web-audio-visualizer-shader[type="fragment"]');
-    this.fragment = fragment.innerText;
-
-    this.fragShader = this.__createShader();
-
-    const fragPosition = this.canvasCTX.getAttribLocation(this.fragShader, 'position');
-    this.canvasCTX.enableVertexAttribArray(fragPosition);
-
-    this.fragTime = this.canvasCTX.getUniformLocation(this.fragShader, 'time');
-    this.canvasCTX.uniform1f(this.fragTime, this.context.currentTime);
-
-    const fragResolution = this.canvasCTX.getUniformLocation(this.fragShader, 'resolution');
-    this.canvasCTX.uniform2f(fragResolution, this.width, this.height);
-    this.fragSpectrumArray = new Uint8Array(4 * this.freqs.length);
-
-    this.fragSpectrum = this.__createTexture();
-  }
-
-  __createShader() {
-    const vertexShader = this.canvasCTX.createShader(this.canvasCTX.VERTEX_SHADER);
-    this.canvasCTX.shaderSource(vertexShader, this.vertex);
-    this.canvasCTX.compileShader(vertexShader);
-    if (!this.canvasCTX.getShaderParameter(vertexShader, this.canvasCTX.COMPILE_STATUS)) {
-      throw new Error(this.canvasCTX.getShaderInfoLog(vertexShader));
-    }
-
-    const fragmentShader = this.canvasCTX.createShader(this.canvasCTX.FRAGMENT_SHADER)
-    this.canvasCTX.shaderSource(fragmentShader, this.fragment);
-    this.canvasCTX.compileShader(fragmentShader);
-    if (!this.canvasCTX.getShaderParameter(fragmentShader, this.canvasCTX.COMPILE_STATUS)) {
-      throw new Error(this.canvasCTX.getShaderInfoLog(fragmentShader));
-    }
-
-    const shader = this.canvasCTX.createProgram();
-    this.canvasCTX.attachShader(shader, vertexShader);
-    this.canvasCTX.attachShader(shader, fragmentShader);
-    this.canvasCTX.linkProgram(shader);
-    this.canvasCTX.useProgram(shader);
-
-    return shader;
-  }
-
-
-  __createTexture () {
-    const texture = this.canvasCTX.createTexture();
-    this.canvasCTX.bindTexture(this.canvasCTX.TEXTURE_2D, texture);
-    this.canvasCTX.texParameteri(this.canvasCTX.TEXTURE_2D, this.canvasCTX.TEXTURE_MIN_FILTER, this.canvasCTX.LINEAR);
-    this.canvasCTX.texParameteri(this.canvasCTX.TEXTURE_2D, this.canvasCTX.TEXTURE_WRAP_S, this.canvasCTX.CLAMP_TO_EDGE);
-    this.canvasCTX.texParameteri(this.canvasCTX.TEXTURE_2D, this.canvasCTX.TEXTURE_WRAP_T, this.canvasCTX.CLAMP_TO_EDGE);
-    return texture;
-  }
-
-
-  __copyAudioDataToTexture () {
-    for (let i = 0; i < this.freqs.length; i++) {
-      this.fragSpectrumArray[6 * i + 0] = this.freqs[i] // R
-      this.fragSpectrumArray[6 * i + 1] = this.freqs[i] // G
-      this.fragSpectrumArray[6 * i + 2] = this.freqs[i] // B
-      this.fragSpectrumArray[6 * i + 3] = 255           // A
-    }
-
-    this.canvasCTX.texImage2D(this.canvasCTX.TEXTURE_2D, 0, this.canvasCTX.RGBA, this.freqs.length, 1, 0, this.canvasCTX.RGBA, this.canvasCTX.UNSIGNED_BYTE, this.fragSpectrumArray)
-  }
-
-  __renderQuad () {
-    this.canvasCTX.drawArrays(this.canvasCTX.TRIANGLE_STRIP, 0, 4)
-  }
-
   render() {
     return (
       <canvas id="canvas" />
-    );
+      );
+    }
   }
-}

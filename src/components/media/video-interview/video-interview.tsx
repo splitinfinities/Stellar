@@ -1,21 +1,21 @@
-import { Component, Element, State, Prop, Method, Listen, h } from '@stencil/core';
+import { Component, Element, State, Prop, Method, h } from '@stencil/core';
 import ezClipboard from 'ez-clipboard';
 import properties from 'css-custom-properties';
-import {get_interview_lines, update_interview_lines} from './helpers';
+import {get_interview_lines, update_interview_lines} from '../interview/helpers';
+
 
 @Component({
-  tag: 'stellar-interview',
-  styleUrl: 'interview.css'
+  tag: 'stellar-video-interview',
+  styleUrl: 'video-interview.css'
 })
-export class Interview {
+export class VideoInterview {
   @Element() element: HTMLElement;
 
   @State() randomId: number = Math.floor(Math.random() * 6) + 1;
 
   @Prop() src: string;
-  @Prop() debug: boolean = false;
   @Prop() color: string = "white";
-  @Prop({mutable: true}) playing: boolean = false;
+  @Prop({mutable: true}) playing: boolean;
 
   @Prop({mutable: true}) width: number = 800;
   @Prop({mutable: true}) height: number = 800;
@@ -23,8 +23,7 @@ export class Interview {
 
   @Prop({mutable: true}) visualization: "circle"|"bars"|"wave"|"bars2" = "bars2";
 
-  @State() audio: HTMLWebAudioElement;
-  @State() audio_source: HTMLWebAudioSourceElement;
+  @State() video: HTMLStellarVideoElement;
   @State() io: IntersectionObserver;
 
   @State() loaded: boolean = false;
@@ -36,6 +35,9 @@ export class Interview {
   @State() current: number = 0;
 
   @State() interviewLines: any;
+
+  @State() context: any;
+  @State() visualizer: HTMLWebAudioVisualizerElement;
 
   componentWillLoad() {
     properties.set({
@@ -51,8 +53,8 @@ export class Interview {
     }
 
     update_interview_lines(this.interviewLines, this.cache, this.time)
-    this.audio = this.element.querySelector('web-audio');
-    this.audio_source = await this.audio.source("interview")
+    this.visualizer = this.element.querySelector('web-audio-visualizer');
+    this.video = this.element.querySelector('stellar-video');
     this.addIntersectionObserver();
   }
 
@@ -77,9 +79,8 @@ export class Interview {
 
   cache = new WeakMap()
 
-  @Listen('timeupdate')
   handleTimeUpdate(event) {
-    this.current = Math.round(event.detail.time * 1000);
+    this.current = Math.round(event.detail.currentTime * 1000);
     this.duration = Math.round(event.detail.duration * 1000);
 
     update_interview_lines(this.interviewLines, this.cache, this.time)
@@ -89,25 +90,16 @@ export class Interview {
     return this.current
   }
 
-  async handleInScreen(cb = () => {}) {
-    this.loading = true;
-    if (!this.loaded && !this.audio.is_prepared()) {
-      await this.audio.connect_the_world();
-
-      this.loaded = true;
-
-      setTimeout(async () => {
-        this.loading = false;
-
-        if (!this.audio_source) {
-          this.audio_source = await this.audio.source("interview")
-          await this.audio_source.prepare()
-        }
-
-        const duration = await this.audio_source.getDuration()
-        this.duration = Math.round(duration * 1000);
-        cb()
-      }, 1000)
+  async handleInScreen() {
+    if (!this.context) {
+      this.context = new AudioContext();
+      const src = this.context.createMediaElementSource(this.video.video_tag);
+      if (!this.visualizer) {
+        this.visualizer = this.element.querySelector('web-audio-visualizer');
+      }
+      const waanalyser = await this.visualizer.connect(this.context);
+      await src.connect(waanalyser.analyser);
+      waanalyser.analyser.connect(this.context.destination);
     }
   }
 
@@ -117,55 +109,43 @@ export class Interview {
 
   @Method()
   async play() {
-    if (this.audio) {
-      if (this.audio_source) {
-        await this.audio_source.play()
-        this.playing = this.audio_source.playing;
-      }
+    if (this.video) {
+
+      await this.video.play()
     }
   }
 
   @Method()
   async skipTo(time: number) {
-    if (this.audio) {
-      if (this.audio_source) {
-        await this.audio_source.skipTo(time)
-        this.playing = this.audio_source.playing;
-      }
+    if (this.video) {
+      await this.video.skipTo(time)
     }
   }
 
   @Method()
   async pause() {
-    if (this.audio) {
-      if (this.audio_source) {
-        await this.audio_source.pause()
-        this.playing = this.audio_source.playing;
-      }
+    if (this.video) {
+      await this.video.pause()
     }
   }
 
   @Method()
   async toggle() {
-    if (this.audio) {
-      if (this.audio_source) {
-        await this.audio_source.toggle()
-        this.playing = this.audio_source.playing;
-      }
+    if (this.video) {
+      await this.video.toggle()
     }
   }
 
-  async handleClick() {
-    if (!this.audio.is_prepared()) {
-      await this.handleInScreen(() => {
-         this.handleClick()
-       });
-    } else {
-      await this.toggle();
-    }
+  async handlePlay() {
+    await this.handleInScreen();
+    this.playing = true;
+  }
+
+  handleClick() {
+    this.toggle();
 
     if (this.current === this.duration) {
-      await this.skipTo(0)
+      this.skipTo(0);
     }
   }
 
@@ -177,15 +157,13 @@ export class Interview {
     return (
       <div class="card" onDblClick={() => { this.handleClick() }}>
         <section>
-          <slot />
+          <stellar-video controls={false} autoplay={true} trackInView={false} onPlayed={() => {this.handlePlay()}} onPaused={() => {this.playing = false;}} onTimeupdate={(e) => { this.handleTimeUpdate(e) }}>
+            <source src={this.src} />
+          </stellar-video>
           <div class="transcript">
             <slot name="transcript"></slot>
           </div>
-          <web-audio name={`interview-${this.randomId}`}>
-            <web-audio-source src={this.src} name="interview"></web-audio-source>
-          </web-audio>
-          { this.debug && <web-audio-debugger /> }
-          <web-audio-visualizer for={`interview-${this.randomId}`} type={this.visualization} width="1024" height="1024" color={this.color} />
+          {this.video && <web-audio-visualizer for={`interview-${this.randomId}`} type={this.visualization} width="1024" height="1024" color={this.color} tag={this.video.video_tag} />}
           <button class={this.loading ? "loading button" : (this.playing ? "playing button" : "button")} onClick={() => { this.handleClick() }}>
             <stellar-asset name={this.loading ? "sync" : (this.playing ? "pause" : "play")} class={this.loading ? "animation-spin" : ""} />
           </button>

@@ -22,7 +22,7 @@
   display: block;
   position: relative;
   transition: all 0.25s var(--ease) 0ms;
-  background: var(--gray1);
+  background: var(--gray0);
   width: 100%;
   height: 0.6rem;
   border-radius: var(--border-radius);
@@ -33,7 +33,8 @@
   height: 2.4rem;
 }
 
-:host .status {
+:host .status,
+:host .secondary {
   position: absolute;
   top: 0;
   right: 0;
@@ -42,6 +43,12 @@
   transition: all 0.35s var(--ease, ease-in-out) 0ms;
   background: var(--theme-base5, var(--gray5));
   width: 100%;
+  z-index: 2;
+}
+
+:host .secondary {
+  background: var(--theme-base3, var(--gray3));
+  z-index: 1;
 }
 
 :host([slender]) .progress {
@@ -54,10 +61,17 @@
 }
 
 :host([noease]) .progress,
-:host([noease]) .status {
+:host([noease]) .status,
+:host([noease]) .secondary {
   transition: none !important;
 }
 
-:host-context(.dark-mode):host .progress{
+:host-context(.dark-mode):host .progress {
   background: var(--theme-base9)
+}
+
+
+:host-context(.dark-mode):host .secondary {
+  background: var(--theme-base7, var(--gray7));
+  z-index: 1;
 }

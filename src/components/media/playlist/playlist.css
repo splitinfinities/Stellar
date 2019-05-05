@@ -32,6 +32,7 @@
 	box-sizing: border-box;
 	background: var(--color-bg);
 	max-width: 650px;
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -226,11 +227,10 @@
 }
 
 :host([view="art"]) web-audio-visualizer {
-	height: 50%;
+	height: 100%;
 	position: absolute;
 	bottom: 0;
 	z-index: 2;
-	mix-blend-mode: multiply;
 	transition: all 0s var(--ease) 0s;
 }
 
