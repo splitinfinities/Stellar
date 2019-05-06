@@ -44,6 +44,12 @@ Type: `Promise<void>`
 
 
 
+#### Parameters
+
+| Name   | Type     | Description |
+| ------ | -------- | ----------- |
+| `time` | `number` |             |
+
 #### Returns
 
 Type: `Promise<void>`
@@ -60,33 +66,6 @@ Type: `Promise<void>`
 
 
 
-
-## Dependencies
-
-### Depends on
-
-- [skeleton-img](../skeleton-img)
-- [web-audio](../../audio/web-audio)
-- [web-audio-source](../../audio/web-audio-source)
-- [web-audio-visualizer](../../audio/web-audio-visualizer)
-- [stellar-asset](../../ui/asset)
-- [stellar-unit](../../helpers/unit)
-- [stellar-progress](../../forms/progress)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-interview --> skeleton-img
-  stellar-interview --> web-audio
-  stellar-interview --> web-audio-source
-  stellar-interview --> web-audio-visualizer
-  stellar-interview --> stellar-asset
-  stellar-interview --> stellar-unit
-  stellar-interview --> stellar-progress
-  skeleton-img --> stellar-asset
-  stellar-asset --> ion-icon
-  style stellar-interview fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

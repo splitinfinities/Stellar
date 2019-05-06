@@ -24,6 +24,13 @@
 
 
 
+#### Parameters
+
+| Name      | Type  | Description |
+| --------- | ----- | ----------- |
+| `context` | `any` |             |
+| `source`  | `any` |             |
+
 #### Returns
 
 Type: `Promise<string>`

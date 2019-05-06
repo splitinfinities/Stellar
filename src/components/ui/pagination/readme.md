@@ -32,33 +32,10 @@
 
 ## Events
 
-| Event     | Description | Type               |
-| --------- | ----------- | ------------------ |
-| `changed` |             | `CustomEvent<any>` |
+| Event     | Description | Type                |
+| --------- | ----------- | ------------------- |
+| `changed` |             | `CustomEvent<void>` |
 
-
-## Dependencies
-
-### Depends on
-
-- [stellar-asset](../asset)
-- [stellar-blur](../../motion/blur)
-- [stellar-input](../../forms/input)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-pagination --> stellar-asset
-  stellar-pagination --> stellar-blur
-  stellar-pagination --> stellar-input
-  stellar-asset --> ion-icon
-  stellar-input --> stellar-label
-  stellar-input --> copy-wrap
-  stellar-input --> stellar-asset
-  stellar-input --> stellar-unit
-  stellar-input --> stellar-tooltip
-  style stellar-pagination fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

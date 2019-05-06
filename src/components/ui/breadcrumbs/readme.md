@@ -45,24 +45,6 @@
 | `label`       | `label`       |             | `string` | `"Home"`                                       |
 
 
-## Dependencies
-
-### Depends on
-
-- [stellar-breadcrumb](../breadcrumb)
-- [stellar-asset](../asset)
-- [stellar-label](../../forms/label)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-breadcrumbs --> stellar-breadcrumb
-  stellar-breadcrumbs --> stellar-asset
-  stellar-breadcrumbs --> stellar-label
-  stellar-asset --> ion-icon
-  style stellar-breadcrumbs fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

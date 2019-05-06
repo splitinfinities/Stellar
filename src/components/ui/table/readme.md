@@ -15,19 +15,6 @@
 | `upgrade` | `upgrade` |             | `boolean` | `false`     |
 
 
-## Dependencies
-
-### Depends on
-
-- [stellar-chart](../../helpers/chart)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-table --> stellar-chart
-  style stellar-table fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

@@ -54,6 +54,12 @@ Type: `Promise<void>`
 
 
 
+#### Parameters
+
+| Name      | Type  | Description |
+| --------- | ----- | ----------- |
+| `element` | `any` |             |
+
 #### Returns
 
 Type: `Promise<void>`
@@ -70,24 +76,6 @@ Type: `Promise<void>`
 
 
 
-
-## Dependencies
-
-### Depends on
-
-- [stellar-asset](../../ui/asset)
-- ion-icon
-- [web-audio-visualizer](../../audio/web-audio-visualizer)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-playlist --> stellar-asset
-  stellar-playlist --> ion-icon
-  stellar-playlist --> web-audio-visualizer
-  stellar-asset --> ion-icon
-  style stellar-playlist fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

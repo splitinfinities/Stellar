@@ -18,23 +18,10 @@
 
 ## Events
 
-| Event           | Description | Type               |
-| --------------- | ----------- | ------------------ |
-| `contentChange` |             | `CustomEvent<any>` |
+| Event           | Description | Type                |
+| --------------- | ----------- | ------------------- |
+| `contentChange` |             | `CustomEvent<void>` |
 
-
-## Dependencies
-
-### Depends on
-
-- [stellar-label](../../forms/label)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-step --> stellar-label
-  style stellar-step fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

@@ -25,12 +25,12 @@
 
 ## Events
 
-| Event        | Description | Type               |
-| ------------ | ----------- | ------------------ |
-| `loaded`     |             | `CustomEvent<any>` |
-| `paused`     |             | `CustomEvent<any>` |
-| `played`     |             | `CustomEvent<any>` |
-| `timeupdate` |             | `CustomEvent<any>` |
+| Event        | Description | Type                |
+| ------------ | ----------- | ------------------- |
+| `loaded`     |             | `CustomEvent<void>` |
+| `paused`     |             | `CustomEvent<void>` |
+| `played`     |             | `CustomEvent<void>` |
+| `timeupdate` |             | `CustomEvent<void>` |
 
 
 ## Methods
@@ -69,6 +69,12 @@ Type: `Promise<void>`
 
 
 
+#### Parameters
+
+| Name   | Type  | Description |
+| ------ | ----- | ----------- |
+| `time` | `any` |             |
+
 #### Returns
 
 Type: `Promise<void>`
@@ -95,19 +101,6 @@ Type: `Promise<void>`
 
 
 
-
-## Dependencies
-
-### Used by
-
- - [stellar-video-interview](../video-interview)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-video-interview --> stellar-video
-  style stellar-video fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

@@ -28,9 +28,9 @@
 
 ## Events
 
-| Event    | Description | Type               |
-| -------- | ----------- | ------------------ |
-| `change` |             | `CustomEvent<any>` |
+| Event    | Description | Type                |
+| -------- | ----------- | ------------------- |
+| `change` |             | `CustomEvent<void>` |
 
 
 ## Methods
@@ -49,33 +49,18 @@ Type: `Promise<void>`
 
 
 
+#### Parameters
+
+| Name    | Type      | Description |
+| ------- | --------- | ----------- |
+| `value` | `boolean` |             |
+
 #### Returns
 
 Type: `Promise<void>`
 
 
 
-
-## Dependencies
-
-### Depends on
-
-- [stellar-asset](../../ui/asset)
-- [stellar-blur](../../motion/blur)
-- [stellar-tag](../../ui/tag)
-- [stellar-tooltip](../../ui/tooltip)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-toggle-option --> stellar-asset
-  stellar-toggle-option --> stellar-blur
-  stellar-toggle-option --> stellar-tag
-  stellar-toggle-option --> stellar-tooltip
-  stellar-asset --> ion-icon
-  stellar-tag --> stellar-label
-  style stellar-toggle-option fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

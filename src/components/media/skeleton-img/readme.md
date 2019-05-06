@@ -48,29 +48,6 @@
 | `width`   | `width`   |             | `number`  | `600`   |
 
 
-## Dependencies
-
-### Used by
-
- - [stellar-360-image](../360-image)
- - [stellar-interview](../interview)
- - [stellar-video-interview](../video-interview)
-
-### Depends on
-
-- [stellar-asset](../../ui/asset)
-
-### Graph
-```mermaid
-graph TD;
-  skeleton-img --> stellar-asset
-  stellar-asset --> ion-icon
-  stellar-360-image --> skeleton-img
-  stellar-interview --> skeleton-img
-  stellar-video-interview --> skeleton-img
-  style skeleton-img fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

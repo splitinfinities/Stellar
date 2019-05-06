@@ -20,9 +20,9 @@
 
 ## Events
 
-| Event        | Description | Type               |
-| ------------ | ----------- | ------------------ |
-| `timeupdate` |             | `CustomEvent<any>` |
+| Event        | Description | Type                |
+| ------------ | ----------- | ------------------- |
+| `timeupdate` |             | `CustomEvent<void>` |
 
 
 ## Methods
@@ -30,6 +30,13 @@
 ### `assignBuffer(webAudio: any, buffer: any) => Promise<void>`
 
 
+
+#### Parameters
+
+| Name       | Type  | Description |
+| ---------- | ----- | ----------- |
+| `webAudio` | `any` |             |
+| `buffer`   | `any` |             |
 
 #### Returns
 
@@ -40,6 +47,12 @@ Type: `Promise<void>`
 ### `gain(place?: string) => Promise<GainNode>`
 
 
+
+#### Parameters
+
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `place` | `string` |             |
 
 #### Returns
 
@@ -101,6 +114,12 @@ Type: `Promise<void>`
 
 
 
+#### Parameters
+
+| Name   | Type  | Description |
+| ------ | ----- | ----------- |
+| `time` | `any` |             |
+
 #### Returns
 
 Type: `Promise<void>`
@@ -137,19 +156,6 @@ Type: `Promise<HTMLElement>`
 
 
 
-
-## Dependencies
-
-### Used by
-
- - [stellar-interview](../../media/interview)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-interview --> web-audio-source
-  style web-audio-source fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

@@ -222,19 +222,6 @@ Type: `Promise<any[]>`
 
 
 
-## Dependencies
-
-### Depends on
-
-- [stellar-blur](../../motion/blur)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-tabs --> stellar-blur
-  style stellar-tabs fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

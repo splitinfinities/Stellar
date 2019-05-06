@@ -58,31 +58,6 @@
 | `value`       | `value`       | Sets the value on the button if the button is an input.                                               | `string`                                                   | `''`        |
 
 
-## Dependencies
-
-### Used by
-
- - [stellar-accordion](../../ui/accordion)
- - [stellar-card](../../ui/card)
- - [stellar-select](../select)
-
-### Depends on
-
-- [stellar-asset](../../ui/asset)
-- stencil-route-link
-
-### Graph
-```mermaid
-graph TD;
-  stellar-button --> stellar-asset
-  stellar-button --> stencil-route-link
-  stellar-asset --> ion-icon
-  stellar-accordion --> stellar-button
-  stellar-card --> stellar-button
-  stellar-select --> stellar-button
-  style stellar-button fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

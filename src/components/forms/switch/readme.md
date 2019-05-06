@@ -28,9 +28,9 @@
 
 ## Events
 
-| Event    | Description | Type               |
-| -------- | ----------- | ------------------ |
-| `change` |             | `CustomEvent<any>` |
+| Event    | Description | Type                |
+| -------- | ----------- | ------------------- |
+| `change` |             | `CustomEvent<void>` |
 
 
 ## Methods
@@ -45,20 +45,6 @@ Type: `Promise<void>`
 
 
 
-
-## Dependencies
-
-### Depends on
-
-- [stellar-asset](../../ui/asset)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-switch --> stellar-asset
-  stellar-asset --> ion-icon
-  style stellar-switch fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

@@ -208,9 +208,9 @@
 
 ## Events
 
-| Event    | Description | Type               |
-| -------- | ----------- | ------------------ |
-| `change` |             | `CustomEvent<any>` |
+| Event    | Description | Type                |
+| -------- | ----------- | ------------------- |
+| `change` |             | `CustomEvent<void>` |
 
 
 ## Methods
@@ -245,33 +245,6 @@ Type: `Promise<FormResult>`
 
 
 
-
-## Dependencies
-
-### Depends on
-
-- [stellar-label](../label)
-- [stellar-button](../button)
-- [stellar-asset](../../ui/asset)
-- [stellar-item](../item)
-- [stellar-tooltip](../../ui/tooltip)
-- [stellar-blur](../../motion/blur)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-select --> stellar-label
-  stellar-select --> stellar-button
-  stellar-select --> stellar-asset
-  stellar-select --> stellar-item
-  stellar-select --> stellar-tooltip
-  stellar-select --> stellar-blur
-  stellar-button --> stellar-asset
-  stellar-button --> stencil-route-link
-  stellar-asset --> ion-icon
-  stellar-item --> stellar-asset
-  style stellar-select fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

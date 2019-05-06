@@ -30,12 +30,12 @@
 
 ## Events
 
-| Event              | Description | Type               |
-| ------------------ | ----------- | ------------------ |
-| `blurChanged`      |             | `CustomEvent<any>` |
-| `focusChanged`     |             | `CustomEvent<any>` |
-| `mounted`          |             | `CustomEvent<any>` |
-| `selectionChanged` |             | `CustomEvent<any>` |
+| Event              | Description | Type                |
+| ------------------ | ----------- | ------------------- |
+| `blurChanged`      |             | `CustomEvent<void>` |
+| `focusChanged`     |             | `CustomEvent<void>` |
+| `mounted`          |             | `CustomEvent<void>` |
+| `selectionChanged` |             | `CustomEvent<void>` |
 
 
 ## Methods
@@ -43,6 +43,12 @@
 ### `apply(data: any) => Promise<void>`
 
 
+
+#### Parameters
+
+| Name   | Type  | Description |
+| ------ | ----- | ----------- |
+| `data` | `any` |             |
 
 #### Returns
 
@@ -64,6 +70,12 @@ Type: `Promise<{ size: string; value: string; type: "button" | "a" | "stencil-ro
 
 
 
+#### Parameters
+
+| Name    | Type                     | Description |
+| ------- | ------------------------ | ----------- |
+| `state` | `{ selected: boolean; }` |             |
+
 #### Returns
 
 Type: `Promise<void>`
@@ -80,25 +92,6 @@ Type: `Promise<void>`
 
 
 
-
-## Dependencies
-
-### Used by
-
- - [stellar-select](../select)
-
-### Depends on
-
-- [stellar-asset](../../ui/asset)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-item --> stellar-asset
-  stellar-asset --> ion-icon
-  stellar-select --> stellar-item
-  style stellar-item fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

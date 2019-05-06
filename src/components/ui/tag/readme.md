@@ -61,26 +61,6 @@
 | `textColor` | `text-color` |             | `string`  | `"white"`   |
 
 
-## Dependencies
-
-### Used by
-
- - [stellar-tab](../tab)
- - [stellar-toggle-option](../../forms/toggle-option)
-
-### Depends on
-
-- [stellar-label](../../forms/label)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-tag --> stellar-label
-  stellar-tab --> stellar-tag
-  stellar-toggle-option --> stellar-tag
-  style stellar-tag fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

@@ -18,6 +18,12 @@
 
 
 
+#### Parameters
+
+| Name     | Type      | Description |
+| -------- | --------- | ----------- |
+| `string` | `History` |             |
+
 #### Returns
 
 Type: `Promise<void>`

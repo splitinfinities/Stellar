@@ -64,22 +64,6 @@
 | `position` | `position` |             | `"center" \| "left" \| "right"` | `"center"`   |
 
 
-## Dependencies
-
-### Depends on
-
-- [stellar-asset](../asset)
-- [stellar-blur](../../motion/blur)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-dropdown --> stellar-asset
-  stellar-dropdown --> stellar-blur
-  stellar-asset --> ion-icon
-  style stellar-dropdown fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

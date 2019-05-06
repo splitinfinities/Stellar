@@ -27,29 +27,19 @@
 
 
 
+#### Parameters
+
+| Name          | Type           | Description |
+| ------------- | -------------- | ----------- |
+| `context`     | `AudioContext` |             |
+| `destination` | `any`          |             |
+
 #### Returns
 
 Type: `Promise<this>`
 
 
 
-
-## Dependencies
-
-### Used by
-
- - [stellar-interview](../../media/interview)
- - [stellar-playlist](../../media/playlist)
- - [stellar-video-interview](../../media/video-interview)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-interview --> web-audio-visualizer
-  stellar-playlist --> web-audio-visualizer
-  stellar-video-interview --> web-audio-visualizer
-  style web-audio-visualizer fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

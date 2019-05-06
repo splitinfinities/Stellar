@@ -87,11 +87,11 @@
 
 ## Events
 
-| Event      | Description           | Type               |
-| ---------- | --------------------- | ------------------ |
-| `bluring`  | Public: Blur event    | `CustomEvent<any>` |
-| `change`   | Public: Changed event | `CustomEvent<any>` |
-| `focusing` | Public: Focus event   | `CustomEvent<any>` |
+| Event      | Description           | Type                |
+| ---------- | --------------------- | ------------------- |
+| `bluring`  | Public: Blur event    | `CustomEvent<void>` |
+| `change`   | Public: Changed event | `CustomEvent<void>` |
+| `focusing` | Public: Focus event   | `CustomEvent<void>` |
 
 
 ## Methods
@@ -130,6 +130,14 @@ Type: `Promise<object>`
 
 
 
+#### Parameters
+
+| Name      | Type                | Description |
+| --------- | ------------------- | ----------- |
+| `message` | `boolean \| string` |             |
+| `valid`   | `boolean`           |             |
+| `level`   | `number`            |             |
+
 #### Returns
 
 Type: `Promise<void>`
@@ -139,6 +147,12 @@ Type: `Promise<void>`
 ### `setStrength(value: number) => Promise<void>`
 
 
+
+#### Parameters
+
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `value` | `number` |             |
 
 #### Returns
 
@@ -166,35 +180,6 @@ Type: `Promise<FormResult>`
 
 
 
-
-## Dependencies
-
-### Used by
-
- - [stellar-pagination](../../ui/pagination)
- - [stellar-stripe](../../helpers/stripe)
-
-### Depends on
-
-- [stellar-label](../label)
-- [copy-wrap](../../ui/copy-wrap)
-- [stellar-asset](../../ui/asset)
-- [stellar-unit](../../helpers/unit)
-- [stellar-tooltip](../../ui/tooltip)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-input --> stellar-label
-  stellar-input --> copy-wrap
-  stellar-input --> stellar-asset
-  stellar-input --> stellar-unit
-  stellar-input --> stellar-tooltip
-  stellar-asset --> ion-icon
-  stellar-pagination --> stellar-input
-  stellar-stripe --> stellar-input
-  style stellar-input fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

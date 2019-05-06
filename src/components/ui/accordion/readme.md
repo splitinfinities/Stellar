@@ -40,26 +40,6 @@ Type: `Promise<void>`
 
 
 
-## Dependencies
-
-### Depends on
-
-- [stellar-button](../../forms/button)
-- [stellar-asset](../asset)
-- [stellar-blur](../../motion/blur)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-accordion --> stellar-button
-  stellar-accordion --> stellar-asset
-  stellar-accordion --> stellar-blur
-  stellar-button --> stellar-asset
-  stellar-button --> stencil-route-link
-  stellar-asset --> ion-icon
-  style stellar-accordion fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

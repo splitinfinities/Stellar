@@ -42,19 +42,6 @@ Type: `Promise<void>`
 
 
 
-## Dependencies
-
-### Used by
-
- - [stellar-starscape](../../helpers/starscape)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-starscape --> stellar-parallax
-  style stellar-parallax fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

@@ -50,25 +50,18 @@ Type: `Promise<Boolean>`
 
 
 
+#### Parameters
+
+| Name   | Type  | Description |
+| ------ | ----- | ----------- |
+| `name` | `any` |             |
+
 #### Returns
 
 Type: `Promise<any>`
 
 
 
-
-## Dependencies
-
-### Used by
-
- - [stellar-interview](../../media/interview)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-interview --> web-audio
-  style web-audio fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

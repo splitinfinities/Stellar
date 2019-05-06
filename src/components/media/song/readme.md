@@ -16,9 +16,9 @@
 
 ## Events
 
-| Event         | Description | Type               |
-| ------------- | ----------- | ------------------ |
-| `songChanged` |             | `CustomEvent<any>` |
+| Event         | Description | Type                |
+| ------------- | ----------- | ------------------- |
+| `songChanged` |             | `CustomEvent<void>` |
 
 
 ## Methods
@@ -67,6 +67,12 @@ Type: `Promise<void>`
 
 
 
+#### Parameters
+
+| Name    | Type  | Description |
+| ------- | ----- | ----------- |
+| `value` | `any` |             |
+
 #### Returns
 
 Type: `Promise<void>`
@@ -83,20 +89,6 @@ Type: `Promise<void>`
 
 
 
-
-## Dependencies
-
-### Depends on
-
-- [stellar-asset](../../ui/asset)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-song --> stellar-asset
-  stellar-asset --> ion-icon
-  style stellar-song fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

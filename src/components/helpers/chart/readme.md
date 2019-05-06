@@ -31,6 +31,12 @@ Type: `Promise<any>`
 
 
 
+#### Parameters
+
+| Name         | Type  | Description |
+| ------------ | ----- | ----------- |
+| `newOptions` | `any` |             |
+
 #### Returns
 
 Type: `Promise<void>`
@@ -47,19 +53,6 @@ Type: `Promise<void>`
 
 
 
-
-## Dependencies
-
-### Used by
-
- - [stellar-table](../../ui/table)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-table --> stellar-chart
-  style stellar-chart fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

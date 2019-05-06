@@ -78,9 +78,9 @@
 
 ## Events
 
-| Event  | Description | Type               |
-| ------ | ----------- | ------------------ |
-| `flip` |             | `CustomEvent<any>` |
+| Event  | Description | Type                |
+| ------ | ----------- | ------------------- |
+| `flip` |             | `CustomEvent<void>` |
 
 
 ## Methods
@@ -89,37 +89,18 @@
 
 
 
+#### Parameters
+
+| Name | Type      | Description |
+| ---- | --------- | ----------- |
+| `e`  | `UIEvent` |             |
+
 #### Returns
 
 Type: `Promise<void>`
 
 
 
-
-## Dependencies
-
-### Used by
-
- - [stellar-code](../../helpers/code)
- - [stellar-color-library](../../helpers/color-library)
-
-### Depends on
-
-- [stellar-button](../../forms/button)
-- [stellar-asset](../asset)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-card --> stellar-button
-  stellar-card --> stellar-asset
-  stellar-button --> stellar-asset
-  stellar-button --> stencil-route-link
-  stellar-asset --> ion-icon
-  stellar-code --> stellar-card
-  stellar-color-library --> stellar-card
-  style stellar-card fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

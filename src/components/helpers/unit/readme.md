@@ -16,23 +16,6 @@
 | `value`    | `value`    |             | `number`  | `1000`  |
 
 
-## Dependencies
-
-### Used by
-
- - [stellar-input](../../forms/input)
- - [stellar-interview](../../media/interview)
- - [stellar-video-interview](../../media/video-interview)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-input --> stellar-unit
-  stellar-interview --> stellar-unit
-  stellar-video-interview --> stellar-unit
-  style stellar-unit fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
