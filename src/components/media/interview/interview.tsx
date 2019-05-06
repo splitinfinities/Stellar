@@ -67,6 +67,7 @@ export class Interview {
           this.handleOffScreen();
         }
       }, {
+        rootMargin: '50%',
         threshold: [0]
       })
 

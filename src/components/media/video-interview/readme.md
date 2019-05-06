@@ -7,15 +7,15 @@
 
 ## Properties
 
-| Property      | Attribute      | Description | Type      | Default     |
-| ------------- | -------------- | ----------- | --------- | ----------- |
-| `aspectRatio` | `aspect-ratio` |             | `number`  | `100`       |
-| `color`       | `color`        |             | `string`  | `"white"`   |
-| `debug`       | `debug`        |             | `boolean` | `false`     |
-| `height`      | `height`       |             | `number`  | `800`       |
-| `playing`     | `playing`      |             | `boolean` | `false`     |
-| `src`         | `src`          |             | `string`  | `undefined` |
-| `width`       | `width`        |             | `number`  | `800`       |
+| Property        | Attribute       | Description | Type                                      | Default     |
+| --------------- | --------------- | ----------- | ----------------------------------------- | ----------- |
+| `aspectRatio`   | `aspect-ratio`  |             | `number`                                  | `100`       |
+| `color`         | `color`         |             | `string`                                  | `"white"`   |
+| `height`        | `height`        |             | `number`                                  | `800`       |
+| `playing`       | `playing`       |             | `boolean`                                 | `undefined` |
+| `src`           | `src`           |             | `string`                                  | `undefined` |
+| `visualization` | `visualization` |             | `"bars" \| "bars2" \| "circle" \| "wave"` | `"bars2"`   |
+| `width`         | `width`         |             | `number`                                  | `800`       |
 
 
 ## Methods
@@ -65,9 +65,8 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [web-audio](../../audio/web-audio)
-- [web-audio-source](../../audio/web-audio-source)
-- [web-audio-debugger](../../audio/web-audio-debugger)
+- [skeleton-img](../skeleton-img)
+- [stellar-video](../video)
 - [web-audio-visualizer](../../audio/web-audio-visualizer)
 - [stellar-asset](../../ui/asset)
 - [stellar-unit](../../helpers/unit)
@@ -76,15 +75,15 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  stellar-interview --> web-audio
-  stellar-interview --> web-audio-source
-  stellar-interview --> web-audio-debugger
-  stellar-interview --> web-audio-visualizer
-  stellar-interview --> stellar-asset
-  stellar-interview --> stellar-unit
-  stellar-interview --> stellar-progress
+  stellar-video-interview --> skeleton-img
+  stellar-video-interview --> stellar-video
+  stellar-video-interview --> web-audio-visualizer
+  stellar-video-interview --> stellar-asset
+  stellar-video-interview --> stellar-unit
+  stellar-video-interview --> stellar-progress
+  skeleton-img --> stellar-asset
   stellar-asset --> ion-icon
-  style stellar-interview fill:#f9f,stroke:#333,stroke-width:4px
+  style stellar-video-interview fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

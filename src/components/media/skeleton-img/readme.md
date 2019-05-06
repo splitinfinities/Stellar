@@ -41,6 +41,7 @@
 
 | Property  | Attribute | Description | Type      | Default |
 | --------- | --------- | ----------- | --------- | ------- |
+| `block`   | `block`   |             | `boolean` | `false` |
 | `height`  | `height`  |             | `number`  | `300`   |
 | `icon`    | `icon`    |             | `boolean` | `false` |
 | `loading` | `loading` |             | `boolean` | `false` |
@@ -48,6 +49,12 @@
 
 
 ## Dependencies
+
+### Used by
+
+ - [stellar-360-image](../360-image)
+ - [stellar-interview](../interview)
+ - [stellar-video-interview](../video-interview)
 
 ### Depends on
 
@@ -58,6 +65,9 @@
 graph TD;
   skeleton-img --> stellar-asset
   stellar-asset --> ion-icon
+  stellar-360-image --> skeleton-img
+  stellar-interview --> skeleton-img
+  stellar-video-interview --> skeleton-img
   style skeleton-img fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

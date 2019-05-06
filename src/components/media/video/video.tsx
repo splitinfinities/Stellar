@@ -103,7 +103,8 @@ export class Video {
           this.handleOffScreen();
         }
       }, {
-        threshold: [0.25]
+        rootMargin: '50%',
+        threshold: [0]
       })
 
       this.io.observe(this.element.querySelector('video'));

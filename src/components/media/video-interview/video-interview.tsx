@@ -72,6 +72,7 @@ export class VideoInterview {
           this.handleOffScreen();
         }
       }, {
+        rootMargin: '50%',
         threshold: [0]
       })
 

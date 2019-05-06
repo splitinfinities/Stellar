@@ -1,4 +1,4 @@
-import { Component, Prop, State, Watch, Element, h } from '@stencil/core';
+import { Component, Prop, State, Watch, Element, h, Host } from '@stencil/core';
 import { titleCase, colors } from '../../../utils';
 
 @Component({
@@ -34,12 +34,6 @@ export class Avatar {
     this.formatName()
   }
 
-  hostData() {
-    return {
-      class: `theme-${this.color}`
-    }
-  }
-
   @Watch('name')
   formatName() {
     if (this.processing) {
@@ -69,7 +63,7 @@ export class Avatar {
   }
 
   render() {
-    return (
+    return <Host class={`theme-${this.color}`}>
       <button class="wrapper" title={`You tabbed on an Avatar for ${this.name}`}>
         {this.processing && <div class="processing"><stellar-avatar src="Loading" /></div>}
         <div class="content">
@@ -79,6 +73,6 @@ export class Avatar {
         </div>
         {this.tooltip && <stellar-tooltip>{this.name}</stellar-tooltip>}
       </button>
-    );
+    </Host>
   }
 }

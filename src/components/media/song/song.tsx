@@ -5,7 +5,7 @@ import smallIndexedDb from 'small-indexeddb'
 
 @Component({
     tag: 'stellar-song',
-    assetsDir: 'vendor',
+    assetsDirs: ['vendor'],
 	styleUrl: 'song.css',
 	shadow: true
 })

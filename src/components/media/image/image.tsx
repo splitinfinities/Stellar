@@ -81,6 +81,9 @@ export class Picture {
           this.handleImage();
           this.removeIntersectionObserver();
         }
+      }, {
+        rootMargin: '50%',
+        threshold: [0]
       })
 
       this.io.observe(this.element.shadowRoot.querySelector('figure'));

@@ -19,12 +19,6 @@ export class ParallaxSection {
 		this.element.setAttribute("data-rellax-zindex", this.layer.toString());
 	}
 
-	hostData() {
-		return {
-
-		}
-	}
-
 	render () {
 		return (<slot></slot>)
 	}

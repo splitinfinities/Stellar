@@ -35,6 +35,7 @@ export class Image360 {
           this.handleOffScreen();
         }
       }, {
+        rootMargin: '50%',
         threshold: [0]
       })
 
@@ -71,7 +72,7 @@ export class Image360 {
     return <div>
       <div class="image" />
       <div class="overlay" />
-      <skeleton-img width="1200" height="800" />
+      {!this.ready && <skeleton-img width={this.width} height={this.height} />}
     </div>
   }
 }

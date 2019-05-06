@@ -46,6 +46,7 @@
  - [stellar-song](../../media/song)
  - [stellar-switch](../../forms/switch)
  - [stellar-toggle-option](../../forms/toggle-option)
+ - [stellar-video-interview](../../media/video-interview)
 
 ### Depends on
 
@@ -72,6 +73,7 @@ graph TD;
   stellar-song --> stellar-asset
   stellar-switch --> stellar-asset
   stellar-toggle-option --> stellar-asset
+  stellar-video-interview --> stellar-asset
   style stellar-asset fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

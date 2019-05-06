@@ -40,6 +40,9 @@ export class Scatter {
           }, 350)
           this.removeIntersectionObserver();
         }
+      }, {
+        rootMargin: '50%',
+        threshold: [0]
       })
 
       this.io.observe(this.element);

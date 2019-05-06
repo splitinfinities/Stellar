@@ -1,4 +1,4 @@
-import { Component, Element, Prop, State, Method, h } from '@stencil/core';
+import { Component, Element, Prop, State, Method, h, Host } from '@stencil/core';
 import properties from 'css-custom-properties'
 
 @Component({
@@ -12,12 +12,6 @@ export class Blur {
   @Prop({mutable: true, reflectToAttr: true}) horizontal: number = 0;
 
   @State() generatedId: string;
-
-  hostData() {
-    return {
-      id: this.element.id || this.generatedId
-    }
-  }
 
   supported_match() {
     return navigator.userAgent.toLowerCase().indexOf('firefox') === -1 &&
@@ -80,15 +74,15 @@ export class Blur {
   }
 
   render() {
-    return [
-      <slot />,
-      this.supported() && <svg class="blur-svg">
+    return <Host id={this.element.id || this.generatedId}>
+      <slot />
+      {this.supported() && <svg class="blur-svg">
         <defs>
           <filter id={this.generatedId + "-filter"}>
             <feGaussianBlur id={this.generatedId + "-gaussian"} in="SourceGraphic" stdDeviation={`${this.horizontal},${this.vertical}`} />
           </filter>
         </defs>
-      </svg>
-    ];
+      </svg>}
+    </Host>;
   }
 }

@@ -37,21 +37,21 @@ export const config: Config = {
       "text",
     ]
   },
-  copy: [
-    { src: "global/images" },
-    { src: "global/video" },
-    { src: "global/vector" },
-    { src: "global/audio" },
-    { src: "global/page2layers.js" },
-    { src: "*.html" },
-  ],
   outputTargets:[
     { type: 'dist' },
     { type: "stats", file: "./data/stats.json" },
     { type: "docs" },
     {
       type: 'www',
-      serviceWorker: null // disable service workers
+      serviceWorker: null,
+      copy: [
+        { src: "global/images" },
+        { src: "global/video" },
+        { src: "global/vector" },
+        { src: "global/audio" },
+        { src: "global/page2layers.js" },
+        { src: "*.html" },
+      ],
     }
   ],
   plugins: [
