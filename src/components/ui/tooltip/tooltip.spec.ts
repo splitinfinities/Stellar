@@ -7,7 +7,7 @@ it('should render and respond to changes appropriately', () => {
 
   const rendered = tooltip.render();
 
-  const snapshot = {"elm": undefined, "ishost": false, "vattrs": {"class": "wrap"}, "vchildren": [{"elm": undefined, "ishost": false, "vattrs": {"class": "after"}, "vchildren": null, "vkey": undefined, "vname": undefined, "vtag": "div", "vtext": undefined}, {"elm": undefined, "ishost": false, "vattrs": null, "vchildren": null, "vkey": undefined, "vname": undefined, "vtag": "slot", "vtext": undefined}], "vkey": undefined, "vname": undefined, "vtag": "div", "vtext": undefined}
+  const snapshot = {"$attrs$": {"class": "wrap"}, "$children$": [{"$attrs$": {"class": "after"}, "$children$": null, "$elm$": undefined, "$flags$": 0, "$key$": undefined, "$name$": undefined, "$tag$": "div", "$text$": undefined}, {"$attrs$": null, "$children$": null, "$elm$": undefined, "$flags$": 0, "$key$": undefined, "$name$": undefined, "$tag$": "slot", "$text$": undefined}], "$elm$": undefined, "$flags$": 0, "$key$": undefined, "$name$": undefined, "$tag$": "div", "$text$": undefined}
 
   expect(rendered).toEqual(snapshot)
 });

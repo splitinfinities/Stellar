@@ -61,12 +61,12 @@
     "@stencil/core": "^1.0.0-alpha.17",
     "@stencil/postcss": "^0.1.0",
     "@types/jest": "23.3.14",
-    "@types/puppeteer": "1.12.1",
+    "@types/puppeteer": "1.12.4",
     "jest": "23.6.0",
     "jest-cli": "23.6.0",
     "jest-localstorage-mock": "^2.2.0",
     "postcss-design-token-function": "^1.0.0",
-    "puppeteer": "1.11.0"
+    "puppeteer": "1.14.0"
   },
   "jest": {
     "preset": "@stencil/core/testing"
