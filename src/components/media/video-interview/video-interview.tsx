@@ -1,4 +1,4 @@
-import { Component, Element, State, Prop, Method, h } from '@stencil/core';
+import { Component, Element, State, Prop, Method} from '@stencil/core';
 import ezClipboard from 'ez-clipboard';
 import properties from 'css-custom-properties';
 import {get_interview_lines, update_interview_lines} from '../interview/helpers';
@@ -171,7 +171,7 @@ export class VideoInterview {
     return (
       <div class="card" onDblClick={() => { this.handleClick() }}>
         {!this.visible && <div>
-          <skeleton-img width="1050" height="600" loading />
+          <skeleton-img width={1050} height={600} loading />
         </div>
         }
         {this.visible && <section>
@@ -181,7 +181,7 @@ export class VideoInterview {
           <div class="transcript">
             <slot name="transcript"></slot>
           </div>
-          {this.video && <web-audio-visualizer for={`interview-${this.randomId}`} type={this.visualization} width="1024" height="1024" color={this.color} tag={this.video.video_tag} />}
+          {this.video && <web-audio-visualizer for={`interview-${this.randomId}`} type={this.visualization} width={1024} height={1024} color={this.color} />}
           <button class={this.loading ? "loading button" : (this.playing ? "playing button" : "button")} onClick={() => { this.handleClick() }}>
             <stellar-asset name={this.loading ? "sync" : (this.playing ? "pause" : "play")} class={this.loading ? "animation-spin" : ""} />
           </button>

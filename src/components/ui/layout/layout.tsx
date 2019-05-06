@@ -1,4 +1,4 @@
-import { Component, Prop, Element, Method, h } from '@stencil/core';
+import { Component, Prop, Element, Method} from '@stencil/core';
 import { default as eqjs } from 'eq.js';
 
 @Component({

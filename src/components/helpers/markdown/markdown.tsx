@@ -1,4 +1,4 @@
-import { Component, State, Prop, Watch, Element, h } from '@stencil/core';
+import { Component, State, Prop, Watch, Element} from '@stencil/core';
 import showdown from 'showdown';
 
 @Component({

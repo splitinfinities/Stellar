@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method, Listen, h } from '@stencil/core';
+import { Component, Prop, State, Element, Method, Listen} from '@stencil/core';
 import { asTime } from '../../../utils'
 
 @Component({
@@ -254,7 +254,7 @@ export class Playlist {
               </div>
           }
 
-          <web-audio-visualizer tag={this.audio} type={this.view === "art" ? "circle" : "bars"} />
+          <web-audio-visualizer type={this.view === "art" ? "circle" : "bars"} />
         </div>
 
         <div id="controls" class="controls">

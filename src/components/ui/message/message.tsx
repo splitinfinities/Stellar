@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, h, Host } from '@stencil/core';
+import { Component, Prop, State, Element } from '@stencil/core';
 
 @Component({
   tag: 'stellar-message',
@@ -42,6 +42,12 @@ export class Message {
     }
   }
 
+  hostData() {
+    return {
+      class: `theme-${this.theme} ${this.shown ? "db" : "dn"}`
+    }
+  }
+
   handleClose() {
     this.shown = false;
 
@@ -51,13 +57,13 @@ export class Message {
   }
 
   render() {
-    return <Host class={`theme-${this.theme} ${this.shown ? "db" : "dn"}`}>
+    return (
       <div class="wrap">
         <slot></slot>
         <button aria-label="Close" onClick={() => { this.handleClose() }}>
           <stellar-asset name="close" />
         </button>
       </div>
-    </Host>
+    )
   }
 }

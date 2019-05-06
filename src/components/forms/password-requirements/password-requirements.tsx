@@ -1,4 +1,4 @@
-import { Component, Prop, Watch, Element, State, h } from '@stencil/core';
+import { Component, Prop, Watch, Element, State} from '@stencil/core';
 import zxcvbn from "zxcvbn";
 
 @Component({

@@ -1,4 +1,4 @@
-import { Component, Prop, State, Listen, Watch, Element, Event, EventEmitter, Method, h } from '@stencil/core';
+import { Component, Prop, State, Listen, Watch, Element, Event, EventEmitter, Method} from '@stencil/core';
 import delay from 'await-delay';
 
 @Component({
@@ -221,7 +221,7 @@ export class Select {
     this.focused = false;
   }
 
-  @Listen('click', {target: 'window'})
+  @Listen('window:click')
   handleNotClick(e) {
     if (e.target !== this.element && !this.element.contains(e.target)) {
       if (this.open) {

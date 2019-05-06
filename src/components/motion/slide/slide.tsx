@@ -1,16 +1,23 @@
-import { Component, h, Host } from '@stencil/core';
+import { Component } from '@stencil/core';
 
 @Component({
   tag: 'stellar-slide',
   styleUrl: 'slide.css'
 })
 export class Slide {
-  render() {
-    return <Host class={{
+
+  hostData() {
+    return {
+      class: {
         'slide-zoom': true,
         'swiper-slide': true
-      }}>
+      }
+    };
+  }
+
+  render() {
+    return (
       <slot />
-    </Host>
+    )
   }
 }

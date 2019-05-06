@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Event, EventEmitter, Method, h } from '@stencil/core';
+import { Component, Prop, State, Element, Event, EventEmitter, Method} from '@stencil/core';
 import { properties, ResizeObserver } from '../../../utils'
 
 @Component({

@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method, h } from '@stencil/core';
+import { Component, Prop, State, Element, Method} from '@stencil/core';
 import * as config from './config'
 
 @Component({

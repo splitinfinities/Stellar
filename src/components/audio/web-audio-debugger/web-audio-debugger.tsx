@@ -1,4 +1,4 @@
-import { Component, State, Prop, Method, h } from '@stencil/core';
+import { Component, State, Prop, Method} from '@stencil/core';
 
 @Component({
   tag: 'web-audio-debugger',

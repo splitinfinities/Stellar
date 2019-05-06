@@ -1,11 +1,11 @@
-import { Component, Element, Event, EventEmitter, Method, Prop, State, Watch, h, Host } from '@stencil/core'
+import { Component, Element, Event, EventEmitter, Method, Prop, State, Watch } from '@stencil/core'
 import { Swiper }  from './vendor/swiper.js'
 import { blurringEase } from '../../../utils';
 
 @Component({
   tag: 'stellar-slides',
   styleUrl: 'slides.css',
-  assetsDirs: ['vendor']
+  assetsDir: 'vendor'
 })
 
 export class Slides {
@@ -177,6 +177,12 @@ export class Slides {
 
     this.el!.onblur = () => {
       this.swiper.keyboard.disable()
+    }
+  }
+
+  hostData() {
+    return {
+      "tabIndex": 0
     }
   }
 
@@ -476,7 +482,7 @@ export class Slides {
   }
 
   render() {
-    return <Host tabIndex={0}>
+    return (
       <stellar-blur class="swiper-container" horizontal={this.blur}>
         <div class="swiper-wrapper">
           <slot />
@@ -488,6 +494,6 @@ export class Slides {
           }}
         />
       </stellar-blur>
-    </Host>
+    )
   }
 }

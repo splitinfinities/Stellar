@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component} from '@stencil/core';
 import {colors} from '../../../utils'
 @Component({
   tag: 'stellar-color-library',

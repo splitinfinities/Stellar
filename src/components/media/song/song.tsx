@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method, Event, EventEmitter, h } from '@stencil/core';
+import { Component, Prop, State, Element, Method, Event, EventEmitter} from '@stencil/core';
 import { leadingZeroIndex, relPathAsAbs } from "../../../utils";
 import jsmediatags from 'jsmediatags/dist/jsmediatags.js';
 import smallIndexedDb from 'small-indexeddb'

@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Event, EventEmitter, h } from '@stencil/core'
+import { Component, Prop, State, Element, Event, EventEmitter} from '@stencil/core'
 import {parentNodeSelector} from '../../../utils'
 
 @Component({

@@ -1,4 +1,4 @@
-import { Component, Prop, Element, Event, EventEmitter, Method, Watch, h } from '@stencil/core';
+import { Component, Prop, Element, Event, EventEmitter, Method, Watch} from '@stencil/core';
 
 @Component({
   tag: 'stellar-switch',

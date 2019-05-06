@@ -1,4 +1,4 @@
-import { Component, Element, State, Prop, h, Method, Event, EventEmitter, Watch } from '@stencil/core';
+import { Component, Element, State, Prop, Method, Event, EventEmitter, Watch } from '@stencil/core';
 import properties from 'css-custom-properties'
 
 @Component({

@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Listen, h } from '@stencil/core';
+import { Component, Prop, State, Element, Listen} from '@stencil/core';
 import { blurringEase } from '../../../utils';
 
 @Component({
@@ -28,7 +28,7 @@ export class Content {
   @State() blur: number = 0;
   @State() parent: any;
 
-  @Listen("contentChange", {target: 'document'})
+  @Listen("document:contentChange")
   async handleActive (event: CustomEvent) {
     this.parent = event.detail.parent;
 

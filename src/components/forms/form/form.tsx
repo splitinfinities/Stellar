@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method, Listen, Event, EventEmitter, h } from '@stencil/core';
+import { Component, Prop, State, Element, Method, Listen, Event, EventEmitter} from '@stencil/core';
 import { asyncForEach, form2js } from '../../../utils';
 
 @Component({

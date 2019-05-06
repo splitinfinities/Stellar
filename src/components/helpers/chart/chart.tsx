@@ -1,4 +1,4 @@
-import { Component, Element, State, Prop, Method, Watch, h } from '@stencil/core';
+import { Component, Element, State, Prop, Method, Watch} from '@stencil/core';
 import Highcharts from 'highcharts'
 import Data from 'highcharts/modules/data';
 import merge from 'deepmerge';

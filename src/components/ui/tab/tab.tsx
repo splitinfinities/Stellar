@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Listen, Event, EventEmitter, h } from '@stencil/core'
+import { Component, Prop, State, Element, Listen, Event, EventEmitter} from '@stencil/core'
 import { properties } from '../../../utils'
 
 @Component({
@@ -27,7 +27,7 @@ export class Tab {
     this.parent = this.element.closest('stellar-tabs')
   }
 
-  @Listen("resize", {target: 'window'})
+  @Listen("window:resize")
   handleResize() {
     this.handleIndicatorPosition()
   }

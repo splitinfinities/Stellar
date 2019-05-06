@@ -1,4 +1,4 @@
-import { Component, State, Method, h } from '@stencil/core';
+import { Component, State, Method} from '@stencil/core';
 import Rellax from 'rellax';
 
 @Component({

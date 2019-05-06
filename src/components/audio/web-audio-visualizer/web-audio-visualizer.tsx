@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method, h } from '@stencil/core';
+import { Component, Prop, State, Element, Method} from '@stencil/core';
 import {bars, wave, circle, bars2} from './visualizations';
 import {colors} from '../../../utils'
 import hexToHsl from 'hex-to-hsl';
