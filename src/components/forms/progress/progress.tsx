@@ -19,6 +19,13 @@ export class Progress {
    */
   @Prop({reflectToAttr: true}) max: number = 100;
 
+
+  /**
+   * Sets the maximum cap for steps in the progress bar
+   */
+  @Prop({reflectToAttr: true}) indeterminate: boolean = false;
+
+
   /**
    * Allows the progress bar to be clicked on, to help the user to navigate through the progressing content.
    */
@@ -59,7 +66,7 @@ export class Progress {
       this.ease.stop();
     },
   });
-  @Event() valueChange: EventEmitter;
+  @Event() change: EventEmitter;
 
   componentWillLoad () {
     if (!this.blurable) {
@@ -69,7 +76,7 @@ export class Progress {
 
   @Watch("value")
   observeValue() {
-    if (this.blurable) {
+    if (!this.indeterminate && this.blurable) {
       this.ease.start();
     }
   }
@@ -95,7 +102,7 @@ export class Progress {
 
       this.value = rounded;
 
-      this.valueChange.emit({
+      this.change.emit({
         value: this.value
       })
     }
@@ -116,6 +123,12 @@ export class Progress {
   }
 
   render() {
+    if (this.indeterminate) {
+      return <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="20" stroke-width="4" fill="none" stroke-linecap="round" />
+      </svg>
+    }
+
     // @ts-ignore
     return (<this.wrapper class="progress" horizontal={this.blur} onClick={(e) => { this.handleClick(e); }}>
         <div class="status" style={{transform: `translate(${this.progress()}%, 0)`}}></div>

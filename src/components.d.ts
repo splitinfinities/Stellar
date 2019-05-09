@@ -7,9 +7,9 @@
 
 import '@stencil/core';
 
+import 'ionicons';
 import '@stencil/router';
 import '@stencil/state-tunnel';
-import 'ionicons';
 import {
   LocationSegments,
   RouterHistory,
@@ -536,6 +536,10 @@ export namespace Components {
     /**
     * Sets the maximum cap for steps in the progress bar
     */
+    'indeterminate': boolean;
+    /**
+    * Sets the maximum cap for steps in the progress bar
+    */
     'max': number;
     /**
     * eliminates the easing in the css so you can apply value updates without jitter.
@@ -567,12 +571,16 @@ export namespace Components {
     /**
     * Sets the maximum cap for steps in the progress bar
     */
+    'indeterminate'?: boolean;
+    /**
+    * Sets the maximum cap for steps in the progress bar
+    */
     'max'?: number;
     /**
     * eliminates the easing in the css so you can apply value updates without jitter.
     */
     'noease'?: boolean;
-    'onValueChange'?: (event: CustomEvent) => void;
+    'onChange'?: (event: CustomEvent) => void;
     /**
     * eliminates the easing in the css so you can apply value updates without jitter.
     */
