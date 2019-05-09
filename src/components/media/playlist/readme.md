@@ -101,6 +101,7 @@ graph TD;
   stellar-playlist --> web-audio-visualizer
   stellar-asset --> ion-icon
   stellar-button --> stellar-asset
+  stellar-button --> stencil-route-link
   style stellar-playlist fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -55,6 +55,7 @@ graph TD;
   stellar-accordion --> stellar-asset
   stellar-accordion --> stellar-blur
   stellar-button --> stellar-asset
+  stellar-button --> stencil-route-link
   stellar-asset --> ion-icon
   style stellar-accordion fill:#f9f,stroke:#333,stroke-width:4px
 ```

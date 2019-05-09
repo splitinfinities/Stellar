@@ -267,6 +267,7 @@ graph TD;
   stellar-select --> stellar-tooltip
   stellar-select --> stellar-blur
   stellar-button --> stellar-asset
+  stellar-button --> stencil-route-link
   stellar-asset --> ion-icon
   stellar-item --> stellar-asset
   style stellar-select fill:#f9f,stroke:#333,stroke-width:4px

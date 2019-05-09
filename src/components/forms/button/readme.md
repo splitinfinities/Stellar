@@ -70,11 +70,13 @@
 ### Depends on
 
 - [stellar-asset](../../ui/asset)
+- stencil-route-link
 
 ### Graph
 ```mermaid
 graph TD;
   stellar-button --> stellar-asset
+  stellar-button --> stencil-route-link
   stellar-asset --> ion-icon
   stellar-accordion --> stellar-button
   stellar-card --> stellar-button
