@@ -266,6 +266,11 @@ export namespace Components {
     'open': boolean;
     'position': "left"|"center"|"right";
   }
+  interface StellarFollow {
+    'distance': number;
+    'padding': number;
+    'type': "scroll"|"cursor";
+  }
   interface StellarForm {
     'acceptCharset': string;
     'action': string;
@@ -303,9 +308,11 @@ export namespace Components {
   interface StellarImage {
     'bg': string;
     'height': number;
+    'large': string;
     'medium': () => Promise<any>;
     'nozoom': boolean;
     'poster': string;
+    'type': "background"|"picture";
     'width': number;
   }
   interface StellarInput {
@@ -390,7 +397,7 @@ export namespace Components {
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: any; }>;
+    'data': () => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: any; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -409,6 +416,12 @@ export namespace Components {
     'value': string;
     'valueLabel': string;
     'wrap': boolean;
+  }
+  interface StellarKeyframes {
+    'frame': number;
+    'height': number;
+    'src': string;
+    'width': number;
   }
   interface StellarLabel {
     'for': string;
@@ -1095,6 +1108,11 @@ declare namespace LocalJSX {
     'open'?: boolean;
     'position'?: "left"|"center"|"right";
   }
+  interface StellarFollow extends JSXBase.HTMLAttributes {
+    'distance'?: number;
+    'padding'?: number;
+    'type'?: "scroll"|"cursor";
+  }
   interface StellarForm extends JSXBase.HTMLAttributes {
     'acceptCharset'?: string;
     'action'?: string;
@@ -1129,8 +1147,10 @@ declare namespace LocalJSX {
   interface StellarImage extends JSXBase.HTMLAttributes {
     'bg'?: string;
     'height'?: number;
+    'large'?: string;
     'nozoom'?: boolean;
     'poster'?: string;
+    'type'?: "background"|"picture";
     'width'?: number;
   }
   interface StellarInput extends JSXBase.HTMLAttributes {
@@ -1235,6 +1255,12 @@ declare namespace LocalJSX {
     'value'?: string;
     'valueLabel'?: string;
     'wrap'?: boolean;
+  }
+  interface StellarKeyframes extends JSXBase.HTMLAttributes {
+    'frame'?: number;
+    'height'?: number;
+    'src'?: string;
+    'width'?: number;
   }
   interface StellarLabel extends JSXBase.HTMLAttributes {
     'for'?: string;
@@ -1653,6 +1679,7 @@ declare namespace LocalJSX {
     'StellarComments': Components.StellarComments;
     'StellarContent': Components.StellarContent;
     'StellarDropdown': Components.StellarDropdown;
+    'StellarFollow': Components.StellarFollow;
     'StellarForm': Components.StellarForm;
     'StellarGrid': Components.StellarGrid;
     'StellarGroup': Components.StellarGroup;
@@ -1662,6 +1689,7 @@ declare namespace LocalJSX {
     'StellarInterview': Components.StellarInterview;
     'StellarInterviewLine': Components.StellarInterviewLine;
     'StellarItem': Components.StellarItem;
+    'StellarKeyframes': Components.StellarKeyframes;
     'StellarLabel': Components.StellarLabel;
     'StellarLayout': Components.StellarLayout;
     'StellarMarkdown': Components.StellarMarkdown;
@@ -1728,6 +1756,7 @@ declare namespace LocalJSX {
     'StellarComments': LocalJSX.StellarComments;
     'StellarContent': LocalJSX.StellarContent;
     'StellarDropdown': LocalJSX.StellarDropdown;
+    'StellarFollow': LocalJSX.StellarFollow;
     'StellarForm': LocalJSX.StellarForm;
     'StellarGrid': LocalJSX.StellarGrid;
     'StellarGroup': LocalJSX.StellarGroup;
@@ -1737,6 +1766,7 @@ declare namespace LocalJSX {
     'StellarInterview': LocalJSX.StellarInterview;
     'StellarInterviewLine': LocalJSX.StellarInterviewLine;
     'StellarItem': LocalJSX.StellarItem;
+    'StellarKeyframes': LocalJSX.StellarKeyframes;
     'StellarLabel': LocalJSX.StellarLabel;
     'StellarLayout': LocalJSX.StellarLayout;
     'StellarMarkdown': LocalJSX.StellarMarkdown;
@@ -1939,6 +1969,12 @@ declare global {
     new (): HTMLStellarDropdownElement;
   };
 
+  interface HTMLStellarFollowElement extends Components.StellarFollow, HTMLStencilElement {}
+  var HTMLStellarFollowElement: {
+    prototype: HTMLStellarFollowElement;
+    new (): HTMLStellarFollowElement;
+  };
+
   interface HTMLStellarFormElement extends Components.StellarForm, HTMLStencilElement {}
   var HTMLStellarFormElement: {
     prototype: HTMLStellarFormElement;
@@ -1991,6 +2027,12 @@ declare global {
   var HTMLStellarItemElement: {
     prototype: HTMLStellarItemElement;
     new (): HTMLStellarItemElement;
+  };
+
+  interface HTMLStellarKeyframesElement extends Components.StellarKeyframes, HTMLStencilElement {}
+  var HTMLStellarKeyframesElement: {
+    prototype: HTMLStellarKeyframesElement;
+    new (): HTMLStellarKeyframesElement;
   };
 
   interface HTMLStellarLabelElement extends Components.StellarLabel, HTMLStencilElement {}
@@ -2251,6 +2293,7 @@ declare global {
     'stellar-comments': HTMLStellarCommentsElement
     'stellar-content': HTMLStellarContentElement
     'stellar-dropdown': HTMLStellarDropdownElement
+    'stellar-follow': HTMLStellarFollowElement
     'stellar-form': HTMLStellarFormElement
     'stellar-grid': HTMLStellarGridElement
     'stellar-group': HTMLStellarGroupElement
@@ -2260,6 +2303,7 @@ declare global {
     'stellar-interview': HTMLStellarInterviewElement
     'stellar-interview-line': HTMLStellarInterviewLineElement
     'stellar-item': HTMLStellarItemElement
+    'stellar-keyframes': HTMLStellarKeyframesElement
     'stellar-label': HTMLStellarLabelElement
     'stellar-layout': HTMLStellarLayoutElement
     'stellar-markdown': HTMLStellarMarkdownElement
@@ -2326,6 +2370,7 @@ declare global {
     'stellar-comments': HTMLStellarCommentsElement;
     'stellar-content': HTMLStellarContentElement;
     'stellar-dropdown': HTMLStellarDropdownElement;
+    'stellar-follow': HTMLStellarFollowElement;
     'stellar-form': HTMLStellarFormElement;
     'stellar-grid': HTMLStellarGridElement;
     'stellar-group': HTMLStellarGroupElement;
@@ -2335,6 +2380,7 @@ declare global {
     'stellar-interview': HTMLStellarInterviewElement;
     'stellar-interview-line': HTMLStellarInterviewLineElement;
     'stellar-item': HTMLStellarItemElement;
+    'stellar-keyframes': HTMLStellarKeyframesElement;
     'stellar-label': HTMLStellarLabelElement;
     'stellar-layout': HTMLStellarLayoutElement;
     'stellar-markdown': HTMLStellarMarkdownElement;

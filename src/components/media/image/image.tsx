@@ -13,6 +13,8 @@ export class Picture {
   @State() figure: HTMLElement;
 
   @Prop({mutable: true}) poster: string;
+  @Prop({mutable: true}) large: string;
+  @Prop({mutable: true, reflectToAttr: true }) type: "background"|"picture" = "picture";
 
   @Prop() width: number;
   @Prop() height: number;
@@ -57,6 +59,11 @@ export class Picture {
     this.setBG();
   }
 
+  @Watch('active')
+  handleActive() {
+    this.setBackgroundImage();
+  }
+
   @Method()
   async medium() {
     return this.zoom
@@ -86,7 +93,7 @@ export class Picture {
         threshold: [0]
       })
 
-      this.io.observe(this.element.shadowRoot.querySelector('figure'));
+      this.io.observe(this.element);
     } else {
       // fall back to setTimeout for Safari and IE
       setTimeout(() => {
@@ -110,7 +117,7 @@ export class Picture {
       this.palette = cf.getColor(img)
 
       properties.set({
-        "--bg": `rgb(${this.palette[0]}, ${this.palette[1]}, ${this.palette[2]})`
+        "--background-color": `rgb(${this.palette[0]}, ${this.palette[1]}, ${this.palette[2]})`
       }, this.element);
 
       this.bg = `rgb(${this.palette[0]}, ${this.palette[1]}, ${this.palette[2]})`;
@@ -131,7 +138,7 @@ export class Picture {
       this.getPictureColor();
     } else {
       properties.set({
-        "--bg": `${this.bg}`
+        "--background-color": `${this.bg}`
       }, this.element);
     }
   }
@@ -148,6 +155,15 @@ export class Picture {
 
     this.sources = sourcesArray;
     this.poster = this.poster ? this.poster : this.sources[this.sources.length - 1].srcset;
+    this.large = this.sources[0].srcset;
+
+    this.setBackgroundImage();
+  }
+
+  setBackgroundImage() {
+    properties.set({
+      "--background-image": `url('${this.active ? this.large : this.poster}')`
+    }, this.element);
   }
 
   updateAspectRatio() {
@@ -167,20 +183,23 @@ export class Picture {
         this.sources.map((source) =>
           <source srcSet={source.srcset} media={source.media ? source.media : false} />
         ),
-        <img src={this.sources[0].srcset} class="final_image" />
+        <img src={this.large} class="final_image" />
       ]
     }
   }
 
   render() {
-    return (
-      <figure itemtype="http://schema.org/ImageObject" class={this.active ? 'loaded' : ''} onClick={() => { if (this.zoom) { this.zoom.open() } }} >
-        <div class="overlay"></div>
-        <picture>
-          { this.renderPicture() }
-        </picture>
-        <div class="placeholder" style={{"background-image": `url(${this.poster})`}} />
+    if (this.type === "picture") {
+      return <figure
+        itemtype="http://schema.org/ImageObject"
+        class={this.active ? 'loaded' : ''}
+        onClick={() => { this.zoom && this.zoom.open() }}>
+          <div class="overlay"></div>
+          <picture>
+            { this.renderPicture() }
+          </picture>
+          <div class="placeholder" style={{"background-image": `url(${this.poster})`}} />
       </figure>
-    );
+    }
   }
 }

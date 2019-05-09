@@ -29,7 +29,12 @@ export class Song {
 	@Event() loaded: EventEmitter;
 
 	get url () {
-        return window.location.origin + relPathAsAbs(this.src)
+		if (this.src.startsWith('.')) {
+			return window.location.origin + relPathAsAbs(this.src)
+		} else {
+			return window.location.origin + this.src
+		}
+
     }
 
 	async componentWillLoad () {
@@ -64,8 +69,8 @@ export class Song {
 	async load () {
         const transaction = await smallIndexedDb('songs');
 
-        // const details = await transaction('readonly', store => store.get(this.src))
-		// if (!details) {
+        const details = await transaction('readonly', store => store.get(this.src))
+		if (!details) {
 			jsmediatags.read(this.url, {
 				onSuccess: async (tag) => {
 					var itemToSave: SongInterface = {
@@ -101,13 +106,13 @@ export class Song {
 					this.error = error;
 				}
 			});
-		// } else {
-        //     var songDetails = JSON.parse(details);
-        //     const picture = await transaction('readonly', store => store.get(songDetails.album + "_picture"))
-		// 	songDetails.picture = picture;
+		} else {
+            var songDetails = JSON.parse(details);
+            const picture = await transaction('readonly', store => store.get(songDetails.album + "_picture"))
+			songDetails.picture = picture;
 
-		// 	this.updateDetails(songDetails);
-		// }
+			this.updateDetails(songDetails);
+		}
 
 		this.loaded.emit({el: this.element});
 	}

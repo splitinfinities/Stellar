@@ -1,0 +1,16 @@
+:host {
+    --spring: spring(1, 9000, 11, -0.2);
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    z-index: 20;
+    transition: top 50ms var(--ease) 0s, left 50ms var(--ease) 0s;
+    transform: translate3d(-50%, -50%, 0);
+    pointer-events: none;
+}
+/*
+@supports (transition-timing-function: spring(1, 9000, 11, -0.2)) {
+    :host {
+        transition: top 150ms spring(1, 9000, 11, -0.2) 0s, left 150ms spring(1, 9000, 11, -0.2) 0s;
+    }
+} */
