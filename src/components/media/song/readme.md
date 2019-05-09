@@ -18,6 +18,7 @@
 
 | Event         | Description | Type               |
 | ------------- | ----------- | ------------------ |
+| `loaded`      |             | `CustomEvent<any>` |
 | `songChanged` |             | `CustomEvent<any>` |
 
 
@@ -40,6 +41,16 @@ Type: `Promise<{ 'title': string; 'album': string; 'genre': string; 'artist': st
 #### Returns
 
 Type: `Promise<number>`
+
+
+
+### `load() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
 
 
 

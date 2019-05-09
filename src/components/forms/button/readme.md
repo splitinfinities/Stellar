@@ -64,21 +64,21 @@
 
  - [stellar-accordion](../../ui/accordion)
  - [stellar-card](../../ui/card)
+ - [stellar-playlist](../../media/playlist)
  - [stellar-select](../select)
 
 ### Depends on
 
 - [stellar-asset](../../ui/asset)
-- stencil-route-link
 
 ### Graph
 ```mermaid
 graph TD;
   stellar-button --> stellar-asset
-  stellar-button --> stencil-route-link
   stellar-asset --> ion-icon
   stellar-accordion --> stellar-button
   stellar-card --> stellar-button
+  stellar-playlist --> stellar-button
   stellar-select --> stellar-button
   style stellar-button fill:#f9f,stroke:#333,stroke-width:4px
 ```

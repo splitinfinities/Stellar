@@ -7,15 +7,25 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                  | Default      |
-| ---------- | ---------- | ----------- | --------------------- | ------------ |
-| `artwork`  | `artwork`  |             | `boolean`             | `false`      |
-| `autoplay` | `autoplay` |             | `boolean`             | `false`      |
-| `dark`     | --         |             | `Boolean`             | `false`      |
-| `playing`  | `playing`  |             | `boolean`             | `false`      |
-| `playlist` | `playlist` |             | `string`              | `"show"`     |
-| `remember` | `remember` |             | `boolean`             | `true`       |
-| `view`     | `view`     |             | `"art" \| "playlist"` | `"playlist"` |
+| Property             | Attribute             | Description | Type                  | Default      |
+| -------------------- | --------------------- | ----------- | --------------------- | ------------ |
+| `artwork`            | `artwork`             |             | `boolean`             | `false`      |
+| `autoplay`           | `autoplay`            |             | `boolean`             | `false`      |
+| `load`               | `load`                |             | `boolean`             | `false`      |
+| `loading`            | `loading`             |             | `boolean`             | `false`      |
+| `name`               | `name`                |             | `string`              | `"Playlist"` |
+| `playing`            | `playing`             |             | `boolean`             | `false`      |
+| `playlist`           | `playlist`            |             | `string`              | `"show"`     |
+| `remember`           | `remember`            |             | `boolean`             | `true`       |
+| `view`               | `view`                |             | `"art" \| "playlist"` | `"playlist"` |
+| `visualizationColor` | `visualization-color` |             | `string`              | `"gray"`     |
+
+
+## Events
+
+| Event        | Description | Type               |
+| ------------ | ----------- | ------------------ |
+| `load_songs` |             | `CustomEvent<any>` |
 
 
 ## Methods
@@ -40,7 +50,7 @@ Type: `Promise<void>`
 
 
 
-### `play() => Promise<void>`
+### `play(skipDefault?: boolean) => Promise<void>`
 
 
 
@@ -77,6 +87,8 @@ Type: `Promise<void>`
 
 - [stellar-asset](../../ui/asset)
 - ion-icon
+- [stellar-button](../../forms/button)
+- [stellar-progress](../../forms/progress)
 - [web-audio-visualizer](../../audio/web-audio-visualizer)
 
 ### Graph
@@ -84,8 +96,11 @@ Type: `Promise<void>`
 graph TD;
   stellar-playlist --> stellar-asset
   stellar-playlist --> ion-icon
+  stellar-playlist --> stellar-button
+  stellar-playlist --> stellar-progress
   stellar-playlist --> web-audio-visualizer
   stellar-asset --> ion-icon
+  stellar-button --> stellar-asset
   style stellar-playlist fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
