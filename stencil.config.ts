@@ -37,7 +37,7 @@ export const config: Config = {
       "text",
     ]
   },
-  outputTargets:[
+  outputTargets: [
     { type: 'dist' },
     { type: "stats", file: "./data/stats.json" },
     { type: "docs" },
@@ -55,6 +55,7 @@ export const config: Config = {
     }
   ],
   plugins: [
+    // @ts-ignore
     postcss({
       plugins: [
         designTokenFunction({

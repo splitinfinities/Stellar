@@ -390,7 +390,7 @@ export namespace Components {
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: any; }>;
+    'data': () => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: any; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -461,16 +461,19 @@ export namespace Components {
   interface StellarPlaylist {
     'artwork': boolean;
     'autoplay': boolean;
-    'dark': Boolean;
+    'load': boolean;
+    'loading': boolean;
+    'name': string;
     'next': () => Promise<void>;
     'pause': () => Promise<void>;
-    'play': () => Promise<void>;
+    'play': (skipDefault?: boolean) => Promise<void>;
     'playing': boolean;
     'playlist': string;
     'prepare': (element: any) => Promise<void>;
     'previous': () => Promise<void>;
     'remember': boolean;
     'view': "playlist"|"art";
+    'visualizationColor': string;
   }
   interface StellarProgress {
     'blurable': boolean;
@@ -478,6 +481,10 @@ export namespace Components {
     * Allows the progress bar to be clicked on, to help the user to navigate through the progressing content.
     */
     'editable': boolean;
+    /**
+    * Sets the maximum cap for steps in the progress bar
+    */
+    'indeterminate': boolean;
     /**
     * Sets the maximum cap for steps in the progress bar
     */
@@ -629,6 +636,7 @@ export namespace Components {
     'artwork': boolean;
     'details': () => Promise<{ 'title': string; 'album': string; 'genre': string; 'artist': string; 'picture': string; }>;
     'getIndex': () => Promise<number>;
+    'load': () => Promise<void>;
     'play': () => Promise<void>;
     'playing': boolean;
     'preload': () => Promise<void>;
@@ -1277,11 +1285,15 @@ declare namespace LocalJSX {
   interface StellarPlaylist extends JSXBase.HTMLAttributes {
     'artwork'?: boolean;
     'autoplay'?: boolean;
-    'dark'?: Boolean;
+    'load'?: boolean;
+    'loading'?: boolean;
+    'name'?: string;
+    'onLoad_songs'?: (event: CustomEvent<any>) => void;
     'playing'?: boolean;
     'playlist'?: string;
     'remember'?: boolean;
     'view'?: "playlist"|"art";
+    'visualizationColor'?: string;
   }
   interface StellarProgress extends JSXBase.HTMLAttributes {
     'blurable'?: boolean;
@@ -1292,12 +1304,16 @@ declare namespace LocalJSX {
     /**
     * Sets the maximum cap for steps in the progress bar
     */
+    'indeterminate'?: boolean;
+    /**
+    * Sets the maximum cap for steps in the progress bar
+    */
     'max'?: number;
     /**
     * eliminates the easing in the css so you can apply value updates without jitter.
     */
     'noease'?: boolean;
-    'onValueChange'?: (event: CustomEvent<any>) => void;
+    'onChange'?: (event: CustomEvent<any>) => void;
     /**
     * eliminates the easing in the css so you can apply value updates without jitter.
     */
@@ -1431,6 +1447,7 @@ declare namespace LocalJSX {
   }
   interface StellarSong extends JSXBase.HTMLAttributes {
     'artwork'?: boolean;
+    'onLoaded'?: (event: CustomEvent<any>) => void;
     'onSongChanged'?: (event: CustomEvent<any>) => void;
     'playing'?: boolean;
     'src'?: string;

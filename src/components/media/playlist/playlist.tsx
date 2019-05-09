@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method, Listen, h } from '@stencil/core';
+import { Component, Prop, State, Element, Method, Listen, EventEmitter, Event, h } from '@stencil/core';
 import { asTime } from '../../../utils'
 
 @Component({
@@ -9,7 +9,7 @@ import { asTime } from '../../../utils'
 export class Playlist {
   @Element() element: HTMLElement;
 
-  @Prop() dark: Boolean = false;
+  @Prop() visualizationColor: string = "gray";
   @Prop() autoplay: boolean = false;
   @State() current: number = 0;
   @State() currentTrack: CurrentSongInterface = {
@@ -19,12 +19,14 @@ export class Playlist {
   };
   @Prop({mutable: true, reflectToAttr: true}) playlist: string = "show";
 
+  @Prop() name: string = "Playlist";
   @Prop() remember: boolean = true;
   @Prop({mutable: true, reflectToAttr: true}) artwork: boolean = false;
   @Prop({mutable: true, reflectToAttr: true}) view: "playlist"|"art" = "playlist";
 
   @Prop({mutable: true, reflectToAttr: true}) playing: boolean = false;
-  @State() load: boolean = false;
+  @Prop({mutable: true, reflectToAttr: true}) load: boolean = false;
+  @Prop() loading: boolean = false;
   @State() currentTime: number|string;
   @State() duration: number|string;
   @State() visualizer: HTMLWebAudioVisualizerElement;
@@ -34,6 +36,8 @@ export class Playlist {
   @State() playlistItems: NodeListOf<HTMLStellarSongElement>;
   @State() currentPlaylistItem: HTMLStellarSongElement;
   @State() context: any;
+
+  @Event() load_songs: EventEmitter;
 
   componentWillLoad() {
     var playlist = localStorage.getItem('playlist');
@@ -92,9 +96,6 @@ export class Playlist {
       const value = (this.audio.currentTime !== 0 && this.audio.duration !== 0) ? ((this.audio.currentTime / this.audio.duration) * 100) : 0;
 
       this.progress_value = value;
-
-      localStorage.setItem('track', this.current.toString());
-      localStorage.setItem('time', this.audio.currentTime.toString());
     });
 
     this.audio.addEventListener('ended', this.next.bind(this));
@@ -111,20 +112,19 @@ export class Playlist {
     }
   }
 
-  loadFromStorage() {
-    var track: any = parseInt(localStorage.getItem('track'));
-    var time: any = parseFloat(localStorage.getItem('time'));
-    var playlist: any = localStorage.getItem('playlist');
+  @Listen('loaded')
+  async handleSongLoaded(event) {
+    const el = event.detail.el;
 
-    this.playlist = playlist;
-
-    if (track && time) {
-      var itemToPlay: any = this.playlistItems[track];
-
-      itemToPlay.play();
-
-      this.audio.currentTime = time;
+    if (el.playing) {
+      await this.prepare(el);
+      await this.play(true);
     }
+  }
+
+  loadFromStorage() {
+    var playlist: any = localStorage.getItem('playlist');
+    this.playlist = playlist;
   }
 
   @Method()
@@ -133,18 +133,34 @@ export class Playlist {
       this.currentPlaylistItem.switching();
     }
 
+    this.currentTrack = {
+      title: 'Loading...',
+      artist: 'One sec...',
+      picture: undefined
+    };
+
     this.currentPlaylistItem = element;
     this.audio.src = this.currentPlaylistItem.src;
-    this.audio.load();
+    await this.audio.load();
     this.current = await this.currentPlaylistItem.getIndex();
     this.currentPlaylistItem.playing = true;
     this.currentTrack = await this.currentPlaylistItem.details();
   }
 
   @Method()
-  async play () {
+  async play (skipDefault = false) {
+
+    if (!skipDefault) {
+      this.currentTrack = {
+        title: 'Loading...',
+        artist: 'One sec...',
+        picture: undefined
+      };
+    }
+
+    this.loading = true;
     this.playing = true;
-    this.audio.play();
+    await this.audio.play();
 
     if (!this.context) {
       var context = new AudioContext();
@@ -154,16 +170,20 @@ export class Playlist {
       waanalyser.analyser.connect(context.destination);
       this.context = context;
     }
+
+    this.currentTrack = await this.currentPlaylistItem.details();
+
+    this.loading = false;
   }
 
   @Method()
   async pause () {
     if (!this.audio.paused) {
       this.playing = false;
-      this.audio.pause();
+      await this.audio.pause();
     } else {
       this.playing = true;
-      this.audio.play();
+      await this.audio.play();
     }
   }
 
@@ -179,7 +199,7 @@ export class Playlist {
       song = song.nextElementSibling;
     }
 
-    song.play();
+    await song.play();
   }
 
   @Method()
@@ -221,7 +241,7 @@ export class Playlist {
     return (
       <div id="player">
         <div class="playlist-title">
-          <slot name="title"><h6>Playlist</h6></slot>
+          <h6>{this.name}</h6>
           <button class="playlist" onClick={ () => this.togglePlaylist() }>
             <h6 class="list">
               <stellar-asset name="musical-notes"></stellar-asset>
@@ -239,22 +259,23 @@ export class Playlist {
           }
           </button>
 
-          {!this.load && <button onClick={() => { this.load = true; }}>Load this playlist</button>}
+          {!this.load && <stellar-button tag="button" size="tiny" onClick={() => { this.load = true; this.load_songs.emit({}) }}>Load {this.name || "this playlist"}</stellar-button>}
 
           {this.load && <div class="playlist-playing-details">
-            <h2>{this.currentTrack.title}</h2>
-            <h3>{this.currentTrack.artist}</h3>
+            <h2>{this.currentTrack.title || 'Loading...'}</h2>
+            <h3>{this.currentTrack.artist || 'One Sec...'}</h3>
           </div>}
 
           {
             this.load &&
-            (this.currentTrack.picture !== undefined) &&
               <div class="playlist-playing-image">
-                <img src={this.currentTrack.picture} onClick={ () => this.toggleAlbumArtView() } />
+                {this.loading && <stellar-progress indeterminate />}
+                {!this.loading && (this.currentTrack.picture !== undefined) && <img src={this.currentTrack.picture} onClick={ () => this.toggleAlbumArtView() } />}
               </div>
           }
 
-          <web-audio-visualizer tag={this.audio} type={this.view === "art" ? "circle" : "bars"} />
+
+          <web-audio-visualizer tag={this.audio} type={this.view === "art" ? "circle" : "bars"} color={this.visualizationColor} />
         </div>
 
         <div id="controls" class="controls">

@@ -201,7 +201,7 @@ export class Interview {
           <h3>
             <stellar-unit class="duration" value={this.duration} from="ms" to="s" />
           </h3>
-          <stellar-progress value={this.current} max={this.duration} noease={true} blurable={false} slender={true} editable={true} onValueChange={(e) => { this.skipTo(e.detail.value) }} />
+          <stellar-progress value={this.current} max={this.duration} noease={true} blurable={false} slender={true} editable={true} onChange={(e) => { this.skipTo(e.detail.value) }} />
         </section>}
       </div>
     )

@@ -12,11 +12,6 @@ import smallIndexedDb from 'small-indexeddb'
 export class Song {
 	@Element() element: HTMLElement;
 
-	@Event() songChanged: EventEmitter;
-	songChangedHandler() {
-		this.songChanged.emit(this._index);
-	}
-
 	@Prop() src: string;
 	@Prop({reflectToAttr: true, mutable: true}) playing: boolean;
 	@Prop() artwork: boolean;
@@ -28,17 +23,49 @@ export class Song {
 	@State() artist: string;
 	@State() genre: string;
 	@State() picture: string;
-    @State() error: Object;
+	@State() error: Object;
 
-    get url () {
+	@Event() songChanged: EventEmitter;
+	@Event() loaded: EventEmitter;
+
+	get url () {
         return window.location.origin + relPathAsAbs(this.src)
     }
 
 	async componentWillLoad () {
+		this.player = this.element.closest('stellar-playlist');
+		if (this.player.load) {
+			this.load()
+		}
+
+
+		this.player.addEventListener('load_songs', () => {
+			this.load()
+		})
+	}
+
+	componentDidLoad () {
+
+	}
+
+	songChangedHandler() {
+		this.songChanged.emit(this._index);
+	}
+
+	updateDetails (details) {
+		this.title = details.title;
+		this.album = details.album;
+		this.genre = details.genre;
+		this.artist = details.artist;
+		this.picture = details.picture;
+	}
+
+	@Method()
+	async load () {
         const transaction = await smallIndexedDb('songs');
 
-        const details = await transaction('readonly', store => store.get(this.src))
-		if (!details) {
+        // const details = await transaction('readonly', store => store.get(this.src))
+		// if (!details) {
 			jsmediatags.read(this.url, {
 				onSuccess: async (tag) => {
 					var itemToSave: SongInterface = {
@@ -74,25 +101,15 @@ export class Song {
 					this.error = error;
 				}
 			});
-		} else {
-            var songDetails = JSON.parse(details);
-            const picture = await transaction('readonly', store => store.get(songDetails.album + "_picture"))
-			songDetails.picture = picture;
+		// } else {
+        //     var songDetails = JSON.parse(details);
+        //     const picture = await transaction('readonly', store => store.get(songDetails.album + "_picture"))
+		// 	songDetails.picture = picture;
 
-			this.updateDetails(songDetails);
-		}
-	}
+		// 	this.updateDetails(songDetails);
+		// }
 
-	componentDidLoad () {
-		this.player = this.element.parentElement;
-	}
-
-	updateDetails (details) {
-		this.title = details.title;
-		this.album = details.album;
-		this.genre = details.genre;
-		this.artist = details.artist;
-		this.picture = details.picture;
+		this.loaded.emit({el: this.element});
 	}
 
 	@Method()

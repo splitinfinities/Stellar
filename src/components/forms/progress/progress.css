@@ -7,6 +7,8 @@
   position: relative;
   overflow: hidden;
   --border-radius: 0.3rem;
+  --time: 124;
+  --negative-time: -124;
 }
 
 :host .blur-content {
@@ -66,12 +68,91 @@
   transition: none !important;
 }
 
-:host-context(.dark-mode):host .progress {
-  background: var(--theme-base9)
+:host([indeterminate]) {
+  height: 100px;
+  width: 100px;
 }
 
+:host([indeterminate]) svg {
+  transform: rotate(0deg);
+  stroke: var(--theme-base5);
+  animation: rotate var(--ease) 9.2s infinite;
+}
+
+:host([indeterminate]) circle {
+  stroke-dasharray: var(--time);
+  stroke-dashoffset: var(--time);
+  animation: load var(--ease) 2.3s infinite;
+}
+
+
+:host-context(.dark-mode):host .progress {
+  background: var(--theme-base9);
+}
 
 :host-context(.dark-mode):host .secondary {
   background: var(--theme-base7, var(--gray7));
   z-index: 1;
+}
+
+:host-context(.dark-mode):host circle {
+  animation: load-dark var(--ease) 2.3s infinite;
+}
+
+@keyframes load {
+  0% {
+    stroke: var(--theme-complement7);
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+    stroke: var(--theme-base5);
+  }
+
+  100% {
+    stroke-dashoffset: var(--negative-time);
+    stroke: var(--theme-base3);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load-dark {
+  0% {
+    stroke: var(--theme-complement5);
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+    stroke: var(--theme-base5);
+  }
+
+  75% {
+    stroke: var(--theme-base7);
+  }
+
+  100% {
+    stroke-dashoffset: var(--negative-time);
+    stroke: var(--theme-complement7);
+  }
 }
