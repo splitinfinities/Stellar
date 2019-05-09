@@ -79,7 +79,7 @@ export class Interview {
 
   @Listen('timeupdate')
   handleTimeUpdate(event) {
-    this.current = Math.round(event.detail.time * 1000);
+    this.current = Math.abs(Math.round(event.detail.time * 1000));
     this.duration = Math.round(event.detail.duration * 1000);
 
     update_interview_lines(this.interviewLines, this.cache, this.time)

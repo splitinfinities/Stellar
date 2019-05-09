@@ -158,12 +158,7 @@ export class Card {
     }, 250)
   }
 
-  async click(e?: UIEvent) {
-    if (e) {
-      e.stopPropagation();
-      e.preventDefault();
-    }
-
+  async click() {
     if (this.for) {
       const target = this.for.split(":");
 

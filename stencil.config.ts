@@ -55,6 +55,7 @@ export const config: Config = {
     }
   ],
   plugins: [
+    // @ts-ignore
     postcss({
       plugins: [
         designTokenFunction({

@@ -6,7 +6,8 @@ import { delay } from '../../../utils';
 
 @Component({
   tag: 'stellar-video-interview',
-  styleUrl: 'video-interview.css'
+  styleUrl: 'video-interview.css',
+  shadow: true
 })
 export class VideoInterview {
   @Element() element: HTMLElement;
@@ -28,6 +29,7 @@ export class VideoInterview {
 
   @State() loaded: boolean = false;
   @State() loading: boolean = false;
+  @State() seekable: boolean = false;
 
   @State() updateFunc: Function;
 
@@ -55,8 +57,8 @@ export class VideoInterview {
     }
 
     update_interview_lines(this.interviewLines, this.cache, this.time)
-    this.visualizer = this.element.querySelector('web-audio-visualizer');
-    this.video = this.element.querySelector('stellar-video');
+    this.visualizer = this.element.shadowRoot.querySelector('web-audio-visualizer');
+    this.video = this.element.shadowRoot.querySelector('stellar-video');
     this.addIntersectionObserver();
   }
 
@@ -83,7 +85,8 @@ export class VideoInterview {
   cache = new WeakMap()
 
   handleTimeUpdate(event) {
-    this.current = Math.round(event.detail.currentTime * 1000);
+    this.playing = event.detail.playing;
+    this.current = Math.abs(Math.round(event.detail.currentTime * 1000));
     this.duration = Math.round(event.detail.duration * 1000);
 
     update_interview_lines(this.interviewLines, this.cache, this.time)
@@ -100,8 +103,12 @@ export class VideoInterview {
 
     await delay(100);
 
-    this.visualizer = this.element.querySelector('web-audio-visualizer');
-    this.video = this.element.querySelector('stellar-video');
+    this.visualizer = this.element.shadowRoot.querySelector('web-audio-visualizer');
+    this.video = this.element.shadowRoot.querySelector('stellar-video');
+
+    this.video.addEventListener('canplaythrough', () => {
+      this.seekable = true;
+    })
   }
 
   async attachContext() {
@@ -109,7 +116,7 @@ export class VideoInterview {
       this.context = new AudioContext();
       const src = this.context.createMediaElementSource(this.video.video_tag);
       if (!this.visualizer) {
-        this.visualizer = this.element.querySelector('web-audio-visualizer');
+        this.visualizer = this.element.shadowRoot.querySelector('web-audio-visualizer');
       }
       const waanalyser = await this.visualizer.connect(this.context);
       await src.connect(waanalyser.analyser);
@@ -144,15 +151,11 @@ export class VideoInterview {
 
   @Method()
   async toggle() {
+    this.attachContext();
+
     if (this.video) {
       await this.video.toggle()
     }
-  }
-
-  async handlePlay() {
-    await this.handleInScreen();
-    await this.attachContext()
-    this.playing = true;
   }
 
   handleClick() {
@@ -175,7 +178,7 @@ export class VideoInterview {
         </div>
         }
         {this.visible && <section>
-          <stellar-video controls={false} autoplay={true} trackInView={false} onPlayed={() => {this.handlePlay()}} onPaused={() => {this.playing = false;}} onTimeupdate={(e) => { this.handleTimeUpdate(e) }}>
+          <stellar-video controls={false} autoplay playsinline trackInView={false} onTimeupdate={(e) => { this.handleTimeUpdate(e) }}>
             <source src={this.src} />
           </stellar-video>
           <div class="transcript">
@@ -191,7 +194,7 @@ export class VideoInterview {
           <h3>
             <stellar-unit class="duration" value={this.duration} from="ms" to="s" />
           </h3>
-          <stellar-progress value={this.current} max={this.duration} noease={true} blurable={false} slender={true} editable={true} onChange={(e) => { this.skipTo(e.detail.value) }} />
+          {this.seekable && <stellar-progress value={this.current} max={this.duration} noease={true} blurable={false} slender={true} editable={true} onChange={(e) => { this.skipTo(e.detail.value) }} />}
         </section>}
       </div>
     )

@@ -886,16 +886,20 @@ export namespace Components {
   interface StellarImage {
     'bg': string;
     'height': number;
+    'large': string;
     'medium': () => Promise<any>;
     'nozoom': boolean;
     'poster': string;
+    'type': "background"|"picture";
     'width': number;
   }
   interface StellarImageAttributes extends StencilHTMLAttributes {
     'bg'?: string;
     'height'?: number;
+    'large'?: string;
     'nozoom'?: boolean;
     'poster'?: string;
+    'type'?: "background"|"picture";
     'width'?: number;
   }
 
@@ -936,25 +940,32 @@ export namespace Components {
   interface StellarPlaylist {
     'artwork': boolean;
     'autoplay': boolean;
-    'dark': Boolean;
+    'load': boolean;
+    'loading': boolean;
+    'name': string;
     'next': () => Promise<void>;
     'pause': () => Promise<void>;
-    'play': () => Promise<void>;
+    'play': (skipDefault?: boolean) => Promise<void>;
     'playing': boolean;
-    'playlist': string;
+    'playlist': "show"|"hide";
     'prepare': (element: any) => Promise<void>;
     'previous': () => Promise<void>;
     'remember': boolean;
     'view': "playlist"|"art";
+    'visualizationColor': string;
   }
   interface StellarPlaylistAttributes extends StencilHTMLAttributes {
     'artwork'?: boolean;
     'autoplay'?: boolean;
-    'dark'?: Boolean;
+    'load'?: boolean;
+    'loading'?: boolean;
+    'name'?: string;
+    'onLoad_songs'?: (event: CustomEvent) => void;
     'playing'?: boolean;
-    'playlist'?: string;
+    'playlist'?: "show"|"hide";
     'remember'?: boolean;
     'view'?: "playlist"|"art";
+    'visualizationColor'?: string;
   }
 
   interface SkeletonImg {
@@ -987,6 +998,7 @@ export namespace Components {
     'artwork': boolean;
     'details': () => Promise<{ 'title': string; 'album': string; 'genre': string; 'artist': string; 'picture': string; }>;
     'getIndex': () => Promise<number>;
+    'load': () => Promise<void>;
     'play': () => Promise<void>;
     'playing': boolean;
     'preload': () => Promise<void>;
@@ -996,6 +1008,7 @@ export namespace Components {
   }
   interface StellarSongAttributes extends StencilHTMLAttributes {
     'artwork'?: boolean;
+    'onLoaded'?: (event: CustomEvent) => void;
     'onSongChanged'?: (event: CustomEvent) => void;
     'playing'?: boolean;
     'src'?: string;
@@ -1078,6 +1091,30 @@ export namespace Components {
   interface StellarBlurAttributes extends StencilHTMLAttributes {
     'horizontal'?: number;
     'vertical'?: number;
+  }
+
+  interface StellarFollow {
+    'distance': number;
+    'padding': number;
+    'type': "scroll"|"cursor";
+  }
+  interface StellarFollowAttributes extends StencilHTMLAttributes {
+    'distance'?: number;
+    'padding'?: number;
+    'type'?: "scroll"|"cursor";
+  }
+
+  interface StellarKeyframes {
+    'frame': number;
+    'height': number;
+    'src': string;
+    'width': number;
+  }
+  interface StellarKeyframesAttributes extends StencilHTMLAttributes {
+    'frame'?: number;
+    'height'?: number;
+    'src'?: string;
+    'width'?: number;
   }
 
   interface StellarParallaxSection {
@@ -1737,6 +1774,8 @@ declare global {
     'StellarVideo': Components.StellarVideo;
     'StellarAnimateText': Components.StellarAnimateText;
     'StellarBlur': Components.StellarBlur;
+    'StellarFollow': Components.StellarFollow;
+    'StellarKeyframes': Components.StellarKeyframes;
     'StellarParallaxSection': Components.StellarParallaxSection;
     'StellarParallax': Components.StellarParallax;
     'StellarSlide': Components.StellarSlide;
@@ -1812,6 +1851,8 @@ declare global {
     'stellar-video': Components.StellarVideoAttributes;
     'stellar-animate-text': Components.StellarAnimateTextAttributes;
     'stellar-blur': Components.StellarBlurAttributes;
+    'stellar-follow': Components.StellarFollowAttributes;
+    'stellar-keyframes': Components.StellarKeyframesAttributes;
     'stellar-parallax-section': Components.StellarParallaxSectionAttributes;
     'stellar-parallax': Components.StellarParallaxAttributes;
     'stellar-slide': Components.StellarSlideAttributes;
@@ -2102,6 +2143,18 @@ declare global {
     new (): HTMLStellarBlurElement;
   };
 
+  interface HTMLStellarFollowElement extends Components.StellarFollow, HTMLStencilElement {}
+  var HTMLStellarFollowElement: {
+    prototype: HTMLStellarFollowElement;
+    new (): HTMLStellarFollowElement;
+  };
+
+  interface HTMLStellarKeyframesElement extends Components.StellarKeyframes, HTMLStencilElement {}
+  var HTMLStellarKeyframesElement: {
+    prototype: HTMLStellarKeyframesElement;
+    new (): HTMLStellarKeyframesElement;
+  };
+
   interface HTMLStellarParallaxSectionElement extends Components.StellarParallaxSection, HTMLStencilElement {}
   var HTMLStellarParallaxSectionElement: {
     prototype: HTMLStellarParallaxSectionElement;
@@ -2320,6 +2373,8 @@ declare global {
     'stellar-video': HTMLStellarVideoElement
     'stellar-animate-text': HTMLStellarAnimateTextElement
     'stellar-blur': HTMLStellarBlurElement
+    'stellar-follow': HTMLStellarFollowElement
+    'stellar-keyframes': HTMLStellarKeyframesElement
     'stellar-parallax-section': HTMLStellarParallaxSectionElement
     'stellar-parallax': HTMLStellarParallaxElement
     'stellar-slide': HTMLStellarSlideElement
@@ -2395,6 +2450,8 @@ declare global {
     'stellar-video': HTMLStellarVideoElement;
     'stellar-animate-text': HTMLStellarAnimateTextElement;
     'stellar-blur': HTMLStellarBlurElement;
+    'stellar-follow': HTMLStellarFollowElement;
+    'stellar-keyframes': HTMLStellarKeyframesElement;
     'stellar-parallax-section': HTMLStellarParallaxSectionElement;
     'stellar-parallax': HTMLStellarParallaxElement;
     'stellar-slide': HTMLStellarSlideElement;

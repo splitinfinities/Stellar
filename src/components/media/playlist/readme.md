@@ -7,15 +7,25 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                  | Default      |
-| ---------- | ---------- | ----------- | --------------------- | ------------ |
-| `artwork`  | `artwork`  |             | `boolean`             | `false`      |
-| `autoplay` | `autoplay` |             | `boolean`             | `false`      |
-| `dark`     | --         |             | `Boolean`             | `false`      |
-| `playing`  | `playing`  |             | `boolean`             | `false`      |
-| `playlist` | `playlist` |             | `string`              | `"show"`     |
-| `remember` | `remember` |             | `boolean`             | `true`       |
-| `view`     | `view`     |             | `"art" \| "playlist"` | `"playlist"` |
+| Property             | Attribute             | Description | Type                  | Default      |
+| -------------------- | --------------------- | ----------- | --------------------- | ------------ |
+| `artwork`            | `artwork`             |             | `boolean`             | `false`      |
+| `autoplay`           | `autoplay`            |             | `boolean`             | `false`      |
+| `load`               | `load`                |             | `boolean`             | `false`      |
+| `loading`            | `loading`             |             | `boolean`             | `false`      |
+| `name`               | `name`                |             | `string`              | `"Playlist"` |
+| `playing`            | `playing`             |             | `boolean`             | `false`      |
+| `playlist`           | `playlist`            |             | `"hide" \| "show"`    | `"show"`     |
+| `remember`           | `remember`            |             | `boolean`             | `true`       |
+| `view`               | `view`                |             | `"art" \| "playlist"` | `"playlist"` |
+| `visualizationColor` | `visualization-color` |             | `string`              | `"gray"`     |
+
+
+## Events
+
+| Event        | Description | Type                |
+| ------------ | ----------- | ------------------- |
+| `load_songs` |             | `CustomEvent<void>` |
 
 
 ## Methods
@@ -40,9 +50,15 @@ Type: `Promise<void>`
 
 
 
-### `play() => Promise<void>`
+### `play(skipDefault?: boolean) => Promise<void>`
 
 
+
+#### Parameters
+
+| Name          | Type      | Description |
+| ------------- | --------- | ----------- |
+| `skipDefault` | `boolean` |             |
 
 #### Returns
 

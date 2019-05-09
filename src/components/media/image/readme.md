@@ -20,13 +20,15 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type      | Default     |
-| -------- | --------- | ----------- | --------- | ----------- |
-| `bg`     | `bg`      |             | `string`  | `"auto"`    |
-| `height` | `height`  |             | `number`  | `undefined` |
-| `nozoom` | `nozoom`  |             | `boolean` | `false`     |
-| `poster` | `poster`  |             | `string`  | `undefined` |
-| `width`  | `width`   |             | `number`  | `undefined` |
+| Property | Attribute | Description | Type                        | Default     |
+| -------- | --------- | ----------- | --------------------------- | ----------- |
+| `bg`     | `bg`      |             | `string`                    | `"auto"`    |
+| `height` | `height`  |             | `number`                    | `undefined` |
+| `large`  | `large`   |             | `string`                    | `undefined` |
+| `nozoom` | `nozoom`  |             | `boolean`                   | `false`     |
+| `poster` | `poster`  |             | `string`                    | `undefined` |
+| `type`   | `type`    |             | `"background" \| "picture"` | `"picture"` |
+| `width`  | `width`   |             | `number`                    | `undefined` |
 
 
 ## Methods

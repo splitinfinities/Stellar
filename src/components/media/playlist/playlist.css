@@ -19,7 +19,7 @@
 :host-context(.dark-mode):host {
 	--color-one: var(--theme-base9);
 	--color-two: var(--theme-base1);
-	--color-three: var(--theme-base5);
+	--color-three: var(--theme-base7);
 	--color-four: var(--theme-base2);
 	--color-bg: var(--black-alt);
 	--color-bg-active: var(--theme-base8);
@@ -56,6 +56,7 @@
 	opacity: 0;
 	transition: all 0.25s var(--ease) 0s;
 	pointer-events: none;
+	width: 100%;
 }
 
 :host([playing]) web-audio-visualizer {
@@ -132,6 +133,7 @@
 	justify-content: space-between;
 	width: 100%;
 	padding: 0 15px 15px;
+	z-index: 5;
 }
 :host .playlist-progress progress {
 	-webkit-appearance: none;
@@ -160,7 +162,7 @@
 	background-color: var(--color-three);
 }
 :host .playlist-list {
-	max-height: 50vh;
+	max-height: 24rem;
 	overflow: auto;
 	transition: all 0.2s ease 0s;
 }
@@ -269,7 +271,8 @@
     width: 100%;
     margin: 0 auto;
     flex: none;
-    height: auto;
+	height: 0;
+    padding-bottom: 100%;
 }
 
 :host([view="art"]) .playlist-playing-image:hover,

@@ -2,12 +2,22 @@
   box-sizing: border-box;
 }
 
+:host([type="background"]) {
+  background-color: var(--background-color, transparent);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
 :host {
-  display: inline-block;
-  background: var(--bg, transparent);
+  display: inline-flex;
+  background: var(--background-color, transparent);
   width: 100%;
   max-width: var(--width, 300px);
   max-height: var(--height, 300px);
+  align-items: center;
 }
 
 :host([block]) {
@@ -89,7 +99,7 @@
   pointer-events: none;
   opacity: 1;
   z-index: 1;
-  background: var(--bg, transparent) 50% 50% / cover no-repeat;
+  background: var(--background-color, transparent) 50% 50% / cover no-repeat;
   filter: blur(10px);
   image-rendering: -moz-crisp-edges;
   image-rendering: -o-crisp-edges;
