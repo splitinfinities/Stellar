@@ -15,7 +15,7 @@
 | `loading`            | `loading`             |             | `boolean`             | `false`      |
 | `name`               | `name`                |             | `string`              | `"Playlist"` |
 | `playing`            | `playing`             |             | `boolean`             | `false`      |
-| `playlist`           | `playlist`            |             | `string`              | `"show"`     |
+| `playlist`           | `playlist`            |             | `"hide" \| "show"`    | `"show"`     |
 | `remember`           | `remember`            |             | `boolean`             | `true`       |
 | `view`               | `view`                |             | `"art" \| "playlist"` | `"playlist"` |
 | `visualizationColor` | `visualization-color` |             | `string`              | `"gray"`     |

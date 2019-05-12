@@ -41,12 +41,14 @@ export class Video {
     this.video_tag.onplay = () => {
       this.playing = true;
       this.played.emit(this.eventData);
+      this.timeupdate.emit(this.eventData);
     }
 
     this.video_tag.onpause = () => {
       this.playing = false;
       this.pausedTime = this.video_tag.currentTime;
       this.paused.emit(this.eventData);
+      this.timeupdate.emit(this.eventData);
     }
 
     this.video_tag.onloadedmetadata = () => {

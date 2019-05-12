@@ -11,22 +11,21 @@ export class Playlist {
 
   @Prop() visualizationColor: string = "gray";
   @Prop() autoplay: boolean = false;
+  @Prop({mutable: true, reflectToAttr: true}) playlist: "show"|"hide" = "show";
+  @Prop() name: string = "Playlist";
+  @Prop() remember: boolean = true;
+  @Prop({mutable: true, reflectToAttr: true}) artwork: boolean = false;
+  @Prop({mutable: true, reflectToAttr: true}) view: "playlist"|"art" = "playlist";
+  @Prop({mutable: true, reflectToAttr: true}) playing: boolean = false;
+  @Prop({mutable: true, reflectToAttr: true}) load: boolean = false;
+  @Prop() loading: boolean = false;
+
   @State() current: number = 0;
   @State() currentTrack: CurrentSongInterface = {
     title: 'Loading...',
     artist: 'One sec...',
     picture: undefined
   };
-  @Prop({mutable: true, reflectToAttr: true}) playlist: string = "show";
-
-  @Prop() name: string = "Playlist";
-  @Prop() remember: boolean = true;
-  @Prop({mutable: true, reflectToAttr: true}) artwork: boolean = false;
-  @Prop({mutable: true, reflectToAttr: true}) view: "playlist"|"art" = "playlist";
-
-  @Prop({mutable: true, reflectToAttr: true}) playing: boolean = false;
-  @Prop({mutable: true, reflectToAttr: true}) load: boolean = false;
-  @Prop() loading: boolean = false;
   @State() currentTime: number|string;
   @State() duration: number|string;
   @State() visualizer: HTMLWebAudioVisualizerElement;
@@ -40,8 +39,7 @@ export class Playlist {
   @Event() load_songs: EventEmitter;
 
   componentWillLoad() {
-    var playlist = localStorage.getItem('playlist');
-    this.playlist = playlist;
+    this.loadFromStorage();
   }
 
   componentDidLoad() {
@@ -124,7 +122,10 @@ export class Playlist {
 
   loadFromStorage() {
     var playlist: any = localStorage.getItem('playlist');
-    this.playlist = playlist;
+
+    if (playlist === "show" || playlist === "hide") {
+      this.playlist = playlist;
+    }
   }
 
   @Method()
@@ -237,6 +238,17 @@ export class Playlist {
     }
   }
 
+  async handlePlay() {
+    console.log(this.load);
+
+    if (!this.load) {
+      this.load = true;
+      this.load_songs.emit({});
+    }
+
+    this.pause()
+  }
+
   render() {
     return (
       <div id="player">
@@ -251,7 +263,7 @@ export class Playlist {
         </div>
 
         <div class="playlist-playing">
-          <button onClick={ () => this.pause() } class="toggle-button" data-playing={this.playing}>
+          <button onClick={ () => { this.handlePlay() }} class="toggle-button" data-playing={this.playing}>
           {
             (this.playing)
             ? <ion-icon name="md-pause"></ion-icon>

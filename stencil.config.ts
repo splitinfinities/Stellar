@@ -40,7 +40,7 @@ export const config: Config = {
   outputTargets: [
     { type: 'dist' },
     { type: "stats", file: "./data/stats.json" },
-    { type: "docs" },
+    { type: "docs-readme" },
     {
       type: 'www',
       serviceWorker: null,

@@ -481,7 +481,7 @@ export namespace Components {
     'pause': () => Promise<void>;
     'play': (skipDefault?: boolean) => Promise<void>;
     'playing': boolean;
-    'playlist': string;
+    'playlist': "show"|"hide";
     'prepare': (element: any) => Promise<void>;
     'previous': () => Promise<void>;
     'remember': boolean;
@@ -1316,7 +1316,7 @@ declare namespace LocalJSX {
     'name'?: string;
     'onLoad_songs'?: (event: CustomEvent<any>) => void;
     'playing'?: boolean;
-    'playlist'?: string;
+    'playlist'?: "show"|"hide";
     'remember'?: boolean;
     'view'?: "playlist"|"art";
     'visualizationColor'?: string;
