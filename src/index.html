@@ -43,85 +43,19 @@
 
             <stellar-progress indeterminate></stellar-progress>
 
-            <stellar-360-image color="blue" height="1824" nozoom src="./global/images/_images/Carmelo.jpg" width="2736"></stellar-360-image>
-
-            <div class="aspect-ratio aspect-ratio--1x1 mb4">
-              <div class="aspect-ratio--object cover" style="background:url(http://mrmrs.github.io/photos/001.jpg) center;"></div>
-            </div>
-
-            <stellar-playlist name="Will's Playlist" visualization-color="blue">
-                <stellar-song artwork src="./global/audio/_audio/playlist/01 The Leaves Were Falling.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/02 Because I'm Me.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/03 Frankie Sinatra.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/04 Subways.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/05 Going Home.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/06 If I Was a Folkstar.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/07 Colours.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/08 Zap!.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/09 The Noisy Eater.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/10 Wildflower.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/11 Harmony.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/12 Live a Lifetime Love.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/13 Park Music.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/14 Livin' Underwater (Is Somethin' Wild).mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/15 The Wozard of Iz.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/16 Over the Turnstiles.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/17 Sunshine.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/18 Light Up.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/19 Kaleidoscope Lovers.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/20 Stepkids.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/21 Saturday Night Inside Out.mp3"></stellar-song>
-                <stellar-song artwork src="./global/audio/_audio/playlist/22 Frankie Sinatra (Extended Mix).mp3"></stellar-song>
-            </stellar-playlist>
-
             <stellar-layout>
-            <stellar-video-interview class="mt5 mw6" src="./global/video/_video/puppy.mp4">
-                <copy-wrap align="center" slot="transcript">
-                    <stellar-interview-line in="2360" out="3477">
-                        <h5 class="white fw7 lh-solid">Did you have fun puppy?</h4>
-                    </stellar-interview-line>
+                <stellar-markdown src="https://raw.githubusercontent.com/splitinfinities/Stellar/core/src/components/ui/avatar/readme.md"></stellar-markdown>
 
-                    <stellar-interview-line in="5097" out="6728">
-                        <h5 class="white fw7 lh-solid">Yeah? [Laughs]</h4>
-                    </stellar-interview-line>
+                <stellar-markdown editable>
+                    <template>
+# Heading
+## Very cool!
+- item one
+- item two
+- item three
+                    </template>
+                  </stellar-markdown>
 
-                    <stellar-interview-line in="7285" out="7748">
-                        <h5 class="white fw7 lh-solid">Are you thirsty? </h5>
-                    </stellar-interview-line>
-
-                    <stellar-interview-line in="8748" out="10117">
-                        <h5 class="white fw7 lh-solid">Are you a thirsty doge?</h5>
-                    </stellar-interview-line>
-
-                    <stellar-interview-line in="10917" out="11717">
-                        <h5 class="white fw7 lh-solid">Are you tired?</h5>
-                    </stellar-interview-line>
-
-                    <stellar-interview-line in="13292" out="14576">
-                        <h5 class="white fw7 lh-solid">[Laughs]</h5>
-                    </stellar-interview-line>
-                </copy-wrap>
-            </stellar-video-interview>
-            <stellar-interview class="mt5" src="./global/audio/_audio/carmelo_07.mp3">
-                <copy-wrap
-                    align="center" slot="transcript">
-                    <!-- In are the milliseconds when copy should be displayed, out is the  -->
-
-                    <stellar-interview-line in="1496" out="5010">
-                        <h4 class="white fw7 lh-solid">Interviewer: Has anyone ever tried to come and buy your property?</h4>
-                    </stellar-interview-line>
-
-                    <stellar-interview-line in="8374" out="13290">
-                        <h4 class="white fw7 lh-solid">Carmelo: Me han dado un cheque en blanco [para] comprar mi propiedad.</h4>
-                    </stellar-interview-line>
-
-                    <stellar-interview-line in="13484" out="17811">
-                        <h4 class="white fw7 lh-solid">Translator: They have given me a blank check in order to buy my property.</h4>
-                    </stellar-interview-line>
-
-                </copy-wrap>
-                <stellar-360-image color="blue" height="1824" nozoom src="./global/images/_images/Carmelo.jpg" width="2736"></stellar-360-image>
-            </stellar-interview>
             </stellar-layout>
     </main>
 </body></html>

@@ -2,13 +2,30 @@ import { Component, State, Prop, Watch, Element} from '@stencil/core';
 import showdown from 'showdown';
 
 @Component({
-  tag: 'stellar-markdown'
+  tag: 'stellar-markdown',
+  styleUrl: 'markdown.css'
 })
 export class Markdown {
   @Element() element: HTMLElement;
 
+  /**
+   * Used to reference an external markdown file
+   *
+   * @type string
+   * @memberof Markdown
+   */
   @Prop() src: string;
-  @Prop() codeString: string;
+
+  /**
+   * Used to set
+   *
+   * @type {string}
+   * @memberof Markdown
+   */
+  @Prop({mutable: true}) codeString: string;
+  @Prop() flavor: "github"|"original"|"vanilla" = "vanilla";
+
+  @Prop() editable: boolean = false;
 
   @State() converted: string;
   @State() raw: string;
@@ -16,6 +33,13 @@ export class Markdown {
   @State() showdown: any = new showdown.Converter();
 
   componentWillLoad () {
+    this.showdown.setFlavor(this.flavor)
+    this.showdown.setOption('omitExtraWLInCodeBlocks', true)
+    this.showdown.setOption('ghCompatibleHeaderId', true)
+    this.showdown.setOption('tables', true)
+    this.showdown.setOption('tablesHeaderId', true)
+    this.showdown.setOption('tasklists', true)
+    this.showdown.setOption('emoji', true)
     this.convert()
   }
 
@@ -49,10 +73,8 @@ export class Markdown {
   convertMarkdown () {
     let converted = this.showdown.makeHtml(this.raw)
 
-    converted = this.replaceAll(converted, "<pre", "<stellar-code-block")
-    converted = this.replaceAll(converted, "</pre", "</stellar-code-block")
-    converted = this.replaceAll(converted, "<code", "<template")
-    converted = this.replaceAll(converted, "</code", "</template")
+    converted = this.replaceAll(converted, "<pre><code>", "<stellar-code><template>")
+    converted = this.replaceAll(converted, "</pre></code>", "</template></stellar-code>")
 
     this.converted = converted;
   }
@@ -70,11 +92,19 @@ export class Markdown {
   }
 
   render() {
-    return [
-      <slot></slot>,
-      <copy-wrap full class="wrap">
+    if (this.editable) {
+      return <stellar-card>
+        <section><copy-wrap full class="wrap">
+          <div innerHTML={this.converted}></div>
+        </copy-wrap></section>
+        <footer class="bg-theme-base0">
+          <stellar-input type="textarea" default={this.codeString} onChange={(e) => { this.codeString = e.detail;this.convert(); }} />
+        </footer>
+      </stellar-card>
+    } else {
+      return <copy-wrap full class="wrap">
         <div innerHTML={this.converted}></div>
       </copy-wrap>
-    ]
+    }
   }
 }

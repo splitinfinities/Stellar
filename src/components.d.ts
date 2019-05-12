@@ -780,11 +780,27 @@ export namespace Components {
   interface StellarColorLibraryAttributes extends StencilHTMLAttributes {}
 
   interface StellarMarkdown {
+    /**
+    * Used to set
+    */
     'codeString': string;
+    'editable': boolean;
+    'flavor': "github"|"original"|"vanilla";
+    /**
+    * Used to reference an external markdown file
+    */
     'src': string;
   }
   interface StellarMarkdownAttributes extends StencilHTMLAttributes {
+    /**
+    * Used to set
+    */
     'codeString'?: string;
+    'editable'?: boolean;
+    'flavor'?: "github"|"original"|"vanilla";
+    /**
+    * Used to reference an external markdown file
+    */
     'src'?: string;
   }
 

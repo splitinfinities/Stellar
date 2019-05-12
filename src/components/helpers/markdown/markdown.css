@@ -1,0 +1,4 @@
+stellar-markdown table tr,
+stellar-markdown table td {
+    border: 1px solid var(--theme-base1);
+}

@@ -28,10 +28,12 @@
 
 ## Properties
 
-| Property     | Attribute     | Description | Type     | Default     |
-| ------------ | ------------- | ----------- | -------- | ----------- |
-| `codeString` | `code-string` |             | `string` | `undefined` |
-| `src`        | `src`         |             | `string` | `undefined` |
+| Property     | Attribute     | Description                                 | Type                                  | Default     |
+| ------------ | ------------- | ------------------------------------------- | ------------------------------------- | ----------- |
+| `codeString` | `code-string` | Used to set                                 | `string`                              | `undefined` |
+| `editable`   | `editable`    |                                             | `boolean`                             | `false`     |
+| `flavor`     | `flavor`      |                                             | `"github" \| "original" \| "vanilla"` | `"vanilla"` |
+| `src`        | `src`         | Used to reference an external markdown file | `string`                              | `undefined` |
 
 
 ----------------------------------------------
