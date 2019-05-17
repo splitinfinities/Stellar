@@ -297,9 +297,11 @@ export namespace Components {
   }
 
   interface StellarColorPicker {
+    'notransparent': boolean;
     'val': string;
   }
   interface StellarColorPickerAttributes extends StencilHTMLAttributes {
+    'notransparent'?: boolean;
     'onChange'?: (event: CustomEvent) => void;
     'val'?: string;
   }
@@ -969,6 +971,7 @@ export namespace Components {
     'remember': boolean;
     'view': "playlist"|"art";
     'visualizationColor': string;
+    'visualizationType': "bars"|"bars2"|"wave"|"circle";
   }
   interface StellarPlaylistAttributes extends StencilHTMLAttributes {
     'artwork'?: boolean;
@@ -982,6 +985,7 @@ export namespace Components {
     'remember'?: boolean;
     'view'?: "playlist"|"art";
     'visualizationColor'?: string;
+    'visualizationType'?: "bars"|"bars2"|"wave"|"circle";
   }
 
   interface SkeletonImg {

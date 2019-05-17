@@ -9,7 +9,8 @@ import { asTime } from '../../../utils'
 export class Playlist {
   @Element() element: HTMLElement;
 
-  @Prop() visualizationColor: string = "gray";
+  @Prop({mutable: true, reflectToAttr: true}) visualizationColor: string = "gray";
+  @Prop({mutable: true, reflectToAttr: true}) visualizationType: "bars"|"bars2"|"wave"|"circle" = "bars";
   @Prop() autoplay: boolean = false;
   @Prop({mutable: true, reflectToAttr: true}) playlist: "show"|"hide" = "show";
   @Prop() name: string = "Playlist";
@@ -18,7 +19,7 @@ export class Playlist {
   @Prop({mutable: true, reflectToAttr: true}) view: "playlist"|"art" = "playlist";
   @Prop({mutable: true, reflectToAttr: true}) playing: boolean = false;
   @Prop({mutable: true, reflectToAttr: true}) load: boolean = false;
-  @Prop() loading: boolean = false;
+  @Prop({mutable: true, reflectToAttr: true}) loading: boolean = false;
 
   @State() current: number = 0;
   @State() currentTrack: CurrentSongInterface = {
@@ -75,6 +76,21 @@ export class Playlist {
 
     this.handleTimeUpdates();
     this.handleProgressClick();
+  }
+
+  cycleVisualizations() {
+
+    // this.view === "art" ? "circle" : "bars";
+
+    if (this.visualizationType === "circle") {
+      this.visualizationType = "bars"
+    } else if (this.visualizationType === "bars") {
+      this.visualizationType = "bars2"
+    } else if (this.visualizationType === "bars2") {
+      this.visualizationType = "wave"
+    } else if (this.visualizationType === "wave") {
+      this.visualizationType = "circle"
+    }
   }
 
   handleProgressClick () {
@@ -164,7 +180,8 @@ export class Playlist {
     await this.audio.play();
 
     if (!this.context) {
-      var context = new AudioContext();
+      // @ts-ignore
+      const context = (window["webkitAudioContext"]) ? new webkitAudioContext : new AudioContext ;
       const src = context.createMediaElementSource(this.audio);
       const waanalyser = await this.visualizer.connect(context);
       src.connect(waanalyser.analyser);
@@ -239,8 +256,6 @@ export class Playlist {
   }
 
   async handlePlay() {
-    console.log(this.load);
-
     if (!this.load) {
       this.load = true;
       this.load_songs.emit({});
@@ -260,14 +275,29 @@ export class Playlist {
               list
             </h6>
           </button>
+          <button class="switch-view" onClick={ () => this.toggleAlbumArtView() } data-playing={this.playing}>
+            <h6 class="list">
+              {
+                (this.view === "art")
+                ? <stellar-asset name="albums" />
+                : <stellar-asset name="radio" />
+              }
+              {
+                (this.view === "art")
+                ? "Art"
+                : "Player"
+              }
+            </h6>
+          </button>
+          <stellar-color-picker val={this.visualizationColor} notransparent onChange={(e) => { this.visualizationColor = e.detail; }} />
         </div>
 
         <div class="playlist-playing">
           <button onClick={ () => { this.handlePlay() }} class="toggle-button" data-playing={this.playing}>
           {
             (this.playing)
-            ? <ion-icon name="md-pause"></ion-icon>
-            : <ion-icon name="md-play"></ion-icon>
+            ? <stellar-asset name="pause" />
+            : <stellar-asset name="play" />
           }
           </button>
 
@@ -286,7 +316,15 @@ export class Playlist {
               </div>
           }
 
-          <web-audio-visualizer type={this.view === "art" ? "circle" : "bars"} color={this.visualizationColor} />
+          {(!this.load && this.currentTrack.picture === undefined) && <skeleton-img width={1024} height={1024} block loading />}
+
+          <web-audio-visualizer type={this.visualizationType} color={this.visualizationColor} onClick={() => {this.cycleVisualizations();}} width={1024} height={this.view === "art" ? 1024 : 256} />
+
+          <div class={`playlist-progress ${this.load ? "load" : "noload"}`}>
+            <h6 id="currentTime">{this.currentTime}</h6>
+            <h6 id="totalTime">{this.duration}</h6>
+            <progress id="progress" max="100" value={this.progress_value}></progress>
+          </div>
         </div>
 
         <div id="controls" class="controls">
@@ -296,12 +334,6 @@ export class Playlist {
           <button onClick={ () => this.next() } class="button next">
             <stellar-asset name="skip-forward"></stellar-asset>
           </button>
-        </div>
-
-        <div class="playlist-progress">
-          <h6 id="currentTime">{this.currentTime}</h6>
-          <h6 id="totalTime">{this.duration}</h6>
-          <progress id="progress" max="100" value={this.progress_value}></progress>
         </div>
 
         <audio id="playlist-audio" preload="auto" tabindex="0" controls>

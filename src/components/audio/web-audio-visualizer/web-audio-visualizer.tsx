@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method} from '@stencil/core';
+import { Component, Prop, State, Element, Method, Watch} from '@stencil/core';
 import {bars, wave, circle, bars2} from './visualizations';
 import {colors} from '../../../utils'
 import hexToHsl from 'hex-to-hsl';
@@ -44,15 +44,20 @@ export class WebAudioVisualizer {
   @Prop({mutable: true}) _color: any;
 
   componentWillLoad() {
+    this.handleColorChange();
+  }
+
+  componentDidLoad() {
+    this.canvas = this.element.shadowRoot.querySelector('canvas');
+  }
+
+  @Watch('color')
+  handleColorChange () {
     if (["white", "black", "black-alt"].includes(this.color)) {
       this._color = hexToHsl(colors[this.color])
     } else {
       this._color = hexToHsl(colors[this.color][5]);
     }
-  }
-
-  componentDidLoad() {
-    this.canvas = this.element.shadowRoot.querySelector('canvas');
   }
 
   @Method()
@@ -83,8 +88,7 @@ export class WebAudioVisualizer {
     this.analyser.getByteFrequencyData(this.freqs);
     this.analyser.getByteTimeDomainData(this.times);
 
-    var width = Math.floor(this.freqs.length);
-    this.canvas.width = width || this.width;
+    this.canvas.width = this.width;
     this.canvas.height = this.height;
 
     this.clearBackground()

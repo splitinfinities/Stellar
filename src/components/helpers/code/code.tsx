@@ -8,8 +8,7 @@ import ezClipboard from 'ez-clipboard';
 
 @Component({
   tag: 'stellar-code',
-  styleUrl: 'code.css',
-  shadow: true
+  styleUrl: 'code.css'
 })
 export class Code {
   @Element() element: HTMLElement;
@@ -59,7 +58,7 @@ export class Code {
 
   @Method()
   async highlight() {
-    var block = this.element.shadowRoot.querySelector('code');
+    var block = this.element.querySelector('code');
     Prism.highlightElement(block, false);
   }
 

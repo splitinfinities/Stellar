@@ -113,7 +113,8 @@ export class VideoInterview {
 
   async attachContext() {
     if (!this.context) {
-      this.context = new AudioContext();
+      // @ts-ignore
+      this.context = (window["webkitAudioContext"]) ? new webkitAudioContext : new AudioContext ;
       const src = this.context.createMediaElementSource(this.video.video_tag);
       if (!this.visualizer) {
         this.visualizer = this.element.shadowRoot.querySelector('web-audio-visualizer');
@@ -173,12 +174,9 @@ export class VideoInterview {
   render () {
     return (
       <div class="card" onDblClick={() => { this.handleClick() }}>
-        {!this.visible && <div>
-          <skeleton-img width={1050} height={600} loading />
-        </div>
-        }
+        <skeleton-img width={this.width} height={this.height} loading />
         {this.visible && <section>
-          <stellar-video controls={false} autoplay playsinline trackInView={false} onTimeupdate={(e) => { this.handleTimeUpdate(e) }}>
+          <stellar-video controls={false} playsinline trackInView={false} onTimeupdate={(e) => { this.handleTimeUpdate(e) }}>
             <source src={this.src} />
           </stellar-video>
           <div class="transcript">
