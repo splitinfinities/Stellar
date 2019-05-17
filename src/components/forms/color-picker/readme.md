@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default  |
-| -------- | --------- | ----------- | -------- | -------- |
-| `val`    | `val`     |             | `string` | `"none"` |
+| Property        | Attribute       | Description | Type      | Default  |
+| --------------- | --------------- | ----------- | --------- | -------- |
+| `notransparent` | `notransparent` |             | `boolean` | `false`  |
+| `val`           | `val`           |             | `string`  | `"none"` |
 
 
 ## Events

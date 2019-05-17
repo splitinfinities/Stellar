@@ -20,10 +20,12 @@ export const bars2 = (arg) => {
         var h = v * height;
         var y = height / 2 - h / 2;
         ctx.beginPath();
-        ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+
+        ctx.shadowColor = "rgba(24, 24, 24, 0.25)";
         ctx.shadowBlur = 8;
         ctx.shadowOffsetX = 0;
-        ctx.shadowOffsetY = 4;
+        ctx.shadowOffsetY = 2;
+
         ctx.strokeStyle = `hsl(${arg._color[0]}, ${arg._color[1]}%, ${arg._color[2]}%)`;
         ctx.lineWidth = BAR_WIDTH;
         ctx.lineCap = 'round';

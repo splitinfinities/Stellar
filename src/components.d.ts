@@ -248,6 +248,7 @@ export namespace Components {
   }
   interface StellarColorLibrary {}
   interface StellarColorPicker {
+    'notransparent': boolean;
     'val': string;
   }
   interface StellarComment {
@@ -436,7 +437,15 @@ export namespace Components {
     'type': string;
   }
   interface StellarMarkdown {
+    /**
+    * Used to set
+    */
     'codeString': string;
+    'editable': boolean;
+    'flavor': "github"|"original"|"vanilla";
+    /**
+    * Used to reference an external markdown file
+    */
     'src': string;
   }
   interface StellarMessage {
@@ -487,6 +496,7 @@ export namespace Components {
     'remember': boolean;
     'view': "playlist"|"art";
     'visualizationColor': string;
+    'visualizationType': "bars"|"bars2"|"wave"|"circle";
   }
   interface StellarProgress {
     'blurable': boolean;
@@ -1089,6 +1099,7 @@ declare namespace LocalJSX {
   }
   interface StellarColorLibrary extends JSXBase.HTMLAttributes {}
   interface StellarColorPicker extends JSXBase.HTMLAttributes {
+    'notransparent'?: boolean;
     'onChange'?: (event: CustomEvent<any>) => void;
     'val'?: string;
   }
@@ -1274,7 +1285,15 @@ declare namespace LocalJSX {
     'type'?: string;
   }
   interface StellarMarkdown extends JSXBase.HTMLAttributes {
+    /**
+    * Used to set
+    */
     'codeString'?: string;
+    'editable'?: boolean;
+    'flavor'?: "github"|"original"|"vanilla";
+    /**
+    * Used to reference an external markdown file
+    */
     'src'?: string;
   }
   interface StellarMessage extends JSXBase.HTMLAttributes {
@@ -1320,6 +1339,7 @@ declare namespace LocalJSX {
     'remember'?: boolean;
     'view'?: "playlist"|"art";
     'visualizationColor'?: string;
+    'visualizationType'?: "bars"|"bars2"|"wave"|"circle";
   }
   interface StellarProgress extends JSXBase.HTMLAttributes {
     'blurable'?: boolean;
@@ -1654,168 +1674,93 @@ declare namespace LocalJSX {
     'type'?: string;
   }
 
-  interface ElementInterfaces {
-    'CopyWrap': Components.CopyWrap;
-    'SkeletonImg': Components.SkeletonImg;
-    'SkeletonText': Components.SkeletonText;
-    'Stellar360Image': Components.Stellar360Image;
-    'Stellar360Video': Components.Stellar360Video;
-    'StellarAccordion': Components.StellarAccordion;
-    'StellarAnimateText': Components.StellarAnimateText;
-    'StellarAsset': Components.StellarAsset;
-    'StellarAssetLibrary': Components.StellarAssetLibrary;
-    'StellarAvatar': Components.StellarAvatar;
-    'StellarBlur': Components.StellarBlur;
-    'StellarBreadcrumb': Components.StellarBreadcrumb;
-    'StellarBreadcrumbs': Components.StellarBreadcrumbs;
-    'StellarButton': Components.StellarButton;
-    'StellarCallout': Components.StellarCallout;
-    'StellarCard': Components.StellarCard;
-    'StellarChart': Components.StellarChart;
-    'StellarCode': Components.StellarCode;
-    'StellarColorLibrary': Components.StellarColorLibrary;
-    'StellarColorPicker': Components.StellarColorPicker;
-    'StellarComment': Components.StellarComment;
-    'StellarComments': Components.StellarComments;
-    'StellarContent': Components.StellarContent;
-    'StellarDropdown': Components.StellarDropdown;
-    'StellarFollow': Components.StellarFollow;
-    'StellarForm': Components.StellarForm;
-    'StellarGrid': Components.StellarGrid;
-    'StellarGroup': Components.StellarGroup;
-    'StellarGroupOverflow': Components.StellarGroupOverflow;
-    'StellarImage': Components.StellarImage;
-    'StellarInput': Components.StellarInput;
-    'StellarInterview': Components.StellarInterview;
-    'StellarInterviewLine': Components.StellarInterviewLine;
-    'StellarItem': Components.StellarItem;
-    'StellarKeyframes': Components.StellarKeyframes;
-    'StellarLabel': Components.StellarLabel;
-    'StellarLayout': Components.StellarLayout;
-    'StellarMarkdown': Components.StellarMarkdown;
-    'StellarMessage': Components.StellarMessage;
-    'StellarPagination': Components.StellarPagination;
-    'StellarParallax': Components.StellarParallax;
-    'StellarParallaxSection': Components.StellarParallaxSection;
-    'StellarPasswordRequirements': Components.StellarPasswordRequirements;
-    'StellarPlaylist': Components.StellarPlaylist;
-    'StellarProgress': Components.StellarProgress;
-    'StellarReveal': Components.StellarReveal;
-    'StellarScatter': Components.StellarScatter;
-    'StellarSelect': Components.StellarSelect;
-    'StellarSlide': Components.StellarSlide;
-    'StellarSlides': Components.StellarSlides;
-    'StellarSong': Components.StellarSong;
-    'StellarStarscape': Components.StellarStarscape;
-    'StellarStep': Components.StellarStep;
-    'StellarSteps': Components.StellarSteps;
-    'StellarStory': Components.StellarStory;
-    'StellarStripe': Components.StellarStripe;
-    'StellarSwitch': Components.StellarSwitch;
-    'StellarTab': Components.StellarTab;
-    'StellarTable': Components.StellarTable;
-    'StellarTabs': Components.StellarTabs;
-    'StellarTag': Components.StellarTag;
-    'StellarToggle': Components.StellarToggle;
-    'StellarToggleOption': Components.StellarToggleOption;
-    'StellarTooltip': Components.StellarTooltip;
-    'StellarUnit': Components.StellarUnit;
-    'StellarVideo': Components.StellarVideo;
-    'StellarVideoInterview': Components.StellarVideoInterview;
-    'WebAudio': Components.WebAudio;
-    'WebAudioDebugger': Components.WebAudioDebugger;
-    'WebAudioEffect': Components.WebAudioEffect;
-    'WebAudioSequencer': Components.WebAudioSequencer;
-    'WebAudioSource': Components.WebAudioSource;
-    'WebAudioVisualizer': Components.WebAudioVisualizer;
-    'WebAudioVisualizerShader': Components.WebAudioVisualizerShader;
-  }
-
   interface IntrinsicElements {
-    'CopyWrap': LocalJSX.CopyWrap;
-    'SkeletonImg': LocalJSX.SkeletonImg;
-    'SkeletonText': LocalJSX.SkeletonText;
-    'Stellar360Image': LocalJSX.Stellar360Image;
-    'Stellar360Video': LocalJSX.Stellar360Video;
-    'StellarAccordion': LocalJSX.StellarAccordion;
-    'StellarAnimateText': LocalJSX.StellarAnimateText;
-    'StellarAsset': LocalJSX.StellarAsset;
-    'StellarAssetLibrary': LocalJSX.StellarAssetLibrary;
-    'StellarAvatar': LocalJSX.StellarAvatar;
-    'StellarBlur': LocalJSX.StellarBlur;
-    'StellarBreadcrumb': LocalJSX.StellarBreadcrumb;
-    'StellarBreadcrumbs': LocalJSX.StellarBreadcrumbs;
-    'StellarButton': LocalJSX.StellarButton;
-    'StellarCallout': LocalJSX.StellarCallout;
-    'StellarCard': LocalJSX.StellarCard;
-    'StellarChart': LocalJSX.StellarChart;
-    'StellarCode': LocalJSX.StellarCode;
-    'StellarColorLibrary': LocalJSX.StellarColorLibrary;
-    'StellarColorPicker': LocalJSX.StellarColorPicker;
-    'StellarComment': LocalJSX.StellarComment;
-    'StellarComments': LocalJSX.StellarComments;
-    'StellarContent': LocalJSX.StellarContent;
-    'StellarDropdown': LocalJSX.StellarDropdown;
-    'StellarFollow': LocalJSX.StellarFollow;
-    'StellarForm': LocalJSX.StellarForm;
-    'StellarGrid': LocalJSX.StellarGrid;
-    'StellarGroup': LocalJSX.StellarGroup;
-    'StellarGroupOverflow': LocalJSX.StellarGroupOverflow;
-    'StellarImage': LocalJSX.StellarImage;
-    'StellarInput': LocalJSX.StellarInput;
-    'StellarInterview': LocalJSX.StellarInterview;
-    'StellarInterviewLine': LocalJSX.StellarInterviewLine;
-    'StellarItem': LocalJSX.StellarItem;
-    'StellarKeyframes': LocalJSX.StellarKeyframes;
-    'StellarLabel': LocalJSX.StellarLabel;
-    'StellarLayout': LocalJSX.StellarLayout;
-    'StellarMarkdown': LocalJSX.StellarMarkdown;
-    'StellarMessage': LocalJSX.StellarMessage;
-    'StellarPagination': LocalJSX.StellarPagination;
-    'StellarParallax': LocalJSX.StellarParallax;
-    'StellarParallaxSection': LocalJSX.StellarParallaxSection;
-    'StellarPasswordRequirements': LocalJSX.StellarPasswordRequirements;
-    'StellarPlaylist': LocalJSX.StellarPlaylist;
-    'StellarProgress': LocalJSX.StellarProgress;
-    'StellarReveal': LocalJSX.StellarReveal;
-    'StellarScatter': LocalJSX.StellarScatter;
-    'StellarSelect': LocalJSX.StellarSelect;
-    'StellarSlide': LocalJSX.StellarSlide;
-    'StellarSlides': LocalJSX.StellarSlides;
-    'StellarSong': LocalJSX.StellarSong;
-    'StellarStarscape': LocalJSX.StellarStarscape;
-    'StellarStep': LocalJSX.StellarStep;
-    'StellarSteps': LocalJSX.StellarSteps;
-    'StellarStory': LocalJSX.StellarStory;
-    'StellarStripe': LocalJSX.StellarStripe;
-    'StellarSwitch': LocalJSX.StellarSwitch;
-    'StellarTab': LocalJSX.StellarTab;
-    'StellarTable': LocalJSX.StellarTable;
-    'StellarTabs': LocalJSX.StellarTabs;
-    'StellarTag': LocalJSX.StellarTag;
-    'StellarToggle': LocalJSX.StellarToggle;
-    'StellarToggleOption': LocalJSX.StellarToggleOption;
-    'StellarTooltip': LocalJSX.StellarTooltip;
-    'StellarUnit': LocalJSX.StellarUnit;
-    'StellarVideo': LocalJSX.StellarVideo;
-    'StellarVideoInterview': LocalJSX.StellarVideoInterview;
-    'WebAudio': LocalJSX.WebAudio;
-    'WebAudioDebugger': LocalJSX.WebAudioDebugger;
-    'WebAudioEffect': LocalJSX.WebAudioEffect;
-    'WebAudioSequencer': LocalJSX.WebAudioSequencer;
-    'WebAudioSource': LocalJSX.WebAudioSource;
-    'WebAudioVisualizer': LocalJSX.WebAudioVisualizer;
-    'WebAudioVisualizerShader': LocalJSX.WebAudioVisualizerShader;
+    'copy-wrap': CopyWrap;
+    'skeleton-img': SkeletonImg;
+    'skeleton-text': SkeletonText;
+    'stellar-360-image': Stellar360Image;
+    'stellar-360-video': Stellar360Video;
+    'stellar-accordion': StellarAccordion;
+    'stellar-animate-text': StellarAnimateText;
+    'stellar-asset': StellarAsset;
+    'stellar-asset-library': StellarAssetLibrary;
+    'stellar-avatar': StellarAvatar;
+    'stellar-blur': StellarBlur;
+    'stellar-breadcrumb': StellarBreadcrumb;
+    'stellar-breadcrumbs': StellarBreadcrumbs;
+    'stellar-button': StellarButton;
+    'stellar-callout': StellarCallout;
+    'stellar-card': StellarCard;
+    'stellar-chart': StellarChart;
+    'stellar-code': StellarCode;
+    'stellar-color-library': StellarColorLibrary;
+    'stellar-color-picker': StellarColorPicker;
+    'stellar-comment': StellarComment;
+    'stellar-comments': StellarComments;
+    'stellar-content': StellarContent;
+    'stellar-dropdown': StellarDropdown;
+    'stellar-follow': StellarFollow;
+    'stellar-form': StellarForm;
+    'stellar-grid': StellarGrid;
+    'stellar-group': StellarGroup;
+    'stellar-group-overflow': StellarGroupOverflow;
+    'stellar-image': StellarImage;
+    'stellar-input': StellarInput;
+    'stellar-interview': StellarInterview;
+    'stellar-interview-line': StellarInterviewLine;
+    'stellar-item': StellarItem;
+    'stellar-keyframes': StellarKeyframes;
+    'stellar-label': StellarLabel;
+    'stellar-layout': StellarLayout;
+    'stellar-markdown': StellarMarkdown;
+    'stellar-message': StellarMessage;
+    'stellar-pagination': StellarPagination;
+    'stellar-parallax': StellarParallax;
+    'stellar-parallax-section': StellarParallaxSection;
+    'stellar-password-requirements': StellarPasswordRequirements;
+    'stellar-playlist': StellarPlaylist;
+    'stellar-progress': StellarProgress;
+    'stellar-reveal': StellarReveal;
+    'stellar-scatter': StellarScatter;
+    'stellar-select': StellarSelect;
+    'stellar-slide': StellarSlide;
+    'stellar-slides': StellarSlides;
+    'stellar-song': StellarSong;
+    'stellar-starscape': StellarStarscape;
+    'stellar-step': StellarStep;
+    'stellar-steps': StellarSteps;
+    'stellar-story': StellarStory;
+    'stellar-stripe': StellarStripe;
+    'stellar-switch': StellarSwitch;
+    'stellar-tab': StellarTab;
+    'stellar-table': StellarTable;
+    'stellar-tabs': StellarTabs;
+    'stellar-tag': StellarTag;
+    'stellar-toggle': StellarToggle;
+    'stellar-toggle-option': StellarToggleOption;
+    'stellar-tooltip': StellarTooltip;
+    'stellar-unit': StellarUnit;
+    'stellar-video': StellarVideo;
+    'stellar-video-interview': StellarVideoInterview;
+    'web-audio': WebAudio;
+    'web-audio-debugger': WebAudioDebugger;
+    'web-audio-effect': WebAudioEffect;
+    'web-audio-sequencer': WebAudioSequencer;
+    'web-audio-source': WebAudioSource;
+    'web-audio-visualizer': WebAudioVisualizer;
+    'web-audio-visualizer-shader': WebAudioVisualizerShader;
   }
 }
+
 export { LocalJSX as JSX };
+
 
 declare module "@stencil/core" {
   export namespace JSX {
-    interface ElementInterfaces extends LocalJSX.ElementInterfaces {}
     interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
   }
 }
+
 
 declare global {
 
@@ -1823,6 +1768,7 @@ declare global {
   export namespace JSX {
     export interface Element {}
   }
+
 
 
   interface HTMLCopyWrapElement extends Components.CopyWrap, HTMLStencilElement {}
@@ -2268,84 +2214,8 @@ declare global {
     prototype: HTMLWebAudioVisualizerShaderElement;
     new (): HTMLWebAudioVisualizerShaderElement;
   };
-  interface HTMLElementTagNameMap {
-    'copy-wrap': HTMLCopyWrapElement
-    'skeleton-img': HTMLSkeletonImgElement
-    'skeleton-text': HTMLSkeletonTextElement
-    'stellar-360-image': HTMLStellar360ImageElement
-    'stellar-360-video': HTMLStellar360VideoElement
-    'stellar-accordion': HTMLStellarAccordionElement
-    'stellar-animate-text': HTMLStellarAnimateTextElement
-    'stellar-asset': HTMLStellarAssetElement
-    'stellar-asset-library': HTMLStellarAssetLibraryElement
-    'stellar-avatar': HTMLStellarAvatarElement
-    'stellar-blur': HTMLStellarBlurElement
-    'stellar-breadcrumb': HTMLStellarBreadcrumbElement
-    'stellar-breadcrumbs': HTMLStellarBreadcrumbsElement
-    'stellar-button': HTMLStellarButtonElement
-    'stellar-callout': HTMLStellarCalloutElement
-    'stellar-card': HTMLStellarCardElement
-    'stellar-chart': HTMLStellarChartElement
-    'stellar-code': HTMLStellarCodeElement
-    'stellar-color-library': HTMLStellarColorLibraryElement
-    'stellar-color-picker': HTMLStellarColorPickerElement
-    'stellar-comment': HTMLStellarCommentElement
-    'stellar-comments': HTMLStellarCommentsElement
-    'stellar-content': HTMLStellarContentElement
-    'stellar-dropdown': HTMLStellarDropdownElement
-    'stellar-follow': HTMLStellarFollowElement
-    'stellar-form': HTMLStellarFormElement
-    'stellar-grid': HTMLStellarGridElement
-    'stellar-group': HTMLStellarGroupElement
-    'stellar-group-overflow': HTMLStellarGroupOverflowElement
-    'stellar-image': HTMLStellarImageElement
-    'stellar-input': HTMLStellarInputElement
-    'stellar-interview': HTMLStellarInterviewElement
-    'stellar-interview-line': HTMLStellarInterviewLineElement
-    'stellar-item': HTMLStellarItemElement
-    'stellar-keyframes': HTMLStellarKeyframesElement
-    'stellar-label': HTMLStellarLabelElement
-    'stellar-layout': HTMLStellarLayoutElement
-    'stellar-markdown': HTMLStellarMarkdownElement
-    'stellar-message': HTMLStellarMessageElement
-    'stellar-pagination': HTMLStellarPaginationElement
-    'stellar-parallax': HTMLStellarParallaxElement
-    'stellar-parallax-section': HTMLStellarParallaxSectionElement
-    'stellar-password-requirements': HTMLStellarPasswordRequirementsElement
-    'stellar-playlist': HTMLStellarPlaylistElement
-    'stellar-progress': HTMLStellarProgressElement
-    'stellar-reveal': HTMLStellarRevealElement
-    'stellar-scatter': HTMLStellarScatterElement
-    'stellar-select': HTMLStellarSelectElement
-    'stellar-slide': HTMLStellarSlideElement
-    'stellar-slides': HTMLStellarSlidesElement
-    'stellar-song': HTMLStellarSongElement
-    'stellar-starscape': HTMLStellarStarscapeElement
-    'stellar-step': HTMLStellarStepElement
-    'stellar-steps': HTMLStellarStepsElement
-    'stellar-story': HTMLStellarStoryElement
-    'stellar-stripe': HTMLStellarStripeElement
-    'stellar-switch': HTMLStellarSwitchElement
-    'stellar-tab': HTMLStellarTabElement
-    'stellar-table': HTMLStellarTableElement
-    'stellar-tabs': HTMLStellarTabsElement
-    'stellar-tag': HTMLStellarTagElement
-    'stellar-toggle': HTMLStellarToggleElement
-    'stellar-toggle-option': HTMLStellarToggleOptionElement
-    'stellar-tooltip': HTMLStellarTooltipElement
-    'stellar-unit': HTMLStellarUnitElement
-    'stellar-video': HTMLStellarVideoElement
-    'stellar-video-interview': HTMLStellarVideoInterviewElement
-    'web-audio': HTMLWebAudioElement
-    'web-audio-debugger': HTMLWebAudioDebuggerElement
-    'web-audio-effect': HTMLWebAudioEffectElement
-    'web-audio-sequencer': HTMLWebAudioSequencerElement
-    'web-audio-source': HTMLWebAudioSourceElement
-    'web-audio-visualizer': HTMLWebAudioVisualizerElement
-    'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement
-  }
 
-  interface ElementTagNameMap {
+  interface HTMLElementTagNameMap {
     'copy-wrap': HTMLCopyWrapElement;
     'skeleton-img': HTMLSkeletonImgElement;
     'skeleton-text': HTMLSkeletonTextElement;
@@ -2421,5 +2291,7 @@ declare global {
     'web-audio-visualizer': HTMLWebAudioVisualizerElement;
     'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement;
   }
+
+  interface ElementTagNameMap extends HTMLElementTagNameMap {}
 }
 

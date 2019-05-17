@@ -3,6 +3,11 @@
   --height: 800px;
   display: block;
   position: relative;
+
+}
+
+:host skeleton-img {
+  margin: 0;
 }
 
 :host div.card {
@@ -17,7 +22,12 @@
 :host div.card section {
   height: inherit;
   display: block;
-  position: relative;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
   padding-top: 0 !important;
 }
 

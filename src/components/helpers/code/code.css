@@ -1,36 +1,36 @@
-:host, :host *, :host *:before, :host *:after {
+stellar-code, stellar-code *, stellar-code *:before, stellar-code *:after {
   box-sizing: border-box;
 }
 
-:host ::-webkit-scrollbar {
+stellar-code ::-webkit-scrollbar {
   -webkit-appearance: none;
   cursor: pointer;
   width: 6px;
   height: 6px;
 }
 
-:host ::-webkit-scrollbar-track {
+stellar-code ::-webkit-scrollbar-track {
   background: transparent;
   mix-blend-mode: hard-light;
   background: var(--theme-base0, var(--gray0));
 }
 
-:host ::-webkit-scrollbar-thumb {
+stellar-code ::-webkit-scrollbar-thumb {
   cursor: pointer;
   display: block;
   background: var(--theme-base7, var(--gray7));
 }
 
-:host ::-webkit-scrollbar-thumb:window-inactive {
+stellar-code ::-webkit-scrollbar-thumb:window-inactive {
   background: transparent;
 }
 
-:host ::-webkit-scrollbar-thumb:hover {
+stellar-code ::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
   background: var(--theme-base5, var(--gray5));
 }
 
-:host {
+stellar-code {
   display: block;
   width: 100%;
   overflow: auto;
@@ -38,31 +38,31 @@
   letter-spacing: 0;
 }
 
-:host stellar-card {
+stellar-code stellar-card {
   --background: var(--white);
 }
 
-:host([simple]) {
+stellar-code[simple] {
   padding: 1rem;
 }
 
-:host header {
+stellar-code header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-:host footer {
+stellar-code footer {
   width: 100%;
   overflow: auto;
   background: var(--gray0);
 }
 
-:host .hidden {
+stellar-code .hidden {
   display: none;
 }
 
-:host pre {
+stellar-code pre {
   margin: 0;
   padding: 0;
   line-height: 2;
@@ -74,8 +74,8 @@
   font-weight: 400;
 }
 
-:host code[class*=language-],
-:host pre[class*=language-] {
+stellar-code code[class*=language-],
+stellar-code pre[class*=language-] {
   background: none;
   text-align: left;
   text-shadow: 0 1px var(--gray1);
@@ -95,108 +95,108 @@
   width: 0;
 }
 
-:host code {
+stellar-code code {
   display: block;
 }
 
-:host span {
+stellar-code span {
   font-size: 1rem;
 }
 
-:host pre > .token {
+stellar-code pre > .token {
   display: inline-block;
 }
 
-:host pre .token {
+stellar-code pre .token {
   line-height: 1.5rem !important;
   font-family: "Hack", monospace;
   font-size: 1rem !important;
 }
 
-:host pre .token.comment,
-:host pre .token.prolog,
-:host pre .token.doctype,
-:host pre .token.cdata {
+stellar-code pre .token.comment,
+stellar-code pre .token.prolog,
+stellar-code pre .token.doctype,
+stellar-code pre .token.cdata {
   color: var(--gray7);
 }
 
-:host pre .token.punctuation {
+stellar-code pre .token.punctuation {
   color: var(--gray7);
 }
 
-:host pre .namespace {
+stellar-code pre .namespace {
   opacity: 0.7;
 }
 
-:host pre .token.property,
-:host pre .token.tag,
-:host pre .token.boolean,
-:host pre .token.number,
-:host pre .token.constant,
-:host pre .token.symbol,
-:host pre .token.deleted {
+stellar-code pre .token.property,
+stellar-code pre .token.tag,
+stellar-code pre .token.boolean,
+stellar-code pre .token.number,
+stellar-code pre .token.constant,
+stellar-code pre .token.symbol,
+stellar-code pre .token.deleted {
   color: var(--cyan5);
 }
 
-:host pre .token.selector,
-:host pre .token.attr-name,
-:host pre .token.string,
-:host pre .token.char,
-:host pre .token.builtin,
-:host pre .token.inserted {
+stellar-code pre .token.selector,
+stellar-code pre .token.attr-name,
+stellar-code pre .token.string,
+stellar-code pre .token.char,
+stellar-code pre .token.builtin,
+stellar-code pre .token.inserted {
   color: var(--green5);
 }
 
-:host pre .token.operator,
-:host pre .token.entity,
-:host pre .token.url,
-:host pre.language-css .token.string,
-:host pre.style .token.string {
+stellar-code pre .token.operator,
+stellar-code pre .token.entity,
+stellar-code pre .token.url,
+stellar-code pre.language-css .token.string,
+stellar-code pre.style .token.string {
   color: var(--yellow5);
   font-family: "Hack", monospace;
 }
 
-:host pre .token.atrule,
-:host pre .token.attr-value,
-:host pre .token.keyword {
+stellar-code pre .token.atrule,
+stellar-code pre .token.attr-value,
+stellar-code pre .token.keyword {
   color: var(--cyan5);
 }
 
-:host pre .token.function {
+stellar-code pre .token.function {
   color: var(--blue5);
 }
 
-:host pre .token.regex,
-:host pre .token.important,
-:host pre .token.variable {
+stellar-code pre .token.regex,
+stellar-code pre .token.important,
+stellar-code pre .token.variable {
   color: var(--red5);
 }
 
-:host pre .token.important,
-:host pre .token.bold {
+stellar-code pre .token.important,
+stellar-code pre .token.bold {
   font-weight: bold;
 }
 
-:host pre .token.italic {
+stellar-code pre .token.italic {
   font-style: italic;
 }
 
-:host pre .token.entity {
+stellar-code pre .token.entity {
   cursor: help;
 }
 
-:host pre.show-line-numbers {
+stellar-code pre.show-line-numbers {
   position: relative;
   padding-left: 3.8em;
   counter-reset: linenumber;
 }
 
-:host pre.show-line-numbers > code {
+stellar-code pre.show-line-numbers > code {
   position: relative;
   white-space: inherit;
 }
 
-:host pre.show-line-numbers .line-numbers-rows {
+stellar-code pre.show-line-numbers .line-numbers-rows {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -212,7 +212,7 @@
   font-size: 1rem;
 }
 
-:host pre.show-line-numbers .line-numbers-rows > span {
+stellar-code pre.show-line-numbers .line-numbers-rows > span {
   pointer-events: none;
   display: block;
   counter-increment: linenumber;
@@ -220,7 +220,7 @@
   font-size: 1rem;
 }
 
-:host pre.show-line-numbers .line-numbers-rows > span::before {
+stellar-code pre.show-line-numbers .line-numbers-rows > span::before {
   content: counter(linenumber);
   display: block;
   padding-right: 0.8em;
@@ -230,129 +230,129 @@
   font-size: 1rem;
 }
 
-:host .token.tab:not(:empty),
-:host .token.cr,
-:host .token.lf,
-:host .token.space {
+stellar-code .token.tab:not(:empty),
+stellar-code .token.cr,
+stellar-code .token.lf,
+stellar-code .token.space {
   display: inline;
   position: relative;
 }
 
-:host .token.tab:not(:empty)::before,
-:host .token.cr::before,
-:host .token.lf::before,
-:host .token.space::before {
+stellar-code .token.tab:not(:empty)::before,
+stellar-code .token.cr::before,
+stellar-code .token.lf::before,
+stellar-code .token.space::before {
   position: absolute;
   color: var(--gray8);
 }
 
-:host pre.show-invisibles .token.tab:not(:empty)::before {
+stellar-code pre.show-invisibles .token.tab:not(:empty)::before {
   content: "────";
 }
 
-:host pre.show-invisibles .token.cr::before {
+stellar-code pre.show-invisibles .token.cr::before {
   content: "␍";
 }
 
-:host pre.show-invisibles .token.crlf::before {
+stellar-code pre.show-invisibles .token.crlf::before {
   content: "␍␊";
 }
 
-:host pre.show-invisibles .token.lf::before {
+stellar-code pre.show-invisibles .token.lf::before {
   content: "␊";
 }
 
-:host pre.show-invisibles .token.space::before {
+stellar-code pre.show-invisibles .token.space::before {
   content: "·";
 }
 
-:host-context(.dark-mode),
-:host-context(.dark-mode) footer {
+.dark-mode stellar-code,
+.dark-mode stellar-code footer {
   background: var(--gray9);
 }
 
-:host-context(.dark-mode) stellar-card {
+.dark-mode stellar-code stellar-card {
   --background: var(--black);
 }
 
-:host-context(.dark-mode) code[class*=language-],
-:host-context(.dark-mode) pre[class*=language-] {
+.dark-mode stellar-code code[class*=language-],
+.dark-mode stellar-code pre[class*=language-] {
   color: var(--gray1);
   text-shadow: 0 1px var(--gray9);
 }
 
-:host-context(.dark-mode) pre .token.comment,
-:host-context(.dark-mode) pre .token.prolog,
-:host-context(.dark-mode) pre .token.doctype,
-:host-context(.dark-mode) pre .token.cdata {
+.dark-mode stellar-code pre .token.comment,
+.dark-mode stellar-code pre .token.prolog,
+.dark-mode stellar-code pre .token.doctype,
+.dark-mode stellar-code pre .token.cdata {
   color: var(--gray5);
 }
 
-:host pre .token.punctuation {
+stellar-code pre .token.punctuation {
   color: var(--gray5);
 }
 
-:host-context(.dark-mode) pre .token.property,
-:host-context(.dark-mode) pre .token.tag,
-:host-context(.dark-mode) pre .token.boolean,
-:host-context(.dark-mode) pre .token.number,
-:host-context(.dark-mode) pre .token.constant,
-:host-context(.dark-mode) pre .token.symbol,
-:host-context(.dark-mode) pre .token.deleted {
+.dark-mode stellar-code pre .token.property,
+.dark-mode stellar-code pre .token.tag,
+.dark-mode stellar-code pre .token.boolean,
+.dark-mode stellar-code pre .token.number,
+.dark-mode stellar-code pre .token.constant,
+.dark-mode stellar-code pre .token.symbol,
+.dark-mode stellar-code pre .token.deleted {
   color: var(--cyan5);
 }
 
-:host-context(.dark-mode) pre .token.selector,
-:host-context(.dark-mode) pre .token.attr-name,
-:host-context(.dark-mode) pre .token.string,
-:host-context(.dark-mode) pre .token.char,
-:host-context(.dark-mode) pre .token.builtin,
-:host-context(.dark-mode) pre .token.inserted {
+.dark-mode stellar-code pre .token.selector,
+.dark-mode stellar-code pre .token.attr-name,
+.dark-mode stellar-code pre .token.string,
+.dark-mode stellar-code pre .token.char,
+.dark-mode stellar-code pre .token.builtin,
+.dark-mode stellar-code pre .token.inserted {
   color: var(--green5);
 }
 
-:host-context(.dark-mode) pre .token.operator,
-:host-context(.dark-mode) pre .token.entity,
-:host-context(.dark-mode) pre .token.url,
-:host-context(.dark-mode) pre.language-css .token.string,
-:host-context(.dark-mode) pre.style .token.string {
+.dark-mode stellar-code pre .token.operator,
+.dark-mode stellar-code pre .token.entity,
+.dark-mode stellar-code pre .token.url,
+.dark-mode stellar-code pre.language-css .token.string,
+.dark-mode stellar-code pre.style .token.string {
   color: var(--yellow5);
   font-family: "Hack", monospace;
 }
 
-:host-context(.dark-mode) pre .token.atrule,
-:host-context(.dark-mode) pre .token.attr-value,
-:host-context(.dark-mode) pre .token.keyword {
+.dark-mode stellar-code pre .token.atrule,
+.dark-mode stellar-code pre .token.attr-value,
+.dark-mode stellar-code pre .token.keyword {
   color: var(--cyan5);
 }
 
-:host-context(.dark-mode) pre .token.function {
+.dark-mode stellar-code pre .token.function {
   color: var(--blue5);
 }
 
-:host-context(.dark-mode) pre .token.regex,
-:host-context(.dark-mode) pre .token.important,
-:host-context(.dark-mode) pre .token.variable {
+.dark-mode stellar-code pre .token.regex,
+.dark-mode stellar-code pre .token.important,
+.dark-mode stellar-code pre .token.variable {
   color: var(--red5);
 }
 
-:host-context(.dark-mode) pre .token.regex,
-:host-context(.dark-mode) pre .token.important,
-:host-context(.dark-mode) pre .token.variable {
+.dark-mode stellar-code pre .token.regex,
+.dark-mode stellar-code pre .token.important,
+.dark-mode stellar-code pre .token.variable {
   color: var(--red5);
 }
 
-:host-context(.dark-mode) pre.show-line-numbers .line-numbers-rows {
+.dark-mode stellar-code pre.show-line-numbers .line-numbers-rows {
   color: var(--gray2);
 }
 
-:host-context(.dark-mode) pre.show-line-numbers .line-numbers-rows > span::before {
+.dark-mode stellar-code pre.show-line-numbers .line-numbers-rows > span::before {
   color: var(--gray2);
 }
 
-:host-context(.dark-mode) .token.tab:not(:empty)::before,
-:host-context(.dark-mode) .token.cr::before,
-:host-context(.dark-mode) .token.lf::before,
-:host-context(.dark-mode) .token.space::before {
+.dark-mode stellar-code .token.tab:not(:empty)::before,
+.dark-mode stellar-code .token.cr::before,
+.dark-mode stellar-code .token.lf::before,
+.dark-mode stellar-code .token.space::before {
   color: var(--gray2);
 }

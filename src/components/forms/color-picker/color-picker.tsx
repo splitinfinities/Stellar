@@ -10,13 +10,14 @@ import properties from 'css-custom-properties'
 export class ColorPicker {
     @Element() element: HTMLElement;
     @Prop({mutable: true, reflectToAttr: true}) val: string = "none";
+    @Prop() notransparent: boolean = false;
     @State() options: Array<string>;
     @Event() change: EventEmitter;
 
     componentWillLoad() {
         this.options = Object.keys(colors).filter((color) => {
             // @ts-ignore
-            return !["base", "white", "black"].includes(color)
+            return !["base", "white", "black", "black-alt"].includes(color)
         })
 
         properties.set({
@@ -45,11 +46,11 @@ export class ColorPicker {
                 style={{ "background": `var(--${option}5)` }}
                 onClick={() => { this.updateValue(option); }} />
             )}
-            <button
+            {!this.notransparent && <button
                 value={"none"}
                 class={"none"}
                 style={{ "background": `var(--white)` }}
-                onClick={() => { this.updateValue("none"); }} />
+                onClick={() => { this.updateValue("none"); }} />}
             <div class="placeholder" />
         </div>
     }

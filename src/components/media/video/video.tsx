@@ -119,7 +119,9 @@ export class Video {
   }
 
   handleInScreen() {
-    this.video_tag.play()
+    if (this.autoplay) {
+      this.video_tag.play()
+    }
   }
 
   handleOffScreen() {

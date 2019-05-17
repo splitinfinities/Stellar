@@ -29,7 +29,9 @@ export class Song {
 	@Event() loaded: EventEmitter;
 
 	get url () {
-		if (this.src.startsWith('.')) {
+		if (this.src.startsWith('http')) {
+			return this.src
+		} else if (this.src.startsWith('.')) {
 			return window.location.origin + relPathAsAbs(this.src)
 		} else {
 			return window.location.origin + this.src
@@ -103,6 +105,7 @@ export class Song {
 					this.updateDetails(itemToSave);
 				},
 				onError: (error) => {
+					console.log(error);
 					this.error = error;
 				}
 			});
