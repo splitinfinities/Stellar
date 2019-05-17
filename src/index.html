@@ -7,34 +7,33 @@
         <link href="/build/stellar-core.css" rel="stylesheet">
         <script type="module" src="build/stellar-core.esm.js"></script>
         <script nomodule src="build/stellar-core.js"></script>
-        <script src="/global/page2layers.js"></script>
         <script>
-    var dark = false;
-    var theme = "green";
+          var dark = false;
+          var theme = "green";
 
-    const darkMode = function () {
-      dark = !dark;
-      changeDarkMode()
-    }
+          const darkMode = function () {
+            dark = !dark;
+            changeDarkMode()
+          }
 
-    const changeDarkMode = function() {
-      if (dark) {
-        document.querySelector('html').classList.add('dark-mode');
-      } else {
-        document.querySelector('html').classList.remove('dark-mode');
-      }
-    }
+          const changeDarkMode = function() {
+            if (dark) {
+              document.querySelector('html').classList.add('dark-mode');
+            } else {
+              document.querySelector('html').classList.remove('dark-mode');
+            }
+          }
 
-    const changeTheme = function(color) {
-      document.querySelector('html').classList = "";
-      document.querySelector('body').classList = "";
-      changeDarkMode();
-      if (color !== "none") {
-        document.querySelector('html').classList.add(`theme-${color}`);
-        document.querySelector('body').classList.add(`theme-${color}`);
-      }
-    }
-  </script>
+          const changeTheme = function(color) {
+            document.querySelector('html').classList = "";
+            document.querySelector('body').classList = "";
+            changeDarkMode();
+            if (color !== "none") {
+              document.querySelector('html').classList.add(`theme-${color}`);
+              document.querySelector('body').classList.add(`theme-${color}`);
+            }
+          }
+        </script>
     </head>
     <body>
         <main class="z-1 relative">

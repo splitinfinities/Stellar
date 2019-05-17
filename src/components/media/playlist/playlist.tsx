@@ -181,7 +181,7 @@ export class Playlist {
 
     if (!this.context) {
       // @ts-ignore
-      const context = (window["webkitAudioContext"]) ? new webkitAudioContext : new AudioContext ;
+      const context = new (window.AudioContext || window.webkitAudioContext)();;
       const src = context.createMediaElementSource(this.audio);
       const waanalyser = await this.visualizer.connect(context);
       src.connect(waanalyser.analyser);

@@ -173,7 +173,6 @@ export class Input {
 
       this.datepicker.on('select', (_, dp) => {
         this.value = moment(dp.state.selectedDate).format('YYYY-MM-DD');
-        this.value = moment(dp.state.selectedDate).format('YYYY-MM-DD');
       });
     }
   }

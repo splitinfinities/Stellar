@@ -80,7 +80,7 @@ export class WebAudio {
 
   connect_context () {
     // @ts-ignore
-    this.context = (window["webkitAudioContext"]) ? new webkitAudioContext : new AudioContext ;
+    this.context = new (window.AudioContext || window.webkitAudioContext)();;
     this.log("Connected to this.context")
   }
 

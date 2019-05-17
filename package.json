@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@shopify/draggable": "^1.0.0-beta.8",
-    "@stencil/router": "^0.3.3",
+    "@stencil/router": "one",
     "async-delay": "^1.0.3",
     "await-delay": "^1.0.0",
     "convert-units": "^2.3.4",

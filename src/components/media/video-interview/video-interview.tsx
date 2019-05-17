@@ -114,7 +114,7 @@ export class VideoInterview {
   async attachContext() {
     if (!this.context) {
       // @ts-ignore
-      this.context = (window["webkitAudioContext"]) ? new webkitAudioContext : new AudioContext ;
+      this.context = new (window.AudioContext || window.webkitAudioContext)();
       const src = this.context.createMediaElementSource(this.video.video_tag);
       if (!this.visualizer) {
         this.visualizer = this.element.shadowRoot.querySelector('web-audio-visualizer');
