@@ -28,22 +28,38 @@
 
 ## Properties
 
-| Property     | Attribute     | Description | Type     | Default     |
-| ------------ | ------------- | ----------- | -------- | ----------- |
-| `codeString` | `code-string` |             | `string` | `undefined` |
-| `src`        | `src`         |             | `string` | `undefined` |
+| Property     | Attribute     | Description                                 | Type                                  | Default     |
+| ------------ | ------------- | ------------------------------------------- | ------------------------------------- | ----------- |
+| `codeString` | `code-string` | Used to set                                 | `string`                              | `undefined` |
+| `editable`   | `editable`    |                                             | `boolean`                             | `false`     |
+| `flavor`     | `flavor`      |                                             | `"github" \| "original" \| "vanilla"` | `"vanilla"` |
+| `src`        | `src`         | Used to reference an external markdown file | `string`                              | `undefined` |
 
 
 ## Dependencies
 
 ### Depends on
 
+- [stellar-card](../../ui/card)
 - [copy-wrap](../../ui/copy-wrap)
+- [stellar-input](../../forms/input)
 
 ### Graph
 ```mermaid
 graph TD;
+  stellar-markdown --> stellar-card
   stellar-markdown --> copy-wrap
+  stellar-markdown --> stellar-input
+  stellar-card --> stellar-button
+  stellar-card --> stellar-asset
+  stellar-button --> stellar-asset
+  stellar-button --> stencil-route-link
+  stellar-asset --> ion-icon
+  stellar-input --> stellar-label
+  stellar-input --> copy-wrap
+  stellar-input --> stellar-asset
+  stellar-input --> stellar-unit
+  stellar-input --> stellar-tooltip
   style stellar-markdown fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

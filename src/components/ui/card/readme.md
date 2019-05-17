@@ -102,6 +102,7 @@ Type: `Promise<void>`
 
  - [stellar-code](../../helpers/code)
  - [stellar-color-library](../../helpers/color-library)
+ - [stellar-markdown](../../helpers/markdown)
 
 ### Depends on
 
@@ -118,6 +119,7 @@ graph TD;
   stellar-asset --> ion-icon
   stellar-code --> stellar-card
   stellar-color-library --> stellar-card
+  stellar-markdown --> stellar-card
   style stellar-card fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

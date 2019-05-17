@@ -54,6 +54,7 @@
 
  - [stellar-360-image](../360-image)
  - [stellar-interview](../interview)
+ - [stellar-playlist](../playlist)
  - [stellar-video-interview](../video-interview)
 
 ### Depends on
@@ -67,6 +68,7 @@ graph TD;
   stellar-asset --> ion-icon
   stellar-360-image --> skeleton-img
   stellar-interview --> skeleton-img
+  stellar-playlist --> skeleton-img
   stellar-video-interview --> skeleton-img
   style skeleton-img fill:#f9f,stroke:#333,stroke-width:4px
 ```

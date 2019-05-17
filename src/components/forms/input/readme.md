@@ -171,6 +171,7 @@ Type: `Promise<FormResult>`
 
 ### Used by
 
+ - [stellar-markdown](../../helpers/markdown)
  - [stellar-pagination](../../ui/pagination)
  - [stellar-stripe](../../helpers/stripe)
 
@@ -191,6 +192,7 @@ graph TD;
   stellar-input --> stellar-unit
   stellar-input --> stellar-tooltip
   stellar-asset --> ion-icon
+  stellar-markdown --> stellar-input
   stellar-pagination --> stellar-input
   stellar-stripe --> stellar-input
   style stellar-input fill:#f9f,stroke:#333,stroke-width:4px

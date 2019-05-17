@@ -180,7 +180,7 @@ export class Interview {
     return (
       <div class="card" onDblClick={() => { this.handleClick() }}>
         {!this.visible && <div>
-          <skeleton-img width="1050" height="600" loading />
+          <skeleton-img width={this.width} height={this.height} loading />
           <div style={{ "display": "none" }}><slot /></div>
         </div>}
         {this.visible && <section>
@@ -191,7 +191,7 @@ export class Interview {
           <web-audio name={`interview-${this.randomId}`}>
             <web-audio-source src={this.src} name="interview"></web-audio-source>
           </web-audio>
-          <web-audio-visualizer for={`interview-${this.randomId}`} type={this.visualization} width="1024" height="1024" color={this.color} />
+          <web-audio-visualizer for={`interview-${this.randomId}`} type={this.visualization} width={this.width} height={this.height} color={this.color} />
           <button class={this.loading ? "loading button" : (this.playing ? "playing button" : "button")} onClick={() => { this.handleClick() }}>
             <stellar-asset name={this.loading ? "sync" : (this.playing ? "pause" : "play")} class={this.loading ? "animation-spin" : ""} />
           </button>

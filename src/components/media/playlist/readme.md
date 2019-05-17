@@ -87,22 +87,25 @@ Type: `Promise<void>`
 ### Depends on
 
 - [stellar-asset](../../ui/asset)
-- ion-icon
+- [stellar-color-picker](../../forms/color-picker)
 - [stellar-button](../../forms/button)
 - [stellar-progress](../../forms/progress)
+- [skeleton-img](../skeleton-img)
 - [web-audio-visualizer](../../audio/web-audio-visualizer)
 
 ### Graph
 ```mermaid
 graph TD;
   stellar-playlist --> stellar-asset
-  stellar-playlist --> ion-icon
+  stellar-playlist --> stellar-color-picker
   stellar-playlist --> stellar-button
   stellar-playlist --> stellar-progress
+  stellar-playlist --> skeleton-img
   stellar-playlist --> web-audio-visualizer
   stellar-asset --> ion-icon
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
+  skeleton-img --> stellar-asset
   style stellar-playlist fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

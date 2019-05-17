@@ -20,6 +20,19 @@
 | `change` |             | `CustomEvent<any>` |
 
 
+## Dependencies
+
+### Used by
+
+ - [stellar-playlist](../../media/playlist)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-playlist --> stellar-color-picker
+  style stellar-color-picker fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
