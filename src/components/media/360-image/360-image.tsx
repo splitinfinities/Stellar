@@ -9,6 +9,7 @@ export class Image360 {
   @Element() element: HTMLElement;
 
   @Prop({reflectToAttr: true}) src: string;
+  @Prop() nolazyload: boolean = false;
   @Prop({reflectToAttr: true}) poster: string;
   @Prop({reflectToAttr: true}) width: number = 1280;
   @Prop({reflectToAttr: true}) height: number = 720;
@@ -20,7 +21,11 @@ export class Image360 {
 
   componentDidLoad() {
     this.image = this.element.querySelector(".image")
-    this.addIntersectionObserver();
+    if (this.nolazyload) {
+      this.prepare()
+    } else {
+      this.addIntersectionObserver();
+    }
   }
 
   addIntersectionObserver() {

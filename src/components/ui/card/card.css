@@ -24,6 +24,10 @@
     background: transparent;
 }
 
+:host([padding="tiny"]) {
+    --padding: 0.5rem;
+}
+
 :host([padding="small"]) {
     --padding: 1rem;
 }

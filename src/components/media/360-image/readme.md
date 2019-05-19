@@ -7,12 +7,13 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `height` | `height`  |             | `number` | `720`       |
-| `poster` | `poster`  |             | `string` | `undefined` |
-| `src`    | `src`     |             | `string` | `undefined` |
-| `width`  | `width`   |             | `number` | `1280`      |
+| Property     | Attribute    | Description | Type      | Default     |
+| ------------ | ------------ | ----------- | --------- | ----------- |
+| `height`     | `height`     |             | `number`  | `720`       |
+| `nolazyload` | `nolazyload` |             | `boolean` | `false`     |
+| `poster`     | `poster`     |             | `string`  | `undefined` |
+| `src`        | `src`        |             | `string`  | `undefined` |
+| `width`      | `width`      |             | `number`  | `1280`      |
 
 
 ## Dependencies

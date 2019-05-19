@@ -42,7 +42,6 @@ html {
   font-smoothing: antialiased;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   text-rendering: optimizeLegibility;
-  perspective: 1000px;
 }
 
 html *,

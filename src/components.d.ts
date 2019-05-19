@@ -35,6 +35,7 @@ export namespace Components {
   }
   interface Stellar360Image {
     'height': number;
+    'nolazyload': boolean;
     'poster': string;
     'src': string;
     'width': number;
@@ -549,6 +550,15 @@ export namespace Components {
     'min': number;
     'sizes': boolean;
   }
+  interface StellarScrollZRoot {
+    'cameraSpeed': number;
+    'cameraZ': number;
+    'initialOriginX': number;
+    'initialOriginY': number;
+    'itemZ': number;
+    'scenePerspective': number;
+  }
+  interface StellarScrollZSection {}
   interface StellarSelect {
     'default': any;
     'description': string;
@@ -895,6 +905,7 @@ declare namespace LocalJSX {
   }
   interface Stellar360Image extends JSXBase.HTMLAttributes {
     'height'?: number;
+    'nolazyload'?: boolean;
     'poster'?: string;
     'src'?: string;
     'width'?: number;
@@ -1391,6 +1402,15 @@ declare namespace LocalJSX {
     'min'?: number;
     'sizes'?: boolean;
   }
+  interface StellarScrollZRoot extends JSXBase.HTMLAttributes {
+    'cameraSpeed'?: number;
+    'cameraZ'?: number;
+    'initialOriginX'?: number;
+    'initialOriginY'?: number;
+    'itemZ'?: number;
+    'scenePerspective'?: number;
+  }
+  interface StellarScrollZSection extends JSXBase.HTMLAttributes {}
   interface StellarSelect extends JSXBase.HTMLAttributes {
     'default'?: any;
     'description'?: string;
@@ -1722,6 +1742,8 @@ declare namespace LocalJSX {
     'stellar-progress': StellarProgress;
     'stellar-reveal': StellarReveal;
     'stellar-scatter': StellarScatter;
+    'stellar-scroll-z-root': StellarScrollZRoot;
+    'stellar-scroll-z-section': StellarScrollZSection;
     'stellar-select': StellarSelect;
     'stellar-slide': StellarSlide;
     'stellar-slides': StellarSlides;
@@ -2053,6 +2075,18 @@ declare global {
     new (): HTMLStellarScatterElement;
   };
 
+  interface HTMLStellarScrollZRootElement extends Components.StellarScrollZRoot, HTMLStencilElement {}
+  var HTMLStellarScrollZRootElement: {
+    prototype: HTMLStellarScrollZRootElement;
+    new (): HTMLStellarScrollZRootElement;
+  };
+
+  interface HTMLStellarScrollZSectionElement extends Components.StellarScrollZSection, HTMLStencilElement {}
+  var HTMLStellarScrollZSectionElement: {
+    prototype: HTMLStellarScrollZSectionElement;
+    new (): HTMLStellarScrollZSectionElement;
+  };
+
   interface HTMLStellarSelectElement extends Components.StellarSelect, HTMLStencilElement {}
   var HTMLStellarSelectElement: {
     prototype: HTMLStellarSelectElement;
@@ -2263,6 +2297,8 @@ declare global {
     'stellar-progress': HTMLStellarProgressElement;
     'stellar-reveal': HTMLStellarRevealElement;
     'stellar-scatter': HTMLStellarScatterElement;
+    'stellar-scroll-z-root': HTMLStellarScrollZRootElement;
+    'stellar-scroll-z-section': HTMLStellarScrollZSectionElement;
     'stellar-select': HTMLStellarSelectElement;
     'stellar-slide': HTMLStellarSlideElement;
     'stellar-slides': HTMLStellarSlidesElement;
