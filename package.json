@@ -58,11 +58,11 @@
   },
   "devDependencies": {
     "@brainly/html-sketchapp": "^4.2.0",
-    "postcss-design-token-function": "^1.0.0",
     "@stencil/core": "one",
     "@stencil/postcss": "^0.1.0",
     "fs": "0.0.1-security",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "postcss-design-token-function": "^1.0.0"
   },
   "jest": {
     "preset": "@stencil/core/testing"

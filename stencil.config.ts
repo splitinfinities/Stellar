@@ -1,12 +1,12 @@
 import { Config } from '@stencil/core';
 import { postcss } from "@stencil/postcss";
 import designTokenFunction from "postcss-design-token-function";
-import { colors } from "./src/global/colors";
+import { colors } from "./src/utils/colors";
 
 export const config: Config = {
   namespace: 'stellar-core',
   preamble: '(C) Split Infinities https://splitinfinities.com - MIT License',
-  globalStyle: "./src/global/stellar.css",
+  globalStyle: "./src/global/css/stellar.css",
   testing: {
     emulate: [
       // { device: "iPad" },

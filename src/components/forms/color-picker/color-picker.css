@@ -74,7 +74,7 @@
   position: absolute;
   left: calc(50% - var(--gap));
   top: calc(0% - var(--gap));
-  width: 4px;
+  width: calc(var(--gap) * 2);
   height: calc(100% + (var(--gap) * 2));
   transform: rotate(45deg);
   background: var(--red5)

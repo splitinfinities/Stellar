@@ -1,4 +1,4 @@
-export { colors } from '../global/colors';
+export { colors } from '../utils/colors';
 import properties from 'css-custom-properties';
 import isHexColor from 'validator/lib/isHexColor';
 import delay from 'async-delay';
