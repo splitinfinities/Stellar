@@ -43,12 +43,4 @@ it('should render and respond to changes appropriately', () => {
   avatar.formatName()
 
   expect(avatar.initials).toBe("");
-
-  const rendered = avatar.render();
-
-
-
-  const snapshot = {"$attrs$": {"class": "theme-black-alt"}, "$children$": [{"$attrs$": {"class": "wrapper", "title": "You tabbed on an Avatar for "}, "$children$": [{"$attrs$": {"class": "processing"}, "$children$": [{"$attrs$": {"src": "Loading"}, "$children$": null, "$elm$": undefined, "$flags$": 0, "$key$": undefined, "$name$": undefined, "$tag$": "stellar-avatar", "$text$": undefined}], "$elm$": undefined, "$flags$": 0, "$key$": undefined, "$name$": undefined, "$tag$": "div", "$text$": undefined}, {"$attrs$": {"class": "content"}, "$children$": [{"$attrs$": {"class": "spacer"}, "$children$": null, "$elm$": undefined, "$flags$": 0, "$key$": undefined, "$name$": undefined, "$tag$": "div", "$text$": undefined}, {"$attrs$": {"class": "letter", "title": ""}, "$children$": [{"$flags$": 0, "$text$": ""}], "$elm$": undefined, "$flags$": 0, "$key$": undefined, "$name$": undefined, "$tag$": "div", "$text$": undefined}, {"$flags$": 0, "$text$": ""}], "$elm$": undefined, "$flags$": 0, "$key$": undefined, "$name$": undefined, "$tag$": "div", "$text$": undefined}, {"$flags$": 0, "$text$": ""}], "$elm$": undefined, "$flags$": 0, "$key$": undefined, "$name$": undefined, "$tag$": "button", "$text$": undefined}], "$elm$": undefined, "$flags$": 0, "$key$": undefined, "$name$": undefined, "$tag$": {}, "$text$": undefined}
-
-  expect(rendered).toEqual(snapshot);
 });
