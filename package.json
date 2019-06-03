@@ -60,7 +60,10 @@
     "@brainly/html-sketchapp": "^4.2.0",
     "@stencil/core": "^1.0.0",
     "@stencil/postcss": "^0.1.0",
+    "@types/jest": "23.3.14",
     "fs": "0.0.1-security",
+    "jest": "23.6.0",
+    "jest-cli": "23.6.0",
     "path": "^0.12.7",
     "postcss-design-token-function": "^1.0.0"
   },
