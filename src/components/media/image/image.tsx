@@ -5,6 +5,7 @@ import { ColorThief } from './vendor/colorThief.js';
 @Component({
   tag: 'stellar-image',
   styleUrl: 'image.css',
+  assetsDirs: ['./vendor'],
   shadow: true
 })
 
