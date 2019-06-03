@@ -1,6 +1,9 @@
 :host {
-    height: calc(var(--viewportHeight) * 1px);
+    height: calc(var(--sectionHeight) * 1px);
     display: block;
+    opacity: calc(var(--cameraZ) + 1);
+    will-change: opacity;
+    transition: opacity 200ms ease 0s;
 }
 
 :host .container {

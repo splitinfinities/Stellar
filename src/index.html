@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="en" class="theme-red complement-indigo">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" name="viewport">
@@ -51,13 +51,18 @@
       changeColors();
       changeDarkMode();
     }
+
+    function autoScroll() {
+      window.scrollBy(0, 3);
+      requestAnimationFrame(autoScroll);
+    }
   </script>
 </head>
-<body>
+<body class="tc theme-red complement-indigo overflow-hidden">
   <main class="z-1 relative">
-    <stellar-button class="sticky top-0 right-0 z-max" onclick="darkMode()" tag="button">Switch Modes</stellar-button>
+    <!-- <stellar-button class="sticky top-0 right-0 z-max" onclick="darkMode()" tag="button">Switch Modes</stellar-button> -->
 
-    <div class="fixed top-2 right-2 z-max w5">
+    <!-- <div class="fixed top-2 right-2 z-max w5">
       <stellar-grid>
         <stellar-card padding="small" class="tc">
           <section>
@@ -72,229 +77,157 @@
           </section>
         </stellar-card>
       </stellar-grid>
-    </div>
+    </div> -->
 
+    <stellar-layout class="mb6 bg-white z-max relative min-vh-100">
+      <stellar-grid>
+        <stellar-card>
+          <stellar-button onclick="autoScroll()">Start</stellar-button>
+        </stellar-card>
+      </stellar-grid>
+    </stellar-layout>
+
+    <stellar-follow>
+      <stellar-keyframes src="./global/images/_images/alice-fall.png" height="499" width="320"></stellar-keyframes>
+    </stellar-follow>
     <stellar-scroll-z-root>
+      <stellar-scroll-z-section></stellar-scroll-z-section>
+      <stellar-scroll-z-section></stellar-scroll-z-section>
       <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Woohoo!!</h1>
-        </stellar-card>
+        <h1 class="fs-massive b">Video Games</h1>
       </stellar-scroll-z-section>
       <stellar-scroll-z-section>
-        <stellar-card>
+        <stellar-card class="mw6 center">
           <h1>Yay!</h1>
         </stellar-card>
       </stellar-scroll-z-section>
       <stellar-scroll-z-section>
-        <stellar-360-image color="blue" height="1824" nolazyload src="./global/images/_images/Carmelo.jpg" width="2736"></stellar-360-image>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
+        <stellar-card class="mw6 center">
           <h1>Yay!</h1>
         </stellar-card>
       </stellar-scroll-z-section>
       <stellar-scroll-z-section>
-        <stellar-card>
+        <stellar-card class="mw6 center">
           <h1>Yay!</h1>
         </stellar-card>
       </stellar-scroll-z-section>
+
       <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-playlist name="Will's Playlist" visualization-color="blue">
-          <stellar-song artwork src="./global/audio/_audio/playlist/01 The Leaves Were Falling.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/02 Because I'm Me.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/03 Frankie Sinatra.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/04 Subways.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/05 Going Home.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/06 If I Was a Folkstar.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/07 Colours.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/08 Zap!.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/09 The Noisy Eater.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/10 Wildflower.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/11 Harmony.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/12 Live a Lifetime Love.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/13 Park Music.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/14 Livin' Underwater (Is Somethin' Wild).mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/15 The Wozard of Iz.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/16 Over the Turnstiles.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/17 Sunshine.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/18 Light Up.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/19 Kaleidoscope Lovers.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/20 Stepkids.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/21 Saturday Night Inside Out.mp3"></stellar-song>
-          <stellar-song artwork src="./global/audio/_audio/playlist/22 Frankie Sinatra (Extended Mix).mp3"></stellar-song>
-        </stellar-playlist>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
-      <stellar-scroll-z-section>
-        <stellar-card>
-          <h1>Yay!</h1>
-        </stellar-card>
-      </stellar-scroll-z-section>
+          <h1 class="fs-massive b">Music</h1>
+        </stellar-scroll-z-section>
+        <stellar-scroll-z-section>
+          <stellar-card class="mw6 center">
+            <h1>Yay!</h1>
+          </stellar-card>
+        </stellar-scroll-z-section>
+        <stellar-scroll-z-section>
+          <stellar-card class="mw6 center">
+            <h1>Yay!</h1>
+          </stellar-card>
+        </stellar-scroll-z-section>
+        <stellar-scroll-z-section>
+          <stellar-card class="mw6 center">
+            <h1>Yay!</h1>
+          </stellar-card>
+        </stellar-scroll-z-section>
+
+        <stellar-scroll-z-section>
+            <h1 class="fs-massive b">Video</h1>
+          </stellar-scroll-z-section>
+          <stellar-scroll-z-section>
+            <stellar-card class="mw6 center">
+              <h1>Yay!</h1>
+            </stellar-card>
+          </stellar-scroll-z-section>
+          <stellar-scroll-z-section>
+            <stellar-card class="mw6 center">
+              <h1>Yay!</h1>
+            </stellar-card>
+          </stellar-scroll-z-section>
+          <stellar-scroll-z-section>
+            <stellar-card class="mw6 center">
+              <h1>Yay!</h1>
+            </stellar-card>
+          </stellar-scroll-z-section>
+
     </stellar-scroll-z-root>
+
+    <stellar-layout class="mb6">
+        <stellar-grid>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+          <stellar-card class="mw6 center">
+            <h1>Hello</h1>
+            <p>Hello</p>
+          </stellar-card>
+        </stellar-grid>
+      </stellar-layout>
   </main>
 </body>
 </html>

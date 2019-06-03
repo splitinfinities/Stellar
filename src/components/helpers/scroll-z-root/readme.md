@@ -10,7 +10,7 @@
 | Property           | Attribute           | Description | Type     | Default |
 | ------------------ | ------------------- | ----------- | -------- | ------- |
 | `cameraSpeed`      | `camera-speed`      |             | `number` | `150`   |
-| `cameraZ`          | `camera-z`          |             | `number` | `0`     |
+| `cameraZ`          | `camera-z`          |             | `number` | `-1`    |
 | `initialOriginX`   | `initial-origin-x`  |             | `number` | `50`    |
 | `initialOriginY`   | `initial-origin-y`  |             | `number` | `30`    |
 | `itemZ`            | `item-z`            |             | `number` | `10`    |

@@ -13,9 +13,11 @@ export class ScrollZRoot {
     @Prop() initialOriginY: number = 30;
     @Prop() itemZ: number = 10;
     @Prop() cameraSpeed: number = 150;
-    @Prop() cameraZ: number = 0;
+    @Prop() cameraZ: number = -1;
     @Prop() scenePerspective: number = 1;
 
+    @State() distanceFromTop: number = 0;
+    @State() distanceFromBottom: number = 0;
     @State() sections: HTMLElement[]
     @State() perspectiveOrigin: {x: number, y: number, maxGap: number} = {x: 0, y: 0, maxGap: 10}
 
@@ -24,11 +26,12 @@ export class ScrollZRoot {
     }
 
     componentWillLoad() {
+        this.distanceFromTop = this.element.getBoundingClientRect().top
+        this.distanceFromBottom = this.element.getBoundingClientRect().bottom
         this.prepare()
     }
 
     prepare() {
-        console.log('prepareing')
         this.sections = Array.from(this.element.querySelectorAll('stellar-scroll-z-section'));
 
         properties.set({
@@ -38,7 +41,7 @@ export class ScrollZRoot {
             '--itemZ': this.itemZ,
             '--cameraSpeed': this.cameraSpeed,
             '--cameraZ': this.cameraZ,
-            '--viewportHeight': 0
+            '--sectionHeight': 0
         }, document.documentElement);
 
         this.perspectiveOrigin = {
@@ -50,8 +53,8 @@ export class ScrollZRoot {
         this.setSceneHeight()
 
         this.sections.forEach((section, index) => {
-            const x = `${this.randomFloat(0, 100)}%`;
-            const y = `${this.randomFloat(-100, 50)}%`;
+            const x = `${this.randomFloat(-40, 150)}%`;
+            const y = `${this.randomFloat(-100, 100)}%`;
             const z = `calc(var(--itemZ) * var(--cameraSpeed) * ${index} * -1px)`;
 
             section.style.setProperty('transform', `translate3D(${x}, ${y}, ${z})`)
@@ -66,14 +69,23 @@ export class ScrollZRoot {
 
         const height = window.innerHeight +
         scenePerspective * cameraSpeed +
-        itemZ * cameraSpeed * numberOfItems;
+        (itemZ / 2) * cameraSpeed * numberOfItems;
 
-        document.documentElement.style.setProperty("--viewportHeight", `${height}`);
+        document.documentElement.style.setProperty("--sectionHeight", `${height}`);
     }
 
     @Listen('scroll', {target: 'window'})
     moveCamera() {
-        document.documentElement.style.setProperty("--cameraZ", `${window.pageYOffset}`);
+        this.distanceFromTop = this.element.getBoundingClientRect().top
+        this.distanceFromBottom = this.element.getBoundingClientRect().bottom
+
+        const offset = window.pageYOffset - this.distanceFromTop;
+
+        if (offset >= 0) {
+            document.documentElement.style.setProperty("--cameraZ", `${offset}`);
+        } else {
+            document.documentElement.style.setProperty("--cameraZ", `-1`);
+        }
     }
 
 

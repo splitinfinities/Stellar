@@ -885,911 +885,12 @@ export namespace Components {
   }
 }
 
-declare namespace LocalJSX {
-  interface CopyWrap extends JSXBase.HTMLAttributes {
-    'align'?: string;
-    'full'?: boolean;
-  }
-  interface SkeletonImg extends JSXBase.HTMLAttributes {
-    'block'?: boolean;
-    'height'?: number;
-    'icon'?: boolean;
-    'loading'?: boolean;
-    'width'?: number;
-  }
-  interface SkeletonText extends JSXBase.HTMLAttributes {
-    'as'?: string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p';
-    'loading'?: boolean;
-    'width'?: number;
-  }
-  interface Stellar360Image extends JSXBase.HTMLAttributes {
-    'height'?: number;
-    'nolazyload'?: boolean;
-    'poster'?: string;
-    'src'?: string;
-    'width'?: number;
-  }
-  interface Stellar360Video extends JSXBase.HTMLAttributes {
-    'height'?: number;
-    'poster'?: string;
-    'src'?: string;
-    'width'?: number;
-  }
-  interface StellarAccordion extends JSXBase.HTMLAttributes {
-    'label'?: string;
-    'name'?: string;
-    'open'?: boolean;
-    'tight'?: boolean;
-  }
-  interface StellarAnimateText extends JSXBase.HTMLAttributes {
-    'method'?: string|"glitch"|"lettering"|"weight"|"fade";
-  }
-  interface StellarAsset extends JSXBase.HTMLAttributes {
-    'align'?: string;
-    'ariaLabel'?: string;
-    'block'?: boolean;
-    'language'?: string;
-    'name'?: string;
-    'src'?: string;
-  }
-  interface StellarAssetLibrary extends JSXBase.HTMLAttributes {}
-  interface StellarAvatar extends JSXBase.HTMLAttributes {
-    'color'?: string;
-    'initials'?: string;
-    'name'?: string;
-    'processing'?: boolean;
-    'shape'?: "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
-    'size'?: string;
-    'src'?: string;
-    'tooltip'?: boolean;
-  }
-  interface StellarBlur extends JSXBase.HTMLAttributes {
-    'horizontal'?: number;
-    'vertical'?: number;
-  }
-  interface StellarBreadcrumb extends JSXBase.HTMLAttributes {
-    'color'?: string;
-    'disabled'?: boolean;
-    'first'?: boolean;
-    'href'?: string;
-    'label'?: string;
-    'last'?: boolean;
-    'target'?: string;
-  }
-  interface StellarBreadcrumbs extends JSXBase.HTMLAttributes {
-    'color'?: string;
-    'description'?: string;
-    'home'?: string;
-    'icon'?: string;
-    'icon_size'?: number;
-    'icon_src'?: string;
-    'label'?: string;
-  }
-  interface StellarButton extends JSXBase.HTMLAttributes {
-    /**
-    * Sets the button or link as an active state.
-    */
-    'active'?: boolean;
-    /**
-    * Sets the button or link to render at full width to the parent.
-    */
-    'block'?: boolean;
-    /**
-    * Sets the button or link to provide the affordance of a dangerous action.
-    */
-    'danger'?: boolean;
-    /**
-    * Sets the button or link as disabled and not-interactable.
-    */
-    'disabled'?: boolean;
-    /**
-    * Sets the href on the anchor tag if the button is a link.
-    */
-    'for'?: string;
-    'ghost'?: boolean;
-    /**
-    * Sets the href on the anchor tag if the button is a link.
-    */
-    'href'?: string;
-    /**
-    * Sets the button or link as a button with only an icon.
-    */
-    'icon'?: boolean;
-    /**
-    * Sets the button or link as an outlined button.
-    */
-    'invert'?: boolean;
-    /**
-    * Sets accessibility options on the buttons
-    */
-    'label'?: string;
-    /**
-    * Sets the name on the button if the button is an input. Allows the button to act as an item in a form.
-    */
-    'name'?: string;
-    /**
-    * Sets the button or link as an outlined button.
-    */
-    'outline'?: boolean;
-    /**
-    * Sets the padding inside of the button. Can be small, medium, or large.
-    */
-    'padding'?: string|"small"|"medium"|"large";
-    /**
-    * Sets the button or link to render as a pill.
-    */
-    'pill'?: boolean;
-    /**
-    * Sets the button or link as processing when clicked.
-    */
-    'processable'?: boolean;
-    /**
-    * Sets the size of the button. Can be tiny, small, medium, or large.
-    */
-    'size'?: string|"tiny"|"small"|"medium"|"large";
-    /**
-    * Allows the button to render for different tags.
-    */
-    'tag'?: "button"|"submit"|"link"|"span"|"route-link";
-    /**
-    * Sets the target on the anchor tag if the button is a link.
-    */
-    'target'?: string;
-    /**
-    * Sets the value on the button if the button is an input.
-    */
-    'value'?: string;
-  }
-  interface StellarCallout extends JSXBase.HTMLAttributes {
-    'type'?: "alert"|"error"|"info"|"success"|"default";
-  }
-  interface StellarCard extends JSXBase.HTMLAttributes {
-    /**
-    * Sets the href on the anchor tag if the button is a link.
-    */
-    'flip_icon'?: string;
-    /**
-    * Let's a card be flippable
-    */
-    'flippable'?: boolean;
-    /**
-    * Renders a flipped card
-    */
-    'flipped'?: boolean;
-    /**
-    * Sets the href on the anchor tag if the button is a link.
-    */
-    'for'?: string;
-    /**
-    * Sets the href if the card is a link.
-    */
-    'href'?: string;
-    /**
-    * Sets the name if the card is a button.
-    */
-    'name'?: string;
-    'onFlip'?: (event: CustomEvent<any>) => void;
-    /**
-    * Sets the padding inside of the button. Can be small, medium, or large.
-    */
-    'padding'?: string|"small"|"medium"|"large";
-    /**
-    * Renders a shadow on the card
-    */
-    'shadow'?: string|"light"|"medium"|"heavy";
-    /**
-    * Sets the element to render the card as - an anchor tag, a button, or a div.
-    */
-    'tag'?: "stencil-route-link"|"a"|"button"|"div";
-    'transition'?: boolean;
-    /**
-    * Sets the element to render the card as - an anchor tag, a button, or a div.
-    */
-    'type'?: string;
-    /**
-    * Sets the value if the card is a button.
-    */
-    'value'?: string;
-  }
-  interface StellarChart extends JSXBase.HTMLAttributes {
-    'config'?: HighchartsModel;
-    'for'?: string;
-    'remote'?: string;
-    'type'?: "area"|"areaspline"|"bar"|"bubble"|"column"|"line"|"pie"|"polygon"|"scatter"|"spline"|"waterfall";
-  }
-  interface StellarCode extends JSXBase.HTMLAttributes {
-    'codeString'?: string;
-    'copy'?: boolean;
-    'expandable'?: boolean;
-    'expanded'?: boolean;
-    'feature'?: boolean;
-    'language'?: string;
-    'preview'?: boolean;
-    'simple'?: boolean;
-  }
-  interface StellarColorLibrary extends JSXBase.HTMLAttributes {}
-  interface StellarColorPicker extends JSXBase.HTMLAttributes {
-    'notransparent'?: boolean;
-    'onChange'?: (event: CustomEvent<any>) => void;
-    'val'?: string;
-  }
-  interface StellarComment extends JSXBase.HTMLAttributes {
-    'content'?: any;
-    'name'?: any;
-  }
-  interface StellarComments extends JSXBase.HTMLAttributes {}
-  interface StellarContent extends JSXBase.HTMLAttributes {
-    'behavior'?: string;
-    'for'?: string;
-    'open'?: boolean;
-  }
-  interface StellarDropdown extends JSXBase.HTMLAttributes {
-    'icon'?: boolean;
-    'label'?: string;
-    'open'?: boolean;
-    'position'?: "left"|"center"|"right";
-  }
-  interface StellarFollow extends JSXBase.HTMLAttributes {
-    'distance'?: number;
-    'padding'?: number;
-    'type'?: "scroll"|"cursor";
-  }
-  interface StellarForm extends JSXBase.HTMLAttributes {
-    'acceptCharset'?: string;
-    'action'?: string;
-    'ajax'?: boolean;
-    'autocomplete'?: string;
-    'enctype'?: string;
-    'method'?: string;
-    'name'?: string;
-    'novalidate'?: boolean;
-    'onSubmit'?: (event: CustomEvent<any>) => void;
-    'target'?: string;
-  }
-  interface StellarGrid extends JSXBase.HTMLAttributes {
-    'align'?: string;
-    'cols'?: number|string;
-    'compact'?: boolean;
-    'onOrderChanged'?: (event: CustomEvent<any>) => void;
-    'padding'?: boolean;
-    'responsive'?: boolean|string;
-    'swappable'?: boolean;
-    'swappableSelector'?: string;
-  }
-  interface StellarGroup extends JSXBase.HTMLAttributes {
-    'count'?: number;
-    'overflow'?: boolean;
-    'size'?: string;
-  }
-  interface StellarGroupOverflow extends JSXBase.HTMLAttributes {
-    'count'?: number;
-    'size'?: string;
-  }
-  interface StellarImage extends JSXBase.HTMLAttributes {
-    'bg'?: string;
-    'height'?: number;
-    'large'?: string;
-    'nozoom'?: boolean;
-    'poster'?: string;
-    'type'?: "background"|"picture";
-    'width'?: number;
-  }
-  interface StellarInput extends JSXBase.HTMLAttributes {
-    'accept'?: string;
-    'autocomplete'?: string;
-    'autofocus'?: boolean;
-    'color'?: string;
-    'cols'?: number;
-    'dateType'?: "month"|"year"|"day";
-    /**
-    * The pre-set value to pass to the input element
-    */
-    'default'?: any;
-    'description'?: string;
-    'disabled'?: boolean;
-    'droppable'?: boolean;
-    'files'?: Array<any>;
-    'focused'?: boolean;
-    'icon'?: boolean;
-    'label'?: string;
-    'match'?: string;
-    'max'?: number;
-    'maxlength'?: number;
-    'min'?: number;
-    'multiple'?: boolean;
-    'multipleFileCaption'?: string;
-    /**
-    * The name of the input element
-    */
-    'name'?: string;
-    'novalidate'?: boolean;
-    /**
-    * Public: Blur event
-    */
-    'onBluring'?: (event: CustomEvent<any>) => void;
-    /**
-    * Public: Changed event
-    */
-    'onChange'?: (event: CustomEvent<any>) => void;
-    /**
-    * Public: Focus event
-    */
-    'onFocusing'?: (event: CustomEvent<any>) => void;
-    'placeholder'?: string;
-    'readonly'?: boolean;
-    'replace_placeholder'?: string;
-    'required'?: boolean;
-    /**
-    * The pre-set value to pass to the input element
-    */
-    'requirements'?: boolean;
-    'rows'?: number;
-    'size'?: string;
-    'spellcheck'?: boolean;
-    'step'?: number;
-    'tokenField'?: any;
-    'tooltip'?: string;
-    /**
-    * The kind of element that the Input should be rendered as
-    */
-    'type'?: string;
-    'validates'?: string;
-    /**
-    * The pre-set value to pass to the input element
-    */
-    'value'?: any;
-    'wrap'?: string;
-  }
-  interface StellarInterview extends JSXBase.HTMLAttributes {
-    'aspectRatio'?: number;
-    'color'?: string;
-    'height'?: number;
-    'playing'?: boolean;
-    'src'?: string;
-    'visualization'?: "circle"|"bars"|"wave"|"bars2";
-    'width'?: number;
-  }
-  interface StellarInterviewLine extends JSXBase.HTMLAttributes {
-    'complement'?: boolean;
-    'in'?: number;
-    'out'?: number;
-  }
-  interface StellarItem extends JSXBase.HTMLAttributes {
-    'danger'?: boolean;
-    'fit'?: boolean;
-    'focused'?: boolean;
-    'history'?: RouterHistory;
-    'href'?: string;
-    'label'?: string;
-    'location'?: LocationSegments;
-    'multiple'?: boolean;
-    'onBlurChanged'?: (event: CustomEvent<any>) => void;
-    'onFocusChanged'?: (event: CustomEvent<any>) => void;
-    'onMounted'?: (event: CustomEvent<any>) => void;
-    'onSelectionChanged'?: (event: CustomEvent<any>) => void;
-    'route'?: boolean;
-    'selectable'?: boolean;
-    'selected'?: boolean;
-    'simple'?: boolean;
-    'size'?: string;
-    'type'?: "a"|"button"|"stencil-route-link";
-    'value'?: string;
-    'valueLabel'?: string;
-    'wrap'?: boolean;
-  }
-  interface StellarKeyframes extends JSXBase.HTMLAttributes {
-    'frame'?: number;
-    'height'?: number;
-    'src'?: string;
-    'width'?: number;
-  }
-  interface StellarLabel extends JSXBase.HTMLAttributes {
-    'for'?: string;
-    'size'?: string;
-    'underneath'?: boolean;
-  }
-  interface StellarLayout extends JSXBase.HTMLAttributes {
-    'align'?: "baseline"|"center"|"top"|"bottom";
-    'padding'?: "none"|"tiny"|"small"|"medium"|"large";
-    'size'?: "tiny"|"small"|"medium"|"large"|"full"|"flush";
-    'type'?: string;
-  }
-  interface StellarMarkdown extends JSXBase.HTMLAttributes {
-    /**
-    * Used to set
-    */
-    'codeString'?: string;
-    'editable'?: boolean;
-    'flavor'?: "github"|"original"|"vanilla";
-    /**
-    * Used to reference an external markdown file
-    */
-    'src'?: string;
-  }
-  interface StellarMessage extends JSXBase.HTMLAttributes {
-    'closable'?: boolean;
-    'name'?: string;
-    'remember'?: boolean;
-    'shown'?: boolean;
-    'size'?: "full"|"default";
-    'striped'?: boolean;
-    'type'?: "alert"|"error"|"info"|"success";
-  }
-  interface StellarPagination extends JSXBase.HTMLAttributes {
-    'color'?: string;
-    'current'?: number;
-    'onChanged'?: (event: CustomEvent<any>) => void;
-    'padding'?: number;
-    /**
-    * Public: Sets the max cap of pages you can skip through
-    */
-    'pages'?: number;
-    'type'?: "full"|"compact";
-    'url'?: any;
-  }
-  interface StellarParallax extends JSXBase.HTMLAttributes {}
-  interface StellarParallaxSection extends JSXBase.HTMLAttributes {
-    'layer'?: number;
-    'percentage'?: number;
-    'speed'?: number;
-  }
-  interface StellarPasswordRequirements extends JSXBase.HTMLAttributes {
-    'for'?: string;
-    'size'?: "tiny"|"small"|"large";
-  }
-  interface StellarPlaylist extends JSXBase.HTMLAttributes {
-    'artwork'?: boolean;
-    'autoplay'?: boolean;
-    'load'?: boolean;
-    'loading'?: boolean;
-    'name'?: string;
-    'onLoad_songs'?: (event: CustomEvent<any>) => void;
-    'playing'?: boolean;
-    'playlist'?: "show"|"hide";
-    'remember'?: boolean;
-    'view'?: "playlist"|"art";
-    'visualizationColor'?: string;
-    'visualizationType'?: "bars"|"bars2"|"wave"|"circle";
-  }
-  interface StellarProgress extends JSXBase.HTMLAttributes {
-    'blurable'?: boolean;
-    /**
-    * Allows the progress bar to be clicked on, to help the user to navigate through the progressing content.
-    */
-    'editable'?: boolean;
-    /**
-    * Sets the maximum cap for steps in the progress bar
-    */
-    'indeterminate'?: boolean;
-    /**
-    * Sets the maximum cap for steps in the progress bar
-    */
-    'max'?: number;
-    /**
-    * eliminates the easing in the css so you can apply value updates without jitter.
-    */
-    'noease'?: boolean;
-    'onChange'?: (event: CustomEvent<any>) => void;
-    /**
-    * eliminates the easing in the css so you can apply value updates without jitter.
-    */
-    'rounded'?: boolean;
-    /**
-    * Sets the value of the progress bar
-    */
-    'secondary'?: number;
-    /**
-    * Renders if this element is slender or not
-    */
-    'slender'?: boolean;
-    /**
-    * Sets the value of the progress bar
-    */
-    'value'?: number;
-  }
-  interface StellarReveal extends JSXBase.HTMLAttributes {
-    'active'?: boolean;
-    'animation'?: "fadeIn"|"fadeInUp"|"fadeInDown";
-    'delay'?: number;
-    'outAnimation'?: "fadeOut"|"fadeOutUp"|"fadeOutDown";
-    'timing'?: number;
-  }
-  interface StellarScatter extends JSXBase.HTMLAttributes {
-    'colors'?: boolean;
-    'float'?: boolean;
-    'max'?: number;
-    'min'?: number;
-    'sizes'?: boolean;
-  }
-  interface StellarScrollZRoot extends JSXBase.HTMLAttributes {
-    'cameraSpeed'?: number;
-    'cameraZ'?: number;
-    'initialOriginX'?: number;
-    'initialOriginY'?: number;
-    'itemZ'?: number;
-    'scenePerspective'?: number;
-  }
-  interface StellarScrollZSection extends JSXBase.HTMLAttributes {}
-  interface StellarSelect extends JSXBase.HTMLAttributes {
-    'default'?: any;
-    'description'?: string;
-    'focused'?: boolean;
-    'footer'?: boolean;
-    'inline'?: boolean;
-    'label'?: string;
-    'multiple'?: boolean;
-    'name'?: string|boolean;
-    'novalidate'?: boolean;
-    'onChange'?: (event: CustomEvent<any>) => void;
-    'open'?: boolean;
-    'other'?: boolean;
-    'overlay'?: boolean;
-    'placeholder'?: string;
-    'placeholderInverted'?: boolean;
-    'processing'?: boolean;
-    'required'?: boolean;
-    'size'?: string;
-    'tooltip'?: string;
-    'value'?: Array<string>|string;
-    'valueLabel'?: string;
-    'verbiage'?: string;
-    'verbiageAn'?: boolean;
-  }
-  interface StellarSlide extends JSXBase.HTMLAttributes {}
-  interface StellarSlides extends JSXBase.HTMLAttributes {
-    'autoHeight'?: boolean;
-    'centeredSlides'?: boolean;
-    'direction'?: "horizontal"|"vertical";
-    'effect'?: "slide"|"fade"|"cube"|"coverflow"|"flip";
-    'loop'?: boolean;
-    'nested'?: boolean;
-    /**
-    * Emitted after the active slide has changed.
-    */
-    'onIonSlideDidChange'?: (event: CustomEvent<any>) => void;
-    /**
-    * Emitted when the slider is actively being moved.
-    */
-    'onIonSlideDrag'?: (event: CustomEvent<any>) => void;
-    /**
-    * Emitted when the next slide has ended.
-    */
-    'onIonSlideNextEnd'?: (event: CustomEvent<any>) => void;
-    /**
-    * Emitted when the next slide has started.
-    */
-    'onIonSlideNextStart'?: (event: CustomEvent<any>) => void;
-    /**
-    * Emitted when the previous slide has ended.
-    */
-    'onIonSlidePrevEnd'?: (event: CustomEvent<any>) => void;
-    /**
-    * Emitted when the previous slide has started.
-    */
-    'onIonSlidePrevStart'?: (event: CustomEvent<any>) => void;
-    /**
-    * Emitted when the slider is at the last slide.
-    */
-    'onIonSlideReachEnd'?: (event: CustomEvent<any>) => void;
-    /**
-    * Emitted when the slider is at its initial position.
-    */
-    'onIonSlideReachStart'?: (event: CustomEvent<any>) => void;
-    /**
-    * Emitted when the user releases the touch.
-    */
-    'onIonSlideTouchEnd'?: (event: CustomEvent<any>) => void;
-    /**
-    * Emitted when the user first touches the slider.
-    */
-    'onIonSlideTouchStart'?: (event: CustomEvent<any>) => void;
-    /**
-    * Emitted when the slide transition has ended.
-    */
-    'onIonSlideTransitionEnd'?: (event: CustomEvent<any>) => void;
-    /**
-    * Emitted when the slide transition has started.
-    */
-    'onIonSlideTransitionStart'?: (event: CustomEvent<any>) => void;
-    /**
-    * Emitted before the active slide has changed.
-    */
-    'onIonSlideWillChange'?: (event: CustomEvent<any>) => void;
-    /**
-    * Options to pass to the swiper instance. See http://idangero.us/swiper/api/ for valid options
-    */
-    'options'?: any;
-    /**
-    * Show or hide the pager
-    */
-    'pager'?: boolean;
-    'pagination'?: boolean;
-    'slidesPerView'?: number;
-    'spaceBetween'?: number;
-    'speed'?: number;
-    'watchSlidesProgress'?: boolean;
-    'watchSlidesVisibility'?: boolean;
-  }
-  interface StellarSong extends JSXBase.HTMLAttributes {
-    'artwork'?: boolean;
-    'onLoaded'?: (event: CustomEvent<any>) => void;
-    'onSongChanged'?: (event: CustomEvent<any>) => void;
-    'playing'?: boolean;
-    'src'?: string;
-  }
-  interface StellarStarscape extends JSXBase.HTMLAttributes {}
-  interface StellarStep extends JSXBase.HTMLAttributes {
-    'disabled'?: boolean;
-    'href'?: string;
-    'onContentChange'?: (event: CustomEvent<any>) => void;
-    'open'?: boolean;
-    'order'?: number;
-    'tabCount'?: number;
-  }
-  interface StellarSteps extends JSXBase.HTMLAttributes {
-    'name'?: string;
-  }
-  interface StellarStory extends JSXBase.HTMLAttributes {
-    'target'?: string;
-  }
-  interface StellarStripe extends JSXBase.HTMLAttributes {
-    'name'?: string;
-    'token'?: string;
-  }
-  interface StellarSwitch extends JSXBase.HTMLAttributes {
-    'checked'?: boolean;
-    'checkedDefault'?: boolean;
-    'onChange'?: (event: CustomEvent<any>) => void;
-  }
-  interface StellarTab extends JSXBase.HTMLAttributes {
-    'disabled'?: boolean;
-    'href'?: string;
-    'notifications'?: boolean|number;
-    'onContentChange'?: (event: CustomEvent<any>) => void;
-    'open'?: boolean;
-    'order'?: number;
-    'tabCount'?: number;
-    'tag'?: string;
-  }
-  interface StellarTable extends JSXBase.HTMLAttributes {
-    'chart'?: boolean;
-    'name'?: string;
-    'striped'?: boolean;
-    'upgrade'?: boolean;
-  }
-  interface StellarTabs extends JSXBase.HTMLAttributes {
-    'behavior'?: string;
-    'block'?: boolean;
-    'height'?: string;
-    'name'?: string;
-    'noanimation'?: boolean;
-    'size'?: string|"tiny"|"small"|"medium"|"large";
-    'vertical'?: boolean;
-  }
-  interface StellarTag extends JSXBase.HTMLAttributes {
-    'color'?: string;
-    'outline'?: boolean;
-    'pill'?: boolean;
-    'size'?: string;
-    'textColor'?: string;
-  }
-  interface StellarToggle extends JSXBase.HTMLAttributes {
-    'card'?: any;
-    'description'?: string;
-    'flip'?: boolean;
-    'label'?: string;
-    'name'?: string;
-    'novalidate'?: boolean;
-    'onChange'?: (event: CustomEvent<any>) => void;
-    'required'?: boolean;
-    'single'?: boolean;
-    'size'?: string;
-    'stacked'?: boolean;
-    'type'?: string|"checkbox"|"radio"|"radio-block"|"checkbox-block";
-    'value'?: string|string[];
-  }
-  interface StellarToggleOption extends JSXBase.HTMLAttributes {
-    'checked'?: boolean;
-    'checkedDefault'?: boolean;
-    'default'?: string;
-    'disabled'?: boolean;
-    'for'?: string;
-    'icon'?: boolean;
-    'inline'?: boolean;
-    'name'?: string;
-    'onChange'?: (event: CustomEvent<any>) => void;
-    'required'?: boolean;
-    'selectedCopy'?: string;
-    'single'?: boolean;
-    'size'?: boolean;
-    'tooltip'?: string;
-    'type'?: string;
-    'value'?: string;
-  }
-  interface StellarTooltip extends JSXBase.HTMLAttributes {
-    'align'?: "left"|"center"|"right"|"middle-left"|"middle-center"|"middle-right"|"bottom-left"|"bottom-center"|"bottom-right";
-  }
-  interface StellarUnit extends JSXBase.HTMLAttributes {
-    'decimals'?: number;
-    'from'?: string;
-    'round'?: boolean;
-    'to'?: string;
-    'value'?: number;
-  }
-  interface StellarVideo extends JSXBase.HTMLAttributes {
-    'autoplay'?: boolean;
-    'controls'?: boolean;
-    'height'?: number;
-    'muted'?: boolean;
-    'onLoaded'?: (event: CustomEvent<any>) => void;
-    'onPaused'?: (event: CustomEvent<any>) => void;
-    'onPlayed'?: (event: CustomEvent<any>) => void;
-    'onTimeupdate'?: (event: CustomEvent<any>) => void;
-    'overlay'?: boolean;
-    'playing'?: boolean;
-    'playsinline'?: boolean;
-    'poster'?: string;
-    'preload'?: string;
-    'trackInView'?: boolean;
-    'video_tag'?: HTMLVideoElement;
-    'width'?: number;
-  }
-  interface StellarVideoInterview extends JSXBase.HTMLAttributes {
-    'aspectRatio'?: number;
-    'color'?: string;
-    'height'?: number;
-    'playing'?: boolean;
-    'src'?: string;
-    'visualization'?: "circle"|"bars"|"wave"|"bars2";
-    'width'?: number;
-  }
-  interface WebAudio extends JSXBase.HTMLAttributes {
-    'autoplay'?: Boolean;
-    'midi'?: Boolean;
-    'name'?: string;
-  }
-  interface WebAudioDebugger extends JSXBase.HTMLAttributes {
-    'count'?: number;
-  }
-  interface WebAudioEffect extends JSXBase.HTMLAttributes {
-    'axis'?: string;
-    'method'?: string;
-    'midicontroller'?: number;
-    'responds'?: string;
-    'type'?: string;
-    'use'?: string;
-    'value'?: number;
-  }
-  interface WebAudioSequencer extends JSXBase.HTMLAttributes {
-    'autoplay'?: boolean;
-    'custom'?: Function;
-    'name'?: string;
-    'taps'?: number;
-    'tempo'?: number;
-  }
-  interface WebAudioSource extends JSXBase.HTMLAttributes {
-    'effectsvolume'?: number;
-    'inert'?: boolean;
-    'midichannel'?: number;
-    'midikey'?: number;
-    'name'?: string;
-    'onTimeupdate'?: (event: CustomEvent<any>) => void;
-    'playing'?: boolean;
-    'src'?: string;
-  }
-  interface WebAudioVisualizer extends JSXBase.HTMLAttributes {
-    '_color'?: any;
-    'analyser'?: AnalyserNode;
-    'color'?: string;
-    'for'?: string;
-    'height'?: number;
-    'renderer'?: AnalyserNode;
-    'size'?: number;
-    'smoothing'?: number;
-    'type'?: string|"wave"|"bars"|"circle"|"bars2";
-    'width'?: number;
-  }
-  interface WebAudioVisualizerShader extends JSXBase.HTMLAttributes {
-    'type'?: string;
-  }
-
-  interface IntrinsicElements {
-    'copy-wrap': CopyWrap;
-    'skeleton-img': SkeletonImg;
-    'skeleton-text': SkeletonText;
-    'stellar-360-image': Stellar360Image;
-    'stellar-360-video': Stellar360Video;
-    'stellar-accordion': StellarAccordion;
-    'stellar-animate-text': StellarAnimateText;
-    'stellar-asset': StellarAsset;
-    'stellar-asset-library': StellarAssetLibrary;
-    'stellar-avatar': StellarAvatar;
-    'stellar-blur': StellarBlur;
-    'stellar-breadcrumb': StellarBreadcrumb;
-    'stellar-breadcrumbs': StellarBreadcrumbs;
-    'stellar-button': StellarButton;
-    'stellar-callout': StellarCallout;
-    'stellar-card': StellarCard;
-    'stellar-chart': StellarChart;
-    'stellar-code': StellarCode;
-    'stellar-color-library': StellarColorLibrary;
-    'stellar-color-picker': StellarColorPicker;
-    'stellar-comment': StellarComment;
-    'stellar-comments': StellarComments;
-    'stellar-content': StellarContent;
-    'stellar-dropdown': StellarDropdown;
-    'stellar-follow': StellarFollow;
-    'stellar-form': StellarForm;
-    'stellar-grid': StellarGrid;
-    'stellar-group': StellarGroup;
-    'stellar-group-overflow': StellarGroupOverflow;
-    'stellar-image': StellarImage;
-    'stellar-input': StellarInput;
-    'stellar-interview': StellarInterview;
-    'stellar-interview-line': StellarInterviewLine;
-    'stellar-item': StellarItem;
-    'stellar-keyframes': StellarKeyframes;
-    'stellar-label': StellarLabel;
-    'stellar-layout': StellarLayout;
-    'stellar-markdown': StellarMarkdown;
-    'stellar-message': StellarMessage;
-    'stellar-pagination': StellarPagination;
-    'stellar-parallax': StellarParallax;
-    'stellar-parallax-section': StellarParallaxSection;
-    'stellar-password-requirements': StellarPasswordRequirements;
-    'stellar-playlist': StellarPlaylist;
-    'stellar-progress': StellarProgress;
-    'stellar-reveal': StellarReveal;
-    'stellar-scatter': StellarScatter;
-    'stellar-scroll-z-root': StellarScrollZRoot;
-    'stellar-scroll-z-section': StellarScrollZSection;
-    'stellar-select': StellarSelect;
-    'stellar-slide': StellarSlide;
-    'stellar-slides': StellarSlides;
-    'stellar-song': StellarSong;
-    'stellar-starscape': StellarStarscape;
-    'stellar-step': StellarStep;
-    'stellar-steps': StellarSteps;
-    'stellar-story': StellarStory;
-    'stellar-stripe': StellarStripe;
-    'stellar-switch': StellarSwitch;
-    'stellar-tab': StellarTab;
-    'stellar-table': StellarTable;
-    'stellar-tabs': StellarTabs;
-    'stellar-tag': StellarTag;
-    'stellar-toggle': StellarToggle;
-    'stellar-toggle-option': StellarToggleOption;
-    'stellar-tooltip': StellarTooltip;
-    'stellar-unit': StellarUnit;
-    'stellar-video': StellarVideo;
-    'stellar-video-interview': StellarVideoInterview;
-    'web-audio': WebAudio;
-    'web-audio-debugger': WebAudioDebugger;
-    'web-audio-effect': WebAudioEffect;
-    'web-audio-sequencer': WebAudioSequencer;
-    'web-audio-source': WebAudioSource;
-    'web-audio-visualizer': WebAudioVisualizer;
-    'web-audio-visualizer-shader': WebAudioVisualizerShader;
-  }
-}
-
-export { LocalJSX as JSX };
-
-
-declare module "@stencil/core" {
-  export namespace JSX {
-    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
-  }
-}
-
-
 declare global {
 
   // Adding a global JSX for backcompatibility with legacy dependencies
   export namespace JSX {
     export interface Element {}
   }
-
 
 
   interface HTMLCopyWrapElement extends Components.CopyWrap, HTMLStencilElement {}
@@ -2247,7 +1348,6 @@ declare global {
     prototype: HTMLWebAudioVisualizerShaderElement;
     new (): HTMLWebAudioVisualizerShaderElement;
   };
-
   interface HTMLElementTagNameMap {
     'copy-wrap': HTMLCopyWrapElement;
     'skeleton-img': HTMLSkeletonImgElement;
@@ -2326,7 +1426,903 @@ declare global {
     'web-audio-visualizer': HTMLWebAudioVisualizerElement;
     'web-audio-visualizer-shader': HTMLWebAudioVisualizerShaderElement;
   }
-
-  interface ElementTagNameMap extends HTMLElementTagNameMap {}
 }
+
+declare namespace LocalJSX {
+  interface CopyWrap extends JSXBase.HTMLAttributes<HTMLCopyWrapElement> {
+    'align'?: string;
+    'full'?: boolean;
+  }
+  interface SkeletonImg extends JSXBase.HTMLAttributes<HTMLSkeletonImgElement> {
+    'block'?: boolean;
+    'height'?: number;
+    'icon'?: boolean;
+    'loading'?: boolean;
+    'width'?: number;
+  }
+  interface SkeletonText extends JSXBase.HTMLAttributes<HTMLSkeletonTextElement> {
+    'as'?: string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p';
+    'loading'?: boolean;
+    'width'?: number;
+  }
+  interface Stellar360Image extends JSXBase.HTMLAttributes<HTMLStellar360ImageElement> {
+    'height'?: number;
+    'nolazyload'?: boolean;
+    'poster'?: string;
+    'src'?: string;
+    'width'?: number;
+  }
+  interface Stellar360Video extends JSXBase.HTMLAttributes<HTMLStellar360VideoElement> {
+    'height'?: number;
+    'poster'?: string;
+    'src'?: string;
+    'width'?: number;
+  }
+  interface StellarAccordion extends JSXBase.HTMLAttributes<HTMLStellarAccordionElement> {
+    'label'?: string;
+    'name'?: string;
+    'open'?: boolean;
+    'tight'?: boolean;
+  }
+  interface StellarAnimateText extends JSXBase.HTMLAttributes<HTMLStellarAnimateTextElement> {
+    'method'?: string|"glitch"|"lettering"|"weight"|"fade";
+  }
+  interface StellarAsset extends JSXBase.HTMLAttributes<HTMLStellarAssetElement> {
+    'align'?: string;
+    'ariaLabel'?: string;
+    'block'?: boolean;
+    'language'?: string;
+    'name'?: string;
+    'src'?: string;
+  }
+  interface StellarAssetLibrary extends JSXBase.HTMLAttributes<HTMLStellarAssetLibraryElement> {}
+  interface StellarAvatar extends JSXBase.HTMLAttributes<HTMLStellarAvatarElement> {
+    'color'?: string;
+    'initials'?: string;
+    'name'?: string;
+    'processing'?: boolean;
+    'shape'?: "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
+    'size'?: string;
+    'src'?: string;
+    'tooltip'?: boolean;
+  }
+  interface StellarBlur extends JSXBase.HTMLAttributes<HTMLStellarBlurElement> {
+    'horizontal'?: number;
+    'vertical'?: number;
+  }
+  interface StellarBreadcrumb extends JSXBase.HTMLAttributes<HTMLStellarBreadcrumbElement> {
+    'color'?: string;
+    'disabled'?: boolean;
+    'first'?: boolean;
+    'href'?: string;
+    'label'?: string;
+    'last'?: boolean;
+    'target'?: string;
+  }
+  interface StellarBreadcrumbs extends JSXBase.HTMLAttributes<HTMLStellarBreadcrumbsElement> {
+    'color'?: string;
+    'description'?: string;
+    'home'?: string;
+    'icon'?: string;
+    'icon_size'?: number;
+    'icon_src'?: string;
+    'label'?: string;
+  }
+  interface StellarButton extends JSXBase.HTMLAttributes<HTMLStellarButtonElement> {
+    /**
+    * Sets the button or link as an active state.
+    */
+    'active'?: boolean;
+    /**
+    * Sets the button or link to render at full width to the parent.
+    */
+    'block'?: boolean;
+    /**
+    * Sets the button or link to provide the affordance of a dangerous action.
+    */
+    'danger'?: boolean;
+    /**
+    * Sets the button or link as disabled and not-interactable.
+    */
+    'disabled'?: boolean;
+    /**
+    * Sets the href on the anchor tag if the button is a link.
+    */
+    'for'?: string;
+    'ghost'?: boolean;
+    /**
+    * Sets the href on the anchor tag if the button is a link.
+    */
+    'href'?: string;
+    /**
+    * Sets the button or link as a button with only an icon.
+    */
+    'icon'?: boolean;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'invert'?: boolean;
+    /**
+    * Sets accessibility options on the buttons
+    */
+    'label'?: string;
+    /**
+    * Sets the name on the button if the button is an input. Allows the button to act as an item in a form.
+    */
+    'name'?: string;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'outline'?: boolean;
+    /**
+    * Sets the padding inside of the button. Can be small, medium, or large.
+    */
+    'padding'?: string|"small"|"medium"|"large";
+    /**
+    * Sets the button or link to render as a pill.
+    */
+    'pill'?: boolean;
+    /**
+    * Sets the button or link as processing when clicked.
+    */
+    'processable'?: boolean;
+    /**
+    * Sets the size of the button. Can be tiny, small, medium, or large.
+    */
+    'size'?: string|"tiny"|"small"|"medium"|"large";
+    /**
+    * Allows the button to render for different tags.
+    */
+    'tag'?: "button"|"submit"|"link"|"span"|"route-link";
+    /**
+    * Sets the target on the anchor tag if the button is a link.
+    */
+    'target'?: string;
+    /**
+    * Sets the value on the button if the button is an input.
+    */
+    'value'?: string;
+  }
+  interface StellarCallout extends JSXBase.HTMLAttributes<HTMLStellarCalloutElement> {
+    'type'?: "alert"|"error"|"info"|"success"|"default";
+  }
+  interface StellarCard extends JSXBase.HTMLAttributes<HTMLStellarCardElement> {
+    /**
+    * Sets the href on the anchor tag if the button is a link.
+    */
+    'flip_icon'?: string;
+    /**
+    * Let's a card be flippable
+    */
+    'flippable'?: boolean;
+    /**
+    * Renders a flipped card
+    */
+    'flipped'?: boolean;
+    /**
+    * Sets the href on the anchor tag if the button is a link.
+    */
+    'for'?: string;
+    /**
+    * Sets the href if the card is a link.
+    */
+    'href'?: string;
+    /**
+    * Sets the name if the card is a button.
+    */
+    'name'?: string;
+    'onFlip'?: (event: CustomEvent<any>) => void;
+    /**
+    * Sets the padding inside of the button. Can be small, medium, or large.
+    */
+    'padding'?: string|"small"|"medium"|"large";
+    /**
+    * Renders a shadow on the card
+    */
+    'shadow'?: string|"light"|"medium"|"heavy";
+    /**
+    * Sets the element to render the card as - an anchor tag, a button, or a div.
+    */
+    'tag'?: "stencil-route-link"|"a"|"button"|"div";
+    'transition'?: boolean;
+    /**
+    * Sets the element to render the card as - an anchor tag, a button, or a div.
+    */
+    'type'?: string;
+    /**
+    * Sets the value if the card is a button.
+    */
+    'value'?: string;
+  }
+  interface StellarChart extends JSXBase.HTMLAttributes<HTMLStellarChartElement> {
+    'config'?: HighchartsModel;
+    'for'?: string;
+    'remote'?: string;
+    'type'?: "area"|"areaspline"|"bar"|"bubble"|"column"|"line"|"pie"|"polygon"|"scatter"|"spline"|"waterfall";
+  }
+  interface StellarCode extends JSXBase.HTMLAttributes<HTMLStellarCodeElement> {
+    'codeString'?: string;
+    'copy'?: boolean;
+    'expandable'?: boolean;
+    'expanded'?: boolean;
+    'feature'?: boolean;
+    'language'?: string;
+    'preview'?: boolean;
+    'simple'?: boolean;
+  }
+  interface StellarColorLibrary extends JSXBase.HTMLAttributes<HTMLStellarColorLibraryElement> {}
+  interface StellarColorPicker extends JSXBase.HTMLAttributes<HTMLStellarColorPickerElement> {
+    'notransparent'?: boolean;
+    'onChange'?: (event: CustomEvent<any>) => void;
+    'val'?: string;
+  }
+  interface StellarComment extends JSXBase.HTMLAttributes<HTMLStellarCommentElement> {
+    'content'?: any;
+    'name'?: any;
+  }
+  interface StellarComments extends JSXBase.HTMLAttributes<HTMLStellarCommentsElement> {}
+  interface StellarContent extends JSXBase.HTMLAttributes<HTMLStellarContentElement> {
+    'behavior'?: string;
+    'for'?: string;
+    'open'?: boolean;
+  }
+  interface StellarDropdown extends JSXBase.HTMLAttributes<HTMLStellarDropdownElement> {
+    'icon'?: boolean;
+    'label'?: string;
+    'open'?: boolean;
+    'position'?: "left"|"center"|"right";
+  }
+  interface StellarFollow extends JSXBase.HTMLAttributes<HTMLStellarFollowElement> {
+    'distance'?: number;
+    'padding'?: number;
+    'type'?: "scroll"|"cursor";
+  }
+  interface StellarForm extends JSXBase.HTMLAttributes<HTMLStellarFormElement> {
+    'acceptCharset'?: string;
+    'action'?: string;
+    'ajax'?: boolean;
+    'autocomplete'?: string;
+    'enctype'?: string;
+    'method'?: string;
+    'name'?: string;
+    'novalidate'?: boolean;
+    'onSubmit'?: (event: CustomEvent<any>) => void;
+    'target'?: string;
+  }
+  interface StellarGrid extends JSXBase.HTMLAttributes<HTMLStellarGridElement> {
+    'align'?: string;
+    'cols'?: number|string;
+    'compact'?: boolean;
+    'onOrderChanged'?: (event: CustomEvent<any>) => void;
+    'padding'?: boolean;
+    'responsive'?: boolean|string;
+    'swappable'?: boolean;
+    'swappableSelector'?: string;
+  }
+  interface StellarGroup extends JSXBase.HTMLAttributes<HTMLStellarGroupElement> {
+    'count'?: number;
+    'overflow'?: boolean;
+    'size'?: string;
+  }
+  interface StellarGroupOverflow extends JSXBase.HTMLAttributes<HTMLStellarGroupOverflowElement> {
+    'count'?: number;
+    'size'?: string;
+  }
+  interface StellarImage extends JSXBase.HTMLAttributes<HTMLStellarImageElement> {
+    'bg'?: string;
+    'height'?: number;
+    'large'?: string;
+    'nozoom'?: boolean;
+    'poster'?: string;
+    'type'?: "background"|"picture";
+    'width'?: number;
+  }
+  interface StellarInput extends JSXBase.HTMLAttributes<HTMLStellarInputElement> {
+    'accept'?: string;
+    'autocomplete'?: string;
+    'autofocus'?: boolean;
+    'color'?: string;
+    'cols'?: number;
+    'dateType'?: "month"|"year"|"day";
+    /**
+    * The pre-set value to pass to the input element
+    */
+    'default'?: any;
+    'description'?: string;
+    'disabled'?: boolean;
+    'droppable'?: boolean;
+    'files'?: Array<any>;
+    'focused'?: boolean;
+    'icon'?: boolean;
+    'label'?: string;
+    'match'?: string;
+    'max'?: number;
+    'maxlength'?: number;
+    'min'?: number;
+    'multiple'?: boolean;
+    'multipleFileCaption'?: string;
+    /**
+    * The name of the input element
+    */
+    'name'?: string;
+    'novalidate'?: boolean;
+    /**
+    * Public: Blur event
+    */
+    'onBluring'?: (event: CustomEvent<any>) => void;
+    /**
+    * Public: Changed event
+    */
+    'onChange'?: (event: CustomEvent<any>) => void;
+    /**
+    * Public: Focus event
+    */
+    'onFocusing'?: (event: CustomEvent<any>) => void;
+    'placeholder'?: string;
+    'readonly'?: boolean;
+    'replace_placeholder'?: string;
+    'required'?: boolean;
+    /**
+    * The pre-set value to pass to the input element
+    */
+    'requirements'?: boolean;
+    'rows'?: number;
+    'size'?: string;
+    'spellcheck'?: boolean;
+    'step'?: number;
+    'tokenField'?: any;
+    'tooltip'?: string;
+    /**
+    * The kind of element that the Input should be rendered as
+    */
+    'type'?: string;
+    'validates'?: string;
+    /**
+    * The pre-set value to pass to the input element
+    */
+    'value'?: any;
+    'wrap'?: string;
+  }
+  interface StellarInterview extends JSXBase.HTMLAttributes<HTMLStellarInterviewElement> {
+    'aspectRatio'?: number;
+    'color'?: string;
+    'height'?: number;
+    'playing'?: boolean;
+    'src'?: string;
+    'visualization'?: "circle"|"bars"|"wave"|"bars2";
+    'width'?: number;
+  }
+  interface StellarInterviewLine extends JSXBase.HTMLAttributes<HTMLStellarInterviewLineElement> {
+    'complement'?: boolean;
+    'in'?: number;
+    'out'?: number;
+  }
+  interface StellarItem extends JSXBase.HTMLAttributes<HTMLStellarItemElement> {
+    'danger'?: boolean;
+    'fit'?: boolean;
+    'focused'?: boolean;
+    'history'?: RouterHistory;
+    'href'?: string;
+    'label'?: string;
+    'location'?: LocationSegments;
+    'multiple'?: boolean;
+    'onBlurChanged'?: (event: CustomEvent<any>) => void;
+    'onFocusChanged'?: (event: CustomEvent<any>) => void;
+    'onMounted'?: (event: CustomEvent<any>) => void;
+    'onSelectionChanged'?: (event: CustomEvent<any>) => void;
+    'route'?: boolean;
+    'selectable'?: boolean;
+    'selected'?: boolean;
+    'simple'?: boolean;
+    'size'?: string;
+    'type'?: "a"|"button"|"stencil-route-link";
+    'value'?: string;
+    'valueLabel'?: string;
+    'wrap'?: boolean;
+  }
+  interface StellarKeyframes extends JSXBase.HTMLAttributes<HTMLStellarKeyframesElement> {
+    'frame'?: number;
+    'height'?: number;
+    'src'?: string;
+    'width'?: number;
+  }
+  interface StellarLabel extends JSXBase.HTMLAttributes<HTMLStellarLabelElement> {
+    'for'?: string;
+    'size'?: string;
+    'underneath'?: boolean;
+  }
+  interface StellarLayout extends JSXBase.HTMLAttributes<HTMLStellarLayoutElement> {
+    'align'?: "baseline"|"center"|"top"|"bottom";
+    'padding'?: "none"|"tiny"|"small"|"medium"|"large";
+    'size'?: "tiny"|"small"|"medium"|"large"|"full"|"flush";
+    'type'?: string;
+  }
+  interface StellarMarkdown extends JSXBase.HTMLAttributes<HTMLStellarMarkdownElement> {
+    /**
+    * Used to set
+    */
+    'codeString'?: string;
+    'editable'?: boolean;
+    'flavor'?: "github"|"original"|"vanilla";
+    /**
+    * Used to reference an external markdown file
+    */
+    'src'?: string;
+  }
+  interface StellarMessage extends JSXBase.HTMLAttributes<HTMLStellarMessageElement> {
+    'closable'?: boolean;
+    'name'?: string;
+    'remember'?: boolean;
+    'shown'?: boolean;
+    'size'?: "full"|"default";
+    'striped'?: boolean;
+    'type'?: "alert"|"error"|"info"|"success";
+  }
+  interface StellarPagination extends JSXBase.HTMLAttributes<HTMLStellarPaginationElement> {
+    'color'?: string;
+    'current'?: number;
+    'onChanged'?: (event: CustomEvent<any>) => void;
+    'padding'?: number;
+    /**
+    * Public: Sets the max cap of pages you can skip through
+    */
+    'pages'?: number;
+    'type'?: "full"|"compact";
+    'url'?: any;
+  }
+  interface StellarParallax extends JSXBase.HTMLAttributes<HTMLStellarParallaxElement> {}
+  interface StellarParallaxSection extends JSXBase.HTMLAttributes<HTMLStellarParallaxSectionElement> {
+    'layer'?: number;
+    'percentage'?: number;
+    'speed'?: number;
+  }
+  interface StellarPasswordRequirements extends JSXBase.HTMLAttributes<HTMLStellarPasswordRequirementsElement> {
+    'for'?: string;
+    'size'?: "tiny"|"small"|"large";
+  }
+  interface StellarPlaylist extends JSXBase.HTMLAttributes<HTMLStellarPlaylistElement> {
+    'artwork'?: boolean;
+    'autoplay'?: boolean;
+    'load'?: boolean;
+    'loading'?: boolean;
+    'name'?: string;
+    'onLoad_songs'?: (event: CustomEvent<any>) => void;
+    'playing'?: boolean;
+    'playlist'?: "show"|"hide";
+    'remember'?: boolean;
+    'view'?: "playlist"|"art";
+    'visualizationColor'?: string;
+    'visualizationType'?: "bars"|"bars2"|"wave"|"circle";
+  }
+  interface StellarProgress extends JSXBase.HTMLAttributes<HTMLStellarProgressElement> {
+    'blurable'?: boolean;
+    /**
+    * Allows the progress bar to be clicked on, to help the user to navigate through the progressing content.
+    */
+    'editable'?: boolean;
+    /**
+    * Sets the maximum cap for steps in the progress bar
+    */
+    'indeterminate'?: boolean;
+    /**
+    * Sets the maximum cap for steps in the progress bar
+    */
+    'max'?: number;
+    /**
+    * eliminates the easing in the css so you can apply value updates without jitter.
+    */
+    'noease'?: boolean;
+    'onChange'?: (event: CustomEvent<any>) => void;
+    /**
+    * eliminates the easing in the css so you can apply value updates without jitter.
+    */
+    'rounded'?: boolean;
+    /**
+    * Sets the value of the progress bar
+    */
+    'secondary'?: number;
+    /**
+    * Renders if this element is slender or not
+    */
+    'slender'?: boolean;
+    /**
+    * Sets the value of the progress bar
+    */
+    'value'?: number;
+  }
+  interface StellarReveal extends JSXBase.HTMLAttributes<HTMLStellarRevealElement> {
+    'active'?: boolean;
+    'animation'?: "fadeIn"|"fadeInUp"|"fadeInDown";
+    'delay'?: number;
+    'outAnimation'?: "fadeOut"|"fadeOutUp"|"fadeOutDown";
+    'timing'?: number;
+  }
+  interface StellarScatter extends JSXBase.HTMLAttributes<HTMLStellarScatterElement> {
+    'colors'?: boolean;
+    'float'?: boolean;
+    'max'?: number;
+    'min'?: number;
+    'sizes'?: boolean;
+  }
+  interface StellarScrollZRoot extends JSXBase.HTMLAttributes<HTMLStellarScrollZRootElement> {
+    'cameraSpeed'?: number;
+    'cameraZ'?: number;
+    'initialOriginX'?: number;
+    'initialOriginY'?: number;
+    'itemZ'?: number;
+    'scenePerspective'?: number;
+  }
+  interface StellarScrollZSection extends JSXBase.HTMLAttributes<HTMLStellarScrollZSectionElement> {}
+  interface StellarSelect extends JSXBase.HTMLAttributes<HTMLStellarSelectElement> {
+    'default'?: any;
+    'description'?: string;
+    'focused'?: boolean;
+    'footer'?: boolean;
+    'inline'?: boolean;
+    'label'?: string;
+    'multiple'?: boolean;
+    'name'?: string|boolean;
+    'novalidate'?: boolean;
+    'onChange'?: (event: CustomEvent<any>) => void;
+    'open'?: boolean;
+    'other'?: boolean;
+    'overlay'?: boolean;
+    'placeholder'?: string;
+    'placeholderInverted'?: boolean;
+    'processing'?: boolean;
+    'required'?: boolean;
+    'size'?: string;
+    'tooltip'?: string;
+    'value'?: Array<string>|string;
+    'valueLabel'?: string;
+    'verbiage'?: string;
+    'verbiageAn'?: boolean;
+  }
+  interface StellarSlide extends JSXBase.HTMLAttributes<HTMLStellarSlideElement> {}
+  interface StellarSlides extends JSXBase.HTMLAttributes<HTMLStellarSlidesElement> {
+    'autoHeight'?: boolean;
+    'centeredSlides'?: boolean;
+    'direction'?: "horizontal"|"vertical";
+    'effect'?: "slide"|"fade"|"cube"|"coverflow"|"flip";
+    'loop'?: boolean;
+    'nested'?: boolean;
+    /**
+    * Emitted after the active slide has changed.
+    */
+    'onIonSlideDidChange'?: (event: CustomEvent<any>) => void;
+    /**
+    * Emitted when the slider is actively being moved.
+    */
+    'onIonSlideDrag'?: (event: CustomEvent<any>) => void;
+    /**
+    * Emitted when the next slide has ended.
+    */
+    'onIonSlideNextEnd'?: (event: CustomEvent<any>) => void;
+    /**
+    * Emitted when the next slide has started.
+    */
+    'onIonSlideNextStart'?: (event: CustomEvent<any>) => void;
+    /**
+    * Emitted when the previous slide has ended.
+    */
+    'onIonSlidePrevEnd'?: (event: CustomEvent<any>) => void;
+    /**
+    * Emitted when the previous slide has started.
+    */
+    'onIonSlidePrevStart'?: (event: CustomEvent<any>) => void;
+    /**
+    * Emitted when the slider is at the last slide.
+    */
+    'onIonSlideReachEnd'?: (event: CustomEvent<any>) => void;
+    /**
+    * Emitted when the slider is at its initial position.
+    */
+    'onIonSlideReachStart'?: (event: CustomEvent<any>) => void;
+    /**
+    * Emitted when the user releases the touch.
+    */
+    'onIonSlideTouchEnd'?: (event: CustomEvent<any>) => void;
+    /**
+    * Emitted when the user first touches the slider.
+    */
+    'onIonSlideTouchStart'?: (event: CustomEvent<any>) => void;
+    /**
+    * Emitted when the slide transition has ended.
+    */
+    'onIonSlideTransitionEnd'?: (event: CustomEvent<any>) => void;
+    /**
+    * Emitted when the slide transition has started.
+    */
+    'onIonSlideTransitionStart'?: (event: CustomEvent<any>) => void;
+    /**
+    * Emitted before the active slide has changed.
+    */
+    'onIonSlideWillChange'?: (event: CustomEvent<any>) => void;
+    /**
+    * Options to pass to the swiper instance. See http://idangero.us/swiper/api/ for valid options
+    */
+    'options'?: any;
+    /**
+    * Show or hide the pager
+    */
+    'pager'?: boolean;
+    'pagination'?: boolean;
+    'slidesPerView'?: number;
+    'spaceBetween'?: number;
+    'speed'?: number;
+    'watchSlidesProgress'?: boolean;
+    'watchSlidesVisibility'?: boolean;
+  }
+  interface StellarSong extends JSXBase.HTMLAttributes<HTMLStellarSongElement> {
+    'artwork'?: boolean;
+    'onLoaded'?: (event: CustomEvent<any>) => void;
+    'onSongChanged'?: (event: CustomEvent<any>) => void;
+    'playing'?: boolean;
+    'src'?: string;
+  }
+  interface StellarStarscape extends JSXBase.HTMLAttributes<HTMLStellarStarscapeElement> {}
+  interface StellarStep extends JSXBase.HTMLAttributes<HTMLStellarStepElement> {
+    'disabled'?: boolean;
+    'href'?: string;
+    'onContentChange'?: (event: CustomEvent<any>) => void;
+    'open'?: boolean;
+    'order'?: number;
+    'tabCount'?: number;
+  }
+  interface StellarSteps extends JSXBase.HTMLAttributes<HTMLStellarStepsElement> {
+    'name'?: string;
+  }
+  interface StellarStory extends JSXBase.HTMLAttributes<HTMLStellarStoryElement> {
+    'target'?: string;
+  }
+  interface StellarStripe extends JSXBase.HTMLAttributes<HTMLStellarStripeElement> {
+    'name'?: string;
+    'token'?: string;
+  }
+  interface StellarSwitch extends JSXBase.HTMLAttributes<HTMLStellarSwitchElement> {
+    'checked'?: boolean;
+    'checkedDefault'?: boolean;
+    'onChange'?: (event: CustomEvent<any>) => void;
+  }
+  interface StellarTab extends JSXBase.HTMLAttributes<HTMLStellarTabElement> {
+    'disabled'?: boolean;
+    'href'?: string;
+    'notifications'?: boolean|number;
+    'onContentChange'?: (event: CustomEvent<any>) => void;
+    'open'?: boolean;
+    'order'?: number;
+    'tabCount'?: number;
+    'tag'?: string;
+  }
+  interface StellarTable extends JSXBase.HTMLAttributes<HTMLStellarTableElement> {
+    'chart'?: boolean;
+    'name'?: string;
+    'striped'?: boolean;
+    'upgrade'?: boolean;
+  }
+  interface StellarTabs extends JSXBase.HTMLAttributes<HTMLStellarTabsElement> {
+    'behavior'?: string;
+    'block'?: boolean;
+    'height'?: string;
+    'name'?: string;
+    'noanimation'?: boolean;
+    'size'?: string|"tiny"|"small"|"medium"|"large";
+    'vertical'?: boolean;
+  }
+  interface StellarTag extends JSXBase.HTMLAttributes<HTMLStellarTagElement> {
+    'color'?: string;
+    'outline'?: boolean;
+    'pill'?: boolean;
+    'size'?: string;
+    'textColor'?: string;
+  }
+  interface StellarToggle extends JSXBase.HTMLAttributes<HTMLStellarToggleElement> {
+    'card'?: any;
+    'description'?: string;
+    'flip'?: boolean;
+    'label'?: string;
+    'name'?: string;
+    'novalidate'?: boolean;
+    'onChange'?: (event: CustomEvent<any>) => void;
+    'required'?: boolean;
+    'single'?: boolean;
+    'size'?: string;
+    'stacked'?: boolean;
+    'type'?: string|"checkbox"|"radio"|"radio-block"|"checkbox-block";
+    'value'?: string|string[];
+  }
+  interface StellarToggleOption extends JSXBase.HTMLAttributes<HTMLStellarToggleOptionElement> {
+    'checked'?: boolean;
+    'checkedDefault'?: boolean;
+    'default'?: string;
+    'disabled'?: boolean;
+    'for'?: string;
+    'icon'?: boolean;
+    'inline'?: boolean;
+    'name'?: string;
+    'onChange'?: (event: CustomEvent<any>) => void;
+    'required'?: boolean;
+    'selectedCopy'?: string;
+    'single'?: boolean;
+    'size'?: boolean;
+    'tooltip'?: string;
+    'type'?: string;
+    'value'?: string;
+  }
+  interface StellarTooltip extends JSXBase.HTMLAttributes<HTMLStellarTooltipElement> {
+    'align'?: "left"|"center"|"right"|"middle-left"|"middle-center"|"middle-right"|"bottom-left"|"bottom-center"|"bottom-right";
+  }
+  interface StellarUnit extends JSXBase.HTMLAttributes<HTMLStellarUnitElement> {
+    'decimals'?: number;
+    'from'?: string;
+    'round'?: boolean;
+    'to'?: string;
+    'value'?: number;
+  }
+  interface StellarVideo extends JSXBase.HTMLAttributes<HTMLStellarVideoElement> {
+    'autoplay'?: boolean;
+    'controls'?: boolean;
+    'height'?: number;
+    'muted'?: boolean;
+    'onLoaded'?: (event: CustomEvent<any>) => void;
+    'onPaused'?: (event: CustomEvent<any>) => void;
+    'onPlayed'?: (event: CustomEvent<any>) => void;
+    'onTimeupdate'?: (event: CustomEvent<any>) => void;
+    'overlay'?: boolean;
+    'playing'?: boolean;
+    'playsinline'?: boolean;
+    'poster'?: string;
+    'preload'?: string;
+    'trackInView'?: boolean;
+    'video_tag'?: HTMLVideoElement;
+    'width'?: number;
+  }
+  interface StellarVideoInterview extends JSXBase.HTMLAttributes<HTMLStellarVideoInterviewElement> {
+    'aspectRatio'?: number;
+    'color'?: string;
+    'height'?: number;
+    'playing'?: boolean;
+    'src'?: string;
+    'visualization'?: "circle"|"bars"|"wave"|"bars2";
+    'width'?: number;
+  }
+  interface WebAudio extends JSXBase.HTMLAttributes<HTMLWebAudioElement> {
+    'autoplay'?: Boolean;
+    'midi'?: Boolean;
+    'name'?: string;
+  }
+  interface WebAudioDebugger extends JSXBase.HTMLAttributes<HTMLWebAudioDebuggerElement> {
+    'count'?: number;
+  }
+  interface WebAudioEffect extends JSXBase.HTMLAttributes<HTMLWebAudioEffectElement> {
+    'axis'?: string;
+    'method'?: string;
+    'midicontroller'?: number;
+    'responds'?: string;
+    'type'?: string;
+    'use'?: string;
+    'value'?: number;
+  }
+  interface WebAudioSequencer extends JSXBase.HTMLAttributes<HTMLWebAudioSequencerElement> {
+    'autoplay'?: boolean;
+    'custom'?: Function;
+    'name'?: string;
+    'taps'?: number;
+    'tempo'?: number;
+  }
+  interface WebAudioSource extends JSXBase.HTMLAttributes<HTMLWebAudioSourceElement> {
+    'effectsvolume'?: number;
+    'inert'?: boolean;
+    'midichannel'?: number;
+    'midikey'?: number;
+    'name'?: string;
+    'onTimeupdate'?: (event: CustomEvent<any>) => void;
+    'playing'?: boolean;
+    'src'?: string;
+  }
+  interface WebAudioVisualizer extends JSXBase.HTMLAttributes<HTMLWebAudioVisualizerElement> {
+    '_color'?: any;
+    'analyser'?: AnalyserNode;
+    'color'?: string;
+    'for'?: string;
+    'height'?: number;
+    'renderer'?: AnalyserNode;
+    'size'?: number;
+    'smoothing'?: number;
+    'type'?: string|"wave"|"bars"|"circle"|"bars2";
+    'width'?: number;
+  }
+  interface WebAudioVisualizerShader extends JSXBase.HTMLAttributes<HTMLWebAudioVisualizerShaderElement> {
+    'type'?: string;
+  }
+
+  interface IntrinsicElements {
+    'copy-wrap': CopyWrap;
+    'skeleton-img': SkeletonImg;
+    'skeleton-text': SkeletonText;
+    'stellar-360-image': Stellar360Image;
+    'stellar-360-video': Stellar360Video;
+    'stellar-accordion': StellarAccordion;
+    'stellar-animate-text': StellarAnimateText;
+    'stellar-asset': StellarAsset;
+    'stellar-asset-library': StellarAssetLibrary;
+    'stellar-avatar': StellarAvatar;
+    'stellar-blur': StellarBlur;
+    'stellar-breadcrumb': StellarBreadcrumb;
+    'stellar-breadcrumbs': StellarBreadcrumbs;
+    'stellar-button': StellarButton;
+    'stellar-callout': StellarCallout;
+    'stellar-card': StellarCard;
+    'stellar-chart': StellarChart;
+    'stellar-code': StellarCode;
+    'stellar-color-library': StellarColorLibrary;
+    'stellar-color-picker': StellarColorPicker;
+    'stellar-comment': StellarComment;
+    'stellar-comments': StellarComments;
+    'stellar-content': StellarContent;
+    'stellar-dropdown': StellarDropdown;
+    'stellar-follow': StellarFollow;
+    'stellar-form': StellarForm;
+    'stellar-grid': StellarGrid;
+    'stellar-group': StellarGroup;
+    'stellar-group-overflow': StellarGroupOverflow;
+    'stellar-image': StellarImage;
+    'stellar-input': StellarInput;
+    'stellar-interview': StellarInterview;
+    'stellar-interview-line': StellarInterviewLine;
+    'stellar-item': StellarItem;
+    'stellar-keyframes': StellarKeyframes;
+    'stellar-label': StellarLabel;
+    'stellar-layout': StellarLayout;
+    'stellar-markdown': StellarMarkdown;
+    'stellar-message': StellarMessage;
+    'stellar-pagination': StellarPagination;
+    'stellar-parallax': StellarParallax;
+    'stellar-parallax-section': StellarParallaxSection;
+    'stellar-password-requirements': StellarPasswordRequirements;
+    'stellar-playlist': StellarPlaylist;
+    'stellar-progress': StellarProgress;
+    'stellar-reveal': StellarReveal;
+    'stellar-scatter': StellarScatter;
+    'stellar-scroll-z-root': StellarScrollZRoot;
+    'stellar-scroll-z-section': StellarScrollZSection;
+    'stellar-select': StellarSelect;
+    'stellar-slide': StellarSlide;
+    'stellar-slides': StellarSlides;
+    'stellar-song': StellarSong;
+    'stellar-starscape': StellarStarscape;
+    'stellar-step': StellarStep;
+    'stellar-steps': StellarSteps;
+    'stellar-story': StellarStory;
+    'stellar-stripe': StellarStripe;
+    'stellar-switch': StellarSwitch;
+    'stellar-tab': StellarTab;
+    'stellar-table': StellarTable;
+    'stellar-tabs': StellarTabs;
+    'stellar-tag': StellarTag;
+    'stellar-toggle': StellarToggle;
+    'stellar-toggle-option': StellarToggleOption;
+    'stellar-tooltip': StellarTooltip;
+    'stellar-unit': StellarUnit;
+    'stellar-video': StellarVideo;
+    'stellar-video-interview': StellarVideoInterview;
+    'web-audio': WebAudio;
+    'web-audio-debugger': WebAudioDebugger;
+    'web-audio-effect': WebAudioEffect;
+    'web-audio-sequencer': WebAudioSequencer;
+    'web-audio-source': WebAudioSource;
+    'web-audio-visualizer': WebAudioVisualizer;
+    'web-audio-visualizer-shader': WebAudioVisualizerShader;
+  }
+}
+
+export { LocalJSX as JSX };
+
+
+declare module "@stencil/core" {
+  export namespace JSX {
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+  }
+}
+
 

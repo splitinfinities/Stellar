@@ -8,7 +8,7 @@ import { properties } from '../../../utils';
 })
 export class Follow {
   @Element() element: HTMLElement;
-  @Prop() type: "scroll"|"cursor" = "scroll";
+  @Prop() type: "scroll"|"cursor" = "cursor";
   @Prop() distance: number = 0.5;
   @Prop() padding: number = 40;
 
@@ -33,7 +33,6 @@ export class Follow {
     if (this.type === "scroll") {
       this.attachScroll()
     } else if (this.type === "cursor") {
-      this.attachScroll()
       this.attachCursor()
     }
   }
@@ -50,6 +49,8 @@ export class Follow {
   attachCursor() {
     // @ts-ignore
     window.addEventListener("mousemove", (e) => {
+      properties.set({"--top": `${e.clientY}px`}, this.element);
+
       properties.set({"--left": `${this.minmaxx(e.clientX)}px`}, this.element)
     }, { passive: true })
 
