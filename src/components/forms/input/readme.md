@@ -51,7 +51,7 @@
 | `autofocus`           | `autofocus`             |                                                          | `boolean`                    | `false`           |
 | `color`               | `color`                 |                                                          | `string`                     | `"theme"`         |
 | `cols`                | `cols`                  |                                                          | `number`                     | `30`              |
-| `dateType`            | `date-type`             |                                                          | `"day" \| "month" \| "year"` | `"day"`           |
+| `dateType`            | `date-type`             |                                                          | `"day" \| "month" \| "year"` | `"month"`         |
 | `default`             | `default`               | The pre-set value to pass to the input element           | `any`                        | `undefined`       |
 | `description`         | `description`           |                                                          | `string`                     | `undefined`       |
 | `disabled`            | `disabled`              |                                                          | `boolean`                    | `undefined`       |

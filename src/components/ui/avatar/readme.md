@@ -73,11 +73,11 @@
 | `color`      | `color`      |             | `string`                                                                               | `"auto"`    |
 | `initials`   | `initials`   |             | `string`                                                                               | `"ST"`      |
 | `name`       | `name`       |             | `string`                                                                               | `"Stellar"` |
+| `notooltip`  | `notooltip`  |             | `boolean`                                                                              | `false`     |
 | `processing` | `processing` |             | `boolean`                                                                              | `false`     |
 | `shape`      | `shape`      |             | `"circle" \| "diamond" \| "hexagon" \| "message" \| "rectangle" \| "square" \| "star"` | `"square"`  |
 | `size`       | `size`       |             | `string`                                                                               | `"medium"`  |
 | `src`        | `src`        |             | `string`                                                                               | `undefined` |
-| `tooltip`    | `tooltip`    |             | `boolean`                                                                              | `false`     |
 
 
 ## Dependencies

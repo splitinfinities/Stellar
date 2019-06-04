@@ -23,15 +23,15 @@
 
 ## Properties
 
-| Property            | Attribute            | Description | Type                | Default          |
-| ------------------- | -------------------- | ----------- | ------------------- | ---------------- |
-| `align`             | `align`              |             | `string`            | `"items-start"`  |
-| `cols`              | `cols`               |             | `number \| string`  | `"auto"`         |
-| `compact`           | `compact`            |             | `boolean`           | `false`          |
-| `padding`           | `padding`            |             | `boolean`           | `false`          |
-| `responsive`        | `responsive`         |             | `boolean \| string` | `true`           |
-| `swappable`         | `swappable`          |             | `boolean`           | `false`          |
-| `swappableSelector` | `swappable-selector` |             | `string`            | `"stellar-card"` |
+| Property            | Attribute            | Description | Type               | Default          |
+| ------------------- | -------------------- | ----------- | ------------------ | ---------------- |
+| `align`             | `align`              |             | `string`           | `"items-start"`  |
+| `cols`              | `cols`               |             | `number \| string` | `"auto"`         |
+| `compact`           | `compact`            |             | `boolean`          | `false`          |
+| `noresponsive`      | `noresponsive`       |             | `boolean`          | `false`          |
+| `padding`           | `padding`            |             | `boolean`          | `false`          |
+| `swappable`         | `swappable`          |             | `boolean`          | `false`          |
+| `swappableSelector` | `swappable-selector` |             | `string`           | `"stellar-card"` |
 
 
 ## Events

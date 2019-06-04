@@ -34,15 +34,16 @@
 
 ## Properties
 
-| Property      | Attribute     | Description | Type     | Default                                        |
-| ------------- | ------------- | ----------- | -------- | ---------------------------------------------- |
-| `color`       | `color`       |             | `string` | `"blue5"`                                      |
-| `description` | `description` |             | `string` | `"An icon that shows the main page you're on"` |
-| `home`        | `home`        |             | `string` | `"/"`                                          |
-| `icon`        | `icon`        |             | `string` | `'analytics'`                                  |
-| `icon_size`   | `icon_size`   |             | `number` | `0.85`                                         |
-| `icon_src`    | `icon_src`    |             | `string` | `undefined`                                    |
-| `label`       | `label`       |             | `string` | `"Home"`                                       |
+| Property      | Attribute     | Description | Type                | Default                                        |
+| ------------- | ------------- | ----------- | ------------------- | ---------------------------------------------- |
+| `color`       | `color`       |             | `string`            | `"blue5"`                                      |
+| `description` | `description` |             | `string`            | `"An icon that shows the main page you're on"` |
+| `home`        | `home`        |             | `string`            | `"/"`                                          |
+| `icon`        | `icon`        |             | `string`            | `'analytics'`                                  |
+| `icon_size`   | `icon_size`   |             | `number`            | `0.85`                                         |
+| `icon_src`    | `icon_src`    |             | `string`            | `undefined`                                    |
+| `label`       | `label`       |             | `string`            | `"Home"`                                       |
+| `tag`         | `tag`         |             | `"link" \| "route"` | `"link"`                                       |
 
 
 ## Dependencies

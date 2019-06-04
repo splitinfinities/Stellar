@@ -20,11 +20,6 @@ export namespace Components {
     'align': string;
     'full': boolean;
   }
-  interface MomentTime {
-    'format': string;
-    'relative': boolean;
-    'value': string;
-  }
   interface SkeletonImg {
     'block': boolean;
     'height': number;
@@ -73,11 +68,11 @@ export namespace Components {
     'color': string;
     'initials': string;
     'name': string;
+    'notooltip': boolean;
     'processing': boolean;
     'shape': "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
     'size': string;
     'src': string;
-    'tooltip': boolean;
   }
   interface StellarBlur {
     'horizontal': number;
@@ -91,6 +86,7 @@ export namespace Components {
     'href': string;
     'label': string;
     'last': boolean;
+    'tag': "link"|"route";
     'target': string;
   }
   interface StellarBreadcrumbs {
@@ -101,6 +97,7 @@ export namespace Components {
     'icon_size': number;
     'icon_src': string;
     'label': string;
+    'tag': "link"|"route";
   }
   interface StellarButton {
     /**
@@ -115,6 +112,10 @@ export namespace Components {
     * Sets the button or link to provide the affordance of a dangerous action.
     */
     'danger': boolean;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark': boolean;
     /**
     * Sets the button or link as disabled and not-interactable.
     */
@@ -218,7 +219,6 @@ export namespace Components {
     * Sets the element to render the card as - an anchor tag, a button, or a div.
     */
     'tag': "stencil-route-link"|"a"|"button"|"div";
-    'transition': boolean;
     /**
     * Sets the type on a button
     */
@@ -296,9 +296,9 @@ export namespace Components {
     'align': string;
     'cols': number|string;
     'compact': boolean;
+    'noresponsive': boolean;
     'padding': boolean;
     'refresh': () => Promise<void>;
-    'responsive': boolean|string;
     'swappable': boolean;
     'swappableSelector': string;
   }
@@ -403,7 +403,7 @@ export namespace Components {
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: any; }>;
+    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: any; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -436,9 +436,12 @@ export namespace Components {
   }
   interface StellarLayout {
     'align': "baseline"|"center"|"top"|"bottom";
+    'content': "baseline"|"center"|"top"|"bottom";
+    'hasNav': boolean;
+    'height': "fill";
     'padding': "none"|"tiny"|"small"|"medium"|"large";
     'refresh': () => Promise<void>;
-    'size': "tiny"|"small"|"medium"|"large"|"full"|"flush";
+    'size': "tiny"|"small"|"medium"|"large"|"xlarge"|"full"|"flush";
     'type': string;
   }
   interface StellarMarkdown {
@@ -711,12 +714,11 @@ export namespace Components {
   }
   interface StellarTab {
     'disabled': boolean;
-    'href': string;
+    'name': string;
     'notifications': boolean|number;
     'open': boolean;
     'order': number;
     'tabCount': number;
-    'tag': string;
   }
   interface StellarTable {
     'chart': boolean;
@@ -742,6 +744,11 @@ export namespace Components {
     'pill': boolean;
     'size': string;
     'textColor': string;
+  }
+  interface StellarTime {
+    'format': string;
+    'relative': boolean;
+    'value': string;
   }
   interface StellarToggle {
     'card': any;
@@ -783,6 +790,7 @@ export namespace Components {
   interface StellarUnit {
     'decimals': number;
     'from': string;
+    'money': boolean;
     'round': boolean;
     'to': string;
     'value': number;
@@ -902,12 +910,6 @@ declare global {
   var HTMLCopyWrapElement: {
     prototype: HTMLCopyWrapElement;
     new (): HTMLCopyWrapElement;
-  };
-
-  interface HTMLMomentTimeElement extends Components.MomentTime, HTMLStencilElement {}
-  var HTMLMomentTimeElement: {
-    prototype: HTMLMomentTimeElement;
-    new (): HTMLMomentTimeElement;
   };
 
   interface HTMLSkeletonImgElement extends Components.SkeletonImg, HTMLStencilElement {}
@@ -1282,6 +1284,12 @@ declare global {
     new (): HTMLStellarTagElement;
   };
 
+  interface HTMLStellarTimeElement extends Components.StellarTime, HTMLStencilElement {}
+  var HTMLStellarTimeElement: {
+    prototype: HTMLStellarTimeElement;
+    new (): HTMLStellarTimeElement;
+  };
+
   interface HTMLStellarToggleElement extends Components.StellarToggle, HTMLStencilElement {}
   var HTMLStellarToggleElement: {
     prototype: HTMLStellarToggleElement;
@@ -1361,7 +1369,6 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'copy-wrap': HTMLCopyWrapElement;
-    'moment-time': HTMLMomentTimeElement;
     'skeleton-img': HTMLSkeletonImgElement;
     'skeleton-text': HTMLSkeletonTextElement;
     'stellar-360-image': HTMLStellar360ImageElement;
@@ -1424,6 +1431,7 @@ declare global {
     'stellar-table': HTMLStellarTableElement;
     'stellar-tabs': HTMLStellarTabsElement;
     'stellar-tag': HTMLStellarTagElement;
+    'stellar-time': HTMLStellarTimeElement;
     'stellar-toggle': HTMLStellarToggleElement;
     'stellar-toggle-option': HTMLStellarToggleOptionElement;
     'stellar-tooltip': HTMLStellarTooltipElement;
@@ -1444,11 +1452,6 @@ declare namespace LocalJSX {
   interface CopyWrap extends JSXBase.HTMLAttributes<HTMLCopyWrapElement> {
     'align'?: string;
     'full'?: boolean;
-  }
-  interface MomentTime extends JSXBase.HTMLAttributes<HTMLMomentTimeElement> {
-    'format'?: string;
-    'relative'?: boolean;
-    'value'?: string;
   }
   interface SkeletonImg extends JSXBase.HTMLAttributes<HTMLSkeletonImgElement> {
     'block'?: boolean;
@@ -1497,11 +1500,11 @@ declare namespace LocalJSX {
     'color'?: string;
     'initials'?: string;
     'name'?: string;
+    'notooltip'?: boolean;
     'processing'?: boolean;
     'shape'?: "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
     'size'?: string;
     'src'?: string;
-    'tooltip'?: boolean;
   }
   interface StellarBlur extends JSXBase.HTMLAttributes<HTMLStellarBlurElement> {
     'horizontal'?: number;
@@ -1514,6 +1517,7 @@ declare namespace LocalJSX {
     'href'?: string;
     'label'?: string;
     'last'?: boolean;
+    'tag'?: "link"|"route";
     'target'?: string;
   }
   interface StellarBreadcrumbs extends JSXBase.HTMLAttributes<HTMLStellarBreadcrumbsElement> {
@@ -1524,6 +1528,7 @@ declare namespace LocalJSX {
     'icon_size'?: number;
     'icon_src'?: string;
     'label'?: string;
+    'tag'?: "link"|"route";
   }
   interface StellarButton extends JSXBase.HTMLAttributes<HTMLStellarButtonElement> {
     /**
@@ -1538,6 +1543,10 @@ declare namespace LocalJSX {
     * Sets the button or link to provide the affordance of a dangerous action.
     */
     'danger'?: boolean;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark'?: boolean;
     /**
     * Sets the button or link as disabled and not-interactable.
     */
@@ -1641,7 +1650,6 @@ declare namespace LocalJSX {
     * Sets the element to render the card as - an anchor tag, a button, or a div.
     */
     'tag'?: "stencil-route-link"|"a"|"button"|"div";
-    'transition'?: boolean;
     /**
     * Sets the type on a button
     */
@@ -1710,9 +1718,9 @@ declare namespace LocalJSX {
     'align'?: string;
     'cols'?: number|string;
     'compact'?: boolean;
+    'noresponsive'?: boolean;
     'onOrderChanged'?: (event: CustomEvent<any>) => void;
     'padding'?: boolean;
-    'responsive'?: boolean|string;
     'swappable'?: boolean;
     'swappableSelector'?: string;
   }
@@ -1850,8 +1858,11 @@ declare namespace LocalJSX {
   }
   interface StellarLayout extends JSXBase.HTMLAttributes<HTMLStellarLayoutElement> {
     'align'?: "baseline"|"center"|"top"|"bottom";
+    'content'?: "baseline"|"center"|"top"|"bottom";
+    'hasNav'?: boolean;
+    'height'?: "fill";
     'padding'?: "none"|"tiny"|"small"|"medium"|"large";
-    'size'?: "tiny"|"small"|"medium"|"large"|"full"|"flush";
+    'size'?: "tiny"|"small"|"medium"|"large"|"xlarge"|"full"|"flush";
     'type'?: string;
   }
   interface StellarMarkdown extends JSXBase.HTMLAttributes<HTMLStellarMarkdownElement> {
@@ -2103,13 +2114,12 @@ declare namespace LocalJSX {
   }
   interface StellarTab extends JSXBase.HTMLAttributes<HTMLStellarTabElement> {
     'disabled'?: boolean;
-    'href'?: string;
+    'name'?: string;
     'notifications'?: boolean|number;
     'onContentChange'?: (event: CustomEvent<any>) => void;
     'open'?: boolean;
     'order'?: number;
     'tabCount'?: number;
-    'tag'?: string;
   }
   interface StellarTable extends JSXBase.HTMLAttributes<HTMLStellarTableElement> {
     'chart'?: boolean;
@@ -2132,6 +2142,11 @@ declare namespace LocalJSX {
     'pill'?: boolean;
     'size'?: string;
     'textColor'?: string;
+  }
+  interface StellarTime extends JSXBase.HTMLAttributes<HTMLStellarTimeElement> {
+    'format'?: string;
+    'relative'?: boolean;
+    'value'?: string;
   }
   interface StellarToggle extends JSXBase.HTMLAttributes<HTMLStellarToggleElement> {
     'card'?: any;
@@ -2172,6 +2187,7 @@ declare namespace LocalJSX {
   interface StellarUnit extends JSXBase.HTMLAttributes<HTMLStellarUnitElement> {
     'decimals'?: number;
     'from'?: string;
+    'money'?: boolean;
     'round'?: boolean;
     'to'?: string;
     'value'?: number;
@@ -2255,7 +2271,6 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'copy-wrap': CopyWrap;
-    'moment-time': MomentTime;
     'skeleton-img': SkeletonImg;
     'skeleton-text': SkeletonText;
     'stellar-360-image': Stellar360Image;
@@ -2318,6 +2333,7 @@ declare namespace LocalJSX {
     'stellar-table': StellarTable;
     'stellar-tabs': StellarTabs;
     'stellar-tag': StellarTag;
+    'stellar-time': StellarTime;
     'stellar-toggle': StellarToggle;
     'stellar-toggle-option': StellarToggleOption;
     'stellar-tooltip': StellarTooltip;
