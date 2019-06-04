@@ -36,7 +36,9 @@ export class Tab {
   }
 
   async handleClick(e) {
-    if (e.target.classList.contains('title')) {
+    const target = e.target.closest('.title');
+
+    if (target) {
       const tabs = await this.parent.tabs()
 
       tabs.forEach((element) => {
