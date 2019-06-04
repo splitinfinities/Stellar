@@ -435,7 +435,7 @@ export class Select {
   renderLabel() {
     if (this.label) {
       return <div class="label-wrapper">
-        <stellar-label onClick={() => { this.focusFirstItem() }}>{this.label}</stellar-label>
+        <stellar-label size={this.size} onClick={() => { this.focusFirstItem() }}>{this.label}</stellar-label>
         { this.renderEmptyButton() }
       </div>
     }
