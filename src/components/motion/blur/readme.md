@@ -59,7 +59,6 @@ Type: `Promise<void>`
 
  - [stellar-accordion](../../ui/accordion)
  - [stellar-animate-text](../animate-text)
- - [stellar-content](../../ui/content)
  - [stellar-dropdown](../../ui/dropdown)
  - [stellar-pagination](../../ui/pagination)
  - [stellar-select](../../forms/select)
@@ -72,7 +71,6 @@ Type: `Promise<void>`
 graph TD;
   stellar-accordion --> stellar-blur
   stellar-animate-text --> stellar-blur
-  stellar-content --> stellar-blur
   stellar-dropdown --> stellar-blur
   stellar-pagination --> stellar-blur
   stellar-select --> stellar-blur
