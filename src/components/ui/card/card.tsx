@@ -12,7 +12,7 @@ export class Card {
   /**
    * Renders a shadow on the card
    */
-  @Prop() shadow: string|"light"|"medium"|"heavy" = "medium";
+  @Prop() shadow: "light"|"medium"|"heavy" = "medium";
 
   /**
    * Let's a card be flippable
@@ -27,7 +27,7 @@ export class Card {
   /**
    * Sets the padding inside of the button. Can be small, medium, or large.
    */
-  @Prop({ reflectToAttr: true }) padding: string|"small"|"medium"|"large" = "medium";
+  @Prop({ reflectToAttr: true }) padding: "none"|"tiny"|"small"|"medium"|"large" = "medium";
 
   /**
    * Sets the element to render the card as - an anchor tag, a button, or a div.
@@ -35,7 +35,7 @@ export class Card {
   @Prop() tag: "stencil-route-link"|"a"|"button"|"div" = "div";
 
   /**
-   * Sets the element to render the card as - an anchor tag, a button, or a div.
+   * Sets the type on a button
    */
   @Prop() type: string;
 
@@ -63,37 +63,14 @@ export class Card {
    * Sets the href on the anchor tag if the button is a link.
    */
   @Prop() flip_icon: string = "cog";
-
-  @State() width: number;
-  @State() height: number;
-  @State() middleX: number;
-  @State() middleY: number;
-  @State() rotationLimit: number = 0.75;
-
   @State() ro: ResizeObserver;
 
   @Prop({reflectToAttr: true, mutable: true}) transition: boolean = false;
 
   @Event() flip: EventEmitter;
 
-  refresh() {
-    this.width = this.element.offsetWidth;
-    this.height = this.element.offsetHeight;
-    this.middleX = this.width / 2;
-    this.middleY = this.height / 2;
-  }
-
   componentDidLoad() {
-    if (this.tag === "a") {
-      setTimeout(() => { this.refresh(); }, 10);
-
-      this.element.addEventListener('mouseenter', this.addRotation.bind(this))
-      this.element.addEventListener('mousemove', this.animateRotation.bind(this))
-      this.element.addEventListener('mouseleave', this.removeRotation.bind(this))
-    }
-
     this.updateFlippableCardHeight();
-
     this.addResizeObserver();
   }
 
@@ -121,40 +98,10 @@ export class Card {
   }
 
   addRotation () {
-    this.refresh()
-
     this.transition = true;
 
     setTimeout(() => {
       this.transition = false;
-    }, 250)
-  }
-
-  async animateRotation(event) {
-    const x = event.offsetX
-    const y = event.offsetY
-    const rotateX = (x - this.middleX) * (this.rotationLimit / this.middleX)
-    const rotateY = (this.middleY - y) * (this.rotationLimit / this.middleY)
-
-    properties.set({
-      "--card-transform": `rotateX(${rotateY}deg) rotateY(${rotateX}deg)`,
-      "--card-hover-top": `${(rotateY / this.rotationLimit)}rem`,
-      "--card-hover-right": `${((rotateX / this.rotationLimit) * -1)}rem`
-    }, this.element)
-  }
-
-  async removeRotation() {
-    this.refresh()
-
-    this.transition = true;
-
-    setTimeout(() => {
-       this.transition = false;
-        properties.set({
-          "--card-transform": `rotateX(0deg) rotateY(0deg)`,
-          "--card-hover-top": `0px`,
-          "--card-hover-right": `0px`
-        }, this.element)
     }, 250)
   }
 

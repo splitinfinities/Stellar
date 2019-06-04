@@ -209,18 +209,18 @@ export namespace Components {
     /**
     * Sets the padding inside of the button. Can be small, medium, or large.
     */
-    'padding': string|"small"|"medium"|"large";
+    'padding': "none"|"tiny"|"small"|"medium"|"large";
     /**
     * Renders a shadow on the card
     */
-    'shadow': string|"light"|"medium"|"heavy";
+    'shadow': "light"|"medium"|"heavy";
     /**
     * Sets the element to render the card as - an anchor tag, a button, or a div.
     */
     'tag': "stencil-route-link"|"a"|"button"|"div";
     'transition': boolean;
     /**
-    * Sets the element to render the card as - an anchor tag, a button, or a div.
+    * Sets the type on a button
     */
     'type': string;
     /**
@@ -403,7 +403,7 @@ export namespace Components {
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: any; }>;
+    'data': () => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: any; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -1632,18 +1632,18 @@ declare namespace LocalJSX {
     /**
     * Sets the padding inside of the button. Can be small, medium, or large.
     */
-    'padding'?: string|"small"|"medium"|"large";
+    'padding'?: "none"|"tiny"|"small"|"medium"|"large";
     /**
     * Renders a shadow on the card
     */
-    'shadow'?: string|"light"|"medium"|"heavy";
+    'shadow'?: "light"|"medium"|"heavy";
     /**
     * Sets the element to render the card as - an anchor tag, a button, or a div.
     */
     'tag'?: "stencil-route-link"|"a"|"button"|"div";
     'transition'?: boolean;
     /**
-    * Sets the element to render the card as - an anchor tag, a button, or a div.
+    * Sets the type on a button
     */
     'type'?: string;
     /**
