@@ -122,8 +122,6 @@ export class Item {
 
   @Method()
   async select_item(state?: {selected: boolean}) {
-    console.log(this.selectable);
-
     if (this.selectable) {
       if (state) {
         if (this.selected !== state.selected) {

@@ -67,11 +67,11 @@ export class Select {
       if (typeof this.default === "object" && this.default.constructor.name === "Array") {
         this.default.forEach((value) => {
           // @ts-ignore
-          this.element.querySelector(`stellar-item[value="${value}"]`).select_item()
+          this.element.querySelector(`stellar-item[value="${value}"]`).select_item({selected: true})
         })
       } else {
         // @ts-ignore
-        this.element.querySelector(`stellar-item[value="${this.default}"]`).select_item()
+        this.element.querySelector(`stellar-item[value="${this.default}"]`).select_item({selected: true})
       }
     }
 
