@@ -42,25 +42,26 @@ export class Select {
 
   @Event() change: EventEmitter;
 
-  componentWillLoad () {
+  async componentWillLoad () {
     if (this.multiple) {
       this.value = []
     }
+
+    const options = await this.option_elements();
+
+    // @ts-ignore
+    options.forEach((element) => {
+      element.selectable = true;
+
+      if (this.multiple) {
+        element.multiple = true;
+      }
+    })
   }
 
   async componentDidLoad () {
     this.listen_to_values();
     this.current = this.element.shadowRoot.querySelector('stellar-item.current')
-
-    if (this.multiple) {
-      const options = await this.option_elements();
-
-      // @ts-ignore
-      options.forEach((element) => {
-        element.selectable = true;
-        element.multiple = true;
-      })
-    }
 
     if (this.default) {
       if (typeof this.default === "object" && this.default.constructor.name === "Array") {

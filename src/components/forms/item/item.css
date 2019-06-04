@@ -118,7 +118,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 0;
+  right: 0.75rem;
   font-size: 3em;
   height: auto;
 }
