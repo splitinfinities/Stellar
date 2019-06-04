@@ -32,7 +32,7 @@ export class Switch {
     return (
       <label class="label">
         <input type="checkbox" checked={this.checked} tabindex="-1" onClick={() => {this.activate()}}/>
-        <button onClick={() => {this.activate()}}>
+        <button type="button" onClick={() => {this.activate()}}>
           <span>
             {this.checked && <stellar-asset name="checkmark" />}
             {!this.checked && <stellar-asset name="close" />}

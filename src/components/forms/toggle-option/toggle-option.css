@@ -97,10 +97,13 @@ stellar-toggle-option .box.focus {
   box-shadow: 0 0 0 2px var(--theme-base3);
 }
 
-stellar-toggle-option label {
+stellar-toggle-option button {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
+  appearance: none;
+  background: none;
+  border: 0;
 }
 
 stellar-toggle-option[type="radio"] .box .bg,
@@ -172,7 +175,7 @@ stellar-toggle-option[type*="checkbox"] .box .active stellar-asset {
   transform: scale(1);
 }
 
-stellar-toggle-option[type*="block"] label {
+stellar-toggle-option[type*="block"] button {
   position: relative;
   border: 1px solid var(--border);
   transition: all 200ms var(--ease) 0s;
@@ -180,7 +183,7 @@ stellar-toggle-option[type*="block"] label {
   height: 100%;
 }
 
-stellar-toggle-option[type*="block"] label .wrapper {
+stellar-toggle-option[type*="block"] button .wrapper {
   transition: all 200ms var(--ease) 0s;
 }
 
@@ -190,12 +193,12 @@ stellar-toggle-option[type*="block"]:focus {
 }
 
 stellar-toggle-option[type*="block"]:focus-within .wrapper,
-stellar-toggle-option[type*="block"] label:hover .wrapper,
-stellar-toggle-option[type*="block"] label:focus .wrapper {
+stellar-toggle-option[type*="block"] button:hover .wrapper,
+stellar-toggle-option[type*="block"] button:focus .wrapper {
   background: var(--hover-background);
 }
 
-stellar-toggle-option[type*="block"] label:active {
+stellar-toggle-option[type*="block"] button:active {
   border-color: var(--gray2);
 }
 
@@ -256,12 +259,12 @@ stellar-toggle-option[type*="block"][inline] {
   margin: 0;
 }
 
-stellar-toggle-option[type*="block"][inline] label {
+stellar-toggle-option[type*="block"][inline] button {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
-stellar-toggle-option[type*="block"][size="small"] label {
+stellar-toggle-option[type*="block"][size="small"] button {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -299,7 +302,7 @@ stellar-toggle-option[single] {
   margin: 0;
 }
 
-stellar-toggle-option[inline] label {
+stellar-toggle-option[inline] button {
   display: inline-flex;
 }
 

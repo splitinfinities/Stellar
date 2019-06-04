@@ -403,7 +403,7 @@ export namespace Components {
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: any; }>;
+    'data': () => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: any; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -2172,7 +2172,7 @@ declare namespace LocalJSX {
     'icon'?: boolean;
     'inline'?: boolean;
     'name'?: string;
-    'onChange'?: (event: CustomEvent<any>) => void;
+    'onChangeToggle'?: (event: CustomEvent<any>) => void;
     'required'?: boolean;
     'selectedCopy'?: string;
     'single'?: boolean;

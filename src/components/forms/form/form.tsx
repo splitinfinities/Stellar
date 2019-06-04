@@ -53,6 +53,8 @@ export class Form {
 
     const els = Array.from(this.element.querySelectorAll(this.selectors.join(",")));
 
+    console.log(els)
+
     await asyncForEach(els, async (element: HTMLStellarInputElement|HTMLStellarSelectElement) => {
       try {
         let result = await element.validate();
@@ -79,7 +81,7 @@ export class Form {
       }
     })
 
-    const json = form2js(results.filter(i => i && i.name))
+    const json = form2js(results.filter(i => i && i.name));
 
     return {
       els,
@@ -93,6 +95,8 @@ export class Form {
   @Method()
   async submit_form() {
     const state = await this.state()
+
+    console.log(state.json)
 
     if (state.valid) {
       if (this.ajax) {

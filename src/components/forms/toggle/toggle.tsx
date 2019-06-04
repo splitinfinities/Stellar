@@ -59,15 +59,15 @@ export class Toggle {
     return this.status;
   }
 
-  @Listen('change')
+  @Listen('changeToggle')
   toggleChangedHandler(event: CustomEvent) {
     if (event.detail && event.detail.element) {
       const options = Array.from(this.element.querySelectorAll('stellar-toggle-option'));
       options.filter(el => el !== event.detail.element).forEach((option: HTMLStellarToggleOptionElement) => {
         option.confirm();
       });
-      const values = [];
 
+      const values = [];
       this.value = [];
 
       if (this.type === "checkbox" || this.type === "checkbox-block" ) {
@@ -80,8 +80,6 @@ export class Toggle {
       } else if (this.type === "radio" || this.type === "radio-block") {
         if (event.detail.element.checked) {
           values.push(event.detail.value)
-        } else {
-
         }
       }
 

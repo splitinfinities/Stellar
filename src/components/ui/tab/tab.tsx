@@ -36,27 +36,23 @@ export class Tab {
   }
 
   async handleClick(e) {
-    const target = e.target.closest('.title');
+    const tabs = await this.parent.tabs()
 
-    if (target) {
-      const tabs = await this.parent.tabs()
+    tabs.forEach((element) => {
+      element.open = false
+    })
 
-      tabs.forEach((element) => {
-        element.open = false
-      })
+    this.open = true
 
-      this.open = true
+    this.handleIndicatorPosition()
 
-      this.handleIndicatorPosition()
+    if (!this.disabled) {
+      e.preventDefault()
 
-      if (!this.disabled) {
-        e.preventDefault()
-
-        this.contentChange.emit({
-          parent: this.parent,
-          name: this.name.replace(/[#]/g, "")
-        });
-      }
+      this.contentChange.emit({
+        parent: this.parent,
+        name: this.name.replace(/[#]/g, "")
+      });
     }
   }
 
@@ -89,7 +85,7 @@ export class Tab {
 
   render() {
     return <div class="tab-wrap">
-      <button role="tab" aria-selected={this.open ? "true" : "false" } aria-setsize={this.tabCount} aria-posinset={this.order} tabindex="0" class="tab-button" onClick={(e) => this.handleClick(e)}>
+      <button role="tab" type="button" aria-selected={this.open ? "true" : "false" } aria-setsize={this.tabCount} aria-posinset={this.order} tabindex="0" class="tab-button" onClick={(e) => this.handleClick(e)}>
         {this.renderNotifications()}
         {this.renderTitle()}
       </button>

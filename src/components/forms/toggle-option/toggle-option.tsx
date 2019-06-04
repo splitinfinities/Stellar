@@ -42,7 +42,7 @@ export class ToggleOption {
     },
   });
 
-  @Event() change: EventEmitter;
+  @Event() changeToggle: EventEmitter;
 
   componentWillLoad () {
     this.updateRealType();
@@ -53,7 +53,7 @@ export class ToggleOption {
 
     if (this.checkedDefault) {
       this.checked = this.checkedDefault;
-      this.change.emit({ element: this.element, value: this.value, checked: this.input.checked });
+      this.changeToggle.emit({ element: this.element, value: this.value, checked: this.checked });
     }
   }
 
@@ -69,7 +69,6 @@ export class ToggleOption {
 
   @Method()
   async confirm() {
-    console.log(this.input)
     if (this.input.checked !== this.checked) {
       this.checked = this.input.checked;
     }
@@ -78,15 +77,13 @@ export class ToggleOption {
   @Method()
   async updateSelected (value: boolean) {
     this.input.checked = value;
-    this.checked = value;
-    this.change.emit({ element: this.element, value: this.value, checked: this.input.checked });
+    this.onToggleChange()
   }
 
-  onToggleChange (e) {
-    e.stopPropagation();
+  onToggleChange () {
     this.checked = this.input.checked;
     this.ease.start();
-    this.change.emit({ element: this.element, value: this.value, checked: this.checked });
+    this.changeToggle.emit({ element: this.element, value: this.checked ? this.value : undefined, checked: this.checked });
   }
 
   onFocus () {
@@ -97,9 +94,18 @@ export class ToggleOption {
     this.focused = false;
   }
 
-  onKeyUp (e) {
+  onClick () {
+    this.input.checked = !this.input.checked;
+    this.onToggleChange()
+  }
+
+  onKeyDown (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
     if (e.key === "Enter") {
-      this.input.checked = !this.input.checked; this.onToggleChange(e)
+      this.input.checked = !this.input.checked;
+      this.onToggleChange()
     }
   }
 
@@ -148,10 +154,10 @@ export class ToggleOption {
   }
 
   render() {
-    return (
-      <label>
+    // @ts-ignore
+    return <button type="button" onClick={() => this.onClick()} onKeyDown={e => this.onKeyDown(e)}>
         <input type="hidden" name={`${this.for}[${this.name}]`} value={this.default} />
-        <input class="input" type={this._type} id={`${this.for}_${this.name}_${this.value}`} name={`${this.for}[${this.name}]`} checked={this.checked} value={this.value} required={this.required} onChange={e => this.onToggleChange(e) } onFocus={() => this.onFocus()} onBlur={() => this.onBlur()} onKeyUp={e => this.onKeyUp(e)} onClick={e => { e.stopPropagation() }} />
+        <input class="input" type={this._type} id={`${this.for}_${this.name}_${this.value}`} name={`${this.for}[${this.name}]`} checked={this.checked} value={this.value} required={this.required} onChange={(e) => {e.stopPropagation(); e.preventDefault();}} onKeyDown={e => this.onKeyDown(e)} />
 
         { this.renderCheckbox() }
 
@@ -167,7 +173,6 @@ export class ToggleOption {
         }
 
         { this.tooltip && <stellar-tooltip align="bottom-left">{this.tooltip}</stellar-tooltip> }
-      </label>
-    )
+      </button>
   }
 }

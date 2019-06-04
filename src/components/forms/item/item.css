@@ -176,7 +176,8 @@
 }
 
 :host stellar-asset.multiple.selected {
-  color: var(--theme-base5);
+  color: var(--white);
+  background: var(--theme-base5);
 }
 
 

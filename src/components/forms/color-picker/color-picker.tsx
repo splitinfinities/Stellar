@@ -41,12 +41,14 @@ export class ColorPicker {
     render() {
         return <div class="wrap">
             {this.options.map(option => <button
+                type="button"
                 value={option}
                 class={option}
                 style={{ "background": `var(--${option}5)` }}
                 onClick={() => { this.updateValue(option); }} />
             )}
             {!this.notransparent && <button
+                type="button"
                 value={"none"}
                 class={"none"}
                 style={{ "background": `var(--white)` }}
