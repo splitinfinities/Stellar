@@ -20,6 +20,11 @@ export namespace Components {
     'align': string;
     'full': boolean;
   }
+  interface MomentTime {
+    'format': string;
+    'relative': boolean;
+    'value': string;
+  }
   interface SkeletonImg {
     'block': boolean;
     'height': number;
@@ -899,6 +904,12 @@ declare global {
     new (): HTMLCopyWrapElement;
   };
 
+  interface HTMLMomentTimeElement extends Components.MomentTime, HTMLStencilElement {}
+  var HTMLMomentTimeElement: {
+    prototype: HTMLMomentTimeElement;
+    new (): HTMLMomentTimeElement;
+  };
+
   interface HTMLSkeletonImgElement extends Components.SkeletonImg, HTMLStencilElement {}
   var HTMLSkeletonImgElement: {
     prototype: HTMLSkeletonImgElement;
@@ -1350,6 +1361,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'copy-wrap': HTMLCopyWrapElement;
+    'moment-time': HTMLMomentTimeElement;
     'skeleton-img': HTMLSkeletonImgElement;
     'skeleton-text': HTMLSkeletonTextElement;
     'stellar-360-image': HTMLStellar360ImageElement;
@@ -1432,6 +1444,11 @@ declare namespace LocalJSX {
   interface CopyWrap extends JSXBase.HTMLAttributes<HTMLCopyWrapElement> {
     'align'?: string;
     'full'?: boolean;
+  }
+  interface MomentTime extends JSXBase.HTMLAttributes<HTMLMomentTimeElement> {
+    'format'?: string;
+    'relative'?: boolean;
+    'value'?: string;
   }
   interface SkeletonImg extends JSXBase.HTMLAttributes<HTMLSkeletonImgElement> {
     'block'?: boolean;
@@ -2238,6 +2255,7 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'copy-wrap': CopyWrap;
+    'moment-time': MomentTime;
     'skeleton-img': SkeletonImg;
     'skeleton-text': SkeletonText;
     'stellar-360-image': Stellar360Image;
