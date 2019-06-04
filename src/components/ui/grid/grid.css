@@ -50,6 +50,10 @@ stellar-grid[noresponsive][cols="6"] > .grid {
     grid-template-columns: repeat(6, 1fr);
 }
 
+stellar-grid > .grid .width-all {
+    grid-column: 1 / -1;
+}
+
 stellar-grid > .grid .width-2 {
     grid-column: auto / span 2;
 }
@@ -68,6 +72,10 @@ stellar-grid > .grid .width-5 {
 
 stellar-grid > .grid .width-6 {
     grid-column: auto / span 6;
+}
+
+stellar-grid > .grid .height-all {
+    grid-row: 1 / -1;
 }
 
 stellar-grid > .grid .height-2 {
