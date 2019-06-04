@@ -104,6 +104,7 @@ stellar-toggle-option button {
   appearance: none;
   background: none;
   border: 0;
+  outline: 0;
 }
 
 stellar-toggle-option[type="radio"] .box .bg,

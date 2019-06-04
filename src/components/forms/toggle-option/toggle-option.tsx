@@ -100,10 +100,9 @@ export class ToggleOption {
   }
 
   onKeyDown (e) {
-    e.preventDefault();
-    e.stopPropagation();
-
     if (e.key === "Enter") {
+      e.preventDefault();
+      e.stopPropagation();
       this.input.checked = !this.input.checked;
       this.onToggleChange()
     }
