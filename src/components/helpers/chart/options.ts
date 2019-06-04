@@ -93,7 +93,7 @@ export class HighchartsModel implements Options {
   yAxis?: (YAxisOptions|Array<YAxisOptions>);
   zAxis?: (ZAxisOptions|Array<ZAxisOptions>);
 
-  serialize() {
-    return this;
+  serialize(): any {
+    return this
   }
 }

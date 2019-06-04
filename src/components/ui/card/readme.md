@@ -60,20 +60,20 @@
 
 ## Properties
 
-| Property     | Attribute    | Description                                                                 | Type                                                 | Default     |
-| ------------ | ------------ | --------------------------------------------------------------------------- | ---------------------------------------------------- | ----------- |
-| `flip_icon`  | `flip_icon`  | Sets the href on the anchor tag if the button is a link.                    | `string`                                             | `"cog"`     |
-| `flippable`  | `flippable`  | Let's a card be flippable                                                   | `boolean`                                            | `false`     |
-| `flipped`    | `flipped`    | Renders a flipped card                                                      | `boolean`                                            | `false`     |
-| `for`        | `for`        | Sets the href on the anchor tag if the button is a link.                    | `string`                                             | `undefined` |
-| `href`       | `href`       | Sets the href if the card is a link.                                        | `string`                                             | `"#"`       |
-| `name`       | `name`       | Sets the name if the card is a button.                                      | `string`                                             | `""`        |
-| `padding`    | `padding`    | Sets the padding inside of the button. Can be small, medium, or large.      | `"large" \| "medium" \| "none" \| "small" \| "tiny"` | `"medium"`  |
-| `shadow`     | `shadow`     | Renders a shadow on the card                                                | `"heavy" \| "light" \| "medium"`                     | `"medium"`  |
-| `tag`        | `tag`        | Sets the element to render the card as - an anchor tag, a button, or a div. | `"a" \| "button" \| "div" \| "stencil-route-link"`   | `"div"`     |
-| `transition` | `transition` |                                                                             | `boolean`                                            | `false`     |
-| `type`       | `type`       | Sets the type on a button                                                   | `string`                                             | `undefined` |
-| `value`      | `value`      | Sets the value if the card is a button.                                     | `string`                                             | `"#"`       |
+| Property     | Attribute    | Description                                                                 | Type                                               | Default     |
+| ------------ | ------------ | --------------------------------------------------------------------------- | -------------------------------------------------- | ----------- |
+| `flip_icon`  | `flip_icon`  | Sets the href on the anchor tag if the button is a link.                    | `string`                                           | `"cog"`     |
+| `flippable`  | `flippable`  | Let's a card be flippable                                                   | `boolean`                                          | `false`     |
+| `flipped`    | `flipped`    | Renders a flipped card                                                      | `boolean`                                          | `false`     |
+| `for`        | `for`        | Sets the href on the anchor tag if the button is a link.                    | `string`                                           | `undefined` |
+| `href`       | `href`       | Sets the href if the card is a link.                                        | `string`                                           | `"#"`       |
+| `name`       | `name`       | Sets the name if the card is a button.                                      | `string`                                           | `""`        |
+| `padding`    | `padding`    | Sets the padding inside of the button. Can be small, medium, or large.      | `string`                                           | `"medium"`  |
+| `shadow`     | `shadow`     | Renders a shadow on the card                                                | `string`                                           | `"medium"`  |
+| `tag`        | `tag`        | Sets the element to render the card as - an anchor tag, a button, or a div. | `"a" \| "button" \| "div" \| "stencil-route-link"` | `"div"`     |
+| `transition` | `transition` |                                                                             | `boolean`                                          | `false`     |
+| `type`       | `type`       | Sets the element to render the card as - an anchor tag, a button, or a div. | `string`                                           | `undefined` |
+| `value`      | `value`      | Sets the value if the card is a button.                                     | `string`                                           | `"#"`       |
 
 
 ## Events

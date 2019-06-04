@@ -4,15 +4,17 @@
 
 :host {
   display: block;
+  position: relative;
   font-family: inherit;
   --grid-gap: 3rem;
+  --padding: 4rem;
 }
 
 :host .layout {
   display: grid;
   grid-gap: var(--grid-gap, 3rem);
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: var(--padding) 0;
   width: 95%;
   max-width: 1024px;
   min-height: 0;
@@ -48,28 +50,24 @@
   width: 100%;
 }
 
-:host([padding="none"]) .layout {
-  padding: 0;
+:host([padding="none"]) {
+  --padding: 0;
 }
 
-:host([padding="tiny"]) .layout {
-  padding: 0.5rem 0;
+:host([padding="tiny"]) {
+  --padding: 0.5rem;
 }
 
-:host([padding="small"]) .layout {
-  padding: 1rem 0;
+:host([padding="small"]) {
+  --padding: 1rem;
 }
 
-:host([padding="medium"]) .layout {
-  padding: 2rem 0;
+:host([padding="medium"]) {
+  --padding: 2rem;
 }
 
-:host([padding="large"]) .layout {
-  padding: 4rem 0;
-}
-
-:host([type="copy"]) .layout {
-  padding: 3rem 0;
+:host([padding="large"]) {
+  --padding: 4rem;
 }
 
 :host([align="top"]) .layout {
@@ -90,6 +88,14 @@
 
 :host ::slotted(*) {
   min-width: 0;
+}
+
+:host([has-nav]) .layout {
+  padding-bottom: 0;
+}
+
+:host ::slotted(*[slot="nav"]) {
+  margin-top: var(--padding);
 }
 
 @media (min-width: 700px) {

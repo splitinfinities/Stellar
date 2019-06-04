@@ -94,6 +94,11 @@ export class Button {
   @Prop({reflectToAttr: true}) invert: boolean = false;
 
   /**
+   * Sets the button or link as an outlined button.
+   */
+  @Prop({reflectToAttr: true}) dark: boolean = false;
+
+  /**
    * Sets the button or link as processing when clicked.
    */
   @Prop() processable: boolean = false;

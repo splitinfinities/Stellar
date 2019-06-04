@@ -47,7 +47,7 @@
   outline: 0;
   border: 0;
   background: transparent;
-  padding: 0 0 0 .6rem;
+  padding: 0 0 0 1em;
   width: 100%;
   height: calc(var(--item-size) - 1px);
   color: currentColor;
@@ -84,6 +84,7 @@
 
 :host .button stellar-asset {
   margin-left: 1rem;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 80%,rgba(255,255,255,0) 100%);
 }
 
 :host .button span {
@@ -110,25 +111,37 @@
 :host(:hover) .selected,
 :host(:focus) .selected,
 :host(:focus-within) .selected {
-  color: white;
+  color: var(--theme-base7);
 }
 
 :host([fit]) .selected {
   position: absolute;
-  top: .625rem;
-  right: .25rem;
-  font-size: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  font-size: 3em;
+  height: auto;
+}
+
+:host([fit][multiple]) stellar-asset {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
 }
 
 :host([fit][multiple]) .selected {
-  right: initial;
+  right: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  font-size: 2.5rem;
 }
 
 :host .button:focus,
 :host .button:hover,
 :host(:hover),
 :host(:focus-within) {
-  background: var(--theme-base1);
+  background: var(--theme-base0);
 }
 
 :host(.current) {

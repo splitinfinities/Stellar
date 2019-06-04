@@ -1,5 +1,6 @@
 import { Component, Prop, State, Listen, Watch, Element, Event, EventEmitter, Method, h } from '@stencil/core';
 import delay from 'await-delay';
+import Pluralize from 'pluralize';
 
 @Component({
   tag: 'stellar-select',
@@ -39,19 +40,16 @@ export class Select {
 
   @State() clear_confirm: boolean = false;
 
-  @State() values: Array<string> = [];
-
   @Event() change: EventEmitter;
 
   componentWillLoad () {
     if (this.multiple) {
       this.value = []
     }
-
-    this.listen_to_values();
   }
 
   async componentDidLoad () {
+    this.listen_to_values();
     this.current = this.element.shadowRoot.querySelector('stellar-item.current')
 
     if (this.multiple) {
@@ -59,6 +57,7 @@ export class Select {
 
       // @ts-ignore
       options.forEach((element) => {
+        element.selectable = true;
         element.multiple = true;
       })
     }
@@ -83,7 +82,6 @@ export class Select {
 
       this.clear_confirm = false;
       this.value = [];
-      this.values = [];
 
       const options = await this.option_elements();
 
@@ -94,6 +92,36 @@ export class Select {
       this.change.emit(this.value);
     } else {
       this.clear_confirm = true;
+    }
+  }
+
+  async update_values() {
+    if (this.multiple) {
+      const option_elements = await this.option_elements()
+
+      let values = [];
+
+      // @ts-ignore
+      option_elements.forEach((option) => {
+        if (!option.multiple) {
+          option.multiple = true
+        }
+
+        if (option.selected) {
+          values.push(option.value)
+        }
+      });
+
+      this.value = values;
+      this.change.emit(this.value);
+    } else {
+      const options = await this.option_elements();
+
+      Array.from(options).forEach((el) => {
+        if (el.classList.contains('current')) {
+          this.value = el.value;
+        }
+      })
     }
   }
 
@@ -254,16 +282,20 @@ export class Select {
   }
 
   readable_value(): string {
+    let language;
     // @ts-ignore
     if (typeof this.value === "object") {
       if (this.value.length === 0) {
+        language = Pluralize(this.verbiage, this.value.length)
+
         if (this.placeholderInverted) {
-          return `All ${this.verbiage}(s) selected`
+          return `All ${language} selected`
         } else {
-          return `No ${this.verbiage}(s) selected`
+          return `No ${language} selected`
         }
       }
-      return `${this.value.length} ${this.verbiage}${this.value.length > 1 ? "s" : ""}`
+      language = Pluralize(this.verbiage, this.value.length, true)
+      return `${language} selected`
     } else if (typeof this.value === "string") {
       return this.valueLabel || this.value.toString() || `Select ${this.verbiageAn ? "an" : "a"} ${this.verbiage}`
     } else {
@@ -307,7 +339,7 @@ export class Select {
 
     var callback = (mutationsList) => {
       for (var mutation of mutationsList) {
-        if (mutation.type == 'childList') {
+        if (mutation.type == 'childList' || mutation.type == 'subtree') {
           this.update_values();
         }
       }
@@ -315,22 +347,6 @@ export class Select {
 
     this.observer = new MutationObserver(callback);
     this.observer.observe(targetNode, config);
-  }
-
-  async update_values() {
-    const values = Array.from(this.element.querySelectorAll('stellar-item'))
-
-    this.values = values.map((element: HTMLStellarItemElement) => {
-      if (this.multiple) {
-        element.multiple = true
-      }
-
-      if (element.valueLabel && element.selected) {
-        this.valueLabel = element.valueLabel;
-      }
-
-      return element.value;
-    })
   }
 
   @Method()
@@ -437,7 +453,7 @@ export class Select {
   }
 
   renderEmptyButton() {
-    return this.multiple && this.value && this.value.length > 0 && <stellar-button tag="button" size="tiny" ghost class="theme-red" onClick={(e) => { e.stopPropagation(); this.clearValue() }}>
+    return this.multiple && this.value && this.value.length > 0 && <stellar-button class="clear-button" tag="button" size="tiny" ghost onClick={(e) => { e.stopPropagation(); this.clearValue() }}>
       <stellar-asset name="close" class="fs4 mr1"></stellar-asset>
       { this.clear_confirm ? `Clear ${this.value.length} selections?` : `Clear` }
     </stellar-button>

@@ -3,7 +3,8 @@
 }
 
 :host {
-	--background: linear-gradient(45deg, var(--theme-base7) 0%, var(--theme-base0) 100%);
+	--background: white;
+	--clip-path: polygon(0 100%, 0% 0%, calc(100% - 1em) 0%, 100% 100%, calc(100% - 1em) 100%, 0% 100%);
 	display: inline-block;
 	border-bottom: 1px solid var(--background);
 	background: var(--white);
@@ -11,7 +12,7 @@
 	overflow-x: auto;
 	overflow-y: hidden;
 	font-size: var(--font-size, 1rem);
-    clip-path: polygon(calc(100% - .5em) 0, 100% 50%, calc(100% - 0.5em) 100%, 0 100%, 0% 50%, 0 0);
+	clip-path: var(--clip-path);
 }
 
 :host stellar-asset {

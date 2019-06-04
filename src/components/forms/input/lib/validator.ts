@@ -3,6 +3,8 @@ import { Input } from '../input'
 
 export class Validator {
 	element: Input
+	value: string
+	strength: object
 	methods: Array<string>
 	errors: {message?: string, method?: string}[] = []
 
@@ -11,12 +13,12 @@ export class Validator {
 		this.prepare()
 	}
 
-	validate (instance: Input): FormResult {
+	async validate (instance: Input): Promise<FormResult> {
 		this.errors = []
 		this.element = instance
 
 		if (!this.element.novalidate) {
-			this.tests()
+			await this.tests()
 		}
 
 		return this.results()
@@ -52,8 +54,10 @@ export class Validator {
 		}
 	}
 
-	tests () {
-		const result = this.checkString();
+	async tests () {
+		this.value = await this.element.val();
+		this.strength = await this.element.getStrength();
+		const result = await this.checkString();
 
 		if (!result) {
 			this.checkEmpty()
@@ -72,7 +76,7 @@ export class Validator {
 	}
 
 	checkString () {
-		const result = typeof this.element.val() === "undefined";
+		const result = typeof this.value === "undefined";
 
 		if (result) {
 			this.addError("string", "This field is required.")
@@ -83,7 +87,7 @@ export class Validator {
 
 	checkEmpty () {
 		if (check.isIn("required", this.methods)) {
-			const result = check.isEmpty(this.element.val())
+			const result = check.isEmpty(this.value)
 
 			if (result) {
 				this.addError("required", "This field is required.")
@@ -93,7 +97,7 @@ export class Validator {
 
 	checkEmail () {
 		if (check.isIn("email", this.methods)) {
-			const result = check.isEmail(this.element.val())
+			const result = check.isEmail(this.value)
 
 			if (!result) {
 				this.addError("email", "Please enter a valid email.")
@@ -104,7 +108,7 @@ export class Validator {
 
 	checkColor () {
 		if (check.isIn("color", this.methods)) {
-			const result = check.isHexColor(this.element.val())
+			const result = check.isHexColor(this.value)
 
 			if (!result) {
 				this.addError("color", "Please enter a valid color.")
@@ -114,7 +118,7 @@ export class Validator {
 
 	checkURL () {
 		if (check.isIn("url", this.methods)) {
-			const result = check.isURL(this.element.val())
+			const result = check.isURL(this.value)
 
 			if (!result) {
 				this.addError("url", "Please enter a valid URL.")
@@ -124,7 +128,7 @@ export class Validator {
 
 	checkIP () {
 		if (check.isIn("ipv4", this.methods)) {
-			const result = check.isIP(this.element.val(), 4)
+			const result = check.isIP(this.value, 4)
 
 			if (!result) {
 				this.addError("ipv4", "Please enter a valid IP Address.")
@@ -132,7 +136,7 @@ export class Validator {
 		}
 
 		if (check.isIn("ipv6", this.methods)) {
-			const result = check.isIP(this.element.val(), 6)
+			const result = check.isIP(this.value, 6)
 
 			if (!result) {
 				this.addError("ipv6", "Please enter a valid IP Address.")
@@ -142,7 +146,7 @@ export class Validator {
 
 	checkTelephone () {
 		if (check.isIn("tel", this.methods)) {
-			const result = check.isMobilePhone(this.element.val(), 'any')
+			const result = check.isMobilePhone(this.value, 'any')
 
 			if (!result) {
 				this.addError("tel", "Please enter a valid phone number.")
@@ -152,7 +156,7 @@ export class Validator {
 
 	checkPassword () {
 		if (check.isIn("password", this.methods)) {
-			const result: any = this.element.getStrength()
+			const result: any = this.strength
 
 			if (result.score < 3) {
 				this.addError("password", "This password must be stonger.")
@@ -162,7 +166,7 @@ export class Validator {
 				}
 			}
 
-			if (check.isEmail(this.element.val())) {
+			if (check.isEmail(this.value)) {
 				this.element.setStrength(0);
 				this.addError("password_warning", "This password is an email.")
 			}

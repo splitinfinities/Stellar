@@ -10,7 +10,7 @@ export class Avatar {
   @Element() element: HTMLElement;
 
   @Prop() src: string;
-  @Prop() tooltip: boolean = false;
+  @Prop() notooltip: boolean = false;
   @Prop({mutable: true, reflectToAttr: true}) size: string = "medium";
   @Prop({mutable: true, reflectToAttr: true}) color: string = "auto";
   @Prop({mutable: true, reflectToAttr: true}) name: string = "Stellar";
@@ -71,7 +71,7 @@ export class Avatar {
           <div class="letter" title={this.name}>{this.initials}</div>
           { this.src && <img src={this.src} alt={this.name} /> }
         </div>
-        {this.tooltip && <stellar-tooltip>{this.name}</stellar-tooltip>}
+        {!this.notooltip && <stellar-tooltip>{this.name}</stellar-tooltip>}
       </button>
     </Host>
   }

@@ -15,7 +15,7 @@ export class Grid {
   @Prop({reflectToAttr: true}) compact: boolean = false;
   @Prop({reflectToAttr: true}) padding: boolean = false;
   @Prop({reflectToAttr: true}) align: string = "items-start";
-  @Prop({reflectToAttr: true}) responsive: boolean|string = true;
+  @Prop({reflectToAttr: true}) noresponsive: boolean = false;
 
   @Prop() swappable: boolean = false;
   @Prop() swappableSelector: string = "stellar-card";
@@ -26,7 +26,7 @@ export class Grid {
   @State() __swappable;
 
   async makeResponsive() {
-    if (this.responsive && this.responsive !== "false") {
+    if (!this.noresponsive) {
       eqjs.definePts(this.element, {
         "tiny": 320,
         "small": 480,

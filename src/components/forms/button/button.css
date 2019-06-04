@@ -10,7 +10,7 @@
     -ms-user-select: none;
     user-select: none;
     display: var(--wrap-display, inline-block);
-    font-family: inherit;
+    font-family: var(--font-heading);
     text-align: center;
     vertical-align: middle;
     align-self: center;
@@ -25,7 +25,7 @@
     --active-border: none;
     --border: none;
     --border-radius: 0;
-    --font-size: 1.3rem;
+    --font-size: 1.8rem;
     --text-decoration: none;
 }
 
@@ -73,16 +73,25 @@
     --active-border: none;
 }
 
+:host([dark]) {
+    --background: var(--theme-base7);
+    --color: var(--white);
+    --border: none;
+    --active-background: var(--theme-base9);
+    --active-color: var(--theme-base0);
+    --active-border: none;
+}
+
 :host([pill]) {
     --border-radius: 1000px;
 }
 
 :host([size="tiny"]) {
-    --font-size: .75rem;
+    --font-size: 1rem;
 }
 
 :host([size="small"]) {
-    --font-size: 1rem;
+    --font-size: 1.4rem;
 }
 
 :host([size="large"]) {
@@ -122,9 +131,9 @@
     letter-spacing: var(--letter-spacing, 0.0275em);;
     white-space: nowrap;
     color: var(--color);
-    font-family: var(--font-system);
+    font-family: inherit;
     font-size: var(--font-size);
-    font-weight: 500;
+    font-weight: 600;
     border-radius: var(--border-radius, 0);
 }
 
@@ -150,6 +159,10 @@
 :host([block]) .button {
     display: block;
     width: 100%;
+}
+
+:host ::slotted(*) {
+    font-family: inherit;
 }
 
 :host ::slotted(img),

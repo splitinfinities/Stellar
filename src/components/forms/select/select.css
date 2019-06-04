@@ -1,7 +1,7 @@
 :host {
   --color: var(--black);
   --border-radius: 0.3rem;
-  --item-size: 4.25rem;
+  --item-size: 5rem;
   --background: var(--white);
   --border-color: var(--gray1);
 
@@ -18,7 +18,7 @@
 
 :host stellar-item,
 :host ::slotted(stellar-item) {
-  --item-size: 4.2rem;
+  --item-size: 5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -206,6 +206,16 @@ stellar-input .validation span + span {
 :host stellar-item stellar-tooltip {
   display: none;
 }
+
+:host .clear-button {
+  --color: var(--red5);
+  --active-color: var(--red7);
+}
+
+:host .clear-button stellar-asset {
+  font-size: 1.75rem;
+}
+
 
 
 :host-context(.dark-mode) {

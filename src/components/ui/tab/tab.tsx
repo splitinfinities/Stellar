@@ -10,8 +10,7 @@ import { properties } from '../../../utils'
 export class Tab {
   @Element() element: HTMLElement
 
-  @Prop({mutable: true, reflectToAttr: true}) href: string = "#"
-  @Prop({mutable: true, reflectToAttr: true}) tag: string = "button"
+  @Prop({mutable: true, reflectToAttr: true}) name: string;
   @Prop() disabled: boolean = false
   @Prop({mutable: true, reflectToAttr: true}) open: boolean = false
   @Prop() notifications: boolean|number = false
@@ -37,23 +36,25 @@ export class Tab {
   }
 
   async handleClick(e) {
-    const tabs = await this.parent.tabs()
+    if (e.target.classList.contains('title')) {
+      const tabs = await this.parent.tabs()
 
-    tabs.forEach((element) => {
-      element.open = false
-    })
+      tabs.forEach((element) => {
+        element.open = false
+      })
 
-    this.open = true
+      this.open = true
 
-    this.handleIndicatorPosition()
+      this.handleIndicatorPosition()
 
-    if (!this.disabled && this.tag !== "a") {
-      e.preventDefault()
+      if (!this.disabled) {
+        e.preventDefault()
 
-      this.contentChange.emit({
-        parent: this.parent,
-        name: this.href.replace(/[#]/g, "")
-      });
+        this.contentChange.emit({
+          parent: this.parent,
+          name: this.name.replace(/[#]/g, "")
+        });
+      }
     }
   }
 
@@ -85,9 +86,11 @@ export class Tab {
   }
 
   render() {
-    const Tag = this.tag;
-
-    // @ts-ignore
-    return <div class="tab-wrap"><Tag role="tab" aria-selected={this.open ? "true" : "false" } aria-setsize={this.tabCount} aria-posinset={this.order} href={this.href} tabindex="0" class="tab-button" onClick={(e) => this.handleClick(e)}>{this.renderNotifications()}{this.renderTitle()}</Tag></div>
+    return <div class="tab-wrap">
+      <button role="tab" aria-selected={this.open ? "true" : "false" } aria-setsize={this.tabCount} aria-posinset={this.order} tabindex="0" class="tab-button" onClick={(e) => this.handleClick(e)}>
+        {this.renderNotifications()}
+        {this.renderTitle()}
+      </button>
+    </div>
   }
 }

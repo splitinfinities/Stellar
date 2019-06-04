@@ -13,8 +13,6 @@
   font-family: var(--font-primary);
   border-bottom: 1px solid var(--theme-base1);
   background: var(--white);
-  height: 4em;
-  margin-bottom: 4rem;
 }
 
 :host([size="tiny"]) {

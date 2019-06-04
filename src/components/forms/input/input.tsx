@@ -46,7 +46,7 @@ export class Input {
   /**
    * The pre-set value to pass to the input element
    */
-  @Prop({mutable: true, reflectToAttr: true}) value: any;
+  @Prop({mutable: true}) value: any;
 
   /**
    * The pre-set value to pass to the input element
@@ -87,7 +87,7 @@ export class Input {
 
   // Dates
   @State() datepicker: TinyDatePicker;
-  @Prop() dateType: "month"|"year"|"day" = "day";
+  @Prop() dateType: "month"|"year"|"day" = "month";
 
   // Range sliders
   @Prop() min: number;
@@ -167,13 +167,33 @@ export class Input {
       this.datepicker = TinyDatePicker(this.input, {
         type: this.dateType,
         mode: 'dp-below',
-        format: (date) => { return moment(date).format('YYYY-MM-DD'); },
+        format: (date) => { return moment(date).format(this.dateFormat); },
         parse: (date) => { return date ? moment(date).toDate() : moment().toDate() ; }
       });
 
       this.datepicker.on('select', (_, dp) => {
-        this.value = moment(dp.state.selectedDate).format('YYYY-MM-DD');
+        this.value = moment(dp.state.selectedDate).format(this.dateFormat);
       });
+    }
+  }
+
+  get dateFormat() {
+    if (this.dateType === "day") {
+      return 'YYYY-MM-DD'
+    } else if (this.dateType === "month") {
+      return 'YYYY-MM'
+    } else if (this.dateType === "year") {
+      return 'YYYY'
+    }
+  }
+
+  get visualDateFormat() {
+    if (this.dateType === "day") {
+      return 'MMMM D, YYYY'
+    } else if (this.dateType === "month") {
+      return 'MMMM, YYYY'
+    } else if (this.dateType === "year") {
+      return 'YYYY'
     }
   }
 
@@ -234,7 +254,7 @@ export class Input {
     event.preventDefault();
     if (this.is_date_type) {
       // @ts-ignore
-      this.value = moment(this.value).add(1, `${this.dateType}s`).format('YYYY-MM-DD');
+      this.value = moment(this.value).add(1, `${this.dateType}s`).format(this.dateFormat);
       this.datepicker.close();
     } else {
       this.input.stepUp();
@@ -246,7 +266,7 @@ export class Input {
     event.preventDefault();
     if (this.is_date_type) {
       // @ts-ignore
-      this.value = moment(this.value).subtract(1, `${this.dateType}s`).format('YYYY-MM-DD');
+      this.value = moment(this.value).subtract(1, `${this.dateType}s`).format(this.dateFormat);
       this.datepicker.close();
     } else {
       this.input.stepDown();
@@ -259,7 +279,7 @@ export class Input {
       event.preventDefault();
       if (this.is_date_type) {
         // @ts-ignore
-        this.value = moment(this.value).add(1, `${this.dateType}s`).format('YYYY-MM-DD');
+        this.value = moment(this.value).add(1, `${this.dateType}s`).format(this.dateFormat);
         this.datepicker.close();
       } else {
         this.input.stepUp();
@@ -273,7 +293,7 @@ export class Input {
       event.preventDefault();
       if (this.is_date_type) {
         // @ts-ignore
-        this.value = moment(this.value).subtract(1, `${this.dateType}s`).format('YYYY-MM-DD');
+        this.value = moment(this.value).subtract(1, `${this.dateType}s`).format(this.dateFormat);
         this.datepicker.close();
       } else {
         this.input.stepDown();
@@ -393,9 +413,9 @@ export class Input {
   @Method()
   async validate(): Promise<FormResult> {
     if (this.novalidate) {
-      return this.validator.validate(this);
+      return await this.validator.validate(this);
     } else {
-      this.status = this.validator.validate(this);
+      this.status = await this.validator.validate(this);
       return this.status;
     }
   }
@@ -503,7 +523,7 @@ export class Input {
     if (isDatePicker(this.type)) {
       return (<div class="relative">
           <div class="fake-input absolute">
-            {moment(this.value).format('MMMM D, YYYY')}
+            {moment(this.value).format(this.visualDateFormat)}
           </div>
 
           <input class="input" id={this.generatedId} type="text" value={this.value} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} onKeyDown={(event: KeyboardEvent) => {this.handleKeyDownIncrement(event); this.handleKeyDownDecrement(event); }} />

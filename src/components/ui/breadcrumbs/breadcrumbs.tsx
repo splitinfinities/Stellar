@@ -11,7 +11,7 @@ export class Breadcrumbs {
   @Prop() icon: string = 'analytics';
   @Prop() icon_src: string;
   @Prop() icon_size: number = 0.85;
-
+  @Prop() tag: "link"|"route" = "link";
   @Prop() home: string = "/";
   @Prop() label: string = "Home";
   @Prop() description: string = "An icon that shows the main page you're on";
@@ -30,14 +30,16 @@ export class Breadcrumbs {
       breadcrumb.last = false;
     });
 
-    last_breadcrumb.last = true
+    if (last_breadcrumb) {
+      last_breadcrumb.last = true
+    }
   }
 
   render() {
     return (
       <div id="breadcumb_wrapper" class="breadcrumbs">
         <div class="flush-left"></div>
-        <stellar-breadcrumb first>
+        <stellar-breadcrumb first tag={this.tag}>
           <stellar-asset id="icon" name={this.icon} src={this.icon_src} color={this.color}></stellar-asset>
           <stellar-label>{this.label}</stellar-label>
         </stellar-breadcrumb>

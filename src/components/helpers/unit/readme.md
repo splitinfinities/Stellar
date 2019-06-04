@@ -7,31 +7,14 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type      | Default |
-| ---------- | ---------- | ----------- | --------- | ------- |
-| `decimals` | `decimals` |             | `number`  | `2`     |
-| `from`     | `from`     |             | `string`  | `"B"`   |
-| `round`    | `round`    |             | `boolean` | `false` |
-| `to`       | `to`       |             | `string`  | `"KB"`  |
-| `value`    | `value`    |             | `number`  | `1000`  |
+| Property   | Attribute  | Description | Type      |
+| ---------- | ---------- | ----------- | --------- |
+| `decimals` | `decimals` |             | `number`  |
+| `from`     | `from`     |             | `string`  |
+| `round`    | `round`    |             | `boolean` |
+| `to`       | `to`       |             | `string`  |
+| `value`    | `value`    |             | `number`  |
 
-
-## Dependencies
-
-### Used by
-
- - [stellar-input](../../forms/input)
- - [stellar-interview](../../media/interview)
- - [stellar-video-interview](../../media/video-interview)
-
-### Graph
-```mermaid
-graph TD;
-  stellar-input --> stellar-unit
-  stellar-interview --> stellar-unit
-  stellar-video-interview --> stellar-unit
-  style stellar-unit fill:#f9f,stroke:#333,stroke-width:4px
-```
 
 ----------------------------------------------
 

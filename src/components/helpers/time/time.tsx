@@ -2,10 +2,10 @@ import { Component, Prop, State, Watch } from '@stencil/core';
 import moment from 'moment';
 
 @Component({
-  tag: 'moment-time',
-  styleUrl: 'moment.css'
+  tag: 'stellar-time',
+  styleUrl: 'time.css'
 })
-export class MomentTime {
+export class Time {
   @Prop() value: string;
   @Prop() format: string = "MMMM Do YYYY, h:mm:ss a";
   @Prop() relative: boolean = false;

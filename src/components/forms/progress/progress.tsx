@@ -132,7 +132,7 @@ export class Progress {
     // @ts-ignore
     return (<this.wrapper class="progress" horizontal={this.blur} onClick={(e) => { this.handleClick(e); }}>
         <div class="status" style={{transform: `translate(${this.progress()}%, 0)`}}></div>
-        {this.secondary && <div class="secondary" style={{transform: `translate(${this.progress(true)}%, 0)`}}></div>}
+        {this.secondary ? <div class="secondary" style={{transform: `translate(${this.progress(true)}%, 0)`}}></div> : ""}
       </this.wrapper>
     )
   }

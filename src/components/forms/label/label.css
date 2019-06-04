@@ -3,19 +3,19 @@
 }
 
 :host {
+  --margin: .75em;
   line-height: 1.3;
   color: var(--gray9);
   font-size: 1.4rem;
   display: block;
-  font-weight: 900;
+  font-weight: 600;
   letter-spacing: 0.05em;
-  margin-bottom: .75em;
+  margin-bottom: var(--margin);
   cursor: pointer;
-  text-transform: uppercase;
 }
 
 :host([underneath]) {
-  margin-top: .75em;
+  margin-top: var(--margin);
   margin-bottom: 0;
   color: var(--gray5);
   font-weight: 600;

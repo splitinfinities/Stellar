@@ -45,7 +45,7 @@ export class Scatter {
         threshold: [0]
       })
 
-      this.io.observe(this.element);
+      this.io.observe(this.element.parentElement);
     } else {
       // fall back to setTimeout for Safari and IE
       setTimeout(() => {

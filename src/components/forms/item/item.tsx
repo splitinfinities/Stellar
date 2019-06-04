@@ -50,6 +50,10 @@ export class Item {
     }, 10)
   }
 
+  componentDidUnload() {
+    this.selectionChanged.emit(this);
+  }
+
   @Method()
   async data() {
     return {
@@ -122,11 +126,11 @@ export class Item {
       if (state) {
         if (this.selected !== state.selected) {
           var event = new CustomEvent('click');
-          this.element.querySelector('.button').dispatchEvent(event);
+          this.element.shadowRoot.querySelector('.button').dispatchEvent(event);
         }
       } else {
         var event = new CustomEvent('click');
-        this.element.querySelector('.button').dispatchEvent(event);
+        this.element.shadowRoot.querySelector('.button').dispatchEvent(event);
       }
     }
   }

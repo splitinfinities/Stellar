@@ -10,11 +10,18 @@ export class Layout {
 	@Element() element: HTMLElement;
 
 	@Prop({reflectToAttr: true}) type: string;
-	@Prop({reflectToAttr: true}) size: "tiny"|"small"|"medium"|"large"|"full"|"flush" = "medium";
+	@Prop({reflectToAttr: true}) size: "tiny"|"small"|"medium"|"large"|"xlarge"|"full"|"flush" = "medium";
 	@Prop({reflectToAttr: true}) padding: "none"|"tiny"|"small"|"medium"|"large" = "medium";
-	@Prop({reflectToAttr: true}) align: "baseline"|"center"|"top"|"bottom" = "top";
+	@Prop({reflectToAttr: true}) align: "baseline"|"center"|"top"|"bottom" = "baseline";
+	@Prop({reflectToAttr: true}) content: "baseline"|"center"|"top"|"bottom" = "baseline";
+	@Prop({reflectToAttr: true}) height: "fill";
+
+	@Prop({reflectToAttr: true}) hasNav: boolean;
 
 	componentWillLoad() {
+		const navs = Array.from(this.element.querySelectorAll('*[slot="nav"]'));
+		this.hasNav = navs.length > 0;
+
 		eqjs.definePts(this.element, {
 			"tiny": 320,
 			"small": 480,
@@ -41,6 +48,7 @@ export class Layout {
 		return (
 			<div class="layout">
 				<slot></slot>
+				<slot name="nav"></slot>
 			</div>
 		);
 	}

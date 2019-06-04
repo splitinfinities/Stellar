@@ -63,9 +63,8 @@ export class Card {
    * Sets the href on the anchor tag if the button is a link.
    */
   @Prop() flip_icon: string = "cog";
-  @State() ro: ResizeObserver;
 
-  @Prop({reflectToAttr: true, mutable: true}) transition: boolean = false;
+  @State() ro: ResizeObserver;
 
   @Event() flip: EventEmitter;
 
@@ -95,14 +94,6 @@ export class Card {
         const back_height = back.scrollHeight;
       properties.set({'--flipped-min-height': `${back_height + 50}px`}, this.element)
     }
-  }
-
-  addRotation () {
-    this.transition = true;
-
-    setTimeout(() => {
-      this.transition = false;
-    }, 250)
   }
 
   async click() {

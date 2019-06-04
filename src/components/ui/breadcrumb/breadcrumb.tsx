@@ -11,6 +11,7 @@ export class Breadcrumb {
 
   @Prop() color: string;
   @Prop() href: string = "/";
+  @Prop() tag: "link"|"route" = "link";
   @Prop() target: string = "_self";
   @Prop({mutable: true}) label: string = "Breadcrumb link";
   @Prop() disabled: boolean = false;
@@ -22,11 +23,22 @@ export class Breadcrumb {
     this.label += ` for ${this.element.textContent}`
   }
 
+  getTag() {
+    if (this.tag === "link") {
+      return "a"
+    }
+
+    if (this.tag === "route") {
+      return "stencil-route-link"
+    }
+  }
+
   render() {
-    return (
-      <a class="button" href={this.href} target={this.target} aria-label={this.label} title={this.label} data-disabled={this.disabled}>
+    const Tag = this.getTag();
+
+    // @ts-ignore
+    return <Tag class="button" href={this.href} url={this.href} target={this.target} aria-label={this.label} title={this.label} data-disabled={this.disabled}>
         <slot></slot>
-      </a>
-    );
+      </Tag>
   }
 }
