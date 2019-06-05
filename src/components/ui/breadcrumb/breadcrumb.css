@@ -20,7 +20,14 @@
 :host a:hover,
 :host a:focus,
 :host(:focus-within) {
-	background: var(--theme-base5);
+	background: var(--theme-base0);
+	color: var(--theme-base9);
+}
+
+:host([first]) a:hover,
+:host([first]) a:focus,
+:host([first]:focus-within) {
+	background: var(--theme-base9);
 	color: white;
 }
 
@@ -61,8 +68,8 @@
 }
 
 :host([first]) a {
-    padding-left: 1.25em;
-    padding-right: 1.25em;
+    padding-left: 1.5em;
+    padding-right: 1.75em;
 }
 
 :host([first]) a stellar-asset {

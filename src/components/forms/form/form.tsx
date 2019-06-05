@@ -53,8 +53,6 @@ export class Form {
 
     const els = Array.from(this.element.querySelectorAll(this.selectors.join(",")));
 
-    console.log(els)
-
     await asyncForEach(els, async (element: HTMLStellarInputElement|HTMLStellarSelectElement) => {
       try {
         let result = await element.validate();
@@ -95,8 +93,6 @@ export class Form {
   @Method()
   async submit_form() {
     const state = await this.state()
-
-    console.log(state.json)
 
     if (state.valid) {
       if (this.ajax) {

@@ -89,13 +89,6 @@ export class Progress {
       var calc = (widthClicked / totalWidth * this.max);
       var rounded = Math.round( calc * 1e2 ) / 1e2;
 
-      console.log(`bounding: ${bounding}`)
-      console.log(`widthClicked: ${widthClicked}`)
-      console.log(`totalWidth: ${totalWidth}`)
-      console.log(`max: ${this.max}`)
-      console.log(`calc: ${calc}`)
-      console.log(`rounded: ${rounded}`)
-
       if (this.rounded) {
         rounded = Math.ceil(rounded);
       }
