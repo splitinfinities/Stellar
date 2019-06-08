@@ -153,7 +153,7 @@ export namespace Components {
     /**
     * Sets the padding inside of the button. Can be small, medium, or large.
     */
-    'padding': "small"|"medium"|"large";
+    'padding': "tiny"|"small"|"medium"|"large";
     /**
     * Sets the button or link to render as a pill.
     */
@@ -1586,7 +1586,7 @@ declare namespace LocalJSX {
     /**
     * Sets the padding inside of the button. Can be small, medium, or large.
     */
-    'padding'?: "small"|"medium"|"large";
+    'padding'?: "tiny"|"small"|"medium"|"large";
     /**
     * Sets the button or link to render as a pill.
     */

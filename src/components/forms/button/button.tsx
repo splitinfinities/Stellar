@@ -51,7 +51,7 @@ export class Button {
   /**
    * Sets the padding inside of the button. Can be small, medium, or large.
    */
-  @Prop({reflectToAttr: true}) padding: "small"|"medium"|"large";
+  @Prop({reflectToAttr: true}) padding: "tiny"|"small"|"medium"|"large";
 
   /**
    * Sets the button or link as a button with only an icon.

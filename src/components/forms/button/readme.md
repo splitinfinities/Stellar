@@ -50,7 +50,7 @@
 | `label`       | `label`       | Sets accessibility options on the buttons                                                             | `string`                                                   | `'Submit'`  |
 | `name`        | `name`        | Sets the name on the button if the button is an input. Allows the button to act as an item in a form. | `string`                                                   | `''`        |
 | `outline`     | `outline`     | Sets the button or link as an outlined button.                                                        | `boolean`                                                  | `false`     |
-| `padding`     | `padding`     | Sets the padding inside of the button. Can be small, medium, or large.                                | `"large" \| "medium" \| "small"`                           | `undefined` |
+| `padding`     | `padding`     | Sets the padding inside of the button. Can be small, medium, or large.                                | `"large" \| "medium" \| "small" \| "tiny"`                 | `undefined` |
 | `pill`        | `pill`        | Sets the button or link to render as a pill.                                                          | `boolean`                                                  | `false`     |
 | `processable` | `processable` | Sets the button or link as processing when clicked.                                                   | `boolean`                                                  | `false`     |
 | `size`        | `size`        | Sets the size of the button. Can be tiny, small, medium, or large.                                    | `"large" \| "medium" \| "small" \| "tiny"`                 | `undefined` |
