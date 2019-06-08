@@ -16,7 +16,7 @@ it('should render and respond to changes appropriately', () => {
   avatar.formatName();
 
   expect(avatar.name).toBe("William M. Riley");
-  expect(avatar.initials).toBe("WM");
+  expect(avatar.initials).toBe("W");
   expect(avatar.color).toBe("red");
 
   avatar.color = "#333333";
