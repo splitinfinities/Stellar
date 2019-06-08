@@ -337,6 +337,128 @@
   --theme-complement9: var(--pink9);
 }
 
+:root {
+  --minor-second: 1.067;
+  --major-second: 1.125;
+  --minor-third: 1.2;
+  --major-third: 1.25;
+  --fourth: 1.333;
+  --augmented-fourth: 1.414;
+  --fifth: 1.5;
+  --minor-sixth: 1.6;
+  --golden: 1.618;
+  --phi: 1.618;
+  --major-sixth: 1.667;
+  --minor-seventh: 1.778;
+  --major-seventh: 1.875;
+  --octave: 2;
+  --major-tenth: 2.5;
+  --major-eleventh: 2.667;
+  --major-twelfth: 3;
+  --double-octave: 4;
+
+  /**
+   * Standard scale
+   * @description moving up the scale
+   */
+  --ms0: var(--ms-base, 1em);
+  --ms1: calc(var(--ms0) * var(--ms-ratio, var(--golden)));
+  --ms2: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms3: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms4: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms5: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms6: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms7: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms8: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms9: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms10: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms11: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms12: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms13: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms14: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms15: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms16: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  /* moving down the scale */
+  --ms-1: calc(var(--ms0) / var(--ms-ratio, var(--golden)));
+  --ms-2: calc(var(--ms0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms-3: calc(var(--ms0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms-4: calc(var(--ms0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms-5: calc(var(--ms0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms-6: calc(var(--ms0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms-7: calc(var(--ms0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms-8: calc(var(--ms0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms-9: calc(var(--ms0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms-10: calc(var(--ms0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+
+  /**
+   * Scale A (= Standard scale)
+   * @description moving up the scale
+   */
+  --ms_a0: var(--ms-base-a, 1em);
+  --ms_a1: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)));
+  --ms_a2: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_a3: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_a4: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_a5: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_a6: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_a7: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_a8: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_a9: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_a10: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_a11: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_a12: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_a13: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_a14: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_a15: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_a16: calc(var(--ms_a0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+
+  /* moving down the scale */
+  --ms_a-1: calc(var(--ms_a0) / var(--ms-ratio, var(--golden)));
+  --ms_a-2: calc(var(--ms_a0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_a-3: calc(var(--ms_a0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_a-4: calc(var(--ms_a0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_a-5: calc(var(--ms_a0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_a-6: calc(var(--ms_a0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_a-7: calc(var(--ms_a0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_a-8: calc(var(--ms_a0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_a-9: calc(var(--ms_a0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_a-10: calc(var(--ms_a0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+
+  /**
+   * Scale B (= Standard scale)
+   * @description moving up the scale
+   */
+  --ms_b0: var(--ms-base-b, 2.25em);
+  --ms_b1: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)));
+  --ms_b2: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_b3: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_b4: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_b5: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_b6: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_b7: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_b8: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_b9: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_b10: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_b11: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_b12: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_b13: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_b14: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_b15: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+  --ms_b16: calc(var(--ms_b0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+
+  /* moving down the scale */
+  --ms_b-1: calc(var(--ms_b0) / var(--ms-ratio, var(--golden)));
+  --ms_b-2: calc(var(--ms_b0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_b-3: calc(var(--ms_b0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_b-4: calc(var(--ms_b0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_b-5: calc(var(--ms_b0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_b-6: calc(var(--ms_b0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_b-7: calc(var(--ms_b0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_b-8: calc(var(--ms_b0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_b-9: calc(var(--ms_b0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+  --ms_b-10: calc(var(--ms_b0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
+}
+
 html.dark-mode:not(.no-host-context) {
   background: var(--black);
 }

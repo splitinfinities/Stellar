@@ -48,7 +48,9 @@
 }
 
 :host(:hover) .wrap,
-:host([hover]) .wrap {
+:host([hover]) .wrap,
+:host(:focus) .wrap,
+:host([focus]) .wrap {
     transform: scale(1) translateY(-100%) translateX(-50%) translateZ(0);
     opacity: 1;
 }
@@ -70,7 +72,11 @@
 :host([align="left"]:hover) .wrap,
 :host([align="left"][hover]) .wrap,
 :host([align="top-left"]:hover) .wrap,
-:host([align="top-left"][hover]) .wrap {
+:host([align="top-left"][hover]) .wrap,
+:host([align="top-left"]:focus) .wrap,
+:host([align="top-left"][focus]) .wrap,
+:host([align="left"]:focus) .wrap,
+:host([align="left"][focus]) .wrap {
     transform: scale(1) translateY(-100%) translateX(0) translateZ(0);
 }
 
@@ -91,7 +97,11 @@
 :host([align="right"]:hover) .wrap,
 :host([align="top-right"]:hover) .wrap,
 :host([align="right"][hover]) .wrap,
-:host([align="top-right"][hover]) .wrap {
+:host([align="top-right"][hover]) .wrap,
+:host([align="top-right"]:focus) .wrap,
+:host([align="top-right"][focus]) .wrap,
+:host([align="right"]:focus) .wrap,
+:host([align="right"][focus]) .wrap {
     transform: scale(1) translateY(-100%) translateX(-100%) translateZ(0);
 }
 
@@ -110,7 +120,9 @@
 }
 
 :host([align="middle-left"]:hover) .wrap,
-:host([align="middle-left"][hover]) .wrap {
+:host([align="middle-left"][hover]) .wrap,
+:host([align="middle-left"]:focus) .wrap,
+:host([align="middle-left"][focus]) .wrap {
     transform: scale(1) translateY(-50%) translateX(calc(-100% - 22px)) translateZ(0);
 }
 
@@ -130,7 +142,9 @@
 }
 
 :host([align="middle-right"]:hover) .wrap,
-:host([align="middle-right"][hover]) .wrap {
+:host([align="middle-right"][hover]) .wrap,
+:host([align="middle-right"]:focus) .wrap,
+:host([align="middle-right"][focus]) .wrap {
     transform: scale(1) translateY(-50%) translateX(calc(100% + 22px)) translateZ(0);
 }
 
@@ -151,7 +165,9 @@
 }
 
 :host([align="bottom-left"]:hover) .wrap,
-:host([align="bottom-left"][hover]) .wrap {
+:host([align="bottom-left"][hover]) .wrap,
+:host([align="bottom-left"]:focus) .wrap,
+:host([align="bottom-left"][focus]) .wrap {
     transform: scale(1) translateY(100%) translateX(0) translateZ(0);
 }
 
@@ -170,7 +186,9 @@
 }
 
 :host([align="bottom-center"]:hover) .wrap,
-:host([align="bottom-center"][hover]) .wrap {
+:host([align="bottom-center"][hover]) .wrap,
+:host([align="bottom-center"]:focus) .wrap,
+:host([align="bottom-center"][focus]) .wrap {
     transform: scale(1) translateY(100%) translateX(-50%) translateZ(0);
 }
 
@@ -191,7 +209,9 @@
 }
 
 :host([align="bottom-right"]:hover) .wrap,
-:host([align="bottom-right"][hover]) .wrap {
+:host([align="bottom-right"][hover]) .wrap,
+:host([align="bottom-right"]:focus) .wrap,
+:host([align="bottom-right"][focus]) .wrap {
     transform: scale(1) translateY(100%) translateX(-100%) translateZ(0);
 }
 

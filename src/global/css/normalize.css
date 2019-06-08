@@ -36,7 +36,6 @@ body ::-webkit-scrollbar-thumb:hover {
 
 html {
   box-sizing: border-box;
-  font-size: 10px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -48,42 +47,6 @@ html *,
 html *::after,
 html *::before {
   box-sizing: border-box;
-}
-
-@media (min-width: 550px) {
-  html {
-    font-size: 11px;
-  }
-}
-
-@media (min-width: 700px) {
-  html {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 800px) {
-  html {
-    font-size: 13px;
-  }
-}
-
-@media (min-width: 900px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 1000px) {
-  html {
-    font-size: 15px;
-  }
-}
-
-@media (min-width: 1200px) {
-  html {
-    font-size: 16px;
-  }
 }
 
 *,

@@ -7,6 +7,7 @@
 	align-items: stretch;
 	justify-content: center;
 	height: auto;
+	min-height: calc(var(--ms6) - 0.1rem);
 }
 
 :host([fill]) {
@@ -14,8 +15,24 @@
 	width: 100%;
 }
 
+:host([size="tiny"]) {
+	min-height: calc(var(--ms4) - 0.1rem);
+}
+
+:host([size="small"]) {
+	min-height: calc(var(--ms5) - 0.1rem);
+}
+
+:host([size="medium"]) {
+	min-height: calc(var(--ms7) - 0.2rem);
+}
+
+:host([size="large"]) {
+	min-height:var(--ms7);
+}
+
 :host ::slotted(*) {
-	height: auto;
+	align-self: stretch;
 }
 
 :host([fill]) ::slotted(*) {

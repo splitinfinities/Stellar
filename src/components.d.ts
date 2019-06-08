@@ -71,7 +71,7 @@ export namespace Components {
     'notooltip': boolean;
     'processing': boolean;
     'shape': "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
-    'size': string;
+    'size': "tiny"|"small"|"medium"|"large";
     'src': string;
   }
   interface StellarBlur {
@@ -97,6 +97,7 @@ export namespace Components {
     'icon_size': number;
     'icon_src': string;
     'label': string;
+    'size': "tiny"|"small"|"medium"|"large";
     'tag': "link"|"route";
   }
   interface StellarButton {
@@ -152,7 +153,7 @@ export namespace Components {
     /**
     * Sets the padding inside of the button. Can be small, medium, or large.
     */
-    'padding': string|"small"|"medium"|"large";
+    'padding': "small"|"medium"|"large";
     /**
     * Sets the button or link to render as a pill.
     */
@@ -164,7 +165,7 @@ export namespace Components {
     /**
     * Sets the size of the button. Can be tiny, small, medium, or large.
     */
-    'size': string|"tiny"|"small"|"medium"|"large";
+    'size': "tiny"|"small"|"medium"|"large";
     /**
     * Allows the button to render for different tags.
     */
@@ -734,7 +735,7 @@ export namespace Components {
     'height': string;
     'name': string;
     'noanimation': boolean;
-    'size': string|"tiny"|"small"|"medium"|"large";
+    'size': "tiny"|"small"|"medium"|"large";
     'tabs': () => Promise<any[]>;
     'vertical': boolean;
   }
@@ -786,6 +787,7 @@ export namespace Components {
   }
   interface StellarTooltip {
     'align': "left"|"center"|"right"|"middle-left"|"middle-center"|"middle-right"|"bottom-left"|"bottom-center"|"bottom-right";
+    'focused': boolean;
   }
   interface StellarUnit {
     'decimals': number;
@@ -1503,7 +1505,7 @@ declare namespace LocalJSX {
     'notooltip'?: boolean;
     'processing'?: boolean;
     'shape'?: "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
-    'size'?: string;
+    'size'?: "tiny"|"small"|"medium"|"large";
     'src'?: string;
   }
   interface StellarBlur extends JSXBase.HTMLAttributes<HTMLStellarBlurElement> {
@@ -1528,6 +1530,7 @@ declare namespace LocalJSX {
     'icon_size'?: number;
     'icon_src'?: string;
     'label'?: string;
+    'size'?: "tiny"|"small"|"medium"|"large";
     'tag'?: "link"|"route";
   }
   interface StellarButton extends JSXBase.HTMLAttributes<HTMLStellarButtonElement> {
@@ -1583,7 +1586,7 @@ declare namespace LocalJSX {
     /**
     * Sets the padding inside of the button. Can be small, medium, or large.
     */
-    'padding'?: string|"small"|"medium"|"large";
+    'padding'?: "small"|"medium"|"large";
     /**
     * Sets the button or link to render as a pill.
     */
@@ -1595,7 +1598,7 @@ declare namespace LocalJSX {
     /**
     * Sets the size of the button. Can be tiny, small, medium, or large.
     */
-    'size'?: string|"tiny"|"small"|"medium"|"large";
+    'size'?: "tiny"|"small"|"medium"|"large";
     /**
     * Allows the button to render for different tags.
     */
@@ -2133,7 +2136,7 @@ declare namespace LocalJSX {
     'height'?: string;
     'name'?: string;
     'noanimation'?: boolean;
-    'size'?: string|"tiny"|"small"|"medium"|"large";
+    'size'?: "tiny"|"small"|"medium"|"large";
     'vertical'?: boolean;
   }
   interface StellarTag extends JSXBase.HTMLAttributes<HTMLStellarTagElement> {
@@ -2183,6 +2186,7 @@ declare namespace LocalJSX {
   }
   interface StellarTooltip extends JSXBase.HTMLAttributes<HTMLStellarTooltipElement> {
     'align'?: "left"|"center"|"right"|"middle-left"|"middle-center"|"middle-right"|"bottom-left"|"bottom-center"|"bottom-right";
+    'focused'?: boolean;
   }
   interface StellarUnit extends JSXBase.HTMLAttributes<HTMLStellarUnitElement> {
     'decimals'?: number;

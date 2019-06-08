@@ -10,26 +10,29 @@
     --avatar-color: var(--theme-base7, var(--red7));
     --avatar-color-dark: var(--theme-base5, var(--red5));
     --avatar-font-color: var(--white);
-    --avatar-size: 2.2em;
-    --avatar-font-size: 1.8rem;
+    --avatar-size: var(--ms4);
+    --avatar-font-size: var(--ms1);
     --avatar-text-shadow: 0 0 0px rgba(255, 255, 255, .4);
     filter: drop-shadow(var(--drop-shadow));
 }
-
-:host([size='large']) {
-    --avatar-font-size: 3.6rem;
-}
-
-:host([size='medium']) {
-    --avatar-font-size: 1.8rem;
+:host([size='tiny']) {
+    --avatar-size: var(--ms1);
+    --avatar-font-size: var(--ms-2);
 }
 
 :host([size='small']) {
-    --avatar-font-size: 1rem;
+    --avatar-size: var(--ms3);
+    --avatar-font-size: var(--ms-1);
 }
 
-:host([size='tiny']) {
-    --avatar-font-size: .8rem;
+:host([size='medium']) {
+    --avatar-size: var(--ms6);
+    --avatar-font-size: var(--ms3);
+}
+
+:host([size='large']) {
+    --avatar-size: calc(var(--ms8) + 0.1em);
+    --avatar-font-size: var(--ms5);
 }
 
 :host .wrapper {

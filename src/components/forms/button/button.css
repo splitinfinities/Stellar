@@ -16,7 +16,10 @@
     align-self: center;
 
     --width: auto;
-    --padding: 1.0625em 2em 1.1em 2em;
+    --height: auto;
+    --padding-vertical: var(--ms0);
+    --padding-horizontal: var(--ms2);
+    --padding: var(--padding-vertical) var(--padding-horizontal);
     --background: var(--theme-base5);
     --color: var(--white);
     --border: none;
@@ -25,7 +28,7 @@
     --active-border: none;
     --border: none;
     --border-radius: 0;
-    --font-size: 1.8rem;
+    --font-size: var(--ms0);
     --text-decoration: none;
 }
 
@@ -39,7 +42,8 @@
 }
 
 :host([ghost]) {
-    --padding: 0.05em 0 0.125em;
+    --padding-vertical: 0;
+    --padding-horizontal: 0;
     --background: none;
     --color: var(--theme-base5);
     --border: none;
@@ -87,31 +91,48 @@
 }
 
 :host([size="tiny"]) {
-    --font-size: 1rem;
+    --font-size: var(--ms-2);
 }
 
 :host([size="small"]) {
-    --font-size: 1.4rem;
+    --font-size: var(--ms-1);
+}
+
+:host([size="medium"]) {
+    --font-size: var(--ms1);
 }
 
 :host([size="large"]) {
-    --font-size: 2rem;
+    --font-size: var(--ms2);
 }
 
 :host([padding="tiny"]) {
-    --padding: .55em 1.125em .61875em;
+    --padding-vertical: var(--ms-2);
+    --padding-horizontal: var(--ms0);
 }
 
 :host([padding="small"]) {
-    --padding: .7875em 1.5em .825em;
+    --padding-vertical: var(--ms-1);
+    --padding-horizontal: var(--ms1);
+}
+
+:host([padding="medium"]) {
+    --padding-vertical: var(--ms1);
+    --padding-horizontal: var(--ms3);
 }
 
 :host([padding="large"]) {
-    --padding: 1.3125em 2.5em 1.375em;
+    --padding-vertical: var(--ms2);
+    --padding-horizontal: var(--ms4);
 }
 
 :host(:active) {
-    transform: scale(0.925)
+    transform: scale(0.925);
+}
+
+:host(.h-auto) {
+    --height: 100%;
+    --padding-vertical: 0;
 }
 
 :host .button {
@@ -124,7 +145,7 @@
     background: var(--background);
     padding: var(--padding);
     width: var(--width);
-    height: auto;
+    height: var(--height);
     vertical-align: bottom;
     text-decoration: var(--text-decoration);
     line-height: 1;

@@ -7,12 +7,15 @@ import { Component, Prop, State, Element, h } from '@stencil/core'
 })
 export class Group {
 	@Element() element: HTMLElement
-	@Prop({mutable: true}) size: string = "medium"
+	@Prop({mutable: true, reflectToAttr: true}) size: string;
 	@Prop() overflow: boolean = false
 	@Prop() count: number = 10
 	@State() extras: Array<Element> = []
 
 	componentWillLoad() {
+		this.sizes()
+		this.buttons()
+
 		if (this.overflow) {
 			if (this.element.children.length > this.count) {
 				const children = Array.from(this.element.children)
@@ -24,6 +27,26 @@ export class Group {
 					}
 				})
 			}
+		}
+	}
+
+	sizes () {
+		const kids = Array.from(this.element.children)
+
+		if (kids) {
+			kids.forEach((kid: any) => {
+				kid.size = this.size;
+			})
+		}
+	}
+
+	buttons() {
+		const buttons = this.element.querySelectorAll('stellar-button');
+
+		if (buttons) {
+			buttons.forEach((button) => {
+				button.classList.add('h-auto')
+			})
 		}
 	}
 

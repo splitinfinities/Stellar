@@ -14,7 +14,7 @@ export class Tabs {
   @Prop({mutable: true, reflectToAttr: true}) name: string;
   @Prop({mutable: true, reflectToAttr: true}) noanimation: boolean = false;
 
-  @Prop({reflectToAttr: true}) size: string|"tiny"|"small"|"medium"|"large" = "medium";
+  @Prop({reflectToAttr: true}) size: "tiny"|"small"|"medium"|"large";
   @Prop({reflectToAttr: true}) block: boolean = false;
   @Prop({reflectToAttr: true}) vertical: boolean = false;
   @Prop({reflectToAttr: true}) behavior: string;

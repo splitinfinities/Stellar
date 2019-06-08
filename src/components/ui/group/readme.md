@@ -139,11 +139,11 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type      | Default    |
-| ---------- | ---------- | ----------- | --------- | ---------- |
-| `count`    | `count`    |             | `number`  | `10`       |
-| `overflow` | `overflow` |             | `boolean` | `false`    |
-| `size`     | `size`     |             | `string`  | `"medium"` |
+| Property   | Attribute  | Description | Type      | Default     |
+| ---------- | ---------- | ----------- | --------- | ----------- |
+| `count`    | `count`    |             | `number`  | `10`        |
+| `overflow` | `overflow` |             | `boolean` | `false`     |
+| `size`     | `size`     |             | `string`  | `undefined` |
 
 
 ## Dependencies

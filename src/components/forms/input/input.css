@@ -9,16 +9,17 @@
   width: auto;
   max-width: 100%;
 
-  --font-size: 1.4rem;
-  --complementing-font-size: 1rem;
+  --font-size: var(--ms0);
+  --complementing-font-size: var(--ms-1);
   --height: 5rem;
-  --padding: 0 1em;
+  --padding: 0 var(--ms0);
   --background: var(--white);
   --color: var(--black);
   --border-color: var(--gray2);
   --border: 1px solid var(--border-color);
-  --line-height: 3.5;
+  --line-height: var(--ms6);
   --border-radius: 0.3rem;
+  --validation-spacing: var(--ms-2)
 }
 
 :host([type="hidden"]) {
@@ -30,21 +31,39 @@
 }
 
 :host([size="tiny"]) {
-  --font-size: 0.625rem;
+  --font-size: var(--ms-2);
+  --complementing-font-size: var(--ms-3);
   --height: 2rem;
-  --padding: 0 1rem;
+  --line-height: var(--ms4);
+  --padding: 0 var(--ms-2);
+  --validation-spacing: var(--ms-8);
 }
 
 :host([size="small"]) {
-  --font-size: 0.875rem;
+  --font-size: var(--ms-1);
+  --complementing-font-size: var(--ms-2);
+  --line-height: var(--ms5);
   --height: 2rem;
-  --padding: 0 1rem;
+  --padding: 0 var(--ms-1);
+  --validation-spacing: var(--ms-5);
+}
+
+:host([size="medium"]) {
+  --font-size: var(--ms1);
+  --complementing-font-size: var(--ms0);
+  --line-height: var(--ms7);
+  --height: 2rem;
+  --padding: 0 var(--ms1);
+  --validation-spacing: var(--ms-1);
 }
 
 :host([size="large"]) {
-  --font-size: 1.8rem;
+  --font-size: var(--ms2);
+  --complementing-font-size: var(--ms1);
+  --line-height: calc(var(--ms8) - 0.5em);
   --height: 2rem;
-  --padding: 0 1rem;
+  --padding: 0 var(--ms2);
+  --validation-spacing: var(--ms0);
 }
 
 :host ::selection,
@@ -131,7 +150,7 @@
   padding: var(--padding);
   height: auto;
   overflow: hidden;
-  line-height: var(--line-height);
+  line-height: calc(var(--line-height) - 0.2em);
   font-size: var(--font-size);
 }
 
@@ -252,7 +271,7 @@
 
 :host .validation span {
   display: block;
-  padding: 10px 0;
+  padding: var(--validation-spacing) 0 0;
   line-height: 1.4;
 }
 

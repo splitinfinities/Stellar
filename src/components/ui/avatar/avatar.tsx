@@ -11,7 +11,7 @@ export class Avatar {
 
   @Prop() src: string;
   @Prop() notooltip: boolean = false;
-  @Prop({mutable: true, reflectToAttr: true}) size: string = "medium";
+  @Prop({mutable: true, reflectToAttr: true}) size: "tiny"|"small"|"medium"|"large";
   @Prop({mutable: true, reflectToAttr: true}) color: string = "auto";
   @Prop({mutable: true, reflectToAttr: true}) name: string = "Stellar";
   @Prop({mutable: true, reflectToAttr: true}) initials: string = "ST";
@@ -20,6 +20,7 @@ export class Avatar {
 
   @State() colorAuto: boolean = false;
   @State() colors: string[];
+  @State() focus: boolean;
 
   componentWillLoad() {
     this.colors = Object.keys(colors).filter((color) => {
@@ -64,14 +65,14 @@ export class Avatar {
 
   render() {
     return <Host class={`theme-${this.color}`}>
-      <button class="wrapper" title={`You tabbed on an Avatar for ${this.name}`}>
+      <button class="wrapper" title={`You tabbed on an Avatar for ${this.name}`} onFocus={()=> { this.focus = true; }} onBlur={()=> { this.focus = false; }}>
         {this.processing && <div class="processing"><stellar-avatar src="Loading" /></div>}
         <div class="content">
           <div class="spacer"></div>
           <div class="letter" title={this.name}>{this.initials}</div>
           { this.src && <img src={this.src} alt={this.name} /> }
         </div>
-        {!this.notooltip && <stellar-tooltip>{this.name}</stellar-tooltip>}
+        {!this.notooltip && <stellar-tooltip focused={this.focus}>{this.name}</stellar-tooltip>}
       </button>
     </Host>
   }

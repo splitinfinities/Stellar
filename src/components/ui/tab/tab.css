@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
   margin: -1px 0.25em;
-  padding: 0 0.25em;
+  padding: var(--padding);
   color: var(--theme-base8);
   font-size: var(--font-size);
   height: 100%;

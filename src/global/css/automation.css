@@ -21,11 +21,40 @@ stellar-grid + copy-wrap {
   margin-top: 4rem;
 }
 
-p + h1,
-p + h2,
-p + h3,
-p + h4,
-p + h5,
-p + h6 {
-  margin-top: 1em !important;
+a {
+  color: var(--theme-base6);
+}
+
+a:hover,
+a:focus {
+  color: var(--theme-base8);
+}
+
+hr {
+  margin: 3rem auto;
+  border: 0;
+  height: 1px;
+  background-color: var(--gray1);
+}
+
+hr.vertical {
+  width: 1px;
+  height: 2rem;
+  margin: -.75rem 1rem;
+  display: inline-block;
+}
+
+*[columns] {
+  column-count: 2;
+  column-gap: 3rem;
+  column-rule: 1px solid var(--theme-base5);
+  column-span: all;
+}
+
+*[columns="3"] {
+  column-count: 3;
+}
+
+h4 + .hydrated {
+  margin-top: var(--ms-5);
 }

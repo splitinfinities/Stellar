@@ -24,7 +24,7 @@ export class Tag {
 
   render() {
     return (
-      <stellar-label class="tag">
+      <stellar-label class="tag" size={this.size}>
         <slot></slot>
       </stellar-label>
     );

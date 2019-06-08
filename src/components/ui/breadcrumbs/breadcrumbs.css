@@ -5,18 +5,40 @@
 :host {
 	--background: white;
 	--clip-path: polygon(0 100%, 0% 0%, calc(100% - 1em) 0%, 100% 100%, calc(100% - 1em) 100%, 0% 100%);
+	--height: var(--ms5);
+	--font-size: var(--ms0);
 	display: inline-block;
 	border-bottom: 1px solid var(--background);
 	background: var(--white);
-	height: 3rem;
+	height: var(--height);
 	overflow-x: auto;
 	overflow-y: hidden;
-	font-size: var(--font-size, 1rem);
+	font-size: var(--font-size);
 	clip-path: var(--clip-path);
 }
 
+:host([size="tiny"]) {
+	--height: var(--ms3);
+	--font-size: var(--ms-2);
+}
+
+:host([size="small"]) {
+	--height: var(--ms4);
+	--font-size: var(--ms-1);
+}
+
+:host([size="medium"]) {
+	--height: var(--ms6);
+	--font-size: var(--ms1);
+}
+
+:host([size="large"]) {
+	--height: var(--ms7);
+	--font-size: var(--ms2);
+}
+
 :host stellar-asset {
-	font-size: 2rem;
+	font-size: 2em;
 	line-height: 0;
 }
 

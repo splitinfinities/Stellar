@@ -50,10 +50,10 @@
 | `label`       | `label`       | Sets accessibility options on the buttons                                                             | `string`                                                   | `'Submit'`  |
 | `name`        | `name`        | Sets the name on the button if the button is an input. Allows the button to act as an item in a form. | `string`                                                   | `''`        |
 | `outline`     | `outline`     | Sets the button or link as an outlined button.                                                        | `boolean`                                                  | `false`     |
-| `padding`     | `padding`     | Sets the padding inside of the button. Can be small, medium, or large.                                | `string`                                                   | `"medium"`  |
+| `padding`     | `padding`     | Sets the padding inside of the button. Can be small, medium, or large.                                | `"large" \| "medium" \| "small"`                           | `undefined` |
 | `pill`        | `pill`        | Sets the button or link to render as a pill.                                                          | `boolean`                                                  | `false`     |
 | `processable` | `processable` | Sets the button or link as processing when clicked.                                                   | `boolean`                                                  | `false`     |
-| `size`        | `size`        | Sets the size of the button. Can be tiny, small, medium, or large.                                    | `string`                                                   | `"medium"`  |
+| `size`        | `size`        | Sets the size of the button. Can be tiny, small, medium, or large.                                    | `"large" \| "medium" \| "small" \| "tiny"`                 | `undefined` |
 | `tag`         | `tag`         | Allows the button to render for different tags.                                                       | `"button" \| "link" \| "route-link" \| "span" \| "submit"` | `"link"`    |
 | `target`      | `target`      | Sets the target on the anchor tag if the button is a link.                                            | `string`                                                   | `'_self'`   |
 | `value`       | `value`       | Sets the value on the button if the button is an input.                                               | `string`                                                   | `''`        |

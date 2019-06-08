@@ -76,7 +76,7 @@
 | `notooltip`  | `notooltip`  |             | `boolean`                                                                              | `false`     |
 | `processing` | `processing` |             | `boolean`                                                                              | `false`     |
 | `shape`      | `shape`      |             | `"circle" \| "diamond" \| "hexagon" \| "message" \| "rectangle" \| "square" \| "star"` | `"square"`  |
-| `size`       | `size`       |             | `string`                                                                               | `"medium"`  |
+| `size`       | `size`       |             | `"large" \| "medium" \| "small" \| "tiny"`                                             | `undefined` |
 | `src`        | `src`        |             | `string`                                                                               | `undefined` |
 
 
