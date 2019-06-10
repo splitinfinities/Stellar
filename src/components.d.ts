@@ -586,7 +586,7 @@ export namespace Components {
     'placeholderInverted': boolean;
     'processing': boolean;
     'required': boolean;
-    'size': string;
+    'size': "tiny"|"small"|"medium"|"large";
     'tooltip': string;
     'validate': () => Promise<FormResult>;
     'value': Array<string>|string;
@@ -2002,7 +2002,7 @@ declare namespace LocalJSX {
     'placeholderInverted'?: boolean;
     'processing'?: boolean;
     'required'?: boolean;
-    'size'?: string;
+    'size'?: "tiny"|"small"|"medium"|"large";
     'tooltip'?: string;
     'value'?: Array<string>|string;
     'valueLabel'?: string;

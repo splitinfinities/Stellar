@@ -19,7 +19,7 @@ export class Select {
   @Prop({ mutable: true, reflectToAttr: true }) multiple: boolean;
   @Prop() other: boolean;
   @Prop() placeholderInverted: boolean;
-  @Prop({ mutable: true, reflectToAttr: true }) size: string;
+  @Prop({ mutable: true, reflectToAttr: true }) size: "tiny"|"small"|"medium"|"large";
   @Prop() required: boolean = false;
   @Prop() processing: boolean;
   @Prop({ mutable: true, reflectToAttr: true }) focused: boolean;
@@ -454,8 +454,8 @@ export class Select {
   }
 
   renderEmptyButton() {
-    return this.multiple && this.value && this.value.length > 0 && <stellar-button class="clear-button" tag="button" size="tiny" ghost onClick={(e) => { e.stopPropagation(); this.clearValue() }}>
-      <stellar-asset name="close" class="fs4 mr1"></stellar-asset>
+    return this.multiple && this.value && this.value.length > 0 && <stellar-button class="clear-button" tag="button" size={this.size} ghost onClick={(e) => { e.stopPropagation(); this.clearValue() }}>
+      <stellar-asset name="close" />
       { this.clear_confirm ? `Clear ${this.value.length} selections?` : `Clear` }
     </stellar-button>
   }

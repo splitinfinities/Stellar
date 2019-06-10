@@ -115,11 +115,12 @@
   border: 1px solid var(--border-color);
   pointer-events: none;
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  border-radius: var(--border-radius);
 }
 
 :host .select-list ::slotted(stellar-item) {
   color: var(--color);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--gray0);
 }
 
 :host .select-list ::slotted(stellar-item:last-child) {
@@ -167,7 +168,7 @@ stellar-input .validation span + span {
   transition: transform 200ms var(--ease) 0ms, opacity 250ms var(--ease) 0ms, max-height 200ms var(--ease) 0ms;
   opacity: 1;
   pointer-events: initial;
-  max-height: 20rem;
+  max-height: calc(var(--item-size) * 6.2);
   overflow-y: auto;
 }
 
@@ -186,15 +187,11 @@ stellar-input .validation span + span {
   right: 1rem;
 }
 
+:host([size="tiny"]),
 :host([size="tiny"]) stellar-item,
 :host([size="tiny"]) ::slotted(stellar-item) {
   --font-size: var(--ms-2);
   --item-size: var(--ms4);
-}
-
-:host([size="tiny"][open]) .select-list,
-:host([size="tiny"]) .select-list:focus-within {
-  max-height: 11rem;
 }
 
 /* Size: Small */
@@ -215,15 +212,11 @@ stellar-input .validation span + span {
   font-size: 0.75rem;
 }
 
+:host([size="small"]),
 :host([size="small"]) stellar-item,
 :host([size="small"]) ::slotted(stellar-item) {
   --font-size: var(--ms-1);
   --item-size: var(--ms5);
-}
-
-:host([size="small"][open]) .select-list,
-:host([size="small"]) .select-list:focus-within {
-  max-height: 11rem;
 }
 
 /* Size: default */
@@ -235,15 +228,11 @@ stellar-input .validation span + span {
   right: 1rem;
 }
 
+:host,
 :host stellar-item,
 :host ::slotted(stellar-item) {
   --font-size: var(--ms0);
   --item-size: var(--ms6);
-}
-
-:host([open]) .select-list,
-:host .select-list:focus-within {
-  max-height: 11rem;
 }
 
 /* Size: Medium */
@@ -264,15 +253,11 @@ stellar-input .validation span + span {
   font-size: 0.75rem;
 }
 
+:host([size="medium"]),
 :host([size="medium"]) stellar-item,
 :host([size="medium"]) ::slotted(stellar-item) {
   --font-size: var(--ms1);
   --item-size: var(--ms7);
-}
-
-:host([size="medium"][open]) .select-list,
-:host([size="medium"]) .select-list:focus-within {
-  max-height: 11rem;
 }
 
 /* Size: Large */
@@ -293,22 +278,16 @@ stellar-input .validation span + span {
   font-size: 0.75rem;
 }
 
+:host([size="large"]),
 :host([size="large"]) stellar-item,
 :host([size="large"]) ::slotted(stellar-item) {
   --font-size: var(--ms2);
   --item-size: var(--ms7);
 }
 
-:host([size="large"][open]) .select-list,
-:host([size="large"]) .select-list:focus-within {
-  max-height: 11rem;
-}
-
-
-
 :host([overlay]) .select-list {
   position: absolute;
-  top: calc((var(--item-size) * .75) + 1rem);
+  top: calc(var(--item-size) - 1px);
 }
 
 :host stellar-tooltip {
@@ -322,10 +301,7 @@ stellar-input .validation span + span {
 :host .clear-button {
   --color: var(--red5);
   --active-color: var(--red7);
-}
-
-:host .clear-button stellar-asset {
-  font-size: 1.75rem;
+  align-self: baseline;
 }
 
 :host-context(.dark-mode) {

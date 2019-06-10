@@ -99,8 +99,8 @@
   height: 3rem;
 }
 
-:host .selected {
-  animation: fadeInLeft 200ms ease;
+:host stellar-asset.selected {
+  animation: fadeInScale 200ms var(--ease);
   font-size: var(--item-size);
   margin-left: auto !important;
   background: transparent;
@@ -166,9 +166,9 @@
   border: 1px solid var(--border-color);
   background: var(--background);
   border-radius: 4px;
-  font-size: 2.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
+  font-size: calc(var(--item-size) * .55);
+  width: calc(var(--item-size) * .55);
+  height: calc(var(--item-size) * .55);
   margin: 0 0 0 auto;
   left: -1rem;
   position: relative;
@@ -200,4 +200,16 @@
 :host-context(.dark-mode):host(.current:hover),
 :host-context(.dark-mode):host(.current:focus-within) {
   background: transparent;
+}
+
+@keyframes fadeInScale {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

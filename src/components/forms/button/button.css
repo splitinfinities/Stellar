@@ -199,6 +199,11 @@
     top: 0.025rem;
 }
 
+:host([ghost]) ::slotted(img),
+:host([ghost]) ::slotted(stellar-asset) {
+    font-size: 1.65em;
+}
+
 :host ::slotted(img[align="left"]),
 :host ::slotted(stellar-asset[align="left"]) {
     order: -1;

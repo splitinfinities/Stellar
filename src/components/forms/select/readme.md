@@ -180,30 +180,30 @@
 
 ## Properties
 
-| Property              | Attribute              | Description | Type                 | Default                 |
-| --------------------- | ---------------------- | ----------- | -------------------- | ----------------------- |
-| `default`             | `default`              |             | `any`                | `undefined`             |
-| `description`         | `description`          |             | `string`             | `undefined`             |
-| `focused`             | `focused`              |             | `boolean`            | `undefined`             |
-| `footer`              | `footer`               |             | `boolean`            | `undefined`             |
-| `inline`              | `inline`               |             | `boolean`            | `undefined`             |
-| `label`               | `label`                |             | `string`             | `undefined`             |
-| `multiple`            | `multiple`             |             | `boolean`            | `undefined`             |
-| `name`                | `name`                 |             | `boolean \| string`  | `"select"`              |
-| `novalidate`          | `novalidate`           |             | `boolean`            | `undefined`             |
-| `open`                | `open`                 |             | `boolean`            | `false`                 |
-| `other`               | `other`                |             | `boolean`            | `undefined`             |
-| `overlay`             | `overlay`              |             | `boolean`            | `undefined`             |
-| `placeholder`         | `placeholder`          |             | `string`             | `"Choose something..."` |
-| `placeholderInverted` | `placeholder-inverted` |             | `boolean`            | `undefined`             |
-| `processing`          | `processing`           |             | `boolean`            | `undefined`             |
-| `required`            | `required`             |             | `boolean`            | `false`                 |
-| `size`                | `size`                 |             | `string`             | `undefined`             |
-| `tooltip`             | `tooltip`              |             | `string`             | `undefined`             |
-| `value`               | `value`                |             | `string \| string[]` | `undefined`             |
-| `valueLabel`          | `value-label`          |             | `string`             | `undefined`             |
-| `verbiage`            | `verbiage`             |             | `string`             | `"selection"`           |
-| `verbiageAn`          | `verbiage-an`          |             | `boolean`            | `undefined`             |
+| Property              | Attribute              | Description | Type                                       | Default                 |
+| --------------------- | ---------------------- | ----------- | ------------------------------------------ | ----------------------- |
+| `default`             | `default`              |             | `any`                                      | `undefined`             |
+| `description`         | `description`          |             | `string`                                   | `undefined`             |
+| `focused`             | `focused`              |             | `boolean`                                  | `undefined`             |
+| `footer`              | `footer`               |             | `boolean`                                  | `undefined`             |
+| `inline`              | `inline`               |             | `boolean`                                  | `undefined`             |
+| `label`               | `label`                |             | `string`                                   | `undefined`             |
+| `multiple`            | `multiple`             |             | `boolean`                                  | `undefined`             |
+| `name`                | `name`                 |             | `boolean \| string`                        | `"select"`              |
+| `novalidate`          | `novalidate`           |             | `boolean`                                  | `undefined`             |
+| `open`                | `open`                 |             | `boolean`                                  | `false`                 |
+| `other`               | `other`                |             | `boolean`                                  | `undefined`             |
+| `overlay`             | `overlay`              |             | `boolean`                                  | `undefined`             |
+| `placeholder`         | `placeholder`          |             | `string`                                   | `"Choose something..."` |
+| `placeholderInverted` | `placeholder-inverted` |             | `boolean`                                  | `undefined`             |
+| `processing`          | `processing`           |             | `boolean`                                  | `undefined`             |
+| `required`            | `required`             |             | `boolean`                                  | `false`                 |
+| `size`                | `size`                 |             | `"large" \| "medium" \| "small" \| "tiny"` | `undefined`             |
+| `tooltip`             | `tooltip`              |             | `string`                                   | `undefined`             |
+| `value`               | `value`                |             | `string \| string[]`                       | `undefined`             |
+| `valueLabel`          | `value-label`          |             | `string`                                   | `undefined`             |
+| `verbiage`            | `verbiage`             |             | `string`                                   | `"selection"`           |
+| `verbiageAn`          | `verbiage-an`          |             | `boolean`                                  | `undefined`             |
 
 
 ## Events
