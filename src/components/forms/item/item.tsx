@@ -74,7 +74,7 @@ export class Item {
     this.label = data.label;
 
     const button = this.element.shadowRoot.querySelector('.button');
-    button.innerHTML = data.slotted;
+    button.innerHTML = `<div class="content">${data.slotted}</div>`;
   }
 
   @Method()
@@ -138,7 +138,9 @@ export class Item {
   render () {
     return (
       <this.type class="button" type="button" href={this.href} url={this.href} tabindex="0" value={this.value} title={this.label} onClick={(e) => this.handleClick(e)} onBlur={() => this.handleBlur()} onFocus={() => this.handleFocus()}>
-        <slot></slot>
+        <div class="content">
+          <slot></slot>
+        </div>
         { (this.selected || this.multiple) && <stellar-asset class={this.classes()} name="checkmark" block></stellar-asset> }
       </this.type>
     )

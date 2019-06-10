@@ -59,7 +59,7 @@
   },
   "devDependencies": {
     "@brainly/html-sketchapp": "^4.2.0",
-    "@stencil/core": "^1.0.0",
+    "@stencil/core": "^1.0.2",
     "@stencil/postcss": "^0.1.0",
     "@types/jest": "23.3.14",
     "fs": "0.0.1-security",

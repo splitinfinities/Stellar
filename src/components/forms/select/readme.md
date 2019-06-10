@@ -184,6 +184,7 @@
 | --------------------- | ---------------------- | ----------- | ------------------------------------------ | ----------------------- |
 | `default`             | `default`              |             | `any`                                      | `undefined`             |
 | `description`         | `description`          |             | `string`                                   | `undefined`             |
+| `fit`                 | `fit`                  |             | `boolean`                                  | `false`                 |
 | `focused`             | `focused`              |             | `boolean`                                  | `undefined`             |
 | `footer`              | `footer`               |             | `boolean`                                  | `undefined`             |
 | `inline`              | `inline`               |             | `boolean`                                  | `undefined`             |
@@ -204,6 +205,7 @@
 | `valueLabel`          | `value-label`          |             | `string`                                   | `undefined`             |
 | `verbiage`            | `verbiage`             |             | `string`                                   | `"selection"`           |
 | `verbiageAn`          | `verbiage-an`          |             | `boolean`                                  | `undefined`             |
+| `wrap`                | `wrap`                 |             | `boolean`                                  | `false`                 |
 
 
 ## Events

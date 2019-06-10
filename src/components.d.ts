@@ -14,7 +14,6 @@ import {
   RouterHistory,
 } from '@stencil/router';
 
-
 export namespace Components {
   interface CopyWrap {
     'align': string;
@@ -570,6 +569,7 @@ export namespace Components {
   interface StellarSelect {
     'default': any;
     'description': string;
+    'fit': boolean;
     'focused': boolean;
     'footer': boolean;
     'inline': boolean;
@@ -593,6 +593,7 @@ export namespace Components {
     'valueLabel': string;
     'verbiage': string;
     'verbiageAn': boolean;
+    'wrap': boolean;
   }
   interface StellarSlide {}
   interface StellarSlides {
@@ -1987,6 +1988,7 @@ declare namespace LocalJSX {
   interface StellarSelect extends JSXBase.HTMLAttributes<HTMLStellarSelectElement> {
     'default'?: any;
     'description'?: string;
+    'fit'?: boolean;
     'focused'?: boolean;
     'footer'?: boolean;
     'inline'?: boolean;
@@ -2008,6 +2010,7 @@ declare namespace LocalJSX {
     'valueLabel'?: string;
     'verbiage'?: string;
     'verbiageAn'?: boolean;
+    'wrap'?: boolean;
   }
   interface StellarSlide extends JSXBase.HTMLAttributes<HTMLStellarSlideElement> {}
   interface StellarSlides extends JSXBase.HTMLAttributes<HTMLStellarSlidesElement> {

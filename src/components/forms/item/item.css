@@ -20,15 +20,10 @@
   --item-size: auto;
 }
 
-:host([fit]) a.button,
-:host([fit]) button.button,
-:host([fit]) stencil-route-link a {
-  padding: 1.4rem 0 1.4rem 1.4rem;
-}
-
-:host([wrap]) .button {
+:host([wrap]) .button .content {
   white-space: normal;
   text-align: left;
+  width: calc(100% - var(--ms5));
 }
 
 :host([danger]) .button {
@@ -114,27 +109,8 @@
   color: var(--theme-base7);
 }
 
-:host([fit]) .selected {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0.75rem;
-  font-size: 3em;
-  height: auto;
-}
-
-:host([fit][multiple]) stellar-asset {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 1rem;
-}
-
-:host([fit][multiple]) .selected {
-  right: 1rem;
-  height: 2.5rem;
-  width: 2.5rem;
-  font-size: 2.5rem;
+:host([fit]) stellar-asset {
+  right: 1em;
 }
 
 :host .button:focus,

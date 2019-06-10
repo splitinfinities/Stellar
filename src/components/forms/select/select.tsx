@@ -32,6 +32,8 @@ export class Select {
   @Prop({ mutable: true, reflectToAttr: true }) value: Array<string>|string;
   @Prop() valueLabel: string = undefined;
   @Prop() default: any;
+  @Prop() fit: boolean = false;
+  @Prop() wrap: boolean = false;
 
   @State() current: any;
   @State() status: FormResult;
@@ -52,6 +54,8 @@ export class Select {
     // @ts-ignore
     options.forEach((element) => {
       element.selectable = true;
+      element.fit = this.fit;
+      element.wrap = this.wrap;
 
       if (this.multiple) {
         element.multiple = true;
@@ -467,7 +471,7 @@ export class Select {
 
         <div class="select">
           <button type="button" class="select-title" onClick={() => this.handleTitleClick()} onFocus={() => this.handleTitleFocus()} onBlur={() => this.handleTitleBlur()}>
-            <stellar-item class="current" type="button" value={this.value ? this.value.toString() : ""} tabindex="-1" selectable={false} label={this.readable_value()}>
+            <stellar-item fit wrap class="current" type="button" value={this.value ? this.value.toString() : ""} tabindex="-1" selectable={false} label={this.readable_value()}>
               {this.readable_value()}
             </stellar-item>
             <stellar-asset name="arrow-down" />
