@@ -3,7 +3,7 @@
   --border-radius: 0.3rem;
   --item-size: 5rem;
   --background: var(--white);
-  --border-color: var(--gray1);
+  --border-color: var(--gray2);
 
   box-sizing: border-box;
   display: block;
@@ -131,12 +131,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
-  height: 1.8rem;
 }
 
 :host .label-wrapper stellar-label {
-  margin: 0;
+  margin-bottom: var(--ms-1);
+  height: var(--ms0);
+  line-height: 1.4;
 }
 
 :host .select-list-footer {
@@ -171,8 +171,40 @@ stellar-input .validation span + span {
   overflow-y: auto;
 }
 
+
+/* Size: tiny */
+:host([size="tiny"]) .label-wrapper stellar-label {
+  margin-bottom: var(--ms-2);
+  height: var(--ms-1);
+}
+
+:host([size="tiny"]) .select-title {
+  height: var(--ms4);
+}
+
+:host([size="tiny"]) .select-title stellar-asset {
+  right: 1rem;
+}
+
+:host([size="tiny"]) stellar-item,
+:host([size="tiny"]) ::slotted(stellar-item) {
+  --font-size: var(--ms-2);
+  --item-size: var(--ms4);
+}
+
+:host([size="tiny"][open]) .select-list,
+:host([size="tiny"]) .select-list:focus-within {
+  max-height: 11rem;
+}
+
+/* Size: Small */
+:host([size="small"]) .label-wrapper stellar-label {
+  margin-bottom: var(--ms-2);
+  height: var(--ms0);
+}
+
 :host([size="small"]) .select-title {
-  height: 3.5rem;
+  height: var(--ms5);
 }
 
 :host([size="small"]) .select-title stellar-asset {
@@ -183,15 +215,96 @@ stellar-input .validation span + span {
   font-size: 0.75rem;
 }
 
-:host([size="small"]) stellar-item {
-  --font-size: 1.4rem;
-  --item-size: 3.5rem;
+:host([size="small"]) stellar-item,
+:host([size="small"]) ::slotted(stellar-item) {
+  --font-size: var(--ms-1);
+  --item-size: var(--ms5);
 }
 
 :host([size="small"][open]) .select-list,
 :host([size="small"]) .select-list:focus-within {
   max-height: 11rem;
 }
+
+/* Size: default */
+:host .select-title {
+  height: var(--ms6);
+}
+
+:host .select-title stellar-asset {
+  right: 1rem;
+}
+
+:host stellar-item,
+:host ::slotted(stellar-item) {
+  --font-size: var(--ms0);
+  --item-size: var(--ms6);
+}
+
+:host([open]) .select-list,
+:host .select-list:focus-within {
+  max-height: 11rem;
+}
+
+/* Size: Medium */
+:host([size="medium"]) .label-wrapper stellar-label {
+  margin-bottom: var(--ms0);
+  height: var(--ms1);
+}
+
+:host([size="medium"]) .select-title {
+  height: var(--ms7);
+}
+
+:host([size="medium"]) .select-title stellar-asset {
+  right: 1rem;
+}
+
+:host([size="medium"]) .label {
+  font-size: 0.75rem;
+}
+
+:host([size="medium"]) stellar-item,
+:host([size="medium"]) ::slotted(stellar-item) {
+  --font-size: var(--ms1);
+  --item-size: var(--ms7);
+}
+
+:host([size="medium"][open]) .select-list,
+:host([size="medium"]) .select-list:focus-within {
+  max-height: 11rem;
+}
+
+/* Size: Large */
+:host([size="large"]) .label-wrapper stellar-label {
+  margin-bottom: var(--ms-2);
+  height: var(--ms3);
+}
+
+:host([size="large"]) .select-title {
+  height: var(--ms7);
+}
+
+:host([size="large"]) .select-title stellar-asset {
+  right: 1rem;
+}
+
+:host([size="large"]) .label {
+  font-size: 0.75rem;
+}
+
+:host([size="large"]) stellar-item,
+:host([size="large"]) ::slotted(stellar-item) {
+  --font-size: var(--ms2);
+  --item-size: var(--ms7);
+}
+
+:host([size="large"][open]) .select-list,
+:host([size="large"]) .select-list:focus-within {
+  max-height: 11rem;
+}
+
+
 
 :host([overlay]) .select-list {
   position: absolute;
@@ -214,8 +327,6 @@ stellar-input .validation span + span {
 :host .clear-button stellar-asset {
   font-size: 1.75rem;
 }
-
-
 
 :host-context(.dark-mode) {
   --background: var(--black-alt);

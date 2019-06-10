@@ -60,26 +60,38 @@
 </head>
 <body class="theme-red complement-indigo">
   <main>
-    <stellar-button tag="route-link" href="/report/new" size="tiny" padding="tiny" pill>
-      <stellar-asset name="add"></stellar-asset>
-      Create a report
-    </stellar-button>
-    <stellar-button tag="route-link" href="/report/new" size="small" padding="tiny" pill>
-      <stellar-asset name="add"></stellar-asset>
-      Create a report
-    </stellar-button>
-    <stellar-button tag="route-link" href="/report/new" padding="tiny" pill>
-      <stellar-asset name="add"></stellar-asset>
-      Create a report
-    </stellar-button>
-    <stellar-button tag="route-link" href="/report/new" size="medium" padding="tiny" pill>
-      <stellar-asset name="add"></stellar-asset>
-      Create a report
-    </stellar-button>
-    <stellar-button tag="route-link" href="/report/new" size="large" padding="tiny" pill>
-      <stellar-asset name="add"></stellar-asset>
-      Create a report
-    </stellar-button>
+
+    <stellar-grid cols="2" noresponsive>
+      <stellar-input label="Awesome" size="tiny"></stellar-input>
+      <stellar-select label="Awesome" value="awesome" size="tiny">
+        <stellar-item value="aweosme">Nice</stellar-item>
+        <stellar-item value="awesome2">Nice two</stellar-item>
+      </stellar-select>
+
+      <stellar-input label="Awesome" size="small"></stellar-input>
+      <stellar-select label="Awesome" size="small">
+        <stellar-item value="aweosme">Nice</stellar-item>
+        <stellar-item value="awesome2">Nice two</stellar-item>
+      </stellar-select>
+
+      <stellar-input label="Awesome"></stellar-input>
+      <stellar-select label="Awesome">
+        <stellar-item value="aweosme">Nice</stellar-item>
+        <stellar-item value="awesome2">Nice two</stellar-item>
+      </stellar-select>
+
+      <stellar-input label="Awesome" size="medium"></stellar-input>
+      <stellar-select label="Awesome" size="medium">
+        <stellar-item value="aweosme">Nice</stellar-item>
+        <stellar-item value="awesome2">Nice two</stellar-item>
+      </stellar-select>
+
+      <stellar-input label="Awesome" size="large"></stellar-input>
+      <stellar-select label="Awesome" size="large">
+        <stellar-item value="aweosme">Nice</stellar-item>
+        <stellar-item value="awesome2">Nice two</stellar-item>
+      </stellar-select>
+    </stellar-grid>
   </main>
 </body>
 </html>
