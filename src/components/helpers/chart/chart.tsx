@@ -27,9 +27,7 @@ export class Chart {
 
   @Watch('config')
   handleConfig() {
-    if (this.config) {
-      this.options(this.config.serialize());
-    }
+    this.options(this.config);
   }
 
   @Watch('type')
@@ -37,7 +35,6 @@ export class Chart {
   handleAttrs() {
     this.options({})
   }
-
 
   componentDidLoad() {
     this.options(theme);

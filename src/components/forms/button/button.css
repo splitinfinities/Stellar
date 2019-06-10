@@ -12,7 +12,7 @@
     display: var(--wrap-display, inline-block);
     font-family: var(--font-heading);
     text-align: center;
-    vertical-align: middle;
+    vertical-align: baseline;
     align-self: center;
 
     --width: auto;
@@ -192,18 +192,23 @@
     float: none;
     width: 1em;
     height: 1em;
+    margin-left: -0.25em;
+    font-size: 2em;
+    margin-right: var(--ms-7);
+    position: relative;
+    top: 0.025rem;
 }
 
 :host ::slotted(img[align="left"]),
 :host ::slotted(stellar-asset[align="left"]) {
     order: -1;
-    margin-right: 0.75em;
+    margin-right: var(--ms-7);
 }
 
 :host ::slotted(img[align="right"]),
 :host ::slotted(stellar-asset[align="right"]) {
     order: 2;
-    margin-left: 0.75em;
+    margin-left: var(--ms-7);
 }
 
 :host-context(.dark-mode) {
