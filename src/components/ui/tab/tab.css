@@ -22,6 +22,7 @@
 :host-context(stellar-tabs[vertical]):host .tab-wrap,
 :host-context(stellar-tabs[vertical]):host .tab-button {
   justify-content: left !important;
+  text-align: left;
 }
 
 :host .tab-wrap stellar-tag {
@@ -42,7 +43,7 @@
   outline: none;
   padding: 0 1em;
   text-decoration: none;
-  line-height: 1;
+  line-height: var(--ms1);
   color: var(--theme-base8);
   width: 100%;
   height: 100%;
