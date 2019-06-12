@@ -1,5 +1,6 @@
 import { Component, Prop, State, Element, Method, Event, EventEmitter, h} from '@stencil/core';
 import { RouterHistory, LocationSegments, injectHistory } from '@stencil/router';
+import { delay } from '../../../utils';
 
 
 @Component({
@@ -25,6 +26,7 @@ export class Item {
   @Prop({reflectToAttr: true, mutable: true}) multiple: boolean = false;
   @Prop({reflectToAttr: true, mutable: true}) selectable: boolean = false;
   @Prop({reflectToAttr: true, mutable: true}) focused: boolean = false;
+  @Prop({reflectToAttr: true, mutable: true}) selectTitle: boolean = false;
 
   @Prop() route: boolean = false;
   @Prop() history: RouterHistory;
@@ -37,10 +39,6 @@ export class Item {
   @Event() mounted: EventEmitter;
   @Event() focusChanged: EventEmitter;
   @Event() blurChanged: EventEmitter;
-
-  componentWillLoad() {
-    this.slotted = this.element.innerHTML;
-  }
 
   componentDidLoad() {
     setTimeout(() => {
@@ -62,7 +60,7 @@ export class Item {
       type: this.type,
       label: this.label,
       danger: this.danger,
-      slotted: this.slotted
+      slotted: this.element.innerHTML
     }
   }
 
@@ -72,9 +70,12 @@ export class Item {
     this.value = data.value;
     this.type = data.type;
     this.label = data.label;
+    this.element.innerHTML = data.slotted;
 
-    const button = this.element.shadowRoot.querySelector('.button');
-    button.innerHTML = `<div class="content">${data.slotted}</div>`;
+    if (this.selectTitle) {
+      await delay(5);
+      this.element.innerHTML = data.slotted;
+    }
   }
 
   @Method()
@@ -139,7 +140,7 @@ export class Item {
     return (
       <this.type class="button" type="button" href={this.href} url={this.href} tabindex="0" value={this.value} title={this.label} onClick={(e) => this.handleClick(e)} onBlur={() => this.handleBlur()} onFocus={() => this.handleFocus()}>
         <div class="content">
-          <slot></slot>
+          <slot />
         </div>
         { (this.selected || this.multiple) && <stellar-asset class={this.classes()} name="checkmark" block></stellar-asset> }
       </this.type>

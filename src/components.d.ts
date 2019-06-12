@@ -403,7 +403,7 @@ export namespace Components {
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: any; }>;
+    'data': () => Promise<{ size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -412,6 +412,7 @@ export namespace Components {
     'location': LocationSegments;
     'multiple': boolean;
     'route': boolean;
+    'selectTitle': boolean;
     'select_item': (state?: { selected: boolean; }) => Promise<void>;
     'selectable': boolean;
     'selected': boolean;
@@ -1840,6 +1841,7 @@ declare namespace LocalJSX {
     'onMounted'?: (event: CustomEvent<any>) => void;
     'onSelectionChanged'?: (event: CustomEvent<any>) => void;
     'route'?: boolean;
+    'selectTitle'?: boolean;
     'selectable'?: boolean;
     'selected'?: boolean;
     'simple'?: boolean;

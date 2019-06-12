@@ -35,7 +35,7 @@ export class Select {
   @Prop() fit: boolean = false;
   @Prop() wrap: boolean = false;
 
-  @State() current: any;
+  @State() titleItem: HTMLStellarItemElement;
   @State() status: FormResult;
   @State() blur: number = 0;
   @State() observer: MutationObserver;
@@ -65,7 +65,7 @@ export class Select {
 
   async componentDidLoad () {
     this.listen_to_values();
-    this.current = this.element.shadowRoot.querySelector('stellar-item.current')
+    this.titleItem = this.element.shadowRoot.querySelector('stellar-item[select-title]')
 
     if (this.default) {
       if (typeof this.default === "object" && this.default.constructor.name === "Array") {
@@ -122,8 +122,12 @@ export class Select {
     } else {
       const options = await this.option_elements();
 
-      Array.from(options).forEach((el) => {
-        if (el.classList.contains('current')) {
+      Array.from(options).forEach(async (el) => {
+        if (el.selected) {
+          this.titleItem.apply(await el.data());
+        }
+
+        if (el.selectTitle) {
           this.value = el.value;
         }
       })
@@ -211,7 +215,7 @@ export class Select {
       this.value = values;
       this.change.emit(this.value);
     } else {
-      if (!data.element.classList.contains("current")) {
+      if (!data.element.selectTitle) {
         const options = await this.option_elements();
 
         // @ts-ignore
@@ -224,9 +228,7 @@ export class Select {
 
         this.change.emit(this.value);
 
-        if (this.current) {
-          this.current.apply(await data.data());
-        }
+        this.titleItem.apply(await data.data());
 
         setTimeout(() => {
           this.open = false;
@@ -356,7 +358,7 @@ export class Select {
 
   @Method()
   async option_elements(): Promise<NodeListOf<HTMLStellarItemElement>> {
-    return this.element.querySelectorAll('stellar-item:not(.current)');
+    return this.element.querySelectorAll('stellar-item:not([select-title])');
   }
 
   @Method()
@@ -471,7 +473,7 @@ export class Select {
 
         <div class="select">
           <button type="button" class="select-title" onClick={() => this.handleTitleClick()} onFocus={() => this.handleTitleFocus()} onBlur={() => this.handleTitleBlur()}>
-            <stellar-item fit wrap class="current" type="button" value={this.value ? this.value.toString() : ""} tabindex="-1" selectable={false} label={this.readable_value()}>
+            <stellar-item fit wrap select-title type="button" value={this.value ? this.value.toString() : ""} tabindex="-1" selectable={false} label={this.readable_value()}>
               {this.readable_value()}
             </stellar-item>
             <stellar-asset name="arrow-down" />
