@@ -148,7 +148,7 @@
 }
 
 :host([vertical]) .tab-list ::slotted(stellar-tab) {
-  height: 4rem;
+  height: auto;
 }
 
 :host([height="auto"]) {

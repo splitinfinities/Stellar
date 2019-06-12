@@ -21,8 +21,16 @@
 
 :host-context(stellar-tabs[vertical]):host .tab-wrap,
 :host-context(stellar-tabs[vertical]):host .tab-button {
+  height: auto;
   justify-content: left !important;
   text-align: left;
+  white-space: wrap;
+}
+
+:host-context(stellar-tabs[vertical]):host .tab-button span {
+  padding: var(--ms-2) 0;
+  white-space: pre-line;
+  line-height: var(--ms2);
 }
 
 :host .tab-wrap stellar-tag {
