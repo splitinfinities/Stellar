@@ -7,25 +7,26 @@
 
 ## Properties
 
-| Property     | Attribute     | Description | Type                                      | Default     |
-| ------------ | ------------- | ----------- | ----------------------------------------- | ----------- |
-| `danger`     | `danger`      |             | `boolean`                                 | `false`     |
-| `fit`        | `fit`         |             | `boolean`                                 | `false`     |
-| `focused`    | `focused`     |             | `boolean`                                 | `false`     |
-| `history`    | --            |             | `RouterHistory`                           | `undefined` |
-| `href`       | `href`        |             | `string`                                  | `"#"`       |
-| `label`      | `label`       |             | `string`                                  | `undefined` |
-| `location`   | --            |             | `LocationSegments`                        | `undefined` |
-| `multiple`   | `multiple`    |             | `boolean`                                 | `false`     |
-| `route`      | `route`       |             | `boolean`                                 | `false`     |
-| `selectable` | `selectable`  |             | `boolean`                                 | `false`     |
-| `selected`   | `selected`    |             | `boolean`                                 | `false`     |
-| `simple`     | `simple`      |             | `boolean`                                 | `false`     |
-| `size`       | `size`        |             | `string`                                  | `undefined` |
-| `type`       | `type`        |             | `"a" \| "button" \| "stencil-route-link"` | `"button"`  |
-| `value`      | `value`       |             | `string`                                  | `undefined` |
-| `valueLabel` | `value-label` |             | `string`                                  | `undefined` |
-| `wrap`       | `wrap`        |             | `boolean`                                 | `false`     |
+| Property      | Attribute      | Description | Type                                      | Default     |
+| ------------- | -------------- | ----------- | ----------------------------------------- | ----------- |
+| `danger`      | `danger`       |             | `boolean`                                 | `false`     |
+| `fit`         | `fit`          |             | `boolean`                                 | `false`     |
+| `focused`     | `focused`      |             | `boolean`                                 | `false`     |
+| `history`     | --             |             | `RouterHistory`                           | `undefined` |
+| `href`        | `href`         |             | `string`                                  | `"#"`       |
+| `label`       | `label`        |             | `string`                                  | `undefined` |
+| `location`    | --             |             | `LocationSegments`                        | `undefined` |
+| `multiple`    | `multiple`     |             | `boolean`                                 | `false`     |
+| `route`       | `route`        |             | `boolean`                                 | `false`     |
+| `selectTitle` | `select-title` |             | `boolean`                                 | `false`     |
+| `selectable`  | `selectable`   |             | `boolean`                                 | `false`     |
+| `selected`    | `selected`     |             | `boolean`                                 | `false`     |
+| `simple`      | `simple`       |             | `boolean`                                 | `false`     |
+| `size`        | `size`         |             | `string`                                  | `undefined` |
+| `type`        | `type`         |             | `"a" \| "button" \| "stencil-route-link"` | `"button"`  |
+| `value`       | `value`        |             | `string`                                  | `undefined` |
+| `valueLabel`  | `value-label`  |             | `string`                                  | `undefined` |
+| `wrap`        | `wrap`         |             | `boolean`                                 | `false`     |
 
 
 ## Events
@@ -50,13 +51,13 @@ Type: `Promise<void>`
 
 
 
-### `data() => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: any; }>`
+### `data() => Promise<{ size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>`
 
 
 
 #### Returns
 
-Type: `Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: any; }>`
+Type: `Promise<{ size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>`
 
 
 
