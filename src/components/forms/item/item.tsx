@@ -73,7 +73,7 @@ export class Item {
     this.element.innerHTML = data.slotted;
 
     if (this.selectTitle) {
-      await delay(5);
+      await delay(25);
       this.element.innerHTML = data.slotted;
     }
   }
