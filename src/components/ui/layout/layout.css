@@ -119,6 +119,10 @@
     grid-template-columns: 4fr 6fr;
   }
 
+  :host([type="split-screen"]) .layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
   :host([type="supporting-content-right"]) ::slotted(aside) {
     order: -1;
   }
