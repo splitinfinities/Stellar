@@ -1,0 +1,5 @@
+:host,
+:host ::slotted(*) {
+    text-shadow: var(--text-shadow);
+    transition: text-shadow 350ms var(--ease) 350ms;
+}

@@ -25,7 +25,6 @@ export class Interview {
 
   @State() audio: HTMLWebAudioElement;
   @State() audio_source: HTMLWebAudioSourceElement;
-  @State() io: IntersectionObserver;
 
   @State() loaded: boolean = false;
   @State() loading: boolean = false;
@@ -52,27 +51,6 @@ export class Interview {
     }
 
     update_interview_lines(this.interviewLines, this.cache, this.time)
-    this.addIntersectionObserver();
-  }
-
-  addIntersectionObserver() {
-    if ('IntersectionObserver' in window) {
-      this.io = new IntersectionObserver((data: any) => {
-        // because there will only ever be one instance
-        // of the element we are observing
-        // we can just use data[0]
-        if (data[0].isIntersecting) {
-          this.handleInScreen();
-        } else {
-          this.handleOffScreen();
-        }
-      }, {
-        rootMargin: '50%',
-        threshold: [0]
-      })
-
-      this.io.observe(this.element);
-    }
   }
 
   cache = new WeakMap()
@@ -87,17 +65,6 @@ export class Interview {
 
   get time() {
     return this.current
-  }
-
-  async handleInScreen() {
-    await delay(1000);
-
-    this.visible = true;
-
-    await delay(100);
-
-    this.audio = this.element.querySelector('web-audio');
-    this.audio_source = await this.audio.source("interview");
   }
 
   async attachContext() {
@@ -119,7 +86,18 @@ export class Interview {
     }
   }
 
-  async handleOffScreen() {
+  async in() {
+    await delay(1000);
+
+    this.visible = true;
+
+    await delay(100);
+
+    this.audio = this.element.querySelector('web-audio');
+    this.audio_source = await this.audio.source("interview");
+  }
+
+  async out() {
     this.pause()
   }
 
@@ -203,6 +181,7 @@ export class Interview {
           </h3>
           <stellar-progress value={this.current} max={this.duration} noease={true} blurable={false} slender={true} editable={true} onChange={(e) => { this.skipTo(e.detail.value) }} />
         </section>}
+        <stellar-intersection element={this.element} multiple in={this.in.bind(this)} out={this.out.bind(this)} />
       </div>
     )
   }

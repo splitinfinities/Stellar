@@ -20,13 +20,16 @@
 
 ### Depends on
 
+- [stellar-intersection](../../helpers/intersection)
 - [skeleton-img](../skeleton-img)
 
 ### Graph
 ```mermaid
 graph TD;
+  stellar-360-image --> stellar-intersection
   stellar-360-image --> skeleton-img
   skeleton-img --> stellar-asset
+  skeleton-img --> stellar-intersection
   stellar-asset --> ion-icon
   style stellar-360-image fill:#f9f,stroke:#333,stroke-width:4px
 ```

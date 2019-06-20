@@ -1,104 +1,60 @@
-import { Component, Element, Prop, Method, State, h } from '@stencil/core'
-import properties from 'css-custom-properties';
-import delay from 'await-delay';
+import { Component, Element, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'stellar-reveal',
   styleUrl: 'reveal.css',
-  shadow: true
+  shadow: false
 })
-export class Scatter {
-  @Element() element: HTMLElement
+export class Reveal {
+  @Element() element: HTMLElement;
 
-  @Prop({ reflectToAttr: true }) animation: "fadeIn"|"fadeInUp"|"fadeInDown" = "fadeInUp";
-  @Prop({ reflectToAttr: true }) outAnimation: "fadeOut"|"fadeOutUp"|"fadeOutDown" = "fadeOut";
-  @Prop({ reflectToAttr: true }) delay: number = 100;
-  @Prop({ reflectToAttr: true }) timing: number = 50;
-  @Prop({ reflectToAttr: true, mutable: true }) active: boolean = false;
-  @State() io: IntersectionObserver;
+  /**
+   * Direction the element moves when animating in
+   */
+  @Prop() direction: 'up' | 'down' | 'right' | 'left' = 'up';
 
-  @State() children;
+  /**
+   * How long to delay the animation (ms)
+   */
+  @Prop() delay: number = 0;
 
-  componentWillLoad() {
-    this.children = Array.from(this.element.children);
-  }
+  /**
+   * How long the animation runs (ms)
+   */
+  @Prop() duration: number = 500;
+
+  /**
+   * How far the element moves in the animation (% of element width/height)
+   */
+  @Prop() animationDistance: string = '30%';
+
+  /**
+   * How much of the element must be visible before it animates (% of element height)
+   */
+  @Prop() triggerDistance: string = '33%';
 
   componentDidLoad() {
-    this.addIntersectionObserver();
+    const animationDistance = this.direction === 'right' || this.direction === 'down' ? '-' + this.animationDistance : this.animationDistance;
+    (this.element.querySelector('.reveal') as HTMLElement).style.setProperty('--distance', animationDistance);
   }
 
-  addIntersectionObserver() {
-    if ('IntersectionObserver' in window) {
-      this.io = new IntersectionObserver((data: any) => {
-        // because there will only ever be one instance
-        // of the element we are observing
-        // we can just use data[0]
-        if (data[0].isIntersecting) {
-          setTimeout(() => {
-            this.active = true;
-            this.in();
-          }, 350)
-          this.removeIntersectionObserver();
-        }
-      }, {
-        rootMargin: '50%',
-        threshold: [0]
-      })
-
-      this.io.observe(this.element.parentElement);
-    } else {
-      // fall back to setTimeout for Safari and IE
-      setTimeout(() => {
-        this.in();
-      }, 300);
-    }
-  }
-
-  removeIntersectionObserver() {
-    if (this.io) {
-      this.io.disconnect();
-      this.io = null;
-    }
-  }
-
-  async calculateTiming() {
-    const time = 1000 + (this.children.length * this.delay);
-    await delay(time);
-  }
-
-  @Method()
-  async out() {
-    properties.set({
-      "--animation": this.outAnimation
-    }, this.element);
-
-    this.children.forEach((element, index) => {
-      // @ts-ignore
-      element.style.setProperty('animation-delay', `${this.delay * index}ms`)
-      element.style.setProperty('animation-timing', `${this.timing}ms`)
-    });
-
-    return await this.calculateTiming()
-  }
-
-  @Method()
-  async in() {
-    properties.set({
-      "--animation": this.animation
-    }, this.element);
-
-    this.children.forEach((element, index) => {
-      // @ts-ignore
-      element.style.setProperty('animation-delay', `${this.delay * index}ms`)
-      element.style.setProperty('animation-timing', `${this.timing}ms`)
-    });
-
-    return await this.calculateTiming()
+  in() {
+    this.element.querySelector('.reveal').classList.add(`slide-${this.direction}`);
   }
 
   render() {
     return (
-      <slot />
-    )
+      <div
+        class="reveal"
+        style={{
+          animationDuration: `${this.duration}ms`,
+          animationDelay: `${this.delay}ms`
+        }}
+      >
+
+        <slot/>
+        <stellar-intersection element={this.element} multiple in={this.in.bind(this)} margin={this.triggerDistance} />
+      </div>
+    );
   }
 }

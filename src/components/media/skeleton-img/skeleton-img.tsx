@@ -1,4 +1,4 @@
-import { Component, Element, Prop, State, h } from '@stencil/core';
+import { Component, Element, Prop, h } from '@stencil/core';
 import properties from 'css-custom-properties'
 
 @Component({
@@ -14,8 +14,6 @@ export class SkeletonImg {
 	@Prop({reflectToAttr: true}) loading: boolean = false;
 	@Prop({reflectToAttr: true}) icon: boolean = false;
 
-	@State() observer: IntersectionObserver;
-
 	componentWillLoad() {
 		if (this.block) {
 		} else {
@@ -24,18 +22,14 @@ export class SkeletonImg {
 				'--height': `${this.height}px`
 			}, this.element)
 		}
+	}
 
-		this.observer = new IntersectionObserver(entries => {
-			entries.forEach(entry => {
-				if (entry.intersectionRatio > 0) {
-					this.element.classList.add('visible')
-				} else {
-					this.element.classList.remove('visible')
-				}
-			});
-		});
+	in () {
+		this.element.classList.add('visible')
+	}
 
-		this.observer.observe(this.element);
+	out () {
+		this.element.classList.remove('visible')
 	}
 
 	render() {
@@ -43,7 +37,8 @@ export class SkeletonImg {
 			this.loading && this.icon && <stellar-asset name="spinning-bubbles" color="gray25"></stellar-asset>,
 			<svg width={this.width} height={this.height}>
 				<rect width={this.width} height={this.height} />
-			</svg>
+			</svg>,
+			<stellar-intersection element={this.element} multiple in={this.in.bind(this)} out={this.out.bind(this)} />
 		];
 	}
 }

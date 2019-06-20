@@ -50,6 +50,7 @@
     "round-to": "^3.0.0",
     "showdown": "^1.9.0",
     "small-indexeddb": "^2.0.0",
+    "st-lazy": "^2.1.0",
     "swiper": "^4.5.0",
     "tiny-date-picker": "^3.2.8",
     "tweenkle": "^0.1.6",

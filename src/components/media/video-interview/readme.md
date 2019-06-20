@@ -71,6 +71,7 @@ Type: `Promise<void>`
 - [stellar-asset](../../ui/asset)
 - [stellar-unit](../../helpers/unit)
 - [stellar-progress](../../forms/progress)
+- [stellar-intersection](../../helpers/intersection)
 
 ### Graph
 ```mermaid
@@ -81,8 +82,11 @@ graph TD;
   stellar-video-interview --> stellar-asset
   stellar-video-interview --> stellar-unit
   stellar-video-interview --> stellar-progress
+  stellar-video-interview --> stellar-intersection
   skeleton-img --> stellar-asset
+  skeleton-img --> stellar-intersection
   stellar-asset --> ion-icon
+  stellar-video --> stellar-intersection
   style stellar-video-interview fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

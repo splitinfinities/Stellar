@@ -1,4 +1,4 @@
-import { Component, Element, State, Prop, h } from '@stencil/core';
+import { Component, Element, Prop, h } from '@stencil/core';
 import properties from 'css-custom-properties'
 
 @Component({
@@ -12,27 +12,16 @@ export class SkeletonText {
 	@Prop({reflectToAttr: true}) width: number = 100;
 	@Prop({reflectToAttr: true}) loading: boolean = false;
 
-	@State() observer: IntersectionObserver;
-
 	componentWillLoad() {
 		properties.set({
 			'--width': `${this.width}%`
 		}, this.element)
-
-		this.observer = new IntersectionObserver(entries => {
-			entries.forEach(entry => {
-				if (entry.intersectionRatio > 0) {
-					this.element.classList.add('visible')
-				} else {
-					this.element.classList.remove('visible')
-				}
-			});
-		});
-
-		this.observer.observe(this.element);
 	}
 
+	in () { this.element.classList.add('visible') }
+	out () { this.element.classList.remove('visible') }
+
 	render() {
-		return <span>&nbsp;</span>;
+		return <span>&nbsp;<stellar-intersection element={this.element} multiple in={this.in.bind(this)} out={this.out.bind(this)} /></span>;
 	}
 }

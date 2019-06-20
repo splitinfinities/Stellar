@@ -10,9 +10,7 @@ export class Video {
 
   @Prop({mutable: true, reflectToAttr: true}) width: number;
   @Prop({mutable: true, reflectToAttr: true}) height: number;
-
   @Prop() trackInView: boolean = true;
-
   @Prop() preload: string = "auto";
   @Prop() autoplay: boolean = false;
   @Prop() muted: boolean = false;
@@ -20,14 +18,13 @@ export class Video {
   @Prop() poster: string;
   @Prop() controls: boolean = true;
   @Prop() overlay: boolean;
+  @Prop({mutable: true}) video_tag: HTMLVideoElement;
+  @Prop({mutable: true}) playing: boolean = false;
+
   @State() duration: number = 0.0;
   @State() startTime: number = 0.0;
   @State() pausedTime: number = 0.0;
   @State() currentTime: number = 0.0;
-
-  @Prop({mutable: true}) video_tag: HTMLVideoElement;
-  @Prop({mutable: true}) playing: boolean = false;
-  @State() io: IntersectionObserver;
   @State() interval: any;
 
   @Event() timeupdate: EventEmitter;
@@ -56,8 +53,6 @@ export class Video {
       this.duration = this.video_tag.duration;
       this.loaded.emit(this.eventData);
     }
-
-    this.trackInView && this.addIntersectionObserver();
   }
 
   get eventData () {
@@ -93,38 +88,13 @@ export class Video {
     }, this.element);
   }
 
-  addIntersectionObserver() {
-    if ('IntersectionObserver' in window) {
-      this.io = new IntersectionObserver((data: any) => {
-        // because there will only ever be one instance
-        // of the element we are observing
-        // we can just use data[0]
-        if (data[0].isIntersecting) {
-          this.handleInScreen();
-        } else {
-          this.handleOffScreen();
-        }
-      }, {
-        rootMargin: '50%',
-        threshold: [0]
-      })
-
-      this.io.observe(this.element.querySelector('video'));
-    } else {
-      // fall back to setTimeout for Safari and IE
-      setTimeout(() => {
-        this.handleInScreen();
-      }, 300);
-    }
-  }
-
-  handleInScreen() {
+  in () {
     if (this.autoplay) {
       this.video_tag.play()
     }
   }
 
-  handleOffScreen() {
+  out () {
     this.video_tag.currentTime = 0;
     this.video_tag.pause()
   }
@@ -170,6 +140,7 @@ export class Video {
     return (
       <video preload={this.preload} width={this.width} height={this.height} autoplay={this.autoplay} muted={this.muted} playsinline={this.playsinline} poster={this.poster} controls={this.controls}>
         <slot />
+        <stellar-intersection element={this.element} multiple in={this.in.bind(this)} out={this.out.bind(this)} />
       </video>
       )
     }

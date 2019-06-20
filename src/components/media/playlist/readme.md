@@ -106,6 +106,7 @@ graph TD;
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
   skeleton-img --> stellar-asset
+  skeleton-img --> stellar-intersection
   style stellar-playlist fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

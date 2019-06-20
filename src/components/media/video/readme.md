@@ -102,9 +102,14 @@ Type: `Promise<void>`
 
  - [stellar-video-interview](../video-interview)
 
+### Depends on
+
+- [stellar-intersection](../../helpers/intersection)
+
 ### Graph
 ```mermaid
 graph TD;
+  stellar-video --> stellar-intersection
   stellar-video-interview --> stellar-video
   style stellar-video fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -12,34 +12,24 @@ import { delay } from '../../../utils';
 export class VideoInterview {
   @Element() element: HTMLElement;
 
-  @State() randomId: number = Math.floor(Math.random() * 6) + 1;
-
   @Prop() src: string;
   @Prop() color: string = "white";
   @Prop({mutable: true}) playing: boolean;
-
   @Prop({mutable: true}) width: number = 800;
   @Prop({mutable: true}) height: number = 800;
   @Prop({mutable: true}) aspectRatio: number = 100;
-
   @Prop({mutable: true}) visualization: "circle"|"bars"|"wave"|"bars2" = "bars2";
 
+  @State() randomId: number = Math.floor(Math.random() * 6) + 1;
   @State() video: HTMLStellarVideoElement;
-  @State() io: IntersectionObserver;
-
   @State() loaded: boolean = false;
   @State() loading: boolean = false;
   @State() seekable: boolean = false;
-
   @State() updateFunc: Function;
-
   @State() duration: number = 0;
   @State() current: number = 0;
-
   @State() interviewLines: any;
-
   @State() visible: boolean = false;
-
   @State() context: any;
   @State() visualizer: HTMLWebAudioVisualizerElement;
 
@@ -59,27 +49,6 @@ export class VideoInterview {
     update_interview_lines(this.interviewLines, this.cache, this.time)
     this.visualizer = this.element.shadowRoot.querySelector('web-audio-visualizer');
     this.video = this.element.shadowRoot.querySelector('stellar-video');
-    this.addIntersectionObserver();
-  }
-
-  addIntersectionObserver() {
-    if ('IntersectionObserver' in window) {
-      this.io = new IntersectionObserver((data: any) => {
-        // because there will only ever be one instance
-        // of the element we are observing
-        // we can just use data[0]
-        if (data[0].isIntersecting) {
-          this.handleInScreen();
-        } else {
-          this.handleOffScreen();
-        }
-      }, {
-        rootMargin: '50%',
-        threshold: [0]
-      })
-
-      this.io.observe(this.element);
-    }
   }
 
   cache = new WeakMap()
@@ -96,21 +65,6 @@ export class VideoInterview {
     return this.current
   }
 
-  async handleInScreen() {
-    await delay(1000);
-
-    this.visible = true;
-
-    await delay(100);
-
-    this.visualizer = this.element.shadowRoot.querySelector('web-audio-visualizer');
-    this.video = this.element.shadowRoot.querySelector('stellar-video');
-
-    this.video.addEventListener('canplaythrough', () => {
-      this.seekable = true;
-    })
-  }
-
   async attachContext() {
     if (!this.context) {
       // @ts-ignore
@@ -125,7 +79,18 @@ export class VideoInterview {
     }
   }
 
-  async handleOffScreen() {
+  async in () {
+    await delay(1000);
+    this.visible = true;
+    await delay(100);
+    this.visualizer = this.element.shadowRoot.querySelector('web-audio-visualizer');
+    this.video = this.element.shadowRoot.querySelector('stellar-video');
+    this.video.addEventListener('canplaythrough', () => {
+      this.seekable = true;
+    })
+  }
+
+  async out () {
     this.pause()
   }
 
@@ -194,6 +159,7 @@ export class VideoInterview {
           </h3>
           {this.seekable && <stellar-progress value={this.current} max={this.duration} noease={true} blurable={false} slender={true} editable={true} onChange={(e) => { this.skipTo(e.detail.value) }} />}
         </section>}
+        <stellar-intersection element={this.element} multiple in={this.in.bind(this)} out={this.out.bind(this)} />
       </div>
     )
   }

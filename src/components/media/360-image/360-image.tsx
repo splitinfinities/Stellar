@@ -16,59 +16,31 @@ export class Image360 {
 
   @State() viewer: any;
   @State() image: HTMLElement;
-  @State() io: IntersectionObserver;
   @State() ready: boolean = false;
 
   componentDidLoad() {
-    this.image = this.element.querySelector(".image")
+    this.image = this.element.querySelector(".image");
+
     if (this.nolazyload) {
-      this.prepare()
-    } else {
-      this.addIntersectionObserver();
+      this.in()
     }
   }
 
-  addIntersectionObserver() {
-    if ('IntersectionObserver' in window) {
-      this.io = new IntersectionObserver((data: any) => {
-        // because there will only ever be one instance
-        // of the element we are observing
-        // we can just use data[0]
-        if (data[0].isIntersecting) {
-          this.handleInScreen();
-        } else {
-          this.handleOffScreen();
-        }
-      }, {
-        rootMargin: '50%',
-        threshold: [0]
-      })
-
-      this.io.observe(this.element);
+  in() {
+    if (!this.viewer) {
+      this.viewer = new Kaleidoscope.Image({
+        source: this.src,
+        container: this.image,
+        width: this.width,
+        height: this.height,
+      });
     }
-  }
-
-  handleInScreen() {
-    this.prepare()
-  }
-
-  handleOffScreen() {
-    this.destroy()
-  }
-
-  prepare() {
-    this.viewer = new Kaleidoscope.Image({
-      source: this.src,
-      container: this.image,
-      width: this.width,
-      height: this.height,
-    });
 
     this.viewer.render();
     this.ready = true;
   }
 
-  destroy() {
+  out() {
     this.viewer.destroy()
     this.ready = false;
   }
@@ -77,6 +49,7 @@ export class Image360 {
     return <div>
       <div class="image" />
       <div class="overlay" />
+      {!this.nolazyload && <stellar-intersection element={this.element} multiple in={this.in.bind(this)} out={this.out.bind(this)} margin='50%' />}
       {!this.ready && <skeleton-img width={this.width} height={this.height} />}
     </div>
   }

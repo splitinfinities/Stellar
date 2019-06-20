@@ -7,37 +7,27 @@
 
 ## Properties
 
-| Property       | Attribute       | Description | Type                                        | Default      |
-| -------------- | --------------- | ----------- | ------------------------------------------- | ------------ |
-| `active`       | `active`        |             | `boolean`                                   | `false`      |
-| `animation`    | `animation`     |             | `"fadeIn" \| "fadeInDown" \| "fadeInUp"`    | `"fadeInUp"` |
-| `delay`        | `delay`         |             | `number`                                    | `100`        |
-| `outAnimation` | `out-animation` |             | `"fadeOut" \| "fadeOutDown" \| "fadeOutUp"` | `"fadeOut"`  |
-| `timing`       | `timing`        |             | `number`                                    | `50`         |
+| Property            | Attribute            | Description                                                                      | Type                                  | Default |
+| ------------------- | -------------------- | -------------------------------------------------------------------------------- | ------------------------------------- | ------- |
+| `animationDistance` | `animation-distance` | How far the element moves in the animation (% of element width/height)           | `string`                              | `'30%'` |
+| `delay`             | `delay`              | How long to delay the animation (ms)                                             | `number`                              | `0`     |
+| `direction`         | `direction`          | Direction the element moves when animating in                                    | `"down" \| "left" \| "right" \| "up"` | `'up'`  |
+| `duration`          | `duration`           | How long the animation runs (ms)                                                 | `number`                              | `500`   |
+| `triggerDistance`   | `trigger-distance`   | How much of the element must be visible before it animates (% of element height) | `string`                              | `'33%'` |
 
 
-## Methods
+## Dependencies
 
-### `in() => Promise<void>`
+### Depends on
 
+- [stellar-intersection](../intersection)
 
-
-#### Returns
-
-Type: `Promise<void>`
-
-
-
-### `out() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
-
+### Graph
+```mermaid
+graph TD;
+  stellar-reveal --> stellar-intersection
+  style stellar-reveal fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

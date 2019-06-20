@@ -382,6 +382,13 @@ export namespace Components {
     'value': any;
     'wrap': string;
   }
+  interface StellarIntersection {
+    'element': HTMLElement|string;
+    'in': Function;
+    'margin': string;
+    'multiple': boolean;
+    'out': Function;
+  }
   interface StellarInterview {
     'aspectRatio': number;
     'color': string;
@@ -444,6 +451,15 @@ export namespace Components {
     'refresh': () => Promise<void>;
     'size': "tiny"|"small"|"medium"|"large"|"xlarge"|"full"|"flush";
     'type': string;
+  }
+  interface StellarLongShadow {
+    'active': boolean;
+    'delay': number;
+    'direction': "top-left"|"top-right"|"bottom-left"|"bottom-right";
+    'in': () => Promise<void>;
+    'length': number;
+    'out': () => Promise<void>;
+    'timing': number;
   }
   interface StellarMarkdown {
     /**
@@ -543,6 +559,28 @@ export namespace Components {
     'value': number;
   }
   interface StellarReveal {
+    /**
+    * How far the element moves in the animation (% of element width/height)
+    */
+    'animationDistance': string;
+    /**
+    * How long to delay the animation (ms)
+    */
+    'delay': number;
+    /**
+    * Direction the element moves when animating in
+    */
+    'direction': 'up' | 'down' | 'right' | 'left';
+    /**
+    * How long the animation runs (ms)
+    */
+    'duration': number;
+    /**
+    * How much of the element must be visible before it animates (% of element height)
+    */
+    'triggerDistance': string;
+  }
+  interface StellarRevealList {
     'active': boolean;
     'animation': "fadeIn"|"fadeInUp"|"fadeInDown";
     'delay': number;
@@ -1096,6 +1134,12 @@ declare global {
     new (): HTMLStellarInputElement;
   };
 
+  interface HTMLStellarIntersectionElement extends Components.StellarIntersection, HTMLStencilElement {}
+  var HTMLStellarIntersectionElement: {
+    prototype: HTMLStellarIntersectionElement;
+    new (): HTMLStellarIntersectionElement;
+  };
+
   interface HTMLStellarInterviewElement extends Components.StellarInterview, HTMLStencilElement {}
   var HTMLStellarInterviewElement: {
     prototype: HTMLStellarInterviewElement;
@@ -1130,6 +1174,12 @@ declare global {
   var HTMLStellarLayoutElement: {
     prototype: HTMLStellarLayoutElement;
     new (): HTMLStellarLayoutElement;
+  };
+
+  interface HTMLStellarLongShadowElement extends Components.StellarLongShadow, HTMLStencilElement {}
+  var HTMLStellarLongShadowElement: {
+    prototype: HTMLStellarLongShadowElement;
+    new (): HTMLStellarLongShadowElement;
   };
 
   interface HTMLStellarMarkdownElement extends Components.StellarMarkdown, HTMLStencilElement {}
@@ -1184,6 +1234,12 @@ declare global {
   var HTMLStellarRevealElement: {
     prototype: HTMLStellarRevealElement;
     new (): HTMLStellarRevealElement;
+  };
+
+  interface HTMLStellarRevealListElement extends Components.StellarRevealList, HTMLStencilElement {}
+  var HTMLStellarRevealListElement: {
+    prototype: HTMLStellarRevealListElement;
+    new (): HTMLStellarRevealListElement;
   };
 
   interface HTMLStellarScatterElement extends Components.StellarScatter, HTMLStencilElement {}
@@ -1403,12 +1459,14 @@ declare global {
     'stellar-group-overflow': HTMLStellarGroupOverflowElement;
     'stellar-image': HTMLStellarImageElement;
     'stellar-input': HTMLStellarInputElement;
+    'stellar-intersection': HTMLStellarIntersectionElement;
     'stellar-interview': HTMLStellarInterviewElement;
     'stellar-interview-line': HTMLStellarInterviewLineElement;
     'stellar-item': HTMLStellarItemElement;
     'stellar-keyframes': HTMLStellarKeyframesElement;
     'stellar-label': HTMLStellarLabelElement;
     'stellar-layout': HTMLStellarLayoutElement;
+    'stellar-long-shadow': HTMLStellarLongShadowElement;
     'stellar-markdown': HTMLStellarMarkdownElement;
     'stellar-message': HTMLStellarMessageElement;
     'stellar-pagination': HTMLStellarPaginationElement;
@@ -1418,6 +1476,7 @@ declare global {
     'stellar-playlist': HTMLStellarPlaylistElement;
     'stellar-progress': HTMLStellarProgressElement;
     'stellar-reveal': HTMLStellarRevealElement;
+    'stellar-reveal-list': HTMLStellarRevealListElement;
     'stellar-scatter': HTMLStellarScatterElement;
     'stellar-scroll-z-root': HTMLStellarScrollZRootElement;
     'stellar-scroll-z-section': HTMLStellarScrollZSectionElement;
@@ -1813,6 +1872,13 @@ declare namespace LocalJSX {
     'value'?: any;
     'wrap'?: string;
   }
+  interface StellarIntersection extends JSXBase.HTMLAttributes<HTMLStellarIntersectionElement> {
+    'element'?: HTMLElement|string;
+    'in'?: Function;
+    'margin'?: string;
+    'multiple'?: boolean;
+    'out'?: Function;
+  }
   interface StellarInterview extends JSXBase.HTMLAttributes<HTMLStellarInterviewElement> {
     'aspectRatio'?: number;
     'color'?: string;
@@ -1870,6 +1936,13 @@ declare namespace LocalJSX {
     'padding'?: "none"|"tiny"|"small"|"medium"|"large";
     'size'?: "tiny"|"small"|"medium"|"large"|"xlarge"|"full"|"flush";
     'type'?: string;
+  }
+  interface StellarLongShadow extends JSXBase.HTMLAttributes<HTMLStellarLongShadowElement> {
+    'active'?: boolean;
+    'delay'?: number;
+    'direction'?: "top-left"|"top-right"|"bottom-left"|"bottom-right";
+    'length'?: number;
+    'timing'?: number;
   }
   interface StellarMarkdown extends JSXBase.HTMLAttributes<HTMLStellarMarkdownElement> {
     /**
@@ -1965,6 +2038,28 @@ declare namespace LocalJSX {
     'value'?: number;
   }
   interface StellarReveal extends JSXBase.HTMLAttributes<HTMLStellarRevealElement> {
+    /**
+    * How far the element moves in the animation (% of element width/height)
+    */
+    'animationDistance'?: string;
+    /**
+    * How long to delay the animation (ms)
+    */
+    'delay'?: number;
+    /**
+    * Direction the element moves when animating in
+    */
+    'direction'?: 'up' | 'down' | 'right' | 'left';
+    /**
+    * How long the animation runs (ms)
+    */
+    'duration'?: number;
+    /**
+    * How much of the element must be visible before it animates (% of element height)
+    */
+    'triggerDistance'?: string;
+  }
+  interface StellarRevealList extends JSXBase.HTMLAttributes<HTMLStellarRevealListElement> {
     'active'?: boolean;
     'animation'?: "fadeIn"|"fadeInUp"|"fadeInDown";
     'delay'?: number;
@@ -2310,12 +2405,14 @@ declare namespace LocalJSX {
     'stellar-group-overflow': StellarGroupOverflow;
     'stellar-image': StellarImage;
     'stellar-input': StellarInput;
+    'stellar-intersection': StellarIntersection;
     'stellar-interview': StellarInterview;
     'stellar-interview-line': StellarInterviewLine;
     'stellar-item': StellarItem;
     'stellar-keyframes': StellarKeyframes;
     'stellar-label': StellarLabel;
     'stellar-layout': StellarLayout;
+    'stellar-long-shadow': StellarLongShadow;
     'stellar-markdown': StellarMarkdown;
     'stellar-message': StellarMessage;
     'stellar-pagination': StellarPagination;
@@ -2325,6 +2422,7 @@ declare namespace LocalJSX {
     'stellar-playlist': StellarPlaylist;
     'stellar-progress': StellarProgress;
     'stellar-reveal': StellarReveal;
+    'stellar-reveal-list': StellarRevealList;
     'stellar-scatter': StellarScatter;
     'stellar-scroll-z-root': StellarScrollZRoot;
     'stellar-scroll-z-section': StellarScrollZSection;

@@ -8,29 +8,21 @@ import { ColorThief } from './vendor/colorThief.js';
   assetsDirs: ['./vendor'],
   shadow: true
 })
-
 export class Picture {
   @Element() element: HTMLElement;
-  @State() figure: HTMLElement;
 
   @Prop({mutable: true}) poster: string;
   @Prop({mutable: true}) large: string;
   @Prop({mutable: true, reflectToAttr: true }) type: "background"|"picture" = "picture";
-
   @Prop() width: number;
   @Prop() height: number;
-
   @Prop({reflectToAttr: true}) nozoom: boolean = false;
-
   @Prop({mutable: true}) bg: string = "auto";
 
   @State() aspectRatio: number;
-
   @State() sources: Array<any> = [];
-
-  @State() io: IntersectionObserver;
   @State() active: boolean = false;
-
+  @State() figure: HTMLElement;
   @State() zoom;
   @State() palette;
 
@@ -41,7 +33,6 @@ export class Picture {
   }
 
   componentDidLoad() {
-    this.addIntersectionObserver();
     this.figure = this.element.shadowRoot.querySelector('figure');
   }
 
@@ -70,43 +61,12 @@ export class Picture {
     return this.zoom
   }
 
-  async handleImage() {
+  async in() {
     this.active = true;
 
     if (!this.nozoom) {
       await delay(200);
       this.mountZoom();
-    }
-  }
-
-  addIntersectionObserver() {
-    if ('IntersectionObserver' in window) {
-      this.io = new IntersectionObserver((data: any) => {
-        // because there will only ever be one instance
-        // of the element we are observing
-        // we can just use data[0]
-        if (data[0].isIntersecting) {
-          this.handleImage();
-          this.removeIntersectionObserver();
-        }
-      }, {
-        rootMargin: '50%',
-        threshold: [0]
-      })
-
-      this.io.observe(this.element);
-    } else {
-      // fall back to setTimeout for Safari and IE
-      setTimeout(() => {
-        this.handleImage();
-      }, 300);
-    }
-  }
-
-  removeIntersectionObserver() {
-    if (this.io) {
-      this.io.disconnect();
-      this.io = null;
     }
   }
 
@@ -200,7 +160,10 @@ export class Picture {
             { this.renderPicture() }
           </picture>
           <div class="placeholder" style={{"background-image": `url(${this.poster})`}} />
+          <stellar-intersection element={this.element} in={this.in.bind(this)}  />
       </figure>
+    } else {
+      return <stellar-intersection element={this.element} in={this.in.bind(this)} />
     }
   }
 }
