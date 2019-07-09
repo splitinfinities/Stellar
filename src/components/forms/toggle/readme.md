@@ -210,7 +210,7 @@
 
 | Event    | Description | Type               |
 | -------- | ----------- | ------------------ |
-| `change` |             | `CustomEvent<any>` |
+| `update` |             | `CustomEvent<any>` |
 
 
 ## Methods

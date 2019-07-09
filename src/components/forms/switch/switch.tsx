@@ -8,7 +8,7 @@ export class Switch {
   @Element() el: HTMLElement;
   @Prop({mutable: true, reflectToAttr: true}) checked: boolean = false;
   @Prop() checkedDefault: boolean = false;
-  @Event() change: EventEmitter;
+  @Event() update: EventEmitter;
 
   componentDidLoad() {
     if (this.checkedDefault) {
@@ -23,7 +23,7 @@ export class Switch {
 
   @Watch('checked')
   handleChecked() {
-    this.change.emit({
+    this.update.emit({
       checked: this.checked
     })
   }

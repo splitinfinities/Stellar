@@ -27,7 +27,7 @@ export class Video {
   @State() currentTime: number = 0.0;
   @State() interval: any;
 
-  @Event() timeupdate: EventEmitter;
+  @Event() update: EventEmitter;
   @Event() played: EventEmitter;
   @Event() paused: EventEmitter;
   @Event() loaded: EventEmitter;
@@ -38,14 +38,14 @@ export class Video {
     this.video_tag.onplay = () => {
       this.playing = true;
       this.played.emit(this.eventData);
-      this.timeupdate.emit(this.eventData);
+      this.update.emit(this.eventData);
     }
 
     this.video_tag.onpause = () => {
       this.playing = false;
       this.pausedTime = this.video_tag.currentTime;
       this.paused.emit(this.eventData);
-      this.timeupdate.emit(this.eventData);
+      this.update.emit(this.eventData);
     }
 
     this.video_tag.onloadedmetadata = () => {
@@ -70,7 +70,7 @@ export class Video {
     if (this.playing) {
       this.interval = setInterval(() => {
         this.currentTime = this.video_tag.currentTime
-        this.timeupdate.emit(this.eventData);
+        this.update.emit(this.eventData);
       }, 30);
     } else {
       clearInterval(this.interval)

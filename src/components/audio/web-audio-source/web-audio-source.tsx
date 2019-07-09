@@ -38,7 +38,7 @@ export class WebAudioSource {
   @State() elapsedTime: number = 0.0;
   @Prop({ mutable: true }) playing: boolean = false;
 
-  @Event() timeupdate: EventEmitter;
+  @Event() update: EventEmitter;
 
   @Method()
   async getBuffer() {
@@ -166,7 +166,7 @@ export class WebAudioSource {
   }
 
   tick() {
-    this.timeupdate.emit({
+    this.update.emit({
       time: this.currentTime(),
       duration: this.duration
     })

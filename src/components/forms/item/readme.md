@@ -51,13 +51,13 @@ Type: `Promise<void>`
 
 
 
-### `data() => Promise<{ size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>`
+### `data() => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>`
 
 
 
 #### Returns
 
-Type: `Promise<{ size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>`
+Type: `Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>`
 
 
 
@@ -87,6 +87,7 @@ Type: `Promise<void>`
 ### Used by
 
  - [stellar-select](../select)
+ - [stellar-tester](../../tester)
 
 ### Depends on
 
@@ -98,6 +99,7 @@ graph TD;
   stellar-item --> stellar-asset
   stellar-asset --> ion-icon
   stellar-select --> stellar-item
+  stellar-tester --> stellar-item
   style stellar-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

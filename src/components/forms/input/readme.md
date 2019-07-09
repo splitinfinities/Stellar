@@ -90,8 +90,8 @@
 | Event      | Description           | Type               |
 | ---------- | --------------------- | ------------------ |
 | `bluring`  | Public: Blur event    | `CustomEvent<any>` |
-| `change`   | Public: Changed event | `CustomEvent<any>` |
 | `focusing` | Public: Focus event   | `CustomEvent<any>` |
+| `update`   | Public: Updated event | `CustomEvent<any>` |
 
 
 ## Methods

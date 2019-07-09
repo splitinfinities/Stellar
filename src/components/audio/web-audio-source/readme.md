@@ -20,9 +20,9 @@
 
 ## Events
 
-| Event        | Description | Type               |
-| ------------ | ----------- | ------------------ |
-| `timeupdate` |             | `CustomEvent<any>` |
+| Event    | Description | Type               |
+| -------- | ----------- | ------------------ |
+| `update` |             | `CustomEvent<any>` |
 
 
 ## Methods

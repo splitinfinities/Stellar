@@ -74,7 +74,7 @@ export class Playlist {
       this.loadFromStorage();
     }
 
-    this.handleTimeUpdates();
+    this.handleUpdates();
     this.handleProgressClick();
   }
 
@@ -102,8 +102,8 @@ export class Playlist {
     });
   }
 
-  handleTimeUpdates () {
-    this.audio.addEventListener("timeupdate", () => {
+  handleUpdates () {
+    this.audio.addEventListener("update", () => {
       this.currentTime = asTime(parseFloat(this.audio.currentTime.toString()).toFixed(10));
       this.duration = asTime(parseFloat(this.audio.duration.toString()).toFixed(10));
 
@@ -289,7 +289,7 @@ export class Playlist {
               }
             </h6>
           </button>
-          <stellar-color-picker val={this.visualizationColor} notransparent onChange={(e) => { this.visualizationColor = e.detail; }} />
+          <stellar-color-picker val={this.visualizationColor} notransparent onUpdate={(e) => { this.visualizationColor = e.detail; }} />
         </div>
 
         <div class="playlist-playing">

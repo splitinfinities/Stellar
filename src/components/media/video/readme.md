@@ -25,12 +25,12 @@
 
 ## Events
 
-| Event        | Description | Type               |
-| ------------ | ----------- | ------------------ |
-| `loaded`     |             | `CustomEvent<any>` |
-| `paused`     |             | `CustomEvent<any>` |
-| `played`     |             | `CustomEvent<any>` |
-| `timeupdate` |             | `CustomEvent<any>` |
+| Event    | Description | Type               |
+| -------- | ----------- | ------------------ |
+| `loaded` |             | `CustomEvent<any>` |
+| `paused` |             | `CustomEvent<any>` |
+| `played` |             | `CustomEvent<any>` |
+| `update` |             | `CustomEvent<any>` |
 
 
 ## Methods

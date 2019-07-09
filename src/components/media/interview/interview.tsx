@@ -55,8 +55,8 @@ export class Interview {
 
   cache = new WeakMap()
 
-  @Listen('timeupdate')
-  handleTimeUpdate(event) {
+  @Listen('update')
+  handleUpdate(event) {
     this.current = Math.abs(Math.round(event.detail.time * 1000));
     this.duration = Math.round(event.detail.duration * 1000);
 
@@ -179,7 +179,7 @@ export class Interview {
           <h3>
             <stellar-unit class="duration" value={this.duration} from="ms" to="s" />
           </h3>
-          <stellar-progress value={this.current} max={this.duration} noease={true} blurable={false} slender={true} editable={true} onChange={(e) => { this.skipTo(e.detail.value) }} />
+          <stellar-progress value={this.current} max={this.duration} noease={true} blurable={false} slender={true} editable={true} onUpdate={(e) => { this.skipTo(e.detail.value) }} />
         </section>}
         <stellar-intersection element={this.element} multiple in={this.in.bind(this)} out={this.out.bind(this)} />
       </div>

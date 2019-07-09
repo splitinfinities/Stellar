@@ -53,7 +53,7 @@ export class VideoInterview {
 
   cache = new WeakMap()
 
-  handleTimeUpdate(event) {
+  handleUpdate(event) {
     this.playing = event.detail.playing;
     this.current = Math.abs(Math.round(event.detail.currentTime * 1000));
     this.duration = Math.round(event.detail.duration * 1000);
@@ -141,7 +141,7 @@ export class VideoInterview {
       <div class="card" onDblClick={() => { this.handleClick() }}>
         <skeleton-img width={this.width} height={this.height} loading />
         {this.visible && <section>
-          <stellar-video controls={false} playsinline trackInView={false} onTimeupdate={(e) => { this.handleTimeUpdate(e) }}>
+          <stellar-video controls={false} playsinline trackInView={false} onUpdate={(e) => { this.handleUpdate(e) }}>
             <source src={this.src} />
           </stellar-video>
           <div class="transcript">
@@ -157,7 +157,7 @@ export class VideoInterview {
           <h3>
             <stellar-unit class="duration" value={this.duration} from="ms" to="s" />
           </h3>
-          {this.seekable && <stellar-progress value={this.current} max={this.duration} noease={true} blurable={false} slender={true} editable={true} onChange={(e) => { this.skipTo(e.detail.value) }} />}
+          {this.seekable && <stellar-progress value={this.current} max={this.duration} noease={true} blurable={false} slender={true} editable={true} onUpdate={(e) => { this.skipTo(e.detail.value) }} />}
         </section>}
         <stellar-intersection element={this.element} multiple in={this.in.bind(this)} out={this.out.bind(this)} />
       </div>

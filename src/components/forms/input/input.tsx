@@ -19,9 +19,9 @@ export class Input {
   @State() input: HTMLInputElement
 
   /**
-   * Public: Changed event
+   * Public: Updated event
    */
-  @Event() change: EventEmitter;
+  @Event() update: EventEmitter;
 
   /**
    * Public: Focus event
@@ -208,7 +208,7 @@ export class Input {
 
   @Watch('value')
   handleValueChange() {
-    this.change.emit(this.value)
+    this.update.emit(this.value)
   }
 
   handleChange() {
@@ -217,7 +217,7 @@ export class Input {
       this.updateFileLabel();
     }
 
-    this.change.emit(this.value)
+    this.update.emit(this.value)
   }
 
   handleFocus() {

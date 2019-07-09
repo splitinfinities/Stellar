@@ -410,7 +410,7 @@ export namespace Components {
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>;
+    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -627,6 +627,7 @@ export namespace Components {
     'required': boolean;
     'size': "tiny"|"small"|"medium"|"large";
     'tooltip': string;
+    'update_values': () => Promise<void>;
     'validate': () => Promise<FormResult>;
     'value': Array<string>|string;
     'valueLabel': string;
@@ -785,6 +786,9 @@ export namespace Components {
     'pill': boolean;
     'size': string;
     'textColor': string;
+  }
+  interface StellarTester {
+    'new_options': () => Promise<void>;
   }
   interface StellarTime {
     'format': string;
@@ -1344,6 +1348,12 @@ declare global {
     new (): HTMLStellarTagElement;
   };
 
+  interface HTMLStellarTesterElement extends Components.StellarTester, HTMLStencilElement {}
+  var HTMLStellarTesterElement: {
+    prototype: HTMLStellarTesterElement;
+    new (): HTMLStellarTesterElement;
+  };
+
   interface HTMLStellarTimeElement extends Components.StellarTime, HTMLStencilElement {}
   var HTMLStellarTimeElement: {
     prototype: HTMLStellarTimeElement;
@@ -1494,6 +1504,7 @@ declare global {
     'stellar-table': HTMLStellarTableElement;
     'stellar-tabs': HTMLStellarTabsElement;
     'stellar-tag': HTMLStellarTagElement;
+    'stellar-tester': HTMLStellarTesterElement;
     'stellar-time': HTMLStellarTimeElement;
     'stellar-toggle': HTMLStellarToggleElement;
     'stellar-toggle-option': HTMLStellarToggleOptionElement;
@@ -1742,7 +1753,7 @@ declare namespace LocalJSX {
   interface StellarColorLibrary extends JSXBase.HTMLAttributes<HTMLStellarColorLibraryElement> {}
   interface StellarColorPicker extends JSXBase.HTMLAttributes<HTMLStellarColorPickerElement> {
     'notransparent'?: boolean;
-    'onChange'?: (event: CustomEvent<any>) => void;
+    'onUpdate'?: (event: CustomEvent<any>) => void;
     'val'?: string;
   }
   interface StellarComment extends JSXBase.HTMLAttributes<HTMLStellarCommentElement> {
@@ -1775,7 +1786,7 @@ declare namespace LocalJSX {
     'method'?: string;
     'name'?: string;
     'novalidate'?: boolean;
-    'onSubmit'?: (event: CustomEvent<any>) => void;
+    'onSubmitted'?: (event: CustomEvent<any>) => void;
     'target'?: string;
   }
   interface StellarGrid extends JSXBase.HTMLAttributes<HTMLStellarGridElement> {
@@ -1840,13 +1851,13 @@ declare namespace LocalJSX {
     */
     'onBluring'?: (event: CustomEvent<any>) => void;
     /**
-    * Public: Changed event
-    */
-    'onChange'?: (event: CustomEvent<any>) => void;
-    /**
     * Public: Focus event
     */
     'onFocusing'?: (event: CustomEvent<any>) => void;
+    /**
+    * Public: Updated event
+    */
+    'onUpdate'?: (event: CustomEvent<any>) => void;
     'placeholder'?: string;
     'readonly'?: boolean;
     'replace_placeholder'?: string;
@@ -2019,7 +2030,7 @@ declare namespace LocalJSX {
     * eliminates the easing in the css so you can apply value updates without jitter.
     */
     'noease'?: boolean;
-    'onChange'?: (event: CustomEvent<any>) => void;
+    'onUpdate'?: (event: CustomEvent<any>) => void;
     /**
     * eliminates the easing in the css so you can apply value updates without jitter.
     */
@@ -2093,7 +2104,7 @@ declare namespace LocalJSX {
     'multiple'?: boolean;
     'name'?: string|boolean;
     'novalidate'?: boolean;
-    'onChange'?: (event: CustomEvent<any>) => void;
+    'onUpdate'?: (event: CustomEvent<any>) => void;
     'open'?: boolean;
     'other'?: boolean;
     'overlay'?: boolean;
@@ -2213,7 +2224,7 @@ declare namespace LocalJSX {
   interface StellarSwitch extends JSXBase.HTMLAttributes<HTMLStellarSwitchElement> {
     'checked'?: boolean;
     'checkedDefault'?: boolean;
-    'onChange'?: (event: CustomEvent<any>) => void;
+    'onUpdate'?: (event: CustomEvent<any>) => void;
   }
   interface StellarTab extends JSXBase.HTMLAttributes<HTMLStellarTabElement> {
     'disabled'?: boolean;
@@ -2246,6 +2257,7 @@ declare namespace LocalJSX {
     'size'?: string;
     'textColor'?: string;
   }
+  interface StellarTester extends JSXBase.HTMLAttributes<HTMLStellarTesterElement> {}
   interface StellarTime extends JSXBase.HTMLAttributes<HTMLStellarTimeElement> {
     'format'?: string;
     'relative'?: boolean;
@@ -2258,7 +2270,7 @@ declare namespace LocalJSX {
     'label'?: string;
     'name'?: string;
     'novalidate'?: boolean;
-    'onChange'?: (event: CustomEvent<any>) => void;
+    'onUpdate'?: (event: CustomEvent<any>) => void;
     'required'?: boolean;
     'single'?: boolean;
     'size'?: string;
@@ -2304,7 +2316,7 @@ declare namespace LocalJSX {
     'onLoaded'?: (event: CustomEvent<any>) => void;
     'onPaused'?: (event: CustomEvent<any>) => void;
     'onPlayed'?: (event: CustomEvent<any>) => void;
-    'onTimeupdate'?: (event: CustomEvent<any>) => void;
+    'onUpdate'?: (event: CustomEvent<any>) => void;
     'overlay'?: boolean;
     'playing'?: boolean;
     'playsinline'?: boolean;
@@ -2353,7 +2365,7 @@ declare namespace LocalJSX {
     'midichannel'?: number;
     'midikey'?: number;
     'name'?: string;
-    'onTimeupdate'?: (event: CustomEvent<any>) => void;
+    'onUpdate'?: (event: CustomEvent<any>) => void;
     'playing'?: boolean;
     'src'?: string;
   }
@@ -2440,6 +2452,7 @@ declare namespace LocalJSX {
     'stellar-table': StellarTable;
     'stellar-tabs': StellarTabs;
     'stellar-tag': StellarTag;
+    'stellar-tester': StellarTester;
     'stellar-time': StellarTime;
     'stellar-toggle': StellarToggle;
     'stellar-toggle-option': StellarToggleOption;

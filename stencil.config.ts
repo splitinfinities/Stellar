@@ -45,11 +45,7 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null,
       copy: [
-        { src: "global/images" },
-        { src: "global/video" },
         { src: "global/vector" },
-        { src: "global/audio" },
-        { src: "global/page2layers.js" },
         { src: "*.html" },
       ],
     }

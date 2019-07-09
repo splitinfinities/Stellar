@@ -98,7 +98,7 @@ export class Markdown {
           <div innerHTML={this.converted}></div>
         </copy-wrap></section>
         <footer class="bg-theme-base0">
-          <stellar-input type="textarea" default={this.codeString} onChange={(e) => { this.codeString = e.detail;this.convert(); }} />
+          <stellar-input type="textarea" default={this.codeString} onUpdate={(e) => { this.codeString = e.detail;this.convert(); }} />
         </footer>
       </stellar-card>
     } else {

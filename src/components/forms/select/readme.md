@@ -212,7 +212,7 @@
 
 | Event    | Description | Type               |
 | -------- | ----------- | ------------------ |
-| `change` |             | `CustomEvent<any>` |
+| `update` |             | `CustomEvent<any>` |
 
 
 ## Methods
@@ -237,6 +237,16 @@ Type: `Promise<string[]>`
 
 
 
+### `update_values() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
 ### `validate() => Promise<FormResult>`
 
 
@@ -249,6 +259,10 @@ Type: `Promise<FormResult>`
 
 
 ## Dependencies
+
+### Used by
+
+ - [stellar-tester](../../tester)
 
 ### Depends on
 
@@ -272,6 +286,7 @@ graph TD;
   stellar-button --> stencil-route-link
   stellar-asset --> ion-icon
   stellar-item --> stellar-asset
+  stellar-tester --> stellar-select
   style stellar-select fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

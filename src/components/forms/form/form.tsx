@@ -21,7 +21,7 @@ export class Form {
 
   @State() selectors: Array<string> = ['stellar-input', 'stellar-toggle', 'stellar-range', 'stellar-switch', 'stellar-select'];
 
-  @Event() submit: EventEmitter;
+  @Event() submitted: EventEmitter;
 
   @Listen('keydown')
   handleEnter(event) {
@@ -96,7 +96,7 @@ export class Form {
 
     if (state.valid) {
       if (this.ajax) {
-        this.submit.emit(state)
+        this.submitted.emit(state)
       } else {
         this.element.querySelector('form').submit();
       }

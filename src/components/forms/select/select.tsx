@@ -42,7 +42,7 @@ export class Select {
 
   @State() clear_confirm: boolean = false;
 
-  @Event() change: EventEmitter;
+  @Event() update: EventEmitter;
 
   async componentWillLoad () {
     if (this.multiple) {
@@ -94,12 +94,13 @@ export class Select {
         element.selected = false;
       });
 
-      this.change.emit(this.value);
+      this.update.emit(this.value);
     } else {
       this.clear_confirm = true;
     }
   }
 
+  @Method()
   async update_values() {
     if (this.multiple) {
       const option_elements = await this.option_elements()
@@ -118,7 +119,7 @@ export class Select {
       });
 
       this.value = values;
-      this.change.emit(this.value);
+      this.update.emit(this.value);
     } else {
       const options = await this.option_elements();
 
@@ -213,7 +214,7 @@ export class Select {
       });
 
       this.value = values;
-      this.change.emit(this.value);
+      this.update.emit(this.value);
     } else {
       if (!data.element.selectTitle) {
         const options = await this.option_elements();
@@ -226,7 +227,7 @@ export class Select {
         data.selected = true;
         this.value = data.value;
 
-        this.change.emit(this.value);
+        this.update.emit(this.value);
 
         this.titleItem.apply(await data.data());
 
@@ -342,14 +343,15 @@ export class Select {
 
   listen_to_values() {
     var targetNode = this.element;
-    var config = { childList: true, subtree: true };
+    var config = {
+      attributes: true,
+      childList: true,
+      characterData: true,
+      type: true
+    };
 
-    var callback = (mutationsList) => {
-      for (var mutation of mutationsList) {
-        if (mutation.type == 'childList' || mutation.type == 'subtree') {
-          this.update_values();
-        }
-      }
+    var callback = () => {
+      this.update_values();
     };
 
     this.observer = new MutationObserver(callback);

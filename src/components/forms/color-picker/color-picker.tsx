@@ -12,7 +12,7 @@ export class ColorPicker {
     @Prop({mutable: true, reflectToAttr: true}) val: string = "none";
     @Prop() notransparent: boolean = false;
     @State() options: Array<string>;
-    @Event() change: EventEmitter;
+    @Event() update: EventEmitter;
 
     componentWillLoad() {
         this.options = Object.keys(colors).filter((color) => {
@@ -26,8 +26,8 @@ export class ColorPicker {
     }
 
     @Watch('val')
-    valueChangedHandler(val: string) {
-        this.change.emit(val);
+    valueUpdatedHandler(val: string) {
+        this.update.emit(val);
 
         properties.set({
             "--selected-color": `var(--${this.val}5)`

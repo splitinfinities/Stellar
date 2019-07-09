@@ -35,10 +35,16 @@ export class Item {
   @State() current: boolean = false;
   @State() slotted: any;
 
+  @State() select: HTMLStellarSelectElement;
+
   @Event() selectionChanged: EventEmitter;
   @Event() mounted: EventEmitter;
   @Event() focusChanged: EventEmitter;
   @Event() blurChanged: EventEmitter;
+
+  componentWillLoad() {
+    this.select = this.element.closest('stellar-select');
+  }
 
   componentDidLoad() {
     setTimeout(() => {
@@ -50,6 +56,12 @@ export class Item {
 
   componentDidUnload() {
     this.selectionChanged.emit(this);
+  }
+
+  componentDidUpdate() {
+    if (this.select) {
+      this.select.update_values();
+    }
   }
 
   @Method()

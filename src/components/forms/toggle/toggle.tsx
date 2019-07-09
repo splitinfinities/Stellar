@@ -27,7 +27,7 @@ export class Toggle {
   @State() error: string;
   @State() status: any;
 
-  @Event() change: EventEmitter;
+  @Event() update: EventEmitter;
 
   componentWillLoad () {
     const options = this.element.querySelectorAll('stellar-toggle-option');
@@ -85,7 +85,7 @@ export class Toggle {
 
       this.value = values;
 
-      this.change.emit(this.value)
+      this.update.emit(this.value)
     }
   }
 

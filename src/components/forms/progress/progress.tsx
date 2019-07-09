@@ -66,7 +66,7 @@ export class Progress {
       this.ease.stop();
     },
   });
-  @Event() change: EventEmitter;
+  @Event() update: EventEmitter;
 
   componentWillLoad () {
     if (!this.blurable) {
@@ -95,7 +95,7 @@ export class Progress {
 
       this.value = rounded;
 
-      this.change.emit({
+      this.update.emit({
         value: this.value
       })
     }
