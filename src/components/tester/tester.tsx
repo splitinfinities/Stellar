@@ -1,9 +1,10 @@
-import { Component, State, h, Method } from '@stencil/core'
+import { Component, State, h, Method, Element } from '@stencil/core'
 
 @Component({
     tag: 'stellar-tester',
 })
 export class Testington {
+    @Element() element: HTMLElement;
     @State() options: any[] = [{value: "nice", copy: "Nice"}];
 
     makeid(length) {
@@ -26,10 +27,10 @@ export class Testington {
     }
 
     render() {
-        return <div>
-            <stellar-select>
+        return <stellar-form ajax onSubmitted={(e) => { console.log(e.detail); }}>
+            <stellar-select novalidate name="nicedude" onUpdate={() => { this.element.querySelector('stellar-form').submit_form() }}>
                 {this.options.map((option) => <stellar-item value={option.value}>{option.copy}</stellar-item>)}
             </stellar-select>
-        </div>
+        </stellar-form>
     }
 }

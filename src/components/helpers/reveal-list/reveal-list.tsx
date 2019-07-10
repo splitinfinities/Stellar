@@ -44,7 +44,6 @@ export class RevealList {
 
   @Method()
   async in() {
-    console.log('sup')
     this.active = true;
 
     properties.set({

@@ -5,8 +5,8 @@ import { Component, Prop, State, h } from '@stencil/core';
 })
 export class intersection {
     @Prop() multiple: boolean;
-    @Prop() in: Function = () => { console.log('in'); };
-    @Prop() out: Function = () => { console.log('out'); };
+    @Prop() in: Function = () => { };
+    @Prop() out: Function = () => { };
     @Prop() margin: string = "0%";
     @Prop() element: HTMLElement|string;
     @State() io: any;

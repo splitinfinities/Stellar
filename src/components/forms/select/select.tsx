@@ -126,6 +126,8 @@ export class Select {
       Array.from(options).forEach(async (el) => {
         if (el.selected) {
           this.titleItem.apply(await el.data());
+          this.value = el.value;
+          this.update.emit(this.value);
         }
 
         if (el.selectTitle) {

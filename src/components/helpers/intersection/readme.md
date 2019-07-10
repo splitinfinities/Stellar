@@ -7,13 +7,13 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                    | Default                         |
-| ---------- | ---------- | ----------- | ----------------------- | ------------------------------- |
-| `element`  | `element`  |             | `HTMLElement \| string` | `undefined`                     |
-| `in`       | --         |             | `Function`              | `() => { console.log('in'); }`  |
-| `margin`   | `margin`   |             | `string`                | `"0%"`                          |
-| `multiple` | `multiple` |             | `boolean`               | `undefined`                     |
-| `out`      | --         |             | `Function`              | `() => { console.log('out'); }` |
+| Property   | Attribute  | Description | Type                    | Default     |
+| ---------- | ---------- | ----------- | ----------------------- | ----------- |
+| `element`  | `element`  |             | `HTMLElement \| string` | `undefined` |
+| `in`       | --         |             | `Function`              | `() => { }` |
+| `margin`   | `margin`   |             | `string`                | `"0%"`      |
+| `multiple` | `multiple` |             | `boolean`               | `undefined` |
+| `out`      | --         |             | `Function`              | `() => { }` |
 
 
 ## Dependencies
