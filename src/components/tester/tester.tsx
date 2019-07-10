@@ -28,7 +28,7 @@ export class Testington {
 
     render() {
         return <stellar-form ajax onSubmitted={(e) => { console.log(e.detail); }}>
-            <stellar-select novalidate name="nicedude" onUpdate={() => { this.element.querySelector('stellar-form').submit_form() }}>
+            <stellar-select novalidate loading={true} name="nicedude" onUpdate={() => { this.element.querySelector('stellar-form').submit_form() }}>
                 {this.options.map((option) => <stellar-item value={option.value}>{option.copy}</stellar-item>)}
             </stellar-select>
         </stellar-form>

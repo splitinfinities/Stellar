@@ -115,7 +115,7 @@ graph TD;
   stellar-card --> stellar-asset
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   stellar-code --> stellar-card
   stellar-color-library --> stellar-card
   stellar-markdown --> stellar-card

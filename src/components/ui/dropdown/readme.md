@@ -76,7 +76,7 @@
 graph TD;
   stellar-dropdown --> stellar-asset
   stellar-dropdown --> stellar-blur
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   style stellar-dropdown fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

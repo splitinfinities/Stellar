@@ -63,7 +63,7 @@ graph TD;
   stellar-input --> stellar-asset
   stellar-input --> stellar-unit
   stellar-input --> stellar-tooltip
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   style stellar-stripe fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

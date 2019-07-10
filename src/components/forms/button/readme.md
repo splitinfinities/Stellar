@@ -78,7 +78,7 @@
 graph TD;
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   stellar-accordion --> stellar-button
   stellar-card --> stellar-button
   stellar-playlist --> stellar-button

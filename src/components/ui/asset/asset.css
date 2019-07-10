@@ -12,9 +12,9 @@
 }
 
 :host([block]),
-:host([block]) ion-icon,
-:host([block]) ion-icon .icon-inner,
-:host([block]) ion-icon .icon-inner svg {
+:host([block]) stellar-icon,
+:host([block]) stellar-icon .icon-inner,
+:host([block]) stellar-icon .icon-inner svg {
 	width: 100%;
 	height: auto;
 }

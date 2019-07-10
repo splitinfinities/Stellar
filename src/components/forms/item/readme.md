@@ -97,7 +97,7 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   stellar-item --> stellar-asset
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   stellar-select --> stellar-item
   stellar-tester --> stellar-item
   style stellar-item fill:#f9f,stroke:#333,stroke-width:4px

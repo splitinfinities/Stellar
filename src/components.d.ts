@@ -311,6 +311,48 @@ export namespace Components {
     'count': number;
     'size': string;
   }
+  interface StellarIcon {
+    /**
+    * Specifies the label to use for accessibility. Defaults to the icon name.
+    */
+    'ariaLabel'?: string;
+    /**
+    * Specifies whether the icon should horizontally flip when `dir` is `"rtl"`.
+    */
+    'flipRtl'?: boolean;
+    /**
+    * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
+    */
+    'icon'?: any;
+    /**
+    * Specifies which icon to use on `ios` mode.
+    */
+    'ios'?: string;
+    /**
+    * If enabled, stellar-icon will be loaded lazily when it's visible in the viewport. Default, `false`.
+    */
+    'lazy': boolean;
+    /**
+    * Specifies which icon to use on `md` mode.
+    */
+    'md'?: string;
+    /**
+    * The mode determines which platform styles to use.
+    */
+    'mode'?: "ios" | "md";
+    /**
+    * Specifies which icon to use from the built-in set of icons.
+    */
+    'name'?: string;
+    /**
+    * The size of the icon. Available options are: `"small"` and `"large"`.
+    */
+    'size'?: string;
+    /**
+    * Specifies the exact `src` of an SVG file to use.
+    */
+    'src'?: string;
+  }
   interface StellarImage {
     'bg': string;
     'height': number;
@@ -613,6 +655,7 @@ export namespace Components {
     'footer': boolean;
     'inline': boolean;
     'label': string;
+    'loading': boolean;
     'multiple': boolean;
     'name': string|boolean;
     'novalidate': boolean;
@@ -1126,6 +1169,12 @@ declare global {
     new (): HTMLStellarGroupOverflowElement;
   };
 
+  interface HTMLStellarIconElement extends Components.StellarIcon, HTMLStencilElement {}
+  var HTMLStellarIconElement: {
+    prototype: HTMLStellarIconElement;
+    new (): HTMLStellarIconElement;
+  };
+
   interface HTMLStellarImageElement extends Components.StellarImage, HTMLStencilElement {}
   var HTMLStellarImageElement: {
     prototype: HTMLStellarImageElement;
@@ -1467,6 +1516,7 @@ declare global {
     'stellar-grid': HTMLStellarGridElement;
     'stellar-group': HTMLStellarGroupElement;
     'stellar-group-overflow': HTMLStellarGroupOverflowElement;
+    'stellar-icon': HTMLStellarIconElement;
     'stellar-image': HTMLStellarImageElement;
     'stellar-input': HTMLStellarInputElement;
     'stellar-intersection': HTMLStellarIntersectionElement;
@@ -1808,6 +1858,48 @@ declare namespace LocalJSX {
     'count'?: number;
     'size'?: string;
   }
+  interface StellarIcon extends JSXBase.HTMLAttributes<HTMLStellarIconElement> {
+    /**
+    * Specifies the label to use for accessibility. Defaults to the icon name.
+    */
+    'ariaLabel'?: string;
+    /**
+    * Specifies whether the icon should horizontally flip when `dir` is `"rtl"`.
+    */
+    'flipRtl'?: boolean;
+    /**
+    * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
+    */
+    'icon'?: any;
+    /**
+    * Specifies which icon to use on `ios` mode.
+    */
+    'ios'?: string;
+    /**
+    * If enabled, stellar-icon will be loaded lazily when it's visible in the viewport. Default, `false`.
+    */
+    'lazy'?: boolean;
+    /**
+    * Specifies which icon to use on `md` mode.
+    */
+    'md'?: string;
+    /**
+    * The mode determines which platform styles to use.
+    */
+    'mode'?: "ios" | "md";
+    /**
+    * Specifies which icon to use from the built-in set of icons.
+    */
+    'name'?: string;
+    /**
+    * The size of the icon. Available options are: `"small"` and `"large"`.
+    */
+    'size'?: string;
+    /**
+    * Specifies the exact `src` of an SVG file to use.
+    */
+    'src'?: string;
+  }
   interface StellarImage extends JSXBase.HTMLAttributes<HTMLStellarImageElement> {
     'bg'?: string;
     'height'?: number;
@@ -2101,6 +2193,7 @@ declare namespace LocalJSX {
     'footer'?: boolean;
     'inline'?: boolean;
     'label'?: string;
+    'loading'?: boolean;
     'multiple'?: boolean;
     'name'?: string|boolean;
     'novalidate'?: boolean;
@@ -2415,6 +2508,7 @@ declare namespace LocalJSX {
     'stellar-grid': StellarGrid;
     'stellar-group': StellarGroup;
     'stellar-group-overflow': StellarGroupOverflow;
+    'stellar-icon': StellarIcon;
     'stellar-image': StellarImage;
     'stellar-input': StellarInput;
     'stellar-intersection': StellarIntersection;

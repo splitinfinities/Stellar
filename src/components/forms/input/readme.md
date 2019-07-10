@@ -191,7 +191,7 @@ graph TD;
   stellar-input --> stellar-asset
   stellar-input --> stellar-unit
   stellar-input --> stellar-tooltip
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   stellar-markdown --> stellar-input
   stellar-pagination --> stellar-input
   stellar-stripe --> stellar-input

@@ -50,12 +50,12 @@
 
 ### Depends on
 
-- ion-icon
+- [stellar-icon](../../media/icon)
 
 ### Graph
 ```mermaid
 graph TD;
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   skeleton-img --> stellar-asset
   stellar-accordion --> stellar-asset
   stellar-breadcrumbs --> stellar-asset

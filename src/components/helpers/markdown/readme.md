@@ -54,7 +54,7 @@ graph TD;
   stellar-card --> stellar-asset
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   stellar-input --> stellar-label
   stellar-input --> copy-wrap
   stellar-input --> stellar-asset

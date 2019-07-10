@@ -78,6 +78,35 @@
   display: none;
 }
 
+:host .select .loading {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-radius: var(--border-radius);
+  height: 100%;
+  width: calc(100% + 2px);
+  z-index: 10;
+  display: grid;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  color: var(--theme-base7);
+  background: rgba(255, 255, 255, 1);
+  animation-name: fadeIn;
+  animation-duration: .0625s;
+  animation-fill-mode: both;
+}
+
+:host .select .loading stellar-asset {
+  font-size: 1.6rem;
+
+}
+
 :host .select-title stellar-asset {
   position: absolute;
   right: 2rem;
@@ -171,7 +200,6 @@ stellar-input .validation span + span {
   max-height: calc(var(--item-size) * 6.2);
   overflow-y: auto;
 }
-
 
 /* Size: tiny */
 :host([size="tiny"]) .label-wrapper stellar-label {
@@ -313,4 +341,14 @@ stellar-input .validation span + span {
 :host ::selection,
 :host *::selection {
   background: var(--theme-base0) !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

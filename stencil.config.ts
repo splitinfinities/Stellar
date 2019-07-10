@@ -45,6 +45,14 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null,
       copy: [
+        {
+          src: 'svg/',
+          dest: './build/svg/'
+        },
+        {
+          src: './test/*.svg',
+          dest: './assets/'
+        },
         { src: "global/vector" },
         { src: "*.html" },
       ],

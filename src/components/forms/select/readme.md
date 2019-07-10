@@ -189,6 +189,7 @@
 | `footer`              | `footer`               |             | `boolean`                                  | `undefined`             |
 | `inline`              | `inline`               |             | `boolean`                                  | `undefined`             |
 | `label`               | `label`                |             | `string`                                   | `undefined`             |
+| `loading`             | `loading`              |             | `boolean`                                  | `false`                 |
 | `multiple`            | `multiple`             |             | `boolean`                                  | `undefined`             |
 | `name`                | `name`                 |             | `boolean \| string`                        | `"select"`              |
 | `novalidate`          | `novalidate`           |             | `boolean`                                  | `undefined`             |
@@ -284,7 +285,7 @@ graph TD;
   stellar-select --> stellar-blur
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   stellar-item --> stellar-asset
   stellar-tester --> stellar-select
   style stellar-select fill:#f9f,stroke:#333,stroke-width:4px

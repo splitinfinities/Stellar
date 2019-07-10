@@ -23,7 +23,7 @@
 ```mermaid
 graph TD;
   stellar-password-requirements --> stellar-asset
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   style stellar-password-requirements fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

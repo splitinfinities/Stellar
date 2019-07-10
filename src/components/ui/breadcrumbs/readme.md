@@ -61,7 +61,7 @@ graph TD;
   stellar-breadcrumbs --> stellar-breadcrumb
   stellar-breadcrumbs --> stellar-asset
   stellar-breadcrumbs --> stellar-label
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   style stellar-breadcrumbs fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

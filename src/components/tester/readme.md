@@ -40,7 +40,7 @@ graph TD;
   stellar-select --> stellar-blur
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   stellar-item --> stellar-asset
   style stellar-tester fill:#f9f,stroke:#333,stroke-width:4px
 ```

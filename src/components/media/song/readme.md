@@ -105,7 +105,7 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   stellar-song --> stellar-asset
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   style stellar-song fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

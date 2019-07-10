@@ -102,7 +102,7 @@ graph TD;
   stellar-playlist --> stellar-progress
   stellar-playlist --> skeleton-img
   stellar-playlist --> web-audio-visualizer
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
   skeleton-img --> stellar-asset

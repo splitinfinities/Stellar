@@ -72,7 +72,7 @@ graph TD;
   stellar-toggle-option --> stellar-blur
   stellar-toggle-option --> stellar-tag
   stellar-toggle-option --> stellar-tooltip
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   stellar-tag --> stellar-label
   style stellar-toggle-option fill:#f9f,stroke:#333,stroke-width:4px
 ```

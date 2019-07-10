@@ -85,7 +85,7 @@ graph TD;
   stellar-video-interview --> stellar-intersection
   skeleton-img --> stellar-asset
   skeleton-img --> stellar-intersection
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   stellar-video --> stellar-intersection
   style stellar-video-interview fill:#f9f,stroke:#333,stroke-width:4px
 ```

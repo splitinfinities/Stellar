@@ -94,7 +94,7 @@
 ```mermaid
 graph TD;
   stellar-message --> stellar-asset
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   style stellar-message fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

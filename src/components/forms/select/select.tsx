@@ -32,6 +32,7 @@ export class Select {
   @Prop({ mutable: true, reflectToAttr: true }) value: Array<string>|string;
   @Prop() valueLabel: string = undefined;
   @Prop() default: any;
+  @Prop() loading: boolean = false;
   @Prop() fit: boolean = false;
   @Prop() wrap: boolean = false;
 
@@ -476,6 +477,8 @@ export class Select {
         { this.renderLabel() }
 
         <div class="select">
+          {this.loading && <div class="loading"><stellar-asset name="loading-spin" /> <p>One sec...</p></div>}
+
           <button type="button" class="select-title" onClick={() => this.handleTitleClick()} onFocus={() => this.handleTitleFocus()} onBlur={() => this.handleTitleBlur()}>
             <stellar-item fit wrap select-title type="button" value={this.value ? this.value.toString() : ""} tabindex="-1" selectable={false} label={this.readable_value()}>
               {this.readable_value()}

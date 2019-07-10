@@ -1,5 +1,4 @@
 import { Component, Prop, h } from '@stencil/core';
-import "ionicons";
 
 @Component({
   tag: 'stellar-asset',
@@ -25,7 +24,7 @@ export class Asset {
   render () {
     return (
       <div class="icon-wrap">
-        <ion-icon src={!this.name && this.src ? this.src : undefined} name={!this.src && this.name ? this.language + this.name : undefined} ariaLabel={this.ariaLabel} aria-label={this.ariaLabel}></ion-icon>
+        <stellar-icon src={!this.name && this.src ? this.src : undefined} name={!this.src && this.name ? this.language + this.name : undefined} ariaLabel={this.ariaLabel} aria-label={this.ariaLabel}></stellar-icon>
       </div>
     );
   }

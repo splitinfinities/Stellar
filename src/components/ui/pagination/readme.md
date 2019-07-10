@@ -51,7 +51,7 @@ graph TD;
   stellar-pagination --> stellar-asset
   stellar-pagination --> stellar-blur
   stellar-pagination --> stellar-input
-  stellar-asset --> ion-icon
+  stellar-asset --> stellar-icon
   stellar-input --> stellar-label
   stellar-input --> copy-wrap
   stellar-input --> stellar-asset
