@@ -1,4 +1,5 @@
-:host {
+:host,
+:host stellar-intersection {
   display: contents;
   --animation: fadeIn;
 }

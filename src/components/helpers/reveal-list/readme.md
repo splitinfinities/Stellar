@@ -13,7 +13,7 @@
 | `animation`    | `animation`     |             | `"fadeIn" \| "fadeInDown" \| "fadeInUp"`    | `"fadeInUp"` |
 | `delay`        | `delay`         |             | `number`                                    | `100`        |
 | `outAnimation` | `out-animation` |             | `"fadeOut" \| "fadeOutDown" \| "fadeOutUp"` | `"fadeOut"`  |
-| `timing`       | `timing`        |             | `number`                                    | `50`         |
+| `timing`       | `timing`        |             | `number`                                    | `20`         |
 
 
 ## Methods

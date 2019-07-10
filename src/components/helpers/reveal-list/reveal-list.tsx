@@ -13,7 +13,7 @@ export class RevealList {
   @Prop({ reflectToAttr: true }) animation: "fadeIn"|"fadeInUp"|"fadeInDown" = "fadeInUp";
   @Prop({ reflectToAttr: true }) outAnimation: "fadeOut"|"fadeOutUp"|"fadeOutDown" = "fadeOut";
   @Prop({ reflectToAttr: true }) delay: number = 100;
-  @Prop({ reflectToAttr: true }) timing: number = 50;
+  @Prop({ reflectToAttr: true }) timing: number = 20;
   @Prop({ reflectToAttr: true, mutable: true }) active: boolean = false;
 
   @State() children;
@@ -44,6 +44,7 @@ export class RevealList {
 
   @Method()
   async in() {
+    console.log('sup')
     this.active = true;
 
     properties.set({
@@ -60,8 +61,9 @@ export class RevealList {
   }
 
   render() {
-    return <stellar-intersection element={this.element} in={this.in.bind(this)}>
+    return [
+      <stellar-intersection element={this.element.parentElement} in={this.in.bind(this)} />,
       <slot />
-    </stellar-intersection>
+    ]
   }
 }
