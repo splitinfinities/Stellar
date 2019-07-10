@@ -11,10 +11,10 @@ focusWithin(document)
 export class Dropdown {
   @Element() element: HTMLElement
 
-  @Prop({mutable: true, reflectToAttr: true}) position: "left"|"center"|"right" = "center"
+  @Prop({mutable: true, reflect: true}) position: "left"|"center"|"right" = "center"
   @Prop() icon: boolean = false
   @Prop() label: string = "Dropdown"
-  @Prop({mutable: true, reflectToAttr: true}) open: boolean = false
+  @Prop({mutable: true, reflect: true}) open: boolean = false
   @State() ease: TweenInstance = blurringEase({
     end: 10,
     start: -1,

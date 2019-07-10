@@ -11,12 +11,12 @@ export class Avatar {
 
   @Prop() src: string;
   @Prop() notooltip: boolean = false;
-  @Prop({mutable: true, reflectToAttr: true}) size: "tiny"|"small"|"medium"|"large";
-  @Prop({mutable: true, reflectToAttr: true}) color: string = "auto";
-  @Prop({mutable: true, reflectToAttr: true}) name: string = "Stellar";
-  @Prop({mutable: true, reflectToAttr: true}) initials: string = "ST";
-  @Prop({mutable: true, reflectToAttr: true}) shape: "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message" = "square";
-  @Prop({mutable: true, reflectToAttr: true}) processing: boolean = false;
+  @Prop({mutable: true, reflect: true}) size: "tiny"|"small"|"medium"|"large";
+  @Prop({mutable: true, reflect: true}) color: string = "auto";
+  @Prop({mutable: true, reflect: true}) name: string = "Stellar";
+  @Prop({mutable: true, reflect: true}) initials: string = "ST";
+  @Prop({mutable: true, reflect: true}) shape: "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message" = "square";
+  @Prop({mutable: true, reflect: true}) processing: boolean = false;
 
   @State() colorAuto: boolean = false;
   @State() colors: string[];

@@ -46,57 +46,57 @@ export class Button {
   /**
    * Sets the size of the button. Can be tiny, small, medium, or large.
    */
-  @Prop({reflectToAttr: true}) size: "tiny"|"small"|"medium"|"large";
+  @Prop({reflect: true}) size: "tiny"|"small"|"medium"|"large";
 
   /**
    * Sets the padding inside of the button. Can be small, medium, or large.
    */
-  @Prop({reflectToAttr: true}) padding: "tiny"|"small"|"medium"|"large";
+  @Prop({reflect: true}) padding: "tiny"|"small"|"medium"|"large";
 
   /**
    * Sets the button or link as a button with only an icon.
    */
-  @Prop({reflectToAttr: true}) icon: boolean = false;
+  @Prop({reflect: true, mutable: true}) icon: boolean = false;
 
   /**
    * Sets the button or link as an active state.
    */
-  @Prop({reflectToAttr: true}) active: boolean = false;
+  @Prop({reflect: true}) active: boolean = false;
 
   /**
    * Sets the button or link as disabled and not-interactable.
    */
-  @Prop({reflectToAttr: true}) disabled: boolean = false;
+  @Prop({reflect: true}) disabled: boolean = false;
 
   /**
    * Sets the button or link to provide the affordance of a dangerous action.
    */
-  @Prop({reflectToAttr: true}) danger: boolean = false;
+  @Prop({reflect: true}) danger: boolean = false;
 
   /**
    * Sets the button or link to render as a pill.
    */
-  @Prop({reflectToAttr: true}) pill: boolean = false;
+  @Prop({reflect: true}) pill: boolean = false;
 
   /**
    * Sets the button or link to render at full width to the parent.
    */
-  @Prop({reflectToAttr: true}) block: boolean = false;
+  @Prop({reflect: true}) block: boolean = false;
 
   /**
    * Sets the button or link as an outlined button.
    */
-  @Prop({reflectToAttr: true}) outline: boolean = false;
+  @Prop({reflect: true}) outline: boolean = false;
 
   /**
    * Sets the button or link as an outlined button.
    */
-  @Prop({reflectToAttr: true}) invert: boolean = false;
+  @Prop({reflect: true}) invert: boolean = false;
 
   /**
    * Sets the button or link as an outlined button.
    */
-  @Prop({reflectToAttr: true}) dark: boolean = false;
+  @Prop({reflect: true}) dark: boolean = false;
 
   /**
    * Sets the button or link as processing when clicked.
@@ -104,7 +104,11 @@ export class Button {
   @Prop() processable: boolean = false;
   @State() processing: boolean = false;
 
-  @Prop({reflectToAttr: true}) ghost: boolean = false;
+  @Prop({reflect: true}) ghost: boolean = false;
+
+  componentWillLoad() {
+    this.icon = this.element.querySelectorAll('stellar-asset').length > 0
+  }
 
   async click() {
     if (this.processable) {

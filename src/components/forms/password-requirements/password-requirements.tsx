@@ -7,7 +7,7 @@ import zxcvbn from "zxcvbn";
 export class PasswordRequirements {
     @Element() element: HTMLElement;
 
-    @Prop({reflectToAttr: true}) for: string;
+    @Prop({reflect: true}) for: string;
     @Prop() size: "tiny"|"small"|"large";
 
     @State() input;

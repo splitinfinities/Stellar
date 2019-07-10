@@ -6,7 +6,7 @@ import { Component, Prop, Element, Event, EventEmitter, Method, Watch, h } from 
 })
 export class Switch {
   @Element() el: HTMLElement;
-  @Prop({mutable: true, reflectToAttr: true}) checked: boolean = false;
+  @Prop({mutable: true, reflect: true}) checked: boolean = false;
   @Prop() checkedDefault: boolean = false;
   @Event() update: EventEmitter;
 

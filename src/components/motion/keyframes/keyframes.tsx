@@ -12,7 +12,7 @@ export class Follow {
     @Prop() src: string;
     @Prop() width: number = 400;
     @Prop() height: number = 400;
-    @Prop({reflectToAttr: true}) frame: number = 1;
+    @Prop({reflect: true}) frame: number = 1;
 
     componentWillLoad() {
         this.update()

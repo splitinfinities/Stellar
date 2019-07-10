@@ -6,11 +6,11 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true
 })
 export class Asset {
-  @Prop({reflectToAttr: true}) src: string;
-  @Prop({reflectToAttr: true}) name: string = "person";
-  @Prop({reflectToAttr: true}) language: string = "ios-";
-  @Prop({reflectToAttr: true}) align: string;
-  @Prop({reflectToAttr: true, mutable: true}) ariaLabel: string;
+  @Prop({reflect: true}) src: string;
+  @Prop({reflect: true}) name: string = "person";
+  @Prop({reflect: true}) language: string = "ios-";
+  @Prop({reflect: true}) align: string;
+  @Prop({reflect: true, mutable: true}) ariaLabel: string;
 
   componentWillLoad() {
     this.ariaLabel = this.name

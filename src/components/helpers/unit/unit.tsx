@@ -7,12 +7,12 @@ import roundTo from 'round-to';
   styleUrl: 'unit.css'
 })
 export class Unit {
-  @Prop({reflectToAttr: true}) value: number = 1000;
-  @Prop({reflectToAttr: true}) from: string = "B";
-  @Prop({reflectToAttr: true}) to: string = "KB";
-  @Prop({reflectToAttr: true}) money: boolean = false;
-  @Prop({reflectToAttr: true}) round: boolean = false;
-  @Prop({reflectToAttr: true}) decimals: number = 2;
+  @Prop({reflect: true}) value: number = 1000;
+  @Prop({reflect: true}) from: string = "B";
+  @Prop({reflect: true}) to: string = "KB";
+  @Prop({reflect: true}) money: boolean = false;
+  @Prop({reflect: true}) round: boolean = false;
+  @Prop({reflect: true}) decimals: number = 2;
 
   render () {
     if (!this.money) {

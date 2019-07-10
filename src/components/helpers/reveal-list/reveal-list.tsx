@@ -10,11 +10,11 @@ import delay from 'await-delay';
 export class RevealList {
   @Element() element: HTMLElement
 
-  @Prop({ reflectToAttr: true }) animation: "fadeIn"|"fadeInUp"|"fadeInDown" = "fadeInUp";
-  @Prop({ reflectToAttr: true }) outAnimation: "fadeOut"|"fadeOutUp"|"fadeOutDown" = "fadeOut";
-  @Prop({ reflectToAttr: true }) delay: number = 100;
-  @Prop({ reflectToAttr: true }) timing: number = 20;
-  @Prop({ reflectToAttr: true, mutable: true }) active: boolean = false;
+  @Prop({ reflect: true }) animation: "fadeIn"|"fadeInUp"|"fadeInDown" = "fadeInUp";
+  @Prop({ reflect: true }) outAnimation: "fadeOut"|"fadeOutUp"|"fadeOutDown" = "fadeOut";
+  @Prop({ reflect: true }) delay: number = 100;
+  @Prop({ reflect: true }) timing: number = 20;
+  @Prop({ reflect: true, mutable: true }) active: boolean = false;
 
   @State() children;
 

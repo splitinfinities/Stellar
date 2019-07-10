@@ -46,7 +46,7 @@ export const config: Config = {
       serviceWorker: null,
       copy: [
         {
-          src: 'svg/',
+          src: 'svg',
           dest: './build/svg/'
         },
         {

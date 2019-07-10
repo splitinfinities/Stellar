@@ -8,8 +8,8 @@ import properties from 'css-custom-properties'
 export class Video {
   @Element() element: HTMLElement;
 
-  @Prop({mutable: true, reflectToAttr: true}) width: number;
-  @Prop({mutable: true, reflectToAttr: true}) height: number;
+  @Prop({mutable: true, reflect: true}) width: number;
+  @Prop({mutable: true, reflect: true}) height: number;
   @Prop() trackInView: boolean = true;
   @Prop() preload: string = "auto";
   @Prop() autoplay: boolean = false;

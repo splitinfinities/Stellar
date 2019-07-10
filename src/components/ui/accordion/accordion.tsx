@@ -9,8 +9,8 @@ import { blurringEase, properties } from '../../../utils';
 export class Accordion {
   @Element() element: HTMLElement;
 
-  @Prop({mutable: true, reflectToAttr: true}) open: boolean = false
-  @Prop({reflectToAttr: true}) tight: boolean = false
+  @Prop({mutable: true, reflect: true}) open: boolean = false
+  @Prop({reflect: true}) tight: boolean = false
 
   @Prop() name: string = "accordion"
   @Prop() label: string = "More Details"

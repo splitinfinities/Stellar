@@ -11,22 +11,22 @@ import { delay } from '../../../utils';
 export class Item {
   @Element() element: HTMLElement;
   @Prop({mutable: true}) size: string;
-  @Prop({reflectToAttr: true, mutable: true}) value: string;
-  @Prop({reflectToAttr: true, mutable: true}) valueLabel: string;
-  @Prop({reflectToAttr: true, mutable: true}) type: "a"|"button"|"stencil-route-link" = "button";
-  @Prop({reflectToAttr: true, mutable: true}) label: string;
-  @Prop({reflectToAttr: true, mutable: true}) href: string = "#";
+  @Prop({reflect: true, mutable: true}) value: string;
+  @Prop({reflect: true, mutable: true}) valueLabel: string;
+  @Prop({reflect: true, mutable: true}) type: "a"|"button"|"stencil-route-link" = "button";
+  @Prop({reflect: true, mutable: true}) label: string;
+  @Prop({reflect: true, mutable: true}) href: string = "#";
 
-  @Prop({reflectToAttr: true, mutable: true}) wrap: boolean = false;
-  @Prop({reflectToAttr: true, mutable: true}) fit: boolean = false;
-  @Prop({reflectToAttr: true, mutable: true}) simple: boolean = false;
-  @Prop({reflectToAttr: true, mutable: true}) danger: boolean = false;
+  @Prop({reflect: true, mutable: true}) wrap: boolean = false;
+  @Prop({reflect: true, mutable: true}) fit: boolean = false;
+  @Prop({reflect: true, mutable: true}) simple: boolean = false;
+  @Prop({reflect: true, mutable: true}) danger: boolean = false;
 
-  @Prop({reflectToAttr: true, mutable: true}) selected: boolean = false;
-  @Prop({reflectToAttr: true, mutable: true}) multiple: boolean = false;
-  @Prop({reflectToAttr: true, mutable: true}) selectable: boolean = false;
-  @Prop({reflectToAttr: true, mutable: true}) focused: boolean = false;
-  @Prop({reflectToAttr: true, mutable: true}) selectTitle: boolean = false;
+  @Prop({reflect: true, mutable: true}) selected: boolean = false;
+  @Prop({reflect: true, mutable: true}) multiple: boolean = false;
+  @Prop({reflect: true, mutable: true}) selectable: boolean = false;
+  @Prop({reflect: true, mutable: true}) focused: boolean = false;
+  @Prop({reflect: true, mutable: true}) selectTitle: boolean = false;
 
   @Prop() route: boolean = false;
   @Prop() history: RouterHistory;

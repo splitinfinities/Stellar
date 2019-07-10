@@ -9,11 +9,11 @@ import properties from 'css-custom-properties';
 export class LongShadow {
     @Element() element: HTMLElement
 
-    @Prop({ reflectToAttr: true }) direction: "top-left"|"top-right"|"bottom-left"|"bottom-right" = "top-left";
-    @Prop({ reflectToAttr: true }) length: number = 100;
-    @Prop({ reflectToAttr: true }) delay: number = 100;
-    @Prop({ reflectToAttr: true }) timing: number = 50;
-    @Prop({ reflectToAttr: true, mutable: true }) active: boolean = false;
+    @Prop({ reflect: true }) direction: "top-left"|"top-right"|"bottom-left"|"bottom-right" = "top-left";
+    @Prop({ reflect: true }) length: number = 100;
+    @Prop({ reflect: true }) delay: number = 100;
+    @Prop({ reflect: true }) timing: number = 50;
+    @Prop({ reflect: true, mutable: true }) active: boolean = false;
     @State() children;
 
     componentWillLoad() {

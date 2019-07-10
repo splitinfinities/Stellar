@@ -8,11 +8,11 @@ import properties from 'css-custom-properties'
 export class SkeletonImg {
 	@Element() element: HTMLElement;
 
-	@Prop({reflectToAttr: true}) width: number = 600;
-	@Prop({reflectToAttr: true}) height: number = 300;
-	@Prop({reflectToAttr: true}) block: boolean = false;
-	@Prop({reflectToAttr: true}) loading: boolean = false;
-	@Prop({reflectToAttr: true}) icon: boolean = false;
+	@Prop({reflect: true}) width: number = 600;
+	@Prop({reflect: true}) height: number = 300;
+	@Prop({reflect: true}) block: boolean = false;
+	@Prop({reflect: true}) loading: boolean = false;
+	@Prop({reflect: true}) icon: boolean = false;
 
 	componentWillLoad() {
 		if (this.block) {

@@ -11,13 +11,13 @@ export class Tabs {
   @Element() element: HTMLElement;
 
   @Prop() height: string;
-  @Prop({mutable: true, reflectToAttr: true}) name: string;
-  @Prop({mutable: true, reflectToAttr: true}) noanimation: boolean = false;
+  @Prop({mutable: true, reflect: true}) name: string;
+  @Prop({mutable: true, reflect: true}) noanimation: boolean = false;
 
-  @Prop({reflectToAttr: true}) size: "tiny"|"small"|"medium"|"large";
-  @Prop({reflectToAttr: true}) block: boolean = false;
-  @Prop({reflectToAttr: true}) vertical: boolean = false;
-  @Prop({reflectToAttr: true}) behavior: string;
+  @Prop({reflect: true}) size: "tiny"|"small"|"medium"|"large";
+  @Prop({reflect: true}) block: boolean = false;
+  @Prop({reflect: true}) vertical: boolean = false;
+  @Prop({reflect: true}) behavior: string;
 
   @State() tabsList: Array<HTMLStellarTabElement>;
   @State() contentsList: Array<HTMLStellarContentElement>;

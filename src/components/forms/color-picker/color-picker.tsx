@@ -9,7 +9,7 @@ import properties from 'css-custom-properties'
 })
 export class ColorPicker {
     @Element() element: HTMLElement;
-    @Prop({mutable: true, reflectToAttr: true}) val: string = "none";
+    @Prop({mutable: true, reflect: true}) val: string = "none";
     @Prop() notransparent: boolean = false;
     @State() options: Array<string>;
     @Event() update: EventEmitter;

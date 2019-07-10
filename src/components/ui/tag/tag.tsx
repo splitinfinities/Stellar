@@ -9,9 +9,9 @@ import properties from 'css-custom-properties';
 export class Tag {
   @Element() element: HTMLElement;
 
-  @Prop({reflectToAttr: true}) size: string;
-  @Prop({reflectToAttr: true}) pill: boolean = false;
-  @Prop({reflectToAttr: true}) outline: boolean = false;
+  @Prop({reflect: true}) size: string;
+  @Prop({reflect: true}) pill: boolean = false;
+  @Prop({reflect: true}) outline: boolean = false;
   @Prop() color: string = "cyan5";
   @Prop() textColor: string = "white";
 

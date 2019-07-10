@@ -8,10 +8,10 @@ import * as Kaleidoscope from "kaleidoscopejs";
 export class Video360 {
   @Element() element: HTMLElement;
 
-  @Prop({reflectToAttr: true}) src: string;
-  @Prop({reflectToAttr: true}) poster: string;
-  @Prop({reflectToAttr: true}) width: number = 1280;
-  @Prop({reflectToAttr: true}) height: number = 720;
+  @Prop({reflect: true}) src: string;
+  @Prop({reflect: true}) poster: string;
+  @Prop({reflect: true}) width: number = 1280;
+  @Prop({reflect: true}) height: number = 720;
   @State() viewer: any;
   @State() video: HTMLElement;
 

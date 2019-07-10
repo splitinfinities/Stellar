@@ -17,17 +17,17 @@ export class Card {
   /**
    * Let's a card be flippable
    */
-  @Prop({ reflectToAttr: true }) flippable: boolean = false;
+  @Prop({ reflect: true }) flippable: boolean = false;
 
   /**
    * Renders a flipped card
    */
-  @Prop({ mutable: true, reflectToAttr: true }) flipped: boolean = false;
+  @Prop({ mutable: true, reflect: true }) flipped: boolean = false;
 
   /**
    * Sets the padding inside of the button. Can be small, medium, or large.
    */
-  @Prop({ reflectToAttr: true }) padding: "none"|"tiny"|"small"|"medium"|"large" = "medium";
+  @Prop({ reflect: true }) padding: "none"|"tiny"|"small"|"medium"|"large" = "medium";
 
   /**
    * Sets the element to render the card as - an anchor tag, a button, or a div.

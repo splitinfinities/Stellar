@@ -15,7 +15,7 @@ export class Breadcrumbs {
   @Prop() home: string = "/";
   @Prop() label: string = "Home";
   @Prop() description: string = "An icon that shows the main page you're on";
-  @Prop({reflectToAttr: true}) size: "tiny"|"small"|"medium"|"large";
+  @Prop({reflect: true}) size: "tiny"|"small"|"medium"|"large";
 
   @Prop() color: string = "blue5";
 

@@ -8,8 +8,8 @@ import properties from 'css-custom-properties'
 export class Blur {
   @Element() element: HTMLElement;
 
-  @Prop({mutable: true, reflectToAttr: true}) vertical: number = 0;
-  @Prop({mutable: true, reflectToAttr: true}) horizontal: number = 0;
+  @Prop({mutable: true, reflect: true}) vertical: number = 0;
+  @Prop({mutable: true, reflect: true}) horizontal: number = 0;
 
   @State() generatedId: string;
 

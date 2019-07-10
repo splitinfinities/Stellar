@@ -11,11 +11,11 @@ import SwapAnimation from '@shopify/draggable/lib/plugins/swap-animation';
 export class Grid {
   @Element() element: HTMLElement;
 
-  @Prop({reflectToAttr: true}) cols: number|string = "auto";
-  @Prop({reflectToAttr: true}) compact: boolean = false;
-  @Prop({reflectToAttr: true}) padding: boolean = false;
-  @Prop({reflectToAttr: true}) align: string = "items-start";
-  @Prop({reflectToAttr: true}) noresponsive: boolean = false;
+  @Prop({reflect: true}) cols: number|string = "auto";
+  @Prop({reflect: true}) compact: boolean = false;
+  @Prop({reflect: true}) padding: boolean = false;
+  @Prop({reflect: true}) align: string = "items-start";
+  @Prop({reflect: true}) noresponsive: boolean = false;
 
   @Prop() swappable: boolean = false;
   @Prop() swappableSelector: string = "stellar-card";

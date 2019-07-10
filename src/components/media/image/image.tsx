@@ -13,10 +13,10 @@ export class Picture {
 
   @Prop({mutable: true}) poster: string;
   @Prop({mutable: true}) large: string;
-  @Prop({mutable: true, reflectToAttr: true }) type: "background"|"picture" = "picture";
+  @Prop({mutable: true, reflect: true }) type: "background"|"picture" = "picture";
   @Prop() width: number;
   @Prop() height: number;
-  @Prop({reflectToAttr: true}) nozoom: boolean = false;
+  @Prop({reflect: true}) nozoom: boolean = false;
   @Prop({mutable: true}) bg: string = "auto";
 
   @State() aspectRatio: number;

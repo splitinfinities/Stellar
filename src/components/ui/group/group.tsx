@@ -7,7 +7,7 @@ import { Component, Prop, State, Element, h } from '@stencil/core'
 })
 export class Group {
 	@Element() element: HTMLElement
-	@Prop({mutable: true, reflectToAttr: true}) size: string;
+	@Prop({mutable: true, reflect: true}) size: string;
 	@Prop() overflow: boolean = false
 	@Prop() count: number = 10
 	@State() extras: Array<Element> = []

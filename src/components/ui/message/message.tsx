@@ -8,12 +8,12 @@ import { Component, Prop, State, Element, h, Host } from '@stencil/core';
 export class Message {
   @Element() element: HTMLElement;
   @Prop() type: "alert"|"error"|"info"|"success";
-  @Prop({reflectToAttr: true}) size: "full"|"default";
+  @Prop({reflect: true}) size: "full"|"default";
   @Prop() closable: boolean = true;
   @Prop() remember: boolean = true;
-  @Prop({mutable: true, reflectToAttr: true}) name: string = "stellar";
-  @Prop({mutable: true, reflectToAttr: true}) shown: boolean = true;
-  @Prop({reflectToAttr: true}) striped: boolean = false;
+  @Prop({mutable: true, reflect: true}) name: string = "stellar";
+  @Prop({mutable: true, reflect: true}) shown: boolean = true;
+  @Prop({reflect: true}) striped: boolean = false;
   @State() theme: string = "gray";
 
   componentWillLoad () {

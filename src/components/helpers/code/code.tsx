@@ -12,7 +12,7 @@ import ezClipboard from 'ez-clipboard';
 })
 export class Code {
   @Element() element: HTMLElement;
-  @Prop({reflectToAttr: true, mutable: true}) language: string = "html";
+  @Prop({reflect: true, mutable: true}) language: string = "html";
   @Prop() simple: boolean = false;
   @Prop() codeString: string;
   @Prop() copy: boolean = true;

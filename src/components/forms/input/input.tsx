@@ -36,12 +36,12 @@ export class Input {
   /**
    * The kind of element that the Input should be rendered as
    */
-  @Prop({reflectToAttr: true}) type: string = "text";
+  @Prop({reflect: true}) type: string = "text";
 
   /**
    * The name of the input element
    */
-  @Prop({reflectToAttr: true}) name: string;
+  @Prop({reflect: true}) name: string;
 
   /**
    * The pre-set value to pass to the input element
@@ -51,12 +51,12 @@ export class Input {
   /**
    * The pre-set value to pass to the input element
    */
-  @Prop({mutable: true, reflectToAttr: true}) default: any;
+  @Prop({mutable: true, reflect: true}) default: any;
 
   /**
    * The pre-set value to pass to the input element
    */
-  @Prop({mutable: true, reflectToAttr: true}) requirements: boolean = false;
+  @Prop({mutable: true, reflect: true}) requirements: boolean = false;
 
   /**
    * The previous value so you can walk back in time
@@ -64,21 +64,21 @@ export class Input {
   @State() __previousValue: string;
 
   // Aesthetic things
-  @Prop({mutable: true, reflectToAttr: true}) size: string;
+  @Prop({mutable: true, reflect: true}) size: string;
   @Prop() color: string = "theme";
 
   // Accessibility
-  @Prop({ mutable: true, reflectToAttr: true }) label: string;
+  @Prop({ mutable: true, reflect: true }) label: string;
   @Prop() description: string;
   @Prop() tooltip: string;
-  @Prop({ mutable: true, reflectToAttr: true }) placeholder: string = "Enter a value";
+  @Prop({ mutable: true, reflect: true }) placeholder: string = "Enter a value";
   @Prop() autocomplete: string;
 
   // Usability things
   @Prop() disabled: boolean;
   @Prop() readonly: boolean = false;
   @Prop() autofocus: boolean = false;
-  @Prop({reflectToAttr: true, mutable: true}) focused: boolean = false;
+  @Prop({reflect: true, mutable: true}) focused: boolean = false;
   @Prop() spellcheck: boolean = true;
   @Prop() maxlength: number = 1000;
   @Prop() cols: number = 30;
@@ -120,7 +120,7 @@ export class Input {
 
   @State() generatedId: string;
 
-  @Prop({ mutable: true, reflectToAttr: true }) icon: boolean = false;
+  @Prop({ mutable: true, reflect: true }) icon: boolean = false;
 
   componentWillLoad () {
     if (this.default) {

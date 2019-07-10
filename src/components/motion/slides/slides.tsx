@@ -85,7 +85,7 @@ export class Slides {
    */
   @Prop() options: any // SwiperOptions  // TODO
 
-  @Prop({reflectToAttr: true}) effect: "slide"|"fade"|"cube"|"coverflow"|"flip" = "slide"
+  @Prop({reflect: true}) effect: "slide"|"fade"|"cube"|"coverflow"|"flip" = "slide"
   @Prop() speed: number = 300
   @Prop() direction: "horizontal"|"vertical" = "horizontal"
   @Prop() autoHeight: boolean = false

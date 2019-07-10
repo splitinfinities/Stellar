@@ -7,8 +7,8 @@ import { Component, Prop, h } from '@stencil/core';
 })
 export class Label {
   @Prop() for: string;
-  @Prop({reflectToAttr: true}) underneath: boolean;
-  @Prop({reflectToAttr: true}) size: string;
+  @Prop({reflect: true}) underneath: boolean;
+  @Prop({reflect: true}) size: string;
 
   render() {
     // @ts-ignore

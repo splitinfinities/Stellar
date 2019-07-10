@@ -12,10 +12,10 @@ export class Pagination {
   /**
    * Public: Sets the max cap of pages you can skip through
    */
-  @Prop({reflectToAttr: true, mutable: true}) pages: number = 1;
-  @Prop({reflectToAttr: true, mutable: true}) type: "full"|"compact" = "full";
-  @Prop({reflectToAttr: true, mutable: true}) current: number = 1;
-  @Prop({reflectToAttr: true, mutable: true}) padding: number = 2;
+  @Prop({reflect: true, mutable: true}) pages: number = 1;
+  @Prop({reflect: true, mutable: true}) type: "full"|"compact" = "full";
+  @Prop({reflect: true, mutable: true}) current: number = 1;
+  @Prop({reflect: true, mutable: true}) padding: number = 2;
   @Prop() color: string = "gray";
 
   @Prop() url: any = "#page-{0}";

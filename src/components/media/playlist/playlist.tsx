@@ -9,17 +9,17 @@ import { asTime } from '../../../utils'
 export class Playlist {
   @Element() element: HTMLElement;
 
-  @Prop({mutable: true, reflectToAttr: true}) visualizationColor: string = "gray";
-  @Prop({mutable: true, reflectToAttr: true}) visualizationType: "bars"|"bars2"|"wave"|"circle" = "bars";
+  @Prop({mutable: true, reflect: true}) visualizationColor: string = "gray";
+  @Prop({mutable: true, reflect: true}) visualizationType: "bars"|"bars2"|"wave"|"circle" = "bars";
   @Prop() autoplay: boolean = false;
-  @Prop({mutable: true, reflectToAttr: true}) playlist: "show"|"hide" = "show";
+  @Prop({mutable: true, reflect: true}) playlist: "show"|"hide" = "show";
   @Prop() name: string = "Playlist";
   @Prop() remember: boolean = true;
-  @Prop({mutable: true, reflectToAttr: true}) artwork: boolean = false;
-  @Prop({mutable: true, reflectToAttr: true}) view: "playlist"|"art" = "playlist";
-  @Prop({mutable: true, reflectToAttr: true}) playing: boolean = false;
-  @Prop({mutable: true, reflectToAttr: true}) load: boolean = false;
-  @Prop({mutable: true, reflectToAttr: true}) loading: boolean = false;
+  @Prop({mutable: true, reflect: true}) artwork: boolean = false;
+  @Prop({mutable: true, reflect: true}) view: "playlist"|"art" = "playlist";
+  @Prop({mutable: true, reflect: true}) playing: boolean = false;
+  @Prop({mutable: true, reflect: true}) load: boolean = false;
+  @Prop({mutable: true, reflect: true}) loading: boolean = false;
 
   @State() current: number = 0;
   @State() currentTrack: CurrentSongInterface = {

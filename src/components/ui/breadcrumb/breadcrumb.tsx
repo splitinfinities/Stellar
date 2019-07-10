@@ -16,8 +16,8 @@ export class Breadcrumb {
   @Prop({mutable: true}) label: string = "Breadcrumb link";
   @Prop() disabled: boolean = false;
 
-  @Prop({reflectToAttr: true}) first: boolean;
-  @Prop({reflectToAttr: true}) last: boolean;
+  @Prop({reflect: true}) first: boolean;
+  @Prop({reflect: true}) last: boolean;
 
   componentDidLoad() {
     this.label += ` for ${this.element.textContent}`

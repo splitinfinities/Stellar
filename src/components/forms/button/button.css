@@ -183,7 +183,16 @@
 }
 
 :host ::slotted(*) {
+    line-height: 1 !important;
     font-family: inherit;
+}
+
+:host([icon]) .button .content {
+    display: inline-grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    grid-gap: 0.1em;
 }
 
 :host ::slotted(img),
@@ -192,11 +201,8 @@
     float: none;
     width: 1em;
     height: 1em;
-    margin-left: -0.25em;
-    font-size: 2em;
-    margin-right: var(--ms-7);
-    position: relative;
-    top: 0.025rem;
+    font-size: 1.75em;
+    margin: calc(var(--padding-vertical) * -0.5) 0 calc(var(--padding-vertical) * -0.5) calc(var(--padding-vertical) * -0.5);
 }
 
 :host([ghost]) ::slotted(img),

@@ -8,7 +8,7 @@ import { Component, Element, Prop, h } from '@stencil/core'
 export class Scatter {
   @Element() element: HTMLElement
 
-  @Prop({reflectToAttr: true}) float: boolean = false;
+  @Prop({reflect: true}) float: boolean = false;
   @Prop() min: number = 0
   @Prop() max: number = 100
 

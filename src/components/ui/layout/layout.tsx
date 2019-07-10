@@ -9,14 +9,14 @@ import { default as eqjs } from 'eq.js';
 export class Layout {
 	@Element() element: HTMLElement;
 
-	@Prop({reflectToAttr: true}) type: string;
-	@Prop({reflectToAttr: true}) size: "tiny"|"small"|"medium"|"large"|"xlarge"|"full"|"flush" = "medium";
-	@Prop({reflectToAttr: true}) padding: "none"|"tiny"|"small"|"medium"|"large" = "medium";
-	@Prop({reflectToAttr: true}) align: "baseline"|"center"|"top"|"bottom" = "baseline";
-	@Prop({reflectToAttr: true}) content: "baseline"|"center"|"top"|"bottom" = "baseline";
-	@Prop({reflectToAttr: true}) height: "fill";
+	@Prop({reflect: true}) type: string;
+	@Prop({reflect: true}) size: "tiny"|"small"|"medium"|"large"|"xlarge"|"full"|"flush" = "medium";
+	@Prop({reflect: true}) padding: "none"|"tiny"|"small"|"medium"|"large" = "medium";
+	@Prop({reflect: true}) align: "baseline"|"center"|"top"|"bottom" = "baseline";
+	@Prop({reflect: true}) content: "baseline"|"center"|"top"|"bottom" = "baseline";
+	@Prop({reflect: true}) height: "fill";
 
-	@Prop({reflectToAttr: true}) hasNav: boolean;
+	@Prop({reflect: true}) hasNav: boolean;
 
 	componentWillLoad() {
 		const navs = Array.from(this.element.querySelectorAll('*[slot="nav"]'));

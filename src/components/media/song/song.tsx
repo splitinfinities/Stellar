@@ -13,7 +13,7 @@ export class Song {
 	@Element() element: HTMLElement;
 
 	@Prop() src: string;
-	@Prop({reflectToAttr: true, mutable: true}) playing: boolean;
+	@Prop({reflect: true, mutable: true}) playing: boolean;
 	@Prop() artwork: boolean;
 
 	@State() _index: number = 0;

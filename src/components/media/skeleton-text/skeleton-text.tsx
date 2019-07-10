@@ -8,9 +8,9 @@ import properties from 'css-custom-properties'
 export class SkeletonText {
 	@Element() element: HTMLElement;
 
-	@Prop({reflectToAttr: true}) as: string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p' = 'p';
-	@Prop({reflectToAttr: true}) width: number = 100;
-	@Prop({reflectToAttr: true}) loading: boolean = false;
+	@Prop({reflect: true}) as: string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p' = 'p';
+	@Prop({reflect: true}) width: number = 100;
+	@Prop({reflect: true}) loading: boolean = false;
 
 	componentWillLoad() {
 		properties.set({

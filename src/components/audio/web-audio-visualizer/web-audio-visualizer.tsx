@@ -15,17 +15,17 @@ export class WebAudioVisualizer {
   @State() canvas: HTMLCanvasElement;
   @State() canvasCTX: any|WebGLRenderingContext|CanvasRenderingContext2D;
 
-  @Prop({ mutable: true, reflectToAttr: true }) for: string = "web_audio";
+  @Prop({ mutable: true, reflect: true }) for: string = "web_audio";
 
-  @Prop({ mutable: true, reflectToAttr: true }) type: string|"wave"|"bars"|"circle"|"bars2" = "wave";
+  @Prop({ mutable: true, reflect: true }) type: string|"wave"|"bars"|"circle"|"bars2" = "wave";
   @Prop() smoothing: number = 0.7;
   @Prop() size: number = 1024;
   @Prop() color: string = "white";
   @State() freqs: Uint8Array;
   @State() times: Uint8Array;
 
-  @Prop({ mutable: true, reflectToAttr: true }) width: number = 1024;
-  @Prop({ mutable: true, reflectToAttr: true }) height: number = 1024;
+  @Prop({ mutable: true, reflect: true }) width: number = 1024;
+  @Prop({ mutable: true, reflect: true }) height: number = 1024;
 
   @State() context: AudioContext;
   @Prop({mutable: true}) analyser: AnalyserNode;

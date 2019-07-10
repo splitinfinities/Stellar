@@ -9,12 +9,12 @@ import {parentNodeSelector} from '../../../utils'
 export class Step {
   @Element() element: HTMLElement
 
-  @Prop({mutable: true, reflectToAttr: true}) href: string = "#"
+  @Prop({mutable: true, reflect: true}) href: string = "#"
   @Prop() disabled: boolean = false
-  @Prop({mutable: true, reflectToAttr: true}) open: boolean = false
+  @Prop({mutable: true, reflect: true}) open: boolean = false
 
-  @Prop({reflectToAttr: true}) order: number
-  @Prop({reflectToAttr: true}) tabCount: number
+  @Prop({reflect: true}) order: number
+  @Prop({reflect: true}) tabCount: number
 
   @State() parent: any
 

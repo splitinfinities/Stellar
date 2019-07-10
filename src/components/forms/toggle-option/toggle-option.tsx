@@ -9,16 +9,16 @@ export class ToggleOption {
   @Element() element: HTMLElement;
   @State() input: HTMLInputElement;
 
-  @Prop({reflectToAttr: true}) type: string = "checkbox";
-  @Prop({mutable: true, reflectToAttr: true}) checked: boolean = false;
+  @Prop({reflect: true}) type: string = "checkbox";
+  @Prop({mutable: true, reflect: true}) checked: boolean = false;
   @Prop() checkedDefault: boolean = false;
-  @Prop({reflectToAttr: true}) single: boolean;
-  @Prop({reflectToAttr: true}) icon: boolean;
+  @Prop({reflect: true}) single: boolean;
+  @Prop({reflect: true}) icon: boolean;
   @Prop({mutable: true}) tooltip: string;
-  @Prop({mutable: true, reflectToAttr: true}) disabled: boolean;
+  @Prop({mutable: true, reflect: true}) disabled: boolean;
 
   @Prop() for: string = "";
-  @Prop({mutable: true, reflectToAttr: true}) name: string;
+  @Prop({mutable: true, reflect: true}) name: string;
   @Prop() default: string = "";
   @Prop() value: string;
   @Prop() required: boolean;

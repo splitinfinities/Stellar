@@ -12,44 +12,44 @@ export class Progress {
   /**
    * Renders if this element is slender or not
    */
-  @Prop({reflectToAttr: true}) slender: boolean = false;
+  @Prop({reflect: true}) slender: boolean = false;
 
   /**
    * Sets the maximum cap for steps in the progress bar
    */
-  @Prop({reflectToAttr: true}) max: number = 100;
+  @Prop({reflect: true}) max: number = 100;
 
 
   /**
    * Sets the maximum cap for steps in the progress bar
    */
-  @Prop({reflectToAttr: true}) indeterminate: boolean = false;
+  @Prop({reflect: true}) indeterminate: boolean = false;
 
 
   /**
    * Allows the progress bar to be clicked on, to help the user to navigate through the progressing content.
    */
-  @Prop({reflectToAttr: true}) editable: boolean = false;
+  @Prop({reflect: true}) editable: boolean = false;
 
   /**
    * eliminates the easing in the css so you can apply value updates without jitter.
    */
-  @Prop({reflectToAttr: true}) noease: boolean = false;
+  @Prop({reflect: true}) noease: boolean = false;
 
   /**
    * eliminates the easing in the css so you can apply value updates without jitter.
    */
-  @Prop({reflectToAttr: true}) rounded: boolean = false;
+  @Prop({reflect: true}) rounded: boolean = false;
 
   /**
    * Sets the value of the progress bar
    */
-  @Prop({reflectToAttr: true, mutable: true}) value: number = 0;
+  @Prop({reflect: true, mutable: true}) value: number = 0;
 
   /**
    * Sets the value of the progress bar
    */
-  @Prop({reflectToAttr: true, mutable: true}) secondary: number = 0;
+  @Prop({reflect: true, mutable: true}) secondary: number = 0;
 
   @Prop() blurable: boolean = true;
   @State() wrapper: "stellar-blur"|"div" = "stellar-blur";

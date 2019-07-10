@@ -11,16 +11,16 @@ export class WebAudioSource {
   @Element() element: HTMLElement;
   @State() webAudioWrapper: HTMLElement;
 
-  @Prop({ mutable: true, reflectToAttr: true }) src: string;
-  @Prop({ mutable: true, reflectToAttr: true }) name: string;
+  @Prop({ mutable: true, reflect: true }) src: string;
+  @Prop({ mutable: true, reflect: true }) name: string;
 
   @Prop() inert: boolean = false;
 
-  @Prop({ mutable: true, reflectToAttr: true }) midikey: number = 0;
-  @Prop({ mutable: true, reflectToAttr: true }) midichannel: number = 1;
+  @Prop({ mutable: true, reflect: true }) midikey: number = 0;
+  @Prop({ mutable: true, reflect: true }) midichannel: number = 1;
 
   @State() status: string = "paused";
-  @Prop({ mutable: true, reflectToAttr: true }) effectsvolume: number = 100;
+  @Prop({ mutable: true, reflect: true }) effectsvolume: number = 100;
 
   @State() context: AudioContext;
   @State() masterGain: GainNode;

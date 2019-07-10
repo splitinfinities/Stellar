@@ -9,14 +9,14 @@ export class Toggle {
   @State() form: HTMLElement;
 
   @Prop({mutable: true}) type: string|"checkbox"|"radio"|"radio-block"|"checkbox-block" = "checkbox";
-  @Prop({mutable: true, reflectToAttr: true}) name: string = "";
+  @Prop({mutable: true, reflect: true}) name: string = "";
   @Prop({mutable: true}) description: string;
-  @Prop({reflectToAttr: true}) stacked: boolean = false;
+  @Prop({reflect: true}) stacked: boolean = false;
   @Prop() flip: boolean = false;
   @Prop() required: boolean;
   @Prop() single: boolean;
   @Prop() size: string;
-  @Prop({reflectToAttr: true}) novalidate: boolean;
+  @Prop({reflect: true}) novalidate: boolean;
 
   @Prop() card: any = "div";
 

@@ -51,13 +51,13 @@ Type: `Promise<void>`
 
 
 
-### `data() => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>`
+### `data() => Promise<{ size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>`
 
 
 
 #### Returns
 
-Type: `Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>`
+Type: `Promise<{ size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>`
 
 
 
