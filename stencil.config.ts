@@ -47,7 +47,7 @@ export const config: Config = {
         },
         {
           src: '../package.json',
-          dest: '../../data/package.json'
+          dest: '../../data/version.json'
         },
         {
           src: '../data',
@@ -74,7 +74,7 @@ export const config: Config = {
         },
         {
           src: '../package.json',
-          dest: '../../data/package.json',
+          dest: '../../data/version.json',
           warn: true
         },
         {
