@@ -38,8 +38,25 @@ export const config: Config = {
     ]
   },
   outputTargets: [
-    { type: 'dist' },
+    {
+      type: 'dist',
+      copy: [
+        {
+          src: '../dist/collection/collection-manifest.json',
+          dest: '../../data/collection.json'
+        },
+        {
+          src: '../package.json',
+          dest: '../../data/package.json'
+        },
+        {
+          src: '../data',
+          dest: '../data'
+        },
+      ],
+    },
     { type: "stats", file: "./data/stats.json" },
+    { type: "docs-json", file: "./data/documentation.json" },
     { type: "docs-readme" },
     {
       type: 'www',
@@ -47,14 +64,32 @@ export const config: Config = {
       copy: [
         {
           src: 'svg',
-          dest: './build/svg/'
+          dest: './build/svg/',
+          warn: true
         },
         {
-          src: './test/*.svg',
-          dest: './assets/'
+          src: '../dist/collection/collection-manifest.json',
+          dest: '../../data/collection.json',
+          warn: true
         },
-        { src: "global/vector" },
-        { src: "*.html" },
+        {
+          src: '../package.json',
+          dest: '../../data/package.json',
+          warn: true
+        },
+        {
+          src: '../data',
+          dest: './build/data',
+          warn: true
+        },
+        {
+          src: "global/vector",
+          warn: true
+        },
+        {
+          src: "*.html",
+          warn: true
+        },
       ],
     }
   ],

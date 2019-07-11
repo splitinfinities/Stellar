@@ -65,6 +65,7 @@
 
  - [stellar-accordion](../../ui/accordion)
  - [stellar-card](../../ui/card)
+ - [stellar-docs-header](../../docs/header)
  - [stellar-playlist](../../media/playlist)
  - [stellar-select](../select)
 
@@ -81,6 +82,7 @@ graph TD;
   stellar-asset --> stellar-icon
   stellar-accordion --> stellar-button
   stellar-card --> stellar-button
+  stellar-docs-header --> stellar-button
   stellar-playlist --> stellar-button
   stellar-select --> stellar-button
   style stellar-button fill:#f9f,stroke:#333,stroke-width:4px

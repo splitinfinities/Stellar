@@ -101,6 +101,9 @@ Type: `Promise<void>`
 
  - [stellar-code](../../helpers/code)
  - [stellar-color-library](../../helpers/color-library)
+ - [stellar-docs-component](../../docs/component)
+ - [stellar-docs-header](../../docs/header)
+ - [stellar-docs-navigation](../../docs/navigation)
  - [stellar-markdown](../../helpers/markdown)
 
 ### Depends on
@@ -118,6 +121,9 @@ graph TD;
   stellar-asset --> stellar-icon
   stellar-code --> stellar-card
   stellar-color-library --> stellar-card
+  stellar-docs-component --> stellar-card
+  stellar-docs-header --> stellar-card
+  stellar-docs-navigation --> stellar-card
   stellar-markdown --> stellar-card
   style stellar-card fill:#f9f,stroke:#333,stroke-width:4px
 ```

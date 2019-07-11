@@ -42,6 +42,25 @@ Type: `Promise<void>`
 
 
 
+## Dependencies
+
+### Used by
+
+ - [stellar-docs-component](../../docs/component)
+ - [stellar-docs-header](../../docs/header)
+ - [stellar-docs-home](../../docs/home)
+ - [stellar-docs-page](../../docs/page)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-docs-component --> stellar-layout
+  stellar-docs-header --> stellar-layout
+  stellar-docs-home --> stellar-layout
+  stellar-docs-page --> stellar-layout
+  style stellar-layout fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

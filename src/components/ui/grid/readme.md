@@ -60,6 +60,7 @@ Type: `Promise<void>`
 
  - [stellar-asset-library](../../helpers/asset-library)
  - [stellar-color-library](../../helpers/color-library)
+ - [stellar-docs-header](../../docs/header)
  - [stellar-stripe](../../helpers/stripe)
  - [stellar-toggle](../../forms/toggle)
 
@@ -68,6 +69,7 @@ Type: `Promise<void>`
 graph TD;
   stellar-asset-library --> stellar-grid
   stellar-color-library --> stellar-grid
+  stellar-docs-header --> stellar-grid
   stellar-stripe --> stellar-grid
   stellar-toggle --> stellar-grid
   style stellar-grid fill:#f9f,stroke:#333,stroke-width:4px

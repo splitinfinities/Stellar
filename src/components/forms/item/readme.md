@@ -51,13 +51,13 @@ Type: `Promise<void>`
 
 
 
-### `data() => Promise<{ size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>`
+### `data() => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>`
 
 
 
 #### Returns
 
-Type: `Promise<{ size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>`
+Type: `Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>`
 
 
 
@@ -86,6 +86,9 @@ Type: `Promise<void>`
 
 ### Used by
 
+ - [stellar-docs-component](../../docs/component)
+ - [stellar-docs-header](../../docs/header)
+ - [stellar-docs-navigation](../../docs/navigation)
  - [stellar-select](../select)
  - [stellar-tester](../../tester)
 
@@ -98,6 +101,9 @@ Type: `Promise<void>`
 graph TD;
   stellar-item --> stellar-asset
   stellar-asset --> stellar-icon
+  stellar-docs-component --> stellar-item
+  stellar-docs-header --> stellar-item
+  stellar-docs-navigation --> stellar-item
   stellar-select --> stellar-item
   stellar-tester --> stellar-item
   style stellar-item fill:#f9f,stroke:#333,stroke-width:4px

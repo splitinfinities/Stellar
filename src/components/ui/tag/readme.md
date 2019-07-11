@@ -65,6 +65,8 @@
 
 ### Used by
 
+ - [stellar-docs-header](../../docs/header)
+ - [stellar-docs-navigation](../../docs/navigation)
  - [stellar-tab](../tab)
  - [stellar-toggle-option](../../forms/toggle-option)
 
@@ -76,6 +78,8 @@
 ```mermaid
 graph TD;
   stellar-tag --> stellar-label
+  stellar-docs-header --> stellar-tag
+  stellar-docs-navigation --> stellar-tag
   stellar-tab --> stellar-tag
   stellar-toggle-option --> stellar-tag
   style stellar-tag fill:#f9f,stroke:#333,stroke-width:4px

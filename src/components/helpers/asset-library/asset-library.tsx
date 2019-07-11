@@ -23,15 +23,13 @@ export class AssetLibrary {
 
   render () {
     return (
-      <div>
-        <stellar-grid>
+      <stellar-grid>
         {this.icons.map((icon) => {
           return (
-            <stellar-documentation codeString={`<stellar-asset name="${icon.icons[this.kind]}" block></stellar-asset>`} />
+            <stellar-code codeString={`<stellar-asset name="${icon.icons[this.kind]}" block></stellar-asset>`} />
           )
         })}
-        </stellar-grid>
-      </div>
+      </stellar-grid>
     )
   }
 }

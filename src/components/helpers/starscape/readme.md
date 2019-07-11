@@ -7,6 +7,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [stellar-docs-header](../../docs/header)
+
 ### Depends on
 
 - [stellar-parallax](../../motion/parallax)
@@ -17,6 +21,7 @@
 graph TD;
   stellar-starscape --> stellar-parallax
   stellar-starscape --> stellar-parallax-section
+  stellar-docs-header --> stellar-starscape
   style stellar-starscape fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

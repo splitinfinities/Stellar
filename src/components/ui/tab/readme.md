@@ -26,6 +26,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [stellar-docs-component](../../docs/component)
+
 ### Depends on
 
 - [stellar-tag](../tag)
@@ -35,6 +39,7 @@
 graph TD;
   stellar-tab --> stellar-tag
   stellar-tag --> stellar-label
+  stellar-docs-component --> stellar-tab
   style stellar-tab fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

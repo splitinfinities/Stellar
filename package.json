@@ -29,6 +29,7 @@
     "convert-units": "^2.3.4",
     "css-custom-properties": "^0.1.0",
     "deepmerge": "^3.2.0",
+    "dexie": "^2.0.4",
     "eq.js": "^1.9.0",
     "ez-clipboard": "^1.0.0",
     "focus-within": "^3.0.2",

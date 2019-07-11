@@ -33,12 +33,16 @@
 
 ### Used by
 
+ - [stellar-docs-header](../../docs/header)
+ - [stellar-docs-navigation](../../docs/navigation)
  - [stellar-input](../../forms/input)
  - [stellar-markdown](../../helpers/markdown)
 
 ### Graph
 ```mermaid
 graph TD;
+  stellar-docs-header --> copy-wrap
+  stellar-docs-navigation --> copy-wrap
   stellar-input --> copy-wrap
   stellar-markdown --> copy-wrap
   style copy-wrap fill:#f9f,stroke:#333,stroke-width:4px

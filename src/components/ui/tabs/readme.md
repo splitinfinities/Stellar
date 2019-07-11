@@ -224,6 +224,10 @@ Type: `Promise<any[]>`
 
 ## Dependencies
 
+### Used by
+
+ - [stellar-docs-component](../../docs/component)
+
 ### Depends on
 
 - [stellar-blur](../../motion/blur)
@@ -232,6 +236,7 @@ Type: `Promise<any[]>`
 ```mermaid
 graph TD;
   stellar-tabs --> stellar-blur
+  stellar-docs-component --> stellar-tabs
   style stellar-tabs fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

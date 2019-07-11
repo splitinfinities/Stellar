@@ -34,6 +34,7 @@
  - [stellar-breadcrumbs](../breadcrumbs)
  - [stellar-button](../../forms/button)
  - [stellar-card](../card)
+ - [stellar-docs-header](../../docs/header)
  - [stellar-dropdown](../dropdown)
  - [stellar-input](../../forms/input)
  - [stellar-interview](../../media/interview)
@@ -61,6 +62,7 @@ graph TD;
   stellar-breadcrumbs --> stellar-asset
   stellar-button --> stellar-asset
   stellar-card --> stellar-asset
+  stellar-docs-header --> stellar-asset
   stellar-dropdown --> stellar-asset
   stellar-input --> stellar-asset
   stellar-interview --> stellar-asset

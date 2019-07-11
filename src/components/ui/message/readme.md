@@ -86,6 +86,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [stellar-docs-header](../../docs/header)
+
 ### Depends on
 
 - [stellar-asset](../asset)
@@ -95,6 +99,7 @@
 graph TD;
   stellar-message --> stellar-asset
   stellar-asset --> stellar-icon
+  stellar-docs-header --> stellar-message
   style stellar-message fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

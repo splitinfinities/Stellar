@@ -11,6 +11,7 @@ import {
 } from './components/helpers/chart/options';
 import {
   LocationSegments,
+  MatchResults,
   RouterHistory,
 } from '@stencil/router';
 
@@ -266,6 +267,25 @@ export namespace Components {
     'for': string;
     'open': boolean;
   }
+  interface StellarDocsComponent {
+    'match': MatchResults;
+    'pull_data': () => Promise<void>;
+  }
+  interface StellarDocsHeader {
+    'complement': string;
+    'invert': boolean;
+    'mark': string;
+    'max': number;
+    'theme': string;
+    'value': number;
+  }
+  interface StellarDocsHome {}
+  interface StellarDocsNavigation {}
+  interface StellarDocsNotFound {}
+  interface StellarDocsPage {
+    'match': MatchResults;
+  }
+  interface StellarDocumentation {}
   interface StellarDropdown {
     'icon': boolean;
     'label': string;
@@ -452,7 +472,7 @@ export namespace Components {
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>;
+    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -1133,6 +1153,48 @@ declare global {
     new (): HTMLStellarContentElement;
   };
 
+  interface HTMLStellarDocsComponentElement extends Components.StellarDocsComponent, HTMLStencilElement {}
+  var HTMLStellarDocsComponentElement: {
+    prototype: HTMLStellarDocsComponentElement;
+    new (): HTMLStellarDocsComponentElement;
+  };
+
+  interface HTMLStellarDocsHeaderElement extends Components.StellarDocsHeader, HTMLStencilElement {}
+  var HTMLStellarDocsHeaderElement: {
+    prototype: HTMLStellarDocsHeaderElement;
+    new (): HTMLStellarDocsHeaderElement;
+  };
+
+  interface HTMLStellarDocsHomeElement extends Components.StellarDocsHome, HTMLStencilElement {}
+  var HTMLStellarDocsHomeElement: {
+    prototype: HTMLStellarDocsHomeElement;
+    new (): HTMLStellarDocsHomeElement;
+  };
+
+  interface HTMLStellarDocsNavigationElement extends Components.StellarDocsNavigation, HTMLStencilElement {}
+  var HTMLStellarDocsNavigationElement: {
+    prototype: HTMLStellarDocsNavigationElement;
+    new (): HTMLStellarDocsNavigationElement;
+  };
+
+  interface HTMLStellarDocsNotFoundElement extends Components.StellarDocsNotFound, HTMLStencilElement {}
+  var HTMLStellarDocsNotFoundElement: {
+    prototype: HTMLStellarDocsNotFoundElement;
+    new (): HTMLStellarDocsNotFoundElement;
+  };
+
+  interface HTMLStellarDocsPageElement extends Components.StellarDocsPage, HTMLStencilElement {}
+  var HTMLStellarDocsPageElement: {
+    prototype: HTMLStellarDocsPageElement;
+    new (): HTMLStellarDocsPageElement;
+  };
+
+  interface HTMLStellarDocumentationElement extends Components.StellarDocumentation, HTMLStencilElement {}
+  var HTMLStellarDocumentationElement: {
+    prototype: HTMLStellarDocumentationElement;
+    new (): HTMLStellarDocumentationElement;
+  };
+
   interface HTMLStellarDropdownElement extends Components.StellarDropdown, HTMLStencilElement {}
   var HTMLStellarDropdownElement: {
     prototype: HTMLStellarDropdownElement;
@@ -1510,6 +1572,13 @@ declare global {
     'stellar-comment': HTMLStellarCommentElement;
     'stellar-comments': HTMLStellarCommentsElement;
     'stellar-content': HTMLStellarContentElement;
+    'stellar-docs-component': HTMLStellarDocsComponentElement;
+    'stellar-docs-header': HTMLStellarDocsHeaderElement;
+    'stellar-docs-home': HTMLStellarDocsHomeElement;
+    'stellar-docs-navigation': HTMLStellarDocsNavigationElement;
+    'stellar-docs-not-found': HTMLStellarDocsNotFoundElement;
+    'stellar-docs-page': HTMLStellarDocsPageElement;
+    'stellar-documentation': HTMLStellarDocumentationElement;
     'stellar-dropdown': HTMLStellarDropdownElement;
     'stellar-follow': HTMLStellarFollowElement;
     'stellar-form': HTMLStellarFormElement;
@@ -1816,6 +1885,24 @@ declare namespace LocalJSX {
     'for'?: string;
     'open'?: boolean;
   }
+  interface StellarDocsComponent extends JSXBase.HTMLAttributes<HTMLStellarDocsComponentElement> {
+    'match'?: MatchResults;
+  }
+  interface StellarDocsHeader extends JSXBase.HTMLAttributes<HTMLStellarDocsHeaderElement> {
+    'complement'?: string;
+    'invert'?: boolean;
+    'mark'?: string;
+    'max'?: number;
+    'theme'?: string;
+    'value'?: number;
+  }
+  interface StellarDocsHome extends JSXBase.HTMLAttributes<HTMLStellarDocsHomeElement> {}
+  interface StellarDocsNavigation extends JSXBase.HTMLAttributes<HTMLStellarDocsNavigationElement> {}
+  interface StellarDocsNotFound extends JSXBase.HTMLAttributes<HTMLStellarDocsNotFoundElement> {}
+  interface StellarDocsPage extends JSXBase.HTMLAttributes<HTMLStellarDocsPageElement> {
+    'match'?: MatchResults;
+  }
+  interface StellarDocumentation extends JSXBase.HTMLAttributes<HTMLStellarDocumentationElement> {}
   interface StellarDropdown extends JSXBase.HTMLAttributes<HTMLStellarDropdownElement> {
     'icon'?: boolean;
     'label'?: string;
@@ -2502,6 +2589,13 @@ declare namespace LocalJSX {
     'stellar-comment': StellarComment;
     'stellar-comments': StellarComments;
     'stellar-content': StellarContent;
+    'stellar-docs-component': StellarDocsComponent;
+    'stellar-docs-header': StellarDocsHeader;
+    'stellar-docs-home': StellarDocsHome;
+    'stellar-docs-navigation': StellarDocsNavigation;
+    'stellar-docs-not-found': StellarDocsNotFound;
+    'stellar-docs-page': StellarDocsPage;
+    'stellar-documentation': StellarDocumentation;
     'stellar-dropdown': StellarDropdown;
     'stellar-follow': StellarFollow;
     'stellar-form': StellarForm;

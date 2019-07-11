@@ -263,6 +263,7 @@ Type: `Promise<FormResult>`
 
 ### Used by
 
+ - [stellar-docs-header](../../docs/header)
  - [stellar-tester](../../tester)
 
 ### Depends on
@@ -287,6 +288,7 @@ graph TD;
   stellar-button --> stencil-route-link
   stellar-asset --> stellar-icon
   stellar-item --> stellar-asset
+  stellar-docs-header --> stellar-select
   stellar-tester --> stellar-select
   style stellar-select fill:#f9f,stroke:#333,stroke-width:4px
 ```
