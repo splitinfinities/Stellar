@@ -66,16 +66,18 @@
 	margin-top: 1rem;
 }
 
-:host-context(.dark-mode):host .comment > .content {
-	background: var(--gray9);
-	border: 1px solid var(--gray8);
-}
+@media (prefers-color-scheme: dark) {
+	:host .comment > .content {
+		background: var(--gray9);
+		border: 1px solid var(--gray8);
+	}
 
-:host-context(.dark-mode):host .comment > .thread::after {
-	background: var(--theme-complement9);
-	background: linear-gradient(135deg, var(--theme-complement9) 0%, var(--theme-base9) calc(100% - 2rem), var(--theme-base9) 100%);
-}
+	:host .comment > .thread::after {
+		background: var(--theme-complement9);
+		background: linear-gradient(135deg, var(--theme-complement9) 0%, var(--theme-base9) calc(100% - 2rem), var(--theme-base9) 100%);
+	}
 
-:host-context(.dark-mode):host .comment > .thread::before {
-	background: var(--theme-base9);
+	:host .comment > .thread::before {
+		background: var(--theme-base9);
+	}
 }

@@ -34,14 +34,16 @@
     cursor: pointer;
 }
 
-.dark-mode .dp {
-    --background: var(--black-alt);
-    --background-alt: var(--black);
-    --hover-background: var(--theme-base9);
-    --border-color: var(--gray9);
-    --color: var(--white);
-    --inactive-color: var(--gray9);
-    --header-color: var(--theme-base5);
+@media (prefers-color-scheme: dark) {
+    .dp {
+        --background: var(--black-alt);
+        --background-alt: var(--black);
+        --hover-background: var(--theme-base9);
+        --border-color: var(--gray9);
+        --color: var(--white);
+        --inactive-color: var(--gray9);
+        --header-color: var(--theme-base5);
+    }
 }
 
 .dp:before {

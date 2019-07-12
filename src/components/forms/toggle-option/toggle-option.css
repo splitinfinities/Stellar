@@ -321,21 +321,23 @@ stellar-toggle-option copy-wrap * {
   color: var(--black);
 }
 
-.dark-mode stellar-toggle-option {
-  --background: var(--black-alt);
-  --hover-background: var(--black-alt);
-  --border: var(--gray9)
-}
+@media (prefers-color-scheme: dark) {
+  stellar-toggle-option {
+    --background: var(--black-alt);
+    --hover-background: var(--black-alt);
+    --border: var(--gray9)
+  }
 
-.dark-mode stellar-toggle-option copy-wrap * {
-  color: white;
-}
+  stellar-toggle-option copy-wrap * {
+    color: white;
+  }
 
 
-.dark-mode stellar-toggle-option .box {
-  background: var(--black)
-}
+  stellar-toggle-option .box {
+    background: var(--black)
+  }
 
-.dark-mode stellar-toggle-option[type*="checkbox"] .box .active stellar-asset {
-  color: var(--black);
+  stellar-toggle-option[type*="checkbox"] .box .active stellar-asset {
+    color: var(--black);
+  }
 }

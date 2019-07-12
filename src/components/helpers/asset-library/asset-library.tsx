@@ -1,4 +1,4 @@
-import { Component, State, Element, h } from '@stencil/core'
+import { Component, State, Element, h, Host } from '@stencil/core'
 import "ionicons"
 
 @Component({
@@ -15,21 +15,21 @@ export class AssetLibrary {
   }
 
   async fetchIcons() {
-    const response = await fetch("https://unpkg.com/ionicons@4.2.0/dist/ionicons/data.json")
+    const response = await fetch("https://unpkg.com/ionicons/dist/ionicons/data.json")
     const data = await response.json()
 
     this.icons = data.icons
   }
 
   render () {
-    return (
-      <stellar-grid>
+    return <Host class="overflow-auto db" style={{"max-height": "75vh"}}>
+      <stellar-grid style={{"--grid-width": "125px"}}>
         {this.icons.map((icon) => {
           return (
-            <stellar-code codeString={`<stellar-asset name="${icon.icons[this.kind]}" block></stellar-asset>`} />
+            <stellar-code codeString={`<stellar-asset name="${icon.icons[this.kind]}" class="fs4 center w-50"></stellar-asset>`} />
           )
         })}
       </stellar-grid>
-    )
+    </Host>
   }
 }

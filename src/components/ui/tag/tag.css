@@ -47,12 +47,12 @@
   border-radius: 5rem;
 }
 
-:host-context(.dark-mode):host([color*="5"]),
-:host-context(.dark-mode):host([color*="6"]),
-:host-context(.dark-mode):host([color*="7"]),
-:host-context(.dark-mode):host([color*="8"]),
-:host-context(.dark-mode):host([color*="9"]) {
-  --color: var(--black) !important;
+@media (prefers-color-scheme: dark) {
+  :host([color*="5"]),
+  :host([color*="6"]),
+  :host([color*="7"]),
+  :host([color*="8"]),
+  :host([color*="9"]) {
+    --color: var(--black) !important;
+  }
 }
-
-:host-context(.dark-mode):host([color*=""])

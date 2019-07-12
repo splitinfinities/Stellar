@@ -92,15 +92,17 @@
   border: none;
 }
 
-:host-context(.dark-mode):host {
-  background-color: var(--theme-base7, var(--gray7));
-}
+@media (prefers-color-scheme: dark) {
+  :host {
+    background-color: var(--theme-base7, var(--gray7));
+  }
 
-:host-context(.dark-mode):host([striped])::after {
-  background: repeating-linear-gradient(45deg, var(--theme-base7), var(--theme-base7) 2rem, var(--theme-base8) 0, var(--theme-base8) 4rem);
-}
+  :host([striped])::after {
+    background: repeating-linear-gradient(45deg, var(--theme-base7), var(--theme-base7) 2rem, var(--theme-base8) 0, var(--theme-base8) 4rem);
+  }
 
 
-:host-context(.dark-mode):host .wrap stellar-asset {
-  color: var(--theme-base1);
+  :host .wrap stellar-asset {
+    color: var(--theme-base1);
+  }
 }

@@ -164,18 +164,20 @@
   background: transparent;
 }
 
-:host-context(.dark-mode):host .button:focus,
-:host-context(.dark-mode):host .button:hover,
-:host-context(.dark-mode):host(:hover),
-:host-context(.dark-mode):host(:focus-within) {
-  background: var(--theme-base8);
-}
+@media (prefers-color-scheme: dark) {
+  :host .button:focus,
+  :host .button:hover,
+  :host(:hover),
+  :host(:focus-within) {
+    background: var(--theme-base8);
+  }
 
-:host-context(.dark-mode):host(.current) .button:focus,
-:host-context(.dark-mode):host(.current) .button:hover,
-:host-context(.dark-mode):host(.current:hover),
-:host-context(.dark-mode):host(.current:focus-within) {
-  background: transparent;
+  :host(.current) .button:focus,
+  :host(.current) .button:hover,
+  :host(.current:hover),
+  :host(.current:focus-within) {
+    background: transparent;
+  }
 }
 
 @keyframes fadeInScale {

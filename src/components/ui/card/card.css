@@ -87,6 +87,15 @@
     max-width: calc(var(--card-width) - (var(--padding) * 2));
 }
 
+:host .wrap ::slotted(*.flush),
+:host .wrap ::slotted(section.flush) {
+    grid-column: 1 / span 3;
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-row: 1 / span 4;
+    padding: 1rem;
+}
+
 :host .wrap ::slotted(header) {
     padding: 1rem var(--padding);
     border-bottom: var(--border);
@@ -226,8 +235,10 @@
     opacity: 1;
 }
 
-:host-context(.dark-mode) {
-    --border: 1px solid var(--gray8);
-    --background: var(--gray9);
-    --flipped-background: var(--gray9);
+@media (prefers-color-scheme: dark) {
+    :host {
+        --border: 1px solid var(--gray8);
+        --background: var(--gray9);
+        --flipped-background: var(--gray9);
+    }
 }

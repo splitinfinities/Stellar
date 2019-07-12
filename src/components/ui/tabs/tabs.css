@@ -155,16 +155,17 @@
   height: 100%;
 }
 
+@media (prefers-color-scheme: dark) {
+  :host {
+    border-bottom: 1px solid var(--theme-base9);
+    background: var(--black);
+  }
 
-:host-context(.dark-mode) {
-  border-bottom: 1px solid var(--theme-base9);
-  background: var(--black);
-}
+  :host .indicator {
+    background: var(--theme-base5);
+  }
 
-:host-context(.dark-mode) .indicator {
-  background: var(--theme-base5);
-}
-
-:host-context(.dark-mode):host([block]) {
-  border: 1px solid var(--theme-base9);
+  :host([block]) {
+    border: 1px solid var(--theme-base9);
+  }
 }

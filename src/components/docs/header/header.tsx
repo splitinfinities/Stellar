@@ -1,49 +1,43 @@
-import { Component, Prop, State, Watch, h } from '@stencil/core';
+import { Component, Prop, Watch, h } from '@stencil/core';
+import Tunnel from '../dependencies';
 
 @Component({
-  tag: 'stellar-docs-header',
-  styleUrl: 'header.css'
+  tag: 'stellar-docs-header'
 })
 export class DocsHeader {
   @Prop({mutable: true}) theme: string = "red";
   @Prop({mutable: true}) complement: string = "indigo";
-  @Prop({mutable: true}) invert: boolean = false;
   @Prop() mark: string;
   @Prop() max: number = 10;
   @Prop() value: number = 0;
-  @State() data;
+  @Prop() package: any;
+  @Prop() ready: boolean;
 
   @Watch('theme')
   @Watch('complement')
-  @Watch('invert')
   handleTheming() {
-    console.log(this.theme, this.complement, this.invert)
-    document.querySelector('body').setAttribute('class', `theme-${this.theme} complement-${this.complement} ${this.invert ? "inverted" : ""}`);
-  }
-
-  async componentWillLoad() {
-    this.data = await window["deps"].fetchPackage();
+    document.querySelector('body').setAttribute('class', `theme-${this.theme} complement-${this.complement}`);
   }
 
   render() {
-    return [
+    return this.ready && [
       <stellar-message striped type="alert" size="full">
         <stellar-asset name="happy"></stellar-asset>
-        <p>Stellar is still an alpha product - some things may change! We'll do out best to notify you when something changes.</p>
+          <p>Stellar is still an alpha product - some things may change! We'll do out best to notify you when something changes.</p>
         <stellar-button size="tiny" pill>See change log <stellar-asset name="arrow-forward" align="right"></stellar-asset></stellar-button>
       </stellar-message>,
       <stellar-layout size="large" class="relative mb5" type="sidebar-right">
         <stellar-starscape></stellar-starscape>
-        <copy-wrap class="invert mv5">
+        <copy-wrap class="mv5">
           <slot name="title">
-            <h1 class="flex fs-massive white">
+            <h1 class="flex fs-massive">
               <div class="flex mr4 flex-column items-center">
-                <stellar-asset src="/global/vector/mark.svg"></stellar-asset>
-                <stellar-tag color="blue5" class="mt4">v{this.data && this.data.version}</stellar-tag>
+                <stellar-icon src="/global/vector/mark.svg"></stellar-icon>
+                <stellar-tag color="blue5" class="mt4">v{this.package && this.package.version}</stellar-tag>
               </div>
               <div>
-                <h1 class="fs-large white lh-solid">Stellar!</h1>
-                <h3 class="fs1 db w-100 gray2">A Beautiful, Complete Design System</h3>
+                <h1 class="fw7 lh-solid theme-base0">Stellar</h1>
+                <h3 class="db fs4 fw7 theme-complement2 w-100">A Beautiful, Complete Design System</h3>
                 <stellar-code-block simple={true} class="w-60" codeString={`npm install @stellar-design/core`} language="bash"></stellar-code-block>
               </div>
             </h1>
@@ -82,13 +76,11 @@ export class DocsHeader {
               <stellar-item value="pink">Pink</stellar-item>
               <stellar-item value="gray">Gray</stellar-item>
             </stellar-select>
-
-            <stellar-toggle type="checkbox">
-              <stellar-toggle-option value="inverted">Inverted</stellar-toggle-option>
-            </stellar-toggle>
           </stellar-grid>
         </stellar-card>
       </stellar-layout>
     ];
   }
 }
+
+Tunnel.injectProps(DocsHeader, ['package', 'ready']);

@@ -598,17 +598,18 @@
   color: var(--theme-base5);
 }
 
-:host-context(.dark-mode):host {
-  --border-color: var(--gray9);
-  --background: var(--black-alt);
-  --color: var(--white);
-}
+@media (prefers-color-scheme: dark) {
+  :host {
+    --border-color: var(--gray9);
+    --background: var(--black-alt);
+    --color: var(--white);
+  }
 
+  :host .tokenfield.tokenfield-mode-tokens .focused {
+    background: var(--theme-base7);
+  }
 
-:host-context(.dark-mode):host .tokenfield.tokenfield-mode-tokens .focused {
-  background: var(--theme-base7);
-}
-
-:host-context(.dark-mode):host .tokenfield .tokenfield-set > ul > li {
-  background: var(--theme-base9);
+  :host .tokenfield .tokenfield-set > ul > li {
+    background: var(--theme-base9);
+  }
 }

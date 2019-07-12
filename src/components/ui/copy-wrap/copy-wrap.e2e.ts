@@ -48,7 +48,7 @@ describe('copy-wrap', () => {
     const page = await newE2EPage();
 
     await page.setContent(`<link href="http://localhost:3333/build/stellar-core.css" rel="stylesheet" />
-        <copy-wrap class="bg-theme-base9 dark-mode">
+        <copy-wrap class="bg-theme-base9">
             <h1>Heading</h1>
             <h2>Heading</h2>
             <h3>Heading</h3>
@@ -69,7 +69,7 @@ describe('copy-wrap', () => {
     const page = await newE2EPage();
 
     await page.setContent(`<link href="http://localhost:3333/build/stellar-core.css" rel="stylesheet" />
-        <copy-wrap class="bg-theme-base0 light-mode">
+        <copy-wrap class="bg-theme-base0">
             <h1>Heading</h1>
             <h2>Heading</h2>
             <h3>Heading</h3>
@@ -91,7 +91,7 @@ describe('copy-wrap', () => {
 
     await page.setContent(`<link href="http://localhost:3333/build/stellar-core.css" rel="stylesheet" />
     <div class="theme-indigo bg-theme-base9">
-        <copy-wrap class="theme-red dark-mode">
+        <copy-wrap class="theme-red">
             <h1>Heading</h1>
             <h2>Heading</h2>
             <h3>Heading</h3>

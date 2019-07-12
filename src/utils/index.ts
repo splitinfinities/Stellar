@@ -166,82 +166,6 @@ export function form2js(data) {
   return object;
 }
 
-const DARK = '(prefers-color-scheme: dark)'
-const LIGHT = '(prefers-color-scheme: light)'
-
-function changeWebsiteTheme(scheme) {
-  if (scheme === "dark") {
-    document.querySelector('html').classList.add('dark-mode');
-  } else {
-    document.querySelector('html').classList.remove('dark-mode');
-  }
-}
-
-function detectColorScheme() {
-    if(!window.matchMedia) {
-        return
-    }
-    function listener({matches, media}) {
-        if(!matches) { // Not matching anymore = not interesting
-            return
-        }
-        if (media === DARK) {
-            changeWebsiteTheme('dark')
-        } else if (media === LIGHT) {
-            changeWebsiteTheme('light')
-        }
-    }
-    const mqDark = window.matchMedia('(prefers-color-scheme: dark)')
-    mqDark.addListener(listener)
-    const mqLight = window.matchMedia(LIGHT)
-    mqLight.addListener(listener)
-}
-
-window['detectColorScheme'] = detectColorScheme;
-
-/**
- * Test for pseudo-class support
- * @param  {String} pseudoClass The pseudo-class
- * @return {Boolean}            Returns true if supported
- */
-var supportsPseudo = function (pseudoClass) {
-
-	// Get the document stylesheet
-	var ss = document.styleSheets[0];
-
-	// Create a stylesheet if one doesn't exist
-	if (!ss) {
-		var el = document.createElement('style');
-		document.head.appendChild(el);
-		ss = document.styleSheets[0];
-		document.head.removeChild(el);
-	}
-
-	// Test the pseudo-class by trying to style with it
-	var testPseudo = function () {
-		try {
-			if (!(/^:/).test(pseudoClass)) {
-				pseudoClass = ':' + pseudoClass;
-      }
-      // @ts-ignore
-      ss.insertRule('html' + pseudoClass + '{}', 0);
-      // @ts-ignore
-			ss.deleteRule(0);
-			return true;
-		} catch(e) {
-			return false;
-		}
-	};
-
-	// Run the test
-	return testPseudo();
-
-};
-
-if (document && document.styleSheets && !supportsPseudo(':host-context(.dark-mode)')) {
-  document.querySelector('html').classList.add('no-host-context')
-}
-
 export const asTime = function (float) {
 	var sec_num = float;
 	var hours   = Math.floor(sec_num / 3600);
@@ -254,7 +178,6 @@ export const asTime = function (float) {
 
 	return count[0];
 }
-
 
 export const leadingZeroIndex = function (index) {
 	var s = index+"";
@@ -271,8 +194,6 @@ export const relPathAsAbs = function (sRelPath) {
 	return sDir + sPath.substr(nStart);
 }
 
-
-
 export {
   properties,
   isHexColor,
@@ -283,6 +204,5 @@ export {
   zxcvbn,
   TinyDatePicker,
   moment,
-  detectColorScheme,
   mediumZoom
 }

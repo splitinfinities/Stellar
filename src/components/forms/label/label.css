@@ -38,15 +38,16 @@
   font-size: var(--ms2);
 }
 
-
 :host label {
   all: inherit;
 }
 
-:host-context(.dark-mode):host {
-  color: var(--gray0);
-}
+@media (prefers-color-scheme: dark) {
+  :host {
+    color: var(--gray0);
+  }
 
-:host-context(.dark-mode):host([underneath]) {
-  color: var(--gray5);
+  :host([underneath]) {
+    color: var(--gray5);
+  }
 }

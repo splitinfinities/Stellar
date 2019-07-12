@@ -104,21 +104,22 @@
   background: var(--theme-color-disabled);
 }
 
-:host-context(.dark-mode):host .tab-wrap > .tab-button,
-:host-context(.dark-mode):host .tab-wrap > .tab-button {
-  color: var(--theme-base2);
-}
+@media (prefers-color-scheme: dark) {
+  :host .tab-wrap > .tab-button,
+  :host .tab-wrap > .tab-button {
+    color: var(--theme-base2);
+  }
 
-:host-context(.dark-mode):host .tab-wrap > .tab-button:hover,
-:host-context(.dark-mode):host .tab-wrap > .tab-button:focus {
-  color: var(--theme-base0);
-}
+  :host .tab-wrap > .tab-button:hover,
+  :host .tab-wrap > .tab-button:focus {
+    color: var(--theme-base0);
+  }
 
-:host-context(.dark-mode):host([open]) .tab-wrap > .tab-button {
-  color: var(--white);
-}
+  :host([open]) .tab-wrap > .tab-button {
+    color: var(--white);
+  }
 
-
-:host-context(.dark-mode):host-context(stellar-tabs[block]):host([open]) .tab-wrap > .tab-button {
-  color: var(--theme-base9);
+  :host-context(stellar-tabs[block]):host([open]) .tab-wrap > .tab-button {
+    color: var(--theme-base9);
+  }
 }

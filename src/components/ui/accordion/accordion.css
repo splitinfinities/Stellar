@@ -60,7 +60,6 @@
   min-height: 3rem;
   padding: 1rem 0;
   color: var(--theme-base9);
-  background: linear-gradient(var(--white), transparent);
 }
 
 :host .wrap .button-wrap stellar-item button.button {
@@ -87,8 +86,9 @@
   padding-right: 2rem;
 }
 
-
-:host-context(.dark-mode):host .wrap .button-wrap {
-  background: linear-gradient(var(--black), transparent);
-  color: var(--theme-base5);
+@media (prefers-color-scheme: dark) {
+  :host ::slotted(stellar-item),
+  :host ::slotted(stellar-item[slot="label"]) {
+    color: var(--theme-base5);
+  }
 }

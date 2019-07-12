@@ -11,10 +11,11 @@
 	display: flex;
 }
 
+/*
 :host([block]),
 :host([block]) stellar-icon,
 :host([block]) stellar-icon .icon-inner,
 :host([block]) stellar-icon .icon-inner svg {
 	width: 100%;
 	height: auto;
-}
+} */

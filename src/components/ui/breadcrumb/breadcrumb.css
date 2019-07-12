@@ -89,33 +89,35 @@
 	color: var(--gray9);
 }
 
-:host-context(.dark-mode) {
-	background: var(--black);
-	color: var(--theme-base0)
-}
+@media (prefers-color-scheme: dark) {
+	:host {
+		background: var(--black);
+		color: var(--theme-base0)
+	}
 
-:host-context(.dark-mode):host(:hover),
-:host-context(.dark-mode):host(:focus),
-:host-context(.dark-mode):host a:hover,
-:host-context(.dark-mode):host a:focus,
-:host-context(.dark-mode):host(:focus-within) {
-	color: var(--white);
-	background: var(--theme-base7);
-}
+	:host(:hover),
+	:host(:focus),
+	:host a:hover,
+	:host a:focus,
+	:host(:focus-within) {
+		color: var(--white);
+		background: var(--theme-base7);
+	}
 
-:host-context(.dark-mode):host([last]) {
-	color: white;
-	background: var(--black);
-}
+	:host([last]) {
+		color: white;
+		background: var(--black);
+	}
 
-:host-context(.dark-mode):host([first]) {
-	background: var(--theme-base9);
-}
+	:host([first]) {
+		background: var(--theme-base9);
+	}
 
-:host-context(.dark-mode):host([last]:hover),
-:host-context(.dark-mode):host([last]:focus),
-:host-context(.dark-mode):host([last]) a:hover,
-:host-context(.dark-mode):host([last]) a:focus {
-	background: var(--black);
-	color: white;
+	:host([last]:hover),
+	:host([last]:focus),
+	:host([last]) a:hover,
+	:host([last]) a:focus {
+		background: var(--black);
+		color: white;
+	}
 }

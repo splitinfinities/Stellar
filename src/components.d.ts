@@ -14,6 +14,9 @@ import {
   MatchResults,
   RouterHistory,
 } from '@stencil/router';
+import {
+  Load,
+} from './components/docs/loadDependencies';
 
 export namespace Components {
   interface CopyWrap {
@@ -268,24 +271,37 @@ export namespace Components {
     'open': boolean;
   }
   interface StellarDocsComponent {
+    'loader': Load;
     'match': MatchResults;
-    'pull_data': () => Promise<void>;
+    'ready': boolean;
   }
   interface StellarDocsHeader {
     'complement': string;
-    'invert': boolean;
     'mark': string;
     'max': number;
+    'package': any;
+    'ready': boolean;
     'theme': string;
     'value': number;
   }
   interface StellarDocsHome {}
-  interface StellarDocsNavigation {}
+  interface StellarDocsNavigation {
+    'collection': any;
+    'documentation': any;
+    'loader': any;
+    'ready': any;
+  }
   interface StellarDocsNotFound {}
   interface StellarDocsPage {
     'match': MatchResults;
   }
-  interface StellarDocumentation {}
+  interface StellarDocumentation {
+    'collection_link': string;
+    'coverage_link': string;
+    'documentation_link': string;
+    'package_link': string;
+    'stats_link': string;
+  }
   interface StellarDropdown {
     'icon': boolean;
     'label': string;
@@ -472,7 +488,7 @@ export namespace Components {
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>;
+    'data': () => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: string; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -1886,23 +1902,37 @@ declare namespace LocalJSX {
     'open'?: boolean;
   }
   interface StellarDocsComponent extends JSXBase.HTMLAttributes<HTMLStellarDocsComponentElement> {
+    'loader'?: Load;
     'match'?: MatchResults;
+    'ready'?: boolean;
   }
   interface StellarDocsHeader extends JSXBase.HTMLAttributes<HTMLStellarDocsHeaderElement> {
     'complement'?: string;
-    'invert'?: boolean;
     'mark'?: string;
     'max'?: number;
+    'package'?: any;
+    'ready'?: boolean;
     'theme'?: string;
     'value'?: number;
   }
   interface StellarDocsHome extends JSXBase.HTMLAttributes<HTMLStellarDocsHomeElement> {}
-  interface StellarDocsNavigation extends JSXBase.HTMLAttributes<HTMLStellarDocsNavigationElement> {}
+  interface StellarDocsNavigation extends JSXBase.HTMLAttributes<HTMLStellarDocsNavigationElement> {
+    'collection'?: any;
+    'documentation'?: any;
+    'loader'?: any;
+    'ready'?: any;
+  }
   interface StellarDocsNotFound extends JSXBase.HTMLAttributes<HTMLStellarDocsNotFoundElement> {}
   interface StellarDocsPage extends JSXBase.HTMLAttributes<HTMLStellarDocsPageElement> {
     'match'?: MatchResults;
   }
-  interface StellarDocumentation extends JSXBase.HTMLAttributes<HTMLStellarDocumentationElement> {}
+  interface StellarDocumentation extends JSXBase.HTMLAttributes<HTMLStellarDocumentationElement> {
+    'collection_link'?: string;
+    'coverage_link'?: string;
+    'documentation_link'?: string;
+    'package_link'?: string;
+    'stats_link'?: string;
+  }
   interface StellarDropdown extends JSXBase.HTMLAttributes<HTMLStellarDropdownElement> {
     'icon'?: boolean;
     'label'?: string;

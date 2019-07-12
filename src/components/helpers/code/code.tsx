@@ -1,4 +1,4 @@
-import { Component, Element, State, Prop, Method, h } from '@stencil/core';
+import { Component, Element, State, Prop, Method, h, Watch } from '@stencil/core';
 import Prism from 'prismjs';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.js';
 import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js';
@@ -41,7 +41,7 @@ export class Code {
       });
     });
 
-    observer.observe(this.element, { characterData: true, subtree: true });
+    observer.observe(this.element, {attributes: true, childList: true, subtree: true});
   }
 
   componentWillUpdate() {
@@ -50,6 +50,11 @@ export class Code {
 
   componentDidUpdate() {
     this.highlight();
+  }
+
+  @Watch('codeString')
+  handleCodeStringUpdate () {
+    this.getCode()
   }
 
   replaceAll(str, find, replace) {
@@ -84,6 +89,7 @@ export class Code {
 
   getCode() {
     if (this.codeString) {
+      this.raw = this.codeString
       this.code = this.codeString.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
     } else {
       let code: any = this.element.querySelector('template');

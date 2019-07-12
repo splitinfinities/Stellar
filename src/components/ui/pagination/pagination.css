@@ -151,18 +151,20 @@
   height: 100%;
 }
 
-:host-context(.dark-mode):host a.number:hover,
-:host-context(.dark-mode):host a.number:active,
-:host-context(.dark-mode):host a.number:focus {
-  color: white;
-}
+@media (prefers-color-scheme: dark) {
+  :host a.number:hover,
+  :host a.number:active,
+  :host a.number:focus {
+    color: white;
+  }
 
-:host-context(.dark-mode):host .current-number {
-  color: var(--gray9) !important;
-}
+  :host .current-number {
+    color: var(--gray9) !important;
+  }
 
-:host-context(.dark-mode):host a.icon:hover,
-:host-context(.dark-mode):host a.icon:active,
-:host-context(.dark-mode):host a.icon:focus {
-  color: white;
+  :host a.icon:hover,
+  :host a.icon:active,
+  :host a.icon:focus {
+    color: white;
+  }
 }

@@ -215,10 +215,12 @@
     transform: scale(1) translateY(100%) translateX(-100%) translateZ(0);
 }
 
-:host-context(.dark-mode):host .wrap {
-    background: var(--theme-complement7);
-}
+@media (prefers-color-scheme: dark) {
+    :host .wrap {
+        background: var(--theme-complement7);
+    }
 
-:host-context(.dark-mode):host .wrap .after {
-    background: var(--theme-complement7);
+    :host .wrap .after {
+        background: var(--theme-complement7);
+    }
 }

@@ -1,63 +1,43 @@
-import { Component, State, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
+import Tunnel from '../dependencies';
 
 @Component({
   tag: 'stellar-docs-navigation'
 })
 export class DocsNavigation {
-  @State() data;
-  @State() documentation;
+  @Prop() loader;
+  @Prop() collection;
+  @Prop() documentation;
+  @Prop() ready;
 
-  componentWillLoad() {
-    this.loadData()
-  }
-
-  async loadData() {
-    this.data = await window["deps"].fetchCollection();
-    this.documentation = await window["deps"].fetchDocumentation();
-  }
-
-  get components () {
-    return this.documentation.tags.components.map((tag) => { return tag.tag })
-  }
-
-  usage(tag: string) {
-    const details = this.documentation.components.find((element) => {
-      return element.tag === tag
-    })
-
-    return details && details.usage && Object.keys(details.usage).length || false;
-  }
-
-  renderItem(component) {
-    const name = component.tag.replace("stellar-", "")
-    return this.usage(component.tag) && (
-      <stellar-item type="a" route={true} href={`/component/${name}`}>
-        <copy-wrap>
-          {component.componentClass}
-          <small class="db theme-base5">{`<${component.tag}>`}</small>
-        </copy-wrap>
-        <stellar-tag pill color="theme-complement7">{this.usage(component.tag)}</stellar-tag>
+  renderItem(tag_name) {
+    const name = tag_name.replace("stellar-", "")
+    return <stellar-item fit wrap type="stencil-route-link" route={true} href={`/component/${tag_name}`}>
+        {name}
+        <small class="db theme-base5">{`<${tag_name}>`}</small>
       </stellar-item>
-    )
+
   }
 
   render() {
-    return this.data && (
-      <stellar-card padding="tiny">
-        <stellar-item type="a" route={true} href="/">Home</stellar-item>
-        <stellar-accordion tight>
-          <stellar-item type="button" slot="label">Introduction</stellar-item>
-          <stellar-item type="a" route={true} href="/design-principles">Design Principles</stellar-item>
-          <stellar-item type="a" route={true} href="/installation">Installation</stellar-item>
-          <stellar-item type="a" route={true} href="/tutorial">Tutorial</stellar-item>
-          <stellar-item type="a" route={true} href="/deploying">Deploying</stellar-item>
-          <stellar-item type="a" route={true} href="/browser-support">Browser Support</stellar-item>
-        </stellar-accordion>
-        <stellar-accordion tight>
-          <stellar-item slot="label">Components <stellar-tag size="small" color="theme-complement8" class="self-end maa mr0" pill>{this.components.length}</stellar-tag></stellar-item>
-            {this.components.map( (component) => this.renderItem(component) )}
-        </stellar-accordion>
+    return this.ready && <stellar-card padding="tiny">
+        <div>
+          <stellar-item type="stencil-route-link" route={true} href="/">Home</stellar-item>
+          <stellar-accordion tight>
+            <stellar-item type="button" slot="label">Introduction</stellar-item>
+            <stellar-item type="stencil-route-link" route={true} href="/design-principles">Design Principles</stellar-item>
+            <stellar-item type="stencil-route-link" route={true} href="/installation">Installation</stellar-item>
+            <stellar-item type="stencil-route-link" route={true} href="/tutorial">Tutorial</stellar-item>
+            <stellar-item type="stencil-route-link" route={true} href="/deploying">Deploying</stellar-item>
+            <stellar-item type="stencil-route-link" route={true} href="/browser-support">Browser Support</stellar-item>
+          </stellar-accordion>
+          <stellar-accordion tight>
+            <stellar-item slot="label">Components <stellar-tag size="small" color="theme-complement8" class="self-end maa mr0" pill>{this.loader.components.length}</stellar-tag></stellar-item>
+              {this.loader.components.map( (component) => this.renderItem(component) )}
+          </stellar-accordion>
+        </div>
       </stellar-card>
-    );
   }
 }
+
+Tunnel.injectProps(DocsNavigation, ['loader', 'collection', 'documentation', 'ready']);

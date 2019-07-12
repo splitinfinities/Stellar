@@ -459,8 +459,10 @@
   --ms_b-10: calc(var(--ms_b0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
 }
 
-html.dark-mode:not(.no-host-context) {
-  background: var(--black);
+@media (prefers-color-scheme: dark) {
+  html {
+    background: var(--black);
+  }
 }
 
 html:not(.no-host-context) *[class*="theme-"] {
@@ -470,16 +472,20 @@ html:not(.no-host-context) *[class*="theme-"] {
   color: var(--theme-copy-base);
 }
 
-html:not(.no-host-context) *[class*="dark-mode"],
-html:not(.no-host-context) *[class*="dark-mode"] * {
-  --theme-copy-header: var(--theme-base7) !important;
-  --theme-copy-base: var(--theme-base0) !important;
-  --theme-copy-supporting: var(--theme-base3) !important;
+@media (prefers-color-scheme: dark) {
+  html,
+  html * {
+    --theme-copy-header: var(--theme-base7) !important;
+    --theme-copy-base: var(--theme-base0) !important;
+    --theme-copy-supporting: var(--theme-base3) !important;
+  }
 }
 
-html:not(.no-host-context) *[class*="dark-mode"][class*="bg-theme-base"],
-html:not(.no-host-context) *[class*="dark-mode"][class*="bg-theme-base"] * {
-  --theme-copy-header: var(--theme-base9) !important;
+@media (prefers-color-scheme: dark) {
+  .bg-theme-base,
+  .bg-theme-base * {
+    --theme-copy-header: var(--theme-base9) !important;
+  }
 }
 
 *[class*="light-mode"],

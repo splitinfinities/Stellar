@@ -24,7 +24,7 @@ export class Asset {
   render () {
     return (
       <div class="icon-wrap">
-        <stellar-icon src={!this.name && this.src ? this.src : undefined} name={!this.src && this.name ? this.language + this.name : undefined} ariaLabel={this.ariaLabel} aria-label={this.ariaLabel}></stellar-icon>
+        <stellar-icon src={this.src} name={this.name} ariaLabel={this.ariaLabel} aria-label={this.ariaLabel}></stellar-icon>
       </div>
     );
   }
