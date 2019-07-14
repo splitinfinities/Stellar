@@ -17,3 +17,13 @@
 .striped--gray2:nth-child(odd) {
   background-color: var(--gray2);
 }
+
+@media (prefers-color-scheme: dark) {
+  .dm-striped--gray1:nth-child(odd) {
+    background-color: var(--gray8);
+  }
+
+  .dm-striped--gray2:nth-child(odd) {
+    background-color: var(--gray9);
+  }
+}

@@ -10,8 +10,12 @@
   filter: invert(100%);
 }
 
-.mbm {
+.mbm-color {
   mix-blend-mode: color;
+}
+
+.mbm-screen {
+  mix-blend-mode: screen;
 }
 
 .fs-massive {

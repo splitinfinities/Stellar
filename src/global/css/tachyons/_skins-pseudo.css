@@ -157,3 +157,157 @@
 .hover-inherit:focus {
   color: inherit;
 }
+
+@media (prefers-color-scheme: dark) {
+  .dm-hover-base:hover,
+  .dm-hover-base:focus {
+    color: var(--base);
+  }
+  .dm-hover-black:hover,
+  .dm-hover-black:focus {
+    color: var(--black);
+  }
+  .dm-hover-white:hover,
+  .dm-hover-white:focus {
+    color: var(--white);
+  }
+
+  .dm-hover-gray0:hover,
+  .dm-hover-gray0:focus {
+    color: var(--gray0);
+  }
+  .dm-hover-gray1:hover,
+  .dm-hover-gray1:focus {
+    color: var(--gray1);
+  }
+  .dm-hover-gray2:hover,
+  .dm-hover-gray2:focus {
+    color: var(--gray2);
+  }
+  .dm-hover-gray3:hover,
+  .dm-hover-gray3:focus {
+    color: var(--gray3);
+  }
+  .dm-hover-gray4:hover,
+  .dm-hover-gray4:focus {
+    color: var(--gray4);
+  }
+  .dm-hover-gray5:hover,
+  .dm-hover-gray5:focus {
+    color: var(--gray5);
+  }
+  .dm-hover-gray6:hover,
+  .dm-hover-gray6:focus {
+    color: var(--gray6);
+  }
+  .dm-hover-gray7:hover,
+  .dm-hover-gray7:focus {
+    color: var(--gray7);
+  }
+  .dm-hover-gray8:hover,
+  .dm-hover-gray8:focus {
+    color: var(--gray8);
+  }
+  .dm-hover-gray9:hover,
+  .dm-hover-gray9:focus {
+    color: var(--gray9);
+  }
+
+
+  .dm-hover-theme-base0:hover,
+  .dm-hover-theme-base0:focus {
+    color: var(--theme-base0);
+  }
+  .dm-hover-theme-base1:hover,
+  .dm-hover-theme-base1:focus {
+    color: var(--theme-base1);
+  }
+  .dm-hover-theme-base2:hover,
+  .dm-hover-theme-base2:focus {
+    color: var(--theme-base2);
+  }
+  .dm-hover-theme-base3:hover,
+  .dm-hover-theme-base3:focus {
+    color: var(--theme-base3);
+  }
+  .dm-hover-theme-base4:hover,
+  .dm-hover-theme-base4:focus {
+    color: var(--theme-base4);
+  }
+  .dm-hover-theme-base5:hover,
+  .dm-hover-theme-base5:focus {
+    color: var(--theme-base5);
+  }
+  .dm-hover-theme-base6:hover,
+  .dm-hover-theme-base6:focus {
+    color: var(--theme-base6);
+  }
+  .dm-hover-theme-base7:hover,
+  .dm-hover-theme-base7:focus {
+    color: var(--theme-base7);
+  }
+  .dm-hover-theme-base8:hover,
+  .dm-hover-theme-base8:focus {
+    color: var(--theme-base8);
+  }
+  .dm-hover-theme-base9:hover,
+  .dm-hover-theme-base9:focus {
+    color: var(--theme-base9);
+  }
+
+  .dm-hover-theme-complement0:hover,
+  .dm-hover-theme-complement0:focus {
+    color: var(--theme-complement0);
+  }
+  .dm-hover-theme-complement1:hover,
+  .dm-hover-theme-complement1:focus {
+    color: var(--theme-complement1);
+  }
+  .dm-hover-theme-complement2:hover,
+  .dm-hover-theme-complement2:focus {
+    color: var(--theme-complement2);
+  }
+  .dm-hover-theme-complement3:hover,
+  .dm-hover-theme-complement3:focus {
+    color: var(--theme-complement3);
+  }
+  .dm-hover-theme-complement4:hover,
+  .dm-hover-theme-complement4:focus {
+    color: var(--theme-complement4);
+  }
+  .dm-hover-theme-complement5:hover,
+  .dm-hover-theme-complement5:focus {
+    color: var(--theme-complement5);
+  }
+  .dm-hover-theme-complement6:hover,
+  .dm-hover-theme-complement6:focus {
+    color: var(--theme-complement6);
+  }
+  .dm-hover-theme-complement7:hover,
+  .dm-hover-theme-complement7:focus {
+    color: var(--theme-complement7);
+  }
+  .dm-hover-theme-complement8:hover,
+  .dm-hover-theme-complement8:focus {
+    color: var(--theme-complement8);
+  }
+  .dm-hover-theme-complement9:hover,
+  .dm-hover-theme-complement9:focus {
+    color: var(--theme-complement9);
+  }
+
+  .dm-hover-transparent:hover,
+  .dm-hover-transparent:focus {
+    color: transparent;
+  }
+
+  .dm-hover-current:hover,
+  .dm-hover-current:focus {
+    color: currentColor;
+  }
+
+  .dm-hover-inherit:hover,
+  .dm-hover-inherit:focus {
+    color: inherit;
+  }
+}

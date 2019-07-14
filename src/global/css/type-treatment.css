@@ -76,6 +76,18 @@ p {
   padding-top: var(--ms-5);
 }
 
+@media (prefers-color-scheme: dark) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: var(--white);
+  }
+}
+
 h1,
 .fs1 {
   font-size: var(--ms9);
@@ -107,8 +119,6 @@ h5,
 h6,
 .fs6 {
   font-size: var(--ms4);
-  font-style: italic;
-  font-weight: normal;
 }
 
 p,
