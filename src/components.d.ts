@@ -572,6 +572,8 @@ export namespace Components {
     'url': any;
   }
   interface StellarParallax {
+    'center': boolean;
+    'horizontal': boolean;
     'reload': () => Promise<void>;
   }
   interface StellarParallaxSection {
@@ -2197,7 +2199,10 @@ declare namespace LocalJSX {
     'type'?: "full"|"compact";
     'url'?: any;
   }
-  interface StellarParallax extends JSXBase.HTMLAttributes<HTMLStellarParallaxElement> {}
+  interface StellarParallax extends JSXBase.HTMLAttributes<HTMLStellarParallaxElement> {
+    'center'?: boolean;
+    'horizontal'?: boolean;
+  }
   interface StellarParallaxSection extends JSXBase.HTMLAttributes<HTMLStellarParallaxSectionElement> {
     'layer'?: number;
     'percentage'?: number;

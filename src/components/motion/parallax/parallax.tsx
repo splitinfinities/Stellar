@@ -1,4 +1,4 @@
-import { Component, State, Method, h } from '@stencil/core';
+import { Component, State, Method, h, Prop, Element } from '@stencil/core';
 import Rellax from 'rellax';
 
 @Component({
@@ -6,11 +6,16 @@ import Rellax from 'rellax';
   styleUrl: 'parallax.css'
 })
 export class Parallax {
+	@Element() el: HTMLElement;
+	@Prop() horizontal: boolean = false;
+	@Prop() center: boolean = false;
+
 	@State() relax;
 
 	componentWillLoad() {
 		this.relax = new Rellax('stellar-parallax-section', {
-			center: true
+			center: this.center,
+			horizontal: this.horizontal
 		});
 	}
 
@@ -24,6 +29,6 @@ export class Parallax {
 	}
 
 	render () {
-		return (<slot></slot>)
+		return <slot />
 	}
 }

@@ -9,8 +9,8 @@ export class Starscape {
 
   render () {
     return (
-      <stellar-parallax>
-        <stellar-parallax-section layer={1} speed={-11}>
+      <stellar-parallax horizontal>
+        <stellar-parallax-section layer={1} speed={5}>
           <div class="stars" />
         </stellar-parallax-section>
 
@@ -18,7 +18,7 @@ export class Starscape {
           <div class="stars" />
         </stellar-parallax-section>
 
-        <stellar-parallax-section layer={3} speed={-9}>
+        <stellar-parallax-section layer={3} speed={-4}>
           <div class="stars" />
         </stellar-parallax-section>
       </stellar-parallax>
