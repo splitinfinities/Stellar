@@ -58,10 +58,6 @@ Type: `Promise<void>`
 
 ## Dependencies
 
-### Used by
-
- - [stellar-docs-header](../../docs/header)
-
 ### Depends on
 
 - [stellar-asset](../../ui/asset)
@@ -78,7 +74,6 @@ graph TD;
   stellar-toggle-option --> stellar-tooltip
   stellar-asset --> stellar-icon
   stellar-tag --> stellar-label
-  stellar-docs-header --> stellar-toggle-option
   style stellar-toggle-option fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

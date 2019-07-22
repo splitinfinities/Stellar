@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property     | Attribute    | Description | Type     | Default     |
-| ------------ | ------------ | ----------- | -------- | ----------- |
-| `layer`      | `layer`      |             | `number` | `1`         |
-| `percentage` | `percentage` |             | `number` | `undefined` |
-| `speed`      | `speed`      |             | `number` | `1`         |
+| Property     | Attribute    | Description | Type     | Default |
+| ------------ | ------------ | ----------- | -------- | ------- |
+| `layer`      | `layer`      |             | `number` | `1`     |
+| `percentage` | `percentage` |             | `number` | `0.5`   |
+| `speed`      | `speed`      |             | `number` | `1`     |
 
 
 ## Dependencies

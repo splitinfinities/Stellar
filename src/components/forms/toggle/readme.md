@@ -228,10 +228,6 @@ Type: `Promise<FormResult>`
 
 ## Dependencies
 
-### Used by
-
- - [stellar-docs-header](../../docs/header)
-
 ### Depends on
 
 - [stellar-grid](../../ui/grid)
@@ -242,7 +238,6 @@ Type: `Promise<FormResult>`
 graph TD;
   stellar-toggle --> stellar-grid
   stellar-toggle --> stellar-label
-  stellar-docs-header --> stellar-toggle
   style stellar-toggle fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

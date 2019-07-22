@@ -9,20 +9,9 @@
 
 | Property | Attribute | Description | Type           | Default     |
 | -------- | --------- | ----------- | -------------- | ----------- |
+| `loader` | --        |             | `Load`         | `undefined` |
 | `match`  | --        |             | `MatchResults` | `undefined` |
-
-
-## Methods
-
-### `pull_data() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
+| `ready`  | `ready`   |             | `boolean`      | `undefined` |
 
 
 ## Dependencies
@@ -40,6 +29,7 @@ Type: `Promise<void>`
 - [stellar-card](../../ui/card)
 - [stellar-accordion](../../ui/accordion)
 - [stellar-item](../../forms/item)
+- context-consumer
 
 ### Graph
 ```mermaid
@@ -55,6 +45,7 @@ graph TD;
   stellar-docs-component --> stellar-card
   stellar-docs-component --> stellar-accordion
   stellar-docs-component --> stellar-item
+  stellar-docs-component --> context-consumer
   stellar-tabs --> stellar-blur
   stellar-tab --> stellar-tag
   stellar-tag --> stellar-label
@@ -70,13 +61,13 @@ graph TD;
   stellar-docs-header --> stellar-layout
   stellar-docs-header --> stellar-starscape
   stellar-docs-header --> copy-wrap
+  stellar-docs-header --> stellar-icon
   stellar-docs-header --> stellar-tag
   stellar-docs-header --> stellar-card
   stellar-docs-header --> stellar-grid
   stellar-docs-header --> stellar-select
   stellar-docs-header --> stellar-item
-  stellar-docs-header --> stellar-toggle
-  stellar-docs-header --> stellar-toggle-option
+  stellar-docs-header --> context-consumer
   stellar-message --> stellar-asset
   stellar-starscape --> stellar-parallax
   stellar-starscape --> stellar-parallax-section
@@ -87,17 +78,11 @@ graph TD;
   stellar-select --> stellar-tooltip
   stellar-select --> stellar-blur
   stellar-item --> stellar-asset
-  stellar-toggle --> stellar-grid
-  stellar-toggle --> stellar-label
-  stellar-toggle-option --> stellar-asset
-  stellar-toggle-option --> stellar-blur
-  stellar-toggle-option --> stellar-tag
-  stellar-toggle-option --> stellar-tooltip
   stellar-docs-navigation --> stellar-item
-  stellar-docs-navigation --> copy-wrap
-  stellar-docs-navigation --> stellar-tag
   stellar-docs-navigation --> stellar-card
   stellar-docs-navigation --> stellar-accordion
+  stellar-docs-navigation --> stellar-tag
+  stellar-docs-navigation --> context-consumer
   stellar-accordion --> stellar-button
   stellar-accordion --> stellar-asset
   stellar-accordion --> stellar-blur

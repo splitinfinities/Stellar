@@ -29,6 +29,14 @@
 
 
 
+## Properties
+
+| Property     | Attribute    | Description | Type      | Default |
+| ------------ | ------------ | ----------- | --------- | ------- |
+| `center`     | `center`     |             | `boolean` | `false` |
+| `horizontal` | `horizontal` |             | `boolean` | `false` |
+
+
 ## Methods
 
 ### `reload() => Promise<void>`

@@ -10,9 +10,10 @@
 | Property     | Attribute    | Description | Type      | Default     |
 | ------------ | ------------ | ----------- | --------- | ----------- |
 | `complement` | `complement` |             | `string`  | `"indigo"`  |
-| `invert`     | `invert`     |             | `boolean` | `false`     |
 | `mark`       | `mark`       |             | `string`  | `undefined` |
 | `max`        | `max`        |             | `number`  | `10`        |
+| `package`    | `package`    |             | `any`     | `undefined` |
+| `ready`      | `ready`      |             | `boolean` | `undefined` |
 | `theme`      | `theme`      |             | `string`  | `"red"`     |
 | `value`      | `value`      |             | `number`  | `0`         |
 
@@ -33,13 +34,13 @@
 - [stellar-layout](../../ui/layout)
 - [stellar-starscape](../../helpers/starscape)
 - [copy-wrap](../../ui/copy-wrap)
+- [stellar-icon](../../media/icon)
 - [stellar-tag](../../ui/tag)
 - [stellar-card](../../ui/card)
 - [stellar-grid](../../ui/grid)
 - [stellar-select](../../forms/select)
 - [stellar-item](../../forms/item)
-- [stellar-toggle](../../forms/toggle)
-- [stellar-toggle-option](../../forms/toggle-option)
+- context-consumer
 
 ### Graph
 ```mermaid
@@ -50,13 +51,13 @@ graph TD;
   stellar-docs-header --> stellar-layout
   stellar-docs-header --> stellar-starscape
   stellar-docs-header --> copy-wrap
+  stellar-docs-header --> stellar-icon
   stellar-docs-header --> stellar-tag
   stellar-docs-header --> stellar-card
   stellar-docs-header --> stellar-grid
   stellar-docs-header --> stellar-select
   stellar-docs-header --> stellar-item
-  stellar-docs-header --> stellar-toggle
-  stellar-docs-header --> stellar-toggle-option
+  stellar-docs-header --> context-consumer
   stellar-message --> stellar-asset
   stellar-asset --> stellar-icon
   stellar-button --> stellar-asset
@@ -73,12 +74,6 @@ graph TD;
   stellar-select --> stellar-tooltip
   stellar-select --> stellar-blur
   stellar-item --> stellar-asset
-  stellar-toggle --> stellar-grid
-  stellar-toggle --> stellar-label
-  stellar-toggle-option --> stellar-asset
-  stellar-toggle-option --> stellar-blur
-  stellar-toggle-option --> stellar-tag
-  stellar-toggle-option --> stellar-tooltip
   stellar-docs-component --> stellar-docs-header
   stellar-docs-home --> stellar-docs-header
   stellar-docs-page --> stellar-docs-header

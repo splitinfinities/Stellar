@@ -5,6 +5,16 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property        | Attribute       | Description | Type  | Default     |
+| --------------- | --------------- | ----------- | ----- | ----------- |
+| `collection`    | `collection`    |             | `any` | `undefined` |
+| `documentation` | `documentation` |             | `any` | `undefined` |
+| `loader`        | `loader`        |             | `any` | `undefined` |
+| `ready`         | `ready`         |             | `any` | `undefined` |
+
+
 ## Dependencies
 
 ### Used by
@@ -16,22 +26,21 @@
 ### Depends on
 
 - [stellar-item](../../forms/item)
-- [copy-wrap](../../ui/copy-wrap)
-- [stellar-tag](../../ui/tag)
 - [stellar-card](../../ui/card)
 - [stellar-accordion](../../ui/accordion)
+- [stellar-tag](../../ui/tag)
+- context-consumer
 
 ### Graph
 ```mermaid
 graph TD;
   stellar-docs-navigation --> stellar-item
-  stellar-docs-navigation --> copy-wrap
-  stellar-docs-navigation --> stellar-tag
   stellar-docs-navigation --> stellar-card
   stellar-docs-navigation --> stellar-accordion
+  stellar-docs-navigation --> stellar-tag
+  stellar-docs-navigation --> context-consumer
   stellar-item --> stellar-asset
   stellar-asset --> stellar-icon
-  stellar-tag --> stellar-label
   stellar-card --> stellar-button
   stellar-card --> stellar-asset
   stellar-button --> stellar-asset
@@ -39,6 +48,7 @@ graph TD;
   stellar-accordion --> stellar-button
   stellar-accordion --> stellar-asset
   stellar-accordion --> stellar-blur
+  stellar-tag --> stellar-label
   stellar-docs-component --> stellar-docs-navigation
   stellar-docs-home --> stellar-docs-navigation
   stellar-docs-page --> stellar-docs-navigation

@@ -26,11 +26,13 @@
 ### Used by
 
  - [stellar-asset](../../ui/asset)
+ - [stellar-docs-header](../../docs/header)
 
 ### Graph
 ```mermaid
 graph TD;
   stellar-asset --> stellar-icon
+  stellar-docs-header --> stellar-icon
   style stellar-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

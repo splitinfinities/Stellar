@@ -488,7 +488,7 @@ export namespace Components {
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: string; }>;
+    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
