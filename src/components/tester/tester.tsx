@@ -22,15 +22,41 @@ export class Testington {
 
           <stellar-form ajax onSubmitted={(e) => { this.submitLogin(e) }}>
             <stellar-grid cols="1" noresponsive>
-              <stellar-input name="email" type="email" placeholder="Email">
-                <stellar-asset name="mail" slot="icon" />
-              </stellar-input>
-
-              <stellar-input name="password" type="password" placeholder="Password" class="mb4" novalidate>
-                <stellar-asset name="lock" slot="icon" />
-              </stellar-input>
-
-              <stellar-button tag="button" pill class="center" onClick={(e) => { e.preventDefault(); this.form.submit_form(); }}>Sign In</stellar-button>
+            <stellar-select
+                name={"config[query][metric_category]"}
+                overlay
+                fit
+                wrap
+                label="Metric Category"
+                placeholder="Select a metric category"
+                novalidate
+                tooltip="Select a metric category to view the related card type and metric options.">
+                  <stellar-item
+                      fit
+                      wrap
+                      selected
+                      value={"Nice"}>
+                          Nice
+                  </stellar-item>
+                  <stellar-item
+                      fit
+                      wrap
+                      value={"Awesome"}>
+                          Awesome
+                  </stellar-item>
+                  <stellar-item
+                      fit
+                      wrap
+                      value={"Sick"}>
+                          Sick
+                  </stellar-item>
+                  <stellar-item
+                      fit
+                      wrap
+                      value={"Cool"}>
+                          Cool
+                  </stellar-item>
+              </stellar-select>
             </stellar-grid>
           </stellar-form>
         </copy-wrap>

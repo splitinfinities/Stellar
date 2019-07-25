@@ -103,6 +103,12 @@
   height: calc(var(--item-size) - 1px);
 }
 
+:host([fit]) stellar-asset.selected {
+  height: 50%;
+  font-size: 2em;
+  margin-right: 0.5em;
+}
+
 :host(:hover) .selected,
 :host(:focus) .selected,
 :host(:focus-within) .selected {

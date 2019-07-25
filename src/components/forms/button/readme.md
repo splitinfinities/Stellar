@@ -68,7 +68,6 @@
  - [stellar-docs-header](../../docs/header)
  - [stellar-playlist](../../media/playlist)
  - [stellar-select](../select)
- - [stellar-tester](../../tester)
 
 ### Depends on
 
@@ -86,7 +85,6 @@ graph TD;
   stellar-docs-header --> stellar-button
   stellar-playlist --> stellar-button
   stellar-select --> stellar-button
-  stellar-tester --> stellar-button
   style stellar-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

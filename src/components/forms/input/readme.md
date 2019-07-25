@@ -174,7 +174,6 @@ Type: `Promise<FormResult>`
  - [stellar-markdown](../../helpers/markdown)
  - [stellar-pagination](../../ui/pagination)
  - [stellar-stripe](../../helpers/stripe)
- - [stellar-tester](../../tester)
 
 ### Depends on
 
@@ -196,7 +195,6 @@ graph TD;
   stellar-markdown --> stellar-input
   stellar-pagination --> stellar-input
   stellar-stripe --> stellar-input
-  stellar-tester --> stellar-input
   style stellar-input fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

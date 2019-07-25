@@ -90,6 +90,7 @@ Type: `Promise<void>`
  - [stellar-docs-header](../../docs/header)
  - [stellar-docs-navigation](../../docs/navigation)
  - [stellar-select](../select)
+ - [stellar-tester](../../tester)
 
 ### Depends on
 
@@ -104,6 +105,7 @@ graph TD;
   stellar-docs-header --> stellar-item
   stellar-docs-navigation --> stellar-item
   stellar-select --> stellar-item
+  stellar-tester --> stellar-item
   style stellar-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
