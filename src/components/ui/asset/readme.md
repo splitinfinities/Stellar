@@ -46,6 +46,7 @@
  - [stellar-select](../../forms/select)
  - [stellar-song](../../media/song)
  - [stellar-switch](../../forms/switch)
+ - [stellar-tester](../../tester)
  - [stellar-toggle-option](../../forms/toggle-option)
  - [stellar-video-interview](../../media/video-interview)
 
@@ -74,6 +75,7 @@ graph TD;
   stellar-select --> stellar-asset
   stellar-song --> stellar-asset
   stellar-switch --> stellar-asset
+  stellar-tester --> stellar-asset
   stellar-toggle-option --> stellar-asset
   stellar-video-interview --> stellar-asset
   style stellar-asset fill:#f9f,stroke:#333,stroke-width:4px

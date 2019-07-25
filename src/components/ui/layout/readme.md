@@ -50,6 +50,7 @@ Type: `Promise<void>`
  - [stellar-docs-header](../../docs/header)
  - [stellar-docs-home](../../docs/home)
  - [stellar-docs-page](../../docs/page)
+ - [stellar-tester](../../tester)
 
 ### Graph
 ```mermaid
@@ -58,6 +59,7 @@ graph TD;
   stellar-docs-header --> stellar-layout
   stellar-docs-home --> stellar-layout
   stellar-docs-page --> stellar-layout
+  stellar-tester --> stellar-layout
   style stellar-layout fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

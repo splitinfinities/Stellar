@@ -62,6 +62,7 @@ Type: `Promise<void>`
  - [stellar-color-library](../../helpers/color-library)
  - [stellar-docs-header](../../docs/header)
  - [stellar-stripe](../../helpers/stripe)
+ - [stellar-tester](../../tester)
  - [stellar-toggle](../../forms/toggle)
 
 ### Graph
@@ -71,6 +72,7 @@ graph TD;
   stellar-color-library --> stellar-grid
   stellar-docs-header --> stellar-grid
   stellar-stripe --> stellar-grid
+  stellar-tester --> stellar-grid
   stellar-toggle --> stellar-grid
   style stellar-grid fill:#f9f,stroke:#333,stroke-width:4px
 ```

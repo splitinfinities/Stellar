@@ -307,6 +307,17 @@ export class Input {
     this.resetValue()
   }
 
+  handleKeyDownEnter (event: KeyboardEvent) {
+    if (event.keyCode === 13) {
+      const form = this.element.closest('stellar-form');
+      form.submit_form();
+    }
+  }
+
+  handleInputKeyDown (event) {
+    this.handleKeyDownEnter(event);
+  }
+
   handleKeyDownReset (event: KeyboardEvent) {
     if (event.keyCode === 13) {
       this.resetValue()
@@ -535,7 +546,7 @@ export class Input {
   renderInput() {
     if (shouldBeAnInput(this.type)) {
       return (
-        <input class="input" id={this.generatedId} type={this.type} value={this.value} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} />
+        <input class="input" id={this.generatedId} type={this.type} value={this.value} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} onKeyDown={(event) => { this.handleInputKeyDown(event) }} />
       )
     }
   }

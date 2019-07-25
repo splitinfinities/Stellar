@@ -36,6 +36,7 @@
  - [stellar-docs-header](../../docs/header)
  - [stellar-input](../../forms/input)
  - [stellar-markdown](../../helpers/markdown)
+ - [stellar-tester](../../tester)
 
 ### Graph
 ```mermaid
@@ -43,6 +44,7 @@ graph TD;
   stellar-docs-header --> copy-wrap
   stellar-input --> copy-wrap
   stellar-markdown --> copy-wrap
+  stellar-tester --> copy-wrap
   style copy-wrap fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

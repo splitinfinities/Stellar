@@ -1,36 +1,39 @@
-import { Component, State, h, Method, Element } from '@stencil/core'
+import { Component, State, h, Element } from '@stencil/core'
 
 @Component({
     tag: 'stellar-tester',
 })
 export class Testington {
     @Element() element: HTMLElement;
-    @State() options: any[] = [{value: "nice", copy: "Nice"}];
+    @State() form: HTMLStellarFormElement;
 
-    makeid(length) {
-        var result           = '';
-        var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        var charactersLength = characters.length;
-        for ( var i = 0; i < length; i++ ) {
-            result += characters.charAt(Math.floor(Math.random() * charactersLength));
-        }
-        return result;
+    componentDidLoad() {
+        this.form = this.element.querySelector('stellar-form')
     }
 
-    @Method()
-    async new_options() {
-        const length = Math.random() * 10 + 1;
-        this.options = Array.from({length}, () => Math.floor(Math.random() * 10)).map(() => {
-            const val = this.makeid(Math.random() * 10);
-            return {value: val, copy: val};
-        });
+    submitLogin (_) {
+        alert('submitted');
     }
 
     render() {
-        return <stellar-form ajax onSubmitted={(e) => { console.log(e.detail); }}>
-            <stellar-select novalidate loading={true} name="nicedude" onUpdate={() => { this.element.querySelector('stellar-form').submit_form() }}>
-                {this.options.map((option) => <stellar-item value={option.value}>{option.copy}</stellar-item>)}
-            </stellar-select>
-        </stellar-form>
+        return <stellar-layout size="tiny" padding="large" align="center" class="mv6 dib w-100">
+        <copy-wrap align="center">
+          <h1 class="mb4">Sign in to Your Account</h1>
+
+          <stellar-form ajax onSubmitted={(e) => { this.submitLogin(e) }}>
+            <stellar-grid cols="1" noresponsive>
+              <stellar-input name="email" type="email" placeholder="Email">
+                <stellar-asset name="mail" slot="icon" />
+              </stellar-input>
+
+              <stellar-input name="password" type="password" placeholder="Password" class="mb4" novalidate>
+                <stellar-asset name="lock" slot="icon" />
+              </stellar-input>
+
+              <stellar-button tag="button" pill class="center" onClick={(e) => { e.preventDefault(); this.form.submit_form(); }}>Sign In</stellar-button>
+            </stellar-grid>
+          </stellar-form>
+        </copy-wrap>
+      </stellar-layout>
     }
 }

@@ -868,9 +868,7 @@ export namespace Components {
     'size': string;
     'textColor': string;
   }
-  interface StellarTester {
-    'new_options': () => Promise<void>;
-  }
+  interface StellarTester {}
   interface StellarTime {
     'format': string;
     'relative': boolean;

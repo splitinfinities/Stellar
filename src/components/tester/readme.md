@@ -5,43 +5,36 @@
 <!-- Auto Generated Below -->
 
 
-## Methods
-
-### `new_options() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
-
-
 ## Dependencies
 
 ### Depends on
 
+- [stellar-layout](../ui/layout)
+- [copy-wrap](../ui/copy-wrap)
 - [stellar-form](../forms/form)
-- [stellar-select](../forms/select)
-- [stellar-item](../forms/item)
+- [stellar-grid](../ui/grid)
+- [stellar-input](../forms/input)
+- [stellar-asset](../ui/asset)
+- [stellar-button](../forms/button)
 
 ### Graph
 ```mermaid
 graph TD;
+  stellar-tester --> stellar-layout
+  stellar-tester --> copy-wrap
   stellar-tester --> stellar-form
-  stellar-tester --> stellar-select
-  stellar-tester --> stellar-item
-  stellar-select --> stellar-label
-  stellar-select --> stellar-button
-  stellar-select --> stellar-asset
-  stellar-select --> stellar-item
-  stellar-select --> stellar-tooltip
-  stellar-select --> stellar-blur
+  stellar-tester --> stellar-grid
+  stellar-tester --> stellar-input
+  stellar-tester --> stellar-asset
+  stellar-tester --> stellar-button
+  stellar-input --> stellar-label
+  stellar-input --> copy-wrap
+  stellar-input --> stellar-asset
+  stellar-input --> stellar-unit
+  stellar-input --> stellar-tooltip
+  stellar-asset --> stellar-icon
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
-  stellar-asset --> stellar-icon
-  stellar-item --> stellar-asset
   style stellar-tester fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
