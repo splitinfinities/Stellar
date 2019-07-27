@@ -483,7 +483,7 @@ export class Select {
             <stellar-item fit wrap select-title type="button" value={this.value ? this.value.toString() : ""} tabindex="-1" selectable={false} label={this.readable_value()}>
               {this.readable_value()}
             </stellar-item>
-            <stellar-asset name="arrow-dropdown" />
+            <stellar-asset name="arrow-down" />
 
             { this.name && <input type="text" tabindex="-1" value={this.value} name={this.name.toString()} required={this.required} /> }
           </button>

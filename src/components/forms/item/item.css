@@ -104,9 +104,9 @@
 }
 
 :host([fit]) stellar-asset.selected {
-  height: 50%;
-  font-size: 2em;
-  margin-right: 0.5em;
+  height: 75%;
+  font-size: 3em;
+  margin-right: 0.125em;
 }
 
 :host(:hover) .selected,
