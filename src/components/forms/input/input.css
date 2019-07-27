@@ -68,7 +68,7 @@
 
 :host ::selection,
 :host *::selection {
-  background: var(--theme-base0) !important;
+  background: var(--theme-base2) !important;
 }
 
 :host([type="textarea"]) .wrapper {

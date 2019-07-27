@@ -256,6 +256,11 @@
   --theme-placeholder-color: var(--gray4);
 }
 
+::selection,
+*::selection {
+  background: var(--theme-base2) !important;
+}
+
 html {
   font-family: var(--font-body, var(--font-system));
   color: var(--theme-copy-base);

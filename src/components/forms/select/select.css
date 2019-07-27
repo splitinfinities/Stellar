@@ -27,7 +27,7 @@
 
 :host ::selection,
 :host *::selection {
-  background: var(--theme-base0) !important;
+  background: var(--theme-base2) !important;
 }
 
 :host *,
@@ -338,11 +338,6 @@ stellar-input .validation span + span {
     --color: var(--white);
     --border-color: var(--gray9);
   }
-}
-
-:host ::selection,
-:host *::selection {
-  background: var(--theme-base0) !important;
 }
 
 @keyframes fadeIn {
