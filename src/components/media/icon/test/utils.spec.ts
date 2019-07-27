@@ -11,7 +11,7 @@ describe('getUrl', () => {
 
   it('use icon prop, as name', () => {
     i.icon = 'some-name';
-    expect(getUrl(i)).toBe('/svg/md-some-name.svg');
+    expect(getUrl(i)).toBe('/svg/ios-some-name.svg');
   });
 
   it('use icon prop, as url', () => {
@@ -24,7 +24,7 @@ describe('getUrl', () => {
       md: './md-imported.svg',
       ios: './ios-imported.svg'
     };
-    expect(getUrl(i)).toBe('./md-imported.svg');
+    expect(getUrl(i)).toBe('./ios-imported.svg');
   });
 
   it('use icon prop, as an object of modes, md mode', () => {
@@ -72,7 +72,7 @@ describe('getUrl', () => {
   it('use name prop, default md mode', () => {
     i.name = 'some-name';
     i.icon = 'some-icon';
-    expect(getUrl(i)).toBe('/svg/md-some-name.svg');
+    expect(getUrl(i)).toBe('/svg/ios-some-name.svg');
   });
 
   it('use src prop', () => {

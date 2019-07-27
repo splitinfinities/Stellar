@@ -130,7 +130,7 @@ export class Icon {
   }
 
   render() {
-    const mode = this.mode || 'md';
+    const mode = this.mode || 'ios';
     const flipRtl = this.flipRtl || (this.ariaLabel && this.ariaLabel.indexOf('arrow') > -1 && this.flipRtl !== false);
 
     return (
@@ -149,5 +149,5 @@ export class Icon {
 }
 
 const getStellarMode = (ref: any) => {
-  return getMode(ref) || document.documentElement.getAttribute('mode') || 'md';
+  return getMode(ref) || document.documentElement.getAttribute('mode') || 'ios';
 };
