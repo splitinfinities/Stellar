@@ -79,6 +79,10 @@
   position: relative;
 }
 
+:host stellar-tooltip {
+  width: calc(100% - 1.5em);
+}
+
 :host input,
 :host textarea,
 :host .tags-input,
