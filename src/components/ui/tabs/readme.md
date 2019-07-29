@@ -178,17 +178,18 @@
 
 ## Properties
 
-| Property        | Attribute        | Description | Type                                       | Default     |
-| --------------- | ---------------- | ----------- | ------------------------------------------ | ----------- |
-| `behavior`      | `behavior`       |             | `string`                                   | `undefined` |
-| `block`         | `block`          |             | `boolean`                                  | `false`     |
-| `dark`          | `dark`           |             | `boolean`                                  | `false`     |
-| `flipIndicator` | `flip-indicator` |             | `boolean`                                  | `undefined` |
-| `height`        | `height`         |             | `string`                                   | `undefined` |
-| `name`          | `name`           |             | `string`                                   | `undefined` |
-| `noanimation`   | `noanimation`    |             | `boolean`                                  | `false`     |
-| `size`          | `size`           |             | `"large" \| "medium" \| "small" \| "tiny"` | `undefined` |
-| `vertical`      | `vertical`       |             | `boolean`                                  | `false`     |
+| Property         | Attribute         | Description | Type                                       | Default     |
+| ---------------- | ----------------- | ----------- | ------------------------------------------ | ----------- |
+| `behavior`       | `behavior`        |             | `string`                                   | `undefined` |
+| `block`          | `block`           |             | `boolean`                                  | `false`     |
+| `blockIndicator` | `block-indicator` |             | `boolean`                                  | `undefined` |
+| `dark`           | `dark`            |             | `boolean`                                  | `false`     |
+| `flipIndicator`  | `flip-indicator`  |             | `boolean`                                  | `undefined` |
+| `height`         | `height`          |             | `string`                                   | `undefined` |
+| `name`           | `name`            |             | `string`                                   | `undefined` |
+| `noanimation`    | `noanimation`     |             | `boolean`                                  | `false`     |
+| `size`           | `size`            |             | `"large" \| "medium" \| "small" \| "tiny"` | `undefined` |
+| `vertical`       | `vertical`        |             | `boolean`                                  | `false`     |
 
 
 ## Methods

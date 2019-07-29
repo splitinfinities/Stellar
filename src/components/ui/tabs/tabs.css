@@ -120,16 +120,11 @@
   margin: 0 3px;
 }
 
-:host([block]) .tab-list ::slotted(stellar-tab) {
-  width: 100%;
-  flex: 12 12 100%;
-}
-
 :host([block]) ::slotted(stellar-tab[open="true"]) {
   color: var(--theme-base5) !important;
 }
 
-:host([block]) .indicator {
+:host([block-indicator]) .indicator {
   height: calc(100% - 6px);
   background: var(--theme-base1);
   top: 3px;

@@ -853,6 +853,7 @@ export namespace Components {
   interface StellarTabs {
     'behavior': string;
     'block': boolean;
+    'blockIndicator': boolean;
     'blurring': () => Promise<void>;
     'contents': () => Promise<any[]>;
     'dark': boolean;
@@ -2461,6 +2462,7 @@ declare namespace LocalJSX {
   interface StellarTabs extends JSXBase.HTMLAttributes<HTMLStellarTabsElement> {
     'behavior'?: string;
     'block'?: boolean;
+    'blockIndicator'?: boolean;
     'dark'?: boolean;
     'flipIndicator'?: boolean;
     'height'?: string;

@@ -20,6 +20,7 @@ export class Tabs {
   @Prop({reflect: true}) dark: boolean = false;
   @Prop({reflect: true}) behavior: string;
   @Prop({reflect: true}) flipIndicator: boolean;
+  @Prop({reflect: true}) blockIndicator: boolean;
 
   @State() tabsList: Array<HTMLStellarTabElement>;
   @State() contentsList: Array<HTMLStellarContentElement>;
