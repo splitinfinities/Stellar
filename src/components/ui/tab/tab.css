@@ -2,11 +2,12 @@
   --color: var(--theme-base7);
   --focus-color: var(--theme-base8);
   --active-color: var(--theme-base9);
+  --height: 100%;
   display: block;
   z-index: 2;
   position: relative;
   font-size: var(--font-size);
-  height: 100%;
+  height: var(--height);
 }
 
 :host .tab-wrap {
@@ -19,7 +20,7 @@
   padding: var(--padding);
   color: var(--color);
   font-size: var(--font-size);
-  height: 100%;
+  height: var(--height);
 }
 
 :host-context(stellar-tabs[vertical]):host .tab-wrap,
