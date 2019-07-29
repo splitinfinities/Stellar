@@ -9,6 +9,7 @@
 
 | Property        | Attribute       | Description | Type                | Default     |
 | --------------- | --------------- | ----------- | ------------------- | ----------- |
+| `dark`          | `dark`          |             | `boolean`           | `false`     |
 | `disabled`      | `disabled`      |             | `boolean`           | `false`     |
 | `name`          | `name`          |             | `string`            | `undefined` |
 | `notifications` | `notifications` |             | `boolean \| number` | `false`     |

@@ -1,6 +1,7 @@
 :host {
   --font-size: var(--ms0);
   --padding: calc(var(--ms0) + 0.4em) var(--ms0);
+  --indicator-color: var(--theme-base5);
   font-size: var(--font-size);
   display: block;
   position: relative;
@@ -49,9 +50,14 @@
   position: absolute;
   bottom: -.1em;
   left: var(--tab-left, 0);
-  background: var(--theme-base5);
+  background: var(--indicator-color);
   width: var(--tab-width, 0);
   height: 0.4em;
+}
+
+:host([flip-indicator]) .indicator {
+  top: -.1em;
+  bottom: initial;
 }
 
 :host .indicator.ready {
@@ -168,4 +174,18 @@
   :host([block]) {
     border: 1px solid var(--theme-base9);
   }
+}
+
+
+:host([dark]) {
+  border-bottom: 1px solid var(--theme-base9);
+  background: var(--black);
+}
+
+:host([dark]) .indicator {
+  background: var(--theme-base5);
+}
+
+:host([block][dark]) {
+  border: 1px solid var(--theme-base9);
 }

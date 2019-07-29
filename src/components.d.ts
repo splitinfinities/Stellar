@@ -836,6 +836,7 @@ export namespace Components {
     'checkedDefault': boolean;
   }
   interface StellarTab {
+    'dark': boolean;
     'disabled': boolean;
     'name': string;
     'notifications': boolean|number;
@@ -854,6 +855,8 @@ export namespace Components {
     'block': boolean;
     'blurring': () => Promise<void>;
     'contents': () => Promise<any[]>;
+    'dark': boolean;
+    'flipIndicator': boolean;
     'height': string;
     'name': string;
     'noanimation': boolean;
@@ -2440,6 +2443,7 @@ declare namespace LocalJSX {
     'onUpdate'?: (event: CustomEvent<any>) => void;
   }
   interface StellarTab extends JSXBase.HTMLAttributes<HTMLStellarTabElement> {
+    'dark'?: boolean;
     'disabled'?: boolean;
     'name'?: string;
     'notifications'?: boolean|number;
@@ -2457,6 +2461,8 @@ declare namespace LocalJSX {
   interface StellarTabs extends JSXBase.HTMLAttributes<HTMLStellarTabsElement> {
     'behavior'?: string;
     'block'?: boolean;
+    'dark'?: boolean;
+    'flipIndicator'?: boolean;
     'height'?: string;
     'name'?: string;
     'noanimation'?: boolean;

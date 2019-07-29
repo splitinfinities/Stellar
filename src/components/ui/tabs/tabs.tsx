@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method, h } from '@stencil/core';
+import { Component, Prop, State, Element, Method, h, Watch } from '@stencil/core';
 import { blurringEase } from '../../../utils';
 
 @Component({
@@ -17,7 +17,9 @@ export class Tabs {
   @Prop({reflect: true}) size: "tiny"|"small"|"medium"|"large";
   @Prop({reflect: true}) block: boolean = false;
   @Prop({reflect: true}) vertical: boolean = false;
+  @Prop({reflect: true}) dark: boolean = false;
   @Prop({reflect: true}) behavior: string;
+  @Prop({reflect: true}) flipIndicator: boolean;
 
   @State() tabsList: Array<HTMLStellarTabElement>;
   @State() contentsList: Array<HTMLStellarContentElement>;
@@ -59,6 +61,19 @@ export class Tabs {
   async componentWillLoad () {
     await this.tabs();
     await this.contents();
+
+    if (this.dark) {
+      this.tabsList.forEach((tab) => {
+        tab.dark = this.dark;
+      })
+    }
+  }
+
+  @Watch('dark')
+  handleDark() {
+    this.tabsList.forEach((tab) => {
+      tab.dark = this.dark;
+    })
   }
 
   async componentDidLoad () {

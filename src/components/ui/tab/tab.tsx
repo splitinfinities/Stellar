@@ -13,6 +13,7 @@ export class Tab {
   @Prop({mutable: true, reflect: true}) name: string;
   @Prop() disabled: boolean = false
   @Prop({mutable: true, reflect: true}) open: boolean = false
+  @Prop({mutable: true, reflect: true}) dark: boolean = false
   @Prop() notifications: boolean|number = false
 
   @Prop({reflect: true}) order: number
