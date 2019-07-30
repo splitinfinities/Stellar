@@ -838,11 +838,20 @@ export namespace Components {
   interface StellarTab {
     'dark': boolean;
     'disabled': boolean;
+    /**
+    * Sets the href on the anchor tag if the button is a link.
+    */
+    'href': string;
     'name': string;
     'notifications': boolean|number;
     'open': boolean;
     'order': number;
     'tabCount': number;
+    'tag': "button"|"link"|"route-link";
+    /**
+    * Sets the target on the anchor tag if the button is a link.
+    */
+    'target': string;
   }
   interface StellarTable {
     'chart': boolean;
@@ -2446,12 +2455,21 @@ declare namespace LocalJSX {
   interface StellarTab extends JSXBase.HTMLAttributes<HTMLStellarTabElement> {
     'dark'?: boolean;
     'disabled'?: boolean;
+    /**
+    * Sets the href on the anchor tag if the button is a link.
+    */
+    'href'?: string;
     'name'?: string;
     'notifications'?: boolean|number;
     'onContentChange'?: (event: CustomEvent<any>) => void;
     'open'?: boolean;
     'order'?: number;
     'tabCount'?: number;
+    'tag'?: "button"|"link"|"route-link";
+    /**
+    * Sets the target on the anchor tag if the button is a link.
+    */
+    'target'?: string;
   }
   interface StellarTable extends JSXBase.HTMLAttributes<HTMLStellarTableElement> {
     'chart'?: boolean;

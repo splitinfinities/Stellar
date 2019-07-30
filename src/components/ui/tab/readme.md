@@ -7,15 +7,18 @@
 
 ## Properties
 
-| Property        | Attribute       | Description | Type                | Default     |
-| --------------- | --------------- | ----------- | ------------------- | ----------- |
-| `dark`          | `dark`          |             | `boolean`           | `false`     |
-| `disabled`      | `disabled`      |             | `boolean`           | `false`     |
-| `name`          | `name`          |             | `string`            | `undefined` |
-| `notifications` | `notifications` |             | `boolean \| number` | `false`     |
-| `open`          | `open`          |             | `boolean`           | `false`     |
-| `order`         | `order`         |             | `number`            | `undefined` |
-| `tabCount`      | `tab-count`     |             | `number`            | `undefined` |
+| Property        | Attribute       | Description                                                | Type                                 | Default     |
+| --------------- | --------------- | ---------------------------------------------------------- | ------------------------------------ | ----------- |
+| `dark`          | `dark`          |                                                            | `boolean`                            | `false`     |
+| `disabled`      | `disabled`      |                                                            | `boolean`                            | `false`     |
+| `href`          | `href`          | Sets the href on the anchor tag if the button is a link.   | `string`                             | `'#'`       |
+| `name`          | `name`          |                                                            | `string`                             | `undefined` |
+| `notifications` | `notifications` |                                                            | `boolean \| number`                  | `false`     |
+| `open`          | `open`          |                                                            | `boolean`                            | `false`     |
+| `order`         | `order`         |                                                            | `number`                             | `undefined` |
+| `tabCount`      | `tab-count`     |                                                            | `number`                             | `undefined` |
+| `tag`           | `tag`           |                                                            | `"button" \| "link" \| "route-link"` | `"button"`  |
+| `target`        | `target`        | Sets the target on the anchor tag if the button is a link. | `string`                             | `'_self'`   |
 
 
 ## Events
@@ -34,11 +37,13 @@
 ### Depends on
 
 - [stellar-tag](../tag)
+- stencil-route-link
 
 ### Graph
 ```mermaid
 graph TD;
   stellar-tab --> stellar-tag
+  stellar-tab --> stencil-route-link
   stellar-tag --> stellar-label
   stellar-docs-component --> stellar-tab
   style stellar-tab fill:#f9f,stroke:#333,stroke-width:4px

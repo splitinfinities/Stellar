@@ -48,6 +48,7 @@ graph TD;
   stellar-docs-component --> context-consumer
   stellar-tabs --> stellar-blur
   stellar-tab --> stellar-tag
+  stellar-tab --> stencil-route-link
   stellar-tag --> stellar-label
   stellar-code --> stellar-card
   stellar-card --> stellar-button

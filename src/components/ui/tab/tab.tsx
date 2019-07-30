@@ -1,5 +1,5 @@
 import { Component, Prop, State, Element, Listen, Event, EventEmitter, h } from '@stencil/core'
-import { properties } from '../../../utils'
+import { properties, delay } from '../../../utils'
 
 @Component({
   tag: 'stellar-tab',
@@ -15,6 +15,17 @@ export class Tab {
   @Prop({mutable: true, reflect: true}) open: boolean = false
   @Prop({mutable: true, reflect: true}) dark: boolean = false
   @Prop() notifications: boolean|number = false
+  @Prop() tag: "button"|"link"|"route-link" = "button";
+
+  /**
+  * Sets the href on the anchor tag if the button is a link.
+  */
+  @Prop() href: string = '#';
+
+  /**
+   * Sets the target on the anchor tag if the button is a link.
+   */
+  @Prop() target: string = '_self';
 
   @Prop({reflect: true}) order: number
   @Prop({reflect: true}) tabCount: number
@@ -50,10 +61,15 @@ export class Tab {
     if (!this.disabled) {
       e.preventDefault()
 
-      this.contentChange.emit({
-        parent: this.parent,
-        name: this.name.replace(/[#]/g, "")
-      });
+      if (this.tag === "button") {
+        this.contentChange.emit({
+          parent: this.parent,
+          name: this.name.replace(/[#]/g, "")
+        });
+      } else if (this.tag === "link") {
+        await delay(350)
+        window.location.href = this.href;
+      }
     }
   }
 
@@ -84,12 +100,38 @@ export class Tab {
     </span>
   }
 
-  render() {
-    return <div class="tab-wrap">
-      <button role="tab" type="button" aria-selected={this.open ? "true" : "false" } aria-setsize={this.tabCount} aria-posinset={this.order} tabindex="0" class="tab-button" onClick={(e) => this.handleClick(e)}>
+  renderButton() {
+    return (
+      <button role="tab" type="button" disabled={this.disabled} aria-selected={this.open ? "true" : "false" } aria-setsize={this.tabCount} aria-posinset={this.order} tabindex="0" class="tab-button" onClick={(e) => this.handleClick(e)}>
         {this.renderNotifications()}
         {this.renderTitle()}
       </button>
+    );
+  }
+
+  renderLink() {
+    return (
+      <a role="tab" href={this.href} target={this.target} class="tab-button" data-disabled={this.disabled} onClick={(e) => { this.handleClick(e) }}>
+        {this.renderNotifications()}
+        {this.renderTitle()}
+      </a>
+    );
+  }
+
+  renderAppLink() {
+    return (
+      <stencil-route-link role="tab" url={this.href} anchorClass="tab-button" data-disabled={this.disabled} onClick={(e) => { this.handleClick(e) }}>
+        {this.renderNotifications()}
+        {this.renderTitle()}
+      </stencil-route-link>
+    );
+  }
+
+  render() {
+    return <div class="tab-wrap">
+      { this.tag === "button" && this.renderButton() }
+      { this.tag === "link" && this.renderLink() }
+      { this.tag === "route-link" && this.renderAppLink() }
     </div>
   }
 }
