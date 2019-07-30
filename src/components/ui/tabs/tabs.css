@@ -2,13 +2,13 @@
   --font-size: var(--ms0);
   --padding: calc(var(--ms0) + 0.4em) var(--ms0);
   --indicator-color: var(--theme-base5);
+  --overflow: auto hidden;
   font-size: var(--font-size);
   display: block;
   position: relative;
   margin: 0;
   width: auto;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: var(--overflow);
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: mandatory;
   scroll-snap-points-x: repeat(10%);
@@ -81,10 +81,6 @@
   width: 100%;
 }
 
-:host .tab-wrap[scrollable="false"] {
-  overflow: visible;
-}
-
 :host .tab-wrap[height="flex"],
 :host .tab-wrap[height="flex"] .tab-list {
   height: 100%;
@@ -99,13 +95,13 @@
 }
 
 :host([block]) {
-  overflow: hidden;
+  overflow: var(--overflow);
   border: 1px solid var(--theme-base0);
   width: 100%;
 }
 
 :host([block]) .tab-wrap {
-  overflow: hidden;
+  overflow: var(--overflow);
   display: flex;
   align-items: center;
   justify-content: space-between;
