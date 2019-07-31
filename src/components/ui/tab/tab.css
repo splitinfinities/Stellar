@@ -115,26 +115,6 @@
   background: var(--theme-color-disabled);
 }
 
-@media (prefers-color-scheme: dark) {
-  :host .tab-wrap .tab-button,
-  :host .tab-wrap .tab-button {
-    color: var(--theme-base2);
-  }
-
-  :host .tab-wrap .tab-button:hover,
-  :host .tab-wrap .tab-button:focus {
-    color: var(--theme-base0);
-  }
-
-  :host([open]) .tab-wrap .tab-button {
-    color: var(--white);
-  }
-
-  :host-context(stellar-tabs[block]):host([open]) .tab-wrap .tab-button {
-    color: var(--theme-base9);
-  }
-}
-
 :host([dark]) .tab-wrap .tab-button,
 :host([dark]) .tab-wrap .tab-button {
   color: var(--theme-base2);
