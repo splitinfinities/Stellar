@@ -97,6 +97,11 @@ export class Button {
   /**
    * Sets the button or link as an outlined button.
    */
+  @Prop({reflect: true}) contrast: boolean = false;
+
+  /**
+   * Sets the button or link as an outlined button.
+   */
   @Prop({reflect: true}) dark: boolean = false;
 
   /**

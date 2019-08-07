@@ -117,6 +117,10 @@ export namespace Components {
     */
     'block': boolean;
     /**
+    * Sets the button or link as an outlined button.
+    */
+    'contrast': boolean;
+    /**
     * Sets the button or link to provide the affordance of a dangerous action.
     */
     'danger': boolean;
@@ -1828,6 +1832,10 @@ declare namespace LocalJSX {
     * Sets the button or link to render at full width to the parent.
     */
     'block'?: boolean;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'contrast'?: boolean;
     /**
     * Sets the button or link to provide the affordance of a dangerous action.
     */

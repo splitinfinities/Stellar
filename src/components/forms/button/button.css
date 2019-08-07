@@ -77,7 +77,7 @@
     --active-border: none;
 }
 
-:host([dark]) {
+:host([contrast]) {
     --background: var(--theme-base7);
     --color: var(--white);
     --border: none;

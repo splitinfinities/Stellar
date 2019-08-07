@@ -39,6 +39,7 @@
 | ------------- | ------------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----------- |
 | `active`      | `active`      | Sets the button or link as an active state.                                                           | `boolean`                                                  | `false`     |
 | `block`       | `block`       | Sets the button or link to render at full width to the parent.                                        | `boolean`                                                  | `false`     |
+| `contrast`    | `contrast`    | Sets the button or link as an outlined button.                                                        | `boolean`                                                  | `false`     |
 | `danger`      | `danger`      | Sets the button or link to provide the affordance of a dangerous action.                              | `boolean`                                                  | `false`     |
 | `dark`        | `dark`        | Sets the button or link as an outlined button.                                                        | `boolean`                                                  | `false`     |
 | `disabled`    | `disabled`    | Sets the button or link as disabled and not-interactable.                                             | `boolean`                                                  | `false`     |
