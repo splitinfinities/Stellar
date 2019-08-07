@@ -36,9 +36,11 @@ export class Select {
   @Prop({ mutable: true, reflect: true }) value: Array<string>|string;
   @Prop() valueLabel: string = undefined;
   @Prop() default: any;
-  @Prop() loading: boolean = false;
-  @Prop() fit: boolean = false;
-  @Prop() wrap: boolean = false;
+  @Prop({reflect: true}) loading: boolean = false;
+  @Prop({reflect: true}) fit: boolean = false;
+  @Prop({reflect: true}) wrap: boolean = false;
+  @Prop({reflect: true}) resize: boolean = false;
+
   /**
    * Sets the button or link as an outlined button.
    */

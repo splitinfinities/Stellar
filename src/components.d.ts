@@ -518,7 +518,7 @@ export namespace Components {
     * Sets the button or link as an outlined button.
     */
     'dark': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>;
+    'data': () => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: string; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -751,6 +751,7 @@ export namespace Components {
     'placeholderInverted': boolean;
     'processing': boolean;
     'required': boolean;
+    'resize': boolean;
     'size': "tiny"|"small"|"medium"|"large";
     'tooltip': string;
     'update_values': () => Promise<void>;
@@ -2449,6 +2450,7 @@ declare namespace LocalJSX {
     'placeholderInverted'?: boolean;
     'processing'?: boolean;
     'required'?: boolean;
+    'resize'?: boolean;
     'size'?: "tiny"|"small"|"medium"|"large";
     'tooltip'?: string;
     'value'?: Array<string>|string;

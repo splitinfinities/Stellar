@@ -147,6 +147,23 @@
   border-radius: var(--border-radius);
 }
 
+:host([resize]) .select-list {
+  resize: both;
+}
+
+:host([resize]) .select-list::after {
+  content: "";
+  display: block;
+  height: .5rem !important;
+  max-height: .5rem !important;
+  min-height: .5rem !important;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: sticky;
+}
+
 :host .select-list ::slotted(stellar-item) {
   color: var(--color);
   border-bottom: 1px solid var(--gray0);

@@ -45,7 +45,7 @@ export class DocsHeader {
         </copy-wrap>
         <stellar-card>
           <stellar-grid compact>
-            <stellar-select label="Primary color" onUpdate={(e) => { this.theme = e.detail }} size="small" overlay>
+            <stellar-select label="Primary color" resize onUpdate={(e) => { this.theme = e.detail }} size="small" overlay>
               <stellar-item value="red" selected>Red</stellar-item>
               <stellar-item value="orange">Orange</stellar-item>
               <stellar-item value="yellow">Yellow</stellar-item>
@@ -61,7 +61,7 @@ export class DocsHeader {
               <stellar-item value="gray">Gray</stellar-item>
             </stellar-select>
 
-            <stellar-select label="Secondary color" onUpdate={(e) => { this.complement = e.detail }} size="small" overlay>
+            <stellar-select label="Secondary color" resize onUpdate={(e) => { this.complement = e.detail }} size="small" overlay>
               <stellar-item value="red">Red</stellar-item>
               <stellar-item value="orange">Orange</stellar-item>
               <stellar-item value="yellow">Yellow</stellar-item>
