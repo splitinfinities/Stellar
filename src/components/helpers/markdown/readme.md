@@ -57,14 +57,19 @@ graph TD;
   stellar-markdown --> stellar-input
   stellar-card --> stellar-button
   stellar-card --> stellar-asset
+  stellar-card --> context-consumer
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
+  stellar-button --> context-consumer
   stellar-asset --> stellar-icon
   stellar-input --> stellar-label
   stellar-input --> copy-wrap
   stellar-input --> stellar-asset
   stellar-input --> stellar-unit
   stellar-input --> stellar-tooltip
+  stellar-input --> context-consumer
+  stellar-label --> context-consumer
+  stellar-tooltip --> context-consumer
   stellar-docs-component --> stellar-markdown
   stellar-docs-page --> stellar-markdown
   style stellar-markdown fill:#f9f,stroke:#333,stroke-width:4px

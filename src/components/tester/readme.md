@@ -31,10 +31,15 @@ graph TD;
   stellar-select --> stellar-item
   stellar-select --> stellar-tooltip
   stellar-select --> stellar-blur
+  stellar-select --> context-consumer
+  stellar-label --> context-consumer
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
+  stellar-button --> context-consumer
   stellar-asset --> stellar-icon
   stellar-item --> stellar-asset
+  stellar-item --> context-consumer
+  stellar-tooltip --> context-consumer
   style stellar-tester fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

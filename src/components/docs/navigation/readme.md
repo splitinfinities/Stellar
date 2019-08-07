@@ -40,15 +40,21 @@ graph TD;
   stellar-docs-navigation --> stellar-tag
   stellar-docs-navigation --> context-consumer
   stellar-item --> stellar-asset
+  stellar-item --> context-consumer
   stellar-asset --> stellar-icon
   stellar-card --> stellar-button
   stellar-card --> stellar-asset
+  stellar-card --> context-consumer
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
+  stellar-button --> context-consumer
   stellar-accordion --> stellar-button
   stellar-accordion --> stellar-asset
   stellar-accordion --> stellar-blur
+  stellar-accordion --> context-consumer
   stellar-tag --> stellar-label
+  stellar-tag --> context-consumer
+  stellar-label --> context-consumer
   stellar-docs-component --> stellar-docs-navigation
   stellar-docs-home --> stellar-docs-navigation
   stellar-docs-page --> stellar-docs-navigation

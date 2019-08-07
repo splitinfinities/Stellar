@@ -25,6 +25,7 @@
 ```mermaid
 graph TD;
   stellar-table --> stellar-chart
+  stellar-chart --> context-consumer
   style stellar-table fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

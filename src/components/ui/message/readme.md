@@ -76,6 +76,7 @@
 | Property   | Attribute  | Description | Type                                        | Default     |
 | ---------- | ---------- | ----------- | ------------------------------------------- | ----------- |
 | `closable` | `closable` |             | `boolean`                                   | `true`      |
+| `dark`     | `dark`     |             | `boolean`                                   | `false`     |
 | `name`     | `name`     |             | `string`                                    | `"stellar"` |
 | `remember` | `remember` |             | `boolean`                                   | `true`      |
 | `shown`    | `shown`    |             | `boolean`                                   | `true`      |
@@ -93,11 +94,13 @@
 ### Depends on
 
 - [stellar-asset](../asset)
+- context-consumer
 
 ### Graph
 ```mermaid
 graph TD;
   stellar-message --> stellar-asset
+  stellar-message --> context-consumer
   stellar-asset --> stellar-icon
   stellar-docs-header --> stellar-message
   style stellar-message fill:#f9f,stroke:#333,stroke-width:4px

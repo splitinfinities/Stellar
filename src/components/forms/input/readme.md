@@ -51,6 +51,7 @@
 | `autofocus`           | `autofocus`             |                                                          | `boolean`                    | `false`           |
 | `color`               | `color`                 |                                                          | `string`                     | `"theme"`         |
 | `cols`                | `cols`                  |                                                          | `number`                     | `30`              |
+| `dark`                | `dark`                  | Sets the button or link as an outlined button.           | `boolean`                    | `false`           |
 | `dateType`            | `date-type`             |                                                          | `"day" \| "month" \| "year"` | `"month"`         |
 | `default`             | `default`               | The pre-set value to pass to the input element           | `any`                        | `undefined`       |
 | `description`         | `description`           |                                                          | `string`                     | `undefined`       |
@@ -182,6 +183,7 @@ Type: `Promise<FormResult>`
 - [stellar-asset](../../ui/asset)
 - [stellar-unit](../../helpers/unit)
 - [stellar-tooltip](../../ui/tooltip)
+- context-consumer
 
 ### Graph
 ```mermaid
@@ -191,7 +193,10 @@ graph TD;
   stellar-input --> stellar-asset
   stellar-input --> stellar-unit
   stellar-input --> stellar-tooltip
+  stellar-input --> context-consumer
+  stellar-label --> context-consumer
   stellar-asset --> stellar-icon
+  stellar-tooltip --> context-consumer
   stellar-markdown --> stellar-input
   stellar-pagination --> stellar-input
   stellar-stripe --> stellar-input

@@ -38,13 +38,17 @@
 
 - [stellar-tag](../tag)
 - stencil-route-link
+- context-consumer
 
 ### Graph
 ```mermaid
 graph TD;
   stellar-tab --> stellar-tag
   stellar-tab --> stencil-route-link
+  stellar-tab --> context-consumer
   stellar-tag --> stellar-label
+  stellar-tag --> context-consumer
+  stellar-label --> context-consumer
   stellar-docs-component --> stellar-tab
   style stellar-tab fill:#f9f,stroke:#333,stroke-width:4px
 ```

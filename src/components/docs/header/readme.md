@@ -59,21 +59,29 @@ graph TD;
   stellar-docs-header --> stellar-item
   stellar-docs-header --> context-consumer
   stellar-message --> stellar-asset
+  stellar-message --> context-consumer
   stellar-asset --> stellar-icon
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
+  stellar-button --> context-consumer
   stellar-starscape --> stellar-parallax
   stellar-starscape --> stellar-parallax-section
   stellar-tag --> stellar-label
+  stellar-tag --> context-consumer
+  stellar-label --> context-consumer
   stellar-card --> stellar-button
   stellar-card --> stellar-asset
+  stellar-card --> context-consumer
   stellar-select --> stellar-label
   stellar-select --> stellar-button
   stellar-select --> stellar-asset
   stellar-select --> stellar-item
   stellar-select --> stellar-tooltip
   stellar-select --> stellar-blur
+  stellar-select --> context-consumer
   stellar-item --> stellar-asset
+  stellar-item --> context-consumer
+  stellar-tooltip --> context-consumer
   stellar-docs-component --> stellar-docs-header
   stellar-docs-home --> stellar-docs-header
   stellar-docs-page --> stellar-docs-header

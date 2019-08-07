@@ -113,6 +113,7 @@
 | Property  | Attribute | Description | Type                                                                                                                                        | Default    |
 | --------- | --------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | `align`   | `align`   |             | `"bottom-center" \| "bottom-left" \| "bottom-right" \| "center" \| "left" \| "middle-center" \| "middle-left" \| "middle-right" \| "right"` | `"center"` |
+| `dark`    | `dark`    |             | `boolean`                                                                                                                                   | `false`    |
 | `focused` | `focused` |             | `boolean`                                                                                                                                   | `false`    |
 
 
@@ -126,9 +127,14 @@
  - [stellar-select](../../forms/select)
  - [stellar-toggle-option](../../forms/toggle-option)
 
+### Depends on
+
+- context-consumer
+
 ### Graph
 ```mermaid
 graph TD;
+  stellar-tooltip --> context-consumer
   stellar-avatar --> stellar-tooltip
   stellar-group-overflow --> stellar-tooltip
   stellar-input --> stellar-tooltip

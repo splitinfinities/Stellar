@@ -27,6 +27,7 @@
 ```mermaid
 graph TD;
   stellar-group-overflow --> stellar-tooltip
+  stellar-tooltip --> context-consumer
   stellar-group --> stellar-group-overflow
   style stellar-group-overflow fill:#f9f,stroke:#333,stroke-width:4px
 ```

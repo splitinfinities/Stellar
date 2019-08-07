@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property        | Attribute       | Description | Type      | Default  |
-| --------------- | --------------- | ----------- | --------- | -------- |
-| `notransparent` | `notransparent` |             | `boolean` | `false`  |
-| `val`           | `val`           |             | `string`  | `"none"` |
+| Property        | Attribute       | Description                                    | Type      | Default  |
+| --------------- | --------------- | ---------------------------------------------- | --------- | -------- |
+| `dark`          | `dark`          | Sets the button or link as an outlined button. | `boolean` | `false`  |
+| `notransparent` | `notransparent` |                                                | `boolean` | `false`  |
+| `val`           | `val`           |                                                | `string`  | `"none"` |
 
 
 ## Events
@@ -26,9 +27,14 @@
 
  - [stellar-playlist](../../media/playlist)
 
+### Depends on
+
+- context-consumer
+
 ### Graph
 ```mermaid
 graph TD;
+  stellar-color-picker --> context-consumer
   stellar-playlist --> stellar-color-picker
   style stellar-color-picker fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -10,6 +10,7 @@
 | Property | Attribute | Description | Type                                                                                                                              | Default               |
 | -------- | --------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
 | `config` | --        |             | `HighchartsModel`                                                                                                                 | `new HighchartsModel` |
+| `dark`   | `dark`    |             | `boolean`                                                                                                                         | `false`               |
 | `for`    | `for`     |             | `string`                                                                                                                          | `undefined`           |
 | `remote` | `remote`  |             | `string`                                                                                                                          | `undefined`           |
 | `type`   | `type`    |             | `"area" \| "areaspline" \| "bar" \| "bubble" \| "column" \| "line" \| "pie" \| "polygon" \| "scatter" \| "spline" \| "waterfall"` | `undefined`           |
@@ -54,9 +55,14 @@ Type: `Promise<void>`
 
  - [stellar-table](../../ui/table)
 
+### Depends on
+
+- context-consumer
+
 ### Graph
 ```mermaid
 graph TD;
+  stellar-chart --> context-consumer
   stellar-table --> stellar-chart
   style stellar-chart fill:#f9f,stroke:#333,stroke-width:4px
 ```

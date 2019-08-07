@@ -71,6 +71,7 @@
 | Property     | Attribute    | Description | Type                                                                                   | Default     |
 | ------------ | ------------ | ----------- | -------------------------------------------------------------------------------------- | ----------- |
 | `color`      | `color`      |             | `string`                                                                               | `"auto"`    |
+| `dark`       | `dark`       |             | `boolean`                                                                              | `false`     |
 | `initials`   | `initials`   |             | `string`                                                                               | `"ST"`      |
 | `name`       | `name`       |             | `string`                                                                               | `"Stellar"` |
 | `notooltip`  | `notooltip`  |             | `boolean`                                                                              | `false`     |
@@ -90,11 +91,13 @@
 
 - [stellar-avatar]()
 - [stellar-tooltip](../tooltip)
+- context-consumer
 
 ### Graph
 ```mermaid
 graph TD;
   stellar-avatar --> stellar-avatar
+  stellar-tooltip --> context-consumer
   style stellar-avatar fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

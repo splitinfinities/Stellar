@@ -11,6 +11,7 @@
 | -------------------- | --------------------- | ----------- | ----------------------------------------- | ------------ |
 | `artwork`            | `artwork`             |             | `boolean`                                 | `false`      |
 | `autoplay`           | `autoplay`            |             | `boolean`                                 | `false`      |
+| `dark`               | `dark`                |             | `boolean`                                 | `false`      |
 | `load`               | `load`                |             | `boolean`                                 | `false`      |
 | `loading`            | `loading`             |             | `boolean`                                 | `false`      |
 | `name`               | `name`                |             | `string`                                  | `"Playlist"` |
@@ -92,6 +93,7 @@ Type: `Promise<void>`
 - [stellar-progress](../../forms/progress)
 - [skeleton-img](../skeleton-img)
 - [web-audio-visualizer](../../audio/web-audio-visualizer)
+- context-consumer
 
 ### Graph
 ```mermaid
@@ -102,9 +104,13 @@ graph TD;
   stellar-playlist --> stellar-progress
   stellar-playlist --> skeleton-img
   stellar-playlist --> web-audio-visualizer
+  stellar-playlist --> context-consumer
   stellar-asset --> stellar-icon
+  stellar-color-picker --> context-consumer
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
+  stellar-button --> context-consumer
+  stellar-progress --> context-consumer
   skeleton-img --> stellar-asset
   skeleton-img --> stellar-intersection
   style stellar-playlist fill:#f9f,stroke:#333,stroke-width:4px

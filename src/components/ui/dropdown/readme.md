@@ -58,6 +58,7 @@
 
 | Property   | Attribute  | Description | Type                            | Default      |
 | ---------- | ---------- | ----------- | ------------------------------- | ------------ |
+| `dark`     | `dark`     |             | `boolean`                       | `false`      |
 | `icon`     | `icon`     |             | `boolean`                       | `false`      |
 | `label`    | `label`    |             | `string`                        | `"Dropdown"` |
 | `open`     | `open`     |             | `boolean`                       | `false`      |
@@ -70,12 +71,14 @@
 
 - [stellar-asset](../asset)
 - [stellar-blur](../../motion/blur)
+- context-consumer
 
 ### Graph
 ```mermaid
 graph TD;
   stellar-dropdown --> stellar-asset
   stellar-dropdown --> stellar-blur
+  stellar-dropdown --> context-consumer
   stellar-asset --> stellar-icon
   style stellar-dropdown fill:#f9f,stroke:#333,stroke-width:4px
 ```

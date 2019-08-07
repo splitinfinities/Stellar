@@ -33,6 +33,7 @@
 ```mermaid
 graph TD;
   stellar-step --> stellar-label
+  stellar-label --> context-consumer
   style stellar-step fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

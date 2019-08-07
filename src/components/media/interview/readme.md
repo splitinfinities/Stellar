@@ -88,6 +88,7 @@ graph TD;
   skeleton-img --> stellar-asset
   skeleton-img --> stellar-intersection
   stellar-asset --> stellar-icon
+  stellar-progress --> context-consumer
   style stellar-interview fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -47,14 +47,21 @@ graph TD;
   stellar-docs-component --> stellar-item
   stellar-docs-component --> context-consumer
   stellar-tabs --> stellar-blur
+  stellar-tabs --> context-consumer
   stellar-tab --> stellar-tag
   stellar-tab --> stencil-route-link
+  stellar-tab --> context-consumer
   stellar-tag --> stellar-label
+  stellar-tag --> context-consumer
+  stellar-label --> context-consumer
   stellar-code --> stellar-card
+  stellar-code --> context-consumer
   stellar-card --> stellar-button
   stellar-card --> stellar-asset
+  stellar-card --> context-consumer
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
+  stellar-button --> context-consumer
   stellar-asset --> stellar-icon
   stellar-docs-header --> stellar-message
   stellar-docs-header --> stellar-asset
@@ -70,6 +77,7 @@ graph TD;
   stellar-docs-header --> stellar-item
   stellar-docs-header --> context-consumer
   stellar-message --> stellar-asset
+  stellar-message --> context-consumer
   stellar-starscape --> stellar-parallax
   stellar-starscape --> stellar-parallax-section
   stellar-select --> stellar-label
@@ -78,7 +86,10 @@ graph TD;
   stellar-select --> stellar-item
   stellar-select --> stellar-tooltip
   stellar-select --> stellar-blur
+  stellar-select --> context-consumer
   stellar-item --> stellar-asset
+  stellar-item --> context-consumer
+  stellar-tooltip --> context-consumer
   stellar-docs-navigation --> stellar-item
   stellar-docs-navigation --> stellar-card
   stellar-docs-navigation --> stellar-accordion
@@ -87,6 +98,7 @@ graph TD;
   stellar-accordion --> stellar-button
   stellar-accordion --> stellar-asset
   stellar-accordion --> stellar-blur
+  stellar-accordion --> context-consumer
   stellar-markdown --> stellar-card
   stellar-markdown --> copy-wrap
   stellar-markdown --> stellar-input
@@ -95,6 +107,7 @@ graph TD;
   stellar-input --> stellar-asset
   stellar-input --> stellar-unit
   stellar-input --> stellar-tooltip
+  stellar-input --> context-consumer
   style stellar-docs-component fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

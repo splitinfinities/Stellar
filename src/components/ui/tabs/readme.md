@@ -234,11 +234,13 @@ Type: `Promise<any[]>`
 ### Depends on
 
 - [stellar-blur](../../motion/blur)
+- context-consumer
 
 ### Graph
 ```mermaid
 graph TD;
   stellar-tabs --> stellar-blur
+  stellar-tabs --> context-consumer
   stellar-docs-component --> stellar-tabs
   style stellar-tabs fill:#f9f,stroke:#333,stroke-width:4px
 ```

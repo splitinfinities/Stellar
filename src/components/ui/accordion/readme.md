@@ -21,6 +21,7 @@
 
 | Property | Attribute | Description | Type      | Default          |
 | -------- | --------- | ----------- | --------- | ---------------- |
+| `dark`   | `dark`    |             | `boolean` | `false`          |
 | `label`  | `label`   |             | `string`  | `"More Details"` |
 | `name`   | `name`    |             | `string`  | `"accordion"`    |
 | `open`   | `open`    |             | `boolean` | `false`          |
@@ -52,6 +53,7 @@ Type: `Promise<void>`
 - [stellar-button](../../forms/button)
 - [stellar-asset](../asset)
 - [stellar-blur](../../motion/blur)
+- context-consumer
 
 ### Graph
 ```mermaid
@@ -59,8 +61,10 @@ graph TD;
   stellar-accordion --> stellar-button
   stellar-accordion --> stellar-asset
   stellar-accordion --> stellar-blur
+  stellar-accordion --> context-consumer
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
+  stellar-button --> context-consumer
   stellar-asset --> stellar-icon
   stellar-docs-component --> stellar-accordion
   stellar-docs-navigation --> stellar-accordion

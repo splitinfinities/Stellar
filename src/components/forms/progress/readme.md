@@ -22,6 +22,7 @@
 | Property        | Attribute       | Description                                                                                             | Type      | Default |
 | --------------- | --------------- | ------------------------------------------------------------------------------------------------------- | --------- | ------- |
 | `blurable`      | `blurable`      |                                                                                                         | `boolean` | `true`  |
+| `dark`          | `dark`          | Sets the button or link as an outlined button.                                                          | `boolean` | `false` |
 | `editable`      | `editable`      | Allows the progress bar to be clicked on, to help the user to navigate through the progressing content. | `boolean` | `false` |
 | `indeterminate` | `indeterminate` | Sets the maximum cap for steps in the progress bar                                                      | `boolean` | `false` |
 | `max`           | `max`           | Sets the maximum cap for steps in the progress bar                                                      | `number`  | `100`   |
@@ -47,9 +48,14 @@
  - [stellar-playlist](../../media/playlist)
  - [stellar-video-interview](../../media/video-interview)
 
+### Depends on
+
+- context-consumer
+
 ### Graph
 ```mermaid
 graph TD;
+  stellar-progress --> context-consumer
   stellar-interview --> stellar-progress
   stellar-playlist --> stellar-progress
   stellar-video-interview --> stellar-progress

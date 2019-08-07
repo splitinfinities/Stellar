@@ -190,20 +190,21 @@
 
 ## Properties
 
-| Property      | Attribute     | Description | Type                 | Default      |
-| ------------- | ------------- | ----------- | -------------------- | ------------ |
-| `card`        | `card`        |             | `any`                | `"div"`      |
-| `description` | `description` |             | `string`             | `undefined`  |
-| `flip`        | `flip`        |             | `boolean`            | `false`      |
-| `label`       | `label`       |             | `string`             | `undefined`  |
-| `name`        | `name`        |             | `string`             | `""`         |
-| `novalidate`  | `novalidate`  |             | `boolean`            | `undefined`  |
-| `required`    | `required`    |             | `boolean`            | `undefined`  |
-| `single`      | `single`      |             | `boolean`            | `undefined`  |
-| `size`        | `size`        |             | `string`             | `undefined`  |
-| `stacked`     | `stacked`     |             | `boolean`            | `false`      |
-| `type`        | `type`        |             | `string`             | `"checkbox"` |
-| `value`       | `value`       |             | `string \| string[]` | `undefined`  |
+| Property      | Attribute     | Description                                    | Type                 | Default      |
+| ------------- | ------------- | ---------------------------------------------- | -------------------- | ------------ |
+| `card`        | `card`        |                                                | `any`                | `"div"`      |
+| `dark`        | `dark`        | Sets the button or link as an outlined button. | `boolean`            | `false`      |
+| `description` | `description` |                                                | `string`             | `undefined`  |
+| `flip`        | `flip`        |                                                | `boolean`            | `false`      |
+| `label`       | `label`       |                                                | `string`             | `undefined`  |
+| `name`        | `name`        |                                                | `string`             | `""`         |
+| `novalidate`  | `novalidate`  |                                                | `boolean`            | `undefined`  |
+| `required`    | `required`    |                                                | `boolean`            | `undefined`  |
+| `single`      | `single`      |                                                | `boolean`            | `undefined`  |
+| `size`        | `size`        |                                                | `string`             | `undefined`  |
+| `stacked`     | `stacked`     |                                                | `boolean`            | `false`      |
+| `type`        | `type`        |                                                | `string`             | `"checkbox"` |
+| `value`       | `value`       |                                                | `string \| string[]` | `undefined`  |
 
 
 ## Events
@@ -232,12 +233,15 @@ Type: `Promise<FormResult>`
 
 - [stellar-grid](../../ui/grid)
 - [stellar-label](../label)
+- context-consumer
 
 ### Graph
 ```mermaid
 graph TD;
   stellar-toggle --> stellar-grid
   stellar-toggle --> stellar-label
+  stellar-toggle --> context-consumer
+  stellar-label --> context-consumer
   style stellar-toggle fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

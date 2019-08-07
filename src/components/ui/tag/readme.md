@@ -55,6 +55,7 @@
 | Property    | Attribute    | Description | Type      | Default     |
 | ----------- | ------------ | ----------- | --------- | ----------- |
 | `color`     | `color`      |             | `string`  | `"cyan5"`   |
+| `dark`      | `dark`       |             | `boolean` | `false`     |
 | `outline`   | `outline`    |             | `boolean` | `false`     |
 | `pill`      | `pill`       |             | `boolean` | `false`     |
 | `size`      | `size`       |             | `string`  | `undefined` |
@@ -73,11 +74,14 @@
 ### Depends on
 
 - [stellar-label](../../forms/label)
+- context-consumer
 
 ### Graph
 ```mermaid
 graph TD;
   stellar-tag --> stellar-label
+  stellar-tag --> context-consumer
+  stellar-label --> context-consumer
   stellar-docs-header --> stellar-tag
   stellar-docs-navigation --> stellar-tag
   stellar-tab --> stellar-tag

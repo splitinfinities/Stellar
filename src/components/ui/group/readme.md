@@ -157,6 +157,7 @@
 graph TD;
   stellar-group --> stellar-group-overflow
   stellar-group-overflow --> stellar-tooltip
+  stellar-tooltip --> context-consumer
   style stellar-group fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

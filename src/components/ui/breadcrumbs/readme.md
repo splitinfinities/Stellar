@@ -37,6 +37,7 @@
 | Property      | Attribute     | Description | Type                                       | Default                                        |
 | ------------- | ------------- | ----------- | ------------------------------------------ | ---------------------------------------------- |
 | `color`       | `color`       |             | `string`                                   | `"blue5"`                                      |
+| `dark`        | `dark`        |             | `boolean`                                  | `false`                                        |
 | `description` | `description` |             | `string`                                   | `"An icon that shows the main page you're on"` |
 | `home`        | `home`        |             | `string`                                   | `"/"`                                          |
 | `icon`        | `icon`        |             | `string`                                   | `'analytics'`                                  |
@@ -54,6 +55,7 @@
 - [stellar-breadcrumb](../breadcrumb)
 - [stellar-asset](../asset)
 - [stellar-label](../../forms/label)
+- context-consumer
 
 ### Graph
 ```mermaid
@@ -61,7 +63,10 @@ graph TD;
   stellar-breadcrumbs --> stellar-breadcrumb
   stellar-breadcrumbs --> stellar-asset
   stellar-breadcrumbs --> stellar-label
+  stellar-breadcrumbs --> context-consumer
+  stellar-breadcrumb --> context-consumer
   stellar-asset --> stellar-icon
+  stellar-label --> context-consumer
   style stellar-breadcrumbs fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

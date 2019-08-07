@@ -24,6 +24,7 @@
 | --------- | --------- | ------------------------------------------------------ | --------------------- | ------------- |
 | `color`   | `color`   |                                                        | `string`              | `"gray"`      |
 | `current` | `current` |                                                        | `number`              | `1`           |
+| `dark`    | `dark`    |                                                        | `boolean`             | `false`       |
 | `padding` | `padding` |                                                        | `number`              | `2`           |
 | `pages`   | `pages`   | Public: Sets the max cap of pages you can skip through | `number`              | `1`           |
 | `type`    | `type`    |                                                        | `"compact" \| "full"` | `"full"`      |
@@ -44,6 +45,7 @@
 - [stellar-asset](../asset)
 - [stellar-blur](../../motion/blur)
 - [stellar-input](../../forms/input)
+- context-consumer
 
 ### Graph
 ```mermaid
@@ -51,12 +53,16 @@ graph TD;
   stellar-pagination --> stellar-asset
   stellar-pagination --> stellar-blur
   stellar-pagination --> stellar-input
+  stellar-pagination --> context-consumer
   stellar-asset --> stellar-icon
   stellar-input --> stellar-label
   stellar-input --> copy-wrap
   stellar-input --> stellar-asset
   stellar-input --> stellar-unit
   stellar-input --> stellar-tooltip
+  stellar-input --> context-consumer
+  stellar-label --> context-consumer
+  stellar-tooltip --> context-consumer
   style stellar-pagination fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

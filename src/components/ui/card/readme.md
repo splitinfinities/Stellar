@@ -62,6 +62,7 @@
 
 | Property    | Attribute   | Description                                                                 | Type                                                 | Default     |
 | ----------- | ----------- | --------------------------------------------------------------------------- | ---------------------------------------------------- | ----------- |
+| `dark`      | `dark`      |                                                                             | `boolean`                                            | `false`     |
 | `flip_icon` | `flip_icon` | Sets the href on the anchor tag if the button is a link.                    | `string`                                             | `"cog"`     |
 | `flippable` | `flippable` | Let's a card be flippable                                                   | `boolean`                                            | `false`     |
 | `flipped`   | `flipped`   | Renders a flipped card                                                      | `boolean`                                            | `false`     |
@@ -110,14 +111,17 @@ Type: `Promise<void>`
 
 - [stellar-button](../../forms/button)
 - [stellar-asset](../asset)
+- context-consumer
 
 ### Graph
 ```mermaid
 graph TD;
   stellar-card --> stellar-button
   stellar-card --> stellar-asset
+  stellar-card --> context-consumer
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
+  stellar-button --> context-consumer
   stellar-asset --> stellar-icon
   stellar-code --> stellar-card
   stellar-color-library --> stellar-card
