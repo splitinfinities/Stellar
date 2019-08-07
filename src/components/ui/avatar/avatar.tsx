@@ -1,6 +1,6 @@
 import { Component, Prop, State, Watch, Element, h, Host } from '@stencil/core';
 import { titleCase, colors } from '../../../utils';
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 
 @Component({
   tag: 'stellar-avatar',

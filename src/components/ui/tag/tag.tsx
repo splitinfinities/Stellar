@@ -1,6 +1,6 @@
 import { Component, Prop, Element, h } from '@stencil/core';
 import properties from 'css-custom-properties';
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 
 @Component({
   tag: 'stellar-tag',

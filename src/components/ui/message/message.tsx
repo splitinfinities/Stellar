@@ -1,5 +1,5 @@
 import { Component, Prop, State, Element, h, Host } from '@stencil/core';
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 
 @Component({
   tag: 'stellar-message',

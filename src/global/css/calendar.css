@@ -34,7 +34,7 @@
     cursor: pointer;
 }
 
-stellar-dark-mode[dark] .dp {
+.dark-mode .dp {
     --background: var(--black-alt);
     --background-alt: var(--black);
     --hover-background: var(--theme-base9);

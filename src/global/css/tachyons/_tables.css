@@ -18,10 +18,10 @@
   background-color: var(--gray2);
 }
 
-html.dark-mode .dm-striped--gray1:nth-child(odd) {
+.dark-mode .dm-striped--gray1:nth-child(odd) {
   background-color: var(--gray8);
 }
 
-html.dark-mode .dm-striped--gray2:nth-child(odd) {
+.dark-mode .dm-striped--gray2:nth-child(odd) {
   background-color: var(--gray9);
 }

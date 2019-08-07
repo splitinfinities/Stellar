@@ -10,7 +10,9 @@
 | Property | Attribute | Description | Type      | Default |
 | -------- | --------- | ----------- | --------- | ------- |
 | `body`   | `body`    |             | `boolean` | `false` |
-| `system` | `system`  |             | `boolean` | `true`  |
+| `dark`   | `dark`    |             | `boolean` | `false` |
+| `light`  | `light`   |             | `boolean` | `false` |
+| `system` | `system`  |             | `boolean` | `false` |
 
 
 ## Dependencies
@@ -22,8 +24,8 @@
 ### Graph
 ```mermaid
 graph TD;
-  stellar-dark-mode --> context-consumer
-  style stellar-dark-mode fill:#f9f,stroke:#333,stroke-width:4px
+  stellar-theme --> context-consumer
+  style stellar-theme fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

@@ -158,183 +158,183 @@
   color: inherit;
 }
 
-html.dark-mode .dm-hover-base:hover,
-html.dark-mode .dm-hover-base:focus {
+.dark-mode .dm-hover-base:hover,
+.dark-mode .dm-hover-base:focus {
   color: var(--base);
 }
 
-html.dark-mode .dm-hover-black:hover,
-html.dark-mode .dm-hover-black:focus {
+.dark-mode .dm-hover-black:hover,
+.dark-mode .dm-hover-black:focus {
   color: var(--black);
 }
 
-html.dark-mode .dm-hover-white:hover,
-html.dark-mode .dm-hover-white:focus {
+.dark-mode .dm-hover-white:hover,
+.dark-mode .dm-hover-white:focus {
   color: var(--white);
 }
 
-html.dark-mode .dm-hover-gray0:hover,
-html.dark-mode .dm-hover-gray0:focus {
+.dark-mode .dm-hover-gray0:hover,
+.dark-mode .dm-hover-gray0:focus {
   color: var(--gray0);
 }
 
-html.dark-mode .dm-hover-gray1:hover,
-html.dark-mode .dm-hover-gray1:focus {
+.dark-mode .dm-hover-gray1:hover,
+.dark-mode .dm-hover-gray1:focus {
   color: var(--gray1);
 }
 
-html.dark-mode .dm-hover-gray2:hover,
-html.dark-mode .dm-hover-gray2:focus {
+.dark-mode .dm-hover-gray2:hover,
+.dark-mode .dm-hover-gray2:focus {
   color: var(--gray2);
 }
 
-html.dark-mode .dm-hover-gray3:hover,
-html.dark-mode .dm-hover-gray3:focus {
+.dark-mode .dm-hover-gray3:hover,
+.dark-mode .dm-hover-gray3:focus {
   color: var(--gray3);
 }
 
-html.dark-mode .dm-hover-gray4:hover,
-html.dark-mode .dm-hover-gray4:focus {
+.dark-mode .dm-hover-gray4:hover,
+.dark-mode .dm-hover-gray4:focus {
   color: var(--gray4);
 }
 
-html.dark-mode .dm-hover-gray5:hover,
-html.dark-mode .dm-hover-gray5:focus {
+.dark-mode .dm-hover-gray5:hover,
+.dark-mode .dm-hover-gray5:focus {
   color: var(--gray5);
 }
 
-html.dark-mode .dm-hover-gray6:hover,
-html.dark-mode .dm-hover-gray6:focus {
+.dark-mode .dm-hover-gray6:hover,
+.dark-mode .dm-hover-gray6:focus {
   color: var(--gray6);
 }
 
-html.dark-mode .dm-hover-gray7:hover,
-html.dark-mode .dm-hover-gray7:focus {
+.dark-mode .dm-hover-gray7:hover,
+.dark-mode .dm-hover-gray7:focus {
   color: var(--gray7);
 }
 
-html.dark-mode .dm-hover-gray8:hover,
-html.dark-mode .dm-hover-gray8:focus {
+.dark-mode .dm-hover-gray8:hover,
+.dark-mode .dm-hover-gray8:focus {
   color: var(--gray8);
 }
 
-html.dark-mode .dm-hover-gray9:hover,
-html.dark-mode .dm-hover-gray9:focus {
+.dark-mode .dm-hover-gray9:hover,
+.dark-mode .dm-hover-gray9:focus {
   color: var(--gray9);
 }
 
 
-html.dark-mode .dm-hover-theme-base0:hover,
-html.dark-mode .dm-hover-theme-base0:focus {
+.dark-mode .dm-hover-theme-base0:hover,
+.dark-mode .dm-hover-theme-base0:focus {
   color: var(--theme-base0);
 }
 
-html.dark-mode .dm-hover-theme-base1:hover,
-html.dark-mode .dm-hover-theme-base1:focus {
+.dark-mode .dm-hover-theme-base1:hover,
+.dark-mode .dm-hover-theme-base1:focus {
   color: var(--theme-base1);
 }
 
-html.dark-mode .dm-hover-theme-base2:hover,
-html.dark-mode .dm-hover-theme-base2:focus {
+.dark-mode .dm-hover-theme-base2:hover,
+.dark-mode .dm-hover-theme-base2:focus {
   color: var(--theme-base2);
 }
 
-html.dark-mode .dm-hover-theme-base3:hover,
-html.dark-mode .dm-hover-theme-base3:focus {
+.dark-mode .dm-hover-theme-base3:hover,
+.dark-mode .dm-hover-theme-base3:focus {
   color: var(--theme-base3);
 }
 
-html.dark-mode .dm-hover-theme-base4:hover,
-html.dark-mode .dm-hover-theme-base4:focus {
+.dark-mode .dm-hover-theme-base4:hover,
+.dark-mode .dm-hover-theme-base4:focus {
   color: var(--theme-base4);
 }
 
-html.dark-mode .dm-hover-theme-base5:hover,
-html.dark-mode .dm-hover-theme-base5:focus {
+.dark-mode .dm-hover-theme-base5:hover,
+.dark-mode .dm-hover-theme-base5:focus {
   color: var(--theme-base5);
 }
 
-html.dark-mode .dm-hover-theme-base6:hover,
-html.dark-mode .dm-hover-theme-base6:focus {
+.dark-mode .dm-hover-theme-base6:hover,
+.dark-mode .dm-hover-theme-base6:focus {
   color: var(--theme-base6);
 }
 
-html.dark-mode .dm-hover-theme-base7:hover,
-html.dark-mode .dm-hover-theme-base7:focus {
+.dark-mode .dm-hover-theme-base7:hover,
+.dark-mode .dm-hover-theme-base7:focus {
   color: var(--theme-base7);
 }
 
-html.dark-mode .dm-hover-theme-base8:hover,
-html.dark-mode .dm-hover-theme-base8:focus {
+.dark-mode .dm-hover-theme-base8:hover,
+.dark-mode .dm-hover-theme-base8:focus {
   color: var(--theme-base8);
 }
 
-html.dark-mode .dm-hover-theme-base9:hover,
-html.dark-mode .dm-hover-theme-base9:focus {
+.dark-mode .dm-hover-theme-base9:hover,
+.dark-mode .dm-hover-theme-base9:focus {
   color: var(--theme-base9);
 }
 
-html.dark-mode .dm-hover-theme-complement0:hover,
-html.dark-mode .dm-hover-theme-complement0:focus {
+.dark-mode .dm-hover-theme-complement0:hover,
+.dark-mode .dm-hover-theme-complement0:focus {
   color: var(--theme-complement0);
 }
 
-html.dark-mode .dm-hover-theme-complement1:hover,
-html.dark-mode .dm-hover-theme-complement1:focus {
+.dark-mode .dm-hover-theme-complement1:hover,
+.dark-mode .dm-hover-theme-complement1:focus {
   color: var(--theme-complement1);
 }
 
-html.dark-mode .dm-hover-theme-complement2:hover,
-html.dark-mode .dm-hover-theme-complement2:focus {
+.dark-mode .dm-hover-theme-complement2:hover,
+.dark-mode .dm-hover-theme-complement2:focus {
   color: var(--theme-complement2);
 }
 
-html.dark-mode .dm-hover-theme-complement3:hover,
-html.dark-mode .dm-hover-theme-complement3:focus {
+.dark-mode .dm-hover-theme-complement3:hover,
+.dark-mode .dm-hover-theme-complement3:focus {
   color: var(--theme-complement3);
 }
 
-html.dark-mode .dm-hover-theme-complement4:hover,
-html.dark-mode .dm-hover-theme-complement4:focus {
+.dark-mode .dm-hover-theme-complement4:hover,
+.dark-mode .dm-hover-theme-complement4:focus {
   color: var(--theme-complement4);
 }
 
-html.dark-mode .dm-hover-theme-complement5:hover,
-html.dark-mode .dm-hover-theme-complement5:focus {
+.dark-mode .dm-hover-theme-complement5:hover,
+.dark-mode .dm-hover-theme-complement5:focus {
   color: var(--theme-complement5);
 }
 
-html.dark-mode .dm-hover-theme-complement6:hover,
-html.dark-mode .dm-hover-theme-complement6:focus {
+.dark-mode .dm-hover-theme-complement6:hover,
+.dark-mode .dm-hover-theme-complement6:focus {
   color: var(--theme-complement6);
 }
 
-html.dark-mode .dm-hover-theme-complement7:hover,
-html.dark-mode .dm-hover-theme-complement7:focus {
+.dark-mode .dm-hover-theme-complement7:hover,
+.dark-mode .dm-hover-theme-complement7:focus {
   color: var(--theme-complement7);
 }
 
-html.dark-mode .dm-hover-theme-complement8:hover,
-html.dark-mode .dm-hover-theme-complement8:focus {
+.dark-mode .dm-hover-theme-complement8:hover,
+.dark-mode .dm-hover-theme-complement8:focus {
   color: var(--theme-complement8);
 }
 
-html.dark-mode .dm-hover-theme-complement9:hover,
-html.dark-mode .dm-hover-theme-complement9:focus {
+.dark-mode .dm-hover-theme-complement9:hover,
+.dark-mode .dm-hover-theme-complement9:focus {
   color: var(--theme-complement9);
 }
 
-html.dark-mode .dm-hover-transparent:hover,
-html.dark-mode .dm-hover-transparent:focus {
+.dark-mode .dm-hover-transparent:hover,
+.dark-mode .dm-hover-transparent:focus {
   color: transparent;
 }
 
-html.dark-mode .dm-hover-current:hover,
-html.dark-mode .dm-hover-current:focus {
+.dark-mode .dm-hover-current:hover,
+.dark-mode .dm-hover-current:focus {
   color: currentColor;
 }
 
-html.dark-mode .dm-hover-inherit:hover,
-html.dark-mode .dm-hover-inherit:focus {
+.dark-mode .dm-hover-inherit:hover,
+.dark-mode .dm-hover-inherit:focus {
   color: inherit;
 }

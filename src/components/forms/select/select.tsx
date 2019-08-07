@@ -1,7 +1,7 @@
 import { Component, Prop, State, Listen, Watch, Element, Event, EventEmitter, Method, h } from '@stencil/core';
 import delay from 'await-delay';
 import Pluralize from 'pluralize';
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 
 
 

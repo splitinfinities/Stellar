@@ -1,6 +1,6 @@
 import { Component, Prop, State, Element, Method, h, Watch } from '@stencil/core';
 import { blurringEase } from '../../../utils';
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 
 @Component({
   tag: 'stellar-tabs',

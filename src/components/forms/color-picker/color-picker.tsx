@@ -1,7 +1,7 @@
 import { Component, Prop, Element, State, Event, EventEmitter, Watch, h } from '@stencil/core';
 import { colors } from '../../../utils';
 import properties from 'css-custom-properties'
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 
 @Component({
     tag: 'stellar-color-picker',

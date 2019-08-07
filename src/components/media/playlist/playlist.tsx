@@ -1,6 +1,6 @@
 import { Component, Prop, State, Element, Method, Listen, EventEmitter, Event, h } from '@stencil/core';
 import { asTime } from '../../../utils'
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 
 @Component({
   tag: 'stellar-playlist',

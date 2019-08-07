@@ -2,9 +2,11 @@ import { h } from '@stencil/core';
 import { createProviderConsumer } from '@stencil/state-tunnel';
 
 export interface State {
-    dark: boolean
+    dark: boolean,
+    light: boolean
 }
 
 export default createProviderConsumer<State>({
-    dark: false
+    dark: false,
+    light: false
 }, (subscribe, child) => <context-consumer subscribe={subscribe} renderer={child} />);

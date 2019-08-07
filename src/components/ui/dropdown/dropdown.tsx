@@ -1,6 +1,6 @@
 import { Component, Element, Prop, State, Watch, h } from '@stencil/core'
 import { blurringEase, focusWithin } from '../../../utils';
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 
 focusWithin(document)
 

@@ -1,5 +1,5 @@
 import { Component, Element, State, Prop, Method, Watch, h } from '@stencil/core';
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 import Highcharts from 'highcharts'
 import Data from 'highcharts/modules/data';
 import merge from 'deepmerge';

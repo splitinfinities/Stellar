@@ -1,6 +1,6 @@
 import { Component, Element, Prop, State, Method, h } from '@stencil/core'
 import { blurringEase, properties } from '../../../utils';
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 
 @Component({
   tag: 'stellar-accordion',

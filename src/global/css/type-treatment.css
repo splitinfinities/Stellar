@@ -76,13 +76,13 @@ p {
   padding-top: var(--ms-5);
 }
 
-html.dark-mode h1,
-html.dark-mode h2,
-html.dark-mode h3,
-html.dark-mode h4,
-html.dark-mode h5,
-html.dark-mode h6,
-html.dark-mode p {
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode p {
   color: var(--white);
 }
 

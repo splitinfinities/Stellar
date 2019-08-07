@@ -1,6 +1,6 @@
 import { Component, Prop, State, Element, Event, EventEmitter, Method, h } from '@stencil/core';
 import { properties, ResizeObserver } from '../../../utils'
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 
 
 

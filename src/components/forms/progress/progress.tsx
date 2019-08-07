@@ -1,6 +1,6 @@
 import { Component, Watch, Prop, State, Element, Event, EventEmitter, h } from '@stencil/core'
 import { blurringEase } from '../../../utils';
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 
 
 

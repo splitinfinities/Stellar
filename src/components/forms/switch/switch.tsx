@@ -1,5 +1,5 @@
 import { Component, Prop, Element, Event, EventEmitter, Method, Watch, h } from '@stencil/core';
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 
 @Component({
   tag: 'stellar-switch',

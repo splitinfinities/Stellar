@@ -1,7 +1,7 @@
 import { Component, Prop, State, Element, Method, Event, EventEmitter, h} from '@stencil/core';
 import { RouterHistory, LocationSegments, injectHistory } from '@stencil/router';
 import { delay } from '../../../utils';
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 
 
 

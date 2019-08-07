@@ -287,10 +287,6 @@ export namespace Components {
     'for': string;
     'open': boolean;
   }
-  interface StellarDarkMode {
-    'body': boolean;
-    'system': boolean;
-  }
   interface StellarDocsComponent {
     'loader': Load;
     'match': MatchResults;
@@ -933,6 +929,12 @@ export namespace Components {
     'textColor': string;
   }
   interface StellarTester {}
+  interface StellarTheme {
+    'body': boolean;
+    'dark': boolean;
+    'light': boolean;
+    'system': boolean;
+  }
   interface StellarTime {
     'format': string;
     'relative': boolean;
@@ -1240,12 +1242,6 @@ declare global {
   var HTMLStellarContentElement: {
     prototype: HTMLStellarContentElement;
     new (): HTMLStellarContentElement;
-  };
-
-  interface HTMLStellarDarkModeElement extends Components.StellarDarkMode, HTMLStencilElement {}
-  var HTMLStellarDarkModeElement: {
-    prototype: HTMLStellarDarkModeElement;
-    new (): HTMLStellarDarkModeElement;
   };
 
   interface HTMLStellarDocsComponentElement extends Components.StellarDocsComponent, HTMLStencilElement {}
@@ -1560,6 +1556,12 @@ declare global {
     new (): HTMLStellarTesterElement;
   };
 
+  interface HTMLStellarThemeElement extends Components.StellarTheme, HTMLStencilElement {}
+  var HTMLStellarThemeElement: {
+    prototype: HTMLStellarThemeElement;
+    new (): HTMLStellarThemeElement;
+  };
+
   interface HTMLStellarTimeElement extends Components.StellarTime, HTMLStencilElement {}
   var HTMLStellarTimeElement: {
     prototype: HTMLStellarTimeElement;
@@ -1667,7 +1669,6 @@ declare global {
     'stellar-comment': HTMLStellarCommentElement;
     'stellar-comments': HTMLStellarCommentsElement;
     'stellar-content': HTMLStellarContentElement;
-    'stellar-dark-mode': HTMLStellarDarkModeElement;
     'stellar-docs-component': HTMLStellarDocsComponentElement;
     'stellar-docs-header': HTMLStellarDocsHeaderElement;
     'stellar-docs-home': HTMLStellarDocsHomeElement;
@@ -1720,6 +1721,7 @@ declare global {
     'stellar-tabs': HTMLStellarTabsElement;
     'stellar-tag': HTMLStellarTagElement;
     'stellar-tester': HTMLStellarTesterElement;
+    'stellar-theme': HTMLStellarThemeElement;
     'stellar-time': HTMLStellarTimeElement;
     'stellar-toggle': HTMLStellarToggleElement;
     'stellar-toggle-option': HTMLStellarToggleOptionElement;
@@ -1997,10 +1999,6 @@ declare namespace LocalJSX {
     'behavior'?: string;
     'for'?: string;
     'open'?: boolean;
-  }
-  interface StellarDarkMode extends JSXBase.HTMLAttributes<HTMLStellarDarkModeElement> {
-    'body'?: boolean;
-    'system'?: boolean;
   }
   interface StellarDocsComponent extends JSXBase.HTMLAttributes<HTMLStellarDocsComponentElement> {
     'loader'?: Load;
@@ -2615,6 +2613,12 @@ declare namespace LocalJSX {
     'textColor'?: string;
   }
   interface StellarTester extends JSXBase.HTMLAttributes<HTMLStellarTesterElement> {}
+  interface StellarTheme extends JSXBase.HTMLAttributes<HTMLStellarThemeElement> {
+    'body'?: boolean;
+    'dark'?: boolean;
+    'light'?: boolean;
+    'system'?: boolean;
+  }
   interface StellarTime extends JSXBase.HTMLAttributes<HTMLStellarTimeElement> {
     'format'?: string;
     'relative'?: boolean;
@@ -2775,7 +2779,6 @@ declare namespace LocalJSX {
     'stellar-comment': StellarComment;
     'stellar-comments': StellarComments;
     'stellar-content': StellarContent;
-    'stellar-dark-mode': StellarDarkMode;
     'stellar-docs-component': StellarDocsComponent;
     'stellar-docs-header': StellarDocsHeader;
     'stellar-docs-home': StellarDocsHome;
@@ -2828,6 +2831,7 @@ declare namespace LocalJSX {
     'stellar-tabs': StellarTabs;
     'stellar-tag': StellarTag;
     'stellar-tester': StellarTester;
+    'stellar-theme': StellarTheme;
     'stellar-time': StellarTime;
     'stellar-toggle': StellarToggle;
     'stellar-toggle-option': StellarToggleOption;

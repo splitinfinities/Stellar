@@ -1,7 +1,7 @@
 import { Component, Element, Prop, State, Listen, Method, Event, EventEmitter, Watch, h } from '@stencil/core';
 import { shouldBeAnInput, hasIncrements, hasValue, isDatePicker, Validator, Tokenfield } from "./lib";
 import { zxcvbn, TinyDatePicker, moment } from '../../../utils'
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 
 
 

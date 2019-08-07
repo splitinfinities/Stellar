@@ -5,7 +5,7 @@ import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js';
 import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-bash';
 import ezClipboard from 'ez-clipboard';
-import Tunnel from '../../dark_mode';
+import Tunnel from '../../theme';
 
 @Component({
   tag: 'stellar-code',

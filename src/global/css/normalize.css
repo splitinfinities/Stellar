@@ -31,15 +31,15 @@ body ::-webkit-scrollbar-thumb:hover {
 }
 
 
-body.dark-mode ::-webkit-scrollbar-track {
+.dark-mode ::-webkit-scrollbar-track {
   background: var(--theme-base9, var(--gray9));
 }
 
-body.dark-mode ::-webkit-scrollbar-thumb {
+.dark-mode ::-webkit-scrollbar-thumb {
   background: var(--theme-base2, var(--gray2));
 }
 
-body.dark-mode ::-webkit-scrollbar-thumb:hover {
+.dark-mode ::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
   background: var(--theme-base5, var(--gray5));
 }
