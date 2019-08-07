@@ -201,6 +201,7 @@
 | `placeholderInverted` | `placeholder-inverted` |                                                | `boolean`                                  | `undefined`             |
 | `processing`          | `processing`           |                                                | `boolean`                                  | `undefined`             |
 | `required`            | `required`             |                                                | `boolean`                                  | `false`                 |
+| `resize`              | `resize`               |                                                | `boolean`                                  | `false`                 |
 | `size`                | `size`                 |                                                | `"large" \| "medium" \| "small" \| "tiny"` | `undefined`             |
 | `tooltip`             | `tooltip`              |                                                | `string`                                   | `undefined`             |
 | `value`               | `value`                |                                                | `string \| string[]`                       | `undefined`             |
