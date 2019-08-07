@@ -235,10 +235,8 @@
     opacity: 1;
 }
 
-@media (prefers-color-scheme: dark) {
-    :host {
-        --border: 1px solid var(--gray8);
-        --background: var(--gray9);
-        --flipped-background: var(--gray9);
-    }
+:host([dark]) {
+    --border: 1px solid var(--gray8);
+    --background: var(--gray9);
+    --flipped-background: var(--gray9);
 }

@@ -1,5 +1,10 @@
 import { Component, Prop, State, Element, Event, EventEmitter, Method, h } from '@stencil/core';
 import { properties, ResizeObserver } from '../../../utils'
+import Tunnel from '../../dark_mode';
+
+
+
+
 
 @Component({
   tag: 'stellar-card',
@@ -63,6 +68,8 @@ export class Card {
    * Sets the href on the anchor tag if the button is a link.
    */
   @Prop() flip_icon: string = "cog";
+
+  @Prop({reflect: true}) dark: boolean = false;
 
   @State() ro: ResizeObserver;
 
@@ -149,3 +156,4 @@ export class Card {
     );
   }
 }
+Tunnel.injectProps(Card, ['dark']);

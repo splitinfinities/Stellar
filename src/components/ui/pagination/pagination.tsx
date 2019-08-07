@@ -1,5 +1,6 @@
 import { Component, Prop, State, Watch, Element, Event, EventEmitter, h } from '@stencil/core';
 import {properties, blurringEase} from '../../../utils'
+import Tunnel from '../../dark_mode';
 
 @Component({
   tag: 'stellar-pagination',
@@ -17,6 +18,7 @@ export class Pagination {
   @Prop({reflect: true, mutable: true}) current: number = 1;
   @Prop({reflect: true, mutable: true}) padding: number = 2;
   @Prop() color: string = "gray";
+  @Prop({reflect: true}) dark: boolean = false;
 
   @Prop() url: any = "#page-{0}";
 
@@ -242,3 +244,4 @@ export class Pagination {
     }
   }
 }
+Tunnel.injectProps(Pagination, ['dark']);

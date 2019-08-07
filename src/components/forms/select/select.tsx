@@ -1,6 +1,10 @@
 import { Component, Prop, State, Listen, Watch, Element, Event, EventEmitter, Method, h } from '@stencil/core';
 import delay from 'await-delay';
 import Pluralize from 'pluralize';
+import Tunnel from '../../dark_mode';
+
+
+
 
 @Component({
   tag: 'stellar-select',
@@ -35,6 +39,10 @@ export class Select {
   @Prop() loading: boolean = false;
   @Prop() fit: boolean = false;
   @Prop() wrap: boolean = false;
+  /**
+   * Sets the button or link as an outlined button.
+   */
+  @Prop({reflect: true}) dark: boolean = false;
 
   @State() titleItem: HTMLStellarItemElement;
   @State() status: FormResult;
@@ -510,3 +518,4 @@ export class Select {
     );
   }
 }
+Tunnel.injectProps(Select, ['dark']);

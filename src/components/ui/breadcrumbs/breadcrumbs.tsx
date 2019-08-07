@@ -1,4 +1,5 @@
 import { Component, Prop, Element, h } from '@stencil/core';
+import Tunnel from '../../dark_mode';
 
 @Component({
   tag: 'stellar-breadcrumbs',
@@ -17,6 +18,7 @@ export class Breadcrumbs {
   @Prop() description: string = "An icon that shows the main page you're on";
   @Prop({reflect: true}) size: "tiny"|"small"|"medium"|"large";
 
+  @Prop({reflect: true}) dark: boolean = false;
   @Prop() color: string = "blue5";
 
   componentWillLoad() {
@@ -50,3 +52,4 @@ export class Breadcrumbs {
     );
   }
 }
+Tunnel.injectProps(Breadcrumbs, ['dark']);

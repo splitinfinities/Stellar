@@ -76,17 +76,16 @@ p {
   padding-top: var(--ms-5);
 }
 
-@media (prefers-color-scheme: dark) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    color: var(--white);
-  }
+html.dark-mode h1,
+html.dark-mode h2,
+html.dark-mode h3,
+html.dark-mode h4,
+html.dark-mode h5,
+html.dark-mode h6,
+html.dark-mode p {
+  color: var(--white);
 }
+
 
 h1,
 .fs1 {

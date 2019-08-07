@@ -1,5 +1,6 @@
 import { Component, Element, Prop, State, Watch, h } from '@stencil/core'
 import { blurringEase, focusWithin } from '../../../utils';
+import Tunnel from '../../dark_mode';
 
 focusWithin(document)
 
@@ -27,6 +28,7 @@ export class Dropdown {
       this.ease.stop()
     },
   });
+  @Prop({reflect: true}) dark: boolean = false;
 
   @State() blur: number = 0
   @State() timeout: any;
@@ -65,3 +67,4 @@ export class Dropdown {
     )
   }
 }
+Tunnel.injectProps(Dropdown, ['dark']);

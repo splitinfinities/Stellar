@@ -332,13 +332,12 @@ stellar-input .validation span + span {
   align-self: baseline;
 }
 
-@media (prefers-color-scheme: dark) {
-  :host {
-    --background: var(--black-alt);
-    --color: var(--white);
-    --border-color: var(--gray9);
-  }
+:host([dark]) {
+  --background: var(--black-alt);
+  --color: var(--white);
+  --border-color: var(--gray9);
 }
+
 
 @keyframes fadeIn {
   from {

@@ -222,31 +222,29 @@
     margin-left: var(--ms-7);
 }
 
-@media (prefers-color-scheme: dark) {
-    :host {
-        --background: var(--theme-base7);
-        --color: var(--white);
-        --active-background: var(--theme-base9);
-        --active-color: var(--white);
-        --active-border: none;
-    }
+:host([dark]) {
+    --background: var(--theme-base7);
+    --color: var(--white);
+    --active-background: var(--theme-base9);
+    --active-color: var(--white);
+    --active-border: none;
+}
 
-    :host([outline]) {
-        --background: transparent;
-        --color: var(--white);
-        --border: 2px solid var(--theme-base5);
-        --active-background: var(--theme-base9);
-        --active-color: var(--theme-base0);
-        --active-border: 2px solid var(--theme-base9);
-    }
+:host([dark][outline]) {
+    --background: transparent;
+    --color: var(--white);
+    --border: 2px solid var(--theme-base5);
+    --active-background: var(--theme-base9);
+    --active-color: var(--theme-base0);
+    --active-border: 2px solid var(--theme-base9);
+}
 
-    :host([ghost]) {
-        --padding: 0.05em 0 0.125em;
-        --background: none;
-        --color: var(--theme-base5);
-        --border: none;
-        --active-background: none;
-        --active-color: var(--theme-base7);
-        --active-border: none;
-    }
+:host([dark][ghost]) {
+    --padding: 0.05em 0 0.125em;
+    --background: none;
+    --color: var(--theme-base5);
+    --border: none;
+    --active-background: none;
+    --active-color: var(--theme-base7);
+    --active-border: none;
 }

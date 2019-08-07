@@ -1,5 +1,6 @@
 import { Component, Element, Prop, State, Method, h } from '@stencil/core'
 import { blurringEase, properties } from '../../../utils';
+import Tunnel from '../../dark_mode';
 
 @Component({
   tag: 'stellar-accordion',
@@ -14,6 +15,7 @@ export class Accordion {
 
   @Prop() name: string = "accordion"
   @Prop() label: string = "More Details"
+  @Prop({reflect: true}) dark: boolean = false;
 
   @State() blur: number = 0;
   @State() ease: TweenInstance = blurringEase({
@@ -108,3 +110,4 @@ export class Accordion {
     )
   }
 }
+Tunnel.injectProps(Accordion, ['dark']);

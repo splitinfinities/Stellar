@@ -1,5 +1,8 @@
 import { Component, Prop, State, Element, Method, Event, EventEmitter, h } from "@stencil/core";
 import { blurringEase } from "../../../utils";
+import Tunnel from '../../dark_mode';
+
+
 
 @Component({
   tag: "stellar-toggle-option",
@@ -16,6 +19,11 @@ export class ToggleOption {
   @Prop({reflect: true}) icon: boolean;
   @Prop({mutable: true}) tooltip: string;
   @Prop({mutable: true, reflect: true}) disabled: boolean;
+
+  /**
+   * Sets the button or link as an outlined button.
+   */
+  @Prop({reflect: true}) dark: boolean = false;
 
   @Prop() for: string = "";
   @Prop({mutable: true, reflect: true}) name: string;
@@ -175,3 +183,4 @@ export class ToggleOption {
       </button>
   }
 }
+Tunnel.injectProps(ToggleOption, ['dark']);

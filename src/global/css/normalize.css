@@ -30,21 +30,20 @@ body ::-webkit-scrollbar-thumb:hover {
   background: var(--theme-base5, var(--gray5));
 }
 
-@media (prefers-color-scheme: dark) {
-  body ::-webkit-scrollbar-track {
-    background: var(--theme-base9, var(--gray9));
-  }
 
-  body ::-webkit-scrollbar-thumb {
-    background: var(--theme-base2, var(--gray2));
-  }
-
-  body ::-webkit-scrollbar-thumb:hover {
-    cursor: pointer;
-    background: var(--theme-base5, var(--gray5));
-  }
-
+body.dark-mode ::-webkit-scrollbar-track {
+  background: var(--theme-base9, var(--gray9));
 }
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: var(--theme-base2, var(--gray2));
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background: var(--theme-base5, var(--gray5));
+}
+
 
 /**
  * Use a better box model (opinionated).

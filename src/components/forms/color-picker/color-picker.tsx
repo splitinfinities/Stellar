@@ -1,6 +1,7 @@
 import { Component, Prop, Element, State, Event, EventEmitter, Watch, h } from '@stencil/core';
 import { colors } from '../../../utils';
 import properties from 'css-custom-properties'
+import Tunnel from '../../dark_mode';
 
 @Component({
     tag: 'stellar-color-picker',
@@ -13,6 +14,11 @@ export class ColorPicker {
     @Prop() notransparent: boolean = false;
     @State() options: Array<string>;
     @Event() update: EventEmitter;
+
+  /**
+   * Sets the button or link as an outlined button.
+   */
+  @Prop({reflect: true}) dark: boolean = false;
 
     componentWillLoad() {
         this.options = Object.keys(colors).filter((color) => {
@@ -57,3 +63,4 @@ export class ColorPicker {
         </div>
     }
 }
+Tunnel.injectProps(ColorPicker, ['dark']);

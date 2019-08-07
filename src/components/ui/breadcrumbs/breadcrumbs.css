@@ -76,8 +76,6 @@
 	height: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-	:host {
-		--background: linear-gradient(45deg, var(--theme-base7) 0%, var(--theme-base9) 100%);
-	}
+:host([dark]) {
+	--background: linear-gradient(45deg, var(--theme-base7) 0%, var(--theme-base9) 100%);
 }

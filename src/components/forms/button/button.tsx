@@ -1,4 +1,5 @@
 import { Component, Prop, State, Element, h } from '@stencil/core';
+import Tunnel from '../../dark_mode';
 
 @Component({
   tag: 'stellar-button',
@@ -198,3 +199,5 @@ export class Button {
     ]
   }
 }
+
+Tunnel.injectProps(Button, ['dark']);

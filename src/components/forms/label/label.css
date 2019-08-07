@@ -42,12 +42,10 @@
   all: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  :host {
-    color: var(--gray0);
-  }
+:host([dark]) {
+  color: var(--gray0);
+}
 
-  :host([underneath]) {
-    color: var(--gray5);
-  }
+:host([underneath][dark]) {
+  color: var(--gray5);
 }

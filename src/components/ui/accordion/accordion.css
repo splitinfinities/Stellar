@@ -86,9 +86,7 @@
   padding-right: 2rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :host ::slotted(stellar-item),
-  :host ::slotted(stellar-item[slot="label"]) {
-    color: var(--theme-base5);
-  }
+:host([dark]) ::slotted(stellar-item),
+:host([dark]) ::slotted(stellar-item[slot="label"]) {
+  color: var(--theme-base5);
 }

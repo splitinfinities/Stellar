@@ -1,4 +1,5 @@
 import { Component, Element, State, Prop, h } from '@stencil/core';
+import Tunnel from '../../dark_mode';
 
 @Component({
   tag: 'stellar-comment',
@@ -11,6 +12,7 @@ export class Comment {
 
   @Prop({mutable: true}) content: any;
   @Prop({mutable: true}) name: any;
+  @Prop({reflect: true}) dark: boolean = false;
   @State() empty: boolean = false;
 
   componentWillLoad() {
@@ -40,3 +42,4 @@ export class Comment {
     );
   }
 }
+Tunnel.injectProps(Comment, ['dark']);

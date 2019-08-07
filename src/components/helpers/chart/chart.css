@@ -6,33 +6,31 @@
   display: block;
 }
 
-@media (prefers-color-scheme: dark) {
-  :host .highcharts-background {
-    fill: var(--black) !important
-  }
+:host([dark]) .highcharts-background {
+  fill: var(--black) !important
+}
 
-  :host .highcharts-title,
-  :host .highcharts-subtitle,
-  :host .highcharts-legend-item text,
-  :host .highcharts-axis-labels text,
-  :host .highcharts-axis-title {
-    fill: var(--white) !important
-  }
+:host([dark]) .highcharts-title,
+:host([dark]) .highcharts-subtitle,
+:host([dark]) .highcharts-legend-item text,
+:host([dark]) .highcharts-axis-labels text,
+:host([dark]) .highcharts-axis-title {
+  fill: var(--white) !important
+}
 
-  :host .highcharts-legend-box {
-    fill: transparent !important
-  }
+:host([dark]) .highcharts-legend-box {
+  fill: transparent !important
+}
 
-  :host .highcharts-grid path,
-  :host .highcharts-axis path {
-    stroke: rgba(255, 255, 255, 0.2) !important
-  }
+:host([dark]) .highcharts-grid path,
+:host([dark]) .highcharts-axis path {
+  stroke: rgba(255, 255, 255, 0.2) !important
+}
 
-  :host .highcharts-tooltip text {
-    fill: var(--black) !important
-  }
+:host([dark]) .highcharts-tooltip text {
+  fill: var(--black) !important
+}
 
-  :host .highcharts-series rect {
-    stroke: var(--black) !important
-  }
+:host([dark]) .highcharts-series rect {
+  stroke: var(--black) !important
 }

@@ -1,5 +1,6 @@
 import { Component, Prop, State, Element, Method, h, Watch } from '@stencil/core';
 import { blurringEase } from '../../../utils';
+import Tunnel from '../../dark_mode';
 
 @Component({
   tag: 'stellar-tabs',
@@ -106,3 +107,4 @@ export class Tabs {
     );
   }
 }
+Tunnel.injectProps(Tabs, ['dark']);

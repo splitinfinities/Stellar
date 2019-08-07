@@ -1,5 +1,6 @@
 import { Component, Prop, State, Element, Method, Listen, EventEmitter, Event, h } from '@stencil/core';
 import { asTime } from '../../../utils'
+import Tunnel from '../../dark_mode';
 
 @Component({
   tag: 'stellar-playlist',
@@ -20,6 +21,7 @@ export class Playlist {
   @Prop({mutable: true, reflect: true}) playing: boolean = false;
   @Prop({mutable: true, reflect: true}) load: boolean = false;
   @Prop({mutable: true, reflect: true}) loading: boolean = false;
+  @Prop({reflect: true}) dark: boolean = false;
 
   @State() current: number = 0;
   @State() currentTrack: CurrentSongInterface = {
@@ -347,3 +349,4 @@ export class Playlist {
     );
   }
 }
+Tunnel.injectProps(Playlist, ['dark']);

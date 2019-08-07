@@ -1,4 +1,5 @@
 import { Component, Prop, Element, Event, EventEmitter, Method, Watch, h } from '@stencil/core';
+import Tunnel from '../../dark_mode';
 
 @Component({
   tag: 'stellar-switch',
@@ -9,6 +10,10 @@ export class Switch {
   @Prop({mutable: true, reflect: true}) checked: boolean = false;
   @Prop() checkedDefault: boolean = false;
   @Event() update: EventEmitter;
+  /**
+   * Sets the button or link as an outlined button.
+   */
+  @Prop({reflect: true}) dark: boolean = false;
 
   componentDidLoad() {
     if (this.checkedDefault) {
@@ -43,3 +48,5 @@ export class Switch {
     );
   }
 }
+
+Tunnel.injectProps(Switch, ['dark']);

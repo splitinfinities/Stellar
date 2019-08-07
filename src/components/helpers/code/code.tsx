@@ -5,6 +5,7 @@ import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js';
 import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-bash';
 import ezClipboard from 'ez-clipboard';
+import Tunnel from '../../dark_mode';
 
 @Component({
   tag: 'stellar-code',
@@ -24,6 +25,7 @@ export class Code {
 
   @Prop() preview: boolean = true;
   @Prop() feature: boolean = false;
+  @Prop({reflect: true}) dark: boolean = false;
 
   @State() code: string;
   @State() raw: string;
@@ -144,3 +146,4 @@ export class Code {
     }
   }
 }
+Tunnel.injectProps(Code, ['dark']);

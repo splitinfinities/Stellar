@@ -1,4 +1,5 @@
 import { Component, Prop, State, Element, h, Host } from '@stencil/core';
+import Tunnel from '../../dark_mode';
 
 @Component({
   tag: 'stellar-message',
@@ -14,6 +15,7 @@ export class Message {
   @Prop({mutable: true, reflect: true}) name: string = "stellar";
   @Prop({mutable: true, reflect: true}) shown: boolean = true;
   @Prop({reflect: true}) striped: boolean = false;
+  @Prop({reflect: true}) dark: boolean = false;
   @State() theme: string = "gray";
 
   componentWillLoad () {
@@ -61,3 +63,4 @@ export class Message {
     </Host>
   }
 }
+Tunnel.injectProps(Message, ['dark']);

@@ -103,9 +103,7 @@ stellar-switch .label input:checked + button::after {
   background: var(--theme-base5);
 }
 
-@media (prefers-color-scheme: dark) {
-  stellar-switch .label input:checked + button,
-  stellar-switch .label input:checked + button span {
-    color: var(--black)
-  }
+stellar-switch[dark] .label input:checked + button,
+stellar-switch[dark] .label input:checked + button span {
+  color: var(--black)
 }

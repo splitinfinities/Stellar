@@ -47,12 +47,10 @@
   border-radius: 5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :host([color*="5"]),
-  :host([color*="6"]),
-  :host([color*="7"]),
-  :host([color*="8"]),
-  :host([color*="9"]) {
-    --color: var(--black) !important;
-  }
+:host([dark][color*="5"]),
+:host([dark][color*="6"]),
+:host([dark][color*="7"]),
+:host([dark][color*="8"]),
+:host([dark][color*="9"]) {
+  --color: var(--black) !important;
 }

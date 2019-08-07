@@ -21,8 +21,6 @@
 	color: var(--gray9);
 }
 
-@media (prefers-color-scheme: dark) {
-	:host {
-		background-color: var(--theme-base6);
-	}
+:host([dark]) {
+	background-color: var(--theme-base6);
 }

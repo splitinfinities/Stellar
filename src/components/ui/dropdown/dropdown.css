@@ -237,16 +237,14 @@
   left: auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  :host .list {
-    background: var(--gray9);
-  }
+:host([dark]) .list {
+  background: var(--gray9);
+}
 
-  :host ::slotted(stellar-item) {
-    color: var(--gray0);
-  }
+:host([dark]) ::slotted(stellar-item) {
+  color: var(--gray0);
+}
 
-  :host .footer {
-    border-top-color: var(--black);
-  }
+:host([dark]) .footer {
+  border-top-color: var(--black);
 }

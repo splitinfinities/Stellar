@@ -147,11 +147,9 @@
     background-size: 16px;
 }
 
-@media (prefers-color-scheme: dark) {
-    :host {
-        --avatar-color: var(--theme-base8, var(--red8));
-        --avatar-color-dark: var(--theme-base6, var(--red6));
-        --avatar-font-color: var(--black);
-        --avatar-text-shadow: 0 0 0px rgba(0, 0, 0, .4)
-    }
+:host([dark]) {
+    --avatar-color: var(--theme-base8, var(--red8));
+    --avatar-color-dark: var(--theme-base6, var(--red6));
+    --avatar-font-color: var(--black);
+    --avatar-text-shadow: 0 0 0px rgba(0, 0, 0, .4)
 }

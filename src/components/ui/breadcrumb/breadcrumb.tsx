@@ -1,4 +1,5 @@
 import { Component, Prop, Element, h } from '@stencil/core';
+import Tunnel from '../../dark_mode';
 
 @Component({
   tag: 'stellar-breadcrumb',
@@ -15,6 +16,7 @@ export class Breadcrumb {
   @Prop() target: string = "_self";
   @Prop({mutable: true}) label: string = "Breadcrumb link";
   @Prop() disabled: boolean = false;
+  @Prop({reflect: true}) dark: boolean = false;
 
   @Prop({reflect: true}) first: boolean;
   @Prop({reflect: true}) last: boolean;
@@ -42,3 +44,4 @@ export class Breadcrumb {
       </Tag>
   }
 }
+Tunnel.injectProps(Breadcrumb, ['dark']);

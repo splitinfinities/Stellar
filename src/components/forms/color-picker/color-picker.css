@@ -153,10 +153,8 @@
   transform: translate3d(var(--mod-width), calc(var(--mod-height) * 5), 0);
 }
 
-@media (prefers-color-scheme: dark) {
-  :host([val="none"]),
-  :host button.none {
+  :host([dark][val="none"]),
+  :host([dark]) button.none {
     background: var(--black) !important;
     border: 2px solid var(--white) !important;
   }
-}

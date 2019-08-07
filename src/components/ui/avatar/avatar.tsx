@@ -1,5 +1,6 @@
 import { Component, Prop, State, Watch, Element, h, Host } from '@stencil/core';
 import { titleCase, colors } from '../../../utils';
+import Tunnel from '../../dark_mode';
 
 @Component({
   tag: 'stellar-avatar',
@@ -17,6 +18,7 @@ export class Avatar {
   @Prop({mutable: true, reflect: true}) initials: string = "ST";
   @Prop({mutable: true, reflect: true}) shape: "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message" = "square";
   @Prop({mutable: true, reflect: true}) processing: boolean = false;
+  @Prop({reflect: true}) dark: boolean = false;
 
   @State() colorAuto: boolean = false;
   @State() colors: string[];
@@ -77,3 +79,4 @@ export class Avatar {
     </Host>
   }
 }
+Tunnel.injectProps(Avatar, ['dark']);

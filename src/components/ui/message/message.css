@@ -92,17 +92,15 @@
   border: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :host {
-    background-color: var(--theme-base7, var(--gray7));
-  }
+:host([dark]) {
+  background-color: var(--theme-base7, var(--gray7));
+}
 
-  :host([striped])::after {
-    background: repeating-linear-gradient(45deg, var(--theme-base7), var(--theme-base7) 2rem, var(--theme-base8) 0, var(--theme-base8) 4rem);
-  }
+:host([dark][striped])::after {
+  background: repeating-linear-gradient(45deg, var(--theme-base7), var(--theme-base7) 2rem, var(--theme-base8) 0, var(--theme-base8) 4rem);
+}
 
 
-  :host .wrap stellar-asset {
-    color: var(--theme-base1);
-  }
+:host([dark]) .wrap stellar-asset {
+  color: var(--theme-base1);
 }

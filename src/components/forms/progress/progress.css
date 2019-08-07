@@ -85,19 +85,17 @@
   animation: load var(--ease) 2.3s infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :host .progress {
-    background: var(--theme-base9);
-  }
+:host([dark]) .progress {
+  background: var(--theme-base9);
+}
 
-  :host .secondary {
-    background: var(--theme-base7, var(--gray7));
-    z-index: 1;
-  }
+:host([dark]) .secondary {
+  background: var(--theme-base7, var(--gray7));
+  z-index: 1;
+}
 
-  :host circle {
-    animation: load-dark var(--ease) 2.3s infinite;
-  }
+:host([dark]) circle {
+  animation: load-dark var(--ease) 2.3s infinite;
 }
 
 @keyframes load {

@@ -89,35 +89,33 @@
 	color: var(--gray9);
 }
 
-@media (prefers-color-scheme: dark) {
-	:host {
-		background: var(--black);
-		color: var(--theme-base0)
-	}
+:host([dark]) {
+	background: var(--black);
+	color: var(--theme-base0)
+}
 
-	:host(:hover),
-	:host(:focus),
-	:host a:hover,
-	:host a:focus,
-	:host(:focus-within) {
-		color: var(--white);
-		background: var(--theme-base7);
-	}
+:host([dark]:hover),
+:host([dark]:focus),
+:host([dark]) a:hover,
+:host([dark]) a:focus,
+:host([dark]:focus-within) {
+	color: var(--white);
+	background: var(--theme-base7);
+}
 
-	:host([last]) {
-		color: white;
-		background: var(--black);
-	}
+:host([dark][last]) {
+	color: white;
+	background: var(--black);
+}
 
-	:host([first]) {
-		background: var(--theme-base9);
-	}
+:host([dark][first]) {
+	background: var(--theme-base9);
+}
 
-	:host([last]:hover),
-	:host([last]:focus),
-	:host([last]) a:hover,
-	:host([last]) a:focus {
-		background: var(--black);
-		color: white;
-	}
+:host([dark][last]:hover),
+:host([dark][last]:focus),
+:host([dark][last]) a:hover,
+:host([dark][last]) a:focus {
+	background: var(--black);
+	color: white;
 }

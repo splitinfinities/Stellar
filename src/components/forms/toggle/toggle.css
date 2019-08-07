@@ -57,8 +57,6 @@ stellar-toggle[stacked] stellar-toggle-option + stellar-toggle-option label {
   border-top: 1px solid var(--gray2);
 }
 
-@media (prefers-color-scheme: dark) {
-  stellar-toggle[stacked] stellar-toggle-option + stellar-toggle-option label {
-    border-top: 1px solid var(--black);
-  }
+stellar-toggle[dark][stacked] stellar-toggle-option + stellar-toggle-option label {
+  border-top: 1px solid var(--black);
 }

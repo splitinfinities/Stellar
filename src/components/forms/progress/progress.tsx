@@ -1,5 +1,9 @@
 import { Component, Watch, Prop, State, Element, Event, EventEmitter, h } from '@stencil/core'
 import { blurringEase } from '../../../utils';
+import Tunnel from '../../dark_mode';
+
+
+
 
 @Component({
   tag: 'stellar-progress',
@@ -25,6 +29,10 @@ export class Progress {
    */
   @Prop({reflect: true}) indeterminate: boolean = false;
 
+  /**
+   * Sets the button or link as an outlined button.
+   */
+  @Prop({reflect: true}) dark: boolean = false;
 
   /**
    * Allows the progress bar to be clicked on, to help the user to navigate through the progressing content.
@@ -130,3 +138,4 @@ export class Progress {
     )
   }
 }
+Tunnel.injectProps(Progress, ['dark']);

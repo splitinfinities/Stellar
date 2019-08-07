@@ -170,20 +170,18 @@
   background: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :host .button:focus,
-  :host .button:hover,
-  :host(:hover),
-  :host(:focus-within) {
-    background: var(--theme-base8);
-  }
+:host([dark]) .button:focus,
+:host([dark]) .button:hover,
+:host([dark]:hover),
+:host([dark]:focus-within) {
+  background: var(--theme-base8);
+}
 
-  :host(.current) .button:focus,
-  :host(.current) .button:hover,
-  :host(.current:hover),
-  :host(.current:focus-within) {
-    background: transparent;
-  }
+:host([dark].current) .button:focus,
+:host([dark].current) .button:hover,
+:host([dark].current:hover),
+:host([dark].current:focus-within) {
+  background: transparent;
 }
 
 @keyframes fadeInScale {

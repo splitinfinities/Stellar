@@ -15,17 +15,16 @@
 	--color-bg-playing: var(--theme-base2);
 	--color-line: var(--theme-base1);
 }
-@media (prefers-color-scheme: dark) {
-	:host {
-		--color-one: var(--theme-base9);
-		--color-two: var(--theme-base1);
-		--color-three: var(--theme-base7);
-		--color-four: var(--theme-base2);
-		--color-bg: var(--black-alt);
-		--color-bg-active: var(--theme-base8);
-		--color-bg-playing: var(--theme-base8);
-		--color-line: var(--black);
-	}
+
+:host([dark]) {
+	--color-one: var(--theme-base9);
+	--color-two: var(--theme-base1);
+	--color-three: var(--theme-base7);
+	--color-four: var(--theme-base2);
+	--color-bg: var(--black-alt);
+	--color-bg-active: var(--theme-base8);
+	--color-bg-playing: var(--theme-base8);
+	--color-line: var(--black);
 }
 
 :host {
@@ -342,12 +341,10 @@
 	display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-	:host .playlist-playing-image img {
-		box-shadow: 0 3px 3px 0px rgba(24,24,24,0.6);
-	}
+:host([dark]) .playlist-playing-image img {
+	box-shadow: 0 3px 3px 0px rgba(24,24,24,0.6);
+}
 
-	:host web-audio-visualizer {
-		filter: hue-rotate(180deg) invert(80%);
-	}
+:host([dark]) web-audio-visualizer {
+	filter: hue-rotate(180deg) invert(80%);
 }

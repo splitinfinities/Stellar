@@ -1,5 +1,6 @@
 import { Component, Prop, Element, h } from '@stencil/core';
 import properties from 'css-custom-properties';
+import Tunnel from '../../dark_mode';
 
 @Component({
   tag: 'stellar-tag',
@@ -12,6 +13,7 @@ export class Tag {
   @Prop({reflect: true}) size: string;
   @Prop({reflect: true}) pill: boolean = false;
   @Prop({reflect: true}) outline: boolean = false;
+  @Prop({reflect: true}) dark: boolean = false;
   @Prop() color: string = "cyan5";
   @Prop() textColor: string = "white";
 
@@ -30,3 +32,4 @@ export class Tag {
     );
   }
 }
+Tunnel.injectProps(Tag, ['dark']);

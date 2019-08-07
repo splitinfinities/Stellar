@@ -1,4 +1,5 @@
 import { Component, Element, State, Prop, Method, Watch, h } from '@stencil/core';
+import Tunnel from '../../dark_mode';
 import Highcharts from 'highcharts'
 import Data from 'highcharts/modules/data';
 import merge from 'deepmerge';
@@ -6,12 +7,13 @@ import { theme, HighchartsModel } from './options';
 
 Data(Highcharts);
 
+
+
 @Component({
   tag: 'stellar-chart',
   styleUrl: 'chart.css',
   shadow: true
 })
-
 export class Chart {
   @Element() element: HTMLElement;
   @State() __chart: HTMLElement;
@@ -24,6 +26,7 @@ export class Chart {
   @Prop() remote: string;
   @Prop() for: string;
   @Prop() config: HighchartsModel = new HighchartsModel;
+  @Prop({reflect: true}) dark: boolean = false;
 
   @Watch('config')
   handleConfig() {
@@ -84,3 +87,4 @@ export class Chart {
     return <div class="highchart" />;
   }
 }
+Tunnel.injectProps(Chart, ['dark']);

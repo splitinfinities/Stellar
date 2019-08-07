@@ -49,6 +49,7 @@ export namespace Components {
     'width': number;
   }
   interface StellarAccordion {
+    'dark': boolean;
     'label': string;
     'name': string;
     'open': boolean;
@@ -69,6 +70,7 @@ export namespace Components {
   interface StellarAssetLibrary {}
   interface StellarAvatar {
     'color': string;
+    'dark': boolean;
     'initials': string;
     'name': string;
     'notooltip': boolean;
@@ -84,6 +86,7 @@ export namespace Components {
   }
   interface StellarBreadcrumb {
     'color': string;
+    'dark': boolean;
     'disabled': boolean;
     'first': boolean;
     'href': string;
@@ -94,6 +97,7 @@ export namespace Components {
   }
   interface StellarBreadcrumbs {
     'color': string;
+    'dark': boolean;
     'description': string;
     'home': string;
     'icon': string;
@@ -183,9 +187,11 @@ export namespace Components {
     'value': string;
   }
   interface StellarCallout {
+    'dark': boolean;
     'type': "alert"|"error"|"info"|"success"|"default";
   }
   interface StellarCard {
+    'dark': boolean;
     'flip_card': (e?: UIEvent) => Promise<void>;
     /**
     * Sets the href on the anchor tag if the button is a link.
@@ -234,6 +240,7 @@ export namespace Components {
   }
   interface StellarChart {
     'config': HighchartsModel;
+    'dark': boolean;
     'for': string;
     'get_options': () => Promise<any>;
     'options': (newOptions: any) => Promise<void>;
@@ -245,6 +252,7 @@ export namespace Components {
     'clipboard': () => Promise<void>;
     'codeString': string;
     'copy': boolean;
+    'dark': boolean;
     'expandable': boolean;
     'expanded': boolean;
     'feature': boolean;
@@ -257,11 +265,16 @@ export namespace Components {
   }
   interface StellarColorLibrary {}
   interface StellarColorPicker {
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark': boolean;
     'notransparent': boolean;
     'val': string;
   }
   interface StellarComment {
     'content': any;
+    'dark': boolean;
     'name': any;
   }
   interface StellarComments {}
@@ -269,6 +282,10 @@ export namespace Components {
     'behavior': string;
     'for': string;
     'open': boolean;
+  }
+  interface StellarDarkMode {
+    'body': boolean;
+    'system': boolean;
   }
   interface StellarDocsComponent {
     'loader': Load;
@@ -303,6 +320,7 @@ export namespace Components {
     'stats_link': string;
   }
   interface StellarDropdown {
+    'dark': boolean;
     'icon': boolean;
     'label': string;
     'open': boolean;
@@ -405,6 +423,10 @@ export namespace Components {
     'autofocus': boolean;
     'color': string;
     'cols': number;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark': boolean;
     'dateType': "month"|"year"|"day";
     /**
     * The pre-set value to pass to the input element
@@ -488,7 +510,11 @@ export namespace Components {
   interface StellarItem {
     'apply': (data: any) => Promise<void>;
     'danger': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark': boolean;
+    'data': () => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: string; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -516,6 +542,10 @@ export namespace Components {
     'width': number;
   }
   interface StellarLabel {
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark': boolean;
     'for': string;
     'size': string;
     'underneath': boolean;
@@ -553,6 +583,7 @@ export namespace Components {
   }
   interface StellarMessage {
     'closable': boolean;
+    'dark': boolean;
     'name': string;
     'remember': boolean;
     'shown': boolean;
@@ -563,6 +594,7 @@ export namespace Components {
   interface StellarPagination {
     'color': string;
     'current': number;
+    'dark': boolean;
     'padding': number;
     /**
     * Public: Sets the max cap of pages you can skip through
@@ -588,6 +620,7 @@ export namespace Components {
   interface StellarPlaylist {
     'artwork': boolean;
     'autoplay': boolean;
+    'dark': boolean;
     'load': boolean;
     'loading': boolean;
     'name': string;
@@ -605,6 +638,10 @@ export namespace Components {
   }
   interface StellarProgress {
     'blurable': boolean;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark': boolean;
     /**
     * Allows the progress bar to be clicked on, to help the user to navigate through the progressing content.
     */
@@ -686,6 +723,10 @@ export namespace Components {
   }
   interface StellarScrollZSection {}
   interface StellarSelect {
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark': boolean;
     'default': any;
     'description': string;
     'fit': boolean;
@@ -834,6 +875,10 @@ export namespace Components {
     'activate': () => Promise<void>;
     'checked': boolean;
     'checkedDefault': boolean;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark': boolean;
   }
   interface StellarTab {
     'dark': boolean;
@@ -876,6 +921,7 @@ export namespace Components {
   }
   interface StellarTag {
     'color': string;
+    'dark': boolean;
     'outline': boolean;
     'pill': boolean;
     'size': string;
@@ -889,6 +935,10 @@ export namespace Components {
   }
   interface StellarToggle {
     'card': any;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark': boolean;
     'description': string;
     'flip': boolean;
     'label': string;
@@ -906,6 +956,10 @@ export namespace Components {
     'checked': boolean;
     'checkedDefault': boolean;
     'confirm': () => Promise<void>;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark': boolean;
     'default': string;
     'disabled': boolean;
     'for': string;
@@ -923,6 +977,7 @@ export namespace Components {
   }
   interface StellarTooltip {
     'align': "left"|"center"|"right"|"middle-left"|"middle-center"|"middle-right"|"bottom-left"|"bottom-center"|"bottom-right";
+    'dark': boolean;
     'focused': boolean;
   }
   interface StellarUnit {
@@ -1180,6 +1235,12 @@ declare global {
   var HTMLStellarContentElement: {
     prototype: HTMLStellarContentElement;
     new (): HTMLStellarContentElement;
+  };
+
+  interface HTMLStellarDarkModeElement extends Components.StellarDarkMode, HTMLStencilElement {}
+  var HTMLStellarDarkModeElement: {
+    prototype: HTMLStellarDarkModeElement;
+    new (): HTMLStellarDarkModeElement;
   };
 
   interface HTMLStellarDocsComponentElement extends Components.StellarDocsComponent, HTMLStencilElement {}
@@ -1601,6 +1662,7 @@ declare global {
     'stellar-comment': HTMLStellarCommentElement;
     'stellar-comments': HTMLStellarCommentsElement;
     'stellar-content': HTMLStellarContentElement;
+    'stellar-dark-mode': HTMLStellarDarkModeElement;
     'stellar-docs-component': HTMLStellarDocsComponentElement;
     'stellar-docs-header': HTMLStellarDocsHeaderElement;
     'stellar-docs-home': HTMLStellarDocsHomeElement;
@@ -1701,6 +1763,7 @@ declare namespace LocalJSX {
     'width'?: number;
   }
   interface StellarAccordion extends JSXBase.HTMLAttributes<HTMLStellarAccordionElement> {
+    'dark'?: boolean;
     'label'?: string;
     'name'?: string;
     'open'?: boolean;
@@ -1720,6 +1783,7 @@ declare namespace LocalJSX {
   interface StellarAssetLibrary extends JSXBase.HTMLAttributes<HTMLStellarAssetLibraryElement> {}
   interface StellarAvatar extends JSXBase.HTMLAttributes<HTMLStellarAvatarElement> {
     'color'?: string;
+    'dark'?: boolean;
     'initials'?: string;
     'name'?: string;
     'notooltip'?: boolean;
@@ -1734,6 +1798,7 @@ declare namespace LocalJSX {
   }
   interface StellarBreadcrumb extends JSXBase.HTMLAttributes<HTMLStellarBreadcrumbElement> {
     'color'?: string;
+    'dark'?: boolean;
     'disabled'?: boolean;
     'first'?: boolean;
     'href'?: string;
@@ -1744,6 +1809,7 @@ declare namespace LocalJSX {
   }
   interface StellarBreadcrumbs extends JSXBase.HTMLAttributes<HTMLStellarBreadcrumbsElement> {
     'color'?: string;
+    'dark'?: boolean;
     'description'?: string;
     'home'?: string;
     'icon'?: string;
@@ -1833,9 +1899,11 @@ declare namespace LocalJSX {
     'value'?: string;
   }
   interface StellarCallout extends JSXBase.HTMLAttributes<HTMLStellarCalloutElement> {
+    'dark'?: boolean;
     'type'?: "alert"|"error"|"info"|"success"|"default";
   }
   interface StellarCard extends JSXBase.HTMLAttributes<HTMLStellarCardElement> {
+    'dark'?: boolean;
     /**
     * Sets the href on the anchor tag if the button is a link.
     */
@@ -1884,6 +1952,7 @@ declare namespace LocalJSX {
   }
   interface StellarChart extends JSXBase.HTMLAttributes<HTMLStellarChartElement> {
     'config'?: HighchartsModel;
+    'dark'?: boolean;
     'for'?: string;
     'remote'?: string;
     'type'?: "area"|"areaspline"|"bar"|"bubble"|"column"|"line"|"pie"|"polygon"|"scatter"|"spline"|"waterfall";
@@ -1891,6 +1960,7 @@ declare namespace LocalJSX {
   interface StellarCode extends JSXBase.HTMLAttributes<HTMLStellarCodeElement> {
     'codeString'?: string;
     'copy'?: boolean;
+    'dark'?: boolean;
     'expandable'?: boolean;
     'expanded'?: boolean;
     'feature'?: boolean;
@@ -1900,12 +1970,17 @@ declare namespace LocalJSX {
   }
   interface StellarColorLibrary extends JSXBase.HTMLAttributes<HTMLStellarColorLibraryElement> {}
   interface StellarColorPicker extends JSXBase.HTMLAttributes<HTMLStellarColorPickerElement> {
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark'?: boolean;
     'notransparent'?: boolean;
     'onUpdate'?: (event: CustomEvent<any>) => void;
     'val'?: string;
   }
   interface StellarComment extends JSXBase.HTMLAttributes<HTMLStellarCommentElement> {
     'content'?: any;
+    'dark'?: boolean;
     'name'?: any;
   }
   interface StellarComments extends JSXBase.HTMLAttributes<HTMLStellarCommentsElement> {}
@@ -1913,6 +1988,10 @@ declare namespace LocalJSX {
     'behavior'?: string;
     'for'?: string;
     'open'?: boolean;
+  }
+  interface StellarDarkMode extends JSXBase.HTMLAttributes<HTMLStellarDarkModeElement> {
+    'body'?: boolean;
+    'system'?: boolean;
   }
   interface StellarDocsComponent extends JSXBase.HTMLAttributes<HTMLStellarDocsComponentElement> {
     'loader'?: Load;
@@ -1947,6 +2026,7 @@ declare namespace LocalJSX {
     'stats_link'?: string;
   }
   interface StellarDropdown extends JSXBase.HTMLAttributes<HTMLStellarDropdownElement> {
+    'dark'?: boolean;
     'icon'?: boolean;
     'label'?: string;
     'open'?: boolean;
@@ -2045,6 +2125,10 @@ declare namespace LocalJSX {
     'autofocus'?: boolean;
     'color'?: string;
     'cols'?: number;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark'?: boolean;
     'dateType'?: "month"|"year"|"day";
     /**
     * The pre-set value to pass to the input element
@@ -2128,6 +2212,10 @@ declare namespace LocalJSX {
   }
   interface StellarItem extends JSXBase.HTMLAttributes<HTMLStellarItemElement> {
     'danger'?: boolean;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark'?: boolean;
     'fit'?: boolean;
     'focused'?: boolean;
     'history'?: RouterHistory;
@@ -2157,6 +2245,10 @@ declare namespace LocalJSX {
     'width'?: number;
   }
   interface StellarLabel extends JSXBase.HTMLAttributes<HTMLStellarLabelElement> {
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark'?: boolean;
     'for'?: string;
     'size'?: string;
     'underneath'?: boolean;
@@ -2191,6 +2283,7 @@ declare namespace LocalJSX {
   }
   interface StellarMessage extends JSXBase.HTMLAttributes<HTMLStellarMessageElement> {
     'closable'?: boolean;
+    'dark'?: boolean;
     'name'?: string;
     'remember'?: boolean;
     'shown'?: boolean;
@@ -2201,6 +2294,7 @@ declare namespace LocalJSX {
   interface StellarPagination extends JSXBase.HTMLAttributes<HTMLStellarPaginationElement> {
     'color'?: string;
     'current'?: number;
+    'dark'?: boolean;
     'onChanged'?: (event: CustomEvent<any>) => void;
     'padding'?: number;
     /**
@@ -2226,6 +2320,7 @@ declare namespace LocalJSX {
   interface StellarPlaylist extends JSXBase.HTMLAttributes<HTMLStellarPlaylistElement> {
     'artwork'?: boolean;
     'autoplay'?: boolean;
+    'dark'?: boolean;
     'load'?: boolean;
     'loading'?: boolean;
     'name'?: string;
@@ -2239,6 +2334,10 @@ declare namespace LocalJSX {
   }
   interface StellarProgress extends JSXBase.HTMLAttributes<HTMLStellarProgressElement> {
     'blurable'?: boolean;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark'?: boolean;
     /**
     * Allows the progress bar to be clicked on, to help the user to navigate through the progressing content.
     */
@@ -2319,6 +2418,10 @@ declare namespace LocalJSX {
   }
   interface StellarScrollZSection extends JSXBase.HTMLAttributes<HTMLStellarScrollZSectionElement> {}
   interface StellarSelect extends JSXBase.HTMLAttributes<HTMLStellarSelectElement> {
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark'?: boolean;
     'default'?: any;
     'description'?: string;
     'fit'?: boolean;
@@ -2450,6 +2553,10 @@ declare namespace LocalJSX {
   interface StellarSwitch extends JSXBase.HTMLAttributes<HTMLStellarSwitchElement> {
     'checked'?: boolean;
     'checkedDefault'?: boolean;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark'?: boolean;
     'onUpdate'?: (event: CustomEvent<any>) => void;
   }
   interface StellarTab extends JSXBase.HTMLAttributes<HTMLStellarTabElement> {
@@ -2491,6 +2598,7 @@ declare namespace LocalJSX {
   }
   interface StellarTag extends JSXBase.HTMLAttributes<HTMLStellarTagElement> {
     'color'?: string;
+    'dark'?: boolean;
     'outline'?: boolean;
     'pill'?: boolean;
     'size'?: string;
@@ -2504,6 +2612,10 @@ declare namespace LocalJSX {
   }
   interface StellarToggle extends JSXBase.HTMLAttributes<HTMLStellarToggleElement> {
     'card'?: any;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark'?: boolean;
     'description'?: string;
     'flip'?: boolean;
     'label'?: string;
@@ -2520,6 +2632,10 @@ declare namespace LocalJSX {
   interface StellarToggleOption extends JSXBase.HTMLAttributes<HTMLStellarToggleOptionElement> {
     'checked'?: boolean;
     'checkedDefault'?: boolean;
+    /**
+    * Sets the button or link as an outlined button.
+    */
+    'dark'?: boolean;
     'default'?: string;
     'disabled'?: boolean;
     'for'?: string;
@@ -2537,6 +2653,7 @@ declare namespace LocalJSX {
   }
   interface StellarTooltip extends JSXBase.HTMLAttributes<HTMLStellarTooltipElement> {
     'align'?: "left"|"center"|"right"|"middle-left"|"middle-center"|"middle-right"|"bottom-left"|"bottom-center"|"bottom-right";
+    'dark'?: boolean;
     'focused'?: boolean;
   }
   interface StellarUnit extends JSXBase.HTMLAttributes<HTMLStellarUnitElement> {
@@ -2648,6 +2765,7 @@ declare namespace LocalJSX {
     'stellar-comment': StellarComment;
     'stellar-comments': StellarComments;
     'stellar-content': StellarContent;
+    'stellar-dark-mode': StellarDarkMode;
     'stellar-docs-component': StellarDocsComponent;
     'stellar-docs-header': StellarDocsHeader;
     'stellar-docs-home': StellarDocsHome;

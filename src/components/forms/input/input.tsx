@@ -1,6 +1,10 @@
 import { Component, Element, Prop, State, Listen, Method, Event, EventEmitter, Watch, h } from '@stencil/core';
 import { shouldBeAnInput, hasIncrements, hasValue, isDatePicker, Validator, Tokenfield } from "./lib";
 import { zxcvbn, TinyDatePicker, moment } from '../../../utils'
+import Tunnel from '../../dark_mode';
+
+
+
 
 @Component({
   tag: 'stellar-input',
@@ -66,6 +70,11 @@ export class Input {
   // Aesthetic things
   @Prop({mutable: true, reflect: true}) size: string;
   @Prop() color: string = "theme";
+
+  /**
+   * Sets the button or link as an outlined button.
+   */
+  @Prop({reflect: true}) dark: boolean = false;
 
   // Accessibility
   @Prop({ mutable: true, reflect: true }) label: string;
@@ -637,3 +646,5 @@ export class Input {
     );
   }
 }
+
+Tunnel.injectProps(Input, ['dark']);

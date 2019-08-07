@@ -1,4 +1,5 @@
 import { Component, Prop, State, Element, Listen, Method, Event, EventEmitter, h } from "@stencil/core";
+import Tunnel from '../../dark_mode';
 
 @Component({
   tag: "stellar-toggle",
@@ -17,6 +18,10 @@ export class Toggle {
   @Prop() single: boolean;
   @Prop() size: string;
   @Prop({reflect: true}) novalidate: boolean;
+  /**
+   * Sets the button or link as an outlined button.
+   */
+  @Prop({reflect: true}) dark: boolean = false;
 
   @Prop() card: any = "div";
 
@@ -136,3 +141,4 @@ export class Toggle {
     ];
   }
 }
+Tunnel.injectProps(Toggle, ['dark']);

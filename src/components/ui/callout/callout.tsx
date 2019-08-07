@@ -1,4 +1,5 @@
 import { Component, Prop, State, Element, Watch, h } from '@stencil/core';
+import Tunnel from '../../dark_mode';
 
 @Component({
   tag: 'stellar-callout',
@@ -8,6 +9,7 @@ import { Component, Prop, State, Element, Watch, h } from '@stencil/core';
 export class Callout {
   @Element() element: HTMLElement;
 
+  @Prop({reflect: true}) dark: boolean = false;
   @Prop() type: "alert"|"error"|"info"|"success"|"default" = "default";
   @State() theme: string = "gray";
 
@@ -63,3 +65,5 @@ export class Callout {
     );
   }
 }
+
+Tunnel.injectProps(Callout, ['dark']);
