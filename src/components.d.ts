@@ -57,7 +57,9 @@ export namespace Components {
     'tight': boolean;
   }
   interface StellarAnimateText {
-    'method': string|"glitch"|"lettering"|"weight"|"fade";
+    'in': () => Promise<void>;
+    'method': string;
+    'out': () => Promise<void>;
   }
   interface StellarAsset {
     'align': string;
@@ -1777,7 +1779,7 @@ declare namespace LocalJSX {
     'tight'?: boolean;
   }
   interface StellarAnimateText extends JSXBase.HTMLAttributes<HTMLStellarAnimateTextElement> {
-    'method'?: string|"glitch"|"lettering"|"weight"|"fade";
+    'method'?: string;
   }
   interface StellarAsset extends JSXBase.HTMLAttributes<HTMLStellarAssetElement> {
     'align'?: string;

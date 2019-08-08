@@ -1,45 +1,34 @@
-import { Component, Prop, State, Element, h } from '@stencil/core'
-// import { blurringEase } from '../../../utils';
+import { Component, Prop, Element, h, Method, State, Host } from '@stencil/core'
+import { animations } from "./animations";
 
 @Component({
   tag: 'stellar-animate-text',
   styleUrl: 'animate-text.css'
 })
 export class AnimateText {
-  @Element() element: HTMLElement
-  @Prop() method: string|"glitch"|"lettering"|"weight"|"fade" = "lettering"
-  @State() verticalBlur: number = 0;
-  @State() horizontalBlur: number = 0;
-
-  blurHorizontal() {
-    // blurringEase((e: number) => {
-    //   this.horizontalBlur = e * 4
-    // }, 450, 0, 'exponential', { invert: true })
-  }
-
-  blurVertical() {
-    // blurringEase((e: number) => {
-    //   this.verticalBlur = e * 4
-    // }, 450, 0, 'exponential', { invert: true })
-  }
+  @Element() element: HTMLElement;
+  @State() letters: NodeListOf<HTMLElement>;
+  @Prop() method: string = "bounce";
 
   componentWillLoad() {
-    if (this.method === "lettering") {
-      this.horizontalBlur = 4;
-    }
+    this.element.innerHTML = this.element.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+    this.letters = this.element.querySelectorAll('.letter');
   }
 
-  componentDidLoad() {
-    if (this.method === "lettering") {
-      this.blurHorizontal();
-    }
+  @Method()
+  async in() {
+    animations[this.method].in(this.letters)
+  }
+
+  @Method()
+  async out() {
+    animations[this.method].out(this.letters)
   }
 
   render() {
-    return (
-      <stellar-blur vertical={this.verticalBlur} horizontal={this.horizontalBlur}>
-        <slot></slot>
-      </stellar-blur>
-    )
+    return <Host>
+      <slot />
+      <stellar-intersection element={this.element} multiple in={this.in.bind(this)} out={this.out.bind(this)} />
+    </Host>
   }
 }
