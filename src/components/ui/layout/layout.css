@@ -9,6 +9,10 @@
   --grid-gap: 3rem;
   --padding: 4rem;
   --layout: 1fr;
+  --tiny: 420px;
+  --small: 700px;
+  --medium: 1024px;
+  --large: 1200px;
 }
 
 :host .layout {
@@ -28,19 +32,19 @@
 }
 
 :host([size="tiny"]) .layout {
-  max-width: 420px;
+  max-width: var(--tiny);
 }
 
 :host([size="small"]) .layout {
-  max-width: 700px;
+  max-width: var(--small);
 }
 
 :host([size="medium"]) .layout {
-  max-width: 1024px;
+  max-width: var(--medium);
 }
 
 :host([size="large"]) .layout {
-  max-width: 1200px;
+  max-width: var(--large);
 }
 
 :host([size="full"]) .layout {
