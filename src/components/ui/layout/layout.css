@@ -24,7 +24,7 @@
   max-width: 1024px;
   min-height: 0;
   min-width: 0;
-  --grid-template-columns: var(--layout);
+  grid-template-columns: var(--layout);
 }
 
 :host .layout > * {
