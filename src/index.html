@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en" class="theme-red complement-indigo">
+<html dir="ltr" lang="en">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" name="viewport">
@@ -9,67 +9,42 @@
   <script nomodule src="/build/stellar-core.js"></script>
 
 </head>
-<body class="theme-red complement-indigo">
+<body>
   <stellar-layout>
     <copy-wrap>
-      <h1 class="theme-base7 dm-theme-base3"><stellar-animate-text method="jump">Lorem ipsum</stellar-animate-text></h1>
+      <h1 class="theme-base7 dm-theme-base3"><stellar-animate-text>Lorem ipsum</stellar-animate-text></h1>
+      <h2 class="theme-base7 dm-theme-base3"><stellar-animate-text>Lorem ipsum</stellar-animate-text></h2>
+      <h3 class="theme-base7 dm-theme-base3"><stellar-animate-text>Lorem ipsum dolor sit amet</stellar-animate-text></h3>
+      <h4 class="theme-base7 dm-theme-base3"><stellar-animate-text>Lorem ipsum dolor sit amet</stellar-animate-text></h4>
+      <h5 class="theme-base7 dm-theme-base3"><stellar-animate-text>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</stellar-animate-text></h5>
+      <h6 class="theme-base7 dm-theme-base3"><stellar-animate-text>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</stellar-animate-text></h6>
+      <p class="theme-base7 dm-theme-base3"><stellar-animate-text>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe voluptatibus, rem laudantium sequi non ut assumenda facilis obcaecati modi omnis amet quos vitae dolor praesentium vero dolores atque eos suscipit.</stellar-animate-text></p>
     </copy-wrap>
   </stellar-layout>
+  <stellar-context time weather></stellar-context>
 
-  <stellar-theme dark>
-    <stellar-layout class="dm-bg-black">
-      <copy-wrap>
-        <h1 class="theme-base7 dm-theme-base3">Lorem ipsum</h1>
-        <h2 class="theme-base7 dm-theme-base3">Lorem ipsum</h2>
-        <h3 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet</h3>
-        <h4 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet</h4>
-        <h5 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
-        <h6 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
-        <p class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe voluptatibus, rem laudantium sequi non ut assumenda facilis obcaecati modi omnis amet quos vitae dolor praesentium vero dolores atque eos suscipit.</p>
-      </copy-wrap>
-    </stellar-layout>
-  </stellar-theme>
+  <script>
+    document.querySelector('stellar-context').addEventListener('timeChange', (event) => {
+      if (event.detail === 'day' || event.detail === 'dawn') {
+        document.querySelector('html').classList.remove('dark-mode');
+      } else {
+        document.querySelector('html').classList.add('dark-mode');
+      }
 
-  <stellar-theme light>
-      <stellar-layout class="dm-bg-black">
-        <copy-wrap>
-          <h1 class="theme-base7 dm-theme-base3">Lorem ipsum</h1>
-          <h2 class="theme-base7 dm-theme-base3">Lorem ipsum</h2>
-          <h3 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet</h3>
-          <h4 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet</h4>
-          <h5 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
-          <h6 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
-          <p class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe voluptatibus, rem laudantium sequi non ut assumenda facilis obcaecati modi omnis amet quos vitae dolor praesentium vero dolores atque eos suscipit.</p>
-        </copy-wrap>
-      </stellar-layout>
-    </stellar-theme>
-
-    <stellar-theme dark>
-      <stellar-layout class="dm-bg-black">
-        <copy-wrap>
-          <h1 class="theme-base7 dm-theme-base3">Lorem ipsum</h1>
-          <h2 class="theme-base7 dm-theme-base3">Lorem ipsum</h2>
-          <h3 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet</h3>
-          <h4 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet</h4>
-          <h5 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
-          <h6 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
-          <p class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe voluptatibus, rem laudantium sequi non ut assumenda facilis obcaecati modi omnis amet quos vitae dolor praesentium vero dolores atque eos suscipit.</p>
-        </copy-wrap>
-      </stellar-layout>
-    </stellar-theme>
-
-    <stellar-theme light>
-        <stellar-layout class="dm-bg-black">
-          <copy-wrap>
-            <h1 class="theme-base7 dm-theme-base3">Lorem ipsum</h1>
-            <h2 class="theme-base7 dm-theme-base3">Lorem ipsum</h2>
-            <h3 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet</h3>
-            <h4 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet</h4>
-            <h5 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
-            <h6 class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
-            <p class="theme-base7 dm-theme-base3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe voluptatibus, rem laudantium sequi non ut assumenda facilis obcaecati modi omnis amet quos vitae dolor praesentium vero dolores atque eos suscipit.</p>
-          </copy-wrap>
-        </stellar-layout>
-      </stellar-theme>
+      if (event.detail === 'day') {
+        document.querySelector('html').classList.add('theme-teal');
+        document.querySelector('body').classList.add('theme-teal');
+      } else if (event.detail === 'dawn') {
+        document.querySelector('html').classList.add('theme-indigo');
+        document.querySelector('body').classList.add('theme-indigo');
+      } else if (event.detail === 'dusk') {
+        document.querySelector('html').classList.add('theme-orange');
+        document.querySelector('body').classList.add('theme-orange');
+      } else if (event.detail === 'night') {
+        document.querySelector('html').classList.add('theme-red');
+        document.querySelector('body').classList.add('theme-red');
+      }
+    })
+  </script>
 </body>
 </html>

@@ -54,6 +54,7 @@ export class VideoInterview {
   cache = new WeakMap()
 
   handleUpdate(event) {
+    console.log(event)
     this.playing = event.detail.playing;
     this.current = Math.abs(Math.round(event.detail.currentTime * 1000));
     this.duration = Math.round(event.detail.duration * 1000);
@@ -145,9 +146,9 @@ export class VideoInterview {
             <source src={this.src} />
           </stellar-video>
           <div class="transcript">
-            <slot name="transcript"></slot>
+            <slot />
           </div>
-          {this.video && <web-audio-visualizer for={`interview-${this.randomId}`} type={this.visualization} width={1024} height={1024} color={this.color} />}
+          {this.video && <web-audio-visualizer for={`interview-${this.randomId}`} type={this.visualization} width={2048} height={1024} color={this.color} />}
           <button class={this.loading ? "loading button" : (this.playing ? "playing button" : "button")} onClick={() => { this.handleClick() }}>
             <stellar-asset name={this.loading ? "sync" : (this.playing ? "pause" : "play")} class={this.loading ? "animation-spin" : ""} />
           </button>

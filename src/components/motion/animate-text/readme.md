@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default    |
-| -------- | --------- | ----------- | -------- | ---------- |
-| `method` | `method`  |             | `string` | `"bounce"` |
+| Property | Attribute | Description | Type     | Default       |
+| -------- | --------- | ----------- | -------- | ------------- |
+| `method` | `method`  |             | `string` | `"lettering"` |
 
 
 ## Methods

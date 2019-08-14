@@ -1,13 +1,12 @@
 stellar-animate-text {
   position: relative;
-}
-/*
-stellar-animate-text,
-stellar-animate-text .letter {
-  all: inherit;
   display: inline;
 }
 
 stellar-animate-text .letter {
+  display: inline-block;
+}
+
+stellar-animate-text .letter {
   opacity: 0;
-} */
+}

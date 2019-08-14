@@ -289,6 +289,11 @@ export namespace Components {
     'for': string;
     'open': boolean;
   }
+  interface StellarContext {
+    'apikey': string;
+    'time': boolean;
+    'weather': boolean;
+  }
   interface StellarDocsComponent {
     'loader': Load;
     'match': MatchResults;
@@ -1246,6 +1251,12 @@ declare global {
     new (): HTMLStellarContentElement;
   };
 
+  interface HTMLStellarContextElement extends Components.StellarContext, HTMLStencilElement {}
+  var HTMLStellarContextElement: {
+    prototype: HTMLStellarContextElement;
+    new (): HTMLStellarContextElement;
+  };
+
   interface HTMLStellarDocsComponentElement extends Components.StellarDocsComponent, HTMLStencilElement {}
   var HTMLStellarDocsComponentElement: {
     prototype: HTMLStellarDocsComponentElement;
@@ -1671,6 +1682,7 @@ declare global {
     'stellar-comment': HTMLStellarCommentElement;
     'stellar-comments': HTMLStellarCommentsElement;
     'stellar-content': HTMLStellarContentElement;
+    'stellar-context': HTMLStellarContextElement;
     'stellar-docs-component': HTMLStellarDocsComponentElement;
     'stellar-docs-header': HTMLStellarDocsHeaderElement;
     'stellar-docs-home': HTMLStellarDocsHomeElement;
@@ -2001,6 +2013,13 @@ declare namespace LocalJSX {
     'behavior'?: string;
     'for'?: string;
     'open'?: boolean;
+  }
+  interface StellarContext extends JSXBase.HTMLAttributes<HTMLStellarContextElement> {
+    'apikey'?: string;
+    'onTimeChange'?: (event: CustomEvent<any>) => void;
+    'onWeatherChange'?: (event: CustomEvent<any>) => void;
+    'time'?: boolean;
+    'weather'?: boolean;
   }
   interface StellarDocsComponent extends JSXBase.HTMLAttributes<HTMLStellarDocsComponentElement> {
     'loader'?: Load;
@@ -2781,6 +2800,7 @@ declare namespace LocalJSX {
     'stellar-comment': StellarComment;
     'stellar-comments': StellarComments;
     'stellar-content': StellarContent;
+    'stellar-context': StellarContext;
     'stellar-docs-component': StellarDocsComponent;
     'stellar-docs-header': StellarDocsHeader;
     'stellar-docs-home': StellarDocsHome;

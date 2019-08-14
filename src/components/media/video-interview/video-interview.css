@@ -8,6 +8,8 @@
 
 :host skeleton-img {
   margin: 0;
+  max-width: initial;
+  max-height: initial;
 }
 
 :host div.card {

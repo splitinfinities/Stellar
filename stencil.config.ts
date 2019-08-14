@@ -83,7 +83,7 @@ export const config: Config = {
           warn: true
         },
         {
-          src: "global/vector",
+          src: "global/**/*",
           warn: true
         },
         {

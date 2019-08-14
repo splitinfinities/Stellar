@@ -8,7 +8,7 @@ import { animations } from "./animations";
 export class AnimateText {
   @Element() element: HTMLElement;
   @State() letters: NodeListOf<HTMLElement>;
-  @Prop() method: string = "bounce";
+  @Prop() method: string = "lettering";
 
   componentWillLoad() {
     this.element.innerHTML = this.element.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");

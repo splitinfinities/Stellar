@@ -94,6 +94,7 @@ export const animations = {
             .add({
                 targets,
                 rotateY: [-90, 0],
+                opacity: [0,1],
                 duration: 1300,
                 delay: function(_, i) {
                     return 45 * i;
@@ -105,6 +106,7 @@ export const animations = {
             .add({
                 targets,
                 rotateY: [0, -90],
+                opacity: [1,0],
                 duration: 1300,
                 delay: function(_, i) {
                     return 45 * i;
