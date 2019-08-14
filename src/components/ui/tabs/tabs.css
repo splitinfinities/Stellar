@@ -1,6 +1,6 @@
 :host {
   --font-size: var(--ms0);
-  --padding: calc(var(--ms0) + 0.4em) var(--ms0);
+  --padding: calc(var(--ms-1) + 0.4em) var(--ms-1);
   --indicator-color: var(--theme-base5);
   --overflow: auto hidden;
   font-size: var(--font-size);
@@ -19,22 +19,22 @@
 
 :host([size="tiny"]) {
   --font-size: var(--ms-2);
-  --padding: calc(var(--ms-2) + 0.45em) var(--ms-2);
+  --padding: calc(var(--ms-3) + 0.45em) var(--ms-3);
 }
 
 :host([size="small"]) {
   --font-size: var(--ms-1);
-  --padding: calc(var(--ms-1) + 0.5em) var(--ms-1);
+  --padding: calc(var(--ms-2) + 0.5em) var(--ms-2);
 }
 
 :host([size="medium"]) {
   --font-size: var(--ms1);
-  --padding: calc(var(--ms1) + 0.25em) var(--ms1);
+  --padding: calc(var(--ms0) + 0.25em) var(--ms0);
 }
 
 :host([size="large"]) {
   --font-size: var(--ms2);
-  --padding: calc(var(--ms2) + 0.1em) var(--ms2);
+  --padding: calc(var(--ms1) + 0.1em) var(--ms1);
 }
 
 :host stellar-blur {
