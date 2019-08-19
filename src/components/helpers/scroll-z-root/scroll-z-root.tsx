@@ -53,8 +53,8 @@ export class ScrollZRoot {
         this.setSceneHeight()
 
         this.sections.forEach((section, index) => {
-            const x = `${this.randomFloat(-40, 150)}%`;
-            const y = `${this.randomFloat(-100, 100)}%`;
+            const x = `${this.randomFloat(-20, 120)}%`;
+            const y = `${this.randomFloat(-20, 120)}%`;
             const z = `calc(var(--itemZ) * var(--cameraSpeed) * ${index} * -1px)`;
 
             section.style.setProperty('transform', `translate3D(${x}, ${y}, ${z})`)

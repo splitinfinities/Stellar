@@ -9,10 +9,16 @@ export class AnimateText {
   @Element() element: HTMLElement;
   @State() letters: NodeListOf<HTMLElement>;
   @Prop() method: string = "lettering";
+  @Prop() words: boolean = false;
 
   componentWillLoad() {
-    this.element.innerHTML = this.element.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
-    this.letters = this.element.querySelectorAll('.letter');
+    if (this.words) {
+      this.element.innerHTML = this.element.textContent.replace(/[^, ]+/g, "<span class='letter'>$&</span>");
+      this.letters = this.element.querySelectorAll('.letter');
+    } else {
+      this.element.innerHTML = this.element.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+      this.letters = this.element.querySelectorAll('.letter');
+    }
   }
 
   @Method()

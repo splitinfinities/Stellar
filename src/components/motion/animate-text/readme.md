@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default       |
-| -------- | --------- | ----------- | -------- | ------------- |
-| `method` | `method`  |             | `string` | `"lettering"` |
+| Property | Attribute | Description | Type      | Default       |
+| -------- | --------- | ----------- | --------- | ------------- |
+| `method` | `method`  |             | `string`  | `"lettering"` |
+| `words`  | `words`   |             | `boolean` | `false`       |
 
 
 ## Methods

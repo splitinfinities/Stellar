@@ -60,6 +60,7 @@ export namespace Components {
     'in': () => Promise<void>;
     'method': string;
     'out': () => Promise<void>;
+    'words': boolean;
   }
   interface StellarAsset {
     'align': string;
@@ -1792,6 +1793,7 @@ declare namespace LocalJSX {
   }
   interface StellarAnimateText extends JSXBase.HTMLAttributes<HTMLStellarAnimateTextElement> {
     'method'?: string;
+    'words'?: boolean;
   }
   interface StellarAsset extends JSXBase.HTMLAttributes<HTMLStellarAssetElement> {
     'align'?: string;
