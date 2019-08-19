@@ -35,7 +35,7 @@
     "ez-clipboard": "^1.0.0",
     "focus-within": "^3.0.2",
     "hex-to-hsl": "^1.0.2",
-    "highcharts": "^7.1.1",
+    "highcharts": "7.1.1",
     "jsmediatags": "^3.8.1",
     "kaleidoscopejs": "^1.0.18",
     "load-js": "^3.0.3",
