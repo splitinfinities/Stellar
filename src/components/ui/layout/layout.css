@@ -13,6 +13,7 @@
   --small: 700px;
   --medium: 1024px;
   --large: 1200px;
+  --width: 95%;
 }
 
 :host .layout {
@@ -20,8 +21,8 @@
   grid-gap: var(--grid-gap, 3rem);
   margin: 0 auto;
   padding: var(--padding) 0;
-  width: 95%;
-  max-width: 1024px;
+  width: var(--width);
+  max-width: var(--medium);
   min-height: 0;
   min-width: 0;
   grid-template-columns: var(--layout);
