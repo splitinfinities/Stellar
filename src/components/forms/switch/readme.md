@@ -20,11 +20,14 @@
 
 ## Properties
 
-| Property         | Attribute         | Description                                    | Type      | Default |
-| ---------------- | ----------------- | ---------------------------------------------- | --------- | ------- |
-| `checked`        | `checked`         |                                                | `boolean` | `false` |
-| `checkedDefault` | `checked-default` |                                                | `boolean` | `false` |
-| `dark`           | `dark`            | Sets the button or link as an outlined button. | `boolean` | `false` |
+| Property         | Attribute         | Description                                    | Type      | Default     |
+| ---------------- | ----------------- | ---------------------------------------------- | --------- | ----------- |
+| `checked`        | `checked`         |                                                | `boolean` | `false`     |
+| `checkedDefault` | `checked-default` |                                                | `boolean` | `false`     |
+| `dark`           | `dark`            | Sets the button or link as an outlined button. | `boolean` | `false`     |
+| `name`           | `name`            |                                                | `string`  | `undefined` |
+| `novalidate`     | `novalidate`      |                                                | `boolean` | `undefined` |
+| `required`       | `required`        |                                                | `boolean` | `undefined` |
 
 
 ## Events
@@ -43,6 +46,16 @@
 #### Returns
 
 Type: `Promise<void>`
+
+
+
+### `validate() => Promise<FormResult>`
+
+
+
+#### Returns
+
+Type: `Promise<FormResult>`
 
 
 

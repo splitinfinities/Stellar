@@ -3,9 +3,6 @@ import delay from 'await-delay';
 import Pluralize from 'pluralize';
 import Tunnel from '../../theme';
 
-
-
-
 @Component({
   tag: 'stellar-select',
   styleUrl: 'select.css',

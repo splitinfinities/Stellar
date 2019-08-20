@@ -1,4 +1,4 @@
-import { Component, Prop, Element, Event, EventEmitter, Method, Watch, h } from '@stencil/core';
+import { Component, Prop, Element, Event, EventEmitter, Method, Watch, h, State } from '@stencil/core';
 import Tunnel from '../../theme';
 
 @Component({
@@ -9,6 +9,10 @@ export class Switch {
   @Element() el: HTMLElement;
   @Prop({mutable: true, reflect: true}) checked: boolean = false;
   @Prop() checkedDefault: boolean = false;
+  @Prop({reflect: true}) name: string;
+  @Prop({reflect: true}) novalidate: boolean;
+  @Prop({reflect: true}) required: boolean;
+  @State() status: FormResult;
   @Event() update: EventEmitter;
   /**
    * Sets the button or link as an outlined button.
@@ -19,6 +23,28 @@ export class Switch {
     if (this.checkedDefault) {
       this.checked = this.checkedDefault
     }
+  }
+
+  @Method()
+  async validate(): Promise<FormResult> {
+    const status: FormResult = {
+      name: this.name,
+      value: this.checked,
+      valid: true,
+      errors: [],
+    };
+
+    if (!this.novalidate) {
+      // @ts-ignore
+      if (!this.checked && this.required) {
+        status.valid = false;
+        status.errors.push({ message: 'This field is required.' });
+      }
+    }
+
+    this.status = status;
+
+    return this.status;
   }
 
   @Method()
@@ -36,7 +62,7 @@ export class Switch {
   render() {
     return (
       <label class="label">
-        <input type="checkbox" checked={this.checked} tabindex="-1" onClick={() => {this.activate()}}/>
+        <input type="checkbox" name={this.name} checked={this.checked} tabindex="-1" onClick={() => {this.activate()}}/>
         <button type="button" onClick={() => {this.activate()}}>
           <span>
             {this.checked && <stellar-asset name="checkmark" />}

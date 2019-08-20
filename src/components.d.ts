@@ -522,7 +522,7 @@ export namespace Components {
     * Sets the button or link as an outlined button.
     */
     'dark': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "stencil-route-link" | "a" | "button"; label: string; danger: boolean; slotted: string; }>;
+    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -888,6 +888,10 @@ export namespace Components {
     * Sets the button or link as an outlined button.
     */
     'dark': boolean;
+    'name': string;
+    'novalidate': boolean;
+    'required': boolean;
+    'validate': () => Promise<FormResult>;
   }
   interface StellarTab {
     'dark': boolean;
@@ -2588,7 +2592,10 @@ declare namespace LocalJSX {
     * Sets the button or link as an outlined button.
     */
     'dark'?: boolean;
+    'name'?: string;
+    'novalidate'?: boolean;
     'onUpdate'?: (event: CustomEvent<any>) => void;
+    'required'?: boolean;
   }
   interface StellarTab extends JSXBase.HTMLAttributes<HTMLStellarTabElement> {
     'dark'?: boolean;
