@@ -522,7 +522,7 @@ export namespace Components {
     * Sets the button or link as an outlined button.
     */
     'dark': boolean;
-    'data': () => Promise<{ size: string; value: string; type: "button" | "a" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>;
+    'data': () => Promise<{ size: string; value: string; type: "a" | "button" | "stencil-route-link"; label: string; danger: boolean; slotted: string; }>;
     'fit': boolean;
     'focused': boolean;
     'history': RouterHistory;
@@ -580,12 +580,16 @@ export namespace Components {
   interface StellarMarkdown {
     /**
     * Used to set
+    * @type {string}
+    * @memberof Markdown
     */
     'codeString': string;
     'editable': boolean;
     'flavor': "github"|"original"|"vanilla";
     /**
     * Used to reference an external markdown file
+    * @type string
+    * @memberof Markdown
     */
     'src': string;
   }
@@ -2306,12 +2310,16 @@ declare namespace LocalJSX {
   interface StellarMarkdown extends JSXBase.HTMLAttributes<HTMLStellarMarkdownElement> {
     /**
     * Used to set
+    * @type {string}
+    * @memberof Markdown
     */
     'codeString'?: string;
     'editable'?: boolean;
     'flavor'?: "github"|"original"|"vanilla";
     /**
     * Used to reference an external markdown file
+    * @type string
+    * @memberof Markdown
     */
     'src'?: string;
   }
