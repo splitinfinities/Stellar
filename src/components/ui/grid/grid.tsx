@@ -1,12 +1,10 @@
-import { Component, Prop, Element, Method, Event, EventEmitter, State, h } from '@stencil/core';
+import { Component, Prop, Element, Method, h, Host } from '@stencil/core';
 import { default as eqjs } from 'eq.js';
-import Sortable from '@shopify/draggable/lib/sortable';
-import SwapAnimation from '@shopify/draggable/lib/plugins/swap-animation';
 
 @Component({
   tag: 'stellar-grid',
   styleUrl: 'grid.css',
-  shadow: false
+  shadow: true
 })
 export class Grid {
   @Element() element: HTMLElement;
@@ -16,14 +14,6 @@ export class Grid {
   @Prop({reflect: true}) padding: boolean = false;
   @Prop({reflect: true}) align: string = "items-start";
   @Prop({reflect: true}) noresponsive: boolean = false;
-
-  @Prop() swappable: boolean = false;
-  @Prop() swappableSelector: string = "stellar-card";
-
-  @Event() orderChanged: EventEmitter;
-
-  @State() order: string[];
-  @State() __swappable;
 
   async makeResponsive() {
     if (!this.noresponsive) {
@@ -39,45 +29,12 @@ export class Grid {
     }
   }
 
-  async makeSwappable() {
-    if (this.swappable) {
-      this.__swappable = new Sortable(this.element.querySelectorAll('.grid'), {
-        draggable: this.swappableSelector,
-        delay: 350,
-        swapAnimation: {
-          duration: 200,
-          easingFunction: 'ease-in-out',
-          horizontal: true,
-          vertical: true
-        },
-        plugins: [SwapAnimation]
-      });
-
-      this.__swappable.on('swappable:start', () => { this.refresh(); });
-      this.__swappable.on('swappable:stop', () => { this.updateOrder(); });
-    }
-  }
-
-  async updateOrder() {
-    const elements = this.element.querySelectorAll(this.swappableSelector);
-    const order = [];
-
-    Array.from(elements).forEach((element) => {
-      order.push(element.id);
-    })
-    this.order = order;
-
-    this.orderChanged.emit(this.order)
-  }
-
   componentWillLoad() {
     this.makeResponsive()
-    this.makeSwappable()
   }
 
   componentDidLoad() {
     this.makeResponsive()
-    this.makeSwappable()
   }
 
   @Method()
@@ -88,8 +45,8 @@ export class Grid {
   }
 
   render() {
-    return <div class={`grid ${this.align}`}>
+    return <Host class={`${this.align}`}>
       <slot></slot>
-    </div>
+    </Host>
   }
 }

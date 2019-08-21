@@ -361,8 +361,6 @@ export namespace Components {
     'noresponsive': boolean;
     'padding': boolean;
     'refresh': () => Promise<void>;
-    'swappable': boolean;
-    'swappableSelector': string;
   }
   interface StellarGroup {
     'count': number;
@@ -2092,10 +2090,7 @@ declare namespace LocalJSX {
     'cols'?: number|string;
     'compact'?: boolean;
     'noresponsive'?: boolean;
-    'onOrderChanged'?: (event: CustomEvent<any>) => void;
     'padding'?: boolean;
-    'swappable'?: boolean;
-    'swappableSelector'?: string;
   }
   interface StellarGroup extends JSXBase.HTMLAttributes<HTMLStellarGroupElement> {
     'count'?: number;

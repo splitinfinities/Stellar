@@ -23,22 +23,13 @@
 
 ## Properties
 
-| Property            | Attribute            | Description | Type               | Default          |
-| ------------------- | -------------------- | ----------- | ------------------ | ---------------- |
-| `align`             | `align`              |             | `string`           | `"items-start"`  |
-| `cols`              | `cols`               |             | `number \| string` | `"auto"`         |
-| `compact`           | `compact`            |             | `boolean`          | `false`          |
-| `noresponsive`      | `noresponsive`       |             | `boolean`          | `false`          |
-| `padding`           | `padding`            |             | `boolean`          | `false`          |
-| `swappable`         | `swappable`          |             | `boolean`          | `false`          |
-| `swappableSelector` | `swappable-selector` |             | `string`           | `"stellar-card"` |
-
-
-## Events
-
-| Event          | Description | Type               |
-| -------------- | ----------- | ------------------ |
-| `orderChanged` |             | `CustomEvent<any>` |
+| Property       | Attribute      | Description | Type               | Default         |
+| -------------- | -------------- | ----------- | ------------------ | --------------- |
+| `align`        | `align`        |             | `string`           | `"items-start"` |
+| `cols`         | `cols`         |             | `number \| string` | `"auto"`        |
+| `compact`      | `compact`      |             | `boolean`          | `false`         |
+| `noresponsive` | `noresponsive` |             | `boolean`          | `false`         |
+| `padding`      | `padding`      |             | `boolean`          | `false`         |
 
 
 ## Methods
