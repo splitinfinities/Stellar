@@ -18,6 +18,7 @@ export class Picture {
   @Prop() height: number;
   @Prop({reflect: true}) nozoom: boolean = false;
   @Prop({mutable: true}) bg: string = "auto";
+  @Prop({mutable: true}) alt: string = "";
 
   @State() aspectRatio: number;
   @State() sources: Array<any> = [];
@@ -144,7 +145,7 @@ export class Picture {
         this.sources.map((source) =>
           <source srcSet={source.srcset} media={source.media ? source.media : false} />
         ),
-        <img src={this.large} class="final_image" />
+        <img src={this.large} class="final_image" alt={this.alt} />
       ]
     }
   }

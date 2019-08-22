@@ -414,6 +414,7 @@ export namespace Components {
     'src'?: string;
   }
   interface StellarImage {
+    'alt': string;
     'bg': string;
     'height': number;
     'large': string;
@@ -2144,6 +2145,7 @@ declare namespace LocalJSX {
     'src'?: string;
   }
   interface StellarImage extends JSXBase.HTMLAttributes<HTMLStellarImageElement> {
+    'alt'?: string;
     'bg'?: string;
     'height'?: number;
     'large'?: string;

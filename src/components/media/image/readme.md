@@ -22,6 +22,7 @@
 
 | Property | Attribute | Description | Type                        | Default     |
 | -------- | --------- | ----------- | --------------------------- | ----------- |
+| `alt`    | `alt`     |             | `string`                    | `""`        |
 | `bg`     | `bg`      |             | `string`                    | `"auto"`    |
 | `height` | `height`  |             | `number`                    | `undefined` |
 | `large`  | `large`   |             | `string`                    | `undefined` |

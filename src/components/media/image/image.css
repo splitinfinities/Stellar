@@ -2,22 +2,29 @@
   box-sizing: border-box;
 }
 
+:host {
+  --filter: blur(10px);
+  --background-color: transparent;
+  --aspect_ratio: 100%;
+  --ease: ease-in-out;
+  --gradient: none;
+  --blend: multiply;
+
+  display: inline-flex;
+  background: var(--background-color);
+  width: 100%;
+  max-width: var(--width, 300px);
+  max-height: var(--height, 300px);
+  align-items: center;
+}
+
 :host([type="background"]) {
-  background-color: var(--background-color, transparent);
+  background-color: var(--background-color);
   background-image: var(--background-image);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
-}
-
-:host {
-  display: inline-flex;
-  background: var(--background-color, transparent);
-  width: 100%;
-  max-width: var(--width, 300px);
-  max-height: var(--height, 300px);
-  align-items: center;
 }
 
 :host([block]) {
@@ -34,7 +41,7 @@
   display: block;
   position: relative;
   margin: 0;
-  padding-bottom: var(--aspect_ratio, 100%);
+  padding-bottom: var(--aspect_ratio);
   width: 100%;
   height: 0;
   cursor: zoom-in;
@@ -76,8 +83,8 @@
   opacity: 0.5;
   z-index: 3;
   pointer-events: none;
-  background: var(--gradient, none);
-  mix-blend-mode: var(--blend, multiply);
+  background: var(--gradient);
+  mix-blend-mode: var(--blend);
 }
 
 :host picture {
@@ -99,8 +106,8 @@
   pointer-events: none;
   opacity: 1;
   z-index: 1;
-  background: var(--background-color, transparent) 50% 50% / cover no-repeat;
-  filter: blur(10px);
+  background: var(--background-color) 50% 50% / cover no-repeat;
+  filter: var(--filter);
   image-rendering: -moz-crisp-edges;
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
@@ -114,7 +121,7 @@
 }
 
 :host figure.loaded .placeholder {
-  filter: blur(0px);
+  filter: none;
   opacity: 0;
 }
 
