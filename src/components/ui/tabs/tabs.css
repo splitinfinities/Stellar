@@ -3,6 +3,7 @@
   --padding: calc(var(--ms-1) + 0.4em) var(--ms-1);
   --indicator-color: var(--theme-base5);
   --overflow: auto hidden;
+  --justify-content: space-evenly;
   font-size: var(--font-size);
   display: block;
   position: relative;
@@ -104,14 +105,14 @@
   overflow: var(--overflow);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: var(--justify-content);
   height: 100%;
 }
 
 :host([block]) .tab-list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: var(--justify-content);
   width: 100%;
   margin: 0 3px;
 }
