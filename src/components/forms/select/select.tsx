@@ -502,9 +502,7 @@ export class Select {
           {this.loading && <div class="loading"><stellar-asset name="loading-spin" /> <p>One sec...</p></div>}
 
           <button type="button" class="select-title" onClick={() => this.handleTitleClick()} onFocus={() => this.handleTitleFocus()} onBlur={() => this.handleTitleBlur()}>
-            <stellar-item fit wrap select-title type="button" value={this.value ? this.value.toString() : ""} tabindex="-1" selectable={false} label={this.language} innerHTML={this.language}>
-              {this.language}
-            </stellar-item>
+            <stellar-item fit wrap select-title type="button" value={this.value ? this.value.toString() : ""} tabindex="-1" selectable={false} label={this.language} innerHTML={this.language}></stellar-item>
             <stellar-asset name="arrow-down" />
 
             { this.name && <input type="text" tabindex="-1" value={this.value} name={this.name.toString()} required={this.required} /> }
