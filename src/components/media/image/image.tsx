@@ -132,7 +132,7 @@ export class Picture {
     this.aspectRatio = (this.height / this.width) * 100;
 
     properties.set({
-      "--aspect_ratio": `${this.aspectRatio}%`,
+      "--aspect-ratio": `${this.aspectRatio}%`,
       "--width": `${this.width}px`,
       "--height": `${this.height}px`,
     }, this.element);
