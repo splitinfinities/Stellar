@@ -19,6 +19,7 @@ export class Testington {
 
     render() {
         return <stellar-layout size="tiny" padding="large" align="center" class="mv6 dib w-100">
+            <stellar-theme body system base="orange" complement="violet" />
         <copy-wrap align="center">
           <h1 class="mb4">Sign in to Your Account</h1>
 

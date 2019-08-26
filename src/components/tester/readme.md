@@ -10,6 +10,7 @@
 ### Depends on
 
 - [stellar-layout](../ui/layout)
+- [stellar-theme](../helpers/theme)
 - [copy-wrap](../ui/copy-wrap)
 - [stellar-form](../forms/form)
 - [stellar-grid](../ui/grid)
@@ -21,12 +22,14 @@
 ```mermaid
 graph TD;
   stellar-tester --> stellar-layout
+  stellar-tester --> stellar-theme
   stellar-tester --> copy-wrap
   stellar-tester --> stellar-form
   stellar-tester --> stellar-grid
   stellar-tester --> stellar-select
   stellar-tester --> stellar-item
   stellar-tester --> stellar-button
+  stellar-theme --> context-consumer
   stellar-select --> stellar-label
   stellar-select --> stellar-button
   stellar-select --> stellar-asset

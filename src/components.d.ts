@@ -946,7 +946,9 @@ export namespace Components {
   }
   interface StellarTester {}
   interface StellarTheme {
+    'base': string;
     'body': boolean;
+    'complement': string;
     'dark': boolean;
     'light': boolean;
     'system': boolean;
@@ -2651,7 +2653,9 @@ declare namespace LocalJSX {
   }
   interface StellarTester extends JSXBase.HTMLAttributes<HTMLStellarTesterElement> {}
   interface StellarTheme extends JSXBase.HTMLAttributes<HTMLStellarThemeElement> {
+    'base'?: string;
     'body'?: boolean;
+    'complement'?: string;
     'dark'?: boolean;
     'light'?: boolean;
     'system'?: boolean;
