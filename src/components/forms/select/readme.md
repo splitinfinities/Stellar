@@ -182,6 +182,7 @@
 
 | Property              | Attribute              | Description                                    | Type                                       | Default                 |
 | --------------------- | ---------------------- | ---------------------------------------------- | ------------------------------------------ | ----------------------- |
+| `autoSelectFirst`     | `auto-select-first`    |                                                | `boolean`                                  | `false`                 |
 | `dark`                | `dark`                 | Sets the button or link as an outlined button. | `boolean`                                  | `false`                 |
 | `default`             | `default`              |                                                | `any`                                      | `undefined`             |
 | `description`         | `description`          |                                                | `string`                                   | `undefined`             |

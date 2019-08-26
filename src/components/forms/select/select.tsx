@@ -37,6 +37,7 @@ export class Select {
   @Prop({reflect: true}) fit: boolean = false;
   @Prop({reflect: true}) wrap: boolean = false;
   @Prop({reflect: true}) resize: boolean = false;
+  @Prop({reflect: true}) autoSelectFirst: boolean = false;
 
   /**
    * Sets the button or link as an outlined button.
@@ -47,6 +48,7 @@ export class Select {
   @State() status: FormResult;
   @State() blur: number = 0;
   @State() observer: MutationObserver;
+  @State() language: string;
 
   @State() clear_confirm: boolean = false;
 
@@ -128,14 +130,20 @@ export class Select {
 
       this.value = values;
       this.update.emit(this.value);
+      this.updateLanguage();
     } else {
       const options = await this.option_elements();
+
+      if (this.value.length === 0 && this.autoSelectFirst) {
+        this.element.querySelector('stellar-item').select_item({selected: true})
+      }
 
       Array.from(options).forEach(async (el) => {
         if (el.selected) {
           this.titleItem.apply(await el.data());
           this.value = el.value;
           this.update.emit(this.value);
+          this.updateLanguage()
         }
 
         if (el.selectTitle) {
@@ -299,26 +307,31 @@ export class Select {
     }
   }
 
-  readable_value(): string {
+  updateLanguage() {
     let language;
-    // @ts-ignore
+    let details;
+
     if (typeof this.value === "object") {
       if (this.value.length === 0) {
-        language = Pluralize(this.verbiage, this.value.length)
+        details = Pluralize(this.verbiage, this.value.length)
 
         if (this.placeholderInverted) {
-          return `All ${language} selected`
+          language = `All ${details} selected`
         } else {
-          return `No ${language} selected`
+          language = `No ${details} selected`
         }
+      } else {
+        details = Pluralize(this.verbiage, this.value.length, true);
+        language = `${details} selected`;
       }
-      language = Pluralize(this.verbiage, this.value.length, true)
-      return `${language} selected`
+
     } else if (typeof this.value === "string") {
-      return this.valueLabel || this.value.toString() || `Select ${this.verbiageAn ? "an" : "a"} ${this.verbiage}`
+      language = this.valueLabel || this.value.toString() || `Select ${this.verbiageAn ? "an" : "a"} ${this.verbiage}`
     } else {
-      return this.valueLabel || this.value
+      language = this.valueLabel || this.value
     }
+
+    this.language = language
   }
 
   @Method()
@@ -329,6 +342,8 @@ export class Select {
       valid: true,
       errors: [],
     };
+
+    this.updateLanguage();
 
     if (!this.novalidate) {
       // @ts-ignore
@@ -487,8 +502,8 @@ export class Select {
           {this.loading && <div class="loading"><stellar-asset name="loading-spin" /> <p>One sec...</p></div>}
 
           <button type="button" class="select-title" onClick={() => this.handleTitleClick()} onFocus={() => this.handleTitleFocus()} onBlur={() => this.handleTitleBlur()}>
-            <stellar-item fit wrap select-title type="button" value={this.value ? this.value.toString() : ""} tabindex="-1" selectable={false} label={this.readable_value()}>
-              {this.readable_value()}
+            <stellar-item fit wrap select-title type="button" value={this.value ? this.value.toString() : ""} tabindex="-1" selectable={false} label={this.language} innerHTML={this.language}>
+              {this.language}
             </stellar-item>
             <stellar-asset name="arrow-down" />
 

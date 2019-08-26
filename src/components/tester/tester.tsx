@@ -6,13 +6,15 @@ import { Component, State, h, Element } from '@stencil/core'
 export class Testington {
     @Element() element: HTMLElement;
     @State() form: HTMLStellarFormElement;
+    @State() select: HTMLStellarSelectElement;
 
     componentDidLoad() {
         this.form = this.element.querySelector('stellar-form')
+        this.select = this.form.querySelector('stellar-select')
     }
 
     submitLogin (_) {
-        alert('submitted');
+        this.select.multiple = !this.select.multiple
     }
 
     render() {
@@ -27,6 +29,7 @@ export class Testington {
                 overlay
                 fit
                 wrap
+                autoSelectFirst
                 label="Metric Category"
                 placeholder="Select a metric category"
                 novalidate
@@ -57,6 +60,7 @@ export class Testington {
                           Cool
                   </stellar-item>
               </stellar-select>
+              <stellar-button tag="submit">submit</stellar-button>
             </stellar-grid>
           </stellar-form>
         </copy-wrap>

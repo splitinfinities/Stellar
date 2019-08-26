@@ -15,6 +15,7 @@
 - [stellar-grid](../ui/grid)
 - [stellar-select](../forms/select)
 - [stellar-item](../forms/item)
+- [stellar-button](../forms/button)
 
 ### Graph
 ```mermaid
@@ -25,6 +26,7 @@ graph TD;
   stellar-tester --> stellar-grid
   stellar-tester --> stellar-select
   stellar-tester --> stellar-item
+  stellar-tester --> stellar-button
   stellar-select --> stellar-label
   stellar-select --> stellar-button
   stellar-select --> stellar-asset

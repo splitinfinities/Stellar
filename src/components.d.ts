@@ -734,6 +734,7 @@ export namespace Components {
   }
   interface StellarScrollZSection {}
   interface StellarSelect {
+    'autoSelectFirst': boolean;
     /**
     * Sets the button or link as an outlined button.
     */
@@ -2457,6 +2458,7 @@ declare namespace LocalJSX {
   }
   interface StellarScrollZSection extends JSXBase.HTMLAttributes<HTMLStellarScrollZSectionElement> {}
   interface StellarSelect extends JSXBase.HTMLAttributes<HTMLStellarSelectElement> {
+    'autoSelectFirst'?: boolean;
     /**
     * Sets the button or link as an outlined button.
     */
