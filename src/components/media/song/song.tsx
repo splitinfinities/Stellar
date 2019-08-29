@@ -1,11 +1,11 @@
 import { Component, Prop, State, Element, Method, Event, EventEmitter, h } from '@stencil/core';
 import { leadingZeroIndex, relPathAsAbs } from "../../../utils";
-import jsmediatags from 'jsmediatags/dist/jsmediatags.js';
+import './vendor/jsmediatags.min.js';
 import smallIndexedDb from 'small-indexeddb'
 
 @Component({
     tag: 'stellar-song',
-    assetsDirs: ['vendor'],
+    assetsDirs: ['./vendor'],
 	styleUrl: 'song.css',
 	shadow: true
 })
@@ -73,7 +73,7 @@ export class Song {
 
         const details = await transaction('readonly', store => store.get(this.src))
 		if (!details) {
-			jsmediatags.read(this.url, {
+			window["jsmediatags"].read(this.url, {
 				onSuccess: async (tag) => {
 					var itemToSave: SongInterface = {
 						title: tag.tags.title,
