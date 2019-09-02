@@ -102,9 +102,13 @@
   animation-fill-mode: both;
 }
 
+:host([dark]) .select .loading {
+  background: var(--theme-base9);
+  color: var(--theme-base5);
+}
+
 :host .select .loading stellar-asset {
   font-size: 1.6rem;
-
 }
 
 :host .select-title stellar-asset {
