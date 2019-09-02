@@ -15,6 +15,7 @@
   --padding: 0 1em;
   --background: var(--white);
   --color: var(--black);
+  --icon-color: var(--gray4);
   --border-color: var(--gray2);
   --border: 1px solid var(--border-color);
   --line-height: var(--ms6);
@@ -27,7 +28,7 @@
 }
 
 :host([icon]) {
-  --padding: 0 1em 0 3.25em;
+  --padding: 0 1em 0 3em;
 }
 
 :host([size="tiny"]) {
@@ -209,7 +210,7 @@
   transform: scale(0) translateY(-50%);
   transform-origin: 50% 0;
   opacity: 0;
-  color: var(--gray5);
+  color: var(--icon-color);
   font-size: calc(var(--font-size) * 2);
   line-height: 0;
   background: var(--background)
@@ -223,9 +224,17 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 1rem;
-  font-size: var(--font-size);
-  color: var(--gray5);
+  font-size: calc(var(--font-size) * 2);
+  width: calc(var(--font-size) * 2);
+  height: calc(var(--font-size) * 2);
+  margin-left: 0.5rem;
+  color: var(--icon-color);
+}
+
+:host ::slotted(stellar-asset[slot="icon"]) {
+  font-size: calc(var(--font-size) * 2);
+  width: calc(var(--font-size) * 2);
+  height: calc(var(--font-size) * 2);
 }
 
 :host .smile[data-level="0"] {
@@ -576,7 +585,7 @@
 }
 
 :host .file-list li:nth-of-type(odd) {
-  background: var(--gray5);
+  background: var(--icon-color);
 }
 
 :host .file-list li p,
@@ -601,6 +610,7 @@
   --border-color: var(--gray9);
   --background: var(--black-alt);
   --color: var(--white);
+  --icon-color: var(--gray6)
 }
 
 :host([dark]) .tokenfield.tokenfield-mode-tokens .focused {
