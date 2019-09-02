@@ -58,7 +58,6 @@ Type: `Promise<void>`
 ### Used by
 
  - [stellar-accordion](../../ui/accordion)
- - [stellar-dropdown](../../ui/dropdown)
  - [stellar-pagination](../../ui/pagination)
  - [stellar-select](../../forms/select)
  - [stellar-slides](../slides)
@@ -69,7 +68,6 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   stellar-accordion --> stellar-blur
-  stellar-dropdown --> stellar-blur
   stellar-pagination --> stellar-blur
   stellar-select --> stellar-blur
   stellar-slides --> stellar-blur
