@@ -13,9 +13,9 @@ export class Dropdown {
   @Element() element: HTMLElement
 
   @Prop({mutable: true, reflect: true}) position: "left"|"center"|"right" = "center"
-  @Prop() icon: boolean = false
-  @Prop() label: string = "Dropdown"
-  @Prop({mutable: true, reflect: true}) open: boolean = false
+  @Prop() icon: boolean = false;
+  @Prop() label: string = "Dropdown";
+  @Prop({mutable: true, reflect: true}) open: boolean = false;
   @State() ease: TweenInstance = blurringEase({
     end: 10,
     start: -1,
@@ -32,6 +32,11 @@ export class Dropdown {
 
   @State() blur: number = 0
   @State() timeout: any;
+  @State() footer: boolean = false;
+
+  componentWillLoad() {
+    this.footer = this.element.querySelectorAll('[slot="footer"]').length !== 0;
+  }
 
   componentDidLoad() {
     focusWithin(document)
@@ -53,18 +58,19 @@ export class Dropdown {
           <slot name="handle"></slot>
           { !this.icon && <stellar-asset name="arrow-down" class="caret"></stellar-asset> }
         </div>
-        <stellar-blur vertical={this.blur}>
+        <div class="clipper">
           <div class="list-wrap">
             <ul class="list">
               <slot></slot>
-              <div class="footer">
+              {this.footer && <div class="footer">
                 <slot name="footer"></slot>
-              </div>
+              </div>}
             </ul>
           </div>
-        </stellar-blur>
+        </div>
       </div>
     )
   }
 }
+
 Tunnel.injectProps(Dropdown, ['dark']);

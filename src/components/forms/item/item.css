@@ -20,6 +20,12 @@
   --item-size: auto;
 }
 
+:host .button .content {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+}
+
 :host([wrap]) .button .content {
   white-space: normal;
   text-align: left;
@@ -61,19 +67,13 @@
 }
 
 :host .button ::slotted(stellar-avatar) {
-  /* flex: 0 0 var(--avatar-size); */
-  margin-right: .5rem;
-}
-
-:host .button ::slotted(stellar-avatar) {
-  background: var(--theme-base9);
+  width: var(--avatar-size);
   visibility: visible !important;
   display: block !important;
-  width: 2rem;
-  height: 2rem;
+  align-self: center;
 }
 
-:host .button stellar-tag {
+:host .button ::slotted(stellar-tag) {
   margin: auto 0.5rem auto auto;
 }
 

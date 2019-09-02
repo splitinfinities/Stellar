@@ -12,16 +12,13 @@
 
     --border: 1px solid var(--gray1);
     --background: var(--white);
+    --background-active: var(--theme-base0);
     --flipped-background: var(--white);
     --flipped-min-height: var(--flipped-min-height, 20rem);
     --border-radius: var(--border-radius-sm);
     --padding: 3rem;
     --min-height: 10rem;
     --card-width: auto;
-}
-
-:host([tag="a"]) {
-    background: transparent;
 }
 
 :host([padding="none"]) {
@@ -64,6 +61,10 @@
     "footer footer footer";
     border-radius: var(--border-radius);
     min-height: var(--min-height);
+    background: var(--background);
+    text-align: inherit;
+    font-size: inherit;
+    color: inherit;
 }
 
 :host([flippable]) .wrap .front,
@@ -106,7 +107,7 @@
 }
 
 :host .wrap ::slotted(header.subhead) {
-    background: var(--theme-base7);
+    background: var(--theme-base8);
 }
 
 :host .wrap ::slotted(header.sticky) {
@@ -135,7 +136,7 @@
 :host button.wrap:active,
 :host a.wrap:active,
 :host stencil-route-link.wrap:active {
-    background: var(--theme-base0);
+    background: var(--background-active);
 }
 
 :host([shadow="light"]) {
@@ -238,5 +239,6 @@
 :host([dark]) {
     --border: 1px solid var(--gray8);
     --background: var(--gray9);
+    --background-active: var(--gray8);
     --flipped-background: var(--gray9);
 }

@@ -3,7 +3,7 @@
   --border-radius: 0.3rem;
   --item-size: 5rem;
   --background: var(--white);
-  --border-color: var(--gray2);
+  --border-color: var(--gray1);
 
   box-sizing: border-box;
   display: block;
@@ -166,7 +166,7 @@
 
 :host .select-list ::slotted(stellar-item) {
   color: var(--color);
-  border-bottom: 1px solid var(--gray0);
+  border-bottom: 1px solid var(--border-color);
 }
 
 :host .select-list ::slotted(stellar-item:last-child) {

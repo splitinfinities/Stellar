@@ -2,10 +2,6 @@ import { Component, Prop, State, Element, Event, EventEmitter, Method, h } from 
 import { properties, ResizeObserver } from '../../../utils'
 import Tunnel from '../../theme';
 
-
-
-
-
 @Component({
   tag: 'stellar-card',
   styleUrl: 'card.css',

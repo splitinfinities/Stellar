@@ -534,7 +534,7 @@ export class Input {
   renderSearchClearButton() {
     if (this.type === "search" && hasValue(this.value)) {
       return (
-        <stellar-asset src={this.size === "small" ? "CloseSmall" : "Close"} class="close" onClick={(event: UIEvent) => this.handleReset(event)} onKeyDown={(event: KeyboardEvent) => this.handleKeyDownReset(event)} tabindex="0" title="Reset" block></stellar-asset>
+        <stellar-asset name="close" class="close" onClick={(event: UIEvent) => this.handleReset(event)} onKeyDown={(event: KeyboardEvent) => this.handleKeyDownReset(event)} tabindex="0" title="Reset" block></stellar-asset>
       )
     }
   }

@@ -6,6 +6,10 @@
   --dropdown-color: var(--theme-base7);
   --dropdown-hover-color: var(--theme-base8);
   --dropdown-width: 20rem;
+  --border-radius: 0.3rem;
+  --clip-from: polygon(0 0, 100% 0, 100% 0, 0 0);
+  --clip-to: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  --filter: drop-shadow(0px 2px 2px var(--theme-base1));
   cursor: pointer;
   display: inline-flex;
   position: relative;
@@ -13,7 +17,15 @@
   outline: 0;
   height: 100%;
   color: var(--dropdown-color);
-  transition: z-index 0ms linear 200ms
+  transition: z-index 0ms linear 200ms;
+}
+
+:host([dark]) {
+  --filter: drop-shadow(0px 2px 2px var(--theme-base9));
+}
+
+:host .clipper {
+  filter: var(--filter);
 }
 
 :host stellar-blur {
@@ -22,7 +34,7 @@
 
 :host .list-wrap {
   position: absolute;
-  top: calc(100% - .5rem);
+  top: calc(100% + .5rem);
   right: 50%;
   left: 50%;
   transition: all 110ms var(--ease) 250ms;
@@ -30,7 +42,9 @@
   width: var(--dropdown-width);
   height: auto;
   display: initial;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  clip-path: var(--clip-from);
+  border-radius: var(--border-radius);
+  overflow: hidden;
 }
 
 :host .caret {
@@ -76,7 +90,7 @@
 :host(:hover) .list-wrap,
 :host(:active) .list-wrap,
 :host(:focus-within) .list-wrap {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: var(--clip-to);
 }
 
 :host .dropdown-placeholder {
@@ -114,6 +128,7 @@
 :host .list {
   margin-top: 0;
   margin-left: 0;
+  margin-bottom: 0;
   transition: all 110ms var(--ease) 250ms;
   box-shadow: 0 0 2px 0 rgba(128, 128, 128, .35);
   background: white;

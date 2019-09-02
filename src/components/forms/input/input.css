@@ -11,8 +11,8 @@
 
   --font-size: var(--ms0);
   --complementing-font-size: var(--ms-1);
-  --height: 5rem;
-  --padding: 0 var(--ms0);
+  --height: 3em;
+  --padding: 0 1em;
   --background: var(--white);
   --color: var(--black);
   --border-color: var(--gray2);
@@ -33,7 +33,6 @@
 :host([size="tiny"]) {
   --font-size: var(--ms-2);
   --complementing-font-size: var(--ms-3);
-  --height: 2rem;
   --line-height: var(--ms4);
   --padding: 0 var(--ms-2);
   --validation-spacing: var(--ms-8);
@@ -43,7 +42,6 @@
   --font-size: var(--ms-1);
   --complementing-font-size: var(--ms-2);
   --line-height: var(--ms5);
-  --height: 2rem;
   --padding: 0 var(--ms-1);
   --validation-spacing: var(--ms-5);
 }
@@ -52,7 +50,6 @@
   --font-size: var(--ms1);
   --complementing-font-size: var(--ms0);
   --line-height: var(--ms7);
-  --height: 2rem;
   --padding: 0 var(--ms1);
   --validation-spacing: var(--ms-1);
 }
@@ -61,7 +58,6 @@
   --font-size: var(--ms2);
   --complementing-font-size: var(--ms1);
   --line-height: calc(var(--ms8) - 0.5em);
-  --height: 2rem;
   --padding: 0 var(--ms2);
   --validation-spacing: var(--ms0);
 }
@@ -153,7 +149,7 @@
   background: var(--background);
   outline: 0;
   padding: var(--padding);
-  height: auto;
+  height: var(--height);
   overflow: hidden;
   line-height: calc(var(--line-height) - 0.2em);
   font-size: var(--font-size);
@@ -201,27 +197,22 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 1rem;
+  left: 0.25em;
   font-size: calc(var(--font-size) + var(--complementing-font-size));
 }
 
 :host .smile {
   position: absolute;
   top: 50%;
-  right: 1rem;
+  right: 0.5rem;
   transition: background 100ms ease 0s, transform 500ms ease 0s;
   transform: scale(0) translateY(-50%);
   transform-origin: 50% 0;
   opacity: 0;
   color: var(--gray5);
-  font-size: 3rem;
+  font-size: calc(var(--font-size) * 2);
   line-height: 0;
   background: var(--background)
-}
-
-:host([size="small"]) .smile {
-  right: .5rem;
-  font-size: 2rem;
 }
 
 :host([type="password"]) input {
@@ -233,7 +224,7 @@
   top: 50%;
   transform: translateY(-50%);
   left: 1rem;
-  font-size: 3rem;
+  font-size: var(--font-size);
   color: var(--gray5);
 }
 
@@ -372,6 +363,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  height: calc(var(--font-size) * 2);
 }
 
 :host([size="small"][type="search"]) stellar-asset.search {
@@ -383,10 +375,13 @@
   cursor: pointer;
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 0.25em;
   transform: translateY(-50%);
   outline: 0;
   color: var(--red5);
+  font-size: calc(var(--font-size) * 2);
+  width: calc(var(--font-size) * 2);
+  height: calc(var(--font-size) * 2);
 }
 
 :host([type="search"]) stellar-asset.close:hover,
@@ -426,7 +421,7 @@
   border-radius: var(--border-radius);
   background-color: var(--background);
   background-image: none;
-  padding: 0 10px;
+  padding: 0 1rem;
   width: 100%;
   min-height: var(--height);
   line-height: 1.42857;
@@ -501,7 +496,7 @@
 :host .tokenfield .tokenfield-input {
   outline: none;
   border: none;
-  padding: 0 10px;
+  padding: 1rem 0;
   max-width: 100%;
   width: 100% !important;
   height: auto;
@@ -602,16 +597,16 @@
   color: var(--theme-base5);
 }
 
-:host(dark) {
+:host([dark]) {
   --border-color: var(--gray9);
   --background: var(--black-alt);
   --color: var(--white);
 }
 
-:host(dark) .tokenfield.tokenfield-mode-tokens .focused {
+:host([dark]) .tokenfield.tokenfield-mode-tokens .focused {
   background: var(--theme-base7);
 }
 
-:host(dark) .tokenfield .tokenfield-set > ul > li {
+:host([dark]) .tokenfield .tokenfield-set > ul > li {
   background: var(--theme-base9);
 }

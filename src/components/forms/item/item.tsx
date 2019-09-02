@@ -3,10 +3,6 @@ import { RouterHistory, LocationSegments, injectHistory } from '@stencil/router'
 import { delay } from '../../../utils';
 import Tunnel from '../../theme';
 
-
-
-
-
 @Component({
   tag: 'stellar-item',
   styleUrl: 'item.css',
