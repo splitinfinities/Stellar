@@ -24,7 +24,7 @@ export class PasswordRequirements {
     componentDidLoad() {
         setTimeout(() => {
             this.input = document.querySelector(`stellar-input[name="${this.for}"]`);
-            this.input.addEventListener('change', (e) => {
+            this.input.addEventListener('update', (e) => {
                 this.value = e.detail;
             })
         }, 1000)
