@@ -64,11 +64,15 @@ export class Tabs {
     await this.tabs();
     await this.contents();
 
-    if (this.dark) {
+
       this.tabsList.forEach((tab) => {
-        tab.dark = this.dark;
+        if (this.dark) {
+          tab.dark = this.dark;
+        }
+        if (this.vertical) {
+          tab.vertical = this.vertical;
+        }
       })
-    }
   }
 
   @Watch('dark')

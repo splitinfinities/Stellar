@@ -132,7 +132,7 @@
 :host([vertical]) {
   height: auto;
   border-right: 1px solid var(--theme-base1);
-  border-bottom: none;
+  border-bottom: 0;
 }
 
 :host([vertical]) .indicator {
@@ -154,7 +154,7 @@
 }
 
 :host([dark]) {
-  border-bottom: 1px solid var(--theme-base9);
+  border-color: var(--theme-base9);
   background: var(--black);
 }
 

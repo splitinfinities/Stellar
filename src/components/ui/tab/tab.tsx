@@ -30,6 +30,7 @@ export class Tab {
 
   @Prop({reflect: true}) order: number
   @Prop({reflect: true}) tabCount: number
+  @Prop({reflect: true}) vertical: boolean = false
 
   @State() parent: any
 

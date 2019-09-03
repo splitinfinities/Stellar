@@ -914,6 +914,7 @@ export namespace Components {
     * Sets the target on the anchor tag if the button is a link.
     */
     'target': string;
+    'vertical': boolean;
   }
   interface StellarTable {
     'chart': boolean;
@@ -2624,6 +2625,7 @@ declare namespace LocalJSX {
     * Sets the target on the anchor tag if the button is a link.
     */
     'target'?: string;
+    'vertical'?: boolean;
   }
   interface StellarTable extends JSXBase.HTMLAttributes<HTMLStellarTableElement> {
     'chart'?: boolean;

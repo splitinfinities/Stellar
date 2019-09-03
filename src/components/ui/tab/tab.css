@@ -31,20 +31,6 @@
   height: var(--height);
 }
 
-:host-context(stellar-tabs[vertical]):host .tab-wrap,
-:host-context(stellar-tabs[vertical]):host .tab-button {
-  height: auto;
-  justify-content: left !important;
-  text-align: left;
-  white-space: wrap;
-}
-
-:host-context(stellar-tabs[vertical]):host .tab-button span {
-  padding: var(--ms-2) 0;
-  white-space: pre-line;
-  line-height: var(--ms2);
-}
-
 :host .tab-wrap stellar-tag {
   position: absolute;
   top: 1px;
@@ -91,6 +77,13 @@
   line-height: 1;
   font-size: var(--font-size);
   font-weight: var(--font-weight);
+}
+
+:host([vertical]) .tab-wrap .tab-button span {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  justify-content: flex-start;
 }
 
 :host .tab-wrap .tab-button span ::slotted(stellar-asset) {

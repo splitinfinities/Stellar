@@ -19,6 +19,7 @@
 | `tabCount`      | `tab-count`     |                                                            | `number`                             | `undefined` |
 | `tag`           | `tag`           |                                                            | `"button" \| "link" \| "route-link"` | `"button"`  |
 | `target`        | `target`        | Sets the target on the anchor tag if the button is a link. | `string`                             | `'_self'`   |
+| `vertical`      | `vertical`      |                                                            | `boolean`                            | `false`     |
 
 
 ## Events
