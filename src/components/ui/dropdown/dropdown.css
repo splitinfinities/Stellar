@@ -7,7 +7,7 @@
   --dropdown-hover-color: var(--theme-base8);
   --dropdown-width: 20rem;
   --border-radius: 0.3rem;
-  --clip-from: polygon(0 0, 70% 0, 0% 0, 0 0);
+  --clip-from: polygon(0 0, 100% 0, 100% 0, 0 0);
   --clip-to: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   --filter: drop-shadow(0px 2px 2px var(--theme-base1));
   --icon-rotation: 180deg;
@@ -33,20 +33,18 @@
   left: calc(50% - (var(--dropdown-width) /2));
   width: var(--dropdown-width);
   height: auto;
-}
-
-:host stellar-blur {
-  width: var(--dropdown-width)
+  transition: all 250ms var(--ease) 250ms;
 }
 
 :host .list-wrap {
-  transition: all 250ms var(--ease) 250ms;
   z-index: 10;
+  transition: all 250ms var(--ease) 250ms;
   width: var(--dropdown-width);
   display: initial;
   clip-path: var(--clip-from);
   border-radius: var(--border-radius);
   overflow: hidden;
+  display: block;
 }
 
 :host .caret {
@@ -94,6 +92,7 @@
 :host(:active) .list-wrap,
 :host(:focus-within) .list-wrap {
   clip-path: var(--clip-to);
+  height: 100%;
 }
 
 :host .dropdown-placeholder {
@@ -209,7 +208,7 @@
 
 /* Left */
 :host([position="left"]) {
-
+  --clip-from: polygon(0% 0, 0% 50%, 0% 50%, 0 50%);
 }
 
 :host([position="left"]) .clipper {
@@ -233,7 +232,8 @@
 
 /* Right */
 :host([position="right"]) {
-
+  --clip-from: polygon(0 0, 100% 0, 100% 0, 0 0);
+  --clip-from: polygon(0 0, 100% 0%, 100% 0%, 50% 0);
 }
 
 :host([position="right"]) .clipper {
