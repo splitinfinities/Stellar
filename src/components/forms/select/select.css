@@ -3,7 +3,7 @@
   --border-radius: 0.3rem;
   --item-size: 5rem;
   --background: var(--white);
-  --border-color: var(--gray1);
+  --border-color: var(--gray2);
 
   box-sizing: border-box;
   display: block;
@@ -228,10 +228,6 @@ stellar-input .validation span + span {
   height: var(--ms-1);
 }
 
-:host([size="tiny"]) .select-title {
-  height: var(--ms4);
-}
-
 :host([size="tiny"]) .select-title stellar-asset {
   right: 1rem;
 }
@@ -240,17 +236,12 @@ stellar-input .validation span + span {
 :host([size="tiny"]) stellar-item,
 :host([size="tiny"]) ::slotted(stellar-item) {
   --font-size: var(--ms-2);
-  --item-size: var(--ms4);
 }
 
 /* Size: Small */
 :host([size="small"]) .label-wrapper stellar-label {
   margin-bottom: var(--ms-2);
   height: var(--ms0);
-}
-
-:host([size="small"]) .select-title {
-  height: var(--ms5);
 }
 
 :host([size="small"]) .select-title stellar-asset {
@@ -265,12 +256,11 @@ stellar-input .validation span + span {
 :host([size="small"]) stellar-item,
 :host([size="small"]) ::slotted(stellar-item) {
   --font-size: var(--ms-1);
-  --item-size: var(--ms5);
 }
 
 /* Size: default */
 :host .select-title {
-  height: var(--ms6);
+  height: var(--item-size);
 }
 
 :host .select-title stellar-asset {
@@ -281,17 +271,13 @@ stellar-input .validation span + span {
 :host stellar-item,
 :host ::slotted(stellar-item) {
   --font-size: var(--ms0);
-  --item-size: var(--ms6);
+  --item-size: calc(var(--font-size) * 3);
 }
 
 /* Size: Medium */
 :host([size="medium"]) .label-wrapper stellar-label {
   margin-bottom: var(--ms0);
   height: var(--ms1);
-}
-
-:host([size="medium"]) .select-title {
-  height: var(--ms7);
 }
 
 :host([size="medium"]) .select-title stellar-asset {
@@ -306,17 +292,12 @@ stellar-input .validation span + span {
 :host([size="medium"]) stellar-item,
 :host([size="medium"]) ::slotted(stellar-item) {
   --font-size: var(--ms1);
-  --item-size: var(--ms7);
 }
 
 /* Size: Large */
 :host([size="large"]) .label-wrapper stellar-label {
   margin-bottom: var(--ms-2);
   height: var(--ms3);
-}
-
-:host([size="large"]) .select-title {
-  height: var(--ms7);
 }
 
 :host([size="large"]) .select-title stellar-asset {
@@ -331,7 +312,6 @@ stellar-input .validation span + span {
 :host([size="large"]) stellar-item,
 :host([size="large"]) ::slotted(stellar-item) {
   --font-size: var(--ms2);
-  --item-size: var(--ms7);
 }
 
 :host([overlay]) .select-list {

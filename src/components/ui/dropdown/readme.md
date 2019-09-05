@@ -56,13 +56,14 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                            | Default      |
-| ---------- | ---------- | ----------- | ------------------------------- | ------------ |
-| `dark`     | `dark`     |             | `boolean`                       | `false`      |
-| `icon`     | `icon`     |             | `boolean`                       | `false`      |
-| `label`    | `label`    |             | `string`                        | `"Dropdown"` |
-| `open`     | `open`     |             | `boolean`                       | `false`      |
-| `position` | `position` |             | `"center" \| "left" \| "right"` | `"center"`   |
+| Property   | Attribute   | Description | Type                            | Default        |
+| ---------- | ----------- | ----------- | ------------------------------- | -------------- |
+| `dark`     | `dark`      |             | `boolean`                       | `false`        |
+| `icon`     | `icon`      |             | `boolean`                       | `false`        |
+| `iconName` | `icon-name` |             | `string`                        | `"arrow-down"` |
+| `label`    | `label`     |             | `string`                        | `"Dropdown"`   |
+| `open`     | `open`      |             | `boolean`                       | `false`        |
+| `position` | `position`  |             | `"center" \| "left" \| "right"` | `"center"`     |
 
 
 ## Dependencies

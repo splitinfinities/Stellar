@@ -7,9 +7,10 @@
   --dropdown-hover-color: var(--theme-base8);
   --dropdown-width: 20rem;
   --border-radius: 0.3rem;
-  --clip-from: polygon(0 0, 100% 0, 100% 0, 0 0);
+  --clip-from: polygon(0 0, 70% 0, 0% 0, 0 0);
   --clip-to: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   --filter: drop-shadow(0px 2px 2px var(--theme-base1));
+  --icon-rotation: 180deg;
   cursor: pointer;
   display: inline-flex;
   position: relative;
@@ -26,6 +27,12 @@
 
 :host .clipper {
   filter: var(--filter);
+  position: absolute;
+  top: calc(100% + .5rem);
+  right: 50%;
+  left: calc(50% - (var(--dropdown-width) /2));
+  width: var(--dropdown-width);
+  height: auto;
 }
 
 :host stellar-blur {
@@ -33,14 +40,9 @@
 }
 
 :host .list-wrap {
-  position: absolute;
-  top: calc(100% + .5rem);
-  right: 50%;
-  left: 50%;
-  transition: all 110ms var(--ease) 250ms;
+  transition: all 250ms var(--ease) 250ms;
   z-index: 10;
   width: var(--dropdown-width);
-  height: auto;
   display: initial;
   clip-path: var(--clip-from);
   border-radius: var(--border-radius);
@@ -51,11 +53,12 @@
   color: var(--dropdown-color);
   margin-left: 1.5rem;
   transition: all 210ms var(--ease);
+  font-size: 2rem;
 }
 
 :host(:hover) .caret,
 :host(:focus-within) .caret {
-  transform: scale(1) rotate(180deg);
+  transform: scale(1) rotate(var(--icon-rotation));
   color: var(--dropdown-hover-color);
 }
 
@@ -209,12 +212,12 @@
 
 }
 
-:host([position="left"]) .list-wrap {
+:host([position="left"]) .clipper {
   left: 0;
   right: auto;
 }
 
-:host([position="left"][icon]) .list-wrap {
+:host([position="left"][icon]) .clipper {
   left: var(--dropdown-offset, -3rem);
 }
 
@@ -233,12 +236,12 @@
 
 }
 
-:host([position="right"]) .list-wrap {
+:host([position="right"]) .clipper {
   left: auto;
   right: 0;
 }
 
-:host([position="right"][icon]) .list-wrap {
+:host([position="right"][icon]) .clipper {
   right: var(--dropdown-offset, 3rem);
 }
 

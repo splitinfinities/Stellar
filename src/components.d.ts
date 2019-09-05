@@ -330,6 +330,7 @@ export namespace Components {
   interface StellarDropdown {
     'dark': boolean;
     'icon': boolean;
+    'iconName': string;
     'label': string;
     'open': boolean;
     'position': "left"|"center"|"right";
@@ -2069,6 +2070,7 @@ declare namespace LocalJSX {
   interface StellarDropdown extends JSXBase.HTMLAttributes<HTMLStellarDropdownElement> {
     'dark'?: boolean;
     'icon'?: boolean;
+    'iconName'?: string;
     'label'?: string;
     'open'?: boolean;
     'position'?: "left"|"center"|"right";
