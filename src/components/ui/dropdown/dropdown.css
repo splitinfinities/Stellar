@@ -32,7 +32,7 @@
   right: 50%;
   left: calc(50% - (var(--dropdown-width) /2));
   width: var(--dropdown-width);
-  height: auto;
+  height: 0;
   transition: all 250ms var(--ease) 250ms;
 }
 
@@ -65,6 +65,12 @@
 :host(:focus-within) {
   z-index: 6;
   color: var(--dropdown-hover-color);
+}
+
+:host(:hover) .clipper,
+:host(:active) .clipper,
+:host(:focus-within) .clipper {
+  height: auto;
 }
 
 :host(:hover) .toggle::after,
