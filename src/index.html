@@ -10,67 +10,8 @@
   </script>
   <script nomodule src="/build/stellar-core.js">
   </script>
-  <style>
-    * {
-      font-family: "Inter";
-    }
-    :root {
-      --ms-ratio: 1.1
-    }
-    app-header {
-      background: var(--theme-base5);
-    display: block;
-    height: 10rem;
-    -webkit-box-shadow: 0 0 15px 0px rgba(0,0,0,0.4);
-    box-shadow: 0 0 15px 0px rgba(0,0,0,0.4);
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: grid;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    z-index: 9;
-    }
-  </style>
 </head>
-<body class="theme-red complement-indigo">
-    <div class="flex justify-between">
-      <stellar-dropdown position="left">
-        <stellar-button ghost slot="handle">Account</stellar-button>
-        <stellar-item>
-          <stellar-avatar name="William M. Riley" size="small" notooltip></stellar-avatar>
-          Your Account
-        </stellar-item>
-        <stellar-item>Billing</stellar-item>
-        <stellar-item selectable="false" slot="footer">
-          <stellar-button pill outline block size="tiny" padding="small">Sign out</stellar-button>
-        </stellar-item>
-      </stellar-dropdown>
-
-      <stellar-dropdown position="center">
-        <stellar-button ghost slot="handle">Account</stellar-button>
-        <stellar-item>
-          <stellar-avatar name="William M. Riley" size="small" notooltip></stellar-avatar>
-          Your Account
-        </stellar-item>
-        <stellar-item>Billing</stellar-item>
-        <stellar-item selectable="false" slot="footer">
-          <stellar-button pill outline block size="tiny" padding="small">Sign out</stellar-button>
-        </stellar-item>
-      </stellar-dropdown>
-
-      <stellar-dropdown position="right">
-        <stellar-button ghost slot="handle">Account</stellar-button>
-        <stellar-item>
-          <stellar-avatar name="William M. Riley" size="small" notooltip></stellar-avatar>
-          Your Account
-        </stellar-item>
-        <stellar-item>Billing</stellar-item>
-        <stellar-item selectable="false" slot="footer">
-          <stellar-button pill outline block size="tiny" padding="small">Sign out</stellar-button>
-        </stellar-item>
-      </stellar-dropdown>
-    </div>
-  </body>
+<body class="theme-red complement-indigo pa5">
+  <stellar-clock size="200" time="2011-04-11T07:02:01Z" between="2011-04-11T14:02:01Z"></stellar-clock>
+</body>
 </html>

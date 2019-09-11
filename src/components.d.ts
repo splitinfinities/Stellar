@@ -57,9 +57,12 @@ export namespace Components {
     'tight': boolean;
   }
   interface StellarAnimateText {
+    'delay': number;
+    'duration': number;
     'in': () => Promise<void>;
     'method': string;
     'out': () => Promise<void>;
+    'phrase': boolean;
     'words': boolean;
   }
   interface StellarAsset {
@@ -254,6 +257,12 @@ export namespace Components {
     'refresh': () => Promise<void>;
     'remote': string;
     'type': "area"|"areaspline"|"bar"|"bubble"|"column"|"line"|"pie"|"polygon"|"scatter"|"spline"|"waterfall";
+  }
+  interface StellarClock {
+    'animated': boolean;
+    'between': string|Date;
+    'size': number;
+    'time': string|Date;
   }
   interface StellarCode {
     'clipboard': () => Promise<void>;
@@ -1094,6 +1103,7 @@ export namespace Components {
     'play': () => Promise<void>;
     'playing': boolean;
     'prepare': () => Promise<void>;
+    'prepared': boolean;
     'skipTo': (time: any) => Promise<void>;
     'src': string;
     'stop': () => Promise<void>;
@@ -1226,6 +1236,12 @@ declare global {
   var HTMLStellarChartElement: {
     prototype: HTMLStellarChartElement;
     new (): HTMLStellarChartElement;
+  };
+
+  interface HTMLStellarClockElement extends Components.StellarClock, HTMLStencilElement {}
+  var HTMLStellarClockElement: {
+    prototype: HTMLStellarClockElement;
+    new (): HTMLStellarClockElement;
   };
 
   interface HTMLStellarCodeElement extends Components.StellarCode, HTMLStencilElement {}
@@ -1689,6 +1705,7 @@ declare global {
     'stellar-callout': HTMLStellarCalloutElement;
     'stellar-card': HTMLStellarCardElement;
     'stellar-chart': HTMLStellarChartElement;
+    'stellar-clock': HTMLStellarClockElement;
     'stellar-code': HTMLStellarCodeElement;
     'stellar-color-library': HTMLStellarColorLibraryElement;
     'stellar-color-picker': HTMLStellarColorPickerElement;
@@ -1804,7 +1821,10 @@ declare namespace LocalJSX {
     'tight'?: boolean;
   }
   interface StellarAnimateText extends JSXBase.HTMLAttributes<HTMLStellarAnimateTextElement> {
+    'delay'?: number;
+    'duration'?: number;
     'method'?: string;
+    'phrase'?: boolean;
     'words'?: boolean;
   }
   interface StellarAsset extends JSXBase.HTMLAttributes<HTMLStellarAssetElement> {
@@ -1995,6 +2015,12 @@ declare namespace LocalJSX {
     'for'?: string;
     'remote'?: string;
     'type'?: "area"|"areaspline"|"bar"|"bubble"|"column"|"line"|"pie"|"polygon"|"scatter"|"spline"|"waterfall";
+  }
+  interface StellarClock extends JSXBase.HTMLAttributes<HTMLStellarClockElement> {
+    'animated'?: boolean;
+    'between'?: string|Date;
+    'size'?: number;
+    'time'?: string|Date;
   }
   interface StellarCode extends JSXBase.HTMLAttributes<HTMLStellarCodeElement> {
     'codeString'?: string;
@@ -2782,6 +2808,7 @@ declare namespace LocalJSX {
     'name'?: string;
     'onUpdate'?: (event: CustomEvent<any>) => void;
     'playing'?: boolean;
+    'prepared'?: boolean;
     'src'?: string;
   }
   interface WebAudioVisualizer extends JSXBase.HTMLAttributes<HTMLWebAudioVisualizerElement> {
@@ -2818,6 +2845,7 @@ declare namespace LocalJSX {
     'stellar-callout': StellarCallout;
     'stellar-card': StellarCard;
     'stellar-chart': StellarChart;
+    'stellar-clock': StellarClock;
     'stellar-code': StellarCode;
     'stellar-color-library': StellarColorLibrary;
     'stellar-color-picker': StellarColorPicker;

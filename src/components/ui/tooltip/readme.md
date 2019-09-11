@@ -122,6 +122,7 @@
 ### Used by
 
  - [stellar-avatar](../avatar)
+ - [stellar-clock](../../helpers/clock)
  - [stellar-group-overflow](../group-overflow)
  - [stellar-input](../../forms/input)
  - [stellar-select](../../forms/select)
@@ -136,6 +137,7 @@
 graph TD;
   stellar-tooltip --> context-consumer
   stellar-avatar --> stellar-tooltip
+  stellar-clock --> stellar-tooltip
   stellar-group-overflow --> stellar-tooltip
   stellar-input --> stellar-tooltip
   stellar-select --> stellar-tooltip

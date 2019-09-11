@@ -69,11 +69,13 @@ export class WebAudio {
 
     this.gain = this.context.createGain()
 
-    this.connect_visualizers();
-    this.connect_sources();
-    this.connect_midi();
+    await this.connect_visualizers();
+    await this.connect_sources();
+    await this.connect_midi();
 
     this.prepared = true;
+
+    await delay(500);
 
     return true
   }
@@ -84,8 +86,8 @@ export class WebAudio {
     this.log("Connected to this.context")
   }
 
-  connect_sources () {
-    this.build_sources();
+  async connect_sources () {
+    await this.build_sources();
   }
 
   async build_sources () {
@@ -95,7 +97,7 @@ export class WebAudio {
 
     this.externalFiles = []
 
-    this._sources.forEach((source, index) => {
+    await asyncForEach(this._sources, async (source, index) => {
       // @ts-ignore
       this.log(`(${index}) Preparing ${source.name}`)
 
@@ -103,19 +105,19 @@ export class WebAudio {
       this.sources[source.name] = source
 
       // @ts-ignore
-      let bufferLoader = new BufferLoader( this.context, [source.src], (bufferList) => {
-        this.cache_sources(bufferList, source)
+      let bufferLoader = new BufferLoader( this.context, [source.src], async (bufferList) => {
+        await this.cache_sources(bufferList, source)
       })
 
-      bufferLoader.load()
-    }, this)
+      await bufferLoader.load();
+    })
+
   }
 
   async cache_sources (bufferList, source) {
-    await delay(20)
 
-    bufferList.forEach((item) => {
-      this.log(`Caching ${source.name}`)
+    await asyncForEach(bufferList, async (item) => {
+      this.log(`Caching ${source.name}`);
 
       if (this.midi) {
         this.log(`Assigned ${source.name} to midi key ${source.midikey}, channel ${source.midichannel}`)
@@ -127,7 +129,7 @@ export class WebAudio {
       }
 
       this._currentSource = source
-      this._currentSource.assignBuffer(this, item)
+      await this._currentSource.assignBuffer(this, item);
 
       this.log(`Source ${source.name} is ready`)
     })

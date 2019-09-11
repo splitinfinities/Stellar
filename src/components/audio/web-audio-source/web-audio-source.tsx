@@ -19,6 +19,7 @@ export class WebAudioSource {
   @Prop({ mutable: true, reflect: true }) midikey: number = 0;
   @Prop({ mutable: true, reflect: true }) midichannel: number = 1;
 
+  @Prop({mutable: true}) prepared: boolean = false;
   @State() status: string = "paused";
   @Prop({ mutable: true, reflect: true }) effectsvolume: number = 100;
 
@@ -86,7 +87,7 @@ export class WebAudioSource {
 
   @Method()
   async prepare () {
-    if (!this.inert) {
+    if (!this.inert && this.context) {
       this.source = this.context.createBufferSource();
 
       this.source.buffer = this.buffer;
@@ -105,24 +106,26 @@ export class WebAudioSource {
       this.source.connect(this.dryGain);
 
       this.duration = this.source.buffer.duration;
+      this.prepared = true;
     }
   }
 
   @Method()
   async play() {
     if (!this.inert) {
-      this.prepare();
+      await this.prepare();
 
-      this.source.start(0, this.pausedTime);
+      if (this.source) {
+        this.source.start(0, this.pausedTime);
 
-      this.startTime = this.context.currentTime - this.pausedTime;
-      this.pausedTime = 0;
-      this.playing = true;
+        this.startTime = this.context.currentTime - this.pausedTime;
+        this.pausedTime = 0;
+        this.playing = true;
 
-      this.tick()
+        this.tick()
 
-      raf(() => { this.tick() })
-
+        raf(() => { this.tick() })
+      }
     } else {
       throw "Cannot play inert media."
     }
@@ -130,15 +133,15 @@ export class WebAudioSource {
 
   @Method()
   async skipTo (time) {
-    this.stop();
+    await this.stop();
     this.pausedTime = time / 1000
-    this.play();
+    await this.play();
   }
 
   @Method()
   async pause () {
     this.elapsedTime = this.context.currentTime - this.startTime;
-    this.stop();
+    await this.stop();
     this.pausedTime = this.elapsedTime;
     this.playing = false;
   }

@@ -15,6 +15,7 @@
 | `midikey`       | `midikey`       |             | `number`  | `0`         |
 | `name`          | `name`          |             | `string`  | `undefined` |
 | `playing`       | `playing`       |             | `boolean` | `false`     |
+| `prepared`      | `prepared`      |             | `boolean` | `false`     |
 | `src`           | `src`           |             | `string`  | `undefined` |
 
 

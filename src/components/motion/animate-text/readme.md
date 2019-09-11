@@ -7,10 +7,13 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type      | Default       |
-| -------- | --------- | ----------- | --------- | ------------- |
-| `method` | `method`  |             | `string`  | `"lettering"` |
-| `words`  | `words`   |             | `boolean` | `false`       |
+| Property   | Attribute  | Description | Type      | Default       |
+| ---------- | ---------- | ----------- | --------- | ------------- |
+| `delay`    | `delay`    |             | `number`  | `50`          |
+| `duration` | `duration` |             | `number`  | `1000`        |
+| `method`   | `method`   |             | `string`  | `"lettering"` |
+| `phrase`   | `phrase`   |             | `boolean` | `false`       |
+| `words`    | `words`    |             | `boolean` | `false`       |
 
 
 ## Methods

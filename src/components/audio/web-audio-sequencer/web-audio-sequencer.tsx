@@ -11,9 +11,9 @@ export class WebAudioSequencer {
   @Prop() taps: number = 4
   @Prop() tempo: number
 
-  @State() context: any = () => {
+  @State() context: any = async () => {
     // @ts-ignore
-    return document.querySelector('web-audio').get_context()
+    return await document.querySelector('web-audio').get_context()
   }
 
   @State() iterations: number
@@ -22,9 +22,7 @@ export class WebAudioSequencer {
   @State() currentTap: number = 0
   @State() totalPlayTime: number = 0.0
 
-  @Prop() custom: Function = () => {
-    // do nothing
-  }
+  @Prop() custom: Function = async () => { }
 
   @State() timer: any
 
@@ -34,26 +32,33 @@ export class WebAudioSequencer {
     }
   }
 
-  schedule () {
-    var currentTime = this.context().currentTime
+  async schedule () {
+    var currentTime = (await this.context()).currentTime;
 
     // The sequence starts at startTime, so normalize currentTime so that it's 0 at the start of the sequence.
-    currentTime -= this.startTime
+    currentTime -= this.startTime;
+
+    console.log(this.totalPlayTime, this.iterations, this.currentTap)
 
     while (this.noteTime < currentTime + 0.005) {
-      this.totalPlayTime = this.noteTime + this.startTime
+      try {
+        await this.custom();
 
-      if (this.currentTap === 0) {
-        this.iterations++
+        this.totalPlayTime = this.noteTime + this.startTime;
+
+        if (this.currentTap === 0) {
+          this.iterations++
+        }
+
+        this.advance()
+
+      } catch (e) {
+        console.error(e);
       }
-
-      this.custom()
-
-      this.advance()
     }
 
-    this.timer = setTimeout(() => {
-      this.schedule()
+    this.timer = setTimeout(async () => {
+      await this.schedule()
     }, 0)
   }
 
@@ -73,21 +78,23 @@ export class WebAudioSequencer {
 
   @Method()
   async play () {
-    if (!this.context()) {
+    if (!(await this.context())) {
       // @ts-ignore
       await document.querySelector('web-audio').connect_the_world();
     }
 
     this.iterations = 0
-    this.startTime = this.context().currentTime + 0.005 || 0.005
-    this.schedule()
+    this.startTime = (await this.context()).currentTime + 0.005 || 0.005
+    await this.schedule()
   }
 
   @Method()
   async stop () {
-    this.iterations = 0
-    this.startTime = null
-    this.currentTap = 0
+    this.iterations = 0;
+    this.totalPlayTime = 0;
+    this.startTime = null;
+    this.currentTap = 0;
+    (await this.context()).stop()
     clearTimeout(this.timer)
   }
 

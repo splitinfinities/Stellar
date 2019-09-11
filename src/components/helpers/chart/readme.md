@@ -53,6 +53,7 @@ Type: `Promise<void>`
 
 ### Used by
 
+ - [stellar-clock](../clock)
  - [stellar-table](../../ui/table)
 
 ### Depends on
@@ -63,6 +64,7 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   stellar-chart --> context-consumer
+  stellar-clock --> stellar-chart
   stellar-table --> stellar-chart
   style stellar-chart fill:#f9f,stroke:#333,stroke-width:4px
 ```
