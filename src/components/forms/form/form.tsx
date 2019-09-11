@@ -41,7 +41,7 @@ export class Form {
   @Method()
   async refresh() {
     var resizeEvent = window.document.createEvent('UIEvents');
-    resizeEvent.initUIEvent('resize', true, false, window, 0);
+    resizeEvent.initEvent('resize', true, false);
     window.dispatchEvent(resizeEvent);
   }
 
