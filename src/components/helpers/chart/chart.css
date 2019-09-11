@@ -4,10 +4,16 @@
 
 :host {
   display: block;
+  --background: transparent;
+}
+
+:host {
+  display: block;
+  --background: var(--black);
 }
 
 :host([dark]) .highcharts-background {
-  fill: var(--black) !important
+  fill: var(--background) !important
 }
 
 :host([dark]) .highcharts-title,
@@ -28,9 +34,9 @@
 }
 
 :host([dark]) .highcharts-tooltip text {
-  fill: var(--black) !important
+  fill: var(--background) !important
 }
 
 :host([dark]) .highcharts-series rect {
-  stroke: var(--black) !important
+  stroke: var(--background) !important
 }

@@ -71,20 +71,21 @@ export class Clock {
 
   getHours12 (time) {
     return (time.getHours() + 11) % 12 + 1; // edited.
- }
+  }
+
+  getMeridian (time) {
+    return time.getHours() > 12 ? 'pm' : 'am';
+  }
+
+  formatted (time) {
+    return this.getHours12(time) + this.getMeridian(time);
+  }
 
   get rotation() {
     return this.offset * 30
   }
 
   get chartConfig () {
-    // @ts-ignore
-    const remainder = 12 - (this.offset + this.duration);
-
-    console.log("start", this.offset)
-    console.log("duration", this.duration)
-    console.log("end", remainder)
-
     return {
       chart: {
         type: 'pie',
@@ -185,7 +186,8 @@ export class Clock {
           </svg>
 
         <stellar-tooltip align="bottom-center">
-          {(typeof this.time === "object" ) && this.time.toLocaleTimeString('en-US')}
+          {!this.between && (typeof this.time === "object" ) && this.time.toLocaleTimeString('en-US')}
+          {this.between && (typeof this.time === "object" && typeof this.between === "object") && `From ${this.formatted(this.time)} to ${this.formatted(this.between)}`}
         </stellar-tooltip>
       </Host>
     );
