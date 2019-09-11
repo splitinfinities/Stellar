@@ -41,6 +41,7 @@ export class Clock {
 
   @Watch('between')
   @Watch('size')
+  @Watch('time')
   handleBetween() {
     if (typeof this.between === "string") {
       this.between = new Date(this.between)
@@ -61,13 +62,24 @@ export class Clock {
   get offset() {
     if (this.time.constructor === Date) {
       // @ts-ignore
-      return this.time.getHours()
+      const minutes: number = this.time.getMinutes();
+
+      // @ts-ignore
+      return this.getHours12(this.time) + (minutes === 0 ? 0 : minutes / 60)
     }
+  }
+
+  getHours12 (time) {
+    return (time.getHours() + 11) % 12 + 1; // edited.
+ }
+
+  get rotation() {
+    return this.offset * 30
   }
 
   get chartConfig () {
     // @ts-ignore
-    const remainder = 24 - (this.offset + this.duration);
+    const remainder = 12 - (this.offset + this.duration);
 
     console.log("start", this.offset)
     console.log("duration", this.duration)
@@ -94,17 +106,14 @@ export class Clock {
           animation: false
         },
         pie: {
-          size: (this.size * .975)
+          size: (this.size * .975),
+          startAngle: this.rotation
         }
       },
       series: [{
         name: 'Brands',
         data: [
           {
-            color: "transparent",
-            borderColor: "transparent",
-            y: this.offset
-          },{
             y: this.duration,
             color: "var(--theme-base5)",
             borderColor: "var(--black)",
@@ -112,7 +121,7 @@ export class Clock {
           }, {
             color: "transparent",
             borderColor: "transparent",
-            y: remainder
+            y: 12 - this.duration
           }
         ]
       }]
@@ -127,8 +136,10 @@ export class Clock {
                 <circle id="circle" style={{"stroke": "var(--theme-base5)", "stroke-width": `${this.size * .02}px`, "fill":"var(--theme-base0)"}} cx={this.size / 2} cy={this.size / 2} r={this.size / 2 * .95}></circle>
             </g>
 
+            {Array(12).fill("").map((_, i) => <line x1={this.size / 2} y1={(this.size / 100) + (this.size / 8)} x2={this.size / 2} y2={(this.size / 100) + (this.size / 30)} transform={`rotate(${30 * i} ${this.size/2} ${this.size/2})`} style={{"stroke": "#000", "stroke-width": `${this.size / 80}px`}} />)}
           </svg>
-          {this.between && <stellar-chart type="pie" id="chart" />}
+
+          <stellar-chart type="pie" id="chart" class={this.between ? "db" : "dn"} />
 
           <svg class="above" viewBox={`0 0 ${this.size} ${this.size}`}>
             <g>
@@ -171,10 +182,11 @@ export class Clock {
               r={this.size * .02}
             />
 
-            {Array(12).fill("").map((_, i) => <line x1={this.size / 2} y1={(this.size / 100) + (this.size / 8)} x2={this.size / 2} y2={(this.size / 100) + (this.size / 50)} transform={`rotate(${30 * i} ${this.size/2} ${this.size/2})`} style={{"stroke": "#000", "stroke-width": `${this.size / 80}px`}} />)}
           </svg>
 
-        <stellar-tooltip align="bottom-center">{(typeof this.time === "object" ) && this.time.toLocaleTimeString('en-US')}</stellar-tooltip>
+        <stellar-tooltip align="bottom-center">
+          {(typeof this.time === "object" ) && this.time.toLocaleTimeString('en-US')}
+        </stellar-tooltip>
       </Host>
     );
   }

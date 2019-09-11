@@ -11,6 +11,11 @@
   left: 0;
   height: var(--size);
   width: var(--size);
+  display: none;
+}
+
+:host stellar-chart.db {
+  display: block;
 }
 
 :host .above {
