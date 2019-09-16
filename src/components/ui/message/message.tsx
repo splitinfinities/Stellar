@@ -56,9 +56,9 @@ export class Message {
     return <Host class={`theme-${this.theme} ${this.shown ? "db" : "dn"}`}>
       <div class="wrap">
         <slot></slot>
-        <button aria-label="Close" onClick={() => { this.handleClose() }}>
+        {this.closable && <button aria-label="Close" onClick={() => { this.handleClose() }}>
           <stellar-asset name="close" />
-        </button>
+        </button>}
       </div>
     </Host>
   }
