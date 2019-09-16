@@ -37,7 +37,7 @@ export class Dropdown {
     return <Host aria-label={this.label} class="dropdown" title={this.label}>
         <div class="toggle">
           <slot name="handle"></slot>
-          { !this.icon && <stellar-asset name={this.iconName} class="caret"></stellar-asset> }
+          { this.icon && <stellar-asset name={this.iconName} class="caret"></stellar-asset> }
         </div>
         <div class="clipper">
           <div class="list-wrap">
