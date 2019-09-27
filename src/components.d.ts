@@ -61,6 +61,7 @@ export namespace Components {
     'duration': number;
     'in': () => Promise<void>;
     'method': string;
+    'onlyIn': boolean;
     'out': () => Promise<void>;
     'phrase': boolean;
     'words': boolean;
@@ -1824,6 +1825,7 @@ declare namespace LocalJSX {
     'delay'?: number;
     'duration'?: number;
     'method'?: string;
+    'onlyIn'?: boolean;
     'phrase'?: boolean;
     'words'?: boolean;
   }

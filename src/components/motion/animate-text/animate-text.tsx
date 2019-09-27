@@ -16,8 +16,10 @@ export class AnimateText {
   @Prop() method: string = "lettering";
   @Prop() words: boolean = false;
   @Prop() phrase: boolean = false;
+  @Prop() onlyIn: boolean = false;
 
   componentWillLoad() {
+    console.log(this.onlyIn)
     this.originalText = this.element.textContent;
 
     if (this.words) {
@@ -43,13 +45,16 @@ export class AnimateText {
 
   @Method()
   async in() {
-    console.log(this.letters, this.delay, this.duration)
     animations[this.method].in(this.letters, this.delay, this.duration)
   }
 
   @Method()
   async out() {
-    animations[this.method].out(this.letters, this.delay, this.duration)
+    console.log(this.onlyIn);
+
+    if (!this.onlyIn) {
+      animations[this.method].out(this.letters, this.delay, this.duration)
+    }
   }
 
   render() {

@@ -12,6 +12,7 @@
 | `delay`    | `delay`    |             | `number`  | `50`          |
 | `duration` | `duration` |             | `number`  | `1000`        |
 | `method`   | `method`   |             | `string`  | `"lettering"` |
+| `onlyIn`   | `only-in`  |             | `boolean` | `false`       |
 | `phrase`   | `phrase`   |             | `boolean` | `false`       |
 | `words`    | `words`    |             | `boolean` | `false`       |
 

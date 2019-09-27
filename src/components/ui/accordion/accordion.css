@@ -8,6 +8,7 @@
   width: 100%;
   overflow: hidden;
   --accordion-height: 200vh;
+  --padding-underneath: 6rem;
 }
 
 :host .expander {
@@ -24,7 +25,7 @@
 :host .expander.open {
   transition: all 0.35s ease-in-out 0s, opacity 0.175s ease-in-out 0.175s, overflow 0s ease-in-out 0.2s;
   opacity: 1;
-  height: calc(var(--accordion-height) + 6rem);
+  height: calc(var(--accordion-height) + var(--padding-underneath));
   overflow: auto;
   transform: translateY(0px);
 }
@@ -37,6 +38,9 @@
   margin-bottom: .5rem;
 }
 
+:host([tight]) {
+  --padding-underneath: 1rem;
+}
 
 :host([tight]) .expander ::slotted(stellar-item) {
   padding: 0 1.5rem;
