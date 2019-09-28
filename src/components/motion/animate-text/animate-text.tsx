@@ -19,7 +19,6 @@ export class AnimateText {
   @Prop() onlyIn: boolean = false;
 
   componentWillLoad() {
-    console.log(this.onlyIn)
     this.originalText = this.element.textContent;
 
     if (this.words) {
@@ -50,8 +49,6 @@ export class AnimateText {
 
   @Method()
   async out() {
-    console.log(this.onlyIn);
-
     if (!this.onlyIn) {
       animations[this.method].out(this.letters, this.delay, this.duration)
     }

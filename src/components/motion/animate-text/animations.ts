@@ -3,8 +3,6 @@ import anime from 'animejs/lib/anime.es.js';
 export const animations = {
     lettering: {
         in: (targets: NodeListOf<HTMLElement>, delay: number, duration: number) => {
-            console.log(delay, duration);
-
             anime.timeline({loop: false})
             .add({
                 targets: Array.from(targets),
