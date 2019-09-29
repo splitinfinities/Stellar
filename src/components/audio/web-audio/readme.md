@@ -56,6 +56,16 @@ Type: `Promise<any>`
 
 
 
+### `stop() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
 
 ## Dependencies
 

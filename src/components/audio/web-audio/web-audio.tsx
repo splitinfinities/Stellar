@@ -56,6 +56,13 @@ export class WebAudio {
     return this.prepared;
   }
 
+  @Method()
+  async stop () {
+    return await asyncForEach(this.sources, async (source) => {
+      await source.stop()
+    })
+  }
+
   /******************
    * Private behavior
    **/

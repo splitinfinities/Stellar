@@ -1066,6 +1066,7 @@ export namespace Components {
     'midi': Boolean;
     'name': string;
     'source': (name: any) => Promise<any>;
+    'stop': () => Promise<void>;
   }
   interface WebAudioDebugger {
     'addHistory': (string: History) => Promise<void>;

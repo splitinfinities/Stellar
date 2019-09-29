@@ -29,6 +29,7 @@ export class WebAudioSource {
   @State() dryGain: GainNode;
   @State() channelGain: GainNode;
   @State() effects: Array<object> = [];
+  @State() instances: Array<object> = [];
 
   @State() source: AudioBufferSourceNode;
   @State() buffer: AudioBuffer;
@@ -149,17 +150,17 @@ export class WebAudioSource {
   @Method()
   async toggle () {
     if (this.playing) {
-      this.pause()
+      await this.pause()
     } else {
-      this.play()
+      await this.play()
     }
   }
 
   @Method()
   async stop () {
     if (this.source) {
-      this.source.disconnect();
-      this.source.stop();
+      await this.source.disconnect();
+      await this.source.stop();
     }
 
     this.source = null;
