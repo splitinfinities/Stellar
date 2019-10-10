@@ -12,104 +12,186 @@
   </script>
 </head>
 <body class="theme-red complement-indigo pa5 tc">
+  <stellar-theme dark body system></stellar-theme>
+  <stellar-mouse-trail count="10" speed="0.7" threedee><stellar-asset src="./global/vector/heart.svg" style="font-size: 3rem;" /></stellar-mouse-trail>
 
-  <h1>nice</h1>
-  <h2>nice</h2>
-  <h3>nice</h3>
-  <web-audio-visualizer for="numbers" type="bars"></web-audio-visualizer>
+  <stellar-auto-scroll speed="3" loop start-position="100"></stellar-auto-scroll>
+
+  <stellar-scroll-z-root class="relative z-2">
+    <stellar-scroll-z-section>
+    </stellar-scroll-z-section>
+    <stellar-scroll-z-section>
+      <stellar-layout>
+        <stellar-card>
+          <header>
+            <h4>Nice!</h4>
+          </header>
+          <section>
+            <copy-wrap>
+              <p>Too cool!!</p>
+            </copy-wrap>
+          </section>
+          <footer>
+            <h4>Nice!</h4>
+          </footer>
+        </stellar-card>
+      </stellar-layout>
+    </stellar-scroll-z-section>
+    <stellar-scroll-z-section>
+      <stellar-layout>
+        <stellar-card>
+          <header>
+            <h4>Nice!</h4>
+          </header>
+          <section>
+            <copy-wrap>
+              <p>Too cool!!</p>
+            </copy-wrap>
+          </section>
+          <footer>
+            <h4>Nice!</h4>
+          </footer>
+        </stellar-card>
+      </stellar-layout>
+    </stellar-scroll-z-section>
+    <stellar-scroll-z-section>
+      <stellar-layout>
+        <stellar-card>
+          <header>
+            <h4>Nice!</h4>
+          </header>
+          <section>
+            <copy-wrap>
+              <p>Too cool!!</p>
+            </copy-wrap>
+          </section>
+          <footer>
+            <h4>Nice!</h4>
+          </footer>
+        </stellar-card>
+      </stellar-layout>
+    </stellar-scroll-z-section>
+    <stellar-scroll-z-section>
+      <stellar-layout>
+        <stellar-card>
+          <header>
+            <h4>Nice!</h4>
+          </header>
+          <section>
+            <copy-wrap>
+              <p>Too cool!!</p>
+            </copy-wrap>
+          </section>
+          <footer>
+            <h4>Nice!</h4>
+          </footer>
+        </stellar-card>
+      </stellar-layout>
+    </stellar-scroll-z-section>
+    <stellar-scroll-z-section>
+      <stellar-layout>
+        <stellar-card>
+          <header>
+            <h4>Nice!</h4>
+          </header>
+          <section>
+            <copy-wrap>
+              <p>Too cool!!</p>
+            </copy-wrap>
+          </section>
+          <footer>
+            <h4>Nice!</h4>
+          </footer>
+        </stellar-card>
+      </stellar-layout>
+    </stellar-scroll-z-section>
+
+  </stellar-scroll-z-root>
+
+  <web-audio-visualizer for="numbers" type="wave" color="gray" class="fixed w-100 h-100 top-0 left-0 right-0 bottom-0 z-1" style="mix-blend-mode: multiply;"></web-audio-visualizer>
 
   <web-audio name="numbers">
     <web-audio-source src="./global/audio/music_loop.mp3" name="numbers-song" effectsvolume="20"></web-audio-source>
+    <web-audio-source src="./global/audio/music-vox_loop.mp3" name="numbers-song-vox" effectsvolume="20"></web-audio-source>
   </web-audio>
 
-  <web-audio-sequencer name="sequence" tempo="155" taps="220"></web-audio-sequencer>
+  <web-audio-sequencer name="sequence" tempo="155" taps="270"></web-audio-sequencer>
 
-  <stellar-button tag="button" class="vacation fs1 fixed bottom-1 right-1 dark-tan" size="large" ghost onclick="play()" style="mix-blend-mode: difference;z-index: 9999;--font-size: 4rem;">11</stellar-button>
-
+  <stellar-button tag="button" class="vacation fs1 fixed bottom-1 right-1 dark-tan" size="large" ghost onclick="play()" style="mix-blend-mode: difference;z-index: 9999;--font-size: 4rem;">Toggle</stellar-button>
 
   <script>
-    let playing = false;
+      let playing = false;
 
-    const play = async () => {
-      const body = await document.querySelector('body');
-      const webAudio = await document.querySelector('web-audio');
-      const sequencer = await document.querySelector('web-audio-sequencer');
-      const song = await webAudio.source('numbers-song');
+      const play = async () => {
+        const body = document.querySelector('body');
+        const webAudio = document.querySelector('web-audio');
+        const sequencer = document.querySelector('web-audio-sequencer');
+        const scroller = document.querySelector('stellar-auto-scroll');
+        const instrumental = await webAudio.source('numbers-song');
+        const vox = await webAudio.source('numbers-song-vox');
 
-      console.log(playing);
+        if (playing) {
+          await webAudio.stop();
+          await instrumental.stop();
+          await vox.stop();
+          await sequencer.stop();
+          await scroller.stop();
 
-      if (playing) {
-        await webAudio.stop();
-        await song.stop();
-        await sequencer.stop();
+          body.classList.remove('kick')
+          body.classList.remove('snare')
+          body.classList.remove('offbeat')
+          playing = false;
+        } else {
+          sequencer.custom = async function (a,b,c) {
+            if (this.currentTap === 0 && this.iterations % 2 === 0) {
+              await instrumental.play();
+            } else if (this.currentTap === 0 && this.iterations % 2 === 1) {
+              await vox.play();
+            }
 
-        body.classList.remove('kick')
-        body.classList.remove('snare')
-        body.classList.remove('offbeat')
-        playing = false;
-      } else {
-        sequencer.custom = async function (a,b,c) {
-          if (this.currentTap === 0) {
-            await song.play();
+            if (this.currentTap >= 36 && this.currentTap <= 280) {
+              if (this.currentTap % 16 === 0) {
+                body.classList.add('kick')
+              }
+
+              if (this.currentTap % 8 === 0 && this.currentTap % 16 !== 0) {
+                body.classList.add('snare')
+              }
+
+              if (this.currentTap % 12 === 0) {
+                body.classList.add('offbeat')
+              }
+
+              if (this.currentTap % 4 === 3) {
+                body.classList.remove('kick')
+                body.classList.remove('snare')
+                body.classList.remove('offbeat')
+              }
+            }
           }
 
-          if (this.currentTap >= 36 && this.currentTap <= 280) {
-            if (this.currentTap % 16 === 0) {
-              body.classList.add('kick')
-            }
-
-            if (this.currentTap % 8 === 0 && this.currentTap % 16 !== 0) {
-              body.classList.add('snare')
-            }
-
-            if (this.currentTap % 12 === 0) {
-              body.classList.add('offbeat')
-            }
-
-            if (this.currentTap % 4 === 3) {
-              body.classList.remove('kick')
-              body.classList.remove('snare')
-              body.classList.remove('offbeat')
-            }
-          }
+          await sequencer.play();
+          await scroller.play();
+          playing = true;
         }
-
-        await sequencer.play();
-        playing = true;
       }
-    }
-  </script>
+    </script>
+
 
   <style>
-    h1, h2, h3, h4, .sponsor-wrap {
-      transform-origin: 50% 50%;
-      transition: transform 50ms ease-in-out 0s;
+    body {
+      cursor: none;
     }
 
-    .kick h1, .kick h3, .kick .sponsor-wrap:nth-of-type(3n+1) {
-      transform: scale(1.01) rotate(-1deg);
+    .stellar-mouse-trail-element {
+      z-index: 3;
     }
 
-    .snare h1, .snare h3, .snare .sponsor-wrap:nth-of-type(3n+2) {
-      transform: scale(0.99) rotate(1deg);
-    }
-
-    .sponsor-wrap:nth-of-type(3n+3) {
-      transform: scale(1.01);
-    }
-
-    .offbeat .sponsor-wrap:nth-of-type(3n+3) {
-      transform: scale(0.98);
-    }
-
-    .kick h2, .kick h4, .kick .sponsor-wrap:nth-of-type(3n+1) {
-      transform: scale(0.98) rotate(1deg);
-    }
-
-    .snare h2, .snare h4, .snare .sponsor-wrap:nth-of-type(3n+2) {
-      transform: scale(1.02) rotate(-1deg);
+    .stellar-mouse-trail-element + .stellar-mouse-trail-element {
+      opacity: 0.1;
+      z-index: 1;
+      mix-blend-mode: difference;
     }
   </style>
-
 </body>
 </html>

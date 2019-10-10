@@ -1,4 +1,4 @@
-import { Component, Element, h, State, Listen, Prop } from '@stencil/core';
+import { Component, Element, h, State, Listen, Prop, Method } from '@stencil/core';
 import { properties } from '../../../utils';
 
 @Component({
@@ -51,10 +51,14 @@ export class ScrollZRoot {
         };
 
         this.setSceneHeight()
+        this.scatter();
+    }
 
+    @Method()
+    async scatter() {
         this.sections.forEach((section, index) => {
-            const x = `${this.randomFloat(-20, 120)}%`;
-            const y = `${this.randomFloat(-20, 120)}%`;
+            const x = `calc(${this.randomFloat(-30, 30)}rem + 50%)`;
+            const y = `calc(${this.randomFloat(-30, 30)}rem + 50%)`;
             const z = `calc(var(--itemZ) * var(--cameraSpeed) * ${index} * -1px)`;
 
             section.style.setProperty('transform', `translate3D(${x}, ${y}, ${z})`)

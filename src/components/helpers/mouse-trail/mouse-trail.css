@@ -1,0 +1,10 @@
+.stellar-mouse-trail-element {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+stellar-mouse-trail {
+  display: none;
+}

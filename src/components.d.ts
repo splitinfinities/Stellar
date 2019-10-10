@@ -75,6 +75,14 @@ export namespace Components {
     'src': string;
   }
   interface StellarAssetLibrary {}
+  interface StellarAutoScroll {
+    'autoplay': boolean;
+    'loop': boolean;
+    'play': () => Promise<void>;
+    'speed': number;
+    'startPosition': number;
+    'stop': () => Promise<void>;
+  }
   interface StellarAvatar {
     'color': string;
     'dark': boolean;
@@ -613,6 +621,11 @@ export namespace Components {
     'striped': boolean;
     'type': "alert"|"error"|"info"|"success";
   }
+  interface StellarMouseTrail {
+    'count': number;
+    'speed': number;
+    'threedee': boolean;
+  }
   interface StellarPagination {
     'color': string;
     'current': number;
@@ -741,6 +754,7 @@ export namespace Components {
     'initialOriginX': number;
     'initialOriginY': number;
     'itemZ': number;
+    'scatter': () => Promise<void>;
     'scenePerspective': number;
   }
   interface StellarScrollZSection {}
@@ -1192,6 +1206,12 @@ declare global {
     new (): HTMLStellarAssetLibraryElement;
   };
 
+  interface HTMLStellarAutoScrollElement extends Components.StellarAutoScroll, HTMLStencilElement {}
+  var HTMLStellarAutoScrollElement: {
+    prototype: HTMLStellarAutoScrollElement;
+    new (): HTMLStellarAutoScrollElement;
+  };
+
   interface HTMLStellarAvatarElement extends Components.StellarAvatar, HTMLStencilElement {}
   var HTMLStellarAvatarElement: {
     prototype: HTMLStellarAvatarElement;
@@ -1442,6 +1462,12 @@ declare global {
   var HTMLStellarMessageElement: {
     prototype: HTMLStellarMessageElement;
     new (): HTMLStellarMessageElement;
+  };
+
+  interface HTMLStellarMouseTrailElement extends Components.StellarMouseTrail, HTMLStencilElement {}
+  var HTMLStellarMouseTrailElement: {
+    prototype: HTMLStellarMouseTrailElement;
+    new (): HTMLStellarMouseTrailElement;
   };
 
   interface HTMLStellarPaginationElement extends Components.StellarPagination, HTMLStencilElement {}
@@ -1699,6 +1725,7 @@ declare global {
     'stellar-animate-text': HTMLStellarAnimateTextElement;
     'stellar-asset': HTMLStellarAssetElement;
     'stellar-asset-library': HTMLStellarAssetLibraryElement;
+    'stellar-auto-scroll': HTMLStellarAutoScrollElement;
     'stellar-avatar': HTMLStellarAvatarElement;
     'stellar-blur': HTMLStellarBlurElement;
     'stellar-breadcrumb': HTMLStellarBreadcrumbElement;
@@ -1741,6 +1768,7 @@ declare global {
     'stellar-long-shadow': HTMLStellarLongShadowElement;
     'stellar-markdown': HTMLStellarMarkdownElement;
     'stellar-message': HTMLStellarMessageElement;
+    'stellar-mouse-trail': HTMLStellarMouseTrailElement;
     'stellar-pagination': HTMLStellarPaginationElement;
     'stellar-parallax': HTMLStellarParallaxElement;
     'stellar-parallax-section': HTMLStellarParallaxSectionElement;
@@ -1839,6 +1867,12 @@ declare namespace LocalJSX {
     'src'?: string;
   }
   interface StellarAssetLibrary extends JSXBase.HTMLAttributes<HTMLStellarAssetLibraryElement> {}
+  interface StellarAutoScroll extends JSXBase.HTMLAttributes<HTMLStellarAutoScrollElement> {
+    'autoplay'?: boolean;
+    'loop'?: boolean;
+    'speed'?: number;
+    'startPosition'?: number;
+  }
   interface StellarAvatar extends JSXBase.HTMLAttributes<HTMLStellarAvatarElement> {
     'color'?: string;
     'dark'?: boolean;
@@ -2365,6 +2399,11 @@ declare namespace LocalJSX {
     'striped'?: boolean;
     'type'?: "alert"|"error"|"info"|"success";
   }
+  interface StellarMouseTrail extends JSXBase.HTMLAttributes<HTMLStellarMouseTrailElement> {
+    'count'?: number;
+    'speed'?: number;
+    'threedee'?: boolean;
+  }
   interface StellarPagination extends JSXBase.HTMLAttributes<HTMLStellarPaginationElement> {
     'color'?: string;
     'current'?: number;
@@ -2840,6 +2879,7 @@ declare namespace LocalJSX {
     'stellar-animate-text': StellarAnimateText;
     'stellar-asset': StellarAsset;
     'stellar-asset-library': StellarAssetLibrary;
+    'stellar-auto-scroll': StellarAutoScroll;
     'stellar-avatar': StellarAvatar;
     'stellar-blur': StellarBlur;
     'stellar-breadcrumb': StellarBreadcrumb;
@@ -2882,6 +2922,7 @@ declare namespace LocalJSX {
     'stellar-long-shadow': StellarLongShadow;
     'stellar-markdown': StellarMarkdown;
     'stellar-message': StellarMessage;
+    'stellar-mouse-trail': StellarMouseTrail;
     'stellar-pagination': StellarPagination;
     'stellar-parallax': StellarParallax;
     'stellar-parallax-section': StellarParallaxSection;
