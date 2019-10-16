@@ -3,9 +3,6 @@ import { shouldBeAnInput, hasIncrements, hasValue, isDatePicker, Validator, Toke
 import { zxcvbn, TinyDatePicker, moment } from '../../../utils'
 import Tunnel from '../../theme';
 
-
-
-
 @Component({
   tag: 'stellar-input',
   styleUrl: 'input.css',
@@ -125,6 +122,8 @@ export class Input {
   @State() level: number;
   @State() strength: object;
 
+  @State() lightDom: HTMLInputElement;
+
   @Prop({mutable: true}) tokenField: any;
 
   @State() generatedId: string;
@@ -156,7 +155,11 @@ export class Input {
       this.getStrongLevel()
     }
 
-    this.generatedId = this.generateId()
+    this.generatedId = this.generateId();
+
+    if (this.type === "email" || this.type === "password") {
+      this.addLightDomInput();
+    }
   }
 
   componentDidLoad() {
@@ -183,6 +186,21 @@ export class Input {
       this.datepicker.on('select', (_, dp) => {
         this.value = moment(dp.state.selectedDate).format(this.dateFormat);
       });
+    }
+  }
+
+  addLightDomInput() {
+    if (!this.lightDom) {
+      this.lightDom = document.createElement('input');
+      this.lightDom.setAttribute("type", this.type);
+      this.lightDom.tabIndex = -1;
+      this.lightDom.classList.add("clip")
+      this.lightDom.onchange = (e) => {
+        // @ts-ignore
+        this.value = e.target.value;
+      };
+
+      this.element.parentNode.insertBefore(this.lightDom, this.element);
     }
   }
 
@@ -218,6 +236,9 @@ export class Input {
   @Watch('value')
   handleValueChange() {
     this.update.emit(this.value)
+    if (this.lightDom) {
+      this.lightDom.value = this.value;
+    }
   }
 
   handleChange() {
