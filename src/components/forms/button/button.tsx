@@ -12,7 +12,7 @@ export class Button {
   /**
    * Allows the button to render for different tags.
    */
-  @Prop() tag: "button"|"submit"|"link"|"span"|"route-link" = "link";
+  @Prop() tag: "button"|"submit"|"link"|"span"|"route-link"|"pjax" = "link";
 
   /**
    * Sets accessibility options on the buttons
@@ -105,6 +105,11 @@ export class Button {
   @Prop({reflect: true}) dark: boolean = false;
 
   /**
+   * Sets the button or link as an outlined button.
+   */
+  @Prop({reflect: true}) pjax: boolean = false;
+
+  /**
    * Sets the button or link as processing when clicked.
    */
   @Prop() processable: boolean = false;
@@ -138,6 +143,10 @@ export class Button {
 
     if (this.tag === "link") {
       window.location.href = this.href;
+    }
+
+    if (this.tag === "pjax") {
+      document.querySelector('stellar-pjax').pjax.loadUrl(this.href)
     }
 
     return true;
@@ -200,7 +209,8 @@ export class Button {
       this.tag === "submit" && this.renderSubmit(),
       this.tag === "link" && this.renderLink(),
       this.tag === "route-link" && this.renderAppLink(),
-      this.tag === "span" && this.renderSpan()
+      this.tag === "span" && this.renderSpan(),
+      this.tag === "pjax" && this.renderSpan()
     ]
   }
 }

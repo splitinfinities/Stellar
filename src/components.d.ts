@@ -185,6 +185,10 @@ export namespace Components {
     */
     'pill': boolean;
     /**
+    * Sets the button or link as an outlined button.
+    */
+    'pjax': boolean;
+    /**
     * Sets the button or link as processing when clicked.
     */
     'processable': boolean;
@@ -195,7 +199,7 @@ export namespace Components {
     /**
     * Allows the button to render for different tags.
     */
-    'tag': "button"|"submit"|"link"|"span"|"route-link";
+    'tag': "button"|"submit"|"link"|"span"|"route-link"|"pjax";
     /**
     * Sets the target on the anchor tag if the button is a link.
     */
@@ -652,6 +656,9 @@ export namespace Components {
     'for': string;
     'size': "tiny"|"small"|"large";
   }
+  interface StellarPjax {
+    'pjax': any;
+  }
   interface StellarPlaylist {
     'artwork': boolean;
     'autoplay': boolean;
@@ -934,7 +941,7 @@ export namespace Components {
     'open': boolean;
     'order': number;
     'tabCount': number;
-    'tag': "button"|"link"|"route-link";
+    'tag': "button"|"link"|"route-link"|"pjax";
     /**
     * Sets the target on the anchor tag if the button is a link.
     */
@@ -1494,6 +1501,12 @@ declare global {
     new (): HTMLStellarPasswordRequirementsElement;
   };
 
+  interface HTMLStellarPjaxElement extends Components.StellarPjax, HTMLStencilElement {}
+  var HTMLStellarPjaxElement: {
+    prototype: HTMLStellarPjaxElement;
+    new (): HTMLStellarPjaxElement;
+  };
+
   interface HTMLStellarPlaylistElement extends Components.StellarPlaylist, HTMLStencilElement {}
   var HTMLStellarPlaylistElement: {
     prototype: HTMLStellarPlaylistElement;
@@ -1773,6 +1786,7 @@ declare global {
     'stellar-parallax': HTMLStellarParallaxElement;
     'stellar-parallax-section': HTMLStellarParallaxSectionElement;
     'stellar-password-requirements': HTMLStellarPasswordRequirementsElement;
+    'stellar-pjax': HTMLStellarPjaxElement;
     'stellar-playlist': HTMLStellarPlaylistElement;
     'stellar-progress': HTMLStellarProgressElement;
     'stellar-reveal': HTMLStellarRevealElement;
@@ -1974,6 +1988,10 @@ declare namespace LocalJSX {
     */
     'pill'?: boolean;
     /**
+    * Sets the button or link as an outlined button.
+    */
+    'pjax'?: boolean;
+    /**
     * Sets the button or link as processing when clicked.
     */
     'processable'?: boolean;
@@ -1984,7 +2002,7 @@ declare namespace LocalJSX {
     /**
     * Allows the button to render for different tags.
     */
-    'tag'?: "button"|"submit"|"link"|"span"|"route-link";
+    'tag'?: "button"|"submit"|"link"|"span"|"route-link"|"pjax";
     /**
     * Sets the target on the anchor tag if the button is a link.
     */
@@ -2430,6 +2448,9 @@ declare namespace LocalJSX {
     'for'?: string;
     'size'?: "tiny"|"small"|"large";
   }
+  interface StellarPjax extends JSXBase.HTMLAttributes<HTMLStellarPjaxElement> {
+    'pjax'?: any;
+  }
   interface StellarPlaylist extends JSXBase.HTMLAttributes<HTMLStellarPlaylistElement> {
     'artwork'?: boolean;
     'autoplay'?: boolean;
@@ -2690,7 +2711,7 @@ declare namespace LocalJSX {
     'open'?: boolean;
     'order'?: number;
     'tabCount'?: number;
-    'tag'?: "button"|"link"|"route-link";
+    'tag'?: "button"|"link"|"route-link"|"pjax";
     /**
     * Sets the target on the anchor tag if the button is a link.
     */
@@ -2927,6 +2948,7 @@ declare namespace LocalJSX {
     'stellar-parallax': StellarParallax;
     'stellar-parallax-section': StellarParallaxSection;
     'stellar-password-requirements': StellarPasswordRequirements;
+    'stellar-pjax': StellarPjax;
     'stellar-playlist': StellarPlaylist;
     'stellar-progress': StellarProgress;
     'stellar-reveal': StellarReveal;

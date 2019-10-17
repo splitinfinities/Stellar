@@ -16,7 +16,7 @@ export class Tab {
   @Prop({mutable: true, reflect: true}) open: boolean = false
   @Prop({mutable: true, reflect: true}) dark: boolean = false
   @Prop() notifications: boolean|number = false
-  @Prop() tag: "button"|"link"|"route-link" = "button";
+  @Prop() tag: "button"|"link"|"route-link"|"pjax" = "button";
 
   /**
   * Sets the href on the anchor tag if the button is a link.
@@ -71,6 +71,8 @@ export class Tab {
       } else if (this.tag === "link") {
         await delay(350)
         window.location.href = this.href;
+      } else if (this.tag === "pjax") {
+        document.querySelector('stellar-pjax').pjax.loadUrl(this.href)
       }
     }
   }
@@ -134,6 +136,7 @@ export class Tab {
       { this.tag === "button" && this.renderButton() }
       { this.tag === "link" && this.renderLink() }
       { this.tag === "route-link" && this.renderAppLink() }
+      { this.tag === "pjax" && this.renderButton() }
     </div>
   }
 }

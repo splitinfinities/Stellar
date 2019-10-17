@@ -12,13 +12,29 @@
   </script>
 </head>
 <body class="theme-red complement-indigo pa5">
-  <stellar-card>
-    <stellar-form autofill>
-      <stellar-grid cols="1" noresponsive>
-        <stellar-input type="email" label="Email" description="Your email" placeholder="test@example.com"></stellar-input>
-        <stellar-input type="password" label="Password" description="Your Password" placeholder="password"></stellar-input>
-      </stellar-grid>
-    </stellar-form>
-  </stellar-card>
+  <header>
+    <stellar-tabs>
+      <stellar-tab href="/index.html" tag="pjax">tab</stellar-tab>
+      <stellar-tab href="/pjax.html" tag="pjax">tab</stellar-tab>
+    </stellar-tabs>
+  </header>
+    <stellar-pjax></stellar-pjax>
+    <main>
+        <stellar-card>
+            <header>
+              <a href="/pjax.html">link</a>
+              <stellar-tabs>
+                <stellar-tab href="/pjax.html" tag="pjax">tab</stellar-tab>
+              </stellar-tabs>
+              <stellar-button href="/pjax.html" tag="pjax">button</stellar-button>
+            </header>
+            <stellar-form autofill>
+            <stellar-grid cols="1" noresponsive>
+                <stellar-input type="email" label="Email" description="Your email" placeholder="test@example.com"></stellar-input>
+                <stellar-input type="password" label="Password" description="Your Password" placeholder="password"></stellar-input>
+            </stellar-grid>
+            </stellar-form>
+        </stellar-card>
+    </main>
 </body>
 </html>
