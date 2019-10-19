@@ -2,8 +2,8 @@ import { Component, Element, State, Prop, Method, Watch, h } from '@stencil/core
 import Tunnel from '../../theme';
 import Highcharts from 'highcharts'
 import Data from 'highcharts/modules/data';
-import merge from 'deepmerge';
 import { theme, HighchartsModel } from './options';
+import { shuffle, colors } from '../../../utils';
 
 Data(Highcharts);
 
@@ -57,7 +57,11 @@ export class Chart {
       ...{ yAxis: { categories: [] } }
     };
 
-    this.__options = merge.all([this.__options, theme, newOptions]);
+    this.__options = {...this.__options, ...theme, ...newOptions};
+
+    if (!newOptions.colors) {
+      this.__options = {...this.__options, ...{colors: shuffle([colors.base, ...colors.red.filter((_, key) => key >= 5), ...colors.orange.filter((_, key) => key >= 5), ...colors.yellow.filter((_, key) => key >= 5), ...colors.green.filter((_, key) => key >= 5), ...colors.blue.filter((_, key) => key >= 5), ...colors.violet.filter((_, key) => key >= 5), ...colors.cyan.filter((_, key) => key >= 5), ...colors.fuschia.filter((_, key) => key >= 5), ...colors.gray.filter((_, key) => key >= 5), ...colors.indigo.filter((_, key) => key >= 5), ...colors.lime.filter((_, key) => key >= 5), ...colors.pink.filter((_, key) => key >= 5), ...colors.teal.filter((_, key) => key >= 5)])}}
+    }
 
     Highcharts.setOptions({
       lang: {

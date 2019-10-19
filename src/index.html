@@ -29,10 +29,45 @@
               <stellar-button href="/pjax.html" tag="pjax">button</stellar-button>
             </header>
             <stellar-form autofill>
-            <stellar-grid cols="1" noresponsive>
-                <stellar-input type="email" label="Email" description="Your email" placeholder="test@example.com"></stellar-input>
-                <stellar-input type="password" label="Password" description="Your Password" placeholder="password"></stellar-input>
-            </stellar-grid>
+              <stellar-grid cols="1" noresponsive>
+                  <stellar-chart for="datatable"></stellar-chart>
+                  <table id="datatable">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Jane</th>
+                            <th>John</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Apples</th>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th>Pears</th>
+                            <td>2</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Plums</th>
+                            <td>5</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <th>Bananas</th>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <th>Oranges</th>
+                            <td>2</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+              </stellar-grid>
             </stellar-form>
         </stellar-card>
     </main>
