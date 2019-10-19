@@ -7,8 +7,6 @@ import { theme, HighchartsModel } from './options';
 
 Data(Highcharts);
 
-
-
 @Component({
   tag: 'stellar-chart',
   styleUrl: 'chart.css',
@@ -59,7 +57,7 @@ export class Chart {
       ...{ yAxis: { categories: [] } }
     };
 
-    this.__options = merge.all([this.__options, newOptions, theme]);
+    this.__options = merge.all([this.__options, theme, newOptions]);
 
     Highcharts.setOptions({
       lang: {
