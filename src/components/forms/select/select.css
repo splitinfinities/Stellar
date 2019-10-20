@@ -185,9 +185,9 @@
 }
 
 :host .label-wrapper stellar-label {
-  margin-bottom: var(--ms-1);
+  margin-bottom: calc(var(--ms-1) + 1px);
   height: var(--ms0);
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 :host .select-list-footer {
@@ -271,7 +271,7 @@ stellar-input .validation span + span {
 :host stellar-item,
 :host ::slotted(stellar-item) {
   --font-size: var(--ms0);
-  --item-size: calc(var(--font-size) * 3);
+  --item-size: calc(var(--font-size) * 3.75);
 }
 
 /* Size: Medium */
