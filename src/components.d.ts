@@ -451,6 +451,7 @@ export namespace Components {
     'accept': string;
     'autocomplete': string;
     'autofocus': boolean;
+    'capsLock': boolean;
     'color': string;
     'cols': number;
     /**
@@ -494,6 +495,7 @@ export namespace Components {
     'requirements': boolean;
     'rows': number;
     'setStrength': (value: number) => Promise<void>;
+    'showCapsLock': boolean;
     'size': string;
     'spellcheck': boolean;
     'step': number;
@@ -2245,6 +2247,7 @@ declare namespace LocalJSX {
     'accept'?: string;
     'autocomplete'?: string;
     'autofocus'?: boolean;
+    'capsLock'?: boolean;
     'color'?: string;
     'cols'?: number;
     /**
@@ -2295,6 +2298,7 @@ declare namespace LocalJSX {
     */
     'requirements'?: boolean;
     'rows'?: number;
+    'showCapsLock'?: boolean;
     'size'?: string;
     'spellcheck'?: boolean;
     'step'?: number;

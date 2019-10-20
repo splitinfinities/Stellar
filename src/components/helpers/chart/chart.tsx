@@ -1,11 +1,15 @@
-import { Component, Element, State, Prop, Method, Watch, h } from '@stencil/core';
+import { Component, Element, State, Prop, Method, Watch, h, Listen } from '@stencil/core';
 import Tunnel from '../../theme';
 import Highcharts from 'highcharts'
 import Data from 'highcharts/modules/data';
+import Exporting from 'highcharts/modules/exporting'
+import OfflineExporting from 'highcharts/modules/exporting'
 import { theme, HighchartsModel } from './options';
 import { shuffle, colors } from '../../../utils';
 
 Data(Highcharts);
+Exporting(Highcharts);
+OfflineExporting(Highcharts);
 
 @Component({
   tag: 'stellar-chart',
@@ -40,6 +44,21 @@ export class Chart {
   componentDidLoad() {
     this.options(theme);
     this.refresh();
+  }
+
+  @Listen('resize', {target: "window"})
+  @Listen('fullscreenchange', {target: "document"})
+  handResize () {
+    this.__highchart.reflow();
+    this.refresh();
+  }
+
+  @Listen('keyup', {target: "document"})
+  handleEscape(event) {
+    if (event.key === 'Escape') {
+      this.__highchart.reflow();
+      this.refresh();
+    }
   }
 
   @Method()

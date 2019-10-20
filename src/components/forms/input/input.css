@@ -80,6 +80,30 @@
   width: calc(100% - 1.5em);
 }
 
+:host .caps-lock {
+  position: absolute;
+  height: calc(100% - 4px);
+  border-radius: var(--border-radius);
+  right: 2px;
+  top: 2px;
+  background: white;
+  display: inline-grid;
+  grid-gap: calc(var(--font-size) / 2);
+  grid-template-columns: auto auto;
+  align-items: center;
+  align-items: center;
+  padding: 0 calc(var(--font-size) / 2);
+}
+
+:host .caps-lock stellar-asset {
+  font-size: calc(var(--font-size) * 1.75)
+}
+
+:host .caps-lock * {
+  margin: 0;
+  color: var(--red5);
+}
+
 :host input,
 :host textarea,
 :host .tags-input,

@@ -130,9 +130,16 @@ export class Input {
 
   @Prop({ mutable: true, reflect: true }) icon: boolean = false;
 
+  @Prop({ mutable: true, reflect: true }) capsLock: boolean = false;
+  @Prop({ mutable: true, reflect: true }) showCapsLock: boolean = false;
+
   componentWillLoad () {
     if (this.default) {
       this.value = this.default;
+    }
+
+    if (this.type === "password") {
+      this.showCapsLock = true;
     }
 
     if (this.match) {
@@ -485,6 +492,15 @@ export class Input {
         this.value = this.__previousValue;
       }
     }
+
+    this.capsLock = event.getModifierState('CapsLock');
+  }
+
+  @Listen('mousedown')
+  @Listen('mouseup')
+  @Listen('keyup')
+  handleMouseDown (event) {
+    this.capsLock = event.getModifierState('CapsLock');
   }
 
   validateDarkColor () {
@@ -656,6 +672,8 @@ export class Input {
               { this.renderIncrements() }
               { this.renderSearchClearButton() }
               { this.renderPasswordStrength() }
+
+              { this.showCapsLock && this.capsLock && <div class="caps-lock"><stellar-label size={this.size}>Caps Lock</stellar-label><stellar-asset name="arrow-dropup-circle"/></div> }
               { this.tooltip && <stellar-tooltip align="bottom-left">{this.tooltip}</stellar-tooltip> }
           </div>
 

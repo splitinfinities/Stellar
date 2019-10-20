@@ -49,6 +49,7 @@
 | `accept`              | `accept`                |                                                          | `string`                     | `undefined`       |
 | `autocomplete`        | `autocomplete`          |                                                          | `string`                     | `undefined`       |
 | `autofocus`           | `autofocus`             |                                                          | `boolean`                    | `false`           |
+| `capsLock`            | `caps-lock`             |                                                          | `boolean`                    | `false`           |
 | `color`               | `color`                 |                                                          | `string`                     | `"theme"`         |
 | `cols`                | `cols`                  |                                                          | `number`                     | `30`              |
 | `dark`                | `dark`                  | Sets the button or link as an outlined button.           | `boolean`                    | `false`           |
@@ -75,6 +76,7 @@
 | `required`            | `required`              |                                                          | `boolean`                    | `false`           |
 | `requirements`        | `requirements`          | The pre-set value to pass to the input element           | `boolean`                    | `false`           |
 | `rows`                | `rows`                  |                                                          | `number`                     | `5`               |
+| `showCapsLock`        | `show-caps-lock`        |                                                          | `boolean`                    | `false`           |
 | `size`                | `size`                  |                                                          | `string`                     | `undefined`       |
 | `spellcheck`          | `spellcheck`            |                                                          | `boolean`                    | `true`            |
 | `step`                | `step`                  |                                                          | `number`                     | `1`               |

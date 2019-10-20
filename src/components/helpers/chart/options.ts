@@ -14,12 +14,35 @@ Highcharts.wrap(Highcharts.Tooltip.prototype, 'refresh', function (p, point, mou
 });
 
 Highcharts.setOptions({
+  exporting: {
+    chartOptions: {
+        plotOptions: {
+            series: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        }
+    },
+    fallbackToExportServer: false
+  },
   lang: {
     thousandsSep: ','
   }
 });
 
 export const theme: Highcharts.Options = {
+  exporting: {
+    enabled: true,
+    chartOptions: {
+      chart: {
+          style: {
+            fontFamily: 'Arial'
+          }
+      }
+    },
+    fallbackToExportServer: false
+  },
   chart: {
     style: {
       fontFamily: "var(--font-heading)",
@@ -29,9 +52,6 @@ export const theme: Highcharts.Options = {
   lang: {
     decimalPoint: '.',
     thousandsSep: ','
-  },
-  exporting: {
-    enabled: false
   },
   series: [],
   legend: {
