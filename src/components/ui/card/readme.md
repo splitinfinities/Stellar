@@ -112,6 +112,7 @@ Type: `Promise<void>`
 
 - [stellar-button](../../forms/button)
 - [stellar-asset](../asset)
+- [stellar-intersection](../../helpers/intersection)
 - context-consumer
 
 ### Graph
@@ -119,6 +120,7 @@ Type: `Promise<void>`
 graph TD;
   stellar-card --> stellar-button
   stellar-card --> stellar-asset
+  stellar-card --> stellar-intersection
   stellar-card --> context-consumer
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link

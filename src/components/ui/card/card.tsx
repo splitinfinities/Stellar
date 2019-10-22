@@ -77,6 +77,7 @@ export class Card {
 
   @Event() flip: EventEmitter;
 
+
   componentDidLoad() {
     this.updateFlippableCardHeight();
     this.addResizeObserver();
@@ -92,6 +93,9 @@ export class Card {
 
     this.ro.observe(this.element);
   }
+
+  async in () { await delay(200); this.flipReady = true; }
+  async out () { await delay(200); this.flipReady = false; }
 
   @Listen('resize', {target: "window"})
   handleWindowResize() {
@@ -174,6 +178,7 @@ export class Card {
               <slot name="back"></slot>
             </div>] }
         { !this.flippable && <slot></slot> }
+        <stellar-intersection in={this.in.bind(this)} out={this.out.bind(this)} element={this.element} multiple />
       </this.tag>
     );
   }

@@ -58,6 +58,7 @@ graph TD;
   stellar-code --> context-consumer
   stellar-card --> stellar-button
   stellar-card --> stellar-asset
+  stellar-card --> stellar-intersection
   stellar-card --> context-consumer
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link

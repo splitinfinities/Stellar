@@ -24,6 +24,7 @@
  - [skeleton-text](../../media/skeleton-text)
  - [stellar-360-image](../../media/360-image)
  - [stellar-animate-text](../../motion/animate-text)
+ - [stellar-card](../../ui/card)
  - [stellar-image](../../media/image)
  - [stellar-interview](../../media/interview)
  - [stellar-long-shadow](../long-shadow)
@@ -39,6 +40,7 @@ graph TD;
   skeleton-text --> stellar-intersection
   stellar-360-image --> stellar-intersection
   stellar-animate-text --> stellar-intersection
+  stellar-card --> stellar-intersection
   stellar-image --> stellar-intersection
   stellar-interview --> stellar-intersection
   stellar-long-shadow --> stellar-intersection
