@@ -1,5 +1,5 @@
-import { Component, Prop, State, Element, Event, EventEmitter, Method, h } from '@stencil/core';
-import { properties, ResizeObserver } from '../../../utils'
+import { Component, Prop, State, Element, Event, EventEmitter, Method, h, Watch, Listen } from '@stencil/core';
+import { properties, ResizeObserver, delay } from '../../../utils'
 import Tunnel from '../../theme';
 
 @Component({
@@ -19,6 +19,11 @@ export class Card {
    * Let's a card be flippable
    */
   @Prop({ reflect: true }) flippable: boolean = false;
+
+  /**
+   * Let's a card be flippable
+   */
+  @Prop({ reflect: true, mutable: true }) flipReady: boolean = false;
 
   /**
    * Renders a flipped card
@@ -68,6 +73,7 @@ export class Card {
   @Prop({reflect: true}) dark: boolean = false;
 
   @State() ro: ResizeObserver;
+  @State() flipTimeout: any;
 
   @Event() flip: EventEmitter;
 
@@ -77,7 +83,7 @@ export class Card {
   }
 
   addResizeObserver() {
-    this.ro = new ResizeObserver((entries) => {
+    this.ro = new ResizeObserver(async (entries) => {
       for (const entry of entries) {
         const {width} = entry.contentRect;
         properties.set({'--card-width': `${width}px`}, entry.target)
@@ -87,15 +93,35 @@ export class Card {
     this.ro.observe(this.element);
   }
 
-  updateFlippableCardHeight () {
+  @Listen('resize', {target: "window"})
+  handleWindowResize() {
+    if (this.flippable) {
+      clearTimeout(this.flipTimeout);
+      this.flipReady = false;
+      this.flipTimeout = setTimeout(() => { this.flipReady = true; }, 100)
+    }
+  }
+
+  @Watch('flippable')
+  async updateFlippableCardHeight () {
+    await delay(100);
     if (this.flippable) {
       const front: HTMLElement = this.element.shadowRoot.querySelector('.front');
-      const front_height = front.offsetHeight;
-      properties.set({'--min-height': `${front_height}px`}, this.element)
-
       const back: HTMLElement = this.element.shadowRoot.querySelector('.back');
-        const back_height = back.scrollHeight;
-      properties.set({'--flipped-min-height': `${back_height + 50}px`}, this.element)
+      const front_height = front.offsetHeight;
+      const back_height = back.scrollHeight;
+
+      properties.set({'--min-height': `${front_height}px`}, this.element);
+      properties.set({'--flipped-min-height': `${back_height + 50}px`}, this.element);
+
+      await delay(50);
+      this.flipReady = true;
+    } else {
+      properties.unset('--flipped-min-height', this.element);
+      properties.unset('--min-height', this.element);
+
+      await delay(50);
+      this.flipReady = false;
     }
   }
 

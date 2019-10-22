@@ -19,12 +19,13 @@
     </stellar-tabs>
   </header>
     <stellar-pjax></stellar-pjax>
+    <stellar-theme dark body></stellar-theme>
     <main>
         <stellar-card>
             <header>
               <h2>nice</h2>
             </header>
-            <stellar-form autofill>
+            <section slot="back"><stellar-form autofill>
               <stellar-grid cols="1" noresponsive>
                   <stellar-chart for="datatable"></stellar-chart>
                   <table id="datatable">
@@ -65,6 +66,7 @@
                 </table>
               </stellar-grid>
             </stellar-form>
+            </section>
         </stellar-card>
     </main>
 </body>

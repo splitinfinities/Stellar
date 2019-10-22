@@ -15,6 +15,7 @@
     --background-active: var(--theme-base0);
     --flipped-background: var(--white);
     --flipped-min-height: var(--flipped-min-height, 20rem);
+    --flipped-transition: none;
     --border-radius: var(--border-radius-sm);
     --padding: 3rem;
     --min-height: 10rem;
@@ -161,23 +162,24 @@
     display: block;
     /* transform-style: preserve-3d; */
     background: var(--background);
-    transition: all 0.5s var(--ease, ease-in-out) 0s, background-color 0s ease 0s;
 }
 
+:host([flippable][flip-ready]) .wrap { transition: all 0.5s var(--ease, ease-in-out) 0s, background-color 0s ease 0s; }
+
 :host([flippable]) .wrap .front {
-    transition: min-height 0.35s linear 0s, opacity 0.15s linear 0.3s !important;
     backface-visibility: hidden;
     z-index: 1;
     opacity: 1;
     height: 100%;
 }
 
+:host([flippable][flip-ready]) .wrap .front { transition: min-height 0.35s linear 0s, opacity 0.15s linear 0.3s !important; }
+
 :host([flippable]) .wrap .back * {
     backface-visibility: hidden;
 }
 
 :host([flippable]) .wrap .back {
-    transition: min-height 0.35s linear 0s, opacity 0.15s linear 0.0s !important;
     top: 0;
     left: 0;
     position: absolute;
@@ -189,6 +191,8 @@
     pointer-events: none;
     opacity: 0;
 }
+
+:host([flippable][flip-ready]) .wrap .back { transition: min-height 0.35s linear 0s, opacity 0.15s linear 0.0s !important; }
 
 :host([flippable][flipped]) .wrap .front {
     transition: min-height 0.35s linear 0s, opacity 0.15s linear 0s !important;

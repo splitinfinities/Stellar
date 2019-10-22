@@ -215,6 +215,10 @@ export namespace Components {
   }
   interface StellarCard {
     'dark': boolean;
+    /**
+    * Let's a card be flippable
+    */
+    'flipReady': boolean;
     'flip_card': (e?: UIEvent) => Promise<void>;
     /**
     * Sets the href on the anchor tag if the button is a link.
@@ -2020,6 +2024,10 @@ declare namespace LocalJSX {
   }
   interface StellarCard extends JSXBase.HTMLAttributes<HTMLStellarCardElement> {
     'dark'?: boolean;
+    /**
+    * Let's a card be flippable
+    */
+    'flipReady'?: boolean;
     /**
     * Sets the href on the anchor tag if the button is a link.
     */
