@@ -212,7 +212,7 @@
 
 :host([flippable][flipped]) {
     --background: var(--flipped-background, white) !important;
-    --min-height: var(--flipped-min-height) !important;
+    --min-height: calc(var(--flipped-min-height) + 3rem) !important;
     z-index: 1;
 }
 

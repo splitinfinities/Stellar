@@ -116,7 +116,7 @@ export class Card {
       const back_height = back.scrollHeight;
 
       properties.set({'--min-height': `${front_height}px`}, this.element);
-      properties.set({'--flipped-min-height': `${back_height + 50}px`}, this.element);
+      properties.set({'--flipped-min-height': `${back_height}px`}, this.element);
 
       await delay(50);
       this.flipReady = true;
@@ -127,6 +127,20 @@ export class Card {
       await delay(50);
       this.flipReady = false;
     }
+  }
+
+  async updateBackCardHeight () {
+    if (this.flippable) {
+      const back: HTMLElement = this.element.shadowRoot.querySelector('.back');
+      const back_height = back.offsetHeight;
+
+      properties.set({'--flipped-min-height': `${back_height}px`}, this.element);
+    }
+  }
+
+  @Listen("keyup")
+  handleKeyUp () {
+    this.updateBackCardHeight();
   }
 
   async click() {
