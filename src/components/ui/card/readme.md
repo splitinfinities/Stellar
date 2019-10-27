@@ -63,8 +63,8 @@
 | Property    | Attribute    | Description                                                                 | Type                                                 | Default     |
 | ----------- | ------------ | --------------------------------------------------------------------------- | ---------------------------------------------------- | ----------- |
 | `dark`      | `dark`       |                                                                             | `boolean`                                            | `false`     |
+| `flipIcon`  | `flip-icon`  | Sets the href on the anchor tag if the button is a link.                    | `string`                                             | `"cog"`     |
 | `flipReady` | `flip-ready` | Let's a card be flippable                                                   | `boolean`                                            | `false`     |
-| `flip_icon` | `flip_icon`  | Sets the href on the anchor tag if the button is a link.                    | `string`                                             | `"cog"`     |
 | `flippable` | `flippable`  | Let's a card be flippable                                                   | `boolean`                                            | `false`     |
 | `flipped`   | `flipped`    | Renders a flipped card                                                      | `boolean`                                            | `false`     |
 | `for`       | `for`        | Sets the href on the anchor tag if the button is a link.                    | `string`                                             | `undefined` |

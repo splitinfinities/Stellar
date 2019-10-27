@@ -68,7 +68,7 @@ export class Card {
   /**
    * Sets the href on the anchor tag if the button is a link.
    */
-  @Prop() flip_icon: string = "cog";
+  @Prop() flipIcon: string = "cog";
 
   @Prop({reflect: true}) dark: boolean = false;
 
@@ -168,8 +168,8 @@ export class Card {
     // @ts-ignore
     return (<this.tag {...childProps} class={"stencil-route-link" !== this.tag ? "wrap" : ""} anchorClass={"stencil-route-link" === this.tag ? "wrap" : ""} onClick={(e) => { this.click(e) }}>
         { this.flippable && [
-            <stellar-button tag="button" ghost class="flip-button" onClick={(e) => { e.stopPropagation(); e.preventDefault(); this.flip_card(e) }}>
-              <stellar-asset name={this.flipped ? "close" : this.flip_icon} class="ma0" />
+            this.flipIcon && this.flipIcon !== "false" && <stellar-button tag="button" ghost class="flip-button" onClick={(e) => { e.stopPropagation(); e.preventDefault(); this.flip_card(e) }}>
+              <stellar-asset name={this.flipped ? "close" : this.flipIcon} class="ma0" />
             </stellar-button>,
             <div class="front">
               <slot></slot>

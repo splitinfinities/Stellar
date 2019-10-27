@@ -217,14 +217,14 @@ export namespace Components {
   interface StellarCard {
     'dark': boolean;
     /**
+    * Sets the href on the anchor tag if the button is a link.
+    */
+    'flipIcon': string;
+    /**
     * Let's a card be flippable
     */
     'flipReady': boolean;
     'flip_card': (e?: UIEvent) => Promise<void>;
-    /**
-    * Sets the href on the anchor tag if the button is a link.
-    */
-    'flip_icon': string;
     /**
     * Let's a card be flippable
     */
@@ -2026,13 +2026,13 @@ declare namespace LocalJSX {
   interface StellarCard {
     'dark'?: boolean;
     /**
+    * Sets the href on the anchor tag if the button is a link.
+    */
+    'flipIcon'?: string;
+    /**
     * Let's a card be flippable
     */
     'flipReady'?: boolean;
-    /**
-    * Sets the href on the anchor tag if the button is a link.
-    */
-    'flip_icon'?: string;
     /**
     * Let's a card be flippable
     */
