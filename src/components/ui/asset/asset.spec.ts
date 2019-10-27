@@ -23,5 +23,5 @@ it('should render and respond to changes appropriately', () => {
 
   expect(rendered["$children$"][0]["$attrs$"]).toEqual({"aria-label": "create", "ariaLabel": "create", "name": undefined, "src": "awesome"});
 
-  expect(rendered["$children$"][0]["$name$"]).toEqual(undefined);
+  expect(rendered["$children$"][0]["$name$"]).toEqual(null);
 });

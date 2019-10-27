@@ -4,6 +4,7 @@
   --indicator-color: var(--theme-base5);
   --overflow: auto hidden;
   --justify-content: space-evenly;
+  --max-width: var(--large);
   font-size: var(--font-size);
   display: block;
   position: relative;
@@ -66,7 +67,7 @@
 }
 
 :host .tab-wrap {
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: auto;
   height: 100%;
 }

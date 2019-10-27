@@ -17,7 +17,7 @@ export class Input {
   /**
    * Instance of the input or text-area element
    */
-  @State() input: HTMLInputElement
+  input!: HTMLInputElement|HTMLTextAreaElement
 
   /**
    * Public: Updated event
@@ -170,8 +170,6 @@ export class Input {
   }
 
   componentDidLoad() {
-    this.input = this.element.shadowRoot.querySelector('.input');
-
     if (this.type === "tags") {
       this.tokenField = new Tokenfield({
         el: this.input,
@@ -294,6 +292,7 @@ export class Input {
       this.value = moment(this.value).add(1, `${this.dateType}s`).format(this.dateFormat);
       this.datepicker.close();
     } else {
+      // @ts-ignore
       this.input.stepUp();
       this.value = this.input.value
     }
@@ -306,6 +305,7 @@ export class Input {
       this.value = moment(this.value).subtract(1, `${this.dateType}s`).format(this.dateFormat);
       this.datepicker.close();
     } else {
+      // @ts-ignore
       this.input.stepDown();
       this.value = this.input.value
     }
@@ -319,6 +319,7 @@ export class Input {
         this.value = moment(this.value).add(1, `${this.dateType}s`).format(this.dateFormat);
         this.datepicker.close();
       } else {
+        // @ts-ignore
         this.input.stepUp();
         this.value = this.input.value
       }
@@ -333,6 +334,7 @@ export class Input {
         this.value = moment(this.value).subtract(1, `${this.dateType}s`).format(this.dateFormat);
         this.datepicker.close();
       } else {
+        // @ts-ignore
         this.input.stepDown();
         this.value = this.input.value
       }
@@ -403,6 +405,7 @@ export class Input {
     var files: any = [];
 
     if (this.type === "file" && this.multiple) {
+      // @ts-ignore
       Array.from(this.input.files).forEach((file: File) => {
         var item = {
           'name': file.name,
@@ -412,6 +415,7 @@ export class Input {
         files.push(item);
       });
     } else {
+      // @ts-ignore
       files = this.input.files[0]
     }
 
@@ -583,7 +587,7 @@ export class Input {
             {moment(this.value).format(this.visualDateFormat)}
           </div>
 
-          <input class="input" id={this.generatedId} type="text" value={this.value} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} onKeyDown={(event: KeyboardEvent) => {this.handleKeyDownIncrement(event); this.handleKeyDownDecrement(event); }} />
+          <input class="input" ref={(el) => this.input = el as HTMLInputElement} id={this.generatedId} type="text" value={this.value} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} onKeyDown={(event: KeyboardEvent) => {this.handleKeyDownIncrement(event); this.handleKeyDownDecrement(event); }} />
         </div>
       )
     }
@@ -592,7 +596,7 @@ export class Input {
   renderInput() {
     if (shouldBeAnInput(this.type)) {
       return (
-        <input class="input" id={this.generatedId} type={this.type} value={this.value} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} onKeyDown={(event) => { this.handleInputKeyDown(event) }} />
+        <input class="input" ref={(el) => this.input = el as HTMLInputElement} id={this.generatedId} type={this.type} value={this.value} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} onKeyDown={(event) => { this.handleInputKeyDown(event) }} />
       )
     }
   }
@@ -600,7 +604,7 @@ export class Input {
   renderTextArea() {
     if (this.type === "textarea") {
       return (
-        <textarea class="input" id={this.generatedId} placeholder={this.placeholder} name={this.name} cols={this.cols} maxlength={this.maxlength} rows={this.rows} disabled={this.disabled} readonly={this.readonly} autofocus={this.autofocus} spellcheck={this.spellcheck} required={this.required} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()}>{this.value}</textarea>
+        <textarea class="input" ref={(el) => this.input = el as HTMLTextAreaElement} id={this.generatedId} placeholder={this.placeholder} name={this.name} cols={this.cols} maxlength={this.maxlength} rows={this.rows} disabled={this.disabled} readonly={this.readonly} autofocus={this.autofocus} spellcheck={this.spellcheck} required={this.required} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()}>{this.value}</textarea>
       )
     }
   }
@@ -611,7 +615,7 @@ export class Input {
         <div class="file-wrapper">
           <div class="upload-card">
             <section>
-              <input class="input" id={this.generatedId} type={this.type} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} onClick={(e) => { e.stopPropagation(); }} onInput={() => this.handleInput()} onChange={() => this.handleChange()} multiple={this.multiple} accept={this.accept} onFocus={() => this.handleFocus()} onBlur={() => this.handleBlur()} />
+              <input class="input" ref={(el) => this.input = el as HTMLInputElement} id={this.generatedId} type={this.type} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} onClick={(e) => { e.stopPropagation(); }} onInput={() => this.handleInput()} onChange={() => this.handleChange()} multiple={this.multiple} accept={this.accept} onFocus={() => this.handleFocus()} onBlur={() => this.handleBlur()} />
 
               {this._fileLabel && <h3>{this._fileLabel}</h3>}
 
