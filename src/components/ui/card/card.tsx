@@ -153,7 +153,7 @@ export class Card {
 
   @Watch('flipped')
   async handleFlipped() {
-    await delay(300);
+    await delay(350);
     this.flipReady = false;
     properties.set({'--flipped-min-height': `${this.originalHeight}px`}, this.element);
     await delay(100);
