@@ -71,7 +71,6 @@ graph TD;
   stellar-label --> context-consumer
   stellar-card --> stellar-button
   stellar-card --> stellar-asset
-  stellar-card --> stellar-intersection
   stellar-card --> context-consumer
   stellar-select --> stellar-label
   stellar-select --> stellar-button

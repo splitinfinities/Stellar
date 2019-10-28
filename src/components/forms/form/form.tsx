@@ -104,10 +104,8 @@ export class Form {
   }
 
   render() {
-    return (
-      <form action={this.action} method={this.method} accept-charset={this.acceptCharset} autocomplete={this.autocomplete} enctype={this.enctype} name={this.name} novalidate={this.novalidate} target={this.target} onSubmit={(e) => { e.preventDefault(); this.submit_form(); }}>
+    return <form action={this.action} method={this.method} accept-charset={this.acceptCharset} autocomplete={this.autocomplete} enctype={this.enctype} name={this.name} novalidate={this.novalidate} target={this.target} onSubmit={(e) => { e.preventDefault(); this.submit_form(); }}>
         <slot />
-      </form>
-    );
+    </form>
   }
 }

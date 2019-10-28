@@ -88,7 +88,7 @@ export class Input {
   @Prop() spellcheck: boolean = true;
   @Prop() maxlength: number = 1000;
   @Prop() cols: number = 30;
-  @Prop() rows: number = 5;
+  @Prop() rows: number = 2;
   @Prop() wrap: string = "soft";
 
   // Dates
@@ -269,7 +269,7 @@ export class Input {
   handleInput() {
     if (this.type === "textarea") {
       this.input.style.height = "1px";
-      this.input.style.height = `${this.input.scrollHeight + 2}px`;
+      this.input.style.height = `${this.input.scrollHeight}px`;
     }
 
     if (this.type !== "file") {

@@ -75,7 +75,7 @@
 | `replace_placeholder` | `replace_placeholder`   |                                                          | `string`                     | `"Replace file"`  |
 | `required`            | `required`              |                                                          | `boolean`                    | `false`           |
 | `requirements`        | `requirements`          | The pre-set value to pass to the input element           | `boolean`                    | `false`           |
-| `rows`                | `rows`                  |                                                          | `number`                     | `5`               |
+| `rows`                | `rows`                  |                                                          | `number`                     | `2`               |
 | `showCapsLock`        | `show-caps-lock`        |                                                          | `boolean`                    | `false`           |
 | `size`                | `size`                  |                                                          | `string`                     | `undefined`       |
 | `spellcheck`          | `spellcheck`            |                                                          | `boolean`                    | `true`            |

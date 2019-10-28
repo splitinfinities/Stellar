@@ -77,6 +77,8 @@ export class Card {
 
   @Event() flip: EventEmitter;
 
+  originalHeight!: number;
+
 
   componentDidLoad() {
     this.updateFlippableCardHeight();
@@ -94,18 +96,6 @@ export class Card {
     this.ro.observe(this.element);
   }
 
-  async in () { await delay(200); this.flipReady = true; }
-  async out () { await delay(200); this.flipReady = false; }
-
-  @Listen('resize', {target: "window"})
-  handleWindowResize() {
-    if (this.flippable) {
-      clearTimeout(this.flipTimeout);
-      this.flipReady = false;
-      this.flipTimeout = setTimeout(() => { this.flipReady = true; }, 100)
-    }
-  }
-
   @Watch('flippable')
   async updateFlippableCardHeight () {
     await delay(100);
@@ -115,32 +105,36 @@ export class Card {
       const front_height = front.offsetHeight;
       const back_height = back.scrollHeight;
 
+      if (!this.originalHeight) {
+        this.originalHeight = back_height;
+      }
+
       properties.set({'--min-height': `${front_height}px`}, this.element);
       properties.set({'--flipped-min-height': `${back_height}px`}, this.element);
-
-      await delay(50);
-      this.flipReady = true;
     } else {
       properties.unset('--flipped-min-height', this.element);
       properties.unset('--min-height', this.element);
-
-      await delay(50);
-      this.flipReady = false;
+      this.originalHeight = undefined;
     }
   }
 
   async updateBackCardHeight () {
     if (this.flippable) {
+
       const back: HTMLElement = this.element.shadowRoot.querySelector('.back');
-      const back_height = back.offsetHeight;
+      const back_height = back.scrollHeight;
 
       properties.set({'--flipped-min-height': `${back_height}px`}, this.element);
     }
+
+    return true;
   }
 
   @Listen("keyup")
-  handleKeyUp () {
-    this.updateBackCardHeight();
+  async handleKeyUp () {
+    this.flipReady = false;
+    properties.set({'--flipped-min-height': `${this.originalHeight}px`}, this.element);
+    await this.updateBackCardHeight();
   }
 
   async click() {
@@ -157,6 +151,15 @@ export class Card {
     return true;
   }
 
+  @Watch('flipped')
+  async handleFlipped() {
+    await delay(300);
+    this.flipReady = false;
+    properties.set({'--flipped-min-height': `${this.originalHeight}px`}, this.element);
+    await delay(100);
+    await this.updateBackCardHeight();
+  }
+
   @Method()
   async flip_card(e?: UIEvent) {
     if (e) {
@@ -165,6 +168,7 @@ export class Card {
     }
 
     if (this.flippable) {
+      this.flipReady = true;
       this.flipped = !this.flipped
       this.flip.emit();
     }
@@ -192,7 +196,6 @@ export class Card {
               <slot name="back"></slot>
             </div>] }
         { !this.flippable && <slot></slot> }
-        <stellar-intersection in={this.in.bind(this)} out={this.out.bind(this)} element={this.element} multiple />
       </this.tag>
     );
   }

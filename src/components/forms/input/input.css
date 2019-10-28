@@ -201,7 +201,7 @@
   padding: var(--padding);
   padding-top: .5em;
   padding-bottom: .5em;
-  min-height: calc(var(--height) * 1.25);
+  min-height: calc(var(--height) * 2);
   max-height: 10em;
   line-height: 1.47;
   font-size: var(--font-size);
