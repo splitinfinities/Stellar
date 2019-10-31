@@ -78,7 +78,6 @@ export class Input {
   @Prop() description: string;
   @Prop() tooltip: string;
   @Prop({ mutable: true, reflect: true }) placeholder: string = "Enter a value";
-  @Prop() autocomplete: string;
 
   // Usability things
   @Prop() disabled: boolean;
@@ -90,6 +89,7 @@ export class Input {
   @Prop() cols: number = 30;
   @Prop() rows: number = 2;
   @Prop() wrap: string = "soft";
+  @Prop() autocomplete: "name"|"honorific-prefix"|"given-name"|"additional-name"|"family-name"|"honorific-suffix"|"nickname"|"username"|"current-password"|"new-password"|"one-time-code"|"organization-title"|"organization"|"street-address"|"address-line1"|"address-line2"|"address-line3"|"address-level4"|"address-level3"|"address-level2"|"address-level1"|"country"|"country-name"|"postal-code"|"cc-name"|"cc-given-name"|"cc-additional-name"|"cc-family-name"|"cc-number"|"cc-exp"|"cc-exp-month"|"cc-exp-year"|"cc-csc"|"cc-type"|"transaction-currency"|"transaction-amount"|"language"|"bday"|"bday-day"|"bday-month"|"bday-year"|"sex"|"url"|"photo";
 
   // Dates
   @State() datepicker: TinyDatePicker;
@@ -503,6 +503,7 @@ export class Input {
   @Listen('mousedown')
   @Listen('mouseup')
   @Listen('keyup')
+  @Listen('focus')
   handleMouseDown (event) {
     this.capsLock = event.getModifierState('CapsLock');
   }

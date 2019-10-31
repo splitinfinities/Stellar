@@ -454,7 +454,7 @@ export namespace Components {
   }
   interface StellarInput {
     'accept': string;
-    'autocomplete': string;
+    'autocomplete': "name"|"honorific-prefix"|"given-name"|"additional-name"|"family-name"|"honorific-suffix"|"nickname"|"username"|"current-password"|"new-password"|"one-time-code"|"organization-title"|"organization"|"street-address"|"address-line1"|"address-line2"|"address-line3"|"address-level4"|"address-level3"|"address-level2"|"address-level1"|"country"|"country-name"|"postal-code"|"cc-name"|"cc-given-name"|"cc-additional-name"|"cc-family-name"|"cc-number"|"cc-exp"|"cc-exp-month"|"cc-exp-year"|"cc-csc"|"cc-type"|"transaction-currency"|"transaction-amount"|"language"|"bday"|"bday-day"|"bday-month"|"bday-year"|"sex"|"url"|"photo";
     'autofocus': boolean;
     'capsLock': boolean;
     'color': string;
@@ -2254,7 +2254,7 @@ declare namespace LocalJSX {
   }
   interface StellarInput {
     'accept'?: string;
-    'autocomplete'?: string;
+    'autocomplete'?: "name"|"honorific-prefix"|"given-name"|"additional-name"|"family-name"|"honorific-suffix"|"nickname"|"username"|"current-password"|"new-password"|"one-time-code"|"organization-title"|"organization"|"street-address"|"address-line1"|"address-line2"|"address-line3"|"address-level4"|"address-level3"|"address-level2"|"address-level1"|"country"|"country-name"|"postal-code"|"cc-name"|"cc-given-name"|"cc-additional-name"|"cc-family-name"|"cc-number"|"cc-exp"|"cc-exp-month"|"cc-exp-year"|"cc-csc"|"cc-type"|"transaction-currency"|"transaction-amount"|"language"|"bday"|"bday-day"|"bday-month"|"bday-year"|"sex"|"url"|"photo";
     'autofocus'?: boolean;
     'capsLock'?: boolean;
     'color'?: string;
