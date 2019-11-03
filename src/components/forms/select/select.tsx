@@ -36,7 +36,7 @@ export class Select {
   @Prop({reflect: true}) loading: boolean = false;
   @Prop({reflect: true}) fit: boolean = false;
   @Prop({reflect: true}) wrap: boolean = false;
-  @Prop({reflect: true}) resize: boolean = false;
+  @Prop({reflect: true}) resize: boolean|"full" = false;
   @Prop({reflect: true}) autoSelectFirst: boolean = false;
 
   /**
