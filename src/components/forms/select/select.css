@@ -4,6 +4,7 @@
   --item-size: 5rem;
   --background: var(--white);
   --border-color: var(--gray2);
+  --initial-height: calc(var(--item-size) * 6);
 
   box-sizing: border-box;
   display: block;
@@ -157,7 +158,7 @@
 
 :host([resize="full"]) .select-list {
   max-width: 200vw !important;
-  height: 5rem;
+  height: var(--initial-height);
   max-height: 200vh !important;
 }
 
