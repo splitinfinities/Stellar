@@ -62,7 +62,7 @@ export class Switch {
 
   render() {
     return (
-      <label class="label" htmlFor={this.name}>
+      <label class="label" htmlFor={this.name} onClick={() => {this.activate()}}>
         <input type="checkbox" name={this.name} id={this.name} checked={this.checked} tabindex="-1" onClick={() => {this.activate()}}/>
         <button type="button">
           <span>
