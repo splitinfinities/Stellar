@@ -14,6 +14,7 @@ export class Switch {
   @Prop({reflect: true}) required: boolean;
   @State() status: FormResult;
   @Event() update: EventEmitter;
+
   /**
    * Sets the button or link as an outlined button.
    */
@@ -61,12 +62,11 @@ export class Switch {
 
   render() {
     return (
-      <label class="label">
-        <input type="checkbox" name={this.name} checked={this.checked} tabindex="-1" onClick={() => {this.activate()}}/>
-        <button type="button" onClick={() => {this.activate()}}>
+      <label class="label" htmlFor={this.name}>
+        <input type="checkbox" name={this.name} id={this.name} checked={this.checked} tabindex="-1" onClick={() => {this.activate()}}/>
+        <button type="button">
           <span>
-            {this.checked && <stellar-asset name="checkmark" />}
-            {!this.checked && <stellar-asset name="close" />}
+            <stellar-asset name={this.checked ? "checkmark" : "close"} />
           </span>
         </button>
         <slot />
