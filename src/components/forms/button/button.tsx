@@ -118,7 +118,13 @@ export class Button {
   @Prop({reflect: true}) ghost: boolean = false;
 
   componentWillLoad() {
-    this.icon = this.element.querySelectorAll('stellar-asset').length > 0
+    if (!this.element.getAttribute("title")) {
+      this.label = this.element.innerText
+    } else {
+      this.label = this.element.getAttribute("title");
+    }
+
+    this.icon = this.element.querySelectorAll('stellar-asset').length > 0;
   }
 
   async click() {
