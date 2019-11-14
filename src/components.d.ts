@@ -24,6 +24,7 @@ export namespace Components {
     'align': string;
     'full': boolean;
   }
+  interface HorizontalScroll {}
   interface SkeletonImg {
     'block': boolean;
     'height': number;
@@ -809,9 +810,12 @@ export namespace Components {
     'verbiageAn': boolean;
     'wrap': boolean;
   }
-  interface StellarSlide {}
+  interface StellarSlide {
+    'slideId': number;
+  }
   interface StellarSlides {
     'autoHeight': boolean;
+    'blurring': boolean;
     'centeredSlides': boolean;
     'direction': "horizontal"|"vertical";
     'effect': "slide"|"fade"|"cube"|"coverflow"|"flip";
@@ -823,6 +827,7 @@ export namespace Components {
     * Get the index of the previous slide.
     */
     'getPreviousIndex': () => Promise<number>;
+    'initialSlide': number;
     /**
     * Get whether or not the current slide is the first slide.
     */
@@ -1170,6 +1175,12 @@ declare global {
   var HTMLCopyWrapElement: {
     prototype: HTMLCopyWrapElement;
     new (): HTMLCopyWrapElement;
+  };
+
+  interface HTMLHorizontalScrollElement extends Components.HorizontalScroll, HTMLStencilElement {}
+  var HTMLHorizontalScrollElement: {
+    prototype: HTMLHorizontalScrollElement;
+    new (): HTMLHorizontalScrollElement;
   };
 
   interface HTMLSkeletonImgElement extends Components.SkeletonImg, HTMLStencilElement {}
@@ -1737,6 +1748,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'copy-wrap': HTMLCopyWrapElement;
+    'horizontal-scroll': HTMLHorizontalScrollElement;
     'skeleton-img': HTMLSkeletonImgElement;
     'skeleton-text': HTMLSkeletonTextElement;
     'stellar-360-image': HTMLStellar360ImageElement;
@@ -1839,6 +1851,7 @@ declare namespace LocalJSX {
     'align'?: string;
     'full'?: boolean;
   }
+  interface HorizontalScroll {}
   interface SkeletonImg {
     'block'?: boolean;
     'height'?: number;
@@ -2598,12 +2611,16 @@ declare namespace LocalJSX {
     'verbiageAn'?: boolean;
     'wrap'?: boolean;
   }
-  interface StellarSlide {}
+  interface StellarSlide {
+    'slideId'?: number;
+  }
   interface StellarSlides {
     'autoHeight'?: boolean;
+    'blurring'?: boolean;
     'centeredSlides'?: boolean;
     'direction'?: "horizontal"|"vertical";
     'effect'?: "slide"|"fade"|"cube"|"coverflow"|"flip";
+    'initialSlide'?: number;
     'loop'?: boolean;
     'nested'?: boolean;
     /**
@@ -2905,6 +2922,7 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'copy-wrap': CopyWrap;
+    'horizontal-scroll': HorizontalScroll;
     'skeleton-img': SkeletonImg;
     'skeleton-text': SkeletonText;
     'stellar-360-image': Stellar360Image;
@@ -3009,6 +3027,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'copy-wrap': LocalJSX.CopyWrap & JSXBase.HTMLAttributes<HTMLCopyWrapElement>;
+      'horizontal-scroll': LocalJSX.HorizontalScroll & JSXBase.HTMLAttributes<HTMLHorizontalScrollElement>;
       'skeleton-img': LocalJSX.SkeletonImg & JSXBase.HTMLAttributes<HTMLSkeletonImgElement>;
       'skeleton-text': LocalJSX.SkeletonText & JSXBase.HTMLAttributes<HTMLSkeletonTextElement>;
       'stellar-360-image': LocalJSX.Stellar360Image & JSXBase.HTMLAttributes<HTMLStellar360ImageElement>;

@@ -1,0 +1,34 @@
+:host {
+  --scroll-height: 32rem;
+  height: var(--scroll-height);
+}
+
+:host > div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: var(--scroll-height);
+  height: var(--scroll-height);
+  margin: 0;
+  padding-top: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transform: rotate(-90deg) translateY(calc(var(--scroll-height) * -1));
+  transform: rotate(-90deg) translateY(calc(var(--scroll-height) * -1));
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  direction: rtl;
+}
+
+:host ::slotted(*) {
+  display: block;
+  transform: rotate(90deg) translateX(var(--scroll-height));
+  transform-origin: right top;
+  direction: ltr;
+  width: auto;
+  height: calc(100% - calc(var(--scroll-height) * .3)) !important;
+  flex: 0 100% !important;
+  margin: 0 !important;
+}

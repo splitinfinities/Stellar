@@ -91,6 +91,7 @@ export class Slides {
   @Prop() autoHeight: boolean = false
   @Prop() nested: boolean = false
   @Prop() pagination: boolean = false
+  @Prop() initialSlide: number = 0;
 
   @Prop() loop: boolean = false
 
@@ -99,7 +100,8 @@ export class Slides {
 
   @Prop() slidesPerView: number = 3
   @Prop() centeredSlides: boolean = true
-  @Prop() spaceBetween: number = 20
+  @Prop() spaceBetween: number = 30
+  @Prop() blurring: boolean = true
 
   @State() blur: number = 0;
 
@@ -161,7 +163,7 @@ export class Slides {
     this.container = this.el.children[0] as HTMLElement
     const finalOptions = this.normalizeOptions()
     // init swiper core
-    this.swiper = new Swiper(this.container, finalOptions)
+    this.swiper = new Swiper(this.container, finalOptions);
 
     this.el!.onmouseenter = () => {
       this.swiper.keyboard.enable()
@@ -308,7 +310,9 @@ export class Slides {
       this.slides = Array.from(this.el!.querySelectorAll('stellar-slide'))
     }
 
-    this.ease().start();
+    if (this.blurring) {
+      this.ease().start();
+    }
   }
 
   blurEnd() {
@@ -328,7 +332,7 @@ export class Slides {
     const swiperOptions = {
       effect: this.effect,
       direction: this.direction,
-      initialSlide: 0,
+      initialSlide: this.initialSlide,
       loop: this.loop,
       pager: this.pagination,
       keyboard: {
@@ -338,7 +342,7 @@ export class Slides {
       pagination: '.swiper-pagination',
       paginationType: 'bullets',
       parallax: false,
-      slidesPerView: this.slidesPerView,
+      slidesPerView: Number(this.slidesPerView),
       spaceBetween: this.spaceBetween,
       speed: this.speed,
       zoom: false,
@@ -347,7 +351,7 @@ export class Slides {
       slidesPerColumnFill: 'column',
       slidesPerGroup: 1,
       centeredSlides: this.centeredSlides,
-      slidesOffsetBefore: 0,
+      slidesOffsetBefore: -0,
       slidesOffsetAfter: 0,
       touchEventsTarget: 'container',
       autoplayDisableOnInteraction: true,
@@ -393,6 +397,24 @@ export class Slides {
       runCallbacksOnInit: true,
       controlBy: 'slide',
       controlInverse: false,
+      breakpoints: {
+        400: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+        600: {
+          slidesPerView: 3,
+          spaceBetween: 15
+        },
+        900: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        },
+        1200: {
+          slidesPerView: 5,
+          spaceBetween: 25
+        }
+      },
       coverflow: {
         rotate: 20,
         stretch: 0,
@@ -477,7 +499,7 @@ export class Slides {
 
   render() {
     return <Host tabIndex={0}>
-      <stellar-blur class="swiper-container" horizontal={this.blur}>
+      <stellar-blur class="swiper-container" horizontal={this.blurring && this.blur}>
         <div class="swiper-wrapper">
           <slot />
         </div>
