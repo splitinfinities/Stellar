@@ -146,6 +146,11 @@ export class Slides {
     this.update()
   }
 
+  @Method()
+  async instance() {
+    return this.swiper;
+  }
+
   /**
    * Show or hide the pager
    */

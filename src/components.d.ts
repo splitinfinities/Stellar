@@ -828,6 +828,7 @@ export namespace Components {
     */
     'getPreviousIndex': () => Promise<number>;
     'initialSlide': number;
+    'instance': () => Promise<any>;
     /**
     * Get whether or not the current slide is the first slide.
     */

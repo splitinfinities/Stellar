@@ -301,6 +301,16 @@ Type: `Promise<number>`
 
 
 
+### `instance() => Promise<any>`
+
+
+
+#### Returns
+
+Type: `Promise<any>`
+
+
+
 ### `isBeginning() => Promise<boolean>`
 
 Get whether or not the current slide is the first slide.
