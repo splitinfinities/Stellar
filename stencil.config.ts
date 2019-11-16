@@ -22,7 +22,7 @@ export const config: Config = {
     verbose: false,
     collectCoverage: true,
     notify: true,
-    coverageDirectory: "./data/tests/",
+    coverageDirectory: "./src/data/tests/",
     // coverageThreshold: {
     //   global: {
     //     branches: 90,
@@ -33,7 +33,6 @@ export const config: Config = {
     // },
     coverageReporters: [
       "json-summary",
-      "lcov",
       "text",
     ]
   },
@@ -43,20 +42,20 @@ export const config: Config = {
       copy: [
         {
           src: '../dist/collection/collection-manifest.json',
-          dest: '../../data/collection.json'
+          dest: '../../src/data/collection.json'
         },
         {
           src: '../package.json',
-          dest: '../../data/version.json'
+          dest: '../../src/data/version.json'
         },
         {
           src: '../data',
-          dest: '../data'
+          dest: '../src/data'
         },
       ],
     },
-    { type: "stats", file: "./data/stats.json" },
-    { type: "docs-json", file: "./data/documentation.json" },
+    { type: "stats", file: "./src/data/stats.json" },
+    { type: "docs-json", file: "./src/data/documentation.json" },
     { type: "docs-readme" },
     {
       type: 'www',
@@ -69,12 +68,12 @@ export const config: Config = {
         },
         {
           src: '../dist/collection/collection-manifest.json',
-          dest: '../../data/collection.json',
+          dest: '../../src/data/collection.json',
           warn: true
         },
         {
           src: '../package.json',
-          dest: '../../data/version.json',
+          dest: '../../src/data/version.json',
           warn: true
         },
         {
