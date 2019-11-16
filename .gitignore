@@ -1,6 +1,6 @@
 .stencil/*
 dist/*
-data/*
+data/tests/lcov-report/*
 node_modules/*
 www/*
 src/global/images/_images/*
