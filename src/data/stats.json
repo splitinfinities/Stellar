@@ -1,0 +1,13 @@
+{
+  "diagnostics": [
+    {
+      "level": "error",
+      "type": "build",
+      "header": "Build Error",
+      "messageText": "ENOENT: no such file or directory, stat '/Users/williammriley/Sites/personal/@stellar/dist/collection/collection-manifest.json'",
+      "relFilePath": null,
+      "absFilePath": null,
+      "lines": []
+    }
+  ]
+}
