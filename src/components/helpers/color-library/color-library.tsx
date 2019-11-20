@@ -35,7 +35,7 @@ export class ColorLibrary {
     }
   }
 
-  hexStyle = color => `f-invert fw6 ttu ${color} mv5`;
+  hexStyle = color => `fw6 ttu tc ${color === "base" ? "black" : "base"} mv5`;
 
   renderColorPallette(color) {
     const range = this._colors[color];
@@ -81,19 +81,19 @@ export class ColorLibrary {
             </section>
           </stellar-card>
         </stellar-grid>
-        { this.renderColorPallette("gray") }
-        { this.renderColorPallette("red") }
-        { this.renderColorPallette("orange") }
-        { this.renderColorPallette("yellow") }
-        { this.renderColorPallette("lime") }
-        { this.renderColorPallette("green") }
-        { this.renderColorPallette("teal") }
-        { this.renderColorPallette("cyan") }
-        { this.renderColorPallette("blue") }
-        { this.renderColorPallette("indigo") }
-        { this.renderColorPallette("violet") }
-        { this.renderColorPallette("fuschia") }
-        { this.renderColorPallette("pink") }
+        { this._colors.gray && this.renderColorPallette("gray") }
+        { this._colors.red && this.renderColorPallette("red") }
+        { this._colors.orange && this.renderColorPallette("orange") }
+        { this._colors.yellow && this.renderColorPallette("yellow") }
+        { this._colors.lime && this.renderColorPallette("lime") }
+        { this._colors.green && this.renderColorPallette("green") }
+        { this._colors.teal && this.renderColorPallette("teal") }
+        { this._colors.cyan && this.renderColorPallette("cyan") }
+        { this._colors.blue && this.renderColorPallette("blue") }
+        { this._colors.indigo && this.renderColorPallette("indigo") }
+        { this._colors.violet && this.renderColorPallette("violet") }
+        { this._colors.fuschia && this.renderColorPallette("fuschia") }
+        { this._colors.pink && this.renderColorPallette("pink") }
       </Host>
     );
   }
