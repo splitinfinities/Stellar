@@ -1,5 +1,5 @@
 {
-  "timestamp": "2019-11-20T00:20:10",
+  "timestamp": "2019-11-20T01:15:01",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.8.1",
@@ -3338,7 +3338,7 @@
       "props": [
         {
           "name": "colors",
-          "type": "\"string\"",
+          "type": "string",
           "mutable": false,
           "attr": "colors",
           "reflectToAttr": false,
@@ -3346,7 +3346,6 @@
           "docsTags": [],
           "values": [
             {
-              "value": "string",
               "type": "string"
             }
           ],

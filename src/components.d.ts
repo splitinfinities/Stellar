@@ -299,7 +299,7 @@ export namespace Components {
     'simple': boolean;
   }
   interface StellarColorLibrary {
-    'colors': "string";
+    'colors': string;
   }
   interface StellarColorPicker {
     /**
@@ -2116,7 +2116,7 @@ declare namespace LocalJSX {
     'simple'?: boolean;
   }
   interface StellarColorLibrary {
-    'colors'?: "string";
+    'colors'?: string;
   }
   interface StellarColorPicker {
     /**

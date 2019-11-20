@@ -7,7 +7,7 @@ import {colors} from '../../../utils'
 
 export class ColorLibrary {
 
-  @Prop() colors: "string";
+  @Prop() colors: string;
 
   _colors: {
     "base": string,

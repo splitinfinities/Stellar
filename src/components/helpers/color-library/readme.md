@@ -15,9 +15,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type       | Default     |
-| -------- | --------- | ----------- | ---------- | ----------- |
-| `colors` | `colors`  |             | `"string"` | `undefined` |
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `colors` | `colors`  |             | `string` | `undefined` |
 
 
 ## Dependencies
