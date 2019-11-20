@@ -17,6 +17,7 @@ export class Picture {
   @Prop() width: number;
   @Prop() height: number;
   @Prop({reflect: true}) nozoom: boolean = false;
+  @Prop({reflect: true}) block: boolean = false;
   @Prop({mutable: true}) bg: string = "auto";
   @Prop({mutable: true}) alt: string = "";
 

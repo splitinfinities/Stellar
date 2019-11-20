@@ -448,6 +448,7 @@ export namespace Components {
   interface StellarImage {
     'alt': string;
     'bg': string;
+    'block': boolean;
     'height': number;
     'large': string;
     'medium': () => Promise<any>;
@@ -2265,6 +2266,7 @@ declare namespace LocalJSX {
   interface StellarImage {
     'alt'?: string;
     'bg'?: string;
+    'block'?: boolean;
     'height'?: number;
     'large'?: string;
     'nozoom'?: boolean;

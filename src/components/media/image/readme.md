@@ -24,6 +24,7 @@
 | -------- | --------- | ----------- | --------------------------- | ----------- |
 | `alt`    | `alt`     |             | `string`                    | `""`        |
 | `bg`     | `bg`      |             | `string`                    | `"auto"`    |
+| `block`  | `block`   |             | `boolean`                   | `false`     |
 | `height` | `height`  |             | `number`                    | `undefined` |
 | `large`  | `large`   |             | `string`                    | `undefined` |
 | `nozoom` | `nozoom`  |             | `boolean`                   | `false`     |
