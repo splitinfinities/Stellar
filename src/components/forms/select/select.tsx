@@ -44,10 +44,10 @@ export class Select {
    */
   @Prop({reflect: true}) dark: boolean = false;
 
-  @State() titleItem: HTMLStellarItemElement;
+  titleItem!: HTMLStellarItemElement;
   @State() status: FormResult;
   @State() blur: number = 0;
-  @State() observer: MutationObserver;
+  observer!: MutationObserver;
   @State() language: string;
 
   @State() clear_confirm: boolean = false;
@@ -505,7 +505,7 @@ export class Select {
             <stellar-item fit wrap select-title type="button" value={this.value ? this.value.toString() : ""} tabindex="-1" selectable={false} label={this.language} innerHTML={this.language}></stellar-item>
             <stellar-asset name="arrow-down" />
 
-            { this.name && <input type="text" tabindex="-1" value={this.value} name={this.name.toString()} required={this.required} /> }
+            { this.name && <input type="text" tabindex="-1" name={this.name.toString()} required={this.required} value={this.value}  /> }
           </button>
 
           { this.tooltip && <stellar-tooltip align="bottom-left" onClick={() => this.handleTitleClick()}>{this.tooltip}</stellar-tooltip> }

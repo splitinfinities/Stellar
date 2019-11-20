@@ -13,6 +13,13 @@
 
 
 
+## Properties
+
+| Property | Attribute | Description | Type       | Default     |
+| -------- | --------- | ----------- | ---------- | ----------- |
+| `colors` | `colors`  |             | `"string"` | `undefined` |
+
+
 ## Dependencies
 
 ### Depends on

@@ -298,7 +298,9 @@ export namespace Components {
     'setCode': (code: any) => Promise<void>;
     'simple': boolean;
   }
-  interface StellarColorLibrary {}
+  interface StellarColorLibrary {
+    'colors': "string";
+  }
   interface StellarColorPicker {
     /**
     * Sets the button or link as an outlined button.
@@ -2113,7 +2115,9 @@ declare namespace LocalJSX {
     'preview'?: boolean;
     'simple'?: boolean;
   }
-  interface StellarColorLibrary {}
+  interface StellarColorLibrary {
+    'colors'?: "string";
+  }
   interface StellarColorPicker {
     /**
     * Sets the button or link as an outlined button.

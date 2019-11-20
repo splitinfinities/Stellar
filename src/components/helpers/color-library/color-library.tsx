@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop, Host } from '@stencil/core';
 import {colors} from '../../../utils'
 @Component({
   tag: 'stellar-color-library',
@@ -7,26 +7,47 @@ import {colors} from '../../../utils'
 
 export class ColorLibrary {
 
+  @Prop() colors: "string";
+
+  _colors: {
+    "base": string,
+    "white": string,
+    "black": string,
+    "black-alt": string,
+    "gray": string[],
+    "red": string[],
+    "orange": string[],
+    "yellow": string[],
+    "lime": string[],
+    "green": string[],
+    "teal": string[],
+    "cyan": string[],
+    "blue": string[],
+    "indigo": string[],
+    "violet": string[],
+    "fuschia": string[],
+    "pink": string[]
+  } = colors
+
+  componentWillLoad() {
+    if (typeof this.colors === "string" && this.colors.constructor.name === "String") {
+      this._colors = JSON.parse(this.colors);
+    }
+  }
+
+  hexStyle = color => `f-invert fw6 ttu ${color} mv5`;
+
   renderColorPallette(color) {
-    const range = colors[color]
+    const range = this._colors[color];
 
     return [
-      <stellar-grid cols="6">
+      <stellar-grid cols="6" class="pa4">
         { range.map((code, index) => {
             return (
-              <stellar-card padding="tiny">
-                <div class={`aspect-ratio aspect-ratio--16x9 flex items-center justify-around`} style={{"background-color": `var(--${color}${index})`}}>
-                  <div class="aspect-ratio--object flex items-center justify-around ">
-                    <h5 class={`f-invert fw6 ttu ${color}${index}`}>{code}</h5>
-                  </div>
-                </div>
-                <div class="pv3 ph4 tc nt4 bg-white relative">
-                  <div class="dt w-100">
-                    <div class="dtc">
-                      <p class="f5 f4-ns mv0 black">var(--{color}{index})</p>
-                    </div>
-                  </div>
-                </div>
+              <stellar-card padding="tiny" class={`theme-${color} bn`} style={{"--background":`var(--theme-base${index})`}}>
+                <section>
+                  <h6 class={this.hexStyle(`theme-base${index}`)}>{code}</h6>
+                </section>
               </stellar-card>
             )
           })
@@ -37,7 +58,29 @@ export class ColorLibrary {
 
   render() {
     return (
-      <div>
+      <Host>
+        <stellar-grid class="pa4">
+          <stellar-card padding="tiny" style={{"--background":`var(--base)`}}>
+            <section>
+              <h6 class={this.hexStyle(`base`)}>{this._colors.base}</h6>
+            </section>
+          </stellar-card>
+          <stellar-card padding="tiny" style={{"--background":`var(--white)`}}>
+            <section>
+              <h6 class={this.hexStyle(`white`)}>{this._colors.white}</h6>
+            </section>
+          </stellar-card>
+          <stellar-card padding="tiny" style={{"--background":`var(--black)`}}>
+            <section>
+              <h6 class={this.hexStyle(`black`)}>{this._colors.black}</h6>
+            </section>
+          </stellar-card>
+          <stellar-card padding="tiny" style={{"--background":`var(--black-alt)`}}>
+            <section>
+              <h6 class={this.hexStyle('black-alt')}>{this._colors["black-alt"]}</h6>
+            </section>
+          </stellar-card>
+        </stellar-grid>
         { this.renderColorPallette("gray") }
         { this.renderColorPallette("red") }
         { this.renderColorPallette("orange") }
@@ -49,9 +92,9 @@ export class ColorLibrary {
         { this.renderColorPallette("blue") }
         { this.renderColorPallette("indigo") }
         { this.renderColorPallette("violet") }
-        { this.renderColorPallette("fuchsia") }
+        { this.renderColorPallette("fuschia") }
         { this.renderColorPallette("pink") }
-      </div>
+      </Host>
     );
   }
 }

@@ -72,7 +72,7 @@ export class Card {
 
   @Prop({reflect: true}) dark: boolean = false;
 
-  @State() ro: ResizeObserver;
+  ro!: ResizeObserver;
   @State() flipTimeout: any;
 
   @Event() flip: EventEmitter;

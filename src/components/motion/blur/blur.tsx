@@ -1,4 +1,4 @@
-import { Component, Element, Prop, State, Method, h, Host } from '@stencil/core';
+import { Component, Element, Prop, Method, h, Host } from '@stencil/core';
 import properties from 'css-custom-properties'
 
 @Component({
@@ -11,7 +11,7 @@ export class Blur {
   @Prop({mutable: true, reflect: true}) vertical: number = 0;
   @Prop({mutable: true, reflect: true}) horizontal: number = 0;
 
-  @State() generatedId: string;
+  generatedId!: string;
 
   supported_match() {
     return navigator.userAgent.toLowerCase().indexOf('firefox') === -1 &&
@@ -53,7 +53,7 @@ export class Blur {
     }, this.element);
   }
 
-  componentDidLoad() {
+  componentWillLoad() {
     if (this.supported()) {
       this.generatedId = this.element.id || this.generateId()
 

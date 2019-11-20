@@ -1,9 +1,9 @@
 {
-  "timestamp": "2019-11-17T00:56:25",
+  "timestamp": "2019-11-20T00:20:10",
   "compiler": {
     "name": "@stencil/core",
-    "version": "1.7.4",
-    "typescriptVersion": "3.6.3"
+    "version": "1.8.1",
+    "typescriptVersion": "3.7.2"
   },
   "components": [
     {
@@ -3335,7 +3335,25 @@
       "usage": {
         "default": "<stellar-color-library></stellar-color-library>\n"
       },
-      "props": [],
+      "props": [
+        {
+          "name": "colors",
+          "type": "\"string\"",
+          "mutable": false,
+          "attr": "colors",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "value": "string",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
       "methods": [],
       "events": [],
       "styles": [],

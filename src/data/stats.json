@@ -2,12 +2,108 @@
   "diagnostics": [
     {
       "level": "error",
-      "type": "build",
-      "header": "Build Error",
-      "messageText": "ENOENT: no such file or directory, stat '/Users/williammriley/Sites/personal/@stellar/dist/collection/collection-manifest.json'",
-      "relFilePath": null,
-      "absFilePath": null,
-      "lines": []
+      "type": "typescript",
+      "language": "typescript",
+      "header": "TypeScript",
+      "code": "2339",
+      "messageText": "Property 'base' does not exist on type '\"string\" | { \"base\": string; \"white\": string; \"black\": string; \"black-alt\": string; \"gray\": string[]; \"red\": string[]; \"orange\": string[]; \"yellow\": string[]; \"lime\": string[]; \"green\": string[]; \"teal\": string[]; \"cyan\": string[]; \"blue\": string[]; \"indigo\": string[]; \"violet\": string[]; \"fuschia\": string[]; \"pink\"...'.Property 'base' does not exist on type '\"string\"'.",
+      "relFilePath": "src/components/helpers/color-library/color-library.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/color-library/color-library.tsx",
+      "lines": [
+        {
+          "lineIndex": 61,
+          "lineNumber": 62,
+          "text": "            <section>",
+          "errorCharStart": -1,
+          "errorLength": -1
+        },
+        {
+          "lineIndex": 62,
+          "lineNumber": 63,
+          "text": "              <h6 class={this.hexStyle(`base`)}>{this.colors.base}</h6>",
+          "errorCharStart": 61,
+          "errorLength": 4
+        },
+        {
+          "lineIndex": 63,
+          "lineNumber": 64,
+          "text": "            </section>",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ],
+      "lineNumber": 63,
+      "columnNumber": 62
+    },
+    {
+      "level": "error",
+      "type": "typescript",
+      "language": "typescript",
+      "header": "TypeScript",
+      "code": "2339",
+      "messageText": "Property 'white' does not exist on type '\"string\" | { \"base\": string; \"white\": string; \"black\": string; \"black-alt\": string; \"gray\": string[]; \"red\": string[]; \"orange\": string[]; \"yellow\": string[]; \"lime\": string[]; \"green\": string[]; \"teal\": string[]; \"cyan\": string[]; \"blue\": string[]; \"indigo\": string[]; \"violet\": string[]; \"fuschia\": string[]; \"pink\"...'.Property 'white' does not exist on type '\"string\"'.",
+      "relFilePath": "src/components/helpers/color-library/color-library.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/color-library/color-library.tsx",
+      "lines": [
+        {
+          "lineIndex": 66,
+          "lineNumber": 67,
+          "text": "            <section>",
+          "errorCharStart": -1,
+          "errorLength": -1
+        },
+        {
+          "lineIndex": 67,
+          "lineNumber": 68,
+          "text": "              <h6 class={this.hexStyle(`white`)}>{this.colors.white}</h6>",
+          "errorCharStart": 62,
+          "errorLength": 5
+        },
+        {
+          "lineIndex": 68,
+          "lineNumber": 69,
+          "text": "            </section>",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ],
+      "lineNumber": 68,
+      "columnNumber": 63
+    },
+    {
+      "level": "error",
+      "type": "typescript",
+      "language": "typescript",
+      "header": "TypeScript",
+      "code": "2339",
+      "messageText": "Property 'black' does not exist on type '\"string\" | { \"base\": string; \"white\": string; \"black\": string; \"black-alt\": string; \"gray\": string[]; \"red\": string[]; \"orange\": string[]; \"yellow\": string[]; \"lime\": string[]; \"green\": string[]; \"teal\": string[]; \"cyan\": string[]; \"blue\": string[]; \"indigo\": string[]; \"violet\": string[]; \"fuschia\": string[]; \"pink\"...'.Property 'black' does not exist on type '\"string\"'.",
+      "relFilePath": "src/components/helpers/color-library/color-library.tsx",
+      "absFilePath": "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/color-library/color-library.tsx",
+      "lines": [
+        {
+          "lineIndex": 71,
+          "lineNumber": 72,
+          "text": "            <section>",
+          "errorCharStart": -1,
+          "errorLength": -1
+        },
+        {
+          "lineIndex": 72,
+          "lineNumber": 73,
+          "text": "              <h6 class={this.hexStyle(`black`)}>{this.colors.black}</h6>",
+          "errorCharStart": 62,
+          "errorLength": 5
+        },
+        {
+          "lineIndex": 73,
+          "lineNumber": 74,
+          "text": "            </section>",
+          "errorCharStart": -1,
+          "errorLength": -1
+        }
+      ],
+      "lineNumber": 73,
+      "columnNumber": 63
     }
   ]
 }

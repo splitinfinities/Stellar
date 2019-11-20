@@ -588,7 +588,7 @@ export class Input {
             {moment(this.value).format(this.visualDateFormat)}
           </div>
 
-          <input class="input" ref={(el) => this.input = el as HTMLInputElement} id={this.generatedId} type="text" value={this.value} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} onKeyDown={(event: KeyboardEvent) => {this.handleKeyDownIncrement(event); this.handleKeyDownDecrement(event); }} />
+          <input class="input" ref={(el) => this.input = el as HTMLInputElement} id={this.generatedId} type="text" name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} value={this.value} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} onKeyDown={(event: KeyboardEvent) => {this.handleKeyDownIncrement(event); this.handleKeyDownDecrement(event); }} />
         </div>
       )
     }
@@ -597,7 +597,7 @@ export class Input {
   renderInput() {
     if (shouldBeAnInput(this.type)) {
       return (
-        <input class="input" ref={(el) => this.input = el as HTMLInputElement} id={this.generatedId} type={this.type} value={this.value} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} onKeyDown={(event) => { this.handleInputKeyDown(event) }} />
+        <input class="input" ref={(el) => this.input = el as HTMLInputElement} id={this.generatedId} type={this.type} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} value={this.value} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} onKeyDown={(event) => { this.handleInputKeyDown(event) }} />
       )
     }
   }
