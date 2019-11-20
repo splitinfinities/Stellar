@@ -8,6 +8,7 @@ import {colors} from '../../../utils'
 export class ColorLibrary {
 
   @Prop() colors: string;
+  @Prop() shape: string;
 
   _colors: {
     "base": string,
@@ -35,7 +36,7 @@ export class ColorLibrary {
     }
   }
 
-  hexStyle = color => `fw6 ttu tc ${color === "base" ? "black" : "base"} mv5`;
+  hexStyle = color => `fw6 ttu tc ${color === "base" ? "black" : "base"} aspect-ratio--object flex items-center justify-center`;
 
   renderColorPallette(color) {
     const range = this._colors[color];
@@ -44,8 +45,8 @@ export class ColorLibrary {
       <stellar-grid cols="6" class="pa4">
         { range.map((code, index) => {
             return (
-              <stellar-card padding="tiny" class={`theme-${color} bn`} style={{"--background":`var(--theme-base${index})`}}>
-                <section>
+              <stellar-card padding="tiny" class={`theme-${color} s-${this.shape}`} style={{"--background":`var(--theme-base${index})`, "--border": "none"}}>
+                <section class="aspect-ratio aspect-ratio--1x1">
                   <h6 class={this.hexStyle(`theme-base${index}`)}>{code}</h6>
                 </section>
               </stellar-card>
@@ -60,26 +61,26 @@ export class ColorLibrary {
     return (
       <Host>
         <stellar-grid class="pa4">
-          <stellar-card padding="tiny" style={{"--background":`var(--base)`}}>
-            <section>
+          {this._colors.base && <stellar-card padding="tiny" class={`s-${this.shape}`} style={{"--background":`var(--base)`, "--border": "none"}}>
+            <section class="aspect-ratio aspect-ratio--1x1">
               <h6 class={this.hexStyle(`base`)}>{this._colors.base}</h6>
             </section>
-          </stellar-card>
-          <stellar-card padding="tiny" style={{"--background":`var(--white)`}}>
-            <section>
+          </stellar-card>}
+          {this._colors.white && <stellar-card padding="tiny" class={`s-${this.shape}`} style={{"--background":`var(--white)`, "--border": "none"}}>
+            <section class="aspect-ratio aspect-ratio--1x1 flex items-center">
               <h6 class={this.hexStyle(`white`)}>{this._colors.white}</h6>
             </section>
-          </stellar-card>
-          <stellar-card padding="tiny" style={{"--background":`var(--black)`}}>
-            <section>
+          </stellar-card>}
+          {this._colors.black && <stellar-card padding="tiny" class={`s-${this.shape}`} style={{"--background":`var(--black)`, "--border": "none"}}>
+            <section class="aspect-ratio aspect-ratio--1x1 flex items-center">
               <h6 class={this.hexStyle(`black`)}>{this._colors.black}</h6>
             </section>
-          </stellar-card>
-          <stellar-card padding="tiny" style={{"--background":`var(--black-alt)`}}>
-            <section>
+          </stellar-card>}
+          {this._colors["black-alt"] && <stellar-card padding="tiny" class={`s-${this.shape}`} style={{"--background":`var(--black-alt)`, "--border": "none"}}>
+            <section class="aspect-ratio aspect-ratio--1x1 flex items-center">
               <h6 class={this.hexStyle('black-alt')}>{this._colors["black-alt"]}</h6>
             </section>
-          </stellar-card>
+          </stellar-card>}
         </stellar-grid>
         { this._colors.gray && this.renderColorPallette("gray") }
         { this._colors.red && this.renderColorPallette("red") }

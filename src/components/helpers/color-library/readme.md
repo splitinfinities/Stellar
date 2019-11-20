@@ -18,6 +18,7 @@
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
 | `colors` | `colors`  |             | `string` | `undefined` |
+| `shape`  | `shape`   |             | `string` | `undefined` |
 
 
 ## Dependencies

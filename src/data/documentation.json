@@ -1,5 +1,5 @@
 {
-  "timestamp": "2019-11-20T01:21:55",
+  "timestamp": "2019-11-20T01:41:42",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.8.1",
@@ -3341,6 +3341,22 @@
           "type": "string",
           "mutable": false,
           "attr": "colors",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "shape",
+          "type": "string",
+          "mutable": false,
+          "attr": "shape",
           "reflectToAttr": false,
           "docs": "",
           "docsTags": [],
