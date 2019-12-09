@@ -37,19 +37,6 @@
 | `horizontal` | `horizontal` |             | `boolean` | `false` |
 
 
-## Methods
-
-### `reload() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
-
-
 ## Dependencies
 
 ### Used by

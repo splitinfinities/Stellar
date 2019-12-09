@@ -1,9 +1,9 @@
 stellar-parallax-section {
-	display: block;
-	position: absolute;
-	width: 100%;
-	height: inherit;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	grid-area: 1/1;
+	transform: translateY(var(--ty));
+	will-change: transform;
+}
+
+stellar-parallax-section.double {
+	transform: translateY(var(--ty)) scale(1.125);
 }

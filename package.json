@@ -27,6 +27,7 @@
     "animejs": "^3.1.0",
     "async-delay": "^1.0.3",
     "await-delay": "^1.0.0",
+    "basicscroll": "^3.0.2",
     "convert-units": "^2.3.4",
     "css-custom-properties": "^0.1.0",
     "deepmerge": "^3.3.0",

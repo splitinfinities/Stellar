@@ -1,5 +1,5 @@
-import { Component, State, Method, h, Prop, Element } from '@stencil/core';
-import Rellax from 'rellax';
+import { Component, h, Prop, Element, State } from '@stencil/core';
+import basicScroll from 'basicscroll'
 
 @Component({
   tag: 'stellar-parallax',
@@ -7,25 +7,37 @@ import Rellax from 'rellax';
 })
 export class Parallax {
 	@Element() el: HTMLElement;
-	@Prop() horizontal: boolean = false;
 	@Prop() center: boolean = false;
+	@Prop() horizontal: boolean = false;
 
-	@State() relax;
+	@State() easeBoxes = []
 
 	componentWillLoad() {
-		this.relax = new Rellax('stellar-parallax-section', {
-			center: this.center,
-			horizontal: this.horizontal
+		document.querySelectorAll('stellar-parallax-section').forEach((elem) => {
+			this.easeBoxes.push(basicScroll.create({
+			  elem,
+			  from: 'top-bottom',
+			  to: 'bottom-top',
+			  direct: true,
+			  props: {
+				'--ty': {
+				  from: `${-2 * elem.speed}%`,
+				  to: `${2 * elem.speed}%`
+				}
+			  }
+			}))
 		});
-	}
 
-	componentDidLoad() {
-		this.reload()
-	}
+		this.easeBoxes.forEach((instance) => {
+			instance.start();
+		});
 
-	@Method()
-	async reload() {
-		this.relax.refresh()
+		window.onresize = () => {
+			this.easeBoxes.forEach((instance) => {
+				instance.calculate()
+				instance.update()
+			})
+		}
 	}
 
 	render () {

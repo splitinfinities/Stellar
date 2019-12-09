@@ -7,19 +7,7 @@ import { Component, Prop, Element, h } from '@stencil/core';
 export class ParallaxSection {
 	@Element() element: HTMLElement;
 
-	@Prop() speed: number = 1
-	@Prop() percentage: number = 0.5;
-	@Prop() layer: number = 1
-
-	componentWillLoad() {
-		this.element.setAttribute("data-rellax-speed", this.speed.toString());
-
-		if (this.percentage) {
-			this.element.setAttribute("data-rellax-percentage", this.percentage.toString());
-		}
-
-		this.element.setAttribute("data-rellax-zindex", this.layer.toString());
-	}
+	@Prop({reflect: true}) speed: number = 1;
 
 	render () {
 		return <slot />

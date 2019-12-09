@@ -657,11 +657,8 @@ export namespace Components {
   interface StellarParallax {
     'center': boolean;
     'horizontal': boolean;
-    'reload': () => Promise<void>;
   }
   interface StellarParallaxSection {
-    'layer': number;
-    'percentage': number;
     'speed': number;
   }
   interface StellarPasswordRequirements {
@@ -2470,8 +2467,6 @@ declare namespace LocalJSX {
     'horizontal'?: boolean;
   }
   interface StellarParallaxSection {
-    'layer'?: number;
-    'percentage'?: number;
     'speed'?: number;
   }
   interface StellarPasswordRequirements {
