@@ -41,21 +41,18 @@ export const config: Config = {
       type: 'dist',
       copy: [
         {
-          src: '../dist/collection/collection-manifest.json',
-          dest: '../../src/data/collection.json'
-        },
-        {
           src: '../package.json',
-          dest: '../../src/data/version.json'
+          dest: '../../dist/data/version.json'
         },
         {
-          src: '../src/data',
-          dest: './data'
-        },
+          src: '../dist/collection/collection-manifest.json',
+          dest: '../../dist/data/collection.json',
+          warn: true
+        }
       ],
     },
-    { type: "stats", file: "./src/data/stats.json" },
-    { type: "docs-json", file: "./src/data/documentation.json" },
+    { type: "stats", file: "./dist/data/stats.json" },
+    { type: "docs-json", file: "./dist/data/documentation.json" },
     { type: "docs-readme" },
     {
       type: 'www',

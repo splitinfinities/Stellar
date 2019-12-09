@@ -6,8 +6,8 @@
   "app": {
     "namespace": "StellarCore",
     "fsNamespace": "stellar-core",
-    "components": 106,
-    "entries": 106,
+    "components": 105,
+    "entries": 105,
     "bundles": 0
   },
   "options": {
@@ -20,11 +20,6 @@
   "components": [
     {
       "tag": "horizontal-scroll",
-      "dependencyOf": [],
-      "dependencies": []
-    },
-    {
-      "tag": "ion-icon",
       "dependencyOf": [],
       "dependencies": []
     },
@@ -1299,27 +1294,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/horizontal-scroll/horizontal-scroll.tsx"
-      ],
-      "modes": [
-        "$"
-      ],
-      "encapsulations": [
-        "shadow"
-      ]
-    },
-    {
-      "entryId": "ion-icon.entry",
-      "components": [
-        {
-          "tag": "ion-icon",
-          "dependencyOf": [],
-          "dependencies": []
-        }
-      ],
-      "bundles": [],
-      "inputs": [
-        ""
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/horizontal-scroll/horizontal-scroll.tsx"
       ],
       "modes": [
         "$"
@@ -1341,7 +1316,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/media/skeleton-text/skeleton-text.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/media/skeleton-text/skeleton-text.tsx"
       ],
       "modes": [
         "$"
@@ -1366,7 +1341,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/media/360-image/360-image.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/media/360-image/360-image.tsx"
       ],
       "modes": [
         "$"
@@ -1386,7 +1361,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/media/360-video/360-video.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/media/360-video/360-video.tsx"
       ],
       "modes": [
         "$"
@@ -1408,7 +1383,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/motion/animate-text/animate-text.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/motion/animate-text/animate-text.tsx"
       ],
       "modes": [
         "$"
@@ -1437,7 +1412,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/asset-library/asset-library.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/asset-library/asset-library.tsx"
       ],
       "modes": [
         "$"
@@ -1457,7 +1432,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/auto-scroll/auto-scroll.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/auto-scroll/auto-scroll.tsx"
       ],
       "modes": [
         "$"
@@ -1483,7 +1458,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/breadcrumbs/breadcrumbs.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/breadcrumbs/breadcrumbs.tsx"
       ],
       "modes": [
         "$"
@@ -1505,7 +1480,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/callout/callout.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/callout/callout.tsx"
       ],
       "modes": [
         "$"
@@ -1529,7 +1504,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/clock/clock.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/clock/clock.tsx"
       ],
       "modes": [
         "$"
@@ -1557,7 +1532,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/color-library/color-library.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/color-library/color-library.tsx"
       ],
       "modes": [
         "$"
@@ -1579,7 +1554,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/comment/comment.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/comment/comment.tsx"
       ],
       "modes": [
         "$"
@@ -1599,7 +1574,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/comments/comments.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/comments/comments.tsx"
       ],
       "modes": [
         "$"
@@ -1619,7 +1594,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/context/context.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/context/context.tsx"
       ],
       "modes": [
         "$"
@@ -1669,7 +1644,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/docs/component/component.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/docs/component/component.tsx"
       ],
       "modes": [
         "$"
@@ -1712,7 +1687,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/docs/home/home.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/docs/home/home.tsx"
       ],
       "modes": [
         "$"
@@ -1732,7 +1707,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/docs/not-found/not-found.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/docs/not-found/not-found.tsx"
       ],
       "modes": [
         "$"
@@ -1778,7 +1753,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/docs/page/page.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/docs/page/page.tsx"
       ],
       "modes": [
         "$"
@@ -1803,7 +1778,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/docs/documentation/documentation.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/docs/documentation/documentation.tsx"
       ],
       "modes": [
         "$"
@@ -1827,7 +1802,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/dropdown/dropdown.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/dropdown/dropdown.tsx"
       ],
       "modes": [
         "$"
@@ -1847,7 +1822,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/motion/follow/follow.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/motion/follow/follow.tsx"
       ],
       "modes": [
         "$"
@@ -1871,7 +1846,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/group/group.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/group/group.tsx"
       ],
       "modes": [
         "$"
@@ -1893,7 +1868,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/media/image/image.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/media/image/image.tsx"
       ],
       "modes": [
         "$"
@@ -1924,7 +1899,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/media/interview/interview.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/media/interview/interview.tsx"
       ],
       "modes": [
         "$"
@@ -1944,7 +1919,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/media/interview-line/interview-line.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/media/interview-line/interview-line.tsx"
       ],
       "modes": [
         "$"
@@ -1964,7 +1939,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/motion/keyframes/keyframes.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/motion/keyframes/keyframes.tsx"
       ],
       "modes": [
         "$"
@@ -1986,7 +1961,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/long-shadow/long-shadow.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/long-shadow/long-shadow.tsx"
       ],
       "modes": [
         "$"
@@ -2006,7 +1981,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/mouse-trail/mouse-trail.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/mouse-trail/mouse-trail.tsx"
       ],
       "modes": [
         "$"
@@ -2036,7 +2011,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/pagination/pagination.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/pagination/pagination.tsx"
       ],
       "modes": [
         "$"
@@ -2059,7 +2034,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/forms/password-requirements/password-requirements.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/forms/password-requirements/password-requirements.tsx"
       ],
       "modes": [
         "$"
@@ -2079,7 +2054,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/pjax/stellar-pjax.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/pjax/stellar-pjax.tsx"
       ],
       "modes": [
         "$"
@@ -2110,7 +2085,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/media/playlist/playlist.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/media/playlist/playlist.tsx"
       ],
       "modes": [
         "$"
@@ -2132,7 +2107,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/reveal/reveal.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/reveal/reveal.tsx"
       ],
       "modes": [
         "$"
@@ -2154,7 +2129,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/reveal-list/reveal-list.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/reveal-list/reveal-list.tsx"
       ],
       "modes": [
         "$"
@@ -2174,7 +2149,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/scatter/scatter.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/scatter/scatter.tsx"
       ],
       "modes": [
         "$"
@@ -2194,7 +2169,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/scroll-z-root/scroll-z-root.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/scroll-z-root/scroll-z-root.tsx"
       ],
       "modes": [
         "$"
@@ -2214,7 +2189,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/scroll-z-section/scroll-z-section.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/scroll-z-section/scroll-z-section.tsx"
       ],
       "modes": [
         "$"
@@ -2234,7 +2209,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/motion/slide/slide.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/motion/slide/slide.tsx"
       ],
       "modes": [
         "$"
@@ -2256,7 +2231,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/motion/slides/slides.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/motion/slides/slides.tsx"
       ],
       "modes": [
         "$"
@@ -2279,7 +2254,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/media/song/song.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/media/song/song.tsx"
       ],
       "modes": [
         "$"
@@ -2302,7 +2277,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/step/step.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/step/step.tsx"
       ],
       "modes": [
         "$"
@@ -2322,7 +2297,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/steps/steps.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/steps/steps.tsx"
       ],
       "modes": [
         "$"
@@ -2342,7 +2317,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/story/story.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/story/story.tsx"
       ],
       "modes": [
         "$"
@@ -2372,7 +2347,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/stripe/stripe.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/stripe/stripe.tsx"
       ],
       "modes": [
         "$"
@@ -2396,7 +2371,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/forms/switch/switch.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/forms/switch/switch.tsx"
       ],
       "modes": [
         "$"
@@ -2419,7 +2394,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/table/table.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/table/table.tsx"
       ],
       "modes": [
         "$"
@@ -2455,7 +2430,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/tester/tester.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/tester/tester.tsx"
       ],
       "modes": [
         "$"
@@ -2475,7 +2450,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/time/time.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/time/time.tsx"
       ],
       "modes": [
         "$"
@@ -2499,7 +2474,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/forms/toggle/toggle.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/forms/toggle/toggle.tsx"
       ],
       "modes": [
         "$"
@@ -2527,7 +2502,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/forms/toggle-option/toggle-option.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/forms/toggle-option/toggle-option.tsx"
       ],
       "modes": [
         "$"
@@ -2557,7 +2532,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/media/video-interview/video-interview.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/media/video-interview/video-interview.tsx"
       ],
       "modes": [
         "$"
@@ -2577,7 +2552,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/node_modules/@stencil/router/dist/collection/components/async-content/async-content.js"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/node_modules/@stencil/router/dist/collection/components/async-content/async-content.js"
       ],
       "modes": [
         "$"
@@ -2597,7 +2572,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/node_modules/@stencil/router/dist/collection/components/route-title/route-title.js"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/node_modules/@stencil/router/dist/collection/components/route-title/route-title.js"
       ],
       "modes": [
         "$"
@@ -2617,7 +2592,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/node_modules/@stencil/router/dist/collection/components/prompt/prompt.js"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/node_modules/@stencil/router/dist/collection/components/prompt/prompt.js"
       ],
       "modes": [
         "$"
@@ -2637,7 +2612,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/node_modules/@stencil/router/dist/collection/components/redirect/redirect.js"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/node_modules/@stencil/router/dist/collection/components/redirect/redirect.js"
       ],
       "modes": [
         "$"
@@ -2657,7 +2632,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/audio/web-audio-debugger/web-audio-debugger.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/audio/web-audio-debugger/web-audio-debugger.tsx"
       ],
       "modes": [
         "$"
@@ -2677,7 +2652,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/audio/web-audio-effect/web-audio-effect.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/audio/web-audio-effect/web-audio-effect.tsx"
       ],
       "modes": [
         "$"
@@ -2697,7 +2672,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/audio/web-audio-sequencer/web-audio-sequencer.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/audio/web-audio-sequencer/web-audio-sequencer.tsx"
       ],
       "modes": [
         "$"
@@ -2717,7 +2692,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/audio/web-audio-visualizer-shader/web-audio-visualizer-shader.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/audio/web-audio-visualizer-shader/web-audio-visualizer-shader.tsx"
       ],
       "modes": [
         "$"
@@ -2743,7 +2718,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/avatar/avatar.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/avatar/avatar.tsx"
       ],
       "modes": [
         "$"
@@ -2767,7 +2742,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/breadcrumb/breadcrumb.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/breadcrumb/breadcrumb.tsx"
       ],
       "modes": [
         "$"
@@ -2791,7 +2766,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/forms/color-picker/color-picker.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/forms/color-picker/color-picker.tsx"
       ],
       "modes": [
         "$"
@@ -2813,7 +2788,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/content/content.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/content/content.tsx"
       ],
       "modes": [
         "$"
@@ -2835,7 +2810,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/forms/form/form.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/forms/form/form.tsx"
       ],
       "modes": [
         "$"
@@ -2860,7 +2835,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/group-overflow/group-overflow.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/group-overflow/group-overflow.tsx"
       ],
       "modes": [
         "$"
@@ -2887,7 +2862,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/tab/tab.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/tab/tab.tsx"
       ],
       "modes": [
         "$"
@@ -2912,7 +2887,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/tabs/tabs.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/tabs/tabs.tsx"
       ],
       "modes": [
         "$"
@@ -2936,7 +2911,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/theme/theme.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/theme/theme.tsx"
       ],
       "modes": [
         "$"
@@ -2960,7 +2935,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/media/video/video.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/media/video/video.tsx"
       ],
       "modes": [
         "$"
@@ -2982,7 +2957,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/node_modules/@stencil/router/dist/collection/components/route/route.js"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/node_modules/@stencil/router/dist/collection/components/route/route.js"
       ],
       "modes": [
         "$"
@@ -3004,7 +2979,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/node_modules/@stencil/router/dist/collection/components/switch/switch.js"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/node_modules/@stencil/router/dist/collection/components/switch/switch.js"
       ],
       "modes": [
         "$"
@@ -3026,7 +3001,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/node_modules/@stencil/router/dist/collection/components/router/router.js"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/node_modules/@stencil/router/dist/collection/components/router/router.js"
       ],
       "modes": [
         "$"
@@ -3048,7 +3023,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/audio/web-audio/web-audio.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/audio/web-audio/web-audio.tsx"
       ],
       "modes": [
         "$"
@@ -3070,7 +3045,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/audio/web-audio-source/web-audio-source.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/audio/web-audio-source/web-audio-source.tsx"
       ],
       "modes": [
         "$"
@@ -3095,7 +3070,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/chart/chart.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/chart/chart.tsx"
       ],
       "modes": [
         "$"
@@ -3125,7 +3100,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/code/code.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/code/code.tsx"
       ],
       "modes": [
         "$"
@@ -3160,7 +3135,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/markdown/markdown.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/markdown/markdown.tsx"
       ],
       "modes": [
         "$"
@@ -3204,7 +3179,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/docs/header/header.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/docs/header/header.tsx"
       ],
       "modes": [
         "$"
@@ -3240,7 +3215,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/docs/navigation/navigation.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/docs/navigation/navigation.tsx"
       ],
       "modes": [
         "$"
@@ -3266,7 +3241,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/forms/progress/progress.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/forms/progress/progress.tsx"
       ],
       "modes": [
         "$"
@@ -3290,7 +3265,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/audio/web-audio-visualizer/web-audio-visualizer.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/audio/web-audio-visualizer/web-audio-visualizer.tsx"
       ],
       "modes": [
         "$"
@@ -3319,7 +3294,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/media/skeleton-img/skeleton-img.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/media/skeleton-img/skeleton-img.tsx"
       ],
       "modes": [
         "$"
@@ -3351,7 +3326,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/accordion/accordion.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/accordion/accordion.tsx"
       ],
       "modes": [
         "$"
@@ -3380,7 +3355,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/message/message.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/message/message.tsx"
       ],
       "modes": [
         "$"
@@ -3408,7 +3383,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/starscape/starscape.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/starscape/starscape.tsx"
       ],
       "modes": [
         "$"
@@ -3442,7 +3417,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/forms/input/input.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/forms/input/input.tsx"
       ],
       "modes": [
         "$"
@@ -3468,7 +3443,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/layout/layout.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/layout/layout.tsx"
       ],
       "modes": [
         "$"
@@ -3494,7 +3469,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/motion/parallax/parallax.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/motion/parallax/parallax.tsx"
       ],
       "modes": [
         "$"
@@ -3520,7 +3495,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/motion/parallax-section/parallax-section.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/motion/parallax-section/parallax-section.tsx"
       ],
       "modes": [
         "$"
@@ -3556,7 +3531,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/forms/select/select.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/forms/select/select.tsx"
       ],
       "modes": [
         "$"
@@ -3588,7 +3563,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/forms/item/item.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/forms/item/item.tsx"
       ],
       "modes": [
         "$"
@@ -3619,7 +3594,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/tag/tag.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/tag/tag.tsx"
       ],
       "modes": [
         "$"
@@ -3648,7 +3623,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/unit/unit.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/unit/unit.tsx"
       ],
       "modes": [
         "$"
@@ -3678,7 +3653,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/copy-wrap/copy-wrap.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/copy-wrap/copy-wrap.tsx"
       ],
       "modes": [
         "$"
@@ -3714,7 +3689,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/card/card.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/card/card.tsx"
       ],
       "modes": [
         "$"
@@ -3744,7 +3719,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/grid/grid.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/grid/grid.tsx"
       ],
       "modes": [
         "$"
@@ -3777,7 +3752,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/motion/blur/blur.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/motion/blur/blur.tsx"
       ],
       "modes": [
         "$"
@@ -3810,7 +3785,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/helpers/intersection/intersection.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/helpers/intersection/intersection.tsx"
       ],
       "modes": [
         "$"
@@ -3850,7 +3825,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/forms/button/button.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/forms/button/button.tsx"
       ],
       "modes": [
         "$"
@@ -3888,7 +3863,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/tooltip/tooltip.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/tooltip/tooltip.tsx"
       ],
       "modes": [
         "$"
@@ -3925,7 +3900,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/node_modules/@stencil/router/dist/collection/components/route-link/route-link.js"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/node_modules/@stencil/router/dist/collection/components/route-link/route-link.js"
       ],
       "modes": [
         "$"
@@ -3965,7 +3940,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/forms/label/label.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/forms/label/label.tsx"
       ],
       "modes": [
         "$"
@@ -4018,7 +3993,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/ui/asset/asset.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/ui/asset/asset.tsx"
       ],
       "modes": [
         "$"
@@ -4070,7 +4045,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/src/components/media/icon/icon.tsx"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/src/components/media/icon/icon.tsx"
       ],
       "modes": [
         "$"
@@ -4137,7 +4112,7 @@
       ],
       "bundles": [],
       "inputs": [
-        "/Users/williammriley/Sites/personal/@stellar/node_modules/@stencil/state-tunnel/dist/collection/components/state-tunnel.js"
+        "/Users/will/Projects/Split Infinities/Stellar/@stellar/node_modules/@stencil/state-tunnel/dist/collection/components/state-tunnel.js"
       ],
       "modes": [
         "$"
@@ -4432,8 +4407,7 @@
       "src/components/theme"
     ],
     "src/utils/colors.ts": [],
-    "src/utils/index.ts": [],
-    "../../../node_modules/ionicons/dist/collection/icon/icon.js": []
+    "src/utils/index.ts": []
   },
   "collections": []
 }

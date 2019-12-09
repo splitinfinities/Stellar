@@ -1,5 +1,4 @@
-import { Component, Element, Prop, Watch, State, Event } from '@stencil/core';
-import { EventEmitter } from 'events';
+import { Component, Element, Prop, Watch, State, Event, EventEmitter } from '@stencil/core';
 
 @Component({
     tag: 'stellar-context',
