@@ -10,3 +10,4 @@ dist/collection/global/images/_images/*
 dist/collection/global/images/_video/*
 dist/collection/global/images/_audio/*
 screenshot/*
+.DS_Store
