@@ -15,6 +15,7 @@ See the [Slides API Docs](../Slides) for more usage information.
 | Property  | Attribute  | Description | Type     | Default     |
 | --------- | ---------- | ----------- | -------- | ----------- |
 | `slideId` | `slide-id` |             | `number` | `undefined` |
+| `width`   | `width`    |             | `string` | `"auto"`    |
 
 
 ----------------------------------------------

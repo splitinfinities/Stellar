@@ -811,8 +811,23 @@ export namespace Components {
     'verbiageAn': boolean;
     'wrap': boolean;
   }
+  interface StellarSimpleSlides {
+    /**
+    * Enable blurring
+    */
+    'blurring': boolean;
+    /**
+    * Show or hide the pager
+    */
+    'padding': string;
+    /**
+    * Show or hide the pager
+    */
+    'pager': boolean;
+  }
   interface StellarSlide {
     'slideId': number;
+    'width': string;
   }
   interface StellarSlides {
     'autoHeight': boolean;
@@ -1570,6 +1585,12 @@ declare global {
     new (): HTMLStellarSelectElement;
   };
 
+  interface HTMLStellarSimpleSlidesElement extends Components.StellarSimpleSlides, HTMLStencilElement {}
+  var HTMLStellarSimpleSlidesElement: {
+    prototype: HTMLStellarSimpleSlidesElement;
+    new (): HTMLStellarSimpleSlidesElement;
+  };
+
   interface HTMLStellarSlideElement extends Components.StellarSlide, HTMLStencilElement {}
   var HTMLStellarSlideElement: {
     prototype: HTMLStellarSlideElement;
@@ -1811,6 +1832,7 @@ declare global {
     'stellar-scroll-z-root': HTMLStellarScrollZRootElement;
     'stellar-scroll-z-section': HTMLStellarScrollZSectionElement;
     'stellar-select': HTMLStellarSelectElement;
+    'stellar-simple-slides': HTMLStellarSimpleSlidesElement;
     'stellar-slide': HTMLStellarSlideElement;
     'stellar-slides': HTMLStellarSlidesElement;
     'stellar-song': HTMLStellarSongElement;
@@ -2610,8 +2632,23 @@ declare namespace LocalJSX {
     'verbiageAn'?: boolean;
     'wrap'?: boolean;
   }
+  interface StellarSimpleSlides {
+    /**
+    * Enable blurring
+    */
+    'blurring'?: boolean;
+    /**
+    * Show or hide the pager
+    */
+    'padding'?: string;
+    /**
+    * Show or hide the pager
+    */
+    'pager'?: boolean;
+  }
   interface StellarSlide {
     'slideId'?: number;
+    'width'?: string;
   }
   interface StellarSlides {
     'autoHeight'?: boolean;
@@ -2987,6 +3024,7 @@ declare namespace LocalJSX {
     'stellar-scroll-z-root': StellarScrollZRoot;
     'stellar-scroll-z-section': StellarScrollZSection;
     'stellar-select': StellarSelect;
+    'stellar-simple-slides': StellarSimpleSlides;
     'stellar-slide': StellarSlide;
     'stellar-slides': StellarSlides;
     'stellar-song': StellarSong;
@@ -3092,6 +3130,7 @@ declare module "@stencil/core" {
       'stellar-scroll-z-root': LocalJSX.StellarScrollZRoot & JSXBase.HTMLAttributes<HTMLStellarScrollZRootElement>;
       'stellar-scroll-z-section': LocalJSX.StellarScrollZSection & JSXBase.HTMLAttributes<HTMLStellarScrollZSectionElement>;
       'stellar-select': LocalJSX.StellarSelect & JSXBase.HTMLAttributes<HTMLStellarSelectElement>;
+      'stellar-simple-slides': LocalJSX.StellarSimpleSlides & JSXBase.HTMLAttributes<HTMLStellarSimpleSlidesElement>;
       'stellar-slide': LocalJSX.StellarSlide & JSXBase.HTMLAttributes<HTMLStellarSlideElement>;
       'stellar-slides': LocalJSX.StellarSlides & JSXBase.HTMLAttributes<HTMLStellarSlidesElement>;
       'stellar-song': LocalJSX.StellarSong & JSXBase.HTMLAttributes<HTMLStellarSongElement>;
