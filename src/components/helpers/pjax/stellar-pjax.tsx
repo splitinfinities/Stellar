@@ -9,6 +9,7 @@ export class StellarPjax {
 
   @Prop() pjax: any = new Pjax({
     cacheBust: false,
+    scrollTo: false,
     selectors: [
       "title",
       "meta[name=description]",

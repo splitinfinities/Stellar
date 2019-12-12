@@ -37,7 +37,7 @@ export class Tab {
   @Event() contentChange: EventEmitter;
 
   componentWillLoad () {
-    this.parent = this.element.closest('stellar-tabs')
+    this.parent = this.element.closest('stellar-tabs');
   }
 
   @Listen("resize", {target: 'window'})
@@ -46,7 +46,21 @@ export class Tab {
   }
 
   componentDidLoad() {
-    this.handleIndicatorPosition()
+    this.handleIndicatorPosition();
+
+    document.addEventListener('pjax:send', () => {
+      if (this.open && window.location.href.includes(this.href)) {
+        this.open = false;
+        this.removeIndicator();
+      } 
+    });
+
+    document.addEventListener('pjax:complete', () => {
+      if (window.location.href.includes(this.href)) {
+        this.open = true;
+        this.handleIndicatorPosition();
+      } 
+    })
   }
 
   async handleClick(e) {
@@ -83,12 +97,31 @@ export class Tab {
       if (this.parent.vertical) {
         properties.set({
           "--tab-top": `${this.element.offsetTop}px`,
-          "--tab-height": `${this.element.offsetHeight}px`
+          "--tab-height": `${this.element.offsetHeight}px`,
+          "--indicator-opacity": `1`
         }, this.parent)
       } else {
         properties.set({
           "--tab-left": `${this.element.offsetLeft}px`,
-          "--tab-width": `${this.element.offsetWidth}px`
+          "--tab-width": `${this.element.offsetWidth}px`,
+          "--indicator-opacity": `1`
+        }, this.parent)
+      }
+    }
+  }
+
+  removeIndicator() {
+    if (this.parent && this.parent.nodeName === "STELLAR-TABS") {
+      // this.parent.blurring()
+      if (this.parent.vertical) {
+        properties.set({
+          "--tab-height": `0px`,
+          "--indicator-opacity": `0`
+        }, this.parent)
+      } else {
+        properties.set({
+          "--tab-width": `0px`,
+          "--indicator-opacity": `0`
         }, this.parent)
       }
     }

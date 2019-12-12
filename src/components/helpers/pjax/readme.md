@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type  | Default                                                                                                                     |
-| -------- | --------- | ----------- | ----- | --------------------------------------------------------------------------------------------------------------------------- |
-| `pjax`   | `pjax`    |             | `any` | `new Pjax({     cacheBust: false,     selectors: [       "title",       "meta[name=description]",       "main",     ]   })` |
+| Property | Attribute | Description | Type  | Default                                                                                                                                          |
+| -------- | --------- | ----------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `pjax`   | `pjax`    |             | `any` | `new Pjax({     cacheBust: false,     scrollTo: false,     selectors: [       "title",       "meta[name=description]",       "main",     ]   })` |
 
 
 ----------------------------------------------
