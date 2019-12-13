@@ -22,7 +22,7 @@ export const config: Config = {
     verbose: false,
     collectCoverage: true,
     notify: true,
-    coverageDirectory: "./src/data/tests/",
+    coverageDirectory: "./dist/data/tests/",
     // coverageThreshold: {
     //   global: {
     //     branches: 90,
