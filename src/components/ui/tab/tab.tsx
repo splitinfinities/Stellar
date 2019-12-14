@@ -38,6 +38,9 @@ export class Tab {
 
   componentWillLoad () {
     this.parent = this.element.closest('stellar-tabs');
+    if (window.location.hash && this.href.includes(window.location.hash)) {
+      this.handleClick({})
+    }
   }
 
   @Listen("resize", {target: 'window'})
@@ -75,7 +78,7 @@ export class Tab {
     this.handleIndicatorPosition()
 
     if (!this.disabled) {
-      e.preventDefault()
+      e && e.preventDefault();
 
       if (this.tag === "button") {
         this.contentChange.emit({
