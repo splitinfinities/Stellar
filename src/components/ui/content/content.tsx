@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Listen, h } from '@stencil/core';
+import { Component, Prop, State, Element, Listen, h, Watch } from '@stencil/core';
 import { blurringEase } from '../../../utils';
 
 @Component({
@@ -27,6 +27,24 @@ export class Content {
 
   @State() blur: number = 0;
   @State() parent: any;
+
+  tab!: HTMLStellarTabElement
+
+  componentWillLoad() {
+    this.tab = document.querySelector(`stellar-tabs[name="${this.for}"] stellar-tab[href="#${this.element.id}"]`);
+    console.log(this.tab);
+    console.log(this.element.id, window.location.hash, this.element.id.includes(window.location.hash.substr(1)))
+
+    if (window.location.hash && this.element.id.includes(window.location.hash)) {
+      this.open = true;
+      this.tab.activate();
+    }
+  }
+
+  @Watch("open")
+  handleOpen() {
+    this.element.scrollIntoView(true)
+  }
 
   @Listen("contentChange", {target: 'document'})
   async handleActive (event: CustomEvent) {

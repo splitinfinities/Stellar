@@ -29,6 +29,19 @@
 | `contentChange` |             | `CustomEvent<any>` |
 
 
+## Methods
+
+### `activate() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## Dependencies
 
 ### Used by

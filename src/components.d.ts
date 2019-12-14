@@ -959,6 +959,7 @@ export namespace Components {
     'validate': () => Promise<FormResult>;
   }
   interface StellarTab {
+    'activate': () => Promise<void>;
     'dark': boolean;
     'disabled': boolean;
     /**

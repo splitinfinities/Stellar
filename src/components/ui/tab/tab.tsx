@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Listen, Event, EventEmitter, h } from '@stencil/core'
+import { Component, Prop, State, Element, Listen, Event, EventEmitter, h, Method } from '@stencil/core'
 import { properties, delay } from '../../../utils'
 import Tunnel from '../../theme';
 
@@ -39,7 +39,7 @@ export class Tab {
   componentWillLoad () {
     this.parent = this.element.closest('stellar-tabs');
     if (window.location.hash && this.href.includes(window.location.hash)) {
-      this.handleClick({})
+      this.handleClick()
     }
   }
 
@@ -66,7 +66,12 @@ export class Tab {
     })
   }
 
-  async handleClick(e) {
+  @Method()
+  async activate() {
+    await this.handleClick();
+  }
+
+  async handleClick(e?) {
     const tabs = await this.parent.tabs()
 
     tabs.forEach((element) => {
