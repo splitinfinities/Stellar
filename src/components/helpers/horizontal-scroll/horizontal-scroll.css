@@ -1,6 +1,7 @@
 :host {
   --scroll-height: 32rem;
   height: var(--scroll-height);
+  contain: content;
 }
 
 :host > div {

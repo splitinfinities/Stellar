@@ -5,6 +5,8 @@ stellar-video {
   position: relative;
   overflow: hidden;
   padding-bottom: var(--aspect-ratio);
+  contain: content;
+  --object-fit: initial;
 }
 
 stellar-video video {
@@ -12,6 +14,7 @@ stellar-video video {
   height: 100%;
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
+  object-fit: var(--object-fit);
 }
 
 stellar-video::after {

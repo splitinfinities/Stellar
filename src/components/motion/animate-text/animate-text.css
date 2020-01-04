@@ -1,6 +1,7 @@
 stellar-animate-text {
   display: inline-block;
   position: relative;
+  contain: content;
 }
 
 stellar-animate-text .letter {
@@ -9,6 +10,7 @@ stellar-animate-text .letter {
 
 stellar-animate-text .letter {
   opacity: 0;
+  will-change: opacity transform;
 }
 
 stellar-animate-text[method="retro"] .letter:not(:first-of-type) {

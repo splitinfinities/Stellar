@@ -1,4 +1,5 @@
 stellar-360-image {
+  contain: content;
   display: block;
   position: relative;
 }

@@ -3,6 +3,7 @@
 }
 
 :host {
+  contain: content;
   display: block;
   --background: transparent;
 }

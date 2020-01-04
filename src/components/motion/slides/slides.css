@@ -1,7 +1,8 @@
 @import "slides-vendor.css";
 
 stellar-slides {
-  display: block;
+	display: block;
+	contain: content;
 }
 
 stellar-slides stellar-slide > * {

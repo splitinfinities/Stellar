@@ -11,22 +11,23 @@ import { ColorThief } from './vendor/colorThief.js';
 export class Picture {
   @Element() element: HTMLElement;
 
-  @Prop({mutable: true}) poster: string;
-  @Prop({mutable: true}) large: string;
-  @Prop({mutable: true, reflect: true }) type: "background"|"picture" = "picture";
+  @Prop({ mutable: true }) poster: string;
+  @Prop({ mutable: true }) large: string;
+  @Prop({ mutable: true, reflect: true }) type: "background" | "picture" = "picture";
   @Prop() width: number;
   @Prop() height: number;
-  @Prop({reflect: true}) nozoom: boolean = false;
-  @Prop({reflect: true}) block: boolean = false;
-  @Prop({mutable: true}) bg: string = "auto";
-  @Prop({mutable: true}) alt: string = "";
+  @Prop({ reflect: true }) nozoom: boolean = false;
+  @Prop({ reflect: true }) block: boolean = false;
+  @Prop({ mutable: true }) bg: string = "auto";
+  @Prop({ mutable: true }) alt: string = "";
 
   @State() aspectRatio: number;
   @State() sources: Array<any> = [];
   @State() active: boolean = false;
-  @State() figure: HTMLElement;
   @State() zoom;
   @State() palette;
+
+  figure: HTMLElement;
 
   componentWillLoad() {
     this.prepareSources();
@@ -49,7 +50,7 @@ export class Picture {
   }
 
   @Watch('poster')
-  handlePosterChange () {
+  handlePosterChange() {
     this.setBG();
   }
 
@@ -157,12 +158,12 @@ export class Picture {
         itemtype="http://schema.org/ImageObject"
         class={this.active ? 'loaded' : ''}
         onClick={() => { this.zoom && this.zoom.open() }}>
-          <div class="overlay"></div>
-          <picture>
-            { this.renderPicture() }
-          </picture>
-          <div class="placeholder" style={{"background-image": `url(${this.poster})`}} />
-          <stellar-intersection element={this.element} in={this.in.bind(this)}  />
+        <div class="overlay"></div>
+        <picture>
+          {this.renderPicture()}
+        </picture>
+        <div class="placeholder" style={{ "background-image": `url(${this.poster})` }} />
+        <stellar-intersection element={this.element} in={this.in.bind(this)} />
       </figure>
     } else {
       return <stellar-intersection element={this.element} in={this.in.bind(this)} />

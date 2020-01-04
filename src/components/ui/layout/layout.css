@@ -6,6 +6,7 @@
   display: block;
   position: relative;
   font-family: inherit;
+  contain: content;
   --grid-gap: 3rem;
   --padding: 4rem;
   --layout: 1fr;

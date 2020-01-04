@@ -1,6 +1,7 @@
 :host {
     display: block;
     width: 100%;
+    contain: content;
 }
 
 :host .wrapper {
@@ -20,4 +21,6 @@
     scroll-snap-align: center;
     display: block;
     transition: all 200ms ease 0s;
+    --object-fit: cover;
+    height: 100%;
 }

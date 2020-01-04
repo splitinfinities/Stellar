@@ -454,7 +454,7 @@ export namespace Components {
     'medium': () => Promise<any>;
     'nozoom': boolean;
     'poster': string;
-    'type': "background"|"picture";
+    'type': "background" | "picture";
     'width': number;
   }
   interface StellarInput {
@@ -1093,7 +1093,7 @@ export namespace Components {
     'stop': () => Promise<void>;
     'toggle': () => Promise<void>;
     'trackInView': boolean;
-    'video_tag': HTMLVideoElement;
+    'videoElement': () => Promise<HTMLVideoElement>;
     'width': number;
   }
   interface StellarVideoInterview {
@@ -1106,7 +1106,7 @@ export namespace Components {
     'skipTo': (time: number) => Promise<void>;
     'src': string;
     'toggle': () => Promise<void>;
-    'visualization': "circle"|"bars"|"wave"|"bars2";
+    'visualization': "circle" | "bars" | "wave" | "bars2";
     'width': number;
   }
   interface WebAudio {
@@ -2286,7 +2286,7 @@ declare namespace LocalJSX {
     'large'?: string;
     'nozoom'?: boolean;
     'poster'?: string;
-    'type'?: "background"|"picture";
+    'type'?: "background" | "picture";
     'width'?: number;
   }
   interface StellarInput {
@@ -2894,7 +2894,6 @@ declare namespace LocalJSX {
     'poster'?: string;
     'preload'?: string;
     'trackInView'?: boolean;
-    'video_tag'?: HTMLVideoElement;
     'width'?: number;
   }
   interface StellarVideoInterview {
@@ -2903,7 +2902,7 @@ declare namespace LocalJSX {
     'height'?: number;
     'playing'?: boolean;
     'src'?: string;
-    'visualization'?: "circle"|"bars"|"wave"|"bars2";
+    'visualization'?: "circle" | "bars" | "wave" | "bars2";
     'width'?: number;
   }
   interface WebAudio {

@@ -14,6 +14,7 @@
 	--color-bg-active: var(--theme-base1);
 	--color-bg-playing: var(--theme-base2);
 	--color-line: var(--theme-base1);
+  contain: content;
 }
 
 :host([dark]) {

@@ -3,6 +3,7 @@
 }
 
 :host {
+  contain: content;
   --margin: var(--ms-2);
   line-height: 1.3;
   color: var(--gray9);

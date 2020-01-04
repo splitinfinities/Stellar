@@ -5,6 +5,7 @@
   --overflow: auto hidden;
   --justify-content: space-evenly;
   --max-width: var(--large);
+  contain: content;
   font-size: var(--font-size);
   display: block;
   position: relative;

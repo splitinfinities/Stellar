@@ -7,4 +7,5 @@
     z-index: 20;
     transform: translate3d(var(--translate-x),var(--translate-y), 0);
     pointer-events: none;
+    contain: content;
 }

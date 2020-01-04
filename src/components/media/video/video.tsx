@@ -1,4 +1,4 @@
-import { Component, Element, State, Prop, h, Method, Event, EventEmitter, Watch } from '@stencil/core';
+import { Component, Element, State, Prop, h, Method, Event, EventEmitter, Watch, Host } from '@stencil/core';
 import properties from 'css-custom-properties'
 
 @Component({
@@ -8,8 +8,8 @@ import properties from 'css-custom-properties'
 export class Video {
   @Element() element: HTMLElement;
 
-  @Prop({mutable: true, reflect: true}) width: number;
-  @Prop({mutable: true, reflect: true}) height: number;
+  @Prop({ mutable: true, reflect: true }) width: number;
+  @Prop({ mutable: true, reflect: true }) height: number;
   @Prop() trackInView: boolean = true;
   @Prop() preload: string = "auto";
   @Prop() autoplay: boolean = false;
@@ -18,8 +18,7 @@ export class Video {
   @Prop() poster: string;
   @Prop() controls: boolean = true;
   @Prop() overlay: boolean;
-  @Prop({mutable: true}) video_tag: HTMLVideoElement;
-  @Prop({mutable: true}) playing: boolean = false;
+  @Prop({ mutable: true }) playing: boolean = false;
 
   @State() duration: number = 0.0;
   @State() startTime: number = 0.0;
@@ -31,6 +30,13 @@ export class Video {
   @Event() played: EventEmitter;
   @Event() paused: EventEmitter;
   @Event() loaded: EventEmitter;
+
+  video_tag: HTMLVideoElement;
+
+  componentWillLoad() {
+    this.video_tag = this.element.querySelector('video');
+    this.setDimensions();
+  }
 
   componentDidLoad() {
     this.video_tag = this.element.querySelector('video');
@@ -55,7 +61,12 @@ export class Video {
     }
   }
 
-  get eventData () {
+  @Method()
+  async videoElement() {
+    return this.video_tag;
+  }
+
+  get eventData() {
     return {
       playing: this.playing,
       currentTime: this.currentTime,
@@ -88,13 +99,13 @@ export class Video {
     }, this.element);
   }
 
-  in () {
+  in() {
     if (this.autoplay) {
       this.video_tag.play()
     }
   }
 
-  out () {
+  out() {
     this.video_tag.currentTime = 0;
     this.video_tag.pause()
   }
@@ -136,12 +147,12 @@ export class Video {
     await this.play()
   }
 
-  render () {
-    return (
+  render() {
+    return <Host>
       <video preload={this.preload} width={this.width} height={this.height} autoplay={this.autoplay} muted={this.muted} playsinline={this.playsinline} poster={this.poster} controls={this.controls}>
         <slot />
-        <stellar-intersection element={this.element} multiple in={this.in.bind(this)} out={this.out.bind(this)} />
       </video>
-      )
-    }
+      <stellar-intersection element={this.element} multiple in={this.in.bind(this)} out={this.out.bind(this)} />
+    </Host>
   }
+}

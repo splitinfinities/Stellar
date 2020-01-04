@@ -1,4 +1,5 @@
 :host {
+    contain: content;
     height: calc(var(--sectionHeight) * 1px);
     display: block;
     opacity: calc(var(--cameraZ) + 1);

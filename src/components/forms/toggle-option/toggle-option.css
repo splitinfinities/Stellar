@@ -1,4 +1,5 @@
 stellar-toggle-option {
+  contain: content;
   --background: var(--gray0);
   --hover-background: var(--gray1);
   --border: var(--gray1);

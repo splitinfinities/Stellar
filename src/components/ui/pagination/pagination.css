@@ -9,6 +9,7 @@
   --color: var(--theme-base6);
   --hover: var(--theme-base9);
   text-align: center;
+  contain: content;
 }
 
 :host .pagination-container {

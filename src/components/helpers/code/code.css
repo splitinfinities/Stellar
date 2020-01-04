@@ -2,6 +2,10 @@ stellar-code, stellar-code *, stellar-code *:before, stellar-code *:after {
   box-sizing: border-box;
 }
 
+stellar-code {
+  contain: content;
+}
+
 stellar-code ::-webkit-scrollbar {
   -webkit-appearance: none;
   cursor: pointer;

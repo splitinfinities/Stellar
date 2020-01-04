@@ -2,6 +2,7 @@ stellar-interview {
   --width: 800px;
   --height: 800px;
   display: block;
+  contain: content;
 }
 
 stellar-interview div.card {

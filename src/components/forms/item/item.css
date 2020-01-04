@@ -3,6 +3,7 @@
 }
 
 :host {
+  contain: content;
   --item-size: 2.356em;
   --font-size: 1.4rem;
   display: block;

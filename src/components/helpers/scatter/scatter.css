@@ -1,4 +1,5 @@
 :host {
+  contain: content;
   position: relative;
   display: contents;
   width: 100%;

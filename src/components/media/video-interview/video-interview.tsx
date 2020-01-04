@@ -1,7 +1,7 @@
-import { Component, Element, State, Prop, Method, h} from '@stencil/core';
+import { Component, Element, State, Prop, Method, h } from '@stencil/core';
 import ezClipboard from 'ez-clipboard';
 import properties from 'css-custom-properties';
-import {get_interview_lines, update_interview_lines} from '../interview/helpers';
+import { get_interview_lines, update_interview_lines } from '../interview/helpers';
 import { delay } from '../../../utils';
 
 @Component({
@@ -14,11 +14,11 @@ export class VideoInterview {
 
   @Prop() src: string;
   @Prop() color: string = "white";
-  @Prop({mutable: true}) playing: boolean;
-  @Prop({mutable: true}) width: number = 800;
-  @Prop({mutable: true}) height: number = 800;
-  @Prop({mutable: true}) aspectRatio: number = 100;
-  @Prop({mutable: true}) visualization: "circle"|"bars"|"wave"|"bars2" = "bars2";
+  @Prop({ mutable: true }) playing: boolean;
+  @Prop({ mutable: true }) width: number = 800;
+  @Prop({ mutable: true }) height: number = 800;
+  @Prop({ mutable: true }) aspectRatio: number = 100;
+  @Prop({ mutable: true }) visualization: "circle" | "bars" | "wave" | "bars2" = "bars2";
 
   @State() randomId: number = Math.floor(Math.random() * 6) + 1;
   @State() video: HTMLStellarVideoElement;
@@ -69,17 +69,19 @@ export class VideoInterview {
     if (!this.context) {
       // @ts-ignore
       this.context = new (window.AudioContext || window.webkitAudioContext)();
-      const src = this.context.createMediaElementSource(this.video.video_tag);
+      const src = this.context.createMediaElementSource(await this.video.videoElement());
+
       if (!this.visualizer) {
         this.visualizer = this.element.shadowRoot.querySelector('web-audio-visualizer');
       }
+
       const waanalyser = await this.visualizer.connect(this.context);
       await src.connect(waanalyser.analyser);
       waanalyser.analyser.connect(this.context.destination);
     }
   }
 
-  async in () {
+  async in() {
     await delay(1000);
     this.visible = true;
     await delay(100);
@@ -90,7 +92,7 @@ export class VideoInterview {
     })
   }
 
-  async out () {
+  async out() {
     this.pause()
   }
 
@@ -136,7 +138,7 @@ export class VideoInterview {
     ezClipboard.copyPlain(this.current);
   }
 
-  render () {
+  render() {
     return (
       <div class="card" onDblClick={() => { this.handleClick() }}>
         <skeleton-img width={this.width} height={this.height} loading />

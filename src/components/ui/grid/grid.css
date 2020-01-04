@@ -5,6 +5,8 @@
 :host {
     --grid-width: 200px;
     --grid-gap: 2rem;
+
+    contain: content;
     position: relative;
     display: flex;
     display: grid;

@@ -56,3 +56,35 @@ hr.vertical {
 h4 + .hydrated {
   margin-top: var(--ms-5);
 }
+
+img.medium-zoom-image {
+  object-fit: cover;
+}
+
+ul.group, ol.group {
+  padding: 0;
+  margin: 0;
+  list-style: none!important;
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -ms-grid-columns: auto 1rem auto 1rem auto;
+  grid-template-columns: auto auto auto;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-gap: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+ul.group li, ol.group li {
+  margin: 0;
+}
+
+canvas[width="80"][height="80"] {
+  display: none;
+}

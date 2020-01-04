@@ -6,12 +6,12 @@ stellar-blur {
 	filter: var(--blur-url);
 	display: block;
 	overflow: initial;
+	contain: content;
 }
 
 stellar-blur .blur-svg {
 	display: none;
 }
-
 
 @media (prefers-reduced-motion: reduce) {
 	stellar-blur {

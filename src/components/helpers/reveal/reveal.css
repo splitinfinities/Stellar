@@ -1,3 +1,7 @@
+stellar-reveal {
+  contain: content;
+}
+
 @keyframes slide-up {
   0% {
     transform: translateY(var(--distance));

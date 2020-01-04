@@ -1,5 +1,6 @@
 stellar-step {
   display: block;
+  contain: content;
   width: 100%;
   font-weight: bold;
   height: inherit;

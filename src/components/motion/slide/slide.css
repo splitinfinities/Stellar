@@ -2,6 +2,14 @@ stellar-slide {
   display: block;
   width: var(--width, 100%);
   height: 100%;
+  contain: content;
+}
+
+stellar-slide stellar-image,
+stellar-slide stellar-video {
+  height: 100%;
+  --object-fit: cover;
+  --figure-height: 100%;
 }
 
 .slide-zoom {

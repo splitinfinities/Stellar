@@ -11,6 +11,8 @@
   --clip-to: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   --filter: drop-shadow(0px 2px 2px var(--theme-base1));
   --icon-rotation: 180deg;
+
+  contain: content;
   cursor: pointer;
   display: inline-flex;
   position: relative;

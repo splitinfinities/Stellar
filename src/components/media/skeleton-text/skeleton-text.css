@@ -6,6 +6,7 @@ skeleton-text {
 	width: 100%;
 	--line-height: 1.2;
 	--font-size: 1rem;
+	contain: content;
 }
 
 skeleton-text span {

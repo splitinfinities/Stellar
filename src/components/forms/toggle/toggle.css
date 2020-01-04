@@ -1,4 +1,5 @@
 stellar-toggle {
+  contain: content;
   box-sizing: border-box;
   display: block;
   font-family: inherit;

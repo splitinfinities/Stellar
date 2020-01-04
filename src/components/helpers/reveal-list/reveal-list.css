@@ -1,3 +1,7 @@
+:host {
+  contain: content;
+}
+
 :host,
 :host stellar-intersection {
   display: contents;

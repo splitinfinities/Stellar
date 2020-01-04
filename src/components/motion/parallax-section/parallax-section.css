@@ -2,6 +2,7 @@ stellar-parallax-section {
 	grid-area: 1/1;
 	transform: translateY(var(--ty));
 	will-change: transform;
+	contain: content;
 }
 
 stellar-parallax-section.double {

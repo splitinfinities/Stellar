@@ -5,6 +5,7 @@
     height: 100%;
     max-width: var(--width);
     max-height: var(--height);
+    contain: content;
 }
 
 :host .background {

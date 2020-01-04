@@ -3,6 +3,7 @@
 }
 
 :host {
+  contain: content;
   --width: 32px;
   --height: 32px;
   --gap: 2px;

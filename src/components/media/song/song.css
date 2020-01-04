@@ -2,6 +2,7 @@
 	display: block;
 	width: 100%;
 	flex: 0 0 100%;
+	contain: content;
 }
 
 :host button {

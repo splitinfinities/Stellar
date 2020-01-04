@@ -1,4 +1,5 @@
 stellar-360-video {
+  contain: content;
   display: block;
   position: relative;
 }

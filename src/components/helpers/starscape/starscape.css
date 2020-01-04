@@ -1,4 +1,5 @@
 stellar-starscape {
+  contain: content;
   background: linear-gradient(50deg, var(--theme-base7), var(--theme-complement7), var(--theme-base7), var(--theme-complement7));
   background-size: 400% 400%;
   position: absolute;

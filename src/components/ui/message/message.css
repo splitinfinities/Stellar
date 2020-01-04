@@ -6,6 +6,7 @@
   width: 100%;
   height: 60px;
   overflow: hidden;
+  contain: content;
   background-color: var(--theme-base4, var(--gray5));
 }
 

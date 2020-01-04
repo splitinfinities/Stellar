@@ -3,7 +3,7 @@
   --height: 800px;
   display: block;
   position: relative;
-
+  contain: content;
 }
 
 :host skeleton-img {

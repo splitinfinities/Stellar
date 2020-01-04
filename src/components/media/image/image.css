@@ -11,7 +11,9 @@
   --blend: multiply;
   --initial-opacity: 1;
   --speed: 0.85s;
+  --figure-height: 0;
 
+  contain: content;
   display: inline-flex;
   background: var(--background-color);
   width: 100%;
@@ -30,6 +32,7 @@
 }
 
 :host([block]) {
+  display: flex;
   --width: 100% !important;
   --height: 100% !important;
 }
@@ -45,7 +48,7 @@
   margin: 0;
   padding-bottom: var(--aspect-ratio);
   width: 100%;
-  height: 0;
+  height: var(--figure-height);
   cursor: zoom-in;
   transition: all 200ms var(--ease) 0s;
 }
@@ -95,6 +98,7 @@
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 :host .placeholder {

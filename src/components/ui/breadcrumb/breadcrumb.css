@@ -3,6 +3,7 @@
 }
 
 :host {
+	contain: content;
 	--clip-path: polygon(1em 100%, 0% 0%, calc(100% - 1em) 0%, 100% 100%, calc(100% - 1em) 100%, 0% 100%);
 	--clip-path-first: polygon(0 100%, 0% 0%, calc(100% - 1em) 0%, 100% 100%, calc(100% - 1em) 100%, 0% 100%);
 	display: flex;

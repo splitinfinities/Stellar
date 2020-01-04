@@ -3,6 +3,7 @@
 }
 
 :host {
+  contain: content;
   display: none;
   animation-name: fadeInUp;
   animation-timing-function: var(--ease);
