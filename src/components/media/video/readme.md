@@ -7,20 +7,19 @@
 
 ## Properties
 
-| Property      | Attribute       | Description | Type               | Default     |
-| ------------- | --------------- | ----------- | ------------------ | ----------- |
-| `autoplay`    | `autoplay`      |             | `boolean`          | `false`     |
-| `controls`    | `controls`      |             | `boolean`          | `true`      |
-| `height`      | `height`        |             | `number`           | `undefined` |
-| `muted`       | `muted`         |             | `boolean`          | `false`     |
-| `overlay`     | `overlay`       |             | `boolean`          | `undefined` |
-| `playing`     | `playing`       |             | `boolean`          | `false`     |
-| `playsinline` | `playsinline`   |             | `boolean`          | `false`     |
-| `poster`      | `poster`        |             | `string`           | `undefined` |
-| `preload`     | `preload`       |             | `string`           | `"auto"`    |
-| `trackInView` | `track-in-view` |             | `boolean`          | `true`      |
-| `video_tag`   | --              |             | `HTMLVideoElement` | `undefined` |
-| `width`       | `width`         |             | `number`           | `undefined` |
+| Property      | Attribute       | Description | Type      | Default     |
+| ------------- | --------------- | ----------- | --------- | ----------- |
+| `autoplay`    | `autoplay`      |             | `boolean` | `false`     |
+| `controls`    | `controls`      |             | `boolean` | `true`      |
+| `height`      | `height`        |             | `number`  | `undefined` |
+| `muted`       | `muted`         |             | `boolean` | `false`     |
+| `overlay`     | `overlay`       |             | `boolean` | `undefined` |
+| `playing`     | `playing`       |             | `boolean` | `false`     |
+| `playsinline` | `playsinline`   |             | `boolean` | `false`     |
+| `poster`      | `poster`        |             | `string`  | `undefined` |
+| `preload`     | `preload`       |             | `string`  | `"auto"`    |
+| `trackInView` | `track-in-view` |             | `boolean` | `true`      |
+| `width`       | `width`         |             | `number`  | `undefined` |
 
 
 ## Events
@@ -92,6 +91,16 @@ Type: `Promise<void>`
 #### Returns
 
 Type: `Promise<void>`
+
+
+
+### `videoElement() => Promise<HTMLVideoElement>`
+
+
+
+#### Returns
+
+Type: `Promise<HTMLVideoElement>`
 
 
 
