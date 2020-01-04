@@ -37,11 +37,6 @@
   --height: 100% !important;
 }
 
-:host([nozoom]) figure {
-  transform: none !important;
-  cursor: default !important;
-}
-
 :host figure {
   display: block;
   position: relative;
@@ -58,10 +53,9 @@
 	transform: scale(1.025);
 }
 
-
 :host([nozoom]) figure {
   transform: none !important;
-  cursor: default !important;
+  cursor: inherit !important;
 }
 
 :host figure:active {
