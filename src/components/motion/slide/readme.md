@@ -18,6 +18,26 @@ See the [Slides API Docs](../Slides) for more usage information.
 | `width`   | `width`    |             | `string` | `"auto"`    |
 
 
+## Events
+
+| Event      | Description | Type               |
+| ---------- | ----------- | ------------------ |
+| `switched` |             | `CustomEvent<any>` |
+
+
+## Dependencies
+
+### Depends on
+
+- [stellar-intersection](../../helpers/intersection)
+
+### Graph
+```mermaid
+graph TD;
+  stellar-slide --> stellar-intersection
+  style stellar-slide fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

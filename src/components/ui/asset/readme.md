@@ -44,6 +44,7 @@
  - [stellar-password-requirements](../../forms/password-requirements)
  - [stellar-playlist](../../media/playlist)
  - [stellar-select](../../forms/select)
+ - [stellar-simple-slides](../../motion/simple-slides)
  - [stellar-song](../../media/song)
  - [stellar-switch](../../forms/switch)
  - [stellar-toggle-option](../../forms/toggle-option)
@@ -72,6 +73,7 @@ graph TD;
   stellar-password-requirements --> stellar-asset
   stellar-playlist --> stellar-asset
   stellar-select --> stellar-asset
+  stellar-simple-slides --> stellar-asset
   stellar-song --> stellar-asset
   stellar-switch --> stellar-asset
   stellar-toggle-option --> stellar-asset

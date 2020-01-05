@@ -813,10 +813,6 @@ export namespace Components {
   }
   interface StellarSimpleSlides {
     /**
-    * Enable blurring
-    */
-    'blurring': boolean;
-    /**
     * Show or hide the pager
     */
     'padding': string;
@@ -2635,10 +2631,6 @@ declare namespace LocalJSX {
   }
   interface StellarSimpleSlides {
     /**
-    * Enable blurring
-    */
-    'blurring'?: boolean;
-    /**
     * Show or hide the pager
     */
     'padding'?: string;
@@ -2648,6 +2640,7 @@ declare namespace LocalJSX {
     'pager'?: boolean;
   }
   interface StellarSlide {
+    'onSwitched'?: (event: CustomEvent<any>) => void;
     'slideId'?: number;
     'width'?: string;
   }

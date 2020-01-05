@@ -1,10 +1,15 @@
 :host {
-    display: block;
+    display: grid;
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     contain: content;
+    position: relative;
 }
 
 :host .wrapper {
+    order: 1;
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
     display: grid;
@@ -23,4 +28,84 @@
     transition: all 200ms ease 0s;
     --object-fit: cover;
     height: 100%;
+}
+
+:host button.nav {
+    grid-column: 1;
+    position: absolute;
+    z-index: 999;
+    top: 0%;
+    height: 100%;
+    width: 4rem;
+    cursor: pointer;
+    border: 0;
+    left: -0.25rem;
+    opacity: 1;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: all 200ms ease 0s;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+:host button.nav:hover, 
+:host button.nav:focus {
+    left: 0rem;
+}
+
+:host button.nav.hide {
+    transform: translateX(100%);
+}
+
+:host button.nav.next {
+    right: -0.25rem;
+    left: auto;
+    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+:host button.nav.next:hover, 
+:host button.nav.next:focus {
+    right: 0rem;
+}
+
+:host button.nav.prev.hide {
+    transform: translateX(-100%);
+}
+
+:host button.nav stellar-asset {
+    font-size: 3rem;
+    color: var(--theme-base9);
+}
+
+:host .pager {
+    order: 2;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 1rem;
+    width: auto;
+}
+
+:host .pager button {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    border: none;
+    background: var(--theme-base5);
+    font-size: 0;
+    text-indent: -10000px;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transform: scale(0.4);
+    transition: all 75ms ease-in-out 0s;
+}
+
+:host .pager button.visible {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+:host .pager button:hover,
+:host .pager button:focus {
+    transform: scale(1.2);
 }
