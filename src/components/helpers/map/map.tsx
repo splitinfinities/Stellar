@@ -52,6 +52,8 @@ export class Map {
   loadGoogleMaps() {
     const googleMapsUrl = `http://maps.google.com/maps/api/js?key=${this.apikey}&callback=initializeGoogleMap`;
 
+    window["initializeGoogleMap"] = () => { this.initMap() };
+
     if (!window["loadingGoogleMaps"] && (!document.querySelectorAll(`[src="${googleMapsUrl}"]`).length || typeof google !== 'object' || typeof google.maps !== 'object')) {
       window["loadingGoogleMaps"] = true;
       document.body.appendChild(Object.assign(
