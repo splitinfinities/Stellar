@@ -54,7 +54,7 @@ export class Map {
 
     window["initializeGoogleMap"] = () => { this.initMap() };
 
-    if (!window["loadingGoogleMaps"] && (!document.querySelectorAll(`[src="${googleMapsUrl}"]`).length || typeof google !== 'object' || typeof google.maps !== 'object')) {
+    if (!window["loadingGoogleMaps"] && (typeof google !== 'object' || typeof google.maps !== 'object')) {
       window["loadingGoogleMaps"] = true;
       document.body.appendChild(Object.assign(
         document.createElement('script'), {
