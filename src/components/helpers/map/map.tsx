@@ -50,7 +50,7 @@ export class Map {
   }
 
   loadGoogleMaps() {
-    const googleMapsUrl = `http://maps.google.com/maps/api/js?key=${this.apikey}&callback=initializeGoogleMap`;
+    const googleMapsUrl = `https://maps.google.com/maps/api/js?key=${this.apikey}&callback=initializeGoogleMap`;
 
     window["initializeGoogleMap"] = () => { this.initMap() };
 
