@@ -34,46 +34,47 @@
     grid-column: 1;
     position: absolute;
     z-index: 999;
-    top: 0%;
-    height: 100%;
+    top: 50%;
+    height: 4rem;
     width: 4rem;
     cursor: pointer;
     border: 0;
-    left: -0.25rem;
+    left: 1rem;
+    background: var(--white);
     opacity: 1;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     transition: all 200ms ease 0s;
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    clip-path: circle();
+    transform: translateY(-50%);
 }
 
 :host button.nav:hover, 
 :host button.nav:focus {
-    left: 0rem;
+    left: 0.5rem;
 }
 
 :host button.nav.hide {
-    transform: translateX(100%);
+    transform: translateX(200%) translateY(-50%);;
 }
 
 :host button.nav.next {
-    right: -0.25rem;
+    right: 1rem;
     left: auto;
-    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
 }
 
 :host button.nav.next:hover, 
 :host button.nav.next:focus {
-    right: 0rem;
+    right: 0.5rem;
 }
 
 :host button.nav.prev.hide {
-    transform: translateX(-100%);
+    transform: translateX(-200%) translateY(-50%);
 }
 
 :host button.nav stellar-asset {
     font-size: 3rem;
-    color: var(--theme-base9);
+    color: var(--black);
 }
 
 :host .pager {
