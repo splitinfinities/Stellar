@@ -1,0 +1,40 @@
+stellar-google-maps {
+  display: grid;
+  padding-bottom: var(--aspect-ratio);
+  overflow: hidden;
+  max-width: var(--width);
+  max-height: var(--height);
+}
+
+stellar-google-maps[block],
+stellar-google-maps[block] skeleton-img,
+stellar-google-maps[block] #map {
+  max-width: 100%;
+  max-height: auto;
+}
+
+stellar-google-maps skeleton-img {
+  order: 1;
+  grid-row: 1;
+  grid-column: 1;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  max-width: var(--width);
+  max-height: var(--height);
+}
+
+stellar-google-maps #map {
+  order: 1;
+  grid-row: 1;
+  grid-column: 1;
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  contain: content;
+  max-width: var(--width);
+  max-height: var(--height);
+}

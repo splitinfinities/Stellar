@@ -53,6 +53,7 @@
 ### Used by
 
  - [stellar-360-image](../360-image)
+ - [stellar-google-maps](../../helpers/map)
  - [stellar-interview](../interview)
  - [stellar-playlist](../playlist)
  - [stellar-video-interview](../video-interview)
@@ -69,6 +70,7 @@ graph TD;
   skeleton-img --> stellar-intersection
   stellar-asset --> stellar-icon
   stellar-360-image --> skeleton-img
+  stellar-google-maps --> skeleton-img
   stellar-interview --> skeleton-img
   stellar-playlist --> skeleton-img
   stellar-video-interview --> skeleton-img

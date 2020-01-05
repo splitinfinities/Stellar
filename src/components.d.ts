@@ -386,6 +386,28 @@ export namespace Components {
     'submit_form': () => Promise<void>;
     'target': string;
   }
+  interface StellarGoogleMaps {
+    'apikey': string;
+    'block': boolean;
+    'height': number;
+    'lat': number;
+    'lng': number;
+    'noUi': boolean;
+    'theme': string;
+    'width': number;
+    'zoom': number;
+  }
+  interface StellarGoogleMapsMarker {
+    'address': string;
+    'configuration': (map: any) => Promise<any>;
+    'geocodeAddress': () => Promise<any>;
+    'icon': string;
+    'iconHeight': number;
+    'iconWidth': number;
+    'lat': number;
+    'lng': number;
+    'markerTitle': string;
+  }
   interface StellarGrid {
     'align': string;
     'cols': number|string;
@@ -1402,6 +1424,18 @@ declare global {
     new (): HTMLStellarFormElement;
   };
 
+  interface HTMLStellarGoogleMapsElement extends Components.StellarGoogleMaps, HTMLStencilElement {}
+  var HTMLStellarGoogleMapsElement: {
+    prototype: HTMLStellarGoogleMapsElement;
+    new (): HTMLStellarGoogleMapsElement;
+  };
+
+  interface HTMLStellarGoogleMapsMarkerElement extends Components.StellarGoogleMapsMarker, HTMLStencilElement {}
+  var HTMLStellarGoogleMapsMarkerElement: {
+    prototype: HTMLStellarGoogleMapsMarkerElement;
+    new (): HTMLStellarGoogleMapsMarkerElement;
+  };
+
   interface HTMLStellarGridElement extends Components.StellarGrid, HTMLStencilElement {}
   var HTMLStellarGridElement: {
     prototype: HTMLStellarGridElement;
@@ -1799,6 +1833,8 @@ declare global {
     'stellar-dropdown': HTMLStellarDropdownElement;
     'stellar-follow': HTMLStellarFollowElement;
     'stellar-form': HTMLStellarFormElement;
+    'stellar-google-maps': HTMLStellarGoogleMapsElement;
+    'stellar-google-maps-marker': HTMLStellarGoogleMapsMarkerElement;
     'stellar-grid': HTMLStellarGridElement;
     'stellar-group': HTMLStellarGroupElement;
     'stellar-group-overflow': HTMLStellarGroupOverflowElement;
@@ -2215,6 +2251,26 @@ declare namespace LocalJSX {
     'novalidate'?: boolean;
     'onSubmitted'?: (event: CustomEvent<any>) => void;
     'target'?: string;
+  }
+  interface StellarGoogleMaps {
+    'apikey'?: string;
+    'block'?: boolean;
+    'height'?: number;
+    'lat'?: number;
+    'lng'?: number;
+    'noUi'?: boolean;
+    'theme'?: string;
+    'width'?: number;
+    'zoom'?: number;
+  }
+  interface StellarGoogleMapsMarker {
+    'address'?: string;
+    'icon'?: string;
+    'iconHeight'?: number;
+    'iconWidth'?: number;
+    'lat'?: number;
+    'lng'?: number;
+    'markerTitle'?: string;
   }
   interface StellarGrid {
     'align'?: string;
@@ -2987,6 +3043,8 @@ declare namespace LocalJSX {
     'stellar-dropdown': StellarDropdown;
     'stellar-follow': StellarFollow;
     'stellar-form': StellarForm;
+    'stellar-google-maps': StellarGoogleMaps;
+    'stellar-google-maps-marker': StellarGoogleMapsMarker;
     'stellar-grid': StellarGrid;
     'stellar-group': StellarGroup;
     'stellar-group-overflow': StellarGroupOverflow;
@@ -3093,6 +3151,8 @@ declare module "@stencil/core" {
       'stellar-dropdown': LocalJSX.StellarDropdown & JSXBase.HTMLAttributes<HTMLStellarDropdownElement>;
       'stellar-follow': LocalJSX.StellarFollow & JSXBase.HTMLAttributes<HTMLStellarFollowElement>;
       'stellar-form': LocalJSX.StellarForm & JSXBase.HTMLAttributes<HTMLStellarFormElement>;
+      'stellar-google-maps': LocalJSX.StellarGoogleMaps & JSXBase.HTMLAttributes<HTMLStellarGoogleMapsElement>;
+      'stellar-google-maps-marker': LocalJSX.StellarGoogleMapsMarker & JSXBase.HTMLAttributes<HTMLStellarGoogleMapsMarkerElement>;
       'stellar-grid': LocalJSX.StellarGrid & JSXBase.HTMLAttributes<HTMLStellarGridElement>;
       'stellar-group': LocalJSX.StellarGroup & JSXBase.HTMLAttributes<HTMLStellarGroupElement>;
       'stellar-group-overflow': LocalJSX.StellarGroupOverflow & JSXBase.HTMLAttributes<HTMLStellarGroupOverflowElement>;

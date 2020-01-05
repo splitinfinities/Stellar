@@ -1,0 +1,160 @@
+[
+	{
+		"elementType": "geometry",
+		"stylers": [
+			{
+				"color": "var(--theme-base1)"
+			}
+		]
+	},
+	{
+		"elementType": "labels.icon",
+		"stylers": [
+			{
+				"visibility": "off"
+			}
+		]
+	},
+	{
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "var(--theme-base5)"
+			}
+		]
+	},
+	{
+		"elementType": "labels.text.stroke",
+		"stylers": [
+			{
+				"color": "var(--theme-base0)"
+			}
+		]
+	},
+	{
+		"featureType": "administrative.land_parcel",
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "var(--theme-base1)"
+			}
+		]
+	},
+	{
+		"featureType": "poi",
+		"elementType": "geometry",
+		"stylers": [
+			{
+				"color": "var(--theme-base1)"
+			}
+		]
+	},
+	{
+		"featureType": "poi",
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "var(--theme-base7)"
+			}
+		]
+	},
+	{
+		"featureType": "poi.park",
+		"elementType": "geometry",
+		"stylers": [
+			{
+				"color": "var(--theme-base2)"
+			}
+		]
+	},
+	{
+		"featureType": "poi.park",
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "#9e9e9e"
+			}
+		]
+	},
+	{
+		"featureType": "road",
+		"elementType": "geometry",
+		"stylers": [
+			{
+				"color": "var(--white)"
+			}
+		]
+	},
+	{
+		"featureType": "road.arterial",
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "var(--theme-base5)"
+			}
+		]
+	},
+	{
+		"featureType": "road.highway",
+		"elementType": "geometry",
+		"stylers": [
+			{
+				"color": "var(--theme-base2)"
+			}
+		]
+	},
+	{
+		"featureType": "road.highway",
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "var(--theme-base6)"
+			}
+		]
+	},
+	{
+		"featureType": "road.local",
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "var(--theme-base2)"
+			}
+		]
+	},
+	{
+		"featureType": "transit.line",
+		"elementType": "geometry",
+		"stylers": [
+			{
+				"color": "var(--theme-base7)"
+			}
+		]
+	},
+	{
+		"featureType": "transit.station",
+		"elementType": "geometry",
+		"stylers": [
+			{
+				"color": "var(--theme-base1)"
+			}
+		]
+	},
+	{
+		"featureType": "water",
+		"elementType": "geometry",
+		"stylers": [
+			{
+				"color": "var(--theme-base7)"
+			}
+		]
+	},
+	{
+		"featureType": "water",
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "var(--theme-base7)"
+			}
+		]
+	}
+]

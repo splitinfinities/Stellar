@@ -8,15 +8,14 @@ import properties from 'css-custom-properties'
 export class SkeletonImg {
 	@Element() element: HTMLElement;
 
-	@Prop({reflect: true}) width: number = 600;
-	@Prop({reflect: true}) height: number = 300;
-	@Prop({reflect: true}) block: boolean = false;
-	@Prop({reflect: true}) loading: boolean = false;
-	@Prop({reflect: true}) icon: boolean = false;
+	@Prop({ reflect: true }) width: number = 600;
+	@Prop({ reflect: true }) height: number = 300;
+	@Prop({ reflect: true }) block: boolean = false;
+	@Prop({ reflect: true }) loading: boolean = false;
+	@Prop({ reflect: true }) icon: boolean = false;
 
 	componentWillLoad() {
-		if (this.block) {
-		} else {
+		if (!this.block) {
 			properties.set({
 				'--width': `${this.width}px`,
 				'--height': `${this.height}px`
@@ -24,11 +23,11 @@ export class SkeletonImg {
 		}
 	}
 
-	in () {
+	in() {
 		this.element.classList.add('visible')
 	}
 
-	out () {
+	out() {
 		this.element.classList.remove('visible')
 	}
 

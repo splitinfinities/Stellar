@@ -1,6 +1,8 @@
+declare module 'googlemaps';
+
 declare interface EaseParams {
-  tick?: ({start, end, duration, progress, ease, value}) => void;
-  complete?: ({start, end, duration, progress, ease, value}) => void;
+  tick?: ({ start, end, duration, progress, ease, value }) => void;
+  complete?: ({ start, end, duration, progress, ease, value }) => void;
   start?: number;
   end?: number;
   duration?: number;
@@ -21,7 +23,7 @@ declare interface String {
 
 declare interface FormResult {
   valid: boolean;
-  errors: {message?: string, method?: string}[];
+  errors: { message?: string, method?: string }[];
   value: any;
   name: string;
   level?: number;
