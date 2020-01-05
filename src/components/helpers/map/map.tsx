@@ -31,6 +31,9 @@ export class Map {
 
   markers = [];
 
+  componentWillLoad() {
+  }
+
   componentDidLoad() {
     this.loadGoogleMaps();
   }
@@ -49,14 +52,15 @@ export class Map {
   loadGoogleMaps() {
     const googleMapsUrl = `http://maps.google.com/maps/api/js?key=${this.apikey}&callback=initializeGoogleMap`;
 
-    if (!document.querySelectorAll(`[src="${googleMapsUrl}"]`).length) {
+    if (!window["loadingGoogleMaps"] && (!document.querySelectorAll(`[src="${googleMapsUrl}"]`).length || typeof google !== 'object' || typeof google.maps !== 'object')) {
+      window["loadingGoogleMaps"] = true;
       document.body.appendChild(Object.assign(
         document.createElement('script'), {
         type: 'text/javascript',
         src: googleMapsUrl,
         onload: () => this.initMap()
       }));
-    } else {
+    } else if (typeof google === 'object' && typeof google.maps === 'object') {
       this.initMap();
     }
   }
