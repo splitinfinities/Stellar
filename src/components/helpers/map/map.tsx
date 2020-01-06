@@ -19,6 +19,11 @@ export class Map {
   @Prop() noUi: boolean = false;
   @Prop() block: boolean = false;
   @Prop() theme: string;
+  @Prop() gestureHandling: "greedy" | "cooperative" | "none" | "auto" = "auto";
+  @Prop() zoomControls: boolean = false;
+  @Prop() streetView: boolean = false;
+  @Prop() mapType: boolean = false;
+  @Prop() fullscreenControl: boolean = false;
 
   loaded: boolean = false;
 
@@ -30,9 +35,6 @@ export class Map {
   infowindow: google.maps.InfoWindow;
 
   markers = [];
-
-  componentWillLoad() {
-  }
 
   componentDidLoad() {
     this.loadGoogleMaps();
@@ -79,8 +81,11 @@ export class Map {
         center: { lat: this.lat, lng: this.lng },
         zoom: this.zoom,
         disableDefaultUI: this.noUi,
-        gestureHandling: 'none',
-        zoomControl: true,
+        gestureHandling: this.gestureHandling,
+        zoomControl: this.zoomControls,
+        streetViewControl: this.streetView,
+        mapTypeControl: this.mapType,
+        fullscreenControl: this.fullscreenControl,
         styles
       });
 

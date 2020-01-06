@@ -389,13 +389,18 @@ export namespace Components {
   interface StellarGoogleMaps {
     'apikey': string;
     'block': boolean;
+    'fullscreenControl': boolean;
+    'gestureHandling': "greedy" | "cooperative" | "none" | "auto";
     'height': number;
     'lat': number;
     'lng': number;
+    'mapType': boolean;
     'noUi': boolean;
+    'streetView': boolean;
     'theme': string;
     'width': number;
     'zoom': number;
+    'zoomControls': boolean;
   }
   interface StellarGoogleMapsMarker {
     'address': string;
@@ -2255,13 +2260,18 @@ declare namespace LocalJSX {
   interface StellarGoogleMaps {
     'apikey'?: string;
     'block'?: boolean;
+    'fullscreenControl'?: boolean;
+    'gestureHandling'?: "greedy" | "cooperative" | "none" | "auto";
     'height'?: number;
     'lat'?: number;
     'lng'?: number;
+    'mapType'?: boolean;
     'noUi'?: boolean;
+    'streetView'?: boolean;
     'theme'?: string;
     'width'?: number;
     'zoom'?: number;
+    'zoomControls'?: boolean;
   }
   interface StellarGoogleMapsMarker {
     'address'?: string;
