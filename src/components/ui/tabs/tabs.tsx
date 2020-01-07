@@ -12,16 +12,16 @@ export class Tabs {
   @Element() element: HTMLElement;
 
   @Prop() height: string;
-  @Prop({mutable: true, reflect: true}) name: string;
-  @Prop({mutable: true, reflect: true}) noanimation: boolean = false;
+  @Prop({ mutable: true, reflect: true }) name: string;
+  @Prop({ mutable: true, reflect: true }) noanimation: boolean = false;
 
-  @Prop({reflect: true}) size: "tiny"|"small"|"medium"|"large";
-  @Prop({reflect: true}) block: boolean = false;
-  @Prop({reflect: true}) vertical: boolean = false;
-  @Prop({reflect: true}) dark: boolean = false;
-  @Prop({reflect: true}) behavior: string;
-  @Prop({reflect: true}) flipIndicator: boolean;
-  @Prop({reflect: true}) blockIndicator: boolean;
+  @Prop({ reflect: true }) size: "tiny" | "small" | "medium" | "large";
+  @Prop({ reflect: true }) block: boolean = false;
+  @Prop({ reflect: true }) vertical: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
+  @Prop({ reflect: true }) behavior: string;
+  @Prop({ reflect: true }) flipIndicator: boolean;
+  @Prop({ reflect: true }) blockIndicator: boolean;
 
   @State() tabsList: Array<HTMLStellarTabElement>;
   @State() contentsList: Array<HTMLStellarContentElement>;
@@ -60,7 +60,7 @@ export class Tabs {
     this.ease.start();
   }
 
-  async componentWillLoad () {
+  async componentWillLoad() {
     await this.tabs();
     await this.contents();
 
@@ -76,12 +76,16 @@ export class Tabs {
 
   @Watch('dark')
   handleDark() {
+    if (!this.tabsList || this.tabsList.length === 0) {
+      this.tabsList = Array.from(this.element.querySelectorAll('stellar-tab'));
+    }
+
     this.tabsList.forEach((tab) => {
       tab.dark = this.dark;
     })
   }
 
-  async componentDidLoad () {
+  async componentDidLoad() {
     if (!this.noanimation) {
       setTimeout(() => {
         // @ts-ignore

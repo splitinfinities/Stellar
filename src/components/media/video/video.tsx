@@ -89,8 +89,8 @@ export class Video {
   }
 
   setDimensions() {
-    this.width = (!this.width) ? this.video_tag.videoWidth : this.width;
-    this.height = (!this.height) ? this.video_tag.videoHeight : this.height;
+    this.width = (!this.width) ? this.video_tag ? this.video_tag.videoWidth : this.width : this.width;
+    this.height = (!this.height) ? this.video_tag ? this.video_tag.videoHeight : this.height : this.height;
 
     properties.set({
       "--width": `${this.width}`,

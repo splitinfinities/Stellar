@@ -1018,7 +1018,7 @@ export namespace Components {
     'height': string;
     'name': string;
     'noanimation': boolean;
-    'size': "tiny"|"small"|"medium"|"large";
+    'size': "tiny" | "small" | "medium" | "large";
     'tabs': () => Promise<any[]>;
     'vertical': boolean;
   }
@@ -2859,7 +2859,7 @@ declare namespace LocalJSX {
     'height'?: string;
     'name'?: string;
     'noanimation'?: boolean;
-    'size'?: "tiny"|"small"|"medium"|"large";
+    'size'?: "tiny" | "small" | "medium" | "large";
     'vertical'?: boolean;
   }
   interface StellarTag {
