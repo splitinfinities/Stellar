@@ -819,7 +819,7 @@ export namespace Components {
     'name': string|boolean;
     'novalidate': boolean;
     'open': boolean;
-    'option_elements': () => Promise<NodeListOf<any>>;
+    'option_elements': () => Promise<NodeListOf<HTMLStellarItemElement>>;
     'options': () => Promise<string[]>;
     'other': boolean;
     'overlay': boolean;
@@ -954,9 +954,9 @@ export namespace Components {
     'tabCount': number;
   }
   interface StellarSteps {
-    'contents': () => Promise<any[]>;
+    'contents': () => Promise<HTMLStellarContentElement[]>;
     'name': string;
-    'steps': () => Promise<any[]>;
+    'steps': () => Promise<HTMLStellarStepElement[]>;
   }
   interface StellarStory {
     'target': string;
@@ -1012,14 +1012,14 @@ export namespace Components {
     'block': boolean;
     'blockIndicator': boolean;
     'blurring': () => Promise<void>;
-    'contents': () => Promise<any[]>;
+    'contents': () => Promise<HTMLStellarContentElement[]>;
     'dark': boolean;
     'flipIndicator': boolean;
     'height': string;
     'name': string;
     'noanimation': boolean;
     'size': "tiny" | "small" | "medium" | "large";
-    'tabs': () => Promise<any[]>;
+    'tabs': () => Promise<HTMLStellarTabElement[]>;
     'vertical': boolean;
   }
   interface StellarTag {
@@ -1139,7 +1139,7 @@ export namespace Components {
     'is_prepared': () => Promise<Boolean>;
     'midi': Boolean;
     'name': string;
-    'source': (name: any) => Promise<any>;
+    'source': (name: any) => Promise<HTMLWebAudioSourceElement>;
     'stop': () => Promise<void>;
   }
   interface WebAudioDebugger {

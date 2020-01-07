@@ -2,16 +2,15 @@ import { Component, Prop, State, Element, h } from '@stencil/core';
 import * as Kaleidoscope from "kaleidoscopejs";
 
 @Component({
-  tag: 'stellar-360-video',
-  styleUrl: '360-video.css'
+  tag: 'stellar-360-video'
 })
 export class Video360 {
   @Element() element: HTMLElement;
 
-  @Prop({reflect: true}) src: string;
-  @Prop({reflect: true}) poster: string;
-  @Prop({reflect: true}) width: number = 1280;
-  @Prop({reflect: true}) height: number = 720;
+  @Prop({ reflect: true }) src: string;
+  @Prop({ reflect: true }) poster: string;
+  @Prop({ reflect: true }) width: number = 1280;
+  @Prop({ reflect: true }) height: number = 720;
   @State() viewer: any;
   @State() video: HTMLElement;
 
@@ -32,7 +31,7 @@ export class Video360 {
     this.viewer.play()
   }
 
-  render () {
+  render() {
     return [
       <div class="video" />,
       <div class="overlay" />

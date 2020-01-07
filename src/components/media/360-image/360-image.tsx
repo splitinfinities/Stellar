@@ -2,17 +2,16 @@ import { Component, Prop, State, Element, h } from '@stencil/core';
 import * as Kaleidoscope from "kaleidoscopejs";
 
 @Component({
-  tag: 'stellar-360-image',
-  styleUrl: '360-image.css'
+  tag: 'stellar-360-image'
 })
 export class Image360 {
   @Element() element: HTMLElement;
 
-  @Prop({reflect: true}) src: string;
+  @Prop({ reflect: true }) src: string;
   @Prop() nolazyload: boolean = false;
-  @Prop({reflect: true}) poster: string;
-  @Prop({reflect: true}) width: number = 1280;
-  @Prop({reflect: true}) height: number = 720;
+  @Prop({ reflect: true }) poster: string;
+  @Prop({ reflect: true }) width: number = 1280;
+  @Prop({ reflect: true }) height: number = 720;
 
   @State() viewer: any;
   @State() image: HTMLElement;
@@ -45,7 +44,7 @@ export class Image360 {
     this.ready = false;
   }
 
-  render () {
+  render() {
     return <div>
       <div class="image" />
       <div class="overlay" />
