@@ -27,7 +27,7 @@
 | `dark`    | `dark`    |                                                        | `boolean`             | `false`       |
 | `padding` | `padding` |                                                        | `number`              | `2`           |
 | `pages`   | `pages`   | Public: Sets the max cap of pages you can skip through | `number`              | `1`           |
-| `type`    | `type`    |                                                        | `"compact" \| "full"` | `"full"`      |
+| `type`    | `type`    |                                                        | `"compact" or "full"` | `"full"`      |
 | `url`     | `url`     |                                                        | `any`                 | `"#page-{0}"` |
 
 

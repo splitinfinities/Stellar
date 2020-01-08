@@ -193,7 +193,7 @@
 | `label`               | `label`                |                                                | `string`                                   | `undefined`             |
 | `loading`             | `loading`              |                                                | `boolean`                                  | `false`                 |
 | `multiple`            | `multiple`             |                                                | `boolean`                                  | `undefined`             |
-| `name`                | `name`                 |                                                | `boolean \| string`                        | `"select"`              |
+| `name`                | `name`                 |                                                | `boolean or string`                        | `"select"`              |
 | `novalidate`          | `novalidate`           |                                                | `boolean`                                  | `undefined`             |
 | `open`                | `open`                 |                                                | `boolean`                                  | `false`                 |
 | `other`               | `other`                |                                                | `boolean`                                  | `undefined`             |
@@ -202,10 +202,10 @@
 | `placeholderInverted` | `placeholder-inverted` |                                                | `boolean`                                  | `undefined`             |
 | `processing`          | `processing`           |                                                | `boolean`                                  | `undefined`             |
 | `required`            | `required`             |                                                | `boolean`                                  | `false`                 |
-| `resize`              | `resize`               |                                                | `"full" \| boolean`                        | `false`                 |
-| `size`                | `size`                 |                                                | `"large" \| "medium" \| "small" \| "tiny"` | `undefined`             |
+| `resize`              | `resize`               |                                                | `"full" or boolean`                        | `false`                 |
+| `size`                | `size`                 |                                                | `"large" or "medium" or "small" or "tiny"` | `undefined`             |
 | `tooltip`             | `tooltip`              |                                                | `string`                                   | `undefined`             |
-| `value`               | `value`                |                                                | `string \| string[]`                       | `undefined`             |
+| `value`               | `value`                |                                                | `string or string[]`                       | `undefined`             |
 | `valueLabel`          | `value-label`          |                                                | `string`                                   | `undefined`             |
 | `verbiage`            | `verbiage`             |                                                | `string`                                   | `"selection"`           |
 | `verbiageAn`          | `verbiage-an`          |                                                | `boolean`                                  | `undefined`             |
@@ -221,13 +221,13 @@
 
 ## Methods
 
-### `option_elements() => Promise<NodeListOf<any>>`
+### `option_elements() => Promise<NodeListOf<HTMLStellarItemElement>>`
 
 
 
 #### Returns
 
-Type: `Promise<NodeListOf<any>>`
+Type: `Promise<NodeListOf<HTMLStellarItemElement>>`
 
 
 

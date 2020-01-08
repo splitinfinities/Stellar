@@ -188,7 +188,7 @@
 | `height`         | `height`          |             | `string`                                   | `undefined` |
 | `name`           | `name`            |             | `string`                                   | `undefined` |
 | `noanimation`    | `noanimation`     |             | `boolean`                                  | `false`     |
-| `size`           | `size`            |             | `"large" \| "medium" \| "small" \| "tiny"` | `undefined` |
+| `size`           | `size`            |             | `"large" or "medium" or "small" or "tiny"` | `undefined` |
 | `vertical`       | `vertical`        |             | `boolean`                                  | `false`     |
 
 
@@ -204,23 +204,23 @@ Type: `Promise<void>`
 
 
 
-### `contents() => Promise<any[]>`
+### `contents() => Promise<HTMLStellarContentElement[]>`
 
 
 
 #### Returns
 
-Type: `Promise<any[]>`
+Type: `Promise<HTMLStellarContentElement[]>`
 
 
 
-### `tabs() => Promise<any[]>`
+### `tabs() => Promise<HTMLStellarTabElement[]>`
 
 
 
 #### Returns
 
-Type: `Promise<any[]>`
+Type: `Promise<HTMLStellarTabElement[]>`
 
 
 

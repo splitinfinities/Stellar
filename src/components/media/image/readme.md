@@ -29,7 +29,7 @@
 | `large`  | `large`   |             | `string`                    | `undefined` |
 | `nozoom` | `nozoom`  |             | `boolean`                   | `false`     |
 | `poster` | `poster`  |             | `string`                    | `undefined` |
-| `type`   | `type`    |             | `"background" \| "picture"` | `"picture"` |
+| `type`   | `type`    |             | `"background" or "picture"` | `"picture"` |
 | `width`  | `width`   |             | `number`                    | `undefined` |
 
 

@@ -24,7 +24,7 @@
 | `selected`    | `selected`     |                                                | `boolean`                                 | `false`     |
 | `simple`      | `simple`       |                                                | `boolean`                                 | `false`     |
 | `size`        | `size`         |                                                | `string`                                  | `undefined` |
-| `type`        | `type`         |                                                | `"a" \| "button" \| "stencil-route-link"` | `"button"`  |
+| `type`        | `type`         |                                                | `"a" or "button" or "stencil-route-link"` | `"button"`  |
 | `value`       | `value`        |                                                | `string`                                  | `undefined` |
 | `valueLabel`  | `value-label`  |                                                | `string`                                  | `undefined` |
 | `wrap`        | `wrap`         |                                                | `boolean`                                 | `false`     |

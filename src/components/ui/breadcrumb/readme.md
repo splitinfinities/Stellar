@@ -16,7 +16,7 @@
 | `href`     | `href`     |             | `string`            | `"/"`               |
 | `label`    | `label`    |             | `string`            | `"Breadcrumb link"` |
 | `last`     | `last`     |             | `boolean`           | `undefined`         |
-| `tag`      | `tag`      |             | `"link" \| "route"` | `"link"`            |
+| `tag`      | `tag`      |             | `"link" or "route"` | `"link"`            |
 | `target`   | `target`   |             | `string`            | `"_self"`           |
 
 

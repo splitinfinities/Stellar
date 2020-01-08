@@ -13,11 +13,11 @@
 | `disabled`      | `disabled`      |                                                            | `boolean`                                      | `false`     |
 | `href`          | `href`          | Sets the href on the anchor tag if the button is a link.   | `string`                                       | `'#'`       |
 | `name`          | `name`          |                                                            | `string`                                       | `undefined` |
-| `notifications` | `notifications` |                                                            | `boolean \| number`                            | `false`     |
+| `notifications` | `notifications` |                                                            | `boolean or number`                            | `false`     |
 | `open`          | `open`          |                                                            | `boolean`                                      | `false`     |
 | `order`         | `order`         |                                                            | `number`                                       | `undefined` |
 | `tabCount`      | `tab-count`     |                                                            | `number`                                       | `undefined` |
-| `tag`           | `tag`           |                                                            | `"button" \| "link" \| "pjax" \| "route-link"` | `"button"`  |
+| `tag`           | `tag`           |                                                            | `"button" or "link" or "pjax" or "route-link"` | `"button"`  |
 | `target`        | `target`        | Sets the target on the anchor tag if the button is a link. | `string`                                       | `'_self'`   |
 | `vertical`      | `vertical`      |                                                            | `boolean`                                      | `false`     |
 

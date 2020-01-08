@@ -12,7 +12,7 @@
 | `apikey`            | `apikey`             |             | `string`                                        | `undefined` |
 | `block`             | `block`              |             | `boolean`                                       | `false`     |
 | `fullscreenControl` | `fullscreen-control` |             | `boolean`                                       | `false`     |
-| `gestureHandling`   | `gesture-handling`   |             | `"auto" \| "cooperative" \| "greedy" \| "none"` | `"auto"`    |
+| `gestureHandling`   | `gesture-handling`   |             | `"auto" or "cooperative" or "greedy" or "none"` | `"auto"`    |
 | `height`            | `height`             |             | `number`                                        | `900`       |
 | `lat`               | `lat`                |             | `number`                                        | `-34.397`   |
 | `lng`               | `lng`                |             | `number`                                        | `150.644`   |

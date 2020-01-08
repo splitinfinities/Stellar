@@ -11,7 +11,7 @@
 | ---------- | ---------- | ----------- | ---------------------- | ---------- |
 | `distance` | `distance` |             | `number`               | `0.5`      |
 | `padding`  | `padding`  |             | `number`               | `40`       |
-| `type`     | `type`     |             | `"cursor" \| "scroll"` | `"cursor"` |
+| `type`     | `type`     |             | `"cursor" or "scroll"` | `"cursor"` |
 
 
 ----------------------------------------------

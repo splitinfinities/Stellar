@@ -76,8 +76,8 @@
 | `name`       | `name`       |             | `string`                                                                               | `"Stellar"` |
 | `notooltip`  | `notooltip`  |             | `boolean`                                                                              | `false`     |
 | `processing` | `processing` |             | `boolean`                                                                              | `false`     |
-| `shape`      | `shape`      |             | `"circle" \| "diamond" \| "hexagon" \| "message" \| "rectangle" \| "square" \| "star"` | `"square"`  |
-| `size`       | `size`       |             | `"large" \| "medium" \| "small" \| "tiny"`                                             | `undefined` |
+| `shape`      | `shape`      |             | `"circle" or "diamond" or "hexagon" or "message" or "rectangle" or "square" or "star"` | `"square"`  |
+| `size`       | `size`       |             | `"large" or "medium" or "small" or "tiny"`                                             | `undefined` |
 | `src`        | `src`        |             | `string`                                                                               | `undefined` |
 
 

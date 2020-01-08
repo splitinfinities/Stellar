@@ -80,9 +80,9 @@
 | `name`     | `name`     |             | `string`                                    | `"stellar"` |
 | `remember` | `remember` |             | `boolean`                                   | `true`      |
 | `shown`    | `shown`    |             | `boolean`                                   | `true`      |
-| `size`     | `size`     |             | `"default" \| "full"`                       | `undefined` |
+| `size`     | `size`     |             | `"default" or "full"`                       | `undefined` |
 | `striped`  | `striped`  |             | `boolean`                                   | `false`     |
-| `type`     | `type`     |             | `"alert" \| "error" \| "info" \| "success"` | `undefined` |
+| `type`     | `type`     |             | `"alert" or "error" or "info" or "success"` | `undefined` |
 
 
 ## Dependencies

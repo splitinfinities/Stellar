@@ -20,12 +20,12 @@
 
 | Property  | Attribute | Description | Type                                                                        | Default      |
 | --------- | --------- | ----------- | --------------------------------------------------------------------------- | ------------ |
-| `align`   | `align`   |             | `"baseline" \| "bottom" \| "center" \| "top"`                               | `"baseline"` |
-| `content` | `content` |             | `"baseline" \| "bottom" \| "center" \| "top"`                               | `"baseline"` |
+| `align`   | `align`   |             | `"baseline" or "bottom" or "center" or "top"`                               | `"baseline"` |
+| `content` | `content` |             | `"baseline" or "bottom" or "center" or "top"`                               | `"baseline"` |
 | `hasNav`  | `has-nav` |             | `boolean`                                                                   | `undefined`  |
 | `height`  | `height`  |             | `"fill"`                                                                    | `undefined`  |
-| `padding` | `padding` |             | `"large" \| "medium" \| "none" \| "small" \| "tiny"`                        | `"medium"`   |
-| `size`    | `size`    |             | `"flush" \| "full" \| "large" \| "medium" \| "small" \| "tiny" \| "xlarge"` | `"medium"`   |
+| `padding` | `padding` |             | `"large" or "medium" or "none" or "small" or "tiny"`                        | `"medium"`   |
+| `size`    | `size`    |             | `"flush" or "full" or "large" or "medium" or "small" or "tiny" or "xlarge"` | `"medium"`   |
 | `type`    | `type`    |             | `string`                                                                    | `undefined`  |
 
 

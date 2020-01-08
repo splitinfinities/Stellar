@@ -10,7 +10,7 @@
 | Property | Attribute | Description | Type                           | Default     |
 | -------- | --------- | ----------- | ------------------------------ | ----------- |
 | `for`    | `for`     |             | `string`                       | `undefined` |
-| `size`   | `size`    |             | `"large" \| "small" \| "tiny"` | `undefined` |
+| `size`   | `size`    |             | `"large" or "small" or "tiny"` | `undefined` |
 
 
 ## Dependencies

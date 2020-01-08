@@ -13,7 +13,7 @@
 | `dark`   | `dark`    |             | `boolean`                                                                                                                         | `false`               |
 | `for`    | `for`     |             | `string`                                                                                                                          | `undefined`           |
 | `remote` | `remote`  |             | `string`                                                                                                                          | `undefined`           |
-| `type`   | `type`    |             | `"area" \| "areaspline" \| "bar" \| "bubble" \| "column" \| "line" \| "pie" \| "polygon" \| "scatter" \| "spline" \| "waterfall"` | `undefined`           |
+| `type`   | `type`    |             | `"area" or "areaspline" or "bar" or "bubble" or "column" or "line" or "pie" or "polygon" or "scatter" or "spline" or "waterfall"` | `undefined`           |
 
 
 ## Methods

@@ -10,9 +10,9 @@
 | Property   | Attribute  | Description | Type             | Default     |
 | ---------- | ---------- | ----------- | ---------------- | ----------- |
 | `animated` | `animated` |             | `boolean`        | `undefined` |
-| `between`  | `between`  |             | `Date \| string` | `undefined` |
+| `between`  | `between`  |             | `Date or string` | `undefined` |
 | `size`     | `size`     |             | `number`         | `200`       |
-| `time`     | `time`     |             | `Date \| string` | `undefined` |
+| `time`     | `time`     |             | `Date or string` | `undefined` |
 
 
 ## Dependencies

@@ -11,7 +11,7 @@
 | ----------- | ----------- | ----------- | -------------------------------------------------------------- | ------------ |
 | `active`    | `active`    |             | `boolean`                                                      | `false`      |
 | `delay`     | `delay`     |             | `number`                                                       | `100`        |
-| `direction` | `direction` |             | `"bottom-left" \| "bottom-right" \| "top-left" \| "top-right"` | `"top-left"` |
+| `direction` | `direction` |             | `"bottom-left" or "bottom-right" or "top-left" or "top-right"` | `"top-left"` |
 | `length`    | `length`    |             | `number`                                                       | `100`        |
 | `timing`    | `timing`    |             | `number`                                                       | `50`         |
 

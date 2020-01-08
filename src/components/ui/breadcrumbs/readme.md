@@ -44,8 +44,8 @@
 | `icon_size`   | `icon_size`   |             | `number`                                   | `0.85`                                         |
 | `icon_src`    | `icon_src`    |             | `string`                                   | `undefined`                                    |
 | `label`       | `label`       |             | `string`                                   | `"Home"`                                       |
-| `size`        | `size`        |             | `"large" \| "medium" \| "small" \| "tiny"` | `undefined`                                    |
-| `tag`         | `tag`         |             | `"link" \| "route"`                        | `"link"`                                       |
+| `size`        | `size`        |             | `"large" or "medium" or "small" or "tiny"` | `undefined`                                    |
+| `tag`         | `tag`         |             | `"link" or "route"`                        | `"link"`                                       |
 
 
 ## Dependencies

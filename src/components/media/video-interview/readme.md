@@ -14,7 +14,7 @@
 | `height`        | `height`        |             | `number`                                  | `800`       |
 | `playing`       | `playing`       |             | `boolean`                                 | `undefined` |
 | `src`           | `src`           |             | `string`                                  | `undefined` |
-| `visualization` | `visualization` |             | `"bars" \| "bars2" \| "circle" \| "wave"` | `"bars2"`   |
+| `visualization` | `visualization` |             | `"bars" or "bars2" or "circle" or "wave"` | `"bars2"`   |
 | `width`         | `width`         |             | `number`                                  | `800`       |
 
 

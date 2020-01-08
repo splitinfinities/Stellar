@@ -5,7 +5,7 @@ import { } from 'googlemaps';
 @Component({
   tag: 'stellar-google-maps',
   styleUrl: 'map.css',
-  assetsDir: "themes"
+  assetsDirs: ["themes"]
 })
 export class Map {
   @Element() el: HTMLElement;

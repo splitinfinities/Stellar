@@ -10,9 +10,9 @@
 | Property       | Attribute       | Description | Type                                        | Default      |
 | -------------- | --------------- | ----------- | ------------------------------------------- | ------------ |
 | `active`       | `active`        |             | `boolean`                                   | `false`      |
-| `animation`    | `animation`     |             | `"fadeIn" \| "fadeInDown" \| "fadeInUp"`    | `"fadeInUp"` |
+| `animation`    | `animation`     |             | `"fadeIn" or "fadeInDown" or "fadeInUp"`    | `"fadeInUp"` |
 | `delay`        | `delay`         |             | `number`                                    | `100`        |
-| `outAnimation` | `out-animation` |             | `"fadeOut" \| "fadeOutDown" \| "fadeOutUp"` | `"fadeOut"`  |
+| `outAnimation` | `out-animation` |             | `"fadeOut" or "fadeOutDown" or "fadeOutUp"` | `"fadeOut"`  |
 | `timing`       | `timing`        |             | `number`                                    | `20`         |
 
 

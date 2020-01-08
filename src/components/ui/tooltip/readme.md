@@ -112,7 +112,7 @@
 
 | Property  | Attribute | Description | Type                                                                                                                                        | Default    |
 | --------- | --------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
-| `align`   | `align`   |             | `"bottom-center" \| "bottom-left" \| "bottom-right" \| "center" \| "left" \| "middle-center" \| "middle-left" \| "middle-right" \| "right"` | `"center"` |
+| `align`   | `align`   |             | `"bottom-center" or "bottom-left" or "bottom-right" or "center" or "left" or "middle-center" or "middle-left" or "middle-right" or "right"` | `"center"` |
 | `dark`    | `dark`    |             | `boolean`                                                                                                                                   | `false`    |
 | `focused` | `focused` |             | `boolean`                                                                                                                                   | `false`    |
 

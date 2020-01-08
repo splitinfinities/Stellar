@@ -32,7 +32,7 @@
 | ------------ | ------------- | ------------------------------------------- | ------------------------------------- | ----------- |
 | `codeString` | `code-string` | Used to set                                 | `string`                              | `undefined` |
 | `editable`   | `editable`    |                                             | `boolean`                             | `false`     |
-| `flavor`     | `flavor`      |                                             | `"github" \| "original" \| "vanilla"` | `"vanilla"` |
+| `flavor`     | `flavor`      |                                             | `"github" or "original" or "vanilla"` | `"vanilla"` |
 | `src`        | `src`         | Used to reference an external markdown file | `string`                              | `undefined` |
 
 

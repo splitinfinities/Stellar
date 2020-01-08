@@ -16,11 +16,11 @@
 | `loading`            | `loading`             |             | `boolean`                                 | `false`      |
 | `name`               | `name`                |             | `string`                                  | `"Playlist"` |
 | `playing`            | `playing`             |             | `boolean`                                 | `false`      |
-| `playlist`           | `playlist`            |             | `"hide" \| "show"`                        | `"show"`     |
+| `playlist`           | `playlist`            |             | `"hide" or "show"`                        | `"show"`     |
 | `remember`           | `remember`            |             | `boolean`                                 | `true`       |
-| `view`               | `view`                |             | `"art" \| "playlist"`                     | `"playlist"` |
+| `view`               | `view`                |             | `"art" or "playlist"`                     | `"playlist"` |
 | `visualizationColor` | `visualization-color` |             | `string`                                  | `"gray"`     |
-| `visualizationType`  | `visualization-type`  |             | `"bars" \| "bars2" \| "circle" \| "wave"` | `"bars"`     |
+| `visualizationType`  | `visualization-type`  |             | `"bars" or "bars2" or "circle" or "wave"` | `"bars"`     |
 
 
 ## Events

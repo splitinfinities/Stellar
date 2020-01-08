@@ -70,9 +70,9 @@
 | `for`       | `for`        | Sets the href on the anchor tag if the button is a link.                    | `string`                                             | `undefined` |
 | `href`      | `href`       | Sets the href if the card is a link.                                        | `string`                                             | `"#"`       |
 | `name`      | `name`       | Sets the name if the card is a button.                                      | `string`                                             | `""`        |
-| `padding`   | `padding`    | Sets the padding inside of the button. Can be small, medium, or large.      | `"large" \| "medium" \| "none" \| "small" \| "tiny"` | `"medium"`  |
-| `shadow`    | `shadow`     | Renders a shadow on the card                                                | `"heavy" \| "light" \| "medium"`                     | `"medium"`  |
-| `tag`       | `tag`        | Sets the element to render the card as - an anchor tag, a button, or a div. | `"a" \| "button" \| "div" \| "stencil-route-link"`   | `"div"`     |
+| `padding`   | `padding`    | Sets the padding inside of the button. Can be small, medium, or large.      | `"large" or "medium" or "none" or "small" or "tiny"` | `"medium"`  |
+| `shadow`    | `shadow`     | Renders a shadow on the card                                                | `"heavy" or "light" or "medium"`                     | `"medium"`  |
+| `tag`       | `tag`        | Sets the element to render the card as - an anchor tag, a button, or a div. | `"a" or "button" or "div" or "stencil-route-link"`   | `"div"`     |
 | `type`      | `type`       | Sets the type on a button                                                   | `string`                                             | `undefined` |
 | `value`     | `value`      | Sets the value if the card is a button.                                     | `string`                                             | `"#"`       |
 

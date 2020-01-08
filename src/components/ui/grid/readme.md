@@ -26,7 +26,7 @@
 | Property       | Attribute      | Description | Type               | Default         |
 | -------------- | -------------- | ----------- | ------------------ | --------------- |
 | `align`        | `align`        |             | `string`           | `"items-start"` |
-| `cols`         | `cols`         |             | `number \| string` | `"auto"`        |
+| `cols`         | `cols`         |             | `number or string` | `"auto"`        |
 | `compact`      | `compact`      |             | `boolean`          | `false`         |
 | `noresponsive` | `noresponsive` |             | `boolean`          | `false`         |
 | `padding`      | `padding`      |             | `boolean`          | `false`         |

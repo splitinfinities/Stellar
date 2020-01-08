@@ -204,7 +204,7 @@
 | `size`        | `size`        |                                                | `string`             | `undefined`  |
 | `stacked`     | `stacked`     |                                                | `boolean`            | `false`      |
 | `type`        | `type`        |                                                | `string`             | `"checkbox"` |
-| `value`       | `value`       |                                                | `string \| string[]` | `undefined`  |
+| `value`       | `value`       |                                                | `string or string[]` | `undefined`  |
 
 
 ## Events

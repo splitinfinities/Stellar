@@ -63,7 +63,7 @@
 | `iconName` | `icon-name` |             | `string`                        | `"arrow-down"` |
 | `label`    | `label`     |             | `string`                        | `"Dropdown"`   |
 | `open`     | `open`      |             | `boolean`                       | `false`        |
-| `position` | `position`  |             | `"center" \| "left" \| "right"` | `"center"`     |
+| `position` | `position`  |             | `"center" or "left" or "right"` | `"center"`     |
 
 
 ## Dependencies

@@ -45,7 +45,7 @@
 | Property | Attribute | Description | Type                                                     | Default     |
 | -------- | --------- | ----------- | -------------------------------------------------------- | ----------- |
 | `dark`   | `dark`    |             | `boolean`                                                | `false`     |
-| `type`   | `type`    |             | `"alert" \| "default" \| "error" \| "info" \| "success"` | `"default"` |
+| `type`   | `type`    |             | `"alert" or "default" or "error" or "info" or "success"` | `"default"` |
 
 
 ## Dependencies

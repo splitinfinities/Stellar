@@ -37,20 +37,7 @@ export const config: Config = {
     ]
   },
   outputTargets: [
-    {
-      type: 'dist',
-      copy: [
-        {
-          src: '../package.json',
-          dest: '../../dist/data/version.json'
-        },
-        {
-          src: '../dist/collection/collection-manifest.json',
-          dest: '../../dist/data/collection.json',
-          warn: true
-        }
-      ],
-    },
+    { type: 'dist' },
     { type: "stats", file: "./dist/data/stats.json" },
     { type: "docs-json", file: "./dist/data/documentation.json" },
     { type: "docs-readme" },
@@ -58,26 +45,6 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null,
       copy: [
-        {
-          src: 'svg',
-          dest: './build/svg/',
-          warn: true
-        },
-        {
-          src: '../dist/collection/collection-manifest.json',
-          dest: '../../src/data/collection.json',
-          warn: true
-        },
-        {
-          src: '../package.json',
-          dest: '../../src/data/version.json',
-          warn: true
-        },
-        {
-          src: '../src/data',
-          dest: './build/data',
-          warn: true
-        },
         {
           src: "global/**/*",
           warn: true

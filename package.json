@@ -14,8 +14,8 @@
     "dist/"
   ],
   "scripts": {
-    "build": "stencil build --docs",
-    "build.prod": "stencil build --prod --docs",
+    "build": "stencil build --next --docs",
+    "build.prod": "stencil build --next --prod --docs",
     "start": "stencil build --next --dev --watch --serve",
     "test": "stencil test --spec",
     "test.complete": "stencil test --spec --e2e --screenshot",
@@ -63,7 +63,7 @@
   },
   "devDependencies": {
     "@brainly/html-sketchapp": "^4.3.0",
-    "@stencil/core": "^1.9.0-9",
+    "@stencil/core": "^1.9.0-10",
     "@stencil/postcss": "^1.0.1",
     "@types/jest": "^24.0.23",
     "fs": "0.0.1-security",

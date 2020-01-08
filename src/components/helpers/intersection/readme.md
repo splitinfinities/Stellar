@@ -9,7 +9,7 @@
 
 | Property   | Attribute  | Description | Type                    | Default     |
 | ---------- | ---------- | ----------- | ----------------------- | ----------- |
-| `element`  | `element`  |             | `HTMLElement \| string` | `undefined` |
+| `element`  | `element`  |             | `HTMLElement or string` | `undefined` |
 | `in`       | --         |             | `Function`              | `() => { }` |
 | `margin`   | `margin`   |             | `string`                | `"0%"`      |
 | `multiple` | `multiple` |             | `boolean`               | `undefined` |
