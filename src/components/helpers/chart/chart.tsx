@@ -24,11 +24,11 @@ export class Chart {
   @State() __highchart: Highcharts.Chart;
   @State() __informant: HTMLElement;
 
-  @Prop() type: "area"|"areaspline"|"bar"|"bubble"|"column"|"line"|"pie"|"polygon"|"scatter"|"spline"|"waterfall";
+  @Prop() type: "area" | "areaspline" | "bar" | "bubble" | "column" | "line" | "pie" | "polygon" | "scatter" | "spline" | "waterfall";
   @Prop() remote: string;
   @Prop() for: string;
   @Prop() config: HighchartsModel = new HighchartsModel;
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
 
   @Watch('config')
   handleConfig() {
@@ -46,14 +46,14 @@ export class Chart {
     this.refresh();
   }
 
-  @Listen('resize', {target: "window"})
-  @Listen('fullscreenchange', {target: "document"})
-  handResize () {
+  @Listen('resize', { target: "window" })
+  @Listen('fullscreenchange', { target: "document" })
+  handResize() {
     this.__highchart.reflow();
     this.refresh();
   }
 
-  @Listen('keyup', {target: "document"})
+  @Listen('keyup', { target: "document" })
   handleEscape(event) {
     if (event.key === 'Escape') {
       this.__highchart.reflow();
@@ -76,10 +76,10 @@ export class Chart {
       ...{ yAxis: { categories: [] } }
     };
 
-    this.__options = {...this.__options, ...theme, ...newOptions};
+    this.__options = { ...this.__options, ...theme, ...newOptions };
 
     if (!newOptions.colors) {
-      this.__options = {...this.__options, ...{colors: shuffle([colors.base, ...colors.red.filter((_, key) => key >= 5), ...colors.orange.filter((_, key) => key >= 5), ...colors.yellow.filter((_, key) => key >= 5), ...colors.green.filter((_, key) => key >= 5), ...colors.blue.filter((_, key) => key >= 5), ...colors.violet.filter((_, key) => key >= 5), ...colors.cyan.filter((_, key) => key >= 5), ...colors.fuschia.filter((_, key) => key >= 5), ...colors.gray.filter((_, key) => key >= 5), ...colors.indigo.filter((_, key) => key >= 5), ...colors.lime.filter((_, key) => key >= 5), ...colors.pink.filter((_, key) => key >= 5), ...colors.teal.filter((_, key) => key >= 5)])}}
+      this.__options = { ...this.__options, ...{ colors: shuffle([colors.base, ...colors.red.filter((_, key) => key >= 5), ...colors.orange.filter((_, key) => key >= 5), ...colors.yellow.filter((_, key) => key >= 5), ...colors.green.filter((_, key) => key >= 5), ...colors.blue.filter((_, key) => key >= 5), ...colors.violet.filter((_, key) => key >= 5), ...colors.cyan.filter((_, key) => key >= 5), ...colors.fuschia.filter((_, key) => key >= 5), ...colors.gray.filter((_, key) => key >= 5), ...colors.indigo.filter((_, key) => key >= 5), ...colors.lime.filter((_, key) => key >= 5), ...colors.pink.filter((_, key) => key >= 5), ...colors.teal.filter((_, key) => key >= 5)]) } }
     }
 
     Highcharts.setOptions({

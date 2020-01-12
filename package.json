@@ -17,9 +17,9 @@
     "build": "stencil build --next --docs",
     "build.prod": "stencil build --next --prod --docs",
     "start": "stencil build --next --dev --watch --serve",
-    "test": "stencil test --spec",
-    "test.complete": "stencil test --spec --e2e --screenshot",
-    "test.watch": "stencil test --spec --e2e --screenshot --watchAll"
+    "test": "stencil test --next --spec",
+    "test.complete": "stencil test --next --spec --e2e --screenshot",
+    "test.watch": "stencil test --next --spec --e2e --screenshot --watchAll"
   },
   "dependencies": {
     "@shopify/draggable": "^1.0.0-beta.8",
@@ -63,9 +63,10 @@
   },
   "devDependencies": {
     "@brainly/html-sketchapp": "^4.3.0",
-    "@stencil/core": "^1.9.0-10",
+    "@stencil/core": "^1.9.0-11",
     "@stencil/postcss": "^1.0.1",
     "@types/jest": "^24.0.23",
+    "@types/puppeteer": "1.19.0",
     "fs": "0.0.1-security",
     "jest": "^24.9.0",
     "jest-cli": "24.9.0",

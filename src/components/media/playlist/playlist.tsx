@@ -10,18 +10,18 @@ import Tunnel from '../../theme';
 export class Playlist {
   @Element() element: HTMLElement;
 
-  @Prop({mutable: true, reflect: true}) visualizationColor: string = "gray";
-  @Prop({mutable: true, reflect: true}) visualizationType: "bars"|"bars2"|"wave"|"circle" = "bars";
+  @Prop({ mutable: true, reflect: true }) visualizationColor: string = "gray";
+  @Prop({ mutable: true, reflect: true }) visualizationType: "bars" | "bars2" | "wave" | "circle" = "bars";
   @Prop() autoplay: boolean = false;
-  @Prop({mutable: true, reflect: true}) playlist: "show"|"hide" = "show";
+  @Prop({ mutable: true, reflect: true }) playlist: "show" | "hide" = "show";
   @Prop() name: string = "Playlist";
   @Prop() remember: boolean = true;
-  @Prop({mutable: true, reflect: true}) artwork: boolean = false;
-  @Prop({mutable: true, reflect: true}) view: "playlist"|"art" = "playlist";
-  @Prop({mutable: true, reflect: true}) playing: boolean = false;
-  @Prop({mutable: true, reflect: true}) load: boolean = false;
-  @Prop({mutable: true, reflect: true}) loading: boolean = false;
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ mutable: true, reflect: true }) artwork: boolean = false;
+  @Prop({ mutable: true, reflect: true }) view: "playlist" | "art" = "playlist";
+  @Prop({ mutable: true, reflect: true }) playing: boolean = false;
+  @Prop({ mutable: true, reflect: true }) load: boolean = false;
+  @Prop({ mutable: true, reflect: true }) loading: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
 
   @State() current: number = 0;
   @State() currentTrack: CurrentSongInterface = {
@@ -29,17 +29,18 @@ export class Playlist {
     artist: 'One sec...',
     picture: undefined
   };
-  @State() currentTime: number|string;
-  @State() duration: number|string;
-  @State() visualizer: HTMLWebAudioVisualizerElement;
-  @State() audio: HTMLAudioElement;
-  @State() progress: HTMLProgressElement;
-  @State() progress_value: number = 0;
-  @State() playlistItems: NodeListOf<HTMLStellarSongElement>;
-  @State() currentPlaylistItem: HTMLStellarSongElement;
+  @State() currentTime: number | string;
+  @State() duration: number | string;
+  @State() progressValue: number = 0;
   @State() context: any;
 
   @Event() load_songs: EventEmitter;
+
+  visualizer!: HTMLWebAudioVisualizerElement;
+  audio!: HTMLAudioElement;
+  progress!: HTMLProgressElement;
+  playlistItems!: NodeListOf<HTMLStellarSongElement>;
+  currentPlaylistItem!: HTMLStellarSongElement;
 
   componentWillLoad() {
     this.loadFromStorage();
@@ -95,7 +96,7 @@ export class Playlist {
     }
   }
 
-  handleProgressClick () {
+  handleProgressClick() {
     this.progress.addEventListener('click', (e) => {
       var x = e.offsetX;
       var clickedValue = x / this.progress.offsetWidth;
@@ -104,14 +105,14 @@ export class Playlist {
     });
   }
 
-  handleUpdates () {
+  handleUpdates() {
     this.audio.addEventListener("update", () => {
       this.currentTime = asTime(parseFloat(this.audio.currentTime.toString()).toFixed(10));
       this.duration = asTime(parseFloat(this.audio.duration.toString()).toFixed(10));
 
       const value = (this.audio.currentTime !== 0 && this.audio.duration !== 0) ? ((this.audio.currentTime / this.audio.duration) * 100) : 0;
 
-      this.progress_value = value;
+      this.progressValue = value;
     });
 
     this.audio.addEventListener('ended', this.next.bind(this));
@@ -147,7 +148,7 @@ export class Playlist {
   }
 
   @Method()
-  async prepare (element) {
+  async prepare(element) {
     if (this.currentPlaylistItem) {
       this.currentPlaylistItem.switching();
     }
@@ -167,7 +168,7 @@ export class Playlist {
   }
 
   @Method()
-  async play (skipDefault = false) {
+  async play(skipDefault = false) {
 
     if (!skipDefault) {
       this.currentTrack = {
@@ -197,7 +198,7 @@ export class Playlist {
   }
 
   @Method()
-  async pause () {
+  async pause() {
     if (!this.audio.paused) {
       this.playing = false;
       await this.audio.pause();
@@ -271,23 +272,23 @@ export class Playlist {
       <div id="player">
         <div class="playlist-title">
           <h6>{this.name}</h6>
-          <button class="playlist" onClick={ () => this.togglePlaylist() }>
+          <button class="playlist" onClick={() => this.togglePlaylist()}>
             <h6 class="list">
               <stellar-asset name="musical-notes"></stellar-asset>
               list
             </h6>
           </button>
-          <button class="switch-view" onClick={ () => this.toggleAlbumArtView() } data-playing={this.playing}>
+          <button class="switch-view" onClick={() => this.toggleAlbumArtView()} data-playing={this.playing}>
             <h6 class="list">
               {
                 (this.view === "art")
-                ? <stellar-asset name="albums" />
-                : <stellar-asset name="radio" />
+                  ? <stellar-asset name="albums" />
+                  : <stellar-asset name="radio" />
               }
               {
                 (this.view === "art")
-                ? "Art"
-                : "Player"
+                  ? "Art"
+                  : "Player"
               }
             </h6>
           </button>
@@ -295,12 +296,12 @@ export class Playlist {
         </div>
 
         <div class="playlist-playing">
-          <button onClick={ () => { this.handlePlay() }} class="toggle-button" data-playing={this.playing}>
-          {
-            (this.playing)
-            ? <stellar-asset name="pause" />
-            : <stellar-asset name="play" />
-          }
+          <button onClick={() => { this.handlePlay() }} class="toggle-button" data-playing={this.playing}>
+            {
+              (this.playing)
+                ? <stellar-asset name="pause" />
+                : <stellar-asset name="play" />
+            }
           </button>
 
           {!this.load && <stellar-button tag="button" size="tiny" onClick={() => { this.load = true; this.load_songs.emit({}) }}>Load {this.name || "this playlist"}</stellar-button>}
@@ -312,28 +313,28 @@ export class Playlist {
 
           {
             this.load &&
-              <div class="playlist-playing-image">
-                {this.loading && <stellar-progress indeterminate />}
-                {!this.loading && (this.currentTrack.picture !== undefined) && <img src={this.currentTrack.picture} onClick={ () => this.toggleAlbumArtView() } />}
-              </div>
+            <div class="playlist-playing-image">
+              {this.loading && <stellar-progress indeterminate />}
+              {!this.loading && (this.currentTrack.picture !== undefined) && <img src={this.currentTrack.picture} onClick={() => this.toggleAlbumArtView()} />}
+            </div>
           }
 
           {(!this.load && this.currentTrack.picture === undefined) && <skeleton-img width={1024} height={1024} block loading />}
 
-          <web-audio-visualizer type={this.visualizationType} color={this.visualizationColor} onClick={() => {this.cycleVisualizations();}} width={1024} height={this.view === "art" ? 1024 : 256} />
+          <web-audio-visualizer type={this.visualizationType} color={this.visualizationColor} onClick={() => { this.cycleVisualizations(); }} width={1024} height={this.view === "art" ? 1024 : 256} />
 
           <div class={`playlist-progress ${this.load ? "load" : "noload"}`}>
             <h6 id="currentTime">{this.currentTime}</h6>
             <h6 id="totalTime">{this.duration}</h6>
-            <progress id="progress" max="100" value={this.progress_value}></progress>
+            <progress id="progress" max="100" value={this.progressValue}></progress>
           </div>
         </div>
 
         <div id="controls" class="controls">
-          <button onClick={ () => this.previous() } class="button previous">
+          <button onClick={() => this.previous()} class="button previous">
             <stellar-asset name="skip-backward"></stellar-asset>
           </button>
-          <button onClick={ () => this.next() } class="button next">
+          <button onClick={() => this.next()} class="button next">
             <stellar-asset name="skip-forward"></stellar-asset>
           </button>
         </div>

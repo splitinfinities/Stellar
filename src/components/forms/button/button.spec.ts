@@ -1,8 +1,24 @@
+import { newSpecPage } from '@stencil/core/testing';
 import { Button } from './button';
 
-it('should render and respond to changes appropriately', () => {
-    const button = new Button();
-
-    const rendered = button.render();
-    expect(rendered.length).toEqual(6);
-});
+describe('stellar-button', () => {
+    it('should render and respond to changes appropriately', async () => {
+        const page = await newSpecPage({
+            components: [Button],
+            html: `<stellar-button></stellar-button>`,
+        });
+        expect(page.root).toEqualHtml(`
+        <stellar-button>
+            <mock:shadow-root>
+                <a class="button" href="#" target="_self">
+                    <div class="content">
+                        <slot>
+                            Submit
+                        </slot>
+                    </div>
+                </a>
+            </mock:shadow-root>
+        </stellar-button>
+    `);
+    });
+})

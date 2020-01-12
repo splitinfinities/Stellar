@@ -1,6 +1,6 @@
 import { Component, Prop, State, Element, Method, Watch, h } from '@stencil/core';
-import {bars, wave, circle, bars2} from './visualizations';
-import {colors} from '../../../utils'
+import { bars, wave, circle, bars2 } from './visualizations';
+import { colors } from '../../../utils'
 import hexToHsl from 'hex-to-hsl';
 
 @Component({
@@ -12,12 +12,11 @@ import hexToHsl from 'hex-to-hsl';
 export class WebAudioVisualizer {
   @Element() element: HTMLElement;
 
-  @State() canvas: HTMLCanvasElement;
-  @State() canvasCTX: any|WebGLRenderingContext|CanvasRenderingContext2D;
+  @State() canvasCTX: any | WebGLRenderingContext | CanvasRenderingContext2D;
 
   @Prop({ mutable: true, reflect: true }) for: string = "web_audio";
 
-  @Prop({ mutable: true, reflect: true }) type: string|"wave"|"bars"|"circle"|"bars2" = "wave";
+  @Prop({ mutable: true, reflect: true }) type: string | "wave" | "bars" | "circle" | "bars2" = "wave";
   @Prop() smoothing: number = 0.7;
   @Prop() size: number = 1024;
   @Prop() color: string = "white";
@@ -28,7 +27,7 @@ export class WebAudioVisualizer {
   @Prop({ mutable: true, reflect: true }) height: number = 1024;
 
   @State() context: AudioContext;
-  @Prop({mutable: true}) analyser: AnalyserNode;
+  @Prop({ mutable: true }) analyser: AnalyserNode;
   @Prop() renderer: AnalyserNode;
 
   @State() vertex: string;
@@ -41,7 +40,9 @@ export class WebAudioVisualizer {
 
   @State() _bufferLength: AnalyserNode;
   @State() _dataArray: AnalyserNode;
-  @Prop({mutable: true}) _color: any;
+  @Prop({ mutable: true }) _color: any;
+
+  canvas!: HTMLCanvasElement;
 
   componentWillLoad() {
     this.handleColorChange();
@@ -52,7 +53,7 @@ export class WebAudioVisualizer {
   }
 
   @Watch('color')
-  handleColorChange () {
+  handleColorChange() {
     if (["white", "black", "black-alt"].includes(this.color)) {
       this._color = hexToHsl(colors[this.color])
     } else {
@@ -61,7 +62,7 @@ export class WebAudioVisualizer {
   }
 
   @Method()
-  async connect (context: AudioContext, destination?) {
+  async connect(context: AudioContext, destination?) {
     this.context = context;
 
     this.analyser = this.context.createAnalyser();
@@ -80,7 +81,7 @@ export class WebAudioVisualizer {
     return this;
   }
 
-  draw () {
+  draw() {
     this.analyser.smoothingTimeConstant = this.smoothing;
     this.analyser.fftSize = this.size;
 
@@ -112,15 +113,15 @@ export class WebAudioVisualizer {
     this.canvasCTX.fillRect(0, 0, this.canvas.width, this.canvas.height);
   }
 
-  getFrequencyValue (freq) {
+  getFrequencyValue(freq) {
     var nyquist = this.context.sampleRate / 2;
-    var index = Math.round(freq/nyquist * this.freqs.length);
+    var index = Math.round(freq / nyquist * this.freqs.length);
     return this.freqs[index];
   }
 
   render() {
     return (
       <canvas id="canvas" />
-      );
-    }
+    );
   }
+}

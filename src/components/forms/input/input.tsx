@@ -126,8 +126,6 @@ export class Input {
 
   @Prop({mutable: true}) tokenField: any;
 
-  @State() generatedId: string;
-
   @Prop({ mutable: true, reflect: true }) icon: boolean = false;
 
   @Prop({ mutable: true, reflect: true }) capsLock: boolean = false;
@@ -161,8 +159,6 @@ export class Input {
     if (this.type === "password" && this.value) {
       this.getStrongLevel()
     }
-
-    this.generatedId = this.generateId();
 
     if (this.type === "email" || this.type === "password") {
       this.addLightDomInput();
@@ -422,21 +418,6 @@ export class Input {
     this.files = files;
   }
 
-  generateId() {
-    function getRandomInt(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min)) + min;
-    }
-
-    return `input-${getRandomInt(0,1000)}`;
-  }
-
-  @Method()
-  async getId() {
-    return this.generatedId
-  }
-
   @Method()
   async val() {
     return this.value;
@@ -520,7 +501,7 @@ export class Input {
 
   renderLabel() {
     if (this.label) {
-      return (<stellar-label for={this.generatedId} size={this.size}>{this.label}</stellar-label>)
+      return (<stellar-label for={"input"} size={this.size}>{this.label}</stellar-label>)
     }
   }
 
@@ -528,7 +509,7 @@ export class Input {
     if (this.type === "color") {
       return (
         <copy-wrap class="color-picker" align="center" data-invert={this.validateDarkColor()}>
-          <stellar-label for={this.generatedId} size={this.size}>{this.value}</stellar-label>
+          <stellar-label for={"input"} size={this.size}>{this.value}</stellar-label>
         </copy-wrap>
       )
     }
@@ -588,7 +569,7 @@ export class Input {
             {moment(this.value).format(this.visualDateFormat)}
           </div>
 
-          <input class="input" ref={(el) => this.input = el as HTMLInputElement} id={this.generatedId} type="text" name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} value={this.value} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} onKeyDown={(event: KeyboardEvent) => {this.handleKeyDownIncrement(event); this.handleKeyDownDecrement(event); }} />
+          <input class="input" ref={(el) => this.input = el as HTMLInputElement} id={"input"} type="text" name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} value={this.value} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} onKeyDown={(event: KeyboardEvent) => {this.handleKeyDownIncrement(event); this.handleKeyDownDecrement(event); }} />
         </div>
       )
     }
@@ -597,7 +578,7 @@ export class Input {
   renderInput() {
     if (shouldBeAnInput(this.type)) {
       return (
-        <input class="input" ref={(el) => this.input = el as HTMLInputElement} id={this.generatedId} type={this.type} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} value={this.value} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} onKeyDown={(event) => { this.handleInputKeyDown(event) }} />
+        <input class="input" ref={(el) => this.input = el as HTMLInputElement} id={"input"} type={this.type} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} min={this.min} max={this.max} step={this.step} autocomplete={this.autocomplete || this.type} value={this.value} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()} onKeyDown={(event) => { this.handleInputKeyDown(event) }} />
       )
     }
   }
@@ -605,7 +586,7 @@ export class Input {
   renderTextArea() {
     if (this.type === "textarea") {
       return (
-        <textarea class="input" ref={(el) => this.input = el as HTMLTextAreaElement} id={this.generatedId} placeholder={this.placeholder} name={this.name} cols={this.cols} maxlength={this.maxlength} rows={this.rows} disabled={this.disabled} readonly={this.readonly} autofocus={this.autofocus} spellcheck={this.spellcheck} required={this.required} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()}>{this.value}</textarea>
+        <textarea class="input" ref={(el) => this.input = el as HTMLTextAreaElement} id={"input"} placeholder={this.placeholder} name={this.name} cols={this.cols} maxlength={this.maxlength} rows={this.rows} disabled={this.disabled} readonly={this.readonly} autofocus={this.autofocus} spellcheck={this.spellcheck} required={this.required} onInput={() => this.handleInput()} onChange={ () => this.handleChange()} onFocus={ () => this.handleFocus()} onBlur={() => this.handleBlur()}>{this.value}</textarea>
       )
     }
   }
@@ -616,7 +597,7 @@ export class Input {
         <div class="file-wrapper">
           <div class="upload-card">
             <section>
-              <input class="input" ref={(el) => this.input = el as HTMLInputElement} id={this.generatedId} type={this.type} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} onClick={(e) => { e.stopPropagation(); }} onInput={() => this.handleInput()} onChange={() => this.handleChange()} multiple={this.multiple} accept={this.accept} onFocus={() => this.handleFocus()} onBlur={() => this.handleBlur()} />
+              <input class="input" ref={(el) => this.input = el as HTMLInputElement} id={"input"} type={this.type} name={this.name} placeholder={this.placeholder} required={this.required} maxlength={this.maxlength} autofocus={this.autofocus} readonly={this.readonly} disabled={this.disabled} onClick={(e) => { e.stopPropagation(); }} onInput={() => this.handleInput()} onChange={() => this.handleChange()} multiple={this.multiple} accept={this.accept} onFocus={() => this.handleFocus()} onBlur={() => this.handleBlur()} />
 
               {this._fileLabel && <h3>{this._fileLabel}</h3>}
 

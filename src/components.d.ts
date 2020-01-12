@@ -279,9 +279,9 @@ export namespace Components {
   }
   interface StellarClock {
     'animated': boolean;
-    'between': string|Date;
+    'between': string | Date;
     'size': number;
-    'time': string|Date;
+    'time': string | Date;
   }
   interface StellarCode {
     'clipboard': () => Promise<void>;
@@ -706,13 +706,13 @@ export namespace Components {
     'pause': () => Promise<void>;
     'play': (skipDefault?: boolean) => Promise<void>;
     'playing': boolean;
-    'playlist': "show"|"hide";
+    'playlist': "show" | "hide";
     'prepare': (element: any) => Promise<void>;
     'previous': () => Promise<void>;
     'remember': boolean;
-    'view': "playlist"|"art";
+    'view': "playlist" | "art";
     'visualizationColor': string;
-    'visualizationType': "bars"|"bars2"|"wave"|"circle";
+    'visualizationType': "bars" | "bars2" | "wave" | "circle";
   }
   interface StellarProgress {
     'blurable': boolean;
@@ -1196,7 +1196,7 @@ export namespace Components {
     'renderer': AnalyserNode;
     'size': number;
     'smoothing': number;
-    'type': string|"wave"|"bars"|"circle"|"bars2";
+    'type': string | "wave" | "bars" | "circle" | "bars2";
     'width': number;
   }
   interface WebAudioVisualizerShader {
@@ -2154,9 +2154,9 @@ declare namespace LocalJSX {
   }
   interface StellarClock {
     'animated'?: boolean;
-    'between'?: string|Date;
+    'between'?: string | Date;
     'size'?: number;
-    'time'?: string|Date;
+    'time'?: string | Date;
   }
   interface StellarCode {
     'codeString'?: string;
@@ -2570,11 +2570,11 @@ declare namespace LocalJSX {
     'name'?: string;
     'onLoad_songs'?: (event: CustomEvent<any>) => void;
     'playing'?: boolean;
-    'playlist'?: "show"|"hide";
+    'playlist'?: "show" | "hide";
     'remember'?: boolean;
-    'view'?: "playlist"|"art";
+    'view'?: "playlist" | "art";
     'visualizationColor'?: string;
-    'visualizationType'?: "bars"|"bars2"|"wave"|"circle";
+    'visualizationType'?: "bars" | "bars2" | "wave" | "circle";
   }
   interface StellarProgress {
     'blurable'?: boolean;
@@ -3008,7 +3008,7 @@ declare namespace LocalJSX {
     'renderer'?: AnalyserNode;
     'size'?: number;
     'smoothing'?: number;
-    'type'?: string|"wave"|"bars"|"circle"|"bars2";
+    'type'?: string | "wave" | "bars" | "circle" | "bars2";
     'width'?: number;
   }
   interface WebAudioVisualizerShader {
