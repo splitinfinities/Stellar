@@ -1,14 +1,17 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
+import { Slide } from './slide';
 
-describe('stellar-item', () => {
+describe('stellar-slide', () => {
 	it('should render and respond to changes appropriately', async () => {
 		const page = await newSpecPage({
-			components: [Item],
-			html: `<stellar-item></stellar-item>`,
+			components: [Slide],
+			html: `<stellar-slide></stellar-slide>`,
 		});
+
 		expect(page.root).toEqualHtml(`
-       
-    `);
+			<stellar-slide style=\"--width: auto;\">
+				<stellar-intersection multiple=\"\"></stellar-intersection>
+			</stellar-slide>
+		`);
 	});
 })

@@ -1,11 +1,11 @@
 import { Component, Prop, State, Element, Method, Event, EventEmitter, h } from '@stencil/core';
 import { leadingZeroIndex, relPathAsAbs } from "../../../utils";
-import './vendor/jsmediatags.min.js';
+import './vendor/jsmediatags';
 import smallIndexedDb from 'small-indexeddb'
 
 @Component({
-    tag: 'stellar-song',
-    assetsDirs: ['./vendor'],
+	tag: 'stellar-song',
+	assetsDirs: ['./vendor'],
 	styleUrl: 'song.css',
 	shadow: true
 })
@@ -13,11 +13,11 @@ export class Song {
 	@Element() element: HTMLElement;
 
 	@Prop() src: string;
-	@Prop({reflect: true, mutable: true}) playing: boolean;
+	@Prop({ reflect: true, mutable: true }) playing: boolean;
 	@Prop() artwork: boolean;
 
 	@State() _index: number = 0;
-	@State() player: HTMLStellarPlaylistElement|any;
+	@State() player: HTMLStellarPlaylistElement | any;
 	@State() title: string;
 	@State() album: string;
 	@State() artist: string;
@@ -28,7 +28,7 @@ export class Song {
 	@Event() songChanged: EventEmitter;
 	@Event() loaded: EventEmitter;
 
-	get url () {
+	get url() {
 		if (this.src.startsWith('http')) {
 			return this.src
 		} else if (this.src.startsWith('.')) {
@@ -36,30 +36,24 @@ export class Song {
 		} else {
 			return window.location.origin + this.src
 		}
+	}
 
-    }
-
-	async componentWillLoad () {
+	async componentWillLoad() {
 		this.player = this.element.closest('stellar-playlist');
 		if (this.player.load) {
 			this.load()
 		}
-
 
 		this.player.addEventListener('load_songs', () => {
 			this.load()
 		})
 	}
 
-	componentDidLoad () {
-
-	}
-
 	songChangedHandler() {
 		this.songChanged.emit(this._index);
 	}
 
-	updateDetails (details) {
+	updateDetails(details) {
 		this.title = details.title;
 		this.album = details.album;
 		this.genre = details.genre;
@@ -68,10 +62,10 @@ export class Song {
 	}
 
 	@Method()
-	async load () {
-        const transaction = await smallIndexedDb('songs');
+	async load() {
+		const transaction = await smallIndexedDb('songs');
 
-        const details = await transaction('readonly', store => store.get(this.src))
+		const details = await transaction('readonly', store => store.get(this.src))
 		if (!details) {
 			window["jsmediatags"].read(this.url, {
 				onSuccess: async (tag) => {
@@ -81,7 +75,7 @@ export class Song {
 						genre: tag.tags.genre,
 						artist: tag.tags.artist,
 						picture: tag.tags.picture
-                    };
+					};
 
 					if (tag.tags.picture) {
 						var base64String = "";
@@ -92,15 +86,15 @@ export class Song {
 
 						var base64 = "data:image/jpeg;base64," + window.btoa(base64String);
 
-                        itemToSave.picture = base64;
+						itemToSave.picture = base64;
 
-                        await transaction('readwrite', store => store.put(base64, itemToSave.album + "_picture"))
+						await transaction('readwrite', store => store.put(base64, itemToSave.album + "_picture"))
 
 					} else {
 						itemToSave.picture = undefined;
-                    }
+					}
 
-                    await transaction('readwrite', store => store.put(JSON.stringify(itemToSave), this.src))
+					await transaction('readwrite', store => store.put(JSON.stringify(itemToSave), this.src))
 
 					this.updateDetails(itemToSave);
 				},
@@ -110,18 +104,18 @@ export class Song {
 				}
 			});
 		} else {
-            var songDetails = JSON.parse(details);
-            const picture = await transaction('readonly', store => store.get(songDetails.album + "_picture"))
+			var songDetails = JSON.parse(details);
+			const picture = await transaction('readonly', store => store.get(songDetails.album + "_picture"))
 			songDetails.picture = picture;
 
 			this.updateDetails(songDetails);
 		}
 
-		this.loaded.emit({el: this.element});
+		this.loaded.emit({ el: this.element });
 	}
 
 	@Method()
-	async details () {
+	async details() {
 		return {
 			'title': this.title,
 			'album': this.album,
@@ -132,7 +126,7 @@ export class Song {
 	}
 
 	@Method()
-	async preload () {
+	async preload() {
 		var audio = new Audio();
 		audio.src = this.src;
 		audio.preload = "auto";
@@ -166,11 +160,11 @@ export class Song {
 
 	render() {
 		return (
-			<button onClick={ () => this.play() }>
-                <span class="index">
-                    {!this.playing && leadingZeroIndex(this._index)}
-                    {this.playing && <stellar-asset name="play" />}
-                </span>
+			<button onClick={() => this.play()}>
+				<span class="index">
+					{!this.playing && leadingZeroIndex(this._index)}
+					{this.playing && <stellar-asset name="play" />}
+				</span>
 				<div class="tracklisting">
 					{this.artwork && <img src={this.picture} class="preview-image" />}
 					<h2><span>{this.title || "Loading..."}</span> / {this.artist || "Loading..."}</h2>

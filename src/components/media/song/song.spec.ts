@@ -1,14 +1,15 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
+import { Song } from './song';
 
-describe('stellar-item', () => {
-	it('should render and respond to changes appropriately', async () => {
+describe('stellar-song', () => {
+	xit('should render and respond to changes appropriately', async () => {
 		const page = await newSpecPage({
-			components: [Item],
-			html: `<stellar-item></stellar-item>`,
+			components: [Song],
+			html: `	<stellar-song src="https://ui.splitinfinities.com/audio/playlist/01%20The%20Leaves%20Were%20Falling.mp3"></stellar-song>`,
 		});
+
 		expect(page.root).toEqualHtml(`
-       
-    `);
+			
+		`);
 	});
 })

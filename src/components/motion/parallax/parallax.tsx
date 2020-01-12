@@ -2,8 +2,8 @@ import { Component, h, Prop, Element, State } from '@stencil/core';
 import basicScroll from 'basicscroll'
 
 @Component({
-  tag: 'stellar-parallax',
-  styleUrl: 'parallax.css'
+	tag: 'stellar-parallax',
+	styleUrl: 'parallax.css'
 })
 export class Parallax {
 	@Element() el: HTMLElement;
@@ -14,18 +14,20 @@ export class Parallax {
 
 	componentWillLoad() {
 		document.querySelectorAll('stellar-parallax-section').forEach((elem) => {
-			this.easeBoxes.push(basicScroll.create({
-			  elem,
-			  from: 'top-bottom',
-			  to: 'bottom-top',
-			  direct: true,
-			  props: {
-				'--ty': {
-				  from: `${-2 * elem.speed}%`,
-				  to: `${2 * elem.speed}%`
-				}
-			  }
-			}))
+			if (basicScroll) {
+				this.easeBoxes.push(basicScroll.create({
+					elem,
+					from: 'top-bottom',
+					to: 'bottom-top',
+					direct: true,
+					props: {
+						'--ty': {
+							from: `${-2 * elem.speed}%`,
+							to: `${2 * elem.speed}%`
+						}
+					}
+				}))
+			}
 		});
 
 		this.easeBoxes.forEach((instance) => {
@@ -40,7 +42,7 @@ export class Parallax {
 		}
 	}
 
-	render () {
+	render() {
 		return <slot />
 	}
 }

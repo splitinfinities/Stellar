@@ -5,9 +5,8 @@ import { Component, Element, Prop, State, h, Host, Listen } from '@stencil/core'
   styleUrl: 'simple-slides.css',
   shadow: true
 })
-export class Slides {
+export class SimpleSlides {
   @Element() el!: HTMLElement
-
 
   /**
    * Show or hide the pager
@@ -34,7 +33,7 @@ export class Slides {
    */
   @State() last: boolean = false;
 
-  slides;
+  slides!: NodeListOf<HTMLStellarSlideElement>;
 
   componentWillLoad() {
     this.slides = this.el.querySelectorAll("stellar-slide");

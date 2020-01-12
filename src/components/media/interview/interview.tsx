@@ -1,7 +1,7 @@
 import { Component, Element, State, Prop, Method, Listen, h } from '@stencil/core';
 import ezClipboard from 'ez-clipboard';
 import properties from 'css-custom-properties';
-import {get_interview_lines, update_interview_lines} from './helpers';
+import { get_interview_lines, update_interview_lines } from './helpers';
 import { delay } from '../../../utils';
 
 @Component({
@@ -15,13 +15,13 @@ export class Interview {
 
   @Prop() src: string;
   @Prop() color: string = "white";
-  @Prop({mutable: true}) playing: boolean = false;
+  @Prop({ mutable: true }) playing: boolean = false;
 
-  @Prop({mutable: true}) width: number = 800;
-  @Prop({mutable: true}) height: number = 800;
-  @Prop({mutable: true}) aspectRatio: number = 100;
+  @Prop({ mutable: true }) width: number = 800;
+  @Prop({ mutable: true }) height: number = 800;
+  @Prop({ mutable: true }) aspectRatio: number = 100;
 
-  @Prop({mutable: true}) visualization: "circle"|"bars"|"wave"|"bars2" = "bars2";
+  @Prop({ mutable: true }) visualization: "circle" | "bars" | "wave" | "bars2" = "bars2";
 
   @State() audio: HTMLWebAudioElement;
   @State() audio_source: HTMLWebAudioSourceElement;
@@ -154,7 +154,7 @@ export class Interview {
     ezClipboard.copyPlain(this.current);
   }
 
-  render () {
+  render() {
     return (
       <div class="card" onDblClick={() => { this.handleClick() }}>
         {!this.visible && <div>

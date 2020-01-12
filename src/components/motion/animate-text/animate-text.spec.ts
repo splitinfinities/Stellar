@@ -1,14 +1,15 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
+import { AnimateText } from './animate-text';
 
-describe('stellar-item', () => {
-	it('should render and respond to changes appropriately', async () => {
+describe('stellar-animate-text', () => {
+	xit('should render and respond to changes appropriately', async () => {
 		const page = await newSpecPage({
-			components: [Item],
-			html: `<stellar-item></stellar-item>`,
+			components: [AnimateText],
+			html: `<stellar-animate-text>Awesome!!</stellar-animate-text>`,
 		});
+
 		expect(page.root).toEqualHtml(`
-       
-    `);
+			
+		`);
 	});
 })

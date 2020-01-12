@@ -1,14 +1,19 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
+import { SkeletonText } from './skeleton-text';
 
-describe('stellar-item', () => {
+describe('skeleton-text', () => {
 	it('should render and respond to changes appropriately', async () => {
 		const page = await newSpecPage({
-			components: [Item],
-			html: `<stellar-item></stellar-item>`,
+			components: [SkeletonText],
+			html: `<skeleton-text></skeleton-text>`,
 		});
+
 		expect(page.root).toEqualHtml(`
-       
-    `);
+			<skeleton-text as=\"p\" width=\"100\" style=\"--width: 100%;\">
+				<span>
+					<stellar-intersection multiple=\"\"></stellar-intersection>
+				</span>
+			</skeleton-text>
+		`);
 	});
 })

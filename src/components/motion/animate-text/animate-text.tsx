@@ -38,7 +38,7 @@ export class AnimateText {
     this.letters = this.element.querySelectorAll('.letter');
 
     this.letters.forEach((e, i) => {
-      properties.set({"--iteration": ((i - 1) <= 0) ? 0 : (i - 2)}, e)
+      properties.set({ "--iteration": ((i - 1) <= 0) ? 0 : (i - 2) }, e)
     });
   }
 

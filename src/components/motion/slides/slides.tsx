@@ -1,5 +1,5 @@
 import { Component, Element, Event, EventEmitter, Method, Prop, State, Watch, h, Host } from '@stencil/core'
-import { Swiper }  from './vendor/swiper.js'
+import { Swiper } from './vendor/swiper'
 import { blurringEase } from '../../../utils';
 
 @Component({
@@ -85,9 +85,9 @@ export class Slides {
    */
   @Prop() options: any // SwiperOptions  // TODO
 
-  @Prop({reflect: true}) effect: "slide"|"fade"|"cube"|"coverflow"|"flip" = "slide"
+  @Prop({ reflect: true }) effect: "slide" | "fade" | "cube" | "coverflow" | "flip" = "slide"
   @Prop() speed: number = 300
-  @Prop() direction: "horizontal"|"vertical" = "horizontal"
+  @Prop() direction: "horizontal" | "vertical" = "horizontal"
   @Prop() autoHeight: boolean = false
   @Prop() nested: boolean = false
   @Prop() pagination: boolean = false

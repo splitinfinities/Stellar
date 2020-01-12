@@ -8,22 +8,22 @@ import { properties } from '../../../utils';
 })
 export class Follow {
   @Element() element: HTMLElement;
-  @Prop() type: "scroll"|"cursor" = "cursor";
+  @Prop() type: "scroll" | "cursor" = "cursor";
   @Prop() distance: number = 0.5;
   @Prop() padding: number = 40;
 
-  componentWillLoad () {
+  componentWillLoad() {
     this.update()
-    properties.set({"--left": `50%`, "--top": `-3000px`}, this.element)
+    properties.set({ "--left": `50%`, "--top": `-3000px` }, this.element)
   }
 
-  componentDidLoad () {
+  componentDidLoad() {
     setTimeout(() => {
       this.update()
     }, 200)
   }
 
-  get offset () {
+  get offset() {
     return window.innerHeight * this.distance
   }
 
@@ -38,27 +38,27 @@ export class Follow {
   }
 
   attachScroll() {
-    properties.set({"--top": `${window.pageYOffset + this.offset}px`}, this.element);
+    properties.set({ "--top": `${window.pageYOffset + this.offset}px` }, this.element);
 
     // @ts-ignore
     window.addEventListener("scroll", () => {
-      properties.set({"--top": `${window.pageYOffset + this.offset}px`}, this.element)
+      properties.set({ "--top": `${window.pageYOffset + this.offset}px` }, this.element)
     }, { passive: true })
   }
 
   attachCursor() {
     // @ts-ignore
     window.addEventListener("mousemove", (e) => {
-      properties.set({"--top": `${e.clientY}px`}, this.element);
+      properties.set({ "--top": `${e.clientY}px` }, this.element);
 
-      properties.set({"--left": `${this.minmaxx(e.clientX)}px`}, this.element)
+      properties.set({ "--left": `${this.minmaxx(e.clientX)}px` }, this.element)
     }, { passive: true })
 
     window.addEventListener("deviceorientation", (e) => {
       const z = Math.abs(e.alpha);
       const value = z / 360;
       const percentage = value * 100;
-      properties.set({"--left": `${this.minmaxx(percentage)}px`}, this.element)
+      properties.set({ "--left": `${this.minmaxx(percentage)}px` }, this.element)
     }, true);
 
   }

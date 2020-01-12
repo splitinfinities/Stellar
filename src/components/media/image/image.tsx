@@ -1,6 +1,6 @@
 import { Component, Prop, State, Element, Method, Watch, h } from '@stencil/core';
 import { delay, properties, mediumZoom } from '../../../utils';
-import { ColorThief } from './vendor/colorThief.js';
+import { ColorThief } from './vendor/colorThief';
 
 @Component({
   tag: 'stellar-image',
@@ -74,27 +74,29 @@ export class Picture {
   }
 
   getPictureColor() {
-    const img = new Image(80, 80);
+    if (window.Image) {
+      const img = new Image(80, 80);
 
-    img.addEventListener('load', () => {
-      const cf = new ColorThief();
-      this.palette = cf.getColor(img)
+      img.addEventListener('load', () => {
+        const cf = new ColorThief();
+        this.palette = cf.getColor(img)
 
-      properties.set({
-        "--background-color": `rgb(${this.palette[0]}, ${this.palette[1]}, ${this.palette[2]})`
-      }, this.element);
+        properties.set({
+          "--background-color": `rgb(${this.palette[0]}, ${this.palette[1]}, ${this.palette[2]})`
+        }, this.element);
 
-      this.bg = `rgb(${this.palette[0]}, ${this.palette[1]}, ${this.palette[2]})`;
+        this.bg = `rgb(${this.palette[0]}, ${this.palette[1]}, ${this.palette[2]})`;
 
-      if (this.zoom) {
-        this.zoom.update({
-          background: this.bg
-        })
-      }
-    }, false);
+        if (this.zoom) {
+          this.zoom.update({
+            background: this.bg
+          })
+        }
+      }, false);
 
-    img.src = this.poster;
-    img.crossOrigin = "Anonymous";
+      img.src = this.poster;
+      img.crossOrigin = "Anonymous";
+    }
   }
 
   setBG() {

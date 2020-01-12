@@ -1,14 +1,19 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
+import { Follow } from './follow';
 
-describe('stellar-item', () => {
+describe('stellar-follow', () => {
 	it('should render and respond to changes appropriately', async () => {
 		const page = await newSpecPage({
-			components: [Item],
-			html: `<stellar-item></stellar-item>`,
+			components: [Follow],
+			html: `<stellar-follow></stellar-follow>`,
 		});
+
 		expect(page.root).toEqualHtml(`
-       
-    `);
+			<stellar-follow style=\"--left: 50%; --top: -3000px;\">
+				<mock:shadow-root>
+					<slot></slot>
+				</mock:shadow-root>
+			</stellar-follow>
+		`);
 	});
 })

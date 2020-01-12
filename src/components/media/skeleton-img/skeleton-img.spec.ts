@@ -1,14 +1,20 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
+import { SkeletonImg } from './skeleton-img';
 
-describe('stellar-item', () => {
+describe('skeleton-img', () => {
 	it('should render and respond to changes appropriately', async () => {
 		const page = await newSpecPage({
-			components: [Item],
-			html: `<stellar-item></stellar-item>`,
+			components: [SkeletonImg],
+			html: `<skeleton-img></skeleton-img>`,
 		});
+
 		expect(page.root).toEqualHtml(`
-       
-    `);
+			<skeleton-img height=\"300\" width=\"600\" style=\"--width: 600px; --height: 300px;\">
+				<svg height=\"300\" width=\"600\">
+					<rect height=\"300\" width=\"600\"></rect>
+				</svg>
+				<stellar-intersection multiple=\"\"></stellar-intersection>
+			</skeleton-img>
+		`);
 	});
 })

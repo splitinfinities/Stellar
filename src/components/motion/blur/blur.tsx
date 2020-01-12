@@ -1,5 +1,4 @@
-import { Component, Element, Prop, Method, h, Host } from '@stencil/core';
-import properties from 'css-custom-properties'
+import { Component, Element, Prop, h, Host } from '@stencil/core';
 
 @Component({
   tag: 'stellar-blur',
@@ -8,14 +7,20 @@ import properties from 'css-custom-properties'
 export class Blur {
   @Element() element: HTMLElement;
 
-  @Prop({mutable: true, reflect: true}) vertical: number = 0;
-  @Prop({mutable: true, reflect: true}) horizontal: number = 0;
+  @Prop({ mutable: true, reflect: true }) vertical: number = 0;
+  @Prop({ mutable: true, reflect: true }) horizontal: number = 0;
 
   generatedId!: string;
 
+  componentWillLoad() {
+    if (this.supported()) {
+      this.generatedId = this.element.id || this.generateId()
+    }
+  }
+
   supported_match() {
     return navigator.userAgent.toLowerCase().indexOf('firefox') === -1 &&
-        !(/iPad|iPhone|iPod/.test(navigator.platform))
+      !(/iPad|iPhone|iPod/.test(navigator.platform))
   }
 
   supported() {
@@ -41,26 +46,9 @@ export class Blur {
 
     try {
       sessionStorage.clear()
-    } catch(e) { }
+    } catch (e) { }
 
     return criteria()
-  }
-
-  @Method()
-  async setBlurFilter() {
-    properties.set({
-      "--blur-url": `url('#${this.generatedId}-filter')`
-    }, this.element);
-  }
-
-  componentWillLoad() {
-    if (this.supported()) {
-      this.generatedId = this.element.id || this.generateId()
-
-      setTimeout(() => {
-        this.setBlurFilter()
-      }, 10)
-    }
   }
 
   generateId() {
@@ -70,11 +58,11 @@ export class Blur {
       return Math.floor(Math.random() * (max - min)) + min;
     }
 
-    return `blur-${getRandomInt(0,1000)}`;
+    return `blur-${getRandomInt(0, 1000)}`;
   }
 
   render() {
-    return <Host id={this.element.id || this.generatedId}>
+    return <Host id={this.element.id || this.generatedId} style={{ "--blur-url": `url('#${this.generatedId}-filter')` }}>
       <slot />
       {this.supported() && <svg class="blur-svg">
         <defs>

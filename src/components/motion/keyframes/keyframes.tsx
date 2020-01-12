@@ -6,13 +6,13 @@ import { properties } from '../../../utils';
     styleUrl: 'keyframes.css',
     shadow: true
 })
-export class Follow {
+export class Keyframes {
     @Element() element: HTMLElement;
 
     @Prop() src: string;
     @Prop() width: number = 400;
     @Prop() height: number = 400;
-    @Prop({reflect: true}) frame: number = 1;
+    @Prop({ reflect: true }) frame: number = 1;
 
     componentWillLoad() {
         this.update()
@@ -29,6 +29,6 @@ export class Follow {
     }
 
     render() {
-        return <div class="background" style={{"background-image": `url(${this.src})`}}></div>
+        return <div class="background" style={{ "background-image": `url(${this.src})` }}></div>
     }
 }

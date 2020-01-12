@@ -7,9 +7,9 @@ const prefixedTransformProp = () => {
     }
 
     for (let v in vendors) {
-        const prop = `${vendors[ v ]}Transform`
+        const prop = `${vendors[v]}Transform`
 
-        if (typeof el.style[ prop ] !== 'undefined') {
+        if (typeof el.style[prop] !== 'undefined') {
             return prop
         }
     }
@@ -18,7 +18,7 @@ const prefixedTransformProp = () => {
 const difference = (a, b) => Math.abs(a - b)
 const limit = (min, max, value) => Math.max(Math.min(value, max), min)
 const interval = (start, end, current) => difference(start, current) / difference(start, end)
-const interpolate = (start, end, progress) => {const p = difference(start, end) * progress; return start > end ? start - p : start + p}
+const interpolate = (start, end, progress) => { const p = difference(start, end) * progress; return start > end ? start - p : start + p }
 
 export const get_interview_lines = (element) => {
     const els: Array<HTMLElement> = Array.from(element.querySelectorAll('.line'))
@@ -115,7 +115,7 @@ export const update_interview_lines = (lines, cache, time) => {
             }
 
             el.style[transformProp] =
-            `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`
+                `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`
 
             if (y < s) {
                 cache.set(el, 'before')

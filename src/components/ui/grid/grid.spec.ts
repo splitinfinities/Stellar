@@ -7,8 +7,9 @@ describe('stellar-item', () => {
 			components: [Item],
 			html: `<stellar-item></stellar-item>`,
 		});
+
 		expect(page.root).toEqualHtml(`
-       
-    `);
+			
+		`);
 	});
 })

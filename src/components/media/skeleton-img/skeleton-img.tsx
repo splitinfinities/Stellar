@@ -1,4 +1,4 @@
-import { Component, Element, Prop, h } from '@stencil/core';
+import { Component, Element, Prop, h, Host } from '@stencil/core';
 import properties from 'css-custom-properties'
 
 @Component({
@@ -14,15 +14,6 @@ export class SkeletonImg {
 	@Prop({ reflect: true }) loading: boolean = false;
 	@Prop({ reflect: true }) icon: boolean = false;
 
-	componentWillLoad() {
-		if (!this.block) {
-			properties.set({
-				'--width': `${this.width}px`,
-				'--height': `${this.height}px`
-			}, this.element)
-		}
-	}
-
 	in() {
 		this.element.classList.add('visible')
 	}
@@ -32,12 +23,12 @@ export class SkeletonImg {
 	}
 
 	render() {
-		return [
-			this.loading && this.icon && <stellar-asset name="spinning-bubbles" color="gray25"></stellar-asset>,
+		return <Host style={!this.block && { '--width': `${this.width}px`, '--height': `${this.height}px` }}>
+			{this.loading && this.icon && <stellar-asset name="spinning-bubbles" color="gray25"></stellar-asset>}
 			<svg width={this.width} height={this.height}>
 				<rect width={this.width} height={this.height} />
-			</svg>,
+			</svg>
 			<stellar-intersection element={this.element} multiple in={this.in.bind(this)} out={this.out.bind(this)} />
-		];
+		</Host>;
 	}
 }

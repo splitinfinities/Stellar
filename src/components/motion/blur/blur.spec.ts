@@ -1,26 +1,23 @@
+import { newSpecPage } from '@stencil/core/testing';
 import { Blur } from './blur';
 
-it('should render and respond to changes appropriately', () => {
-  const blur = new Blur();
+describe('stellar-blur', () => {
+	it('should render and respond to changes appropriately', async () => {
+		const page = await newSpecPage({
+			components: [Blur],
+			html: `<stellar-blur id="nice"></stellar-blur>`,
+		});
 
-  expect(blur.vertical).toBe(0);
-  expect(blur.horizontal).toBe(0);
-
-  blur.vertical = 10;
-});
-
-
-import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
-
-describe('stellar-item', () => {
-  it('should render and respond to changes appropriately', async () => {
-    const page = await newSpecPage({
-      components: [Item],
-      html: `<stellar-item></stellar-item>`,
-    });
-    expect(page.root).toEqualHtml(`
-       
-    `);
-  });
+		expect(page.root).toEqualHtml(`
+			<stellar-blur horizontal=\"0\" id=\"nice\" vertical=\"0\" style="--blur-url: url('#nice-filter');">
+				<svg class=\"blur-svg\">
+					<defs>
+						<filter id=\"nice-filter\">
+							<feGaussianBlur id=\"nice-gaussian\" in=\"SourceGraphic\" stdDeviation=\"0,0\"></feGaussianBlur>
+						</filter>
+					</defs>
+				</svg>
+			</stellar-blur>
+		`);
+	});
 })
