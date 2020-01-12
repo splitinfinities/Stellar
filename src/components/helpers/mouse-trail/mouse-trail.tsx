@@ -12,7 +12,7 @@ export class StellarMouseTrail {
   @Prop() threedee: boolean = false;
 
   @State() dots: Dot[] = [];
-  @State() mouse: {x: number, y: number} = { x: 0, y: 0 };
+  @State() mouse: { x: number, y: number } = { x: 0, y: 0 };
 
   componentWillLoad() {
     const el = this.element.querySelector('*:first-of-type');
@@ -43,12 +43,12 @@ export class StellarMouseTrail {
     });
   }
 
-  animate () {
+  animate() {
     this.draw();
     requestAnimationFrame(this.animate.bind(this));
   }
 
-  @Listen('mousemove', {target: "window"})
+  @Listen('mousemove', { target: "window" })
   handleMouseMove(event) {
     this.mouse.x = event.clientX;
     this.mouse.y = event.clientY;
@@ -62,19 +62,19 @@ class Dot {
 
   public node;
 
-  constructor(element, threedee, count, current) {
-      var node = element.cloneNode();
-      node.className = "stellar-mouse-trail-element";
-      if (threedee) {
-        this.z = count - current;
-      } else {
-        node.style.zIndex = count - current;
-      }
-      document.body.appendChild(node);
-      this.node = node;
+  constructor (element, threedee, count, current) {
+    var node = element.cloneNode();
+    node.className = "stellar-mouse-trail-element";
+    if (threedee) {
+      this.z = count - current;
+    } else {
+      node.style.zIndex = count - current;
+    }
+    document.body.appendChild(node);
+    this.node = node;
   }
 
-  draw = function() {
+  draw = function () {
     this.node.style.transform = `translate3d(calc(${this.x}px - 50%), calc(${this.y}px - 50%), ${this.z}px)`;
   };
 };

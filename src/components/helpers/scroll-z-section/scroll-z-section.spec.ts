@@ -1,14 +1,13 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
+import { ScrollZSection } from './scroll-z-section';
 
-describe('stellar-item', () => {
+describe('stellar-scroll-z-section', () => {
 	it('should render and respond to changes appropriately', async () => {
 		const page = await newSpecPage({
-			components: [Item],
-			html: `<stellar-item></stellar-item>`,
+			components: [ScrollZSection],
+			html: `<stellar-scroll-z-section></stellar-scroll-z-section>`,
 		});
-		expect(page.root).toEqualHtml(`
-       
-    `);
+
+		expect(page.root).toEqualHtml(`<stellar-scroll-z-section></stellar-scroll-z-section>`);
 	});
 })

@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Method, Event, EventEmitter, h} from '@stencil/core';
+import { Component, Prop, State, Element, Method, Event, EventEmitter, h } from '@stencil/core';
 import { RouterHistory, LocationSegments, injectHistory } from '@stencil/router';
 import { delay } from '../../../utils';
 import Tunnel from '../../theme';
@@ -10,28 +10,28 @@ import Tunnel from '../../theme';
 })
 export class Item {
   @Element() element: HTMLElement;
-  @Prop({mutable: true}) size: string;
-  @Prop({reflect: true, mutable: true}) value: string;
-  @Prop({reflect: true, mutable: true}) valueLabel: string;
-  @Prop({reflect: true, mutable: true}) type: "a"|"button"|"stencil-route-link" = "button";
-  @Prop({reflect: true, mutable: true}) label: string;
-  @Prop({reflect: true, mutable: true}) href: string = "#";
+  @Prop({ mutable: true }) size: string;
+  @Prop({ reflect: true, mutable: true }) value: string;
+  @Prop({ reflect: true, mutable: true }) valueLabel: string;
+  @Prop({ reflect: true, mutable: true }) type: "a" | "button" | "stencil-route-link" = "button";
+  @Prop({ reflect: true, mutable: true }) label: string;
+  @Prop({ reflect: true, mutable: true }) href: string = "#";
 
-  @Prop({reflect: true, mutable: true}) wrap: boolean = false;
-  @Prop({reflect: true, mutable: true}) fit: boolean = false;
-  @Prop({reflect: true, mutable: true}) simple: boolean = false;
-  @Prop({reflect: true, mutable: true}) danger: boolean = false;
+  @Prop({ reflect: true, mutable: true }) wrap: boolean = false;
+  @Prop({ reflect: true, mutable: true }) fit: boolean = false;
+  @Prop({ reflect: true, mutable: true }) simple: boolean = false;
+  @Prop({ reflect: true, mutable: true }) danger: boolean = false;
 
   /**
    * Sets the button or link as an outlined button.
    */
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
 
-  @Prop({reflect: true, mutable: true}) selected: boolean = false;
-  @Prop({reflect: true, mutable: true}) multiple: boolean = false;
-  @Prop({reflect: true, mutable: true}) selectable: boolean = false;
-  @Prop({reflect: true, mutable: true}) focused: boolean = false;
-  @Prop({reflect: true, mutable: true}) selectTitle: boolean = false;
+  @Prop({ reflect: true, mutable: true }) selected: boolean = false;
+  @Prop({ reflect: true, mutable: true }) multiple: boolean = false;
+  @Prop({ reflect: true, mutable: true }) selectable: boolean = false;
+  @Prop({ reflect: true, mutable: true }) focused: boolean = false;
+  @Prop({ reflect: true, mutable: true }) selectTitle: boolean = false;
 
   @Prop() route: boolean = false;
   @Prop() history: RouterHistory;
@@ -139,7 +139,7 @@ export class Item {
   }
 
   @Method()
-  async select_item(state?: {selected: boolean}) {
+  async select_item(state?: { selected: boolean }) {
     if (this.selectable) {
       if (state) {
         if (this.selected !== state.selected) {
@@ -153,13 +153,13 @@ export class Item {
     }
   }
 
-  render () {
+  render() {
     return (
       <this.type class="button" type="button" href={this.href} url={this.href} tabindex="0" value={this.value} title={this.label} onClick={(e) => this.handleClick(e)} onBlur={() => this.handleBlur()} onFocus={() => this.handleFocus()}>
         <div class="content">
           <slot />
         </div>
-        { (this.selected || this.multiple) && <stellar-asset class={this.classes()} name="checkmark" block></stellar-asset> }
+        {(this.selected || this.multiple) && <stellar-asset class={this.classes()} name="checkmark" block></stellar-asset>}
       </this.type>
     )
   }

@@ -4,14 +4,14 @@ import { Component, Element, Prop, Watch, State, Event, EventEmitter } from '@st
     tag: 'stellar-context',
     shadow: true
 })
-export class Chart {
+export class Context {
     @Element() element: HTMLElement;
     @Prop() time: boolean;
     @Prop() weather: boolean;
     @Prop() apikey: string = "92674815cd1092788c3539587f077d61";
 
-    @State() timeState: "day"|"dusk"|"dawn"|"night";
-    @State() weatherState: "clear-day"|"clear-night"|"rain"|"snow"|"sleet"|"wind"|"fog"|"cloudy"|"partly-cloudy-day"|"partly-cloudy-night";
+    @State() timeState: "day" | "dusk" | "dawn" | "night";
+    @State() weatherState: "clear-day" | "clear-night" | "rain" | "snow" | "sleet" | "wind" | "fog" | "cloudy" | "partly-cloudy-day" | "partly-cloudy-night";
 
     @Event() timeChange: EventEmitter;
     @Event() weatherChange: EventEmitter;
@@ -70,7 +70,7 @@ export class Chart {
     }
 
     TimeState = (time) => ({
-        0: "night", 1: "night",  2: "night", 3: "night", 4: "night", 5: "night",
+        0: "night", 1: "night", 2: "night", 3: "night", 4: "night", 5: "night",
         6: "dawn", 7: "dawn", 8: "dawn", 9: "dawn", 10: "dawn", 11: "dawn",
         12: "day", 13: "day", 14: "day", 15: "day", 16: "day", 17: "day",
         18: "dusk", 19: "dusk", 20: "dusk", 21: "dusk", 22: "dusk", 23: "dusk",

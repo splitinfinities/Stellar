@@ -1,53 +1,58 @@
-import { Component, Prop, State, h } from '@stencil/core';
+import { Component, Prop, State, Element } from '@stencil/core';
 
 @Component({
     tag: 'stellar-intersection'
 })
-export class intersection {
+export class Intersection {
+    @Element() el: HTMLElement;
     @Prop() multiple: boolean;
     @Prop() in: Function = () => { };
     @Prop() out: Function = () => { };
     @Prop() margin: string = "0%";
-    @Prop() element: HTMLElement|string;
+    @Prop() element: HTMLElement | string;
     @State() io: any;
 
     componentWillLoad() {
         if (!this.element) {
-            console.error('stellar-intersection needs an element or a seelctor passed into it')
-        } else {
-            this.addIntersectionObserver();
+            this.element = this.el;
         }
+
+        this.addIntersectionObserver();
     }
 
     componentDidUnload() {
         this.removeIntersectionObserver();
     }
 
-    addIntersectionObserver () {
-        if ('IntersectionObserver' in window) {
-            this.io = new IntersectionObserver((data: any) => {
-                if (!this.multiple) {
-                    if (data[0].isIntersecting) {
-                        this.in();
-                        this.removeIntersectionObserver();
-                    }
-                } else {
-                    if (data[0].isIntersecting) {
-                        this.in();
+    addIntersectionObserver() {
+        try {
+            if ('IntersectionObserver' in window) {
+                this.io = new IntersectionObserver((data: any) => {
+                    if (!this.multiple) {
+                        if (data[0].isIntersecting) {
+                            this.in();
+                            this.removeIntersectionObserver();
+                        }
                     } else {
-                        this.out();
+                        if (data[0].isIntersecting) {
+                            this.in();
+                        } else {
+                            this.out();
+                        }
                     }
-                }
-            }, {
-                rootMargin: this.margin,
-                threshold: [0]
-            })
+                }, {
+                    rootMargin: this.margin,
+                    threshold: [0]
+                })
 
-            if (typeof this.element === "string" && this.element.constructor.name === "String") {
-                this.io.observe(document.querySelector(this.element));
-            } else {
-                this.io.observe(this.element);
+                if (typeof this.element === "string" && this.element.constructor.name === "String") {
+                    this.io.observe(document.querySelector(this.element));
+                } else {
+                    this.io.observe(this.element);
+                }
             }
+        } catch (e) {
+            // no intersection observer
         }
     }
 
@@ -56,9 +61,5 @@ export class intersection {
             this.io.disconnect();
             this.io = null;
         }
-    }
-
-    render () {
-        return <slot />;
     }
 }

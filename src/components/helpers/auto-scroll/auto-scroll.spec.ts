@@ -1,22 +1,14 @@
+import { newSpecPage } from '@stencil/core/testing';
 import { StellarAutoScroll } from './auto-scroll';
 
-describe('auto-scroll', () => {
-  it('builds', () => {
-    expect(new StellarAutoScroll()).toBeTruthy();
-  });
-});
-
-import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
-
-describe('stellar-item', () => {
+describe('stellar-auto-scroll', () => {
   it('should render and respond to changes appropriately', async () => {
     const page = await newSpecPage({
-      components: [Item],
-      html: `<stellar-item></stellar-item>`,
+      components: [StellarAutoScroll],
+      html: `<stellar-auto-scroll></stellar-auto-scroll>`,
     });
     expect(page.root).toEqualHtml(`
-       
+      <stellar-auto-scroll></stellar-auto-scroll>
     `);
   });
 })

@@ -8,7 +8,7 @@ import parallaxis from 'parallaxis';
 export class Story {
   @Prop() target: string = "story";
 
-  componentWillLoad () {
+  componentWillLoad() {
     parallaxis({ className: this.target })
   }
 }

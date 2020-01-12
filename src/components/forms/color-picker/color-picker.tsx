@@ -10,15 +10,15 @@ import Tunnel from '../../theme';
 })
 export class ColorPicker {
     @Element() element: HTMLElement;
-    @Prop({mutable: true, reflect: true}) val: string = "none";
+    @Prop({ mutable: true, reflect: true }) val: string = "none";
     @Prop() notransparent: boolean = false;
     @State() options: Array<string>;
     @Event() update: EventEmitter;
 
-  /**
-   * Sets the button or link as an outlined button.
-   */
-  @Prop({reflect: true}) dark: boolean = false;
+    /**
+     * Sets the button or link as an outlined button.
+     */
+    @Prop({ reflect: true }) dark: boolean = false;
 
     componentWillLoad() {
         this.options = Object.keys(colors).filter((color) => {

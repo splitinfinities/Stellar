@@ -9,32 +9,32 @@ export class Toggle {
   @Element() element: HTMLElement;
   @State() form: HTMLElement;
 
-  @Prop({mutable: true}) type: string|"checkbox"|"radio"|"radio-block"|"checkbox-block" = "checkbox";
-  @Prop({mutable: true, reflect: true}) name: string = "";
-  @Prop({mutable: true}) description: string;
-  @Prop({reflect: true}) stacked: boolean = false;
+  @Prop({ mutable: true }) type: string | "checkbox" | "radio" | "radio-block" | "checkbox-block" = "checkbox";
+  @Prop({ mutable: true, reflect: true }) name: string = "";
+  @Prop({ mutable: true }) description: string;
+  @Prop({ reflect: true }) stacked: boolean = false;
   @Prop() flip: boolean = false;
   @Prop() required: boolean;
   @Prop() single: boolean;
   @Prop() size: string;
-  @Prop({reflect: true}) novalidate: boolean;
+  @Prop({ reflect: true }) novalidate: boolean;
   /**
    * Sets the button or link as an outlined button.
    */
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
 
   @Prop() card: any = "div";
 
   @Prop() label: string;
 
-  @Prop({mutable: true}) value: string|string[];
+  @Prop({ mutable: true }) value: string | string[];
   @State() valid: boolean = true;
   @State() error: string;
   @State() status: any;
 
   @Event() update: EventEmitter;
 
-  componentWillLoad () {
+  componentWillLoad() {
     const options = this.element.querySelectorAll('stellar-toggle-option');
 
     const values = [];
@@ -75,7 +75,7 @@ export class Toggle {
       const values = [];
       this.value = [];
 
-      if (this.type === "checkbox" || this.type === "checkbox-block" ) {
+      if (this.type === "checkbox" || this.type === "checkbox-block") {
         // @ts-ignore
         options.forEach((option) => {
           if (option === event.detail.element && event.detail.element.checked) {
@@ -94,7 +94,7 @@ export class Toggle {
     }
   }
 
-  updateChecked () {
+  updateChecked() {
     const options = this.element.querySelectorAll('stellar-toggle-option');
 
     // @ts-ignore
@@ -104,7 +104,7 @@ export class Toggle {
     })
   }
 
-  renderValidation () {
+  renderValidation() {
     if (this.error) {
       return (<p class="validation">{this.error}</p>)
     }
@@ -113,7 +113,7 @@ export class Toggle {
   renderBlock() {
     return (
       <div>
-        { this.renderValidation() }
+        {this.renderValidation()}
         <this.card padding="tiny">
           <stellar-grid cols={this.stacked ? "1" : "auto"} compact={true}>
             <slot></slot>
@@ -134,8 +134,8 @@ export class Toggle {
     return [
       this.label && <stellar-label>{this.label}</stellar-label>,
       <div data-type={this.type} onClick={e => { e.stopPropagation(); }}>
-        { ["radio", "checkbox"].indexOf(this.type) === -1 && this.renderBlock() }
-        { ["radio", "checkbox"].indexOf(this.type) !== -1 && this.renderPlain() }
+        {["radio", "checkbox"].indexOf(this.type) === -1 && this.renderBlock()}
+        {["radio", "checkbox"].indexOf(this.type) !== -1 && this.renderPlain()}
       </div>,
       this.description && <stellar-label size="small" underneath>{this.description}</stellar-label>
     ];

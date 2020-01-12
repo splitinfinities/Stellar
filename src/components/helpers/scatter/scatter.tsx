@@ -8,7 +8,7 @@ import { Component, Element, Prop, h } from '@stencil/core'
 export class Scatter {
   @Element() element: HTMLElement
 
-  @Prop({reflect: true}) float: boolean = false;
+  @Prop({ reflect: true }) float: boolean = false;
   @Prop() min: number = 0
   @Prop() max: number = 100
 
@@ -34,11 +34,11 @@ export class Scatter {
   }
 
   randomFloat() {
-    return this.min + Math.random()*(this.max+1 - this.min)
+    return this.min + Math.random() * (this.max + 1 - this.min)
   }
 
   randomNumber(max = 2) {
-    return  Math.floor(Math.random() * max) + 1
+    return Math.floor(Math.random() * max) + 1
   }
 
   fontScale() {

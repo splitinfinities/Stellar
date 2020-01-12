@@ -7,18 +7,18 @@ import Tunnel from '../../theme';
 })
 export class Switch {
   @Element() el: HTMLElement;
-  @Prop({mutable: true, reflect: true}) checked: boolean = false;
+  @Prop({ mutable: true, reflect: true }) checked: boolean = false;
   @Prop() checkedDefault: boolean = false;
-  @Prop({reflect: true}) name: string;
-  @Prop({reflect: true}) novalidate: boolean;
-  @Prop({reflect: true}) required: boolean;
+  @Prop({ reflect: true }) name: string;
+  @Prop({ reflect: true }) novalidate: boolean;
+  @Prop({ reflect: true }) required: boolean;
   @State() status: FormResult;
   @Event() update: EventEmitter;
 
   /**
    * Sets the button or link as an outlined button.
    */
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
 
   componentDidLoad() {
     if (this.checkedDefault) {
@@ -62,8 +62,8 @@ export class Switch {
 
   render() {
     return (
-      <label class="label" htmlFor={this.name} onClick={() => {this.activate()}}>
-        <input type="checkbox" name={this.name} id={this.name} checked={this.checked} tabindex="-1" onClick={() => {this.activate()}}/>
+      <label class="label" htmlFor={this.name} onClick={() => { this.activate() }}>
+        <input type="checkbox" name={this.name} id={this.name} checked={this.checked} tabindex="-1" onClick={() => { this.activate() }} />
         <button type="button">
           <span>
             <stellar-asset name={this.checked ? "checkmark" : "close"} />

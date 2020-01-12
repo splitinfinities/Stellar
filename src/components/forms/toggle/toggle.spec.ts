@@ -1,22 +1,16 @@
+import { newSpecPage } from '@stencil/core/testing';
 import { Toggle } from './toggle';
 
-it('should render and respond to changes appropriately', () => {
-    const toggle = new Toggle();
-    expect(toggle).toBeInstanceOf(Toggle);
-});
-
-
-import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
-
-describe('stellar-item', () => {
+describe('stellar-toggle', () => {
     it('should render and respond to changes appropriately', async () => {
         const page = await newSpecPage({
-            components: [Item],
-            html: `<stellar-item></stellar-item>`,
+            components: [Toggle],
+            html: `<stellar-toggle></stellar-toggle>`,
         });
         expect(page.root).toEqualHtml(`
-       
-    `);
+            <stellar-toggle>
+                <div data-type=\"checkbox\"></div>
+            </stellar-toggle>
+        `);
     });
 })

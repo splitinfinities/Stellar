@@ -1,4 +1,4 @@
-import { Component, State, Prop, Watch, Element, h} from '@stencil/core';
+import { Component, State, Prop, Watch, Element, h } from '@stencil/core';
 import showdown from 'showdown';
 
 @Component({
@@ -22,8 +22,8 @@ export class Markdown {
    * @type {string}
    * @memberof Markdown
    */
-  @Prop({mutable: true}) codeString: string;
-  @Prop() flavor: "github"|"original"|"vanilla" = "vanilla";
+  @Prop({ mutable: true }) codeString: string;
+  @Prop() flavor: "github" | "original" | "vanilla" = "vanilla";
 
   @Prop() editable: boolean = false;
 
@@ -32,7 +32,7 @@ export class Markdown {
 
   @State() showdown: any = new showdown.Converter();
 
-  componentWillLoad () {
+  componentWillLoad() {
     this.showdown.setFlavor(this.flavor)
     this.showdown.setOption('omitExtraWLInCodeBlocks', true)
     this.showdown.setOption('ghCompatibleHeaderId', true)
@@ -49,13 +49,13 @@ export class Markdown {
   }
 
   @Watch('src')
-  onSrcChange () {
+  onSrcChange() {
     this.convert()
   }
 
   convert() {
     if (this.src) {
-     this.fetchMarkdown()
+      this.fetchMarkdown()
     } else if (this.codeString) {
       this.raw = this.codeString
       this.convertMarkdown();
@@ -66,11 +66,15 @@ export class Markdown {
   }
 
   getMarkdown() {
-    const raw = this.element.querySelector('template').innerHTML;
-    this.raw = raw.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+    if (this.element.querySelector('template')) {
+      const raw = this.element.querySelector('template').innerHTML;
+      this.raw = raw.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+    } else {
+      throw new Error("Please place a template in stellar-markdown, or use the src attribute to load a markdown file from a url.")
+    }
   }
 
-  convertMarkdown () {
+  convertMarkdown() {
     let converted = this.showdown.makeHtml(this.raw)
 
     converted = this.replaceAll(converted, "<pre><code>", "<stellar-code><template>")
@@ -83,7 +87,7 @@ export class Markdown {
     return str.replace(new RegExp(find, 'g'), replace);
   }
 
-  async fetchMarkdown () {
+  async fetchMarkdown() {
     const response = await fetch(this.src);
     const text = await response.text();
 
@@ -98,7 +102,7 @@ export class Markdown {
           <div innerHTML={this.converted}></div>
         </copy-wrap></section>
         <footer class="bg-theme-base0">
-          <stellar-input type="textarea" default={this.codeString} onUpdate={(e) => { this.codeString = e.detail;this.convert(); }} />
+          <stellar-input type="textarea" default={this.codeString} onUpdate={(e) => { this.codeString = e.detail; this.convert(); }} />
         </footer>
       </stellar-card>
     } else {

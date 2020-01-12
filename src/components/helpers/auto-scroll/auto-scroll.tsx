@@ -17,18 +17,18 @@ export class StellarAutoScroll {
   }
 
   @Method()
-  async play () {
+  async play() {
     this.scroll();
   }
 
   @Method()
-  async stop () {
+  async stop() {
     clearTimeout(this.timeout);
     this.timeout = undefined;
   }
 
-  scroll () {
-    window.scrollBy(0,1);
+  scroll() {
+    window.scrollBy(0, 1);
     this.timeout = setTimeout(this.scroll.bind(this), this.speed);
 
     if ((document.body.scrollHeight - window.innerHeight) == window.pageYOffset) {

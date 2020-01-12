@@ -15,7 +15,6 @@ export class Marker {
   @Prop() lng: number;
   @Prop() address: string;
 
-
   @Method()
   async geocodeAddress(): Promise<any> {
     const geocoder = new google.maps.Geocoder()

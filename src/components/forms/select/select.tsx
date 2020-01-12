@@ -11,7 +11,7 @@ import Tunnel from '../../theme';
 export class Select {
   @Element() element: HTMLElement;
 
-  @Prop({ mutable: true, reflect: true }) name: string|boolean = "select";
+  @Prop({ mutable: true, reflect: true }) name: string | boolean = "select";
   @Prop({ mutable: true }) label: string;
   @Prop({ mutable: true }) placeholder: string = "Choose something...";
   @Prop({ mutable: true }) description: string;
@@ -20,7 +20,7 @@ export class Select {
   @Prop({ mutable: true, reflect: true }) multiple: boolean;
   @Prop() other: boolean;
   @Prop() placeholderInverted: boolean;
-  @Prop({ mutable: true, reflect: true }) size: "tiny"|"small"|"medium"|"large";
+  @Prop({ mutable: true, reflect: true }) size: "tiny" | "small" | "medium" | "large";
   @Prop() required: boolean = false;
   @Prop() processing: boolean;
   @Prop({ mutable: true, reflect: true }) focused: boolean;
@@ -29,20 +29,20 @@ export class Select {
   @Prop() novalidate: boolean;
   @Prop() verbiage: string = "selection";
   @Prop() verbiageAn: boolean;
-  @Prop({reflect: true}) overlay: boolean;
-  @Prop({ mutable: true, reflect: true }) value: Array<string>|string;
+  @Prop({ reflect: true }) overlay: boolean;
+  @Prop({ mutable: true, reflect: true }) value: Array<string> | string;
   @Prop() valueLabel: string = undefined;
   @Prop() default: any;
-  @Prop({reflect: true}) loading: boolean = false;
-  @Prop({reflect: true}) fit: boolean = false;
-  @Prop({reflect: true}) wrap: boolean = false;
-  @Prop({reflect: true}) resize: boolean|"full" = false;
-  @Prop({reflect: true}) autoSelectFirst: boolean = false;
+  @Prop({ reflect: true }) loading: boolean = false;
+  @Prop({ reflect: true }) fit: boolean = false;
+  @Prop({ reflect: true }) wrap: boolean = false;
+  @Prop({ reflect: true }) resize: boolean | "full" = false;
+  @Prop({ reflect: true }) autoSelectFirst: boolean = false;
 
   /**
    * Sets the button or link as an outlined button.
    */
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
 
   titleItem!: HTMLStellarItemElement;
   @State() status: FormResult;
@@ -54,7 +54,7 @@ export class Select {
 
   @Event() update: EventEmitter;
 
-  async componentWillLoad () {
+  async componentWillLoad() {
     if (this.multiple) {
       this.value = []
     }
@@ -73,7 +73,7 @@ export class Select {
     })
   }
 
-  async componentDidLoad () {
+  async componentDidLoad() {
     this.listen_to_values();
     this.titleItem = this.element.shadowRoot.querySelector('stellar-item[select-title]')
 
@@ -81,11 +81,11 @@ export class Select {
       if (typeof this.default === "object" && this.default.constructor.name === "Array") {
         this.default.forEach((value) => {
           // @ts-ignore
-          this.element.querySelector(`stellar-item[value="${value}"]`).select_item({selected: true})
+          this.element.querySelector(`stellar-item[value="${value}"]`).select_item({ selected: true })
         })
       } else {
         // @ts-ignore
-        this.element.querySelector(`stellar-item[value="${this.default}"]`).select_item({selected: true})
+        this.element.querySelector(`stellar-item[value="${this.default}"]`).select_item({ selected: true })
       }
     }
 
@@ -135,7 +135,7 @@ export class Select {
       const options = await this.option_elements();
 
       if (this.value.length === 0 && this.autoSelectFirst) {
-        this.element.querySelector('stellar-item').select_item({selected: true})
+        this.element.querySelector('stellar-item').select_item({ selected: true })
       }
 
       Array.from(options).forEach(async (el) => {
@@ -275,7 +275,7 @@ export class Select {
     this.focused = false;
   }
 
-  @Listen('click', {target: 'window'})
+  @Listen('click', { target: 'window' })
   handleNotClick(e) {
     if (e.target !== this.element && !this.element.contains(e.target)) {
       if (this.open) {
@@ -469,7 +469,7 @@ export class Select {
     if (this.label) {
       return <div class="label-wrapper">
         <stellar-label size={this.size} onClick={() => { this.focusFirstItem() }}>{this.label}</stellar-label>
-        { this.renderEmptyButton() }
+        {this.renderEmptyButton()}
       </div>
     }
   }
@@ -489,14 +489,14 @@ export class Select {
   renderEmptyButton() {
     return this.multiple && this.value && this.value.length > 0 && <stellar-button class="clear-button" tag="button" size={this.size} ghost onClick={(e) => { e.stopPropagation(); this.clearValue() }}>
       <stellar-asset name="close" />
-      { this.clear_confirm ? `Clear ${this.value.length} selections?` : `Clear` }
+      {this.clear_confirm ? `Clear ${this.value.length} selections?` : `Clear`}
     </stellar-button>
   }
 
   render() {
     return (
       <div class="wrapper">
-        { this.renderLabel() }
+        {this.renderLabel()}
 
         <div class="select">
           {this.loading && <div class="loading"><stellar-asset name="loading-spin" /> <p>One sec...</p></div>}
@@ -505,10 +505,10 @@ export class Select {
             <stellar-item fit wrap select-title type="button" value={this.value ? this.value.toString() : ""} tabindex="-1" selectable={false} label={this.language} innerHTML={this.language}></stellar-item>
             <stellar-asset name="arrow-down" />
 
-            { this.name && <input type="text" tabindex="-1" name={this.name.toString()} required={this.required} value={this.value}  /> }
+            {this.name && <input type="text" tabindex="-1" name={this.name.toString()} required={this.required} value={this.value} />}
           </button>
 
-          { this.tooltip && <stellar-tooltip align="bottom-left" onClick={() => this.handleTitleClick()}>{this.tooltip}</stellar-tooltip> }
+          {this.tooltip && <stellar-tooltip align="bottom-left" onClick={() => this.handleTitleClick()}>{this.tooltip}</stellar-tooltip>}
 
           <stellar-blur vertical={this.blur} class="select-list">
             <div class="select-list-header">
@@ -519,13 +519,13 @@ export class Select {
               <slot></slot>
             </div>
 
-            { this.footer && <div class="select-list-footer"><slot name="footer"></slot></div> }
+            {this.footer && <div class="select-list-footer"><slot name="footer"></slot></div>}
           </stellar-blur>
         </div>
 
         <stellar-label size="small" underneath>{this.description}</stellar-label>
 
-        { !this.novalidate && this.renderErrors() }
+        {!this.novalidate && this.renderErrors()}
       </div>
     );
   }

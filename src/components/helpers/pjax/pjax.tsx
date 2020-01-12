@@ -18,11 +18,8 @@ export class StellarPjax {
   });
 
   render() {
-    return (
-      <Host>
-        <slot></slot>
-      </Host>
-    );
+    return <Host>
+      <slot></slot>
+    </Host>
   }
-
 }

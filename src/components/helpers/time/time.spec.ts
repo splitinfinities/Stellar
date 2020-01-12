@@ -1,14 +1,15 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
+import { Time } from './time';
 
-describe('stellar-item', () => {
+describe('stellar-time', () => {
 	it('should render and respond to changes appropriately', async () => {
 		const page = await newSpecPage({
-			components: [Item],
-			html: `<stellar-item></stellar-item>`,
+			components: [Time],
+			html: `<stellar-time value="2020-12-12T12:00:00+00:00"></stellar-time>`,
 		});
+
 		expect(page.root).toEqualHtml(`
-       
-    `);
+			<stellar-time value="2020-12-12T12:00:00+00:00">December 12th 2020, 6:00:00 am</stellar-time>
+		`);
 	});
 })

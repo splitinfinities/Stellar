@@ -1,4 +1,4 @@
-import Highcharts, {Options, AccessibilityOptions, AnnotationsOptions, BoostOptions, ChartOptions, ColorAxisOptions, ColorString, ConnectorsOptions, CreditsOptions, DataOptions, DrilldownOptions, ExportingOptions, GlobalOptions, LabelsOptions, LangOptions, LegendOptions, LoadingOptions, MapNavigationOptions, NavigationOptions, NavigatorOptions, NoDataOptions, PaneOptions, PlotOptions, RangeSelectorOptions, ResponsiveOptions, ScrollbarOptions, SeriesOptionsType, StockToolsOptions, SubtitleOptions, TimeOptions, TitleOptions, TooltipOptions, XAxisOptions, YAxisOptions, ZAxisOptions} from 'highcharts';
+import Highcharts, { Options, AccessibilityOptions, AnnotationsOptions, BoostOptions, ChartOptions, ColorAxisOptions, ColorString, ConnectorsOptions, CreditsOptions, DataOptions, DrilldownOptions, ExportingOptions, GlobalOptions, LabelsOptions, LangOptions, LegendOptions, LoadingOptions, MapNavigationOptions, NavigationOptions, NavigatorOptions, NoDataOptions, PaneOptions, PlotOptions, RangeSelectorOptions, ResponsiveOptions, ScrollbarOptions, SeriesOptionsType, StockToolsOptions, SubtitleOptions, TimeOptions, TitleOptions, TooltipOptions, XAxisOptions, YAxisOptions, ZAxisOptions } from 'highcharts';
 
 // @ts-ignore
 Highcharts.wrap(Highcharts.Tooltip.prototype, 'refresh', function (p, point, mouseEvents) {
@@ -16,13 +16,13 @@ Highcharts.wrap(Highcharts.Tooltip.prototype, 'refresh', function (p, point, mou
 Highcharts.setOptions({
   exporting: {
     chartOptions: {
-        plotOptions: {
-            series: {
-                dataLabels: {
-                    enabled: true
-                }
-            }
+      plotOptions: {
+        series: {
+          dataLabels: {
+            enabled: true
+          }
         }
+      }
     },
     fallbackToExportServer: false
   },
@@ -36,9 +36,9 @@ export const theme: Highcharts.Options = {
     enabled: true,
     chartOptions: {
       chart: {
-          style: {
-            fontFamily: 'Arial'
-          }
+        style: {
+          fontFamily: 'Arial'
+        }
       }
     },
     fallbackToExportServer: false
@@ -101,14 +101,14 @@ export class HighchartsModel implements Options {
   responsive?: ResponsiveOptions;
   scrollbar?: ScrollbarOptions;
   series?: Array<SeriesOptionsType>;
-  stockTools?: (object|StockToolsOptions);
+  stockTools?: (object | StockToolsOptions);
   subtitle?: SubtitleOptions;
   time?: TimeOptions;
   title?: TitleOptions;
   tooltip?: TooltipOptions;
-  xAxis?: (XAxisOptions|Array<XAxisOptions>);
-  yAxis?: (YAxisOptions|Array<YAxisOptions>);
-  zAxis?: (ZAxisOptions|Array<ZAxisOptions>);
+  xAxis?: (XAxisOptions | Array<XAxisOptions>);
+  yAxis?: (YAxisOptions | Array<YAxisOptions>);
+  zAxis?: (ZAxisOptions | Array<ZAxisOptions>);
 
   serialize?(): any {
     return this

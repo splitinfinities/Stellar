@@ -1,9 +1,9 @@
 import { Component, h, Prop, Watch, Host, State } from '@stencil/core';
 import Tunnel from '../../theme';
-import {colors} from '../../../utils/colors';
+import { colors } from '../../../utils/colors';
 
 @Component({
-  tag: 'stellar-theme'
+    tag: 'stellar-theme'
 })
 
 export class Theme {
@@ -28,7 +28,7 @@ export class Theme {
 
     @Watch('base')
     @Watch('complement')
-    observeColors () {
+    observeColors() {
         const options = Object.keys(colors);
 
         if (this.body) {
@@ -46,7 +46,7 @@ export class Theme {
     }
 
     @Watch('dark')
-    observeDark () {
+    observeDark() {
         if (this.body && this.dark) {
             this.htmlEl.classList.add('dark-mode');
             this.bodyEl.classList.add('dark-mode');
@@ -64,11 +64,9 @@ export class Theme {
         }
     }
 
-    render () {
+    render() {
         return <Host class={`${this.dark ? "dark-mode" : ""} ${this.light ? "light-mode" : ""} theme-${this.base} complement-${this.complement}`}>
-            <Tunnel.Provider state={{dark: this.dark, light: this.light}}>
-                <slot />
-            </Tunnel.Provider>
+            <Tunnel.Provider state={{ dark: this.dark, light: this.light }} />
         </Host>
     }
 }

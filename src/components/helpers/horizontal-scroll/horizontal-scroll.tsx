@@ -10,7 +10,7 @@ export class HorizontalScroll {
 
   render() {
     return (
-      <Host style={{"--scroll-height": `${this.el.offsetWidth}px`}}>
+      <Host style={{ "--scroll-height": `${this.el.offsetWidth}px` }}>
         <div>
           <slot></slot>
         </div>

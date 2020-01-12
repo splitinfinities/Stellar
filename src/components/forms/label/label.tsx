@@ -8,13 +8,13 @@ import Tunnel from '../../theme';
 })
 export class Label {
   @Prop() for: string;
-  @Prop({reflect: true}) underneath: boolean;
-  @Prop({reflect: true}) size: string;
+  @Prop({ reflect: true }) underneath: boolean;
+  @Prop({ reflect: true }) size: string;
 
   /**
    * Sets the button or link as an outlined button.
    */
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
 
   render() {
     // @ts-ignore

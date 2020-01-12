@@ -1,23 +1,15 @@
+import { newSpecPage } from '@stencil/core/testing';
 import { Marker } from './marker';
 
-describe('stellar-google-maps-marker', () => {
-  it('builds', () => {
-    expect(new Marker()).toBeTruthy();
-  });
-});
-
-
-import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
-
-describe('stellar-item', () => {
+describe('stellar-map-marker', () => {
   it('should render and respond to changes appropriately', async () => {
     const page = await newSpecPage({
-      components: [Item],
-      html: `<stellar-item></stellar-item>`,
+      components: [Marker],
+      html: `<stellar-map-marker></stellar-map-marker>`,
     });
+
     expect(page.root).toEqualHtml(`
-       
+      <stellar-map-marker></stellar-map-marker>
     `);
   });
 })

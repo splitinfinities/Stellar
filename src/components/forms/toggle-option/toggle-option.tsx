@@ -2,8 +2,6 @@ import { Component, Prop, State, Element, Method, Event, EventEmitter, h } from 
 import { blurringEase } from "../../../utils";
 import Tunnel from '../../theme';
 
-
-
 @Component({
   tag: "stellar-toggle-option",
   styleUrl: "toggle-option.css",
@@ -12,21 +10,21 @@ export class ToggleOption {
   @Element() element: HTMLElement;
   @State() input: HTMLInputElement;
 
-  @Prop({reflect: true}) type: string = "checkbox";
-  @Prop({mutable: true, reflect: true}) checked: boolean = false;
+  @Prop({ reflect: true }) type: string = "checkbox";
+  @Prop({ mutable: true, reflect: true }) checked: boolean = false;
   @Prop() checkedDefault: boolean = false;
-  @Prop({reflect: true}) single: boolean;
-  @Prop({reflect: true}) icon: boolean;
-  @Prop({mutable: true}) tooltip: string;
-  @Prop({mutable: true, reflect: true}) disabled: boolean;
+  @Prop({ reflect: true }) single: boolean;
+  @Prop({ reflect: true }) icon: boolean;
+  @Prop({ mutable: true }) tooltip: string;
+  @Prop({ mutable: true, reflect: true }) disabled: boolean;
 
   /**
    * Sets the button or link as an outlined button.
    */
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
 
   @Prop() for: string = "";
-  @Prop({mutable: true, reflect: true}) name: string;
+  @Prop({ mutable: true, reflect: true }) name: string;
   @Prop() default: string = "";
   @Prop() value: string;
   @Prop() required: boolean;
@@ -52,11 +50,11 @@ export class ToggleOption {
 
   @Event() changeToggle: EventEmitter;
 
-  componentWillLoad () {
+  componentWillLoad() {
     this.updateRealType();
   }
 
-  componentDidLoad () {
+  componentDidLoad() {
     this.input = this.element.querySelector('input.input');
 
     if (this.checkedDefault) {
@@ -65,7 +63,7 @@ export class ToggleOption {
     }
   }
 
-  updateRealType () {
+  updateRealType() {
     if (this.type === "radio-block") {
       this._type = "radio";
     } else if (this.type === "checkbox-block") {
@@ -83,31 +81,31 @@ export class ToggleOption {
   }
 
   @Method()
-  async updateSelected (value: boolean) {
+  async updateSelected(value: boolean) {
     this.input.checked = value;
     this.onToggleChange()
   }
 
-  onToggleChange () {
+  onToggleChange() {
     this.checked = this.input.checked;
     this.ease.start();
     this.changeToggle.emit({ element: this.element, value: this.checked ? this.value : undefined, checked: this.checked });
   }
 
-  onFocus () {
+  onFocus() {
     this.focused = true;
   }
 
-  onBlur () {
+  onBlur() {
     this.focused = false;
   }
 
-  onClick () {
+  onClick() {
     this.input.checked = !this.input.checked;
     this.onToggleChange()
   }
 
-  onKeyDown (e) {
+  onKeyDown(e) {
     if (e.key === "Enter") {
       e.preventDefault();
       e.stopPropagation();
@@ -116,7 +114,7 @@ export class ToggleOption {
     }
   }
 
-  renderCheckbox () {
+  renderCheckbox() {
     if (this.type === "checkbox" || this.type === "radio") {
       return (
         <div class={this.focused ? "box focused" : "box"}>
@@ -128,7 +126,7 @@ export class ToggleOption {
     }
   }
 
-  renderRadioBlock () {
+  renderRadioBlock() {
     if (this.type === "radio-block") {
       return (
         <div class="wrapper">
@@ -143,7 +141,7 @@ export class ToggleOption {
     }
   }
 
-  renderCheckBlock () {
+  renderCheckBlock() {
     if (this.type === "checkbox-block") {
       return (
         <div class="wrapper">
@@ -163,24 +161,24 @@ export class ToggleOption {
   render() {
     // @ts-ignore
     return <button type="button" onClick={() => this.onClick()} onKeyDown={e => this.onKeyDown(e)}>
-        <input type="hidden" name={`${this.for}[${this.name}]`} value={this.default} />
-        <input class="input" type={this._type} id={`${this.for}_${this.name}_${this.value}`} name={`${this.for}[${this.name}]`} checked={this.checked} value={this.value} required={this.required} onChange={(e) => {e.stopPropagation(); e.preventDefault();}} onKeyDown={e => this.onKeyDown(e)} />
+      <input type="hidden" name={`${this.for}[${this.name}]`} value={this.default} />
+      <input class="input" type={this._type} id={`${this.for}_${this.name}_${this.value}`} name={`${this.for}[${this.name}]`} checked={this.checked} value={this.value} required={this.required} onChange={(e) => { e.stopPropagation(); e.preventDefault(); }} onKeyDown={e => this.onKeyDown(e)} />
 
-        { this.renderCheckbox() }
+      {this.renderCheckbox()}
 
-        { ["radio", "checkbox"].indexOf(this.type) !== -1 && <p><slot></slot></p> }
+      {["radio", "checkbox"].indexOf(this.type) !== -1 && <p><slot></slot></p>}
 
-        { this.renderRadioBlock() }
-        { this.renderCheckBlock() }
+      {this.renderRadioBlock()}
+      {this.renderCheckBlock()}
 
-        { ["radio", "checkbox"].indexOf(this.type) === -1 &&
-          <stellar-blur horizontal={this.blur} class={this.checked ? "status active" : "status"}>
-            <stellar-tag size="small" color="theme-base5">{this.selectedCopy}</stellar-tag>
-          </stellar-blur>
-        }
+      {["radio", "checkbox"].indexOf(this.type) === -1 &&
+        <stellar-blur horizontal={this.blur} class={this.checked ? "status active" : "status"}>
+          <stellar-tag size="small" color="theme-base5">{this.selectedCopy}</stellar-tag>
+        </stellar-blur>
+      }
 
-        { this.tooltip && <stellar-tooltip align="bottom-left">{this.tooltip}</stellar-tooltip> }
-      </button>
+      {this.tooltip && <stellar-tooltip align="bottom-left">{this.tooltip}</stellar-tooltip>}
+    </button>
   }
 }
 Tunnel.injectProps(ToggleOption, ['dark']);

@@ -7,7 +7,7 @@ import { Component, Element, h } from '@stencil/core';
 export class Starscape {
   @Element() element: HTMLElement;
 
-  render () {
+  render() {
     return (
       <stellar-parallax horizontal>
         <stellar-parallax-section speed={5}>

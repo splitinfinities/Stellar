@@ -2,13 +2,13 @@ import { Component, Prop, Watch, Element, State, h } from '@stencil/core';
 import zxcvbn from "zxcvbn";
 
 @Component({
-  tag: 'stellar-password-requirements'
+    tag: 'stellar-password-requirements'
 })
 export class PasswordRequirements {
     @Element() element: HTMLElement;
 
-    @Prop({reflect: true}) for: string;
-    @Prop() size: "tiny"|"small"|"large";
+    @Prop({ reflect: true }) for: string;
+    @Prop() size: "tiny" | "small" | "large";
 
     @State() input;
     @State() value;
@@ -24,9 +24,12 @@ export class PasswordRequirements {
     componentDidLoad() {
         setTimeout(() => {
             this.input = document.querySelector(`stellar-input[name="${this.for}"]`);
-            this.input.addEventListener('update', (e) => {
-                this.value = e.detail;
-            })
+
+            if (this.input) {
+                this.input.addEventListener('update', (e) => {
+                    this.value = e.detail;
+                })
+            }
         }, 1000)
     }
 
@@ -79,14 +82,14 @@ export class PasswordRequirements {
 
     renderUppercase() {
         return <p class={`${this.fs} flex items-center mb3 pa0 ma0 ${this.uppercase ? 'theme-green' : 'theme-red'}`}>
-        <stellar-asset class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.uppercase ? "checkmark-circle-outline" : "close-circle-outline"} />
+            <stellar-asset class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.uppercase ? "checkmark-circle-outline" : "close-circle-outline"} />
             <small>At least 1 uppercase character</small>
         </p>
     }
 
     renderNumber() {
         return <p class={`${this.fs} flex items-center mb3 pa0 ma0 ${this.number ? 'theme-green' : 'theme-red'}`}>
-        <stellar-asset class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.number ? "checkmark-circle-outline" : "close-circle-outline"} />
+            <stellar-asset class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.number ? "checkmark-circle-outline" : "close-circle-outline"} />
             <small>At least 1 number</small>
         </p>
     }
@@ -119,7 +122,7 @@ export class PasswordRequirements {
         </p>
     }
 
-    render () {
+    render() {
         return [
             this.renderLength(),
             this.renderUppercase(),

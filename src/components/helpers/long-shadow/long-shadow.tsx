@@ -9,7 +9,7 @@ import properties from 'css-custom-properties';
 export class LongShadow {
     @Element() element: HTMLElement
 
-    @Prop({ reflect: true }) direction: "top-left"|"top-right"|"bottom-left"|"bottom-right" = "top-left";
+    @Prop({ reflect: true }) direction: "top-left" | "top-right" | "bottom-left" | "bottom-right" = "top-left";
     @Prop({ reflect: true }) length: number = 100;
     @Prop({ reflect: true }) delay: number = 100;
     @Prop({ reflect: true }) timing: number = 50;
@@ -26,7 +26,7 @@ export class LongShadow {
         this.in();
     }
 
-    getShadowCSS () {
+    getShadowCSS() {
         const vertical = this.direction.includes("top");
         const horizontal = this.direction.includes("left");
 
@@ -43,12 +43,12 @@ export class LongShadow {
 
     @Method()
     async out() {
-        properties.set({"--text-shadow": "none"}, this.element)
+        properties.set({ "--text-shadow": "none" }, this.element)
     }
 
     @Method()
     async in() {
-        properties.set({"--text-shadow": this.getShadowCSS()}, this.element)
+        properties.set({ "--text-shadow": this.getShadowCSS() }, this.element)
     }
 
     render() {

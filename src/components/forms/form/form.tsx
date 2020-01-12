@@ -46,18 +46,18 @@ export class Form {
   }
 
   @Method()
-  async state(): Promise<{els: any, json: any, results: FormResult[], formData: any, valid: boolean}> {
+  async state(): Promise<{ els: any, json: any, results: FormResult[], formData: any, valid: boolean }> {
     var formData = new FormData();
     var results = [];
     var valid = true;
 
     const els = Array.from(this.element.querySelectorAll(this.selectors.join(",")));
 
-    await asyncForEach(els, async (element: HTMLStellarInputElement|HTMLStellarSelectElement) => {
+    await asyncForEach(els, async (element: HTMLStellarInputElement | HTMLStellarSelectElement) => {
       try {
         let result = await element.validate();
         results.push(result);
-      } catch(e) {
+      } catch (e) {
         results.push({
           name: `${element.name}`,
           value: undefined,
@@ -105,7 +105,7 @@ export class Form {
 
   render() {
     return <form action={this.action} method={this.method} accept-charset={this.acceptCharset} autocomplete={this.autocomplete} enctype={this.enctype} name={this.name} novalidate={this.novalidate} target={this.target} onSubmit={(e) => { e.preventDefault(); this.submit_form(); }}>
-        <slot />
+      <slot />
     </form>
   }
 }

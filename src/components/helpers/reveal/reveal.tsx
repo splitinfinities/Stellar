@@ -52,7 +52,7 @@ export class Reveal {
         }}
       >
 
-        <slot/>
+        <slot />
         <stellar-intersection element={this.element} multiple in={this.in.bind(this)} margin={this.triggerDistance} />
       </div>
     );

@@ -5,7 +5,7 @@ import * as config from './config'
   tag: 'stellar-stripe',
   styleUrl: 'stripe.css'
 })
-export class Card {
+export class Stripe {
   @Element() element: HTMLElement;
   @State() input: HTMLInputElement;
 
@@ -17,13 +17,15 @@ export class Card {
   @State() card: any;
   @State() value: any = undefined;
   @State() cardData: any = {};
-  @State() state: "submitting"|"processing"|"submitted"|"preparing" = "preparing";
+  @State() state: "submitting" | "processing" | "submitted" | "preparing" = "preparing";
 
-  componentWillLoad () {
-    this.stripe = window["Stripe"](this.token);
+  componentWillLoad() {
+    if (window["Stripe"]) {
+      this.stripe = window["Stripe"](this.token);
+    }
   }
 
-  componentDidLoad () {
+  componentDidLoad() {
     this.connect();
   }
 
@@ -38,8 +40,8 @@ export class Card {
   @Method()
   async getToken() {
     await this.stripe.createToken(this.card, this.cardData)
-        .then(this.handleResponse.bind(this))
-        .catch(this.handleError.bind(this));
+      .then(this.handleResponse.bind(this))
+      .catch(this.handleError.bind(this));
 
     return this.value !== undefined;
   }
@@ -61,7 +63,7 @@ export class Card {
     }
   }
 
-  handleResponse({error, token}) {
+  handleResponse({ error, token }) {
     if (error) {
       this.setError(error.message);
       // this.dispatchEvent(new ErrorEvent('stripe-error', {error, bubbles, composed}));
@@ -83,7 +85,7 @@ export class Card {
     this.error = error;
   }
 
-  prepareStripe () {
+  prepareStripe() {
     var elements = this.stripe.elements({
       fonts: [
         {
@@ -102,13 +104,13 @@ export class Card {
     this.card.mount(this.element.querySelector('#card'));
   }
 
-  renderPhone () {
+  renderPhone() {
     return (
       <stellar-input id="phone" data-tid="stellar_stripe.form.phone" type="tel" placeholder="(941) 555-0123" required label="Phone number" />
     );
   }
 
-  renderZip () {
+  renderZip() {
     return (
       <stellar-input id="zip" data-tid="stellar_stripe.form.postal_code" type="text" placeholder="94107" required label="ZIP" />
     );
@@ -124,8 +126,8 @@ export class Card {
           {this.error && <p class="validation"><span>{this.error}</span></p>}
         </div>
         <stellar-grid>
-          { this.renderPhone() }
-          { this.renderZip() }
+          {this.renderPhone()}
+          {this.renderZip()}
         </stellar-grid>
       </div>
     )

@@ -1,21 +1,14 @@
+import { newSpecPage } from '@stencil/core/testing';
 import { HorizontalScroll } from './horizontal-scroll';
 
-describe('horizontal-scroll', () => {
-  it('builds', () => {
-    expect(new HorizontalScroll()).toBeTruthy();
-  });
-});
-import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
-
-describe('stellar-item', () => {
+describe('stellar-horizontal-scroll', () => {
   it('should render and respond to changes appropriately', async () => {
     const page = await newSpecPage({
-      components: [Item],
-      html: `<stellar-item></stellar-item>`,
+      components: [HorizontalScroll],
+      html: `<stellar-horizontal-scroll></stellar-horizontal-scroll>`,
     });
     expect(page.root).toEqualHtml(`
-       
+       <stellar-horizontal-scroll></stellar-horizontal-scroll>
     `);
   });
 })

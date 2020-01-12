@@ -13,19 +13,19 @@ import Tunnel from '../../theme';
 })
 export class Code {
   @Element() element: HTMLElement;
-  @Prop({reflect: true, mutable: true}) language: string = "html";
+  @Prop({ reflect: true, mutable: true }) language: string = "html";
   @Prop() simple: boolean = false;
   @Prop() codeString: string;
   @Prop() copy: boolean = true;
   @State() copied: boolean = false;
-  @Prop({mutable: true}) expanded: boolean = false;
+  @Prop({ mutable: true }) expanded: boolean = false;
   @Prop() expandable: boolean = false;
   @State() randomName: number = Math.round((Math.random() * 10000));
   @State() observer: MutationObserver;
 
   @Prop() preview: boolean = true;
   @Prop() feature: boolean = false;
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
 
   @State() code: string;
   @State() raw: string;
@@ -37,13 +37,15 @@ export class Code {
   componentDidLoad() {
     this.highlight();
 
-    var observer = new MutationObserver((mutations) => {
-      mutations.forEach(() => {
-        this.getCode()
+    if (window && window.MutationObserver) {
+      var observer = new MutationObserver((mutations) => {
+        mutations.forEach(() => {
+          this.getCode()
+        });
       });
-    });
 
-    observer.observe(this.element, {attributes: true, childList: true, subtree: true});
+      observer.observe(this.element, { attributes: true, childList: true, subtree: true });
+    }
   }
 
   componentWillUpdate() {
@@ -55,7 +57,7 @@ export class Code {
   }
 
   @Watch('codeString')
-  handleCodeStringUpdate () {
+  handleCodeStringUpdate() {
     this.getCode()
   }
 
@@ -92,7 +94,7 @@ export class Code {
   getCode() {
     if (this.codeString) {
       this.raw = this.codeString
-      this.code = this.codeString.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+      this.code = this.codeString.replace(/(?:\r\n|\r|\n)/g, '').replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
     } else {
       let code: any = this.element.querySelector('template');
 
@@ -114,22 +116,22 @@ export class Code {
 
         this.raw = code;
 
-        this.code = code.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+        this.code = code.replace(/(?:\r\n|\r|\n)/g, '<br />').replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
       }
     }
   }
 
   renderPreview() {
     return <section class="preview flush">
-      <div class="result" innerHTML={ this.raw } />
+      <div class="result" innerHTML={this.raw} />
     </section>
   }
 
   renderCode() {
     return <pre aria-label={`The ${this.language} code`} tabindex={0}>
-        <code class={`language-${this.language}`} innerHTML={this.code}></code>
-        <div class="hidden"><slot><template><p>There's no code here!</p></template></slot></div>
-      </pre>;
+      <code class={`language-${this.language}`} innerHTML={this.code}></code>
+      <div class="hidden"><slot><template><p>There's no code here!</p></template></slot></div>
+    </pre>;
   }
 
   render() {
@@ -137,12 +139,12 @@ export class Code {
       return this.renderCode();
     } else {
       return <stellar-card shadow="light" padding="small">
-          { this.feature && <header><slot name="feature" /><slot name="property" /></header> }
-          { this.preview && this.renderPreview() }
-          <footer class="code">
-            { this.renderCode() }
-          </footer>
-        </stellar-card>
+        {this.feature && <header><slot name="feature" /><slot name="property" /></header>}
+        {this.preview && this.renderPreview()}
+        <footer class="code">
+          {this.renderCode()}
+        </footer>
+      </stellar-card>
     }
   }
 }

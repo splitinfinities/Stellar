@@ -7,10 +7,6 @@ import OfflineExporting from 'highcharts/modules/exporting'
 import { theme, HighchartsModel } from './options';
 import { shuffle, colors } from '../../../utils';
 
-Data(Highcharts);
-Exporting(Highcharts);
-OfflineExporting(Highcharts);
-
 @Component({
   tag: 'stellar-chart',
   styleUrl: 'chart.css',
@@ -29,6 +25,16 @@ export class Chart {
   @Prop() for: string;
   @Prop() config: HighchartsModel = new HighchartsModel;
   @Prop({ reflect: true }) dark: boolean = false;
+  @Prop() exporting: boolean = false;
+
+  componentWillLoad() {
+    Data(Highcharts);
+
+    if (this.exporting) {
+      Exporting(Highcharts);
+      OfflineExporting(Highcharts);
+    }
+  }
 
   @Watch('config')
   handleConfig() {

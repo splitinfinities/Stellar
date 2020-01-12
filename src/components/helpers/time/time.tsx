@@ -27,7 +27,7 @@ export class Time {
     }
   }
 
-  render () {
+  render() {
     return this.result;
   }
 }

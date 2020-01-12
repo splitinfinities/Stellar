@@ -43,19 +43,23 @@ export class Clock {
   @Watch('size')
   @Watch('time')
   handleBetween() {
-    if (typeof this.between === "string") {
-      this.between = new Date(this.between)
-    }
+    if (this.between) {
+      if (typeof this.between === "string") {
+        this.between = new Date(this.between)
+      }
 
-    if (this.element.shadowRoot.querySelector("stellar-chart")) {
-      this.element.shadowRoot.querySelector("stellar-chart").options(this.chartConfig);
+      if (this.element.shadowRoot.querySelector("stellar-chart")) {
+        this.element.shadowRoot.querySelector("stellar-chart").options(this.chartConfig);
+      }
     }
   }
 
   get duration() {
-    if (this.time.constructor === Date && this.between.constructor === Date) {
-      // @ts-ignore
-      return this.between.getHours() - this.time.getHours();
+    if (this.time && this.between) {
+      if (this.time.constructor === Date && this.between.constructor === Date) {
+        // @ts-ignore
+        return this.between.getHours() - this.time.getHours();
+      }
     }
   }
 
