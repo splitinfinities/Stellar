@@ -1,22 +1,22 @@
+import { newSpecPage } from '@stencil/core/testing';
 import { Layout } from './layout';
 
-it('should render and respond to changes appropriately', () => {
-    const layout = new Layout();
-    expect(layout).toBeInstanceOf(Layout);
-});
-
-
-import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
-
-describe('stellar-item', () => {
+describe('stellar-layout', () => {
     it('should render and respond to changes appropriately', async () => {
         const page = await newSpecPage({
-            components: [Item],
-            html: `<stellar-item></stellar-item>`,
+            components: [Layout],
+            html: `<stellar-layout></stellar-layout>`,
         });
+
         expect(page.root).toEqualHtml(`
-       
-    `);
+            <stellar-layout align=\"baseline\" content=\"baseline\" data-eq-pts=\"tiny: 320, small: 480, medium: 640, large: 800, massive: 1024\" padding=\"medium\" size=\"medium\">
+                <mock:shadow-root>
+                    <div class=\"layout\">
+                        <slot></slot>
+                        <slot name=\"nav\"></slot>        
+                    </div>      
+                </mock:shadow-root>    
+            </stellar-layout>
+        `);
     });
 })

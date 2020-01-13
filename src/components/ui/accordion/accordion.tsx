@@ -10,12 +10,12 @@ import Tunnel from '../../theme';
 export class Accordion {
   @Element() element: HTMLElement;
 
-  @Prop({mutable: true, reflect: true}) open: boolean = false
-  @Prop({reflect: true}) tight: boolean = false
+  @Prop({ mutable: true, reflect: true }) open: boolean = false
+  @Prop({ reflect: true }) tight: boolean = false
 
   @Prop() name: string = "accordion"
   @Prop() label: string = "More Details"
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
 
   @State() blur: number = 0;
   @State() ease: TweenInstance = blurringEase({
@@ -36,15 +36,17 @@ export class Accordion {
   @State() els: any = [];
 
   componentWillLoad() {
-    var callback = (mutationsList) => {
+    if (window.MutationObserver) {
+      var callback = (mutationsList) => {
         for (var mutation of mutationsList) {
-            if (mutation.type == 'childList') {
-              this.refresh()
-            }
+          if (mutation.type == 'childList') {
+            this.refresh()
+          }
         }
-    };
+      };
 
-    this.observer = new MutationObserver(callback);
+      this.observer = new MutationObserver(callback);
+    }
   }
 
   componentDidLoad() {
@@ -63,12 +65,16 @@ export class Accordion {
   }
 
   attachObserver() {
-    // Start observing the target node for configured mutations
-    this.observer.observe(this.element, { childList: true, subtree: true });
+    if (this.observer) {
+      // Start observing the target node for configured mutations
+      this.observer.observe(this.element, { childList: true, subtree: true });
+    }
   }
 
   componentWillUnload() {
-    this.observer.disconnect();
+    if (this.observer) {
+      this.observer.disconnect();
+    }
   }
 
   currentClasses() {
@@ -94,7 +100,7 @@ export class Accordion {
   render() {
     return (
       <div class="wrap">
-        <div class="button-wrap" title="Selecting this opens the content of this accordion" onClick={ () => this.handleClick() }>
+        <div class="button-wrap" title="Selecting this opens the content of this accordion" onClick={() => this.handleClick()}>
           <slot name="label">
             <stellar-button id="button" tag="button" ghost label={this.label}>{this.label}</stellar-button>
           </slot>

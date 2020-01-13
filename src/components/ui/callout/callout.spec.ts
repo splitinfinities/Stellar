@@ -1,25 +1,24 @@
-import { Callout } from './callout';
-
-it('should render', () => {
-    const callout = new Callout();
-    expect(callout.type).toBe("default");
-    expect(callout.theme).toBe("gray");
-
-    callout.type = "error";
-});
-
 
 import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
+import { Callout } from './callout';
 
-describe('stellar-item', () => {
+describe('stellar-callout', () => {
     it('should render and respond to changes appropriately', async () => {
         const page = await newSpecPage({
-            components: [Item],
-            html: `<stellar-item></stellar-item>`,
+            components: [Callout],
+            html: `<stellar-callout></stellar-callout>`,
         });
+
         expect(page.root).toEqualHtml(`
-       
-    `);
+            <stellar-callout aria-label=\"An default message. \" aria-role=\"status\" class=\"theme-gray\" tabindex=\"0\">
+                <mock:shadow-root>
+                    <div class=\"callout-wrap\">
+                        <slot></slot>
+                    </div>
+                </mock:shadow-root>
+            </stellar-callout>
+        `);
+
+        expect(page.root.type).toBe("default");
     });
 })

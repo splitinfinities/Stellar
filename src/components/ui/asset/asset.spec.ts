@@ -1,43 +1,24 @@
+import { newSpecPage } from '@stencil/core/testing';
 import { Asset } from './asset';
 
-it('should render and respond to changes appropriately', () => {
-  const asset = new Asset();
-
-  expect(asset.name).toBe("person");
-
-  asset.name = "ios-create"
-  asset.componentWillLoad()
-
-  expect(asset.ariaLabel).toBe("create");
-
-  let rendered = asset.render();
-
-  expect(rendered["$children$"][0]["$attrs$"]).toEqual({"aria-label": "create", "ariaLabel": "create", "name": "ios-create", "src": undefined});
-
-  expect(rendered["$children$"][0]["$name$"]).toEqual("ios-create");
-
-  asset.name = undefined;
-  asset.src = "awesome";
-
-  rendered = asset.render();
-
-  expect(rendered["$children$"][0]["$attrs$"]).toEqual({"aria-label": "create", "ariaLabel": "create", "name": undefined, "src": "awesome"});
-
-  expect(rendered["$children$"][0]["$name$"]).toEqual(null);
-});
-
-
-import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
-
-describe('stellar-item', () => {
+describe('stellar-asset', () => {
   it('should render and respond to changes appropriately', async () => {
     const page = await newSpecPage({
-      components: [Item],
-      html: `<stellar-item></stellar-item>`,
+      components: [Asset],
+      html: `<stellar-asset></stellar-asset>`,
     });
+
     expect(page.root).toEqualHtml(`
-       
+       <stellar-asset aria-label=\"person\" language=\"ios-\" name=\"person\">
+        <mock:shadow-root>
+          <div class=\"icon-wrap\">
+            <ion-icon aria-label=\"person\" arialabel=\"person\" name=\"person\"></ion-icon>
+          </div>
+        </mock:shadow-root>
+      </stellar-asset>
     `);
+
+    expect(page.root.name).toBe("person");
   });
 })
+

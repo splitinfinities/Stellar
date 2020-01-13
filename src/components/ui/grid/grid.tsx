@@ -9,11 +9,11 @@ import { default as eqjs } from 'eq.js';
 export class Grid {
   @Element() element: HTMLElement;
 
-  @Prop({reflect: true}) cols: number|string = "auto";
-  @Prop({reflect: true}) compact: boolean = false;
-  @Prop({reflect: true}) padding: boolean = false;
-  @Prop({reflect: true}) align: string = "items-start";
-  @Prop({reflect: true}) noresponsive: boolean = false;
+  @Prop({ reflect: true }) cols: number | string = "auto";
+  @Prop({ reflect: true }) compact: boolean = false;
+  @Prop({ reflect: true }) padding: boolean = false;
+  @Prop({ reflect: true }) align: string = "items-start";
+  @Prop({ reflect: true }) noresponsive: boolean = false;
 
   async makeResponsive() {
     if (!this.noresponsive) {

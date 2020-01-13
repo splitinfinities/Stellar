@@ -33,7 +33,7 @@ export namespace Components {
     'width': number;
   }
   interface SkeletonText {
-    'as': string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p';
+    'as': string | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
     'loading': boolean;
     'width': number;
   }
@@ -76,7 +76,6 @@ export namespace Components {
     'name': string;
     'src': string;
   }
-  interface StellarAssetLibrary {}
   interface StellarAutoScroll {
     'autoplay': boolean;
     'loop': boolean;
@@ -92,13 +91,12 @@ export namespace Components {
     'name': string;
     'notooltip': boolean;
     'processing': boolean;
-    'shape': "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
-    'size': "tiny"|"small"|"medium"|"large";
+    'shape': "circle" | "square" | "rectangle" | "diamond" | "hexagon" | "star" | "message";
+    'size': "tiny" | "small" | "medium" | "large";
     'src': string;
   }
   interface StellarBlur {
     'horizontal': number;
-    'setBlurFilter': () => Promise<void>;
     'vertical': number;
   }
   interface StellarBreadcrumb {
@@ -109,7 +107,7 @@ export namespace Components {
     'href': string;
     'label': string;
     'last': boolean;
-    'tag': "link"|"route";
+    'tag': "link" | "route";
     'target': string;
   }
   interface StellarBreadcrumbs {
@@ -121,8 +119,8 @@ export namespace Components {
     'icon_size': number;
     'icon_src': string;
     'label': string;
-    'size': "tiny"|"small"|"medium"|"large";
-    'tag': "link"|"route";
+    'size': "tiny" | "small" | "medium" | "large";
+    'tag': "link" | "route";
   }
   interface StellarButton {
     /**
@@ -181,7 +179,7 @@ export namespace Components {
     /**
     * Sets the padding inside of the button. Can be small, medium, or large.
     */
-    'padding': "tiny"|"small"|"medium"|"large";
+    'padding': "tiny" | "small" | "medium" | "large";
     /**
     * Sets the button or link to render as a pill.
     */
@@ -197,11 +195,11 @@ export namespace Components {
     /**
     * Sets the size of the button. Can be tiny, small, medium, or large.
     */
-    'size': "tiny"|"small"|"medium"|"large";
+    'size': "tiny" | "small" | "medium" | "large";
     /**
     * Allows the button to render for different tags.
     */
-    'tag': "button"|"submit"|"link"|"span"|"route-link"|"pjax";
+    'tag': "button" | "submit" | "link" | "span" | "route-link" | "pjax";
     /**
     * Sets the target on the anchor tag if the button is a link.
     */
@@ -213,7 +211,7 @@ export namespace Components {
   }
   interface StellarCallout {
     'dark': boolean;
-    'type': "alert"|"error"|"info"|"success"|"default";
+    'type': "alert" | "error" | "info" | "success" | "default";
   }
   interface StellarCard {
     'dark': boolean;
@@ -247,17 +245,21 @@ export namespace Components {
     */
     'name': string;
     /**
+    * Removes the resize observer
+    */
+    'noresize': boolean;
+    /**
     * Sets the padding inside of the button. Can be small, medium, or large.
     */
-    'padding': "none"|"tiny"|"small"|"medium"|"large";
+    'padding': "none" | "tiny" | "small" | "medium" | "large";
     /**
     * Renders a shadow on the card
     */
-    'shadow': "light"|"medium"|"heavy";
+    'shadow': "light" | "medium" | "heavy";
     /**
     * Sets the element to render the card as - an anchor tag, a button, or a div.
     */
-    'tag': "stencil-route-link"|"a"|"button"|"div";
+    'tag': "stencil-route-link" | "a" | "button" | "div";
     /**
     * Sets the type on a button
     */
@@ -270,12 +272,13 @@ export namespace Components {
   interface StellarChart {
     'config': HighchartsModel;
     'dark': boolean;
+    'exporting': boolean;
     'for': string;
     'get_options': () => Promise<any>;
     'options': (newOptions: any) => Promise<void>;
     'refresh': () => Promise<void>;
     'remote': string;
-    'type': "area"|"areaspline"|"bar"|"bubble"|"column"|"line"|"pie"|"polygon"|"scatter"|"spline"|"waterfall";
+    'type': "area" | "areaspline" | "bar" | "bubble" | "column" | "line" | "pie" | "polygon" | "scatter" | "spline" | "waterfall";
   }
   interface StellarClock {
     'animated': boolean;
@@ -364,12 +367,12 @@ export namespace Components {
     'iconName': string;
     'label': string;
     'open': boolean;
-    'position': "left"|"center"|"right";
+    'position': "left" | "center" | "right";
   }
   interface StellarFollow {
     'distance': number;
     'padding': number;
-    'type': "scroll"|"cursor";
+    'type': "scroll" | "cursor";
   }
   interface StellarForm {
     'acceptCharset': string;
@@ -415,7 +418,7 @@ export namespace Components {
   }
   interface StellarGrid {
     'align': string;
-    'cols': number|string;
+    'cols': number | string;
     'compact': boolean;
     'noresponsive': boolean;
     'padding': boolean;
@@ -429,48 +432,6 @@ export namespace Components {
   interface StellarGroupOverflow {
     'count': number;
     'size': string;
-  }
-  interface StellarIcon {
-    /**
-    * Specifies the label to use for accessibility. Defaults to the icon name.
-    */
-    'ariaLabel'?: string;
-    /**
-    * Specifies whether the icon should horizontally flip when `dir` is `"rtl"`.
-    */
-    'flipRtl'?: boolean;
-    /**
-    * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
-    */
-    'icon'?: any;
-    /**
-    * Specifies which icon to use on `ios` mode.
-    */
-    'ios'?: string;
-    /**
-    * If enabled, stellar-icon will be loaded lazily when it's visible in the viewport. Default, `false`.
-    */
-    'lazy': boolean;
-    /**
-    * Specifies which icon to use on `md` mode.
-    */
-    'md'?: string;
-    /**
-    * The mode determines which platform styles to use.
-    */
-    'mode'?: "ios" | "md";
-    /**
-    * Specifies which icon to use from the built-in set of icons.
-    */
-    'name'?: string;
-    /**
-    * The size of the icon. Available options are: `"small"` and `"large"`.
-    */
-    'size'?: string;
-    /**
-    * Specifies the exact `src` of an SVG file to use.
-    */
-    'src'?: string;
   }
   interface StellarImage {
     'alt': string;
@@ -486,7 +447,7 @@ export namespace Components {
   }
   interface StellarInput {
     'accept': string;
-    'autocomplete': "name"|"honorific-prefix"|"given-name"|"additional-name"|"family-name"|"honorific-suffix"|"nickname"|"username"|"current-password"|"new-password"|"one-time-code"|"organization-title"|"organization"|"street-address"|"address-line1"|"address-line2"|"address-line3"|"address-level4"|"address-level3"|"address-level2"|"address-level1"|"country"|"country-name"|"postal-code"|"cc-name"|"cc-given-name"|"cc-additional-name"|"cc-family-name"|"cc-number"|"cc-exp"|"cc-exp-month"|"cc-exp-year"|"cc-csc"|"cc-type"|"transaction-currency"|"transaction-amount"|"language"|"bday"|"bday-day"|"bday-month"|"bday-year"|"sex"|"url"|"photo";
+    'autocomplete': "name" | "honorific-prefix" | "given-name" | "additional-name" | "family-name" | "honorific-suffix" | "nickname" | "username" | "current-password" | "new-password" | "one-time-code" | "organization-title" | "organization" | "street-address" | "address-line1" | "address-line2" | "address-line3" | "address-level4" | "address-level3" | "address-level2" | "address-level1" | "country" | "country-name" | "postal-code" | "cc-name" | "cc-given-name" | "cc-additional-name" | "cc-family-name" | "cc-number" | "cc-exp" | "cc-exp-month" | "cc-exp-year" | "cc-csc" | "cc-type" | "transaction-currency" | "transaction-amount" | "language" | "bday" | "bday-day" | "bday-month" | "bday-year" | "sex" | "url" | "photo";
     'autofocus': boolean;
     'capsLock': boolean;
     'color': string;
@@ -495,7 +456,7 @@ export namespace Components {
     * Sets the button or link as an outlined button.
     */
     'dark': boolean;
-    'dateType': "month"|"year"|"day";
+    'dateType': "month" | "year" | "day";
     /**
     * The pre-set value to pass to the input element
     */
@@ -506,7 +467,6 @@ export namespace Components {
     'files': Array<any>;
     'focused': boolean;
     'getDatePicker': () => Promise<any>;
-    'getId': () => Promise<string>;
     'getStrength': () => Promise<object>;
     'icon': boolean;
     'invalid': (message: string | boolean, valid?: boolean, level?: number) => Promise<void>;
@@ -552,7 +512,7 @@ export namespace Components {
     'wrap': string;
   }
   interface StellarIntersection {
-    'element': HTMLElement|string;
+    'element': HTMLElement | string;
     'in': Function;
     'margin': string;
     'multiple': boolean;
@@ -568,7 +528,7 @@ export namespace Components {
     'skipTo': (time: number) => Promise<void>;
     'src': string;
     'toggle': () => Promise<void>;
-    'visualization': "circle"|"bars"|"wave"|"bars2";
+    'visualization': "circle" | "bars" | "wave" | "bars2";
     'width': number;
   }
   interface StellarInterviewLine {
@@ -599,7 +559,7 @@ export namespace Components {
     'setFocus': () => Promise<void>;
     'simple': boolean;
     'size': string;
-    'type': "a"|"button"|"stencil-route-link";
+    'type': "a" | "button" | "stencil-route-link";
     'value': string;
     'valueLabel': string;
     'wrap': boolean;
@@ -620,19 +580,19 @@ export namespace Components {
     'underneath': boolean;
   }
   interface StellarLayout {
-    'align': "baseline"|"center"|"top"|"bottom";
-    'content': "baseline"|"center"|"top"|"bottom";
+    'align': "baseline" | "center" | "top" | "bottom";
+    'content': "baseline" | "center" | "top" | "bottom";
     'hasNav': boolean;
     'height': "fill";
-    'padding': "none"|"tiny"|"small"|"medium"|"large";
+    'padding': "none" | "tiny" | "small" | "medium" | "large";
     'refresh': () => Promise<void>;
-    'size': "tiny"|"small"|"medium"|"large"|"xlarge"|"full"|"flush";
+    'size': "tiny" | "small" | "medium" | "large" | "xlarge" | "full" | "flush";
     'type': string;
   }
   interface StellarLongShadow {
     'active': boolean;
     'delay': number;
-    'direction': "top-left"|"top-right"|"bottom-left"|"bottom-right";
+    'direction': "top-left" | "top-right" | "bottom-left" | "bottom-right";
     'in': () => Promise<void>;
     'length': number;
     'out': () => Promise<void>;
@@ -646,7 +606,7 @@ export namespace Components {
     */
     'codeString': string;
     'editable': boolean;
-    'flavor': "github"|"original"|"vanilla";
+    'flavor': "github" | "original" | "vanilla";
     /**
     * Used to reference an external markdown file
     * @type string
@@ -660,9 +620,9 @@ export namespace Components {
     'name': string;
     'remember': boolean;
     'shown': boolean;
-    'size': "full"|"default";
+    'size': "full" | "default";
     'striped': boolean;
-    'type': "alert"|"error"|"info"|"success";
+    'type': "alert" | "error" | "info" | "success";
   }
   interface StellarMouseTrail {
     'count': number;
@@ -678,7 +638,7 @@ export namespace Components {
     * Public: Sets the max cap of pages you can skip through
     */
     'pages': number;
-    'type': "full"|"compact";
+    'type': "full" | "compact";
     'url': any;
   }
   interface StellarParallax {
@@ -690,7 +650,7 @@ export namespace Components {
   }
   interface StellarPasswordRequirements {
     'for': string;
-    'size': "tiny"|"small"|"large";
+    'size': "tiny" | "small" | "large";
   }
   interface StellarPjax {
     'pjax': any;
@@ -777,11 +737,11 @@ export namespace Components {
   }
   interface StellarRevealList {
     'active': boolean;
-    'animation': "fadeIn"|"fadeInUp"|"fadeInDown";
+    'animation': "fadeIn" | "fadeInUp" | "fadeInDown";
     'delay': number;
     'in': () => Promise<void>;
     'out': () => Promise<void>;
-    'outAnimation': "fadeOut"|"fadeOutUp"|"fadeOutDown";
+    'outAnimation': "fadeOut" | "fadeOutUp" | "fadeOutDown";
     'timing': number;
   }
   interface StellarScatter {
@@ -816,7 +776,7 @@ export namespace Components {
     'label': string;
     'loading': boolean;
     'multiple': boolean;
-    'name': string|boolean;
+    'name': string | boolean;
     'novalidate': boolean;
     'open': boolean;
     'option_elements': () => Promise<NodeListOf<HTMLStellarItemElement>>;
@@ -827,12 +787,12 @@ export namespace Components {
     'placeholderInverted': boolean;
     'processing': boolean;
     'required': boolean;
-    'resize': boolean|"full";
-    'size': "tiny"|"small"|"medium"|"large";
+    'resize': boolean | "full";
+    'size': "tiny" | "small" | "medium" | "large";
     'tooltip': string;
     'update_values': () => Promise<void>;
     'validate': () => Promise<FormResult>;
-    'value': Array<string>|string;
+    'value': Array<string> | string;
     'valueLabel': string;
     'verbiage': string;
     'verbiageAn': boolean;
@@ -856,8 +816,8 @@ export namespace Components {
     'autoHeight': boolean;
     'blurring': boolean;
     'centeredSlides': boolean;
-    'direction': "horizontal"|"vertical";
-    'effect': "slide"|"fade"|"cube"|"coverflow"|"flip";
+    'direction': "horizontal" | "vertical";
+    'effect': "slide" | "fade" | "cube" | "coverflow" | "flip";
     /**
     * Get the index of the active slide.
     */
@@ -990,11 +950,11 @@ export namespace Components {
     */
     'href': string;
     'name': string;
-    'notifications': boolean|number;
+    'notifications': boolean | number;
     'open': boolean;
     'order': number;
     'tabCount': number;
-    'tag': "button"|"link"|"route-link"|"pjax";
+    'tag': "button" | "link" | "route-link" | "pjax";
     /**
     * Sets the target on the anchor tag if the button is a link.
     */
@@ -1059,9 +1019,9 @@ export namespace Components {
     'single': boolean;
     'size': string;
     'stacked': boolean;
-    'type': string|"checkbox"|"radio"|"radio-block"|"checkbox-block";
+    'type': string | "checkbox" | "radio" | "radio-block" | "checkbox-block";
     'validate': () => Promise<FormResult>;
-    'value': string|string[];
+    'value': string | string[];
   }
   interface StellarToggleOption {
     'checked': boolean;
@@ -1087,7 +1047,7 @@ export namespace Components {
     'value': string;
   }
   interface StellarTooltip {
-    'align': "left"|"center"|"right"|"middle-left"|"middle-center"|"middle-right"|"bottom-left"|"bottom-center"|"bottom-right";
+    'align': "left" | "center" | "right" | "middle-left" | "middle-center" | "middle-right" | "bottom-left" | "bottom-center" | "bottom-right";
     'dark': boolean;
     'focused': boolean;
   }
@@ -1259,12 +1219,6 @@ declare global {
   var HTMLStellarAssetElement: {
     prototype: HTMLStellarAssetElement;
     new (): HTMLStellarAssetElement;
-  };
-
-  interface HTMLStellarAssetLibraryElement extends Components.StellarAssetLibrary, HTMLStencilElement {}
-  var HTMLStellarAssetLibraryElement: {
-    prototype: HTMLStellarAssetLibraryElement;
-    new (): HTMLStellarAssetLibraryElement;
   };
 
   interface HTMLStellarAutoScrollElement extends Components.StellarAutoScroll, HTMLStencilElement {}
@@ -1457,12 +1411,6 @@ declare global {
   var HTMLStellarGroupOverflowElement: {
     prototype: HTMLStellarGroupOverflowElement;
     new (): HTMLStellarGroupOverflowElement;
-  };
-
-  interface HTMLStellarIconElement extends Components.StellarIcon, HTMLStencilElement {}
-  var HTMLStellarIconElement: {
-    prototype: HTMLStellarIconElement;
-    new (): HTMLStellarIconElement;
   };
 
   interface HTMLStellarImageElement extends Components.StellarImage, HTMLStencilElement {}
@@ -1810,7 +1758,6 @@ declare global {
     'stellar-accordion': HTMLStellarAccordionElement;
     'stellar-animate-text': HTMLStellarAnimateTextElement;
     'stellar-asset': HTMLStellarAssetElement;
-    'stellar-asset-library': HTMLStellarAssetLibraryElement;
     'stellar-auto-scroll': HTMLStellarAutoScrollElement;
     'stellar-avatar': HTMLStellarAvatarElement;
     'stellar-blur': HTMLStellarBlurElement;
@@ -1843,7 +1790,6 @@ declare global {
     'stellar-grid': HTMLStellarGridElement;
     'stellar-group': HTMLStellarGroupElement;
     'stellar-group-overflow': HTMLStellarGroupOverflowElement;
-    'stellar-icon': HTMLStellarIconElement;
     'stellar-image': HTMLStellarImageElement;
     'stellar-input': HTMLStellarInputElement;
     'stellar-intersection': HTMLStellarIntersectionElement;
@@ -1917,7 +1863,7 @@ declare namespace LocalJSX {
     'width'?: number;
   }
   interface SkeletonText {
-    'as'?: string|'h1'|'h2'|'h3'|'h4'|'h5'|'h6'|'p';
+    'as'?: string | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
     'loading'?: boolean;
     'width'?: number;
   }
@@ -1957,7 +1903,6 @@ declare namespace LocalJSX {
     'name'?: string;
     'src'?: string;
   }
-  interface StellarAssetLibrary {}
   interface StellarAutoScroll {
     'autoplay'?: boolean;
     'loop'?: boolean;
@@ -1971,8 +1916,8 @@ declare namespace LocalJSX {
     'name'?: string;
     'notooltip'?: boolean;
     'processing'?: boolean;
-    'shape'?: "circle"|"square"|"rectangle"|"diamond"|"hexagon"|"star"|"message";
-    'size'?: "tiny"|"small"|"medium"|"large";
+    'shape'?: "circle" | "square" | "rectangle" | "diamond" | "hexagon" | "star" | "message";
+    'size'?: "tiny" | "small" | "medium" | "large";
     'src'?: string;
   }
   interface StellarBlur {
@@ -1987,7 +1932,7 @@ declare namespace LocalJSX {
     'href'?: string;
     'label'?: string;
     'last'?: boolean;
-    'tag'?: "link"|"route";
+    'tag'?: "link" | "route";
     'target'?: string;
   }
   interface StellarBreadcrumbs {
@@ -1999,8 +1944,8 @@ declare namespace LocalJSX {
     'icon_size'?: number;
     'icon_src'?: string;
     'label'?: string;
-    'size'?: "tiny"|"small"|"medium"|"large";
-    'tag'?: "link"|"route";
+    'size'?: "tiny" | "small" | "medium" | "large";
+    'tag'?: "link" | "route";
   }
   interface StellarButton {
     /**
@@ -2059,7 +2004,7 @@ declare namespace LocalJSX {
     /**
     * Sets the padding inside of the button. Can be small, medium, or large.
     */
-    'padding'?: "tiny"|"small"|"medium"|"large";
+    'padding'?: "tiny" | "small" | "medium" | "large";
     /**
     * Sets the button or link to render as a pill.
     */
@@ -2075,11 +2020,11 @@ declare namespace LocalJSX {
     /**
     * Sets the size of the button. Can be tiny, small, medium, or large.
     */
-    'size'?: "tiny"|"small"|"medium"|"large";
+    'size'?: "tiny" | "small" | "medium" | "large";
     /**
     * Allows the button to render for different tags.
     */
-    'tag'?: "button"|"submit"|"link"|"span"|"route-link"|"pjax";
+    'tag'?: "button" | "submit" | "link" | "span" | "route-link" | "pjax";
     /**
     * Sets the target on the anchor tag if the button is a link.
     */
@@ -2091,7 +2036,7 @@ declare namespace LocalJSX {
   }
   interface StellarCallout {
     'dark'?: boolean;
-    'type'?: "alert"|"error"|"info"|"success"|"default";
+    'type'?: "alert" | "error" | "info" | "success" | "default";
   }
   interface StellarCard {
     'dark'?: boolean;
@@ -2123,19 +2068,23 @@ declare namespace LocalJSX {
     * Sets the name if the card is a button.
     */
     'name'?: string;
+    /**
+    * Removes the resize observer
+    */
+    'noresize'?: boolean;
     'onFlip'?: (event: CustomEvent<any>) => void;
     /**
     * Sets the padding inside of the button. Can be small, medium, or large.
     */
-    'padding'?: "none"|"tiny"|"small"|"medium"|"large";
+    'padding'?: "none" | "tiny" | "small" | "medium" | "large";
     /**
     * Renders a shadow on the card
     */
-    'shadow'?: "light"|"medium"|"heavy";
+    'shadow'?: "light" | "medium" | "heavy";
     /**
     * Sets the element to render the card as - an anchor tag, a button, or a div.
     */
-    'tag'?: "stencil-route-link"|"a"|"button"|"div";
+    'tag'?: "stencil-route-link" | "a" | "button" | "div";
     /**
     * Sets the type on a button
     */
@@ -2148,9 +2097,10 @@ declare namespace LocalJSX {
   interface StellarChart {
     'config'?: HighchartsModel;
     'dark'?: boolean;
+    'exporting'?: boolean;
     'for'?: string;
     'remote'?: string;
-    'type'?: "area"|"areaspline"|"bar"|"bubble"|"column"|"line"|"pie"|"polygon"|"scatter"|"spline"|"waterfall";
+    'type'?: "area" | "areaspline" | "bar" | "bubble" | "column" | "line" | "pie" | "polygon" | "scatter" | "spline" | "waterfall";
   }
   interface StellarClock {
     'animated'?: boolean;
@@ -2238,12 +2188,12 @@ declare namespace LocalJSX {
     'iconName'?: string;
     'label'?: string;
     'open'?: boolean;
-    'position'?: "left"|"center"|"right";
+    'position'?: "left" | "center" | "right";
   }
   interface StellarFollow {
     'distance'?: number;
     'padding'?: number;
-    'type'?: "scroll"|"cursor";
+    'type'?: "scroll" | "cursor";
   }
   interface StellarForm {
     'acceptCharset'?: string;
@@ -2284,7 +2234,7 @@ declare namespace LocalJSX {
   }
   interface StellarGrid {
     'align'?: string;
-    'cols'?: number|string;
+    'cols'?: number | string;
     'compact'?: boolean;
     'noresponsive'?: boolean;
     'padding'?: boolean;
@@ -2297,48 +2247,6 @@ declare namespace LocalJSX {
   interface StellarGroupOverflow {
     'count'?: number;
     'size'?: string;
-  }
-  interface StellarIcon {
-    /**
-    * Specifies the label to use for accessibility. Defaults to the icon name.
-    */
-    'ariaLabel'?: string;
-    /**
-    * Specifies whether the icon should horizontally flip when `dir` is `"rtl"`.
-    */
-    'flipRtl'?: boolean;
-    /**
-    * A combination of both `name` and `src`. If a `src` url is detected it will set the `src` property. Otherwise it assumes it's a built-in named SVG and set the `name` property.
-    */
-    'icon'?: any;
-    /**
-    * Specifies which icon to use on `ios` mode.
-    */
-    'ios'?: string;
-    /**
-    * If enabled, stellar-icon will be loaded lazily when it's visible in the viewport. Default, `false`.
-    */
-    'lazy'?: boolean;
-    /**
-    * Specifies which icon to use on `md` mode.
-    */
-    'md'?: string;
-    /**
-    * The mode determines which platform styles to use.
-    */
-    'mode'?: "ios" | "md";
-    /**
-    * Specifies which icon to use from the built-in set of icons.
-    */
-    'name'?: string;
-    /**
-    * The size of the icon. Available options are: `"small"` and `"large"`.
-    */
-    'size'?: string;
-    /**
-    * Specifies the exact `src` of an SVG file to use.
-    */
-    'src'?: string;
   }
   interface StellarImage {
     'alt'?: string;
@@ -2353,7 +2261,7 @@ declare namespace LocalJSX {
   }
   interface StellarInput {
     'accept'?: string;
-    'autocomplete'?: "name"|"honorific-prefix"|"given-name"|"additional-name"|"family-name"|"honorific-suffix"|"nickname"|"username"|"current-password"|"new-password"|"one-time-code"|"organization-title"|"organization"|"street-address"|"address-line1"|"address-line2"|"address-line3"|"address-level4"|"address-level3"|"address-level2"|"address-level1"|"country"|"country-name"|"postal-code"|"cc-name"|"cc-given-name"|"cc-additional-name"|"cc-family-name"|"cc-number"|"cc-exp"|"cc-exp-month"|"cc-exp-year"|"cc-csc"|"cc-type"|"transaction-currency"|"transaction-amount"|"language"|"bday"|"bday-day"|"bday-month"|"bday-year"|"sex"|"url"|"photo";
+    'autocomplete'?: "name" | "honorific-prefix" | "given-name" | "additional-name" | "family-name" | "honorific-suffix" | "nickname" | "username" | "current-password" | "new-password" | "one-time-code" | "organization-title" | "organization" | "street-address" | "address-line1" | "address-line2" | "address-line3" | "address-level4" | "address-level3" | "address-level2" | "address-level1" | "country" | "country-name" | "postal-code" | "cc-name" | "cc-given-name" | "cc-additional-name" | "cc-family-name" | "cc-number" | "cc-exp" | "cc-exp-month" | "cc-exp-year" | "cc-csc" | "cc-type" | "transaction-currency" | "transaction-amount" | "language" | "bday" | "bday-day" | "bday-month" | "bday-year" | "sex" | "url" | "photo";
     'autofocus'?: boolean;
     'capsLock'?: boolean;
     'color'?: string;
@@ -2362,7 +2270,7 @@ declare namespace LocalJSX {
     * Sets the button or link as an outlined button.
     */
     'dark'?: boolean;
-    'dateType'?: "month"|"year"|"day";
+    'dateType'?: "month" | "year" | "day";
     /**
     * The pre-set value to pass to the input element
     */
@@ -2424,7 +2332,7 @@ declare namespace LocalJSX {
     'wrap'?: string;
   }
   interface StellarIntersection {
-    'element'?: HTMLElement|string;
+    'element'?: HTMLElement | string;
     'in'?: Function;
     'margin'?: string;
     'multiple'?: boolean;
@@ -2436,7 +2344,7 @@ declare namespace LocalJSX {
     'height'?: number;
     'playing'?: boolean;
     'src'?: string;
-    'visualization'?: "circle"|"bars"|"wave"|"bars2";
+    'visualization'?: "circle" | "bars" | "wave" | "bars2";
     'width'?: number;
   }
   interface StellarInterviewLine {
@@ -2467,7 +2375,7 @@ declare namespace LocalJSX {
     'selected'?: boolean;
     'simple'?: boolean;
     'size'?: string;
-    'type'?: "a"|"button"|"stencil-route-link";
+    'type'?: "a" | "button" | "stencil-route-link";
     'value'?: string;
     'valueLabel'?: string;
     'wrap'?: boolean;
@@ -2488,18 +2396,18 @@ declare namespace LocalJSX {
     'underneath'?: boolean;
   }
   interface StellarLayout {
-    'align'?: "baseline"|"center"|"top"|"bottom";
-    'content'?: "baseline"|"center"|"top"|"bottom";
+    'align'?: "baseline" | "center" | "top" | "bottom";
+    'content'?: "baseline" | "center" | "top" | "bottom";
     'hasNav'?: boolean;
     'height'?: "fill";
-    'padding'?: "none"|"tiny"|"small"|"medium"|"large";
-    'size'?: "tiny"|"small"|"medium"|"large"|"xlarge"|"full"|"flush";
+    'padding'?: "none" | "tiny" | "small" | "medium" | "large";
+    'size'?: "tiny" | "small" | "medium" | "large" | "xlarge" | "full" | "flush";
     'type'?: string;
   }
   interface StellarLongShadow {
     'active'?: boolean;
     'delay'?: number;
-    'direction'?: "top-left"|"top-right"|"bottom-left"|"bottom-right";
+    'direction'?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
     'length'?: number;
     'timing'?: number;
   }
@@ -2511,7 +2419,7 @@ declare namespace LocalJSX {
     */
     'codeString'?: string;
     'editable'?: boolean;
-    'flavor'?: "github"|"original"|"vanilla";
+    'flavor'?: "github" | "original" | "vanilla";
     /**
     * Used to reference an external markdown file
     * @type string
@@ -2525,9 +2433,9 @@ declare namespace LocalJSX {
     'name'?: string;
     'remember'?: boolean;
     'shown'?: boolean;
-    'size'?: "full"|"default";
+    'size'?: "full" | "default";
     'striped'?: boolean;
-    'type'?: "alert"|"error"|"info"|"success";
+    'type'?: "alert" | "error" | "info" | "success";
   }
   interface StellarMouseTrail {
     'count'?: number;
@@ -2544,7 +2452,7 @@ declare namespace LocalJSX {
     * Public: Sets the max cap of pages you can skip through
     */
     'pages'?: number;
-    'type'?: "full"|"compact";
+    'type'?: "full" | "compact";
     'url'?: any;
   }
   interface StellarParallax {
@@ -2556,7 +2464,7 @@ declare namespace LocalJSX {
   }
   interface StellarPasswordRequirements {
     'for'?: string;
-    'size'?: "tiny"|"small"|"large";
+    'size'?: "tiny" | "small" | "large";
   }
   interface StellarPjax {
     'pjax'?: any;
@@ -2640,9 +2548,9 @@ declare namespace LocalJSX {
   }
   interface StellarRevealList {
     'active'?: boolean;
-    'animation'?: "fadeIn"|"fadeInUp"|"fadeInDown";
+    'animation'?: "fadeIn" | "fadeInUp" | "fadeInDown";
     'delay'?: number;
-    'outAnimation'?: "fadeOut"|"fadeOutUp"|"fadeOutDown";
+    'outAnimation'?: "fadeOut" | "fadeOutUp" | "fadeOutDown";
     'timing'?: number;
   }
   interface StellarScatter {
@@ -2676,7 +2584,7 @@ declare namespace LocalJSX {
     'label'?: string;
     'loading'?: boolean;
     'multiple'?: boolean;
-    'name'?: string|boolean;
+    'name'?: string | boolean;
     'novalidate'?: boolean;
     'onUpdate'?: (event: CustomEvent<any>) => void;
     'open'?: boolean;
@@ -2686,10 +2594,10 @@ declare namespace LocalJSX {
     'placeholderInverted'?: boolean;
     'processing'?: boolean;
     'required'?: boolean;
-    'resize'?: boolean|"full";
-    'size'?: "tiny"|"small"|"medium"|"large";
+    'resize'?: boolean | "full";
+    'size'?: "tiny" | "small" | "medium" | "large";
     'tooltip'?: string;
-    'value'?: Array<string>|string;
+    'value'?: Array<string> | string;
     'valueLabel'?: string;
     'verbiage'?: string;
     'verbiageAn'?: boolean;
@@ -2714,8 +2622,8 @@ declare namespace LocalJSX {
     'autoHeight'?: boolean;
     'blurring'?: boolean;
     'centeredSlides'?: boolean;
-    'direction'?: "horizontal"|"vertical";
-    'effect'?: "slide"|"fade"|"cube"|"coverflow"|"flip";
+    'direction'?: "horizontal" | "vertical";
+    'effect'?: "slide" | "fade" | "cube" | "coverflow" | "flip";
     'initialSlide'?: number;
     'loop'?: boolean;
     'nested'?: boolean;
@@ -2832,12 +2740,12 @@ declare namespace LocalJSX {
     */
     'href'?: string;
     'name'?: string;
-    'notifications'?: boolean|number;
+    'notifications'?: boolean | number;
     'onContentChange'?: (event: CustomEvent<any>) => void;
     'open'?: boolean;
     'order'?: number;
     'tabCount'?: number;
-    'tag'?: "button"|"link"|"route-link"|"pjax";
+    'tag'?: "button" | "link" | "route-link" | "pjax";
     /**
     * Sets the target on the anchor tag if the button is a link.
     */
@@ -2900,8 +2808,8 @@ declare namespace LocalJSX {
     'single'?: boolean;
     'size'?: string;
     'stacked'?: boolean;
-    'type'?: string|"checkbox"|"radio"|"radio-block"|"checkbox-block";
-    'value'?: string|string[];
+    'type'?: string | "checkbox" | "radio" | "radio-block" | "checkbox-block";
+    'value'?: string | string[];
   }
   interface StellarToggleOption {
     'checked'?: boolean;
@@ -2926,7 +2834,7 @@ declare namespace LocalJSX {
     'value'?: string;
   }
   interface StellarTooltip {
-    'align'?: "left"|"center"|"right"|"middle-left"|"middle-center"|"middle-right"|"bottom-left"|"bottom-center"|"bottom-right";
+    'align'?: "left" | "center" | "right" | "middle-left" | "middle-center" | "middle-right" | "bottom-left" | "bottom-center" | "bottom-right";
     'dark'?: boolean;
     'focused'?: boolean;
   }
@@ -3025,7 +2933,6 @@ declare namespace LocalJSX {
     'stellar-accordion': StellarAccordion;
     'stellar-animate-text': StellarAnimateText;
     'stellar-asset': StellarAsset;
-    'stellar-asset-library': StellarAssetLibrary;
     'stellar-auto-scroll': StellarAutoScroll;
     'stellar-avatar': StellarAvatar;
     'stellar-blur': StellarBlur;
@@ -3058,7 +2965,6 @@ declare namespace LocalJSX {
     'stellar-grid': StellarGrid;
     'stellar-group': StellarGroup;
     'stellar-group-overflow': StellarGroupOverflow;
-    'stellar-icon': StellarIcon;
     'stellar-image': StellarImage;
     'stellar-input': StellarInput;
     'stellar-intersection': StellarIntersection;
@@ -3133,7 +3039,6 @@ declare module "@stencil/core" {
       'stellar-accordion': LocalJSX.StellarAccordion & JSXBase.HTMLAttributes<HTMLStellarAccordionElement>;
       'stellar-animate-text': LocalJSX.StellarAnimateText & JSXBase.HTMLAttributes<HTMLStellarAnimateTextElement>;
       'stellar-asset': LocalJSX.StellarAsset & JSXBase.HTMLAttributes<HTMLStellarAssetElement>;
-      'stellar-asset-library': LocalJSX.StellarAssetLibrary & JSXBase.HTMLAttributes<HTMLStellarAssetLibraryElement>;
       'stellar-auto-scroll': LocalJSX.StellarAutoScroll & JSXBase.HTMLAttributes<HTMLStellarAutoScrollElement>;
       'stellar-avatar': LocalJSX.StellarAvatar & JSXBase.HTMLAttributes<HTMLStellarAvatarElement>;
       'stellar-blur': LocalJSX.StellarBlur & JSXBase.HTMLAttributes<HTMLStellarBlurElement>;
@@ -3166,7 +3071,6 @@ declare module "@stencil/core" {
       'stellar-grid': LocalJSX.StellarGrid & JSXBase.HTMLAttributes<HTMLStellarGridElement>;
       'stellar-group': LocalJSX.StellarGroup & JSXBase.HTMLAttributes<HTMLStellarGroupElement>;
       'stellar-group-overflow': LocalJSX.StellarGroupOverflow & JSXBase.HTMLAttributes<HTMLStellarGroupOverflowElement>;
-      'stellar-icon': LocalJSX.StellarIcon & JSXBase.HTMLAttributes<HTMLStellarIconElement>;
       'stellar-image': LocalJSX.StellarImage & JSXBase.HTMLAttributes<HTMLStellarImageElement>;
       'stellar-input': LocalJSX.StellarInput & JSXBase.HTMLAttributes<HTMLStellarInputElement>;
       'stellar-intersection': LocalJSX.StellarIntersection & JSXBase.HTMLAttributes<HTMLStellarIntersectionElement>;

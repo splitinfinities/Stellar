@@ -12,14 +12,14 @@ export class Breadcrumb {
 
   @Prop() color: string;
   @Prop() href: string = "/";
-  @Prop() tag: "link"|"route" = "link";
+  @Prop() tag: "link" | "route" = "link";
   @Prop() target: string = "_self";
-  @Prop({mutable: true}) label: string = "Breadcrumb link";
+  @Prop({ mutable: true }) label: string = "Breadcrumb link";
   @Prop() disabled: boolean = false;
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
 
-  @Prop({reflect: true}) first: boolean;
-  @Prop({reflect: true}) last: boolean;
+  @Prop({ reflect: true }) first: boolean;
+  @Prop({ reflect: true }) last: boolean;
 
   componentDidLoad() {
     this.label += ` for ${this.element.textContent}`
@@ -40,8 +40,8 @@ export class Breadcrumb {
 
     // @ts-ignore
     return <Tag class="button" href={this.href} url={this.href} target={this.target} aria-label={this.label} title={this.label} data-disabled={this.disabled}>
-        <slot></slot>
-      </Tag>
+      <slot></slot>
+    </Tag>
   }
 }
 Tunnel.injectProps(Breadcrumb, ['dark']);

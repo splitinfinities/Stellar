@@ -1,22 +1,19 @@
+import { newSpecPage } from '@stencil/core/testing';
 import { Group } from './group';
 
-it('should render and respond to changes appropriately', () => {
-  const group = new Group();
-  expect(group).toBeInstanceOf(Group);
-});
-
-
-import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
-
-describe('stellar-item', () => {
+describe('stellar-group', () => {
   it('should render and respond to changes appropriately', async () => {
     const page = await newSpecPage({
-      components: [Item],
-      html: `<stellar-item></stellar-item>`,
+      components: [Group],
+      html: `<stellar-group></stellar-group>`,
     });
+
     expect(page.root).toEqualHtml(`
-       
+       <stellar-group>
+        <mock:shadow-root>
+          <slot></slot>
+        </mock:shadow-root>
+      </stellar-group>
     `);
   });
 })

@@ -6,11 +6,11 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true
 })
 export class Asset {
-  @Prop({reflect: true}) src: string;
-  @Prop({reflect: true}) name: string = "person";
-  @Prop({reflect: true}) language: string = "ios-";
-  @Prop({reflect: true}) align: string;
-  @Prop({reflect: true, mutable: true}) ariaLabel: string;
+  @Prop({ reflect: true }) src: string;
+  @Prop({ reflect: true }) name: string = "person";
+  @Prop({ reflect: true }) language: string = "ios-";
+  @Prop({ reflect: true }) align: string;
+  @Prop({ reflect: true, mutable: true }) ariaLabel: string;
 
   componentWillLoad() {
     this.ariaLabel = this.name
@@ -21,10 +21,10 @@ export class Asset {
 
   @Prop() block: boolean = false;
 
-  render () {
+  render() {
     return (
       <div class="icon-wrap">
-        <stellar-icon src={this.src} name={this.name} ariaLabel={this.ariaLabel} aria-label={this.ariaLabel}></stellar-icon>
+        <ion-icon src={this.src} name={this.name} ariaLabel={this.ariaLabel} aria-label={this.ariaLabel}></ion-icon>
       </div>
     );
   }

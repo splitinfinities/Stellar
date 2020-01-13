@@ -7,7 +7,7 @@ import { Component, Prop, State, Element, h } from '@stencil/core'
 })
 export class Group {
 	@Element() element: HTMLElement
-	@Prop({mutable: true, reflect: true}) size: string;
+	@Prop({ mutable: true, reflect: true }) size: string;
 	@Prop() overflow: boolean = false
 	@Prop() count: number = 10
 	@State() extras: Array<Element> = []
@@ -30,7 +30,7 @@ export class Group {
 		}
 	}
 
-	sizes () {
+	sizes() {
 		const kids = Array.from(this.element.children)
 
 		if (kids) {
@@ -53,7 +53,7 @@ export class Group {
 	resultantExtras() {
 		return this.extras.map((element) => {
 			const attributes = {};
-			Array.prototype.slice.call(element.attributes).forEach(function(item) {
+			Array.prototype.slice.call(element.attributes).forEach(function (item) {
 				attributes[item.name] = item.value
 			})
 			return <element.tagName {...attributes} />

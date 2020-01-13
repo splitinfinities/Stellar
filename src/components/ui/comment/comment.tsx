@@ -10,9 +10,9 @@ import Tunnel from '../../theme';
 export class Comment {
   @Element() element: HTMLElement;
 
-  @Prop({mutable: true}) content: any;
-  @Prop({mutable: true}) name: any;
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ mutable: true }) content: any = "Loading...";
+  @Prop({ mutable: true }) name: any = "Loading...";
+  @Prop({ reflect: true }) dark: boolean = false;
   @State() empty: boolean = false;
 
   componentWillLoad() {
@@ -25,7 +25,10 @@ export class Comment {
       this.element.querySelector('stellar-avatar').tabIndex = -1;
       this.name = this.element.querySelector('stellar-avatar').name;
     }
-    this.content = this.element.querySelector('[slot="content"]').textContent.trim();
+
+    if (this.element.querySelector('[slot="content"]')) {
+      this.content = this.element.querySelector('[slot="content"]').textContent.trim();
+    }
   }
 
   render() {

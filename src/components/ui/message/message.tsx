@@ -8,20 +8,23 @@ import Tunnel from '../../theme';
 })
 export class Message {
   @Element() element: HTMLElement;
-  @Prop() type: "alert"|"error"|"info"|"success";
-  @Prop({reflect: true}) size: "full"|"default";
+  @Prop() type: "alert" | "error" | "info" | "success";
+  @Prop({ reflect: true }) size: "full" | "default";
   @Prop() closable: boolean = true;
   @Prop() remember: boolean = true;
-  @Prop({mutable: true, reflect: true}) name: string = "stellar";
-  @Prop({mutable: true, reflect: true}) shown: boolean = true;
-  @Prop({reflect: true}) striped: boolean = false;
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ mutable: true, reflect: true }) name: string = "stellar";
+  @Prop({ mutable: true, reflect: true }) shown: boolean = true;
+  @Prop({ reflect: true }) striped: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
   @State() theme: string = "gray";
 
-  componentWillLoad () {
+  componentWillLoad() {
     if (this.remember) {
       const string = this.element.innerHTML;
-      this.name = this.name + "_" + btoa(unescape(encodeURIComponent(string)));
+
+      if (window && window.btoa) {
+        this.name = this.name + "_" + btoa(unescape(encodeURIComponent(string)));
+      }
 
       if (localStorage.getItem(this.name)) {
         this.shown = !(localStorage.getItem(this.name) === "hidden");

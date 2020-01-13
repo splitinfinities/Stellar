@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, Watch, h } from '@stencil/core';
+import { Component, Prop, State, Element, Watch, h, Host } from '@stencil/core';
 import Tunnel from '../../theme';
 
 @Component({
@@ -9,8 +9,8 @@ import Tunnel from '../../theme';
 export class Callout {
   @Element() element: HTMLElement;
 
-  @Prop({reflect: true}) dark: boolean = false;
-  @Prop() type: "alert"|"error"|"info"|"success"|"default" = "default";
+  @Prop({ reflect: true }) dark: boolean = false;
+  @Prop() type: "alert" | "error" | "info" | "success" | "default" = "default";
   @State() theme: string = "gray";
 
   componentDidLoad() {
@@ -18,23 +18,11 @@ export class Callout {
     this.element.setAttribute('aria-role', "status");
     this.element.setAttribute('tabindex', `0`);
     this.handleType();
-    this.handleTheme();
-  }
-
-  @Watch('theme')
-  handleTheme() {
-    this.element.classList.forEach((c: string) => {
-      if (c.startsWith('theme-')) {
-        this.element.classList.remove(c);
-      }
-    });
-
-    this.element.classList.add(`theme-${this.theme}`)
   }
 
   @Watch('type')
   handleType() {
-    switch(this.type) {
+    switch (this.type) {
       case "alert":
         this.theme = "yellow"
         break;
@@ -57,12 +45,12 @@ export class Callout {
     }
   }
 
-  render () {
-    return (
+  render() {
+    return <Host class={`theme-${this.theme}`}>
       <div class="callout-wrap">
         <slot />
       </div>
-    );
+    </Host>
   }
 }
 

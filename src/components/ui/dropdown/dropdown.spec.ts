@@ -1,22 +1,28 @@
+import { newSpecPage } from '@stencil/core/testing';
 import { Dropdown } from './dropdown';
 
-it('should render and respond to changes appropriately', () => {
-  const dropdown = new Dropdown();
-  expect(dropdown).toBeInstanceOf(Dropdown);
-});
-
-
-import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
-
-describe('stellar-item', () => {
+describe('stellar-dropdown', () => {
   it('should render and respond to changes appropriately', async () => {
     const page = await newSpecPage({
-      components: [Item],
-      html: `<stellar-item></stellar-item>`,
+      components: [Dropdown],
+      html: `<stellar-dropdown></stellar-dropdown>`,
     });
+
     expect(page.root).toEqualHtml(`
-       
+      <stellar-dropdown aria-label=\"Dropdown\" class=\"dropdown\" position=\"center\" title=\"Dropdown\">
+        <mock:shadow-root>
+          <div class=\"toggle\">
+            <slot name=\"handle\"></slot>
+          </div>
+          <div class=\"clipper\">
+            <div class=\"list-wrap\">
+              <ul class=\"list\">
+                <slot></slot>
+              </ul>
+            </div>
+          </div>
+        </mock:shadow-root>
+      </stellar-dropdown>
     `);
   });
 })

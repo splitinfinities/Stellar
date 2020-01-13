@@ -1,62 +1,57 @@
+import { newSpecPage } from '@stencil/core/testing';
 import { Avatar } from './avatar';
 
-it('should render and respond to changes appropriately', () => {
-  const avatar = new Avatar();
-
-  expect(avatar.name).toBe("Stellar");
-  expect(avatar.initials).toBe("ST");
-  expect(avatar.color).toBe("auto");
-  expect(avatar.colors).toBe(undefined);
-
-  avatar.componentWillLoad()
-
-  expect(avatar.colors.length).toEqual(14);
-
-  avatar.name = "William M. Riley";
-  avatar.formatName();
-
-  expect(avatar.name).toBe("William M. Riley");
-  expect(avatar.initials).toBe("W");
-  expect(avatar.color).toBe("red");
-
-  avatar.color = "#333333";
-
-  expect(avatar.color).toBe("#333333");
-
-  avatar.shape = "star";
-  avatar.formatName()
-
-  expect(avatar.initials).toBe("W");
-
-  avatar.shape = "circle";
-  avatar.size = "tiny";
-  avatar.formatName()
-
-  expect(avatar.initials).toBe("W");
-
-  avatar.name = "";
-  avatar.formatName()
-
-  expect(avatar.initials).toBe("ST");
-
-  avatar.processing = true;
-  avatar.formatName()
-
-  expect(avatar.initials).toBe("");
-});
-
-
-import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
-
-describe('stellar-item', () => {
+describe('stellar-avatar', () => {
   it('should render and respond to changes appropriately', async () => {
     const page = await newSpecPage({
-      components: [Item],
-      html: `<stellar-item></stellar-item>`,
+      components: [Avatar],
+      html: `<stellar-avatar></stellar-avatar>`,
     });
+
     expect(page.root).toEqualHtml(`
-       
+      <stellar-avatar class=\"theme-teal\" color=\"teal\" initials=\"S\" name=\"Stellar\" shape=\"square\">
+        <mock:shadow-root>
+          <button class=\"wrapper\" title=\"You tabbed on an Avatar for Stellar\">
+            <div class=\"content\">
+              <div class=\"spacer\"></div>
+              <div class=\"letter\" title=\"Stellar\">
+                S
+              </div>
+            </div>
+            <stellar-tooltip>
+              Stellar
+            </stellar-tooltip>
+          </button>
+        </mock:shadow-root>
+      </stellar-avatar>
     `);
+
+    expect(page.root.name).toBe("Stellar");
+    expect(page.root.initials).toBe("S");
+    expect(page.root.color).toBe("teal");
+
+    page.root.name = "William M. Riley";
+
+    expect(page.root.name).toBe("William M. Riley");
+    expect(page.root.initials).toBe("W");
+    expect(page.root.color).toBe("red");
+
+    page.root.color = "#333333";
+
+    expect(page.root.name).toBe("William M. Riley");
+    expect(page.root.initials).toBe("W");
+    expect(page.root.color).toBe("#333333");
+
+    page.root.size = "large";
+    page.root.name = "William Riley";
+
+    expect(page.root.name).toBe("William Riley");
+    expect(page.root.initials).toBe("WR");
+    expect(page.root.color).toBe("pink");
+
+    page.root.processing = true;
+    page.root.name = "William M. Riley";
+
+    expect(page.root.initials).toBe("");
   });
 })

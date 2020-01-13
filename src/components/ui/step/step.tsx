@@ -1,5 +1,5 @@
 import { Component, Prop, State, Element, Event, EventEmitter, h } from '@stencil/core'
-import {parentNodeSelector} from '../../../utils'
+import { parentNodeSelector } from '../../../utils'
 
 @Component({
   tag: 'stellar-step',
@@ -9,19 +9,19 @@ import {parentNodeSelector} from '../../../utils'
 export class Step {
   @Element() element: HTMLElement
 
-  @Prop({mutable: true, reflect: true}) href: string = "#"
+  @Prop({ mutable: true, reflect: true }) href: string = "#"
   @Prop() disabled: boolean = false
-  @Prop({mutable: true, reflect: true}) open: boolean = false
+  @Prop({ mutable: true, reflect: true }) open: boolean = false
 
-  @Prop({reflect: true}) order: number
-  @Prop({reflect: true}) tabCount: number
+  @Prop({ reflect: true }) order: number
+  @Prop({ reflect: true }) tabCount: number
 
   @State() parent: any
 
   @Event() contentChange: EventEmitter;
 
-  componentWillLoad () {
-    this.parent = parentNodeSelector(this.element, 'stellar-steps')
+  componentWillLoad() {
+    this.parent = this.element.closest("stellar-steps");
   }
 
   handleClick() {
@@ -47,7 +47,7 @@ export class Step {
 
   render() {
     return (
-      <button role="tab" aria-selected={this.open ? "true" : "false" } aria-setsize={this.tabCount} aria-posinset={this.order} tabindex="0" class="step-button" onClick={() => this.handleClick()}>
+      <button role="tab" aria-selected={this.open ? "true" : "false"} aria-setsize={this.tabCount} aria-posinset={this.order} tabindex="0" class="step-button" onClick={() => this.handleClick()}>
         <stellar-label>{this.renderTitle()}</stellar-label>
       </button>
     )

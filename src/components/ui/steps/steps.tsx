@@ -8,7 +8,7 @@ import { Component, Prop, State, Element, Method, h } from '@stencil/core'
 export class Steps {
   @Element() element: HTMLElement
 
-  @Prop({mutable: true, reflect: true}) name: string
+  @Prop({ mutable: true, reflect: true }) name: string
 
   @State() stepsList: Array<HTMLStellarStepElement>
   @State() contentsList: Array<HTMLStellarContentElement>
@@ -28,7 +28,7 @@ export class Steps {
     return this.contentsList;
   }
 
-  async componentWillLoad () {
+  async componentWillLoad() {
     const steps = await this.steps()
 
     const stepCount = steps.length;

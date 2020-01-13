@@ -12,20 +12,20 @@ export class Breadcrumbs {
   @Prop() icon: string = 'analytics';
   @Prop() icon_src: string;
   @Prop() icon_size: number = 0.85;
-  @Prop() tag: "link"|"route" = "link";
+  @Prop() tag: "link" | "route" = "link";
   @Prop() home: string = "/";
   @Prop() label: string = "Home";
   @Prop() description: string = "An icon that shows the main page you're on";
-  @Prop({reflect: true}) size: "tiny"|"small"|"medium"|"large";
+  @Prop({ reflect: true }) size: "tiny" | "small" | "medium" | "large";
 
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
   @Prop() color: string = "blue5";
 
   componentWillLoad() {
     this.updateBreadcrumbs();
   }
 
-  updateBreadcrumbs () {
+  updateBreadcrumbs() {
     const last_breadcrumb: HTMLStellarBreadcrumbElement = this.el.querySelector('stellar-breadcrumb:last-of-type');
     const breadcrumbs: NodeListOf<HTMLStellarBreadcrumbElement> = this.el.querySelectorAll('stellar-breadcrumb');
 

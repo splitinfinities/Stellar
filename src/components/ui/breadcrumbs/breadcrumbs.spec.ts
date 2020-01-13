@@ -1,22 +1,29 @@
+import { newSpecPage } from '@stencil/core/testing';
 import { Breadcrumbs } from './breadcrumbs';
 
-xit('should render', () => {
-    const breadcrumbs = new Breadcrumbs();
-    expect(breadcrumbs.label).toBe("Breadcrumb link");
-});
-
-
-import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
-
-describe('stellar-item', () => {
+describe('stellar-breadcrumbs', () => {
     it('should render and respond to changes appropriately', async () => {
         const page = await newSpecPage({
-            components: [Item],
-            html: `<stellar-item></stellar-item>`,
+            components: [Breadcrumbs],
+            html: `<stellar-breadcrumbs></stellar-breadcrumbs>`,
         });
+
         expect(page.root).toEqualHtml(`
-       
-    `);
+            <stellar-breadcrumbs>
+                <mock:shadow-root>
+                    <div class=\"breadcrumbs\" id=\"breadcumb_wrapper\">
+                    <div class=\"flush-left\"></div>
+                    <stellar-breadcrumb first=\"\" tag=\"link\">
+                        <stellar-asset color=\"blue5\" id=\"icon\" name=\"analytics\"></stellar-asset>
+                        <stellar-label>
+                        Home
+                        </stellar-label>
+                    </stellar-breadcrumb>
+                    <slot></slot>
+                    <div class=\"flush\"></div>
+                    </div>
+                </mock:shadow-root>
+            </stellar-breadcrumbs>
+        `);
     });
 })

@@ -1,22 +1,21 @@
+import { newSpecPage } from '@stencil/core/testing';
 import { Comments } from './comments';
 
-it('should render and respond to changes appropriately', () => {
-  const comments = new Comments();
-  expect(comments).toBeInstanceOf(Comments);
-});
-
-
-import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
-
-describe('stellar-item', () => {
+describe('stellar-comments', () => {
   it('should render and respond to changes appropriately', async () => {
     const page = await newSpecPage({
-      components: [Item],
-      html: `<stellar-item></stellar-item>`,
+      components: [Comments],
+      html: `<stellar-comments></stellar-comments>`,
     });
+
     expect(page.root).toEqualHtml(`
-       
+      <stellar-comments>
+        <mock:shadow-root>
+          <section>
+            <slot></slot>
+          </section>
+        </mock:shadow-root>
+      </stellar-comments>
     `);
   });
 })

@@ -9,9 +9,9 @@ import { blurringEase } from '../../../utils';
 
 export class Content {
   @Element() element: HTMLElement;
-  @Prop({mutable: true, reflect: true}) open: boolean = false;
-  @Prop({mutable: true, reflect: true}) for: string;
-  @Prop({mutable: true, reflect: true}) behavior: string;
+  @Prop({ mutable: true, reflect: true }) open: boolean = false;
+  @Prop({ mutable: true, reflect: true }) for: string;
+  @Prop({ mutable: true, reflect: true }) behavior: string;
   @State() ease: TweenInstance = blurringEase({
     end: 6,
     start: -1,
@@ -44,8 +44,8 @@ export class Content {
     this.element.scrollIntoView(true)
   }
 
-  @Listen("contentChange", {target: 'document'})
-  async handleActive (event: CustomEvent) {
+  @Listen("contentChange", { target: 'document' })
+  async handleActive(event: CustomEvent) {
     this.parent = event.detail.parent;
 
     const contents = await this.parent.contents()

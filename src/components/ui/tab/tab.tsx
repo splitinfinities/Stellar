@@ -7,16 +7,15 @@ import Tunnel from '../../theme';
   styleUrl: 'tab.css',
   shadow: true
 })
-
 export class Tab {
   @Element() element: HTMLElement
 
-  @Prop({mutable: true, reflect: true}) name: string;
+  @Prop({ mutable: true, reflect: true }) name: string;
   @Prop() disabled: boolean = false
-  @Prop({mutable: true, reflect: true}) open: boolean = false
-  @Prop({mutable: true, reflect: true}) dark: boolean = false
-  @Prop() notifications: boolean|number = false
-  @Prop() tag: "button"|"link"|"route-link"|"pjax" = "button";
+  @Prop({ mutable: true, reflect: true }) open: boolean = false
+  @Prop({ mutable: true, reflect: true }) dark: boolean = false
+  @Prop() notifications: boolean | number = false
+  @Prop() tag: "button" | "link" | "route-link" | "pjax" = "button";
 
   /**
   * Sets the href on the anchor tag if the button is a link.
@@ -28,22 +27,22 @@ export class Tab {
    */
   @Prop() target: string = '_self';
 
-  @Prop({reflect: true}) order: number
-  @Prop({reflect: true}) tabCount: number
-  @Prop({reflect: true}) vertical: boolean = false
+  @Prop({ reflect: true }) order: number
+  @Prop({ reflect: true }) tabCount: number
+  @Prop({ reflect: true }) vertical: boolean = false
 
   @State() parent: any
 
   @Event() contentChange: EventEmitter;
 
-  componentWillLoad () {
+  componentWillLoad() {
     this.parent = this.element.closest('stellar-tabs');
     if (window.location.hash && this.href.includes(window.location.hash)) {
       this.handleClick()
     }
   }
 
-  @Listen("resize", {target: 'window'})
+  @Listen("resize", { target: 'window' })
   handleResize() {
     this.handleIndicatorPosition()
   }
@@ -55,14 +54,14 @@ export class Tab {
       if (this.open && window.location.href.includes(this.href)) {
         this.open = false;
         this.removeIndicator();
-      } 
+      }
     });
 
     document.addEventListener('pjax:complete', () => {
       if (window.location.href.includes(this.href)) {
         this.open = true;
         this.handleIndicatorPosition();
-      } 
+      }
     })
   }
 
@@ -147,7 +146,7 @@ export class Tab {
 
   renderButton() {
     return (
-      <button role="tab" type="button" disabled={this.disabled} aria-selected={this.open ? "true" : "false" } aria-setsize={this.tabCount} aria-posinset={this.order} tabindex="0" class="tab-button" onClick={(e) => this.handleClick(e)}>
+      <button role="tab" type="button" disabled={this.disabled} aria-selected={this.open ? "true" : "false"} aria-setsize={this.tabCount} aria-posinset={this.order} tabindex="0" class="tab-button" onClick={(e) => this.handleClick(e)}>
         {this.renderNotifications()}
         {this.renderTitle()}
       </button>
@@ -174,10 +173,10 @@ export class Tab {
 
   render() {
     return <div class="tab-wrap">
-      { this.tag === "button" && this.renderButton() }
-      { this.tag === "link" && this.renderLink() }
-      { this.tag === "route-link" && this.renderAppLink() }
-      { this.tag === "pjax" && this.renderButton() }
+      {this.tag === "button" && this.renderButton()}
+      {this.tag === "link" && this.renderLink()}
+      {this.tag === "route-link" && this.renderAppLink()}
+      {this.tag === "pjax" && this.renderButton()}
     </div>
   }
 }

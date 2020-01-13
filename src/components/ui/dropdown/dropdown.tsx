@@ -12,12 +12,12 @@ focusWithin(document)
 export class Dropdown {
   @Element() element: HTMLElement
 
-  @Prop({mutable: true, reflect: true}) position: "left"|"center"|"right" = "center"
+  @Prop({ mutable: true, reflect: true }) position: "left" | "center" | "right" = "center"
   @Prop() icon: boolean = false;
   @Prop() iconName: string = "arrow-down";
   @Prop() label: string = "Dropdown";
-  @Prop({mutable: true, reflect: true}) open: boolean = false;
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ mutable: true, reflect: true }) open: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
 
   @State() footer: boolean = false;
 
@@ -35,21 +35,21 @@ export class Dropdown {
 
   render() {
     return <Host aria-label={this.label} class="dropdown" title={this.label}>
-        <div class="toggle">
-          <slot name="handle"></slot>
-          { this.icon && <stellar-asset name={this.iconName} class="caret"></stellar-asset> }
+      <div class="toggle">
+        <slot name="handle"></slot>
+        {this.icon && <stellar-asset name={this.iconName} class="caret"></stellar-asset>}
+      </div>
+      <div class="clipper">
+        <div class="list-wrap">
+          <ul class="list">
+            <slot></slot>
+            {this.footer && <div class="footer">
+              <slot name="footer"></slot>
+            </div>}
+          </ul>
         </div>
-        <div class="clipper">
-          <div class="list-wrap">
-            <ul class="list">
-              <slot></slot>
-              {this.footer && <div class="footer">
-                <slot name="footer"></slot>
-              </div>}
-            </ul>
-          </div>
-        </div>
-      </Host>
+      </div>
+    </Host>
   }
 }
 

@@ -6,10 +6,10 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true
 })
 export class CopyWrap {
-  @Prop({reflect: true}) align: string = "left";
-  @Prop({reflect: true}) full: boolean = false;
+  @Prop({ reflect: true }) align: string = "left";
+  @Prop({ reflect: true }) full: boolean = false;
 
-  render () {
+  render() {
     return <slot />;
   }
 }

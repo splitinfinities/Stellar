@@ -1,22 +1,16 @@
+import { newSpecPage } from '@stencil/core/testing';
 import { Table } from './table';
 
-it('should render and respond to changes appropriately', () => {
-    const table = new Table();
-    expect(table).toBeInstanceOf(Table);
-});
-
-
-import { newSpecPage } from '@stencil/core/testing';
-import { Item } from './item';
-
-describe('stellar-item', () => {
+describe('stellar-table', () => {
     it('should render and respond to changes appropriately', async () => {
         const page = await newSpecPage({
-            components: [Item],
-            html: `<stellar-item></stellar-item>`,
+            components: [Table],
+            html: `<stellar-table><table></table></stellar-table>`,
         });
-        expect(page.root).toEqualHtml(`
-       
-    `);
+
+        expect(page.root).toEqualHtml(`<stellar-table>
+        <table></table>
+        </stellar-table>
+        `);
     });
 })

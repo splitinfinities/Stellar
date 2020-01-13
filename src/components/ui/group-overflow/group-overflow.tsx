@@ -9,7 +9,7 @@ export class GroupOverflow {
   @Element() element: HTMLElement;
 
   @Prop() count: number;
-  @Prop({mutable: true, reflect: true}) size: string = "medium";
+  @Prop({ mutable: true, reflect: true }) size: string = "medium";
 
   render() {
     return (

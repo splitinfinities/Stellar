@@ -1,5 +1,5 @@
 import { Component, Prop, State, Watch, Element, Event, EventEmitter, h } from '@stencil/core';
-import {properties, blurringEase} from '../../../utils'
+import { properties, blurringEase } from '../../../utils'
 import Tunnel from '../../theme';
 
 @Component({
@@ -13,12 +13,12 @@ export class Pagination {
   /**
    * Public: Sets the max cap of pages you can skip through
    */
-  @Prop({reflect: true, mutable: true}) pages: number = 1;
-  @Prop({reflect: true, mutable: true}) type: "full"|"compact" = "full";
-  @Prop({reflect: true, mutable: true}) current: number = 1;
-  @Prop({reflect: true, mutable: true}) padding: number = 2;
+  @Prop({ reflect: true, mutable: true }) pages: number = 1;
+  @Prop({ reflect: true, mutable: true }) type: "full" | "compact" = "full";
+  @Prop({ reflect: true, mutable: true }) current: number = 1;
+  @Prop({ reflect: true, mutable: true }) padding: number = 2;
   @Prop() color: string = "gray";
-  @Prop({reflect: true}) dark: boolean = false;
+  @Prop({ reflect: true }) dark: boolean = false;
 
   @Prop() url: any = "#page-{0}";
 
@@ -26,8 +26,8 @@ export class Pagination {
 
   @State() __current: number = 1;
   @State() __first: number = 1;
-  @State() __previous: number|boolean = false;
-  @State() __next: number|boolean = false;
+  @State() __previous: number | boolean = false;
+  @State() __next: number | boolean = false;
   @State() __last: number;
 
   @State() blur: number = 0;
@@ -67,7 +67,7 @@ export class Pagination {
     this.ease.start();
   }
 
-  componentWillLoad () {
+  componentWillLoad() {
     this.__first = 1;
     this.__current = this.current;
     this.__previous = (this.current > this.__first) ? this.current - 1 : false;
@@ -77,7 +77,7 @@ export class Pagination {
     this.updateSurroundingPages();
   }
 
-  componentDidLoad () {
+  componentDidLoad() {
     setTimeout(() => {
       this.affixDistance()
     }, 300)
@@ -130,7 +130,7 @@ export class Pagination {
     this.__current = parseInt(target.value);
   }
 
-  handleClick (event: UIEvent) {
+  handleClick(event: UIEvent) {
     event.preventDefault();
 
     const target: any = event.currentTarget;
@@ -141,7 +141,7 @@ export class Pagination {
     return this.url.format(pageNumber);
   }
 
-  renderFirstPageButton () {
+  renderFirstPageButton() {
     const hidden = (this.__current > 1) ? "no" : "yes";
 
     return (
@@ -151,7 +151,7 @@ export class Pagination {
     );
   }
 
-  renderPreviousPageButton () {
+  renderPreviousPageButton() {
     const hidden = (typeof this.__previous === "number" && this.__current > 1) ? "no" : "yes";
 
     return (
@@ -161,7 +161,7 @@ export class Pagination {
     );
   }
 
-  renderNextPageButton () {
+  renderNextPageButton() {
     const hidden = (typeof this.__next === "number" || this.__current < this.pages) ? "no" : "yes";
 
     return (
@@ -171,7 +171,7 @@ export class Pagination {
     );
   }
 
-  renderLastPageButton () {
+  renderLastPageButton() {
     const hidden = (this.__current < this.pages) ? "no" : "yes";
 
     return (
@@ -181,31 +181,31 @@ export class Pagination {
     );
   }
 
-  renderPagesList () {
+  renderPagesList() {
     return this.__surroundingPages.map((page) => {
       return (
-        <a href={page.url} data-page={page.number} data-visible={page.visible} data-current={page.current} onClick={(event: UIEvent) => this.handleClick(event)} class={(page.number === this.__current || page.number === this.current) ? 'current-number number' : 'number' }>
+        <a href={page.url} data-page={page.number} data-visible={page.visible} data-current={page.current} onClick={(event: UIEvent) => this.handleClick(event)} class={(page.number === this.__current || page.number === this.current) ? 'current-number number' : 'number'}>
           {page.number}
         </a>);
     });
   }
 
-  renderPagesPreviousEllipsis () {
+  renderPagesPreviousEllipsis() {
     const hidden = ((this.__current - this.padding) > 1) ? "no" : "yes";
 
     return (
-        <div class="ellipsis previous" data-hidden={hidden}>
-          &hellip;
+      <div class="ellipsis previous" data-hidden={hidden}>
+        &hellip;
         </div>
     );
   }
 
-  renderPagesNextEllipsis () {
+  renderPagesNextEllipsis() {
     const hidden = ((this.__current + this.padding + 1) < this.pages) ? "no" : "yes";
 
     return (
-        <div class="ellipsis next" data-hidden={hidden}>
-          &hellip;
+      <div class="ellipsis next" data-hidden={hidden}>
+        &hellip;
         </div>
     );
   }
@@ -215,21 +215,21 @@ export class Pagination {
       return (
         <span class="pagination-container">
           <div class="pagination-wrap">
-            { this.renderFirstPageButton() }
-            { this.renderPreviousPageButton() }
+            {this.renderFirstPageButton()}
+            {this.renderPreviousPageButton()}
 
             <div class="pages">
-              { this.renderPagesPreviousEllipsis() }
-              { this.renderPagesList() }
-              { this.renderPagesNextEllipsis() }
+              {this.renderPagesPreviousEllipsis()}
+              {this.renderPagesList()}
+              {this.renderPagesNextEllipsis()}
 
               <stellar-blur horizontal={this.blur}>
                 <div class="indicator"></div>
               </stellar-blur>
             </div>
 
-            { this.renderNextPageButton() }
-            { this.renderLastPageButton() }
+            {this.renderNextPageButton()}
+            {this.renderLastPageButton()}
           </div>
         </span>
       );
