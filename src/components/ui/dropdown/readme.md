@@ -78,7 +78,6 @@
 graph TD;
   stellar-dropdown --> stellar-asset
   stellar-dropdown --> context-consumer
-  stellar-asset --> stellar-icon
   style stellar-dropdown fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

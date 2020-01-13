@@ -1,4 +1,4 @@
-/* tslint:disable */
+//@ts-nocheck
 (function (y) { "object" === typeof exports && "undefined" !== typeof module ? module.exports = y() : "function" === typeof define && define.amd ? define([], y) : ("undefined" !== typeof window ? window : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : this).jsmediatags = y() })(function () {
 	return function f(p, q, m) {
 		function l(c, a) {

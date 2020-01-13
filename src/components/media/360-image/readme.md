@@ -30,7 +30,6 @@ graph TD;
   stellar-360-image --> skeleton-img
   skeleton-img --> stellar-asset
   skeleton-img --> stellar-intersection
-  stellar-asset --> stellar-icon
   style stellar-360-image fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

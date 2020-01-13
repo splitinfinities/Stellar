@@ -1,5 +1,4 @@
 import { Component, Element, Prop, h, Host } from '@stencil/core';
-import properties from 'css-custom-properties'
 
 @Component({
 	tag: 'skeleton-img',

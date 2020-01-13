@@ -50,14 +50,9 @@
  - [stellar-toggle-option](../../forms/toggle-option)
  - [stellar-video-interview](../../media/video-interview)
 
-### Depends on
-
-- [stellar-icon](../../media/icon)
-
 ### Graph
 ```mermaid
 graph TD;
-  stellar-asset --> stellar-icon
   skeleton-img --> stellar-asset
   stellar-accordion --> stellar-asset
   stellar-breadcrumbs --> stellar-asset

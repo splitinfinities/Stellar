@@ -149,7 +149,6 @@ graph TD;
   stellar-playlist --> skeleton-img
   stellar-playlist --> web-audio-visualizer
   stellar-playlist --> context-consumer
-  stellar-asset --> stellar-icon
   stellar-color-picker --> context-consumer
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link

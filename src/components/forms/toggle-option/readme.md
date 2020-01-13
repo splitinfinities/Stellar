@@ -75,7 +75,6 @@ graph TD;
   stellar-toggle-option --> stellar-tag
   stellar-toggle-option --> stellar-tooltip
   stellar-toggle-option --> context-consumer
-  stellar-asset --> stellar-icon
   stellar-tag --> stellar-label
   stellar-tag --> context-consumer
   stellar-label --> context-consumer

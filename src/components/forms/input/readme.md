@@ -109,16 +109,6 @@ Type: `Promise<any>`
 
 
 
-### `getId() => Promise<string>`
-
-
-
-#### Returns
-
-Type: `Promise<string>`
-
-
-
 ### `getStrength() => Promise<object>`
 
 
@@ -197,7 +187,6 @@ graph TD;
   stellar-input --> stellar-tooltip
   stellar-input --> context-consumer
   stellar-label --> context-consumer
-  stellar-asset --> stellar-icon
   stellar-tooltip --> context-consumer
   stellar-markdown --> stellar-input
   stellar-pagination --> stellar-input

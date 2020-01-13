@@ -65,7 +65,6 @@ graph TD;
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer
-  stellar-asset --> stellar-icon
   stellar-docs-component --> stellar-accordion
   stellar-docs-navigation --> stellar-accordion
   style stellar-accordion fill:#f9f,stroke:#333,stroke-width:4px

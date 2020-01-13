@@ -65,7 +65,6 @@ graph TD;
   stellar-input --> stellar-tooltip
   stellar-input --> context-consumer
   stellar-label --> context-consumer
-  stellar-asset --> stellar-icon
   stellar-tooltip --> context-consumer
   style stellar-stripe fill:#f9f,stroke:#333,stroke-width:4px
 ```

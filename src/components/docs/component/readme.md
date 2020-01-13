@@ -62,14 +62,12 @@ graph TD;
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer
-  stellar-asset --> stellar-icon
   stellar-docs-header --> stellar-message
   stellar-docs-header --> stellar-asset
   stellar-docs-header --> stellar-button
   stellar-docs-header --> stellar-layout
   stellar-docs-header --> stellar-starscape
   stellar-docs-header --> copy-wrap
-  stellar-docs-header --> stellar-icon
   stellar-docs-header --> stellar-tag
   stellar-docs-header --> stellar-card
   stellar-docs-header --> stellar-grid

@@ -101,7 +101,6 @@
 graph TD;
   stellar-message --> stellar-asset
   stellar-message --> context-consumer
-  stellar-asset --> stellar-icon
   stellar-docs-header --> stellar-message
   style stellar-message fill:#f9f,stroke:#333,stroke-width:4px
 ```

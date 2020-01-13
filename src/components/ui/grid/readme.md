@@ -49,7 +49,6 @@ Type: `Promise<void>`
 
 ### Used by
 
- - [stellar-asset-library](../../helpers/asset-library)
  - [stellar-color-library](../../helpers/color-library)
  - [stellar-docs-header](../../docs/header)
  - [stellar-stripe](../../helpers/stripe)
@@ -59,7 +58,6 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  stellar-asset-library --> stellar-grid
   stellar-color-library --> stellar-grid
   stellar-docs-header --> stellar-grid
   stellar-stripe --> stellar-grid

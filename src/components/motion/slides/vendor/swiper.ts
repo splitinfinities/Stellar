@@ -1,4 +1,4 @@
-/* ts:ignore */
+//@ts-nocheck
 /**
  * Swiper 4.2.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions

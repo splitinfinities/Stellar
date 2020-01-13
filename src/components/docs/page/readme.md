@@ -34,7 +34,6 @@ graph TD;
   stellar-docs-header --> stellar-layout
   stellar-docs-header --> stellar-starscape
   stellar-docs-header --> copy-wrap
-  stellar-docs-header --> stellar-icon
   stellar-docs-header --> stellar-tag
   stellar-docs-header --> stellar-card
   stellar-docs-header --> stellar-grid
@@ -43,7 +42,6 @@ graph TD;
   stellar-docs-header --> context-consumer
   stellar-message --> stellar-asset
   stellar-message --> context-consumer
-  stellar-asset --> stellar-icon
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer

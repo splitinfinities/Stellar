@@ -70,6 +70,7 @@
 | `for`       | `for`        | Sets the href on the anchor tag if the button is a link.                    | `string`                                             | `undefined` |
 | `href`      | `href`       | Sets the href if the card is a link.                                        | `string`                                             | `"#"`       |
 | `name`      | `name`       | Sets the name if the card is a button.                                      | `string`                                             | `""`        |
+| `noresize`  | `noresize`   | Removes the resize observer                                                 | `boolean`                                            | `false`     |
 | `padding`   | `padding`    | Sets the padding inside of the button. Can be small, medium, or large.      | `"large" or "medium" or "none" or "small" or "tiny"` | `"medium"`  |
 | `shadow`    | `shadow`     | Renders a shadow on the card                                                | `"heavy" or "light" or "medium"`                     | `"medium"`  |
 | `tag`       | `tag`        | Sets the element to render the card as - an anchor tag, a button, or a div. | `"a" or "button" or "div" or "stencil-route-link"`   | `"div"`     |
@@ -123,7 +124,6 @@ graph TD;
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer
-  stellar-asset --> stellar-icon
   stellar-code --> stellar-card
   stellar-color-library --> stellar-card
   stellar-docs-component --> stellar-card

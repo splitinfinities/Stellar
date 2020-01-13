@@ -40,19 +40,6 @@
 | `vertical`   | `vertical`   |             | `number` | `0`     |
 
 
-## Methods
-
-### `setBlurFilter() => Promise<void>`
-
-
-
-#### Returns
-
-Type: `Promise<void>`
-
-
-
-
 ## Dependencies
 
 ### Used by

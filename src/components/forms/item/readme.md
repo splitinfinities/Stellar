@@ -103,7 +103,6 @@ Type: `Promise<void>`
 graph TD;
   stellar-item --> stellar-asset
   stellar-item --> context-consumer
-  stellar-asset --> stellar-icon
   stellar-docs-component --> stellar-item
   stellar-docs-header --> stellar-item
   stellar-docs-navigation --> stellar-item

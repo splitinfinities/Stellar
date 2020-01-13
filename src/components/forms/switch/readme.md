@@ -72,7 +72,6 @@ Type: `Promise<FormResult>`
 graph TD;
   stellar-switch --> stellar-asset
   stellar-switch --> context-consumer
-  stellar-asset --> stellar-icon
   style stellar-switch fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

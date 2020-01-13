@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type      | Default     |
-| --------- | --------- | ----------- | --------- | ----------- |
-| `content` | `content` |             | `any`     | `undefined` |
-| `dark`    | `dark`    |             | `boolean` | `false`     |
-| `name`    | `name`    |             | `any`     | `undefined` |
+| Property  | Attribute | Description | Type      | Default        |
+| --------- | --------- | ----------- | --------- | -------------- |
+| `content` | `content` |             | `any`     | `"Loading..."` |
+| `dark`    | `dark`    |             | `boolean` | `false`        |
+| `name`    | `name`    |             | `any`     | `"Loading..."` |
 
 
 ## Dependencies

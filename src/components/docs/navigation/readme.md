@@ -41,7 +41,6 @@ graph TD;
   stellar-docs-navigation --> context-consumer
   stellar-item --> stellar-asset
   stellar-item --> context-consumer
-  stellar-asset --> stellar-icon
   stellar-card --> stellar-button
   stellar-card --> stellar-asset
   stellar-card --> context-consumer

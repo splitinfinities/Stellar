@@ -65,7 +65,6 @@ graph TD;
   stellar-breadcrumbs --> stellar-label
   stellar-breadcrumbs --> context-consumer
   stellar-breadcrumb --> context-consumer
-  stellar-asset --> stellar-icon
   stellar-label --> context-consumer
   style stellar-breadcrumbs fill:#f9f,stroke:#333,stroke-width:4px
 ```

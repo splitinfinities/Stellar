@@ -7,13 +7,14 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                                                                                                                              | Default               |
-| -------- | --------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| `config` | --        |             | `HighchartsModel`                                                                                                                 | `new HighchartsModel` |
-| `dark`   | `dark`    |             | `boolean`                                                                                                                         | `false`               |
-| `for`    | `for`     |             | `string`                                                                                                                          | `undefined`           |
-| `remote` | `remote`  |             | `string`                                                                                                                          | `undefined`           |
-| `type`   | `type`    |             | `"area" or "areaspline" or "bar" or "bubble" or "column" or "line" or "pie" or "polygon" or "scatter" or "spline" or "waterfall"` | `undefined`           |
+| Property    | Attribute   | Description | Type                                                                                                                              | Default               |
+| ----------- | ----------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `config`    | --          |             | `HighchartsModel`                                                                                                                 | `new HighchartsModel` |
+| `dark`      | `dark`      |             | `boolean`                                                                                                                         | `false`               |
+| `exporting` | `exporting` |             | `boolean`                                                                                                                         | `false`               |
+| `for`       | `for`       |             | `string`                                                                                                                          | `undefined`           |
+| `remote`    | `remote`    |             | `string`                                                                                                                          | `undefined`           |
+| `type`      | `type`      |             | `"area" or "areaspline" or "bar" or "bubble" or "column" or "line" or "pie" or "polygon" or "scatter" or "spline" or "waterfall"` | `undefined`           |
 
 
 ## Methods

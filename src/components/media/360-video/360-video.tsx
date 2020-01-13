@@ -1,4 +1,4 @@
-import { Component, Prop, State, Element, h, Host } from '@stencil/core';
+import { Component, Prop, Element, h, Host } from '@stencil/core';
 import * as Kaleidoscope from "kaleidoscopejs";
 
 @Component({

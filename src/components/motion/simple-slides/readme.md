@@ -23,7 +23,6 @@
 ```mermaid
 graph TD;
   stellar-simple-slides --> stellar-asset
-  stellar-asset --> stellar-icon
   style stellar-simple-slides fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

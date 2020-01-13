@@ -41,7 +41,6 @@ graph TD;
   stellar-button --> stellar-asset
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer
-  stellar-asset --> stellar-icon
   stellar-item --> stellar-asset
   stellar-item --> context-consumer
   stellar-tooltip --> context-consumer
