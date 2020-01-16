@@ -20,7 +20,6 @@
     "test": "stencil test --next --spec",
     "test.complete": "stencil test --next --spec --e2e --screenshot",
     "test.watch": "stencil test --next --spec --e2e --screenshot --watchAll",
-    "version": "./build-docs && git add *",
     "publish": "np --any-branch"
   },
   "dependencies": {
