@@ -14,20 +14,14 @@
 </head>
 
 <body>
-      <stellar-google-maps apikey="AIzaSyDwDhY20PU4F89wF7xNQPZZgyjl0L7IwIw" lat="41.241774" lng="-96.0213306" zoom="14"
-            block theme="retro" no-ui>
-            <stellar-google-maps-marker lat="41.2416785" lng="-96.0211205" marker-title="nice"
-                  icon="https://launch-brewery.local/wp-content/uploads/2019/12/Launch-Brewing-Logo_INK-BLACK-NEWSPRINT-WHITE_PRIMARY.png"
-                  icon-width="75" icon-height="50">
-                  <h1>Nice</h1>
-                  <p>Love this stuff</p>
-            </stellar-google-maps-marker>
-            <stellar-google-maps-marker address="1624 s 25th st, Lincoln NE 68502" marker-title="home">
-                  <h1>Home</h1>
-                  <p>Love this stuff</p>
-            </stellar-google-maps-marker>
-      </stellar-google-maps>
-
+      <stellar-interstitial id="interstitial">
+            <copy-wrap align="center">
+                  <h1>Are you over the age of 21?</h1>
+                  <p>you gotta be!</p>
+                  <stellar-button tag="button" close></stellar-button>
+                  <stellar-button tag="a" href=""></stellar-button>
+            </copy-wrap>
+      </stellar-interstitial>
 </body>
 
 </html>
