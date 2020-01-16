@@ -14,7 +14,7 @@ describe('stellar-breadcrumbs', () => {
                     <div class=\"breadcrumbs\" id=\"breadcumb_wrapper\">
                     <div class=\"flush-left\"></div>
                     <stellar-breadcrumb first=\"\" tag=\"link\">
-                        <stellar-asset color=\"blue5\" id=\"icon\" name=\"analytics\"></stellar-asset>
+                        <ion-icon color=\"blue5\" id=\"icon\" name=\"analytics\"></ion-icon>
                         <stellar-label>
                         Home
                         </stellar-label>

@@ -192,12 +192,12 @@
     display: inline-grid;
     align-items: center;
     justify-content: center;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
     grid-gap: 0.1em;
 }
 
 :host ::slotted(img),
-:host ::slotted(stellar-asset) {
+:host ::slotted(ion-icon) {
     display: inline-block;
     float: none;
     width: 1em;
@@ -207,18 +207,16 @@
 }
 
 :host([ghost]) ::slotted(img),
-:host([ghost]) ::slotted(stellar-asset) {
+:host([ghost]) ::slotted(ion-icon) {
     font-size: 1.65em;
 }
 
-:host ::slotted(img[align="left"]),
-:host ::slotted(stellar-asset[align="left"]) {
+:host ::slotted(.align-left) {
     order: -1;
     margin-right: var(--ms-7);
 }
 
-:host ::slotted(img[align="right"]),
-:host ::slotted(stellar-asset[align="right"]) {
+:host ::slotted(.align-right) {
     order: 2;
     margin-left: var(--ms-7);
 }

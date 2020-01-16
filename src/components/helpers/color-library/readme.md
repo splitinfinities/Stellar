@@ -34,9 +34,9 @@ graph TD;
   stellar-color-library --> stellar-grid
   stellar-color-library --> stellar-card
   stellar-card --> stellar-button
-  stellar-card --> stellar-asset
+  stellar-card --> ion-icon
   stellar-card --> context-consumer
-  stellar-button --> stellar-asset
+  stellar-button --> ion-icon
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer
   style stellar-color-library fill:#f9f,stroke:#333,stroke-width:4px

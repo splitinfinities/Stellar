@@ -15,7 +15,7 @@ describe('stellar-select', () => {
                     <div class=\"select\">
                         <button class=\"select-title\" type=\"button\">
                         <stellar-item fit=\"\" select-title=\"\" tabindex=\"-1\" type=\"button\" value=\"\" wrap=\"\"></stellar-item>
-                        <stellar-asset name=\"arrow-down\"></stellar-asset>
+                        <ion-icon name=\"arrow-down\"></ion-icon>
                         <input name=\"select\" tabindex=\"-1\" type=\"text\">
                         </button>
                         <stellar-blur class=\"select-list\" vertical=\"0\">

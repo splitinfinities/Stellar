@@ -56,14 +56,14 @@ graph TD;
   stellar-markdown --> copy-wrap
   stellar-markdown --> stellar-input
   stellar-card --> stellar-button
-  stellar-card --> stellar-asset
+  stellar-card --> ion-icon
   stellar-card --> context-consumer
-  stellar-button --> stellar-asset
+  stellar-button --> ion-icon
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer
   stellar-input --> stellar-label
   stellar-input --> copy-wrap
-  stellar-input --> stellar-asset
+  stellar-input --> ion-icon
   stellar-input --> stellar-unit
   stellar-input --> stellar-tooltip
   stellar-input --> context-consumer

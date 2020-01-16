@@ -1,6 +1,7 @@
 import { Component, Prop, State, Element, Method, Listen, EventEmitter, Event, h } from '@stencil/core';
 import { asTime } from '../../../utils'
 import Tunnel from '../../theme';
+import "ionicons";
 
 @Component({
   tag: 'stellar-playlist',
@@ -274,7 +275,7 @@ export class Playlist {
           <h6>{this.name}</h6>
           <button class="playlist" onClick={() => this.togglePlaylist()}>
             <h6 class="list">
-              <stellar-asset name="musical-notes"></stellar-asset>
+              <ion-icon name="musical-notes"></ion-icon>
               list
             </h6>
           </button>
@@ -282,8 +283,8 @@ export class Playlist {
             <h6 class="list">
               {
                 (this.view === "art")
-                  ? <stellar-asset name="albums" />
-                  : <stellar-asset name="radio" />
+                  ? <ion-icon name="albums" />
+                  : <ion-icon name="radio" />
               }
               {
                 (this.view === "art")
@@ -299,8 +300,8 @@ export class Playlist {
           <button onClick={() => { this.handlePlay() }} class="toggle-button" data-playing={this.playing}>
             {
               (this.playing)
-                ? <stellar-asset name="pause" />
-                : <stellar-asset name="play" />
+                ? <ion-icon name="pause" />
+                : <ion-icon name="play" />
             }
           </button>
 
@@ -332,10 +333,10 @@ export class Playlist {
 
         <div id="controls" class="controls">
           <button onClick={() => this.previous()} class="button previous">
-            <stellar-asset name="skip-backward"></stellar-asset>
+            <ion-icon name="skip-backward"></ion-icon>
           </button>
           <button onClick={() => this.next()} class="button next">
-            <stellar-asset name="skip-forward"></stellar-asset>
+            <ion-icon name="skip-forward"></ion-icon>
           </button>
         </div>
 

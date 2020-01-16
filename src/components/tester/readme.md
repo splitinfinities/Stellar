@@ -32,16 +32,16 @@ graph TD;
   stellar-theme --> context-consumer
   stellar-select --> stellar-label
   stellar-select --> stellar-button
-  stellar-select --> stellar-asset
+  stellar-select --> ion-icon
   stellar-select --> stellar-item
   stellar-select --> stellar-tooltip
   stellar-select --> stellar-blur
   stellar-select --> context-consumer
   stellar-label --> context-consumer
-  stellar-button --> stellar-asset
+  stellar-button --> ion-icon
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer
-  stellar-item --> stellar-asset
+  stellar-item --> ion-icon
   stellar-item --> context-consumer
   stellar-tooltip --> context-consumer
   style stellar-tester fill:#f9f,stroke:#333,stroke-width:4px

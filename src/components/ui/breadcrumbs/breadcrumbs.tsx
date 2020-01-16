@@ -1,5 +1,6 @@
 import { Component, Prop, Element, h } from '@stencil/core';
 import Tunnel from '../../theme';
+import "ionicons";
 
 @Component({
   tag: 'stellar-breadcrumbs',
@@ -43,7 +44,7 @@ export class Breadcrumbs {
       <div id="breadcumb_wrapper" class="breadcrumbs">
         <div class="flush-left"></div>
         <stellar-breadcrumb first tag={this.tag}>
-          <stellar-asset id="icon" name={this.icon} src={this.icon_src} color={this.color}></stellar-asset>
+          <ion-icon id="icon" name={this.icon} src={this.icon_src} color={this.color}></ion-icon>
           <stellar-label size={this.size}>{this.label}</stellar-label>
         </stellar-breadcrumb>
         <slot></slot>

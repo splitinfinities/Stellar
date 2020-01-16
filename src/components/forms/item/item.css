@@ -86,7 +86,7 @@
   margin: auto 0.5rem auto auto;
 }
 
-:host .button stellar-asset {
+:host .button ion-icon {
   margin-left: 1rem;
   background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 80%,rgba(255,255,255,0) 100%);
 }
@@ -103,7 +103,7 @@
   height: 3rem;
 }
 
-:host stellar-asset.selected {
+:host ion-icon.selected {
   animation: fadeInScale 200ms var(--ease);
   font-size: var(--item-size);
   margin-left: auto !important;
@@ -112,7 +112,7 @@
   height: calc(var(--item-size) - 1px);
 }
 
-:host([fit]) stellar-asset.selected {
+:host([fit]) ion-icon.selected {
   height: 75%;
   font-size: 3em;
   margin-right: 0.125em;
@@ -124,7 +124,7 @@
   color: var(--theme-base7);
 }
 
-:host([fit]) stellar-asset {
+:host([fit]) ion-icon {
   right: 1em;
 }
 
@@ -149,11 +149,11 @@
   background: white !important;
 }
 
-:host(.current) stellar-asset {
+:host(.current) ion-icon {
   display: none;
 }
 
-:host stellar-asset.multiple {
+:host ion-icon.multiple {
   border: 1px solid var(--border-color);
   background: var(--background);
   border-radius: 4px;
@@ -166,7 +166,7 @@
   color: transparent;
 }
 
-:host stellar-asset.multiple.selected {
+:host ion-icon.multiple.selected {
   color: var(--white);
   background: var(--theme-base5);
 }

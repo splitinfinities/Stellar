@@ -1,4 +1,5 @@
 import { Component, Element, Prop, h, Host } from '@stencil/core';
+import "ionicons";
 
 @Component({
 	tag: 'skeleton-img',
@@ -23,7 +24,7 @@ export class SkeletonImg {
 
 	render() {
 		return <Host style={!this.block && { '--width': `${this.width}px`, '--height': `${this.height}px` }}>
-			{this.loading && this.icon && <stellar-asset name="spinning-bubbles" color="gray25"></stellar-asset>}
+			{this.loading && this.icon && <ion-icon name="spinning-bubbles" color="gray25"></ion-icon>}
 			<svg width={this.width} height={this.height}>
 				<rect width={this.width} height={this.height} />
 			</svg>

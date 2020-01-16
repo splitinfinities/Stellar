@@ -2,7 +2,7 @@
   <stellar-slide>
     <stellar-card>
       <copy-wrap>
-        <h1 class="flex white items-center"><stellar-asset name="rocket" class="db mr4 mt1"></stellar-asset>Hello!</h1>
+        <h1 class="flex white items-center"><ion-icon name="rocket" class="db mr4 mt1"></ion-icon>Hello!</h1>
       </copy-wrap>
     <stellar-starscape></stellar-starscape>
     </stellar-card>
@@ -18,7 +18,7 @@
   <stellar-slide>
     <stellar-card>
       <copy-wrap>
-        <h1 class="flex white items-center"><stellar-asset name="rocket" class="db mr4 mt1"></stellar-asset>Hello!</h1>
+        <h1 class="flex white items-center"><ion-icon name="rocket" class="db mr4 mt1"></ion-icon>Hello!</h1>
       </copy-wrap>
     <stellar-starscape></stellar-starscape>
     </stellar-card>
@@ -26,7 +26,7 @@
   <stellar-slide>
     <stellar-card>
       <copy-wrap>
-        <h1 class="flex white items-center"><stellar-asset name="rocket" class="db mr4 mt1"></stellar-asset>Hello!</h1>
+        <h1 class="flex white items-center"><ion-icon name="rocket" class="db mr4 mt1"></ion-icon>Hello!</h1>
       </copy-wrap>
     <stellar-starscape></stellar-starscape>
     </stellar-card>
@@ -34,7 +34,7 @@
   <stellar-slide>
     <stellar-card>
       <copy-wrap>
-        <h1 class="flex white items-center"><stellar-asset name="rocket" class="db mr4 mt1"></stellar-asset>Hello!</h1>
+        <h1 class="flex white items-center"><ion-icon name="rocket" class="db mr4 mt1"></ion-icon>Hello!</h1>
       </copy-wrap>
     <stellar-starscape></stellar-starscape>
     </stellar-card>
@@ -42,7 +42,7 @@
   <stellar-slide>
     <stellar-card>
       <copy-wrap>
-        <h1 class="flex white items-center"><stellar-asset name="rocket" class="db mr4 mt1"></stellar-asset>Hello!</h1>
+        <h1 class="flex white items-center"><ion-icon name="rocket" class="db mr4 mt1"></ion-icon>Hello!</h1>
       </copy-wrap>
     <stellar-starscape></stellar-starscape>
     </stellar-card>

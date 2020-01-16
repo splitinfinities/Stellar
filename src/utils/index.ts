@@ -117,9 +117,9 @@ export var shuffle = function (array) {
   return array;
 };
 
-String.prototype['format'] = function() {
+String.prototype['format'] = function () {
   var formatted = this;
-  for( var arg in arguments ) {
+  for (var arg in arguments) {
     formatted = formatted.replace("{" + arg + "}", arguments[arg]);
   }
   return formatted;
@@ -167,31 +167,31 @@ export function form2js(data) {
 }
 
 export const asTime = function (float) {
-	var sec_num = float;
-	var hours   = Math.floor(sec_num / 3600);
-	var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
-	var seconds: string|number = sec_num - (hours * 3600) - (minutes * 60);
+  var sec_num = float;
+  var hours = Math.floor(sec_num / 3600);
+  var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+  var seconds: string | number = sec_num - (hours * 3600) - (minutes * 60);
 
-	seconds = (seconds < 10) ? "0" + seconds : seconds;
+  seconds = (seconds < 10) ? "0" + seconds : seconds;
 
-	var count = (minutes+":"+seconds).split('.')
+  var count = (minutes + ":" + seconds).split('.')
 
-	return count[0];
+  return count[0];
 }
 
 export const leadingZeroIndex = function (index) {
-	var s = index+"";
-	while (s.length < 2) s = "0" + s;
-	return s;
+  var s = index + "";
+  while (s.length < 2) s = "0" + s;
+  return s;
 }
 
 export const relPathAsAbs = function (sRelPath) {
-	var nUpLn, sDir = "", sPath = location.pathname.replace(/[^\/]*$/, sRelPath.replace(/(\/|^)(?:\.?\/+)+/g, "$1"));
-	for (var nEnd, nStart = 0; nEnd = sPath.indexOf("/../", nStart), nEnd > -1; nStart = nEnd + nUpLn) {
-		nUpLn = /^\/(?:\.\.\/)*/.exec(sPath.slice(nEnd))[0].length;
-		sDir = (sDir + sPath.substring(nStart, nEnd)).replace(new RegExp("(?:\\\/+[^\\\/]*){0," + ((nUpLn - 1) / 3) + "}$"), "/");
-	}
-	return sDir + sPath.substr(nStart);
+  var nUpLn, sDir = "", sPath = location.pathname.replace(/[^\/]*$/, sRelPath.replace(/(\/|^)(?:\.?\/+)+/g, "$1"));
+  for (var nEnd, nStart = 0; nEnd = sPath.indexOf("/../", nStart), nEnd > -1; nStart = nEnd + nUpLn) {
+    nUpLn = /^\/(?:\.\.\/)*/.exec(sPath.slice(nEnd))[0].length;
+    sDir = (sDir + sPath.substring(nStart, nEnd)).replace(new RegExp("(?:\\\/+[^\\\/]*){0," + ((nUpLn - 1) / 3) + "}$"), "/");
+  }
+  return sDir + sPath.substr(nStart);
 }
 
 export {

@@ -80,9 +80,9 @@ graph TD;
   stellar-code --> stellar-card
   stellar-code --> context-consumer
   stellar-card --> stellar-button
-  stellar-card --> stellar-asset
+  stellar-card --> ion-icon
   stellar-card --> context-consumer
-  stellar-button --> stellar-asset
+  stellar-button --> ion-icon
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer
   stellar-docs-component --> stellar-code

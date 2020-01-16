@@ -28,7 +28,7 @@
 graph TD;
   stellar-360-image --> stellar-intersection
   stellar-360-image --> skeleton-img
-  skeleton-img --> stellar-asset
+  skeleton-img --> ion-icon
   skeleton-img --> stellar-intersection
   style stellar-360-image fill:#f9f,stroke:#333,stroke-width:4px
 ```

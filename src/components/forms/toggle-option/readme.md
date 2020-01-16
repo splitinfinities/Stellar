@@ -61,7 +61,7 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [stellar-asset](../../ui/asset)
+- ion-icon
 - [stellar-blur](../../motion/blur)
 - [stellar-tag](../../ui/tag)
 - [stellar-tooltip](../../ui/tooltip)
@@ -70,7 +70,7 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  stellar-toggle-option --> stellar-asset
+  stellar-toggle-option --> ion-icon
   stellar-toggle-option --> stellar-blur
   stellar-toggle-option --> stellar-tag
   stellar-toggle-option --> stellar-tooltip

@@ -1,6 +1,6 @@
 <stellar-tabs block>
   <stellar-tab>
-    <stellar-asset name="person"></stellar-asset>
+    <ion-icon name="person"></ion-icon>
     Profile
   </stellar-tab>
   <stellar-tab open>Details</stellar-tab>

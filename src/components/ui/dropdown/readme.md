@@ -70,13 +70,13 @@
 
 ### Depends on
 
-- [stellar-asset](../asset)
+- ion-icon
 - context-consumer
 
 ### Graph
 ```mermaid
 graph TD;
-  stellar-dropdown --> stellar-asset
+  stellar-dropdown --> ion-icon
   stellar-dropdown --> context-consumer
   style stellar-dropdown fill:#f9f,stroke:#333,stroke-width:4px
 ```

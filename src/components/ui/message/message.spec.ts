@@ -14,7 +14,7 @@ describe('stellar-message', () => {
                     <div class=\"wrap\">
                     <slot></slot>
                     <button aria-label=\"Close\">
-                        <stellar-asset name=\"close\"></stellar-asset>
+                        <ion-icon name=\"close\"></ion-icon>
                     </button>
                     </div>
                 </mock:shadow-root>

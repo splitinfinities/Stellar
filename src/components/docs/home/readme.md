@@ -20,7 +20,7 @@ graph TD;
   stellar-docs-home --> stellar-layout
   stellar-docs-home --> stellar-docs-navigation
   stellar-docs-header --> stellar-message
-  stellar-docs-header --> stellar-asset
+  stellar-docs-header --> ion-icon
   stellar-docs-header --> stellar-button
   stellar-docs-header --> stellar-layout
   stellar-docs-header --> stellar-starscape
@@ -31,9 +31,9 @@ graph TD;
   stellar-docs-header --> stellar-select
   stellar-docs-header --> stellar-item
   stellar-docs-header --> context-consumer
-  stellar-message --> stellar-asset
+  stellar-message --> ion-icon
   stellar-message --> context-consumer
-  stellar-button --> stellar-asset
+  stellar-button --> ion-icon
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer
   stellar-starscape --> stellar-parallax
@@ -42,16 +42,16 @@ graph TD;
   stellar-tag --> context-consumer
   stellar-label --> context-consumer
   stellar-card --> stellar-button
-  stellar-card --> stellar-asset
+  stellar-card --> ion-icon
   stellar-card --> context-consumer
   stellar-select --> stellar-label
   stellar-select --> stellar-button
-  stellar-select --> stellar-asset
+  stellar-select --> ion-icon
   stellar-select --> stellar-item
   stellar-select --> stellar-tooltip
   stellar-select --> stellar-blur
   stellar-select --> context-consumer
-  stellar-item --> stellar-asset
+  stellar-item --> ion-icon
   stellar-item --> context-consumer
   stellar-tooltip --> context-consumer
   stellar-docs-navigation --> stellar-item
@@ -60,7 +60,7 @@ graph TD;
   stellar-docs-navigation --> stellar-tag
   stellar-docs-navigation --> context-consumer
   stellar-accordion --> stellar-button
-  stellar-accordion --> stellar-asset
+  stellar-accordion --> ion-icon
   stellar-accordion --> stellar-blur
   stellar-accordion --> context-consumer
   style stellar-docs-home fill:#f9f,stroke:#333,stroke-width:4px

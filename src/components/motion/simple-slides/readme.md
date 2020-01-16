@@ -17,12 +17,12 @@
 
 ### Depends on
 
-- [stellar-asset](../../ui/asset)
+- ion-icon
 
 ### Graph
 ```mermaid
 graph TD;
-  stellar-simple-slides --> stellar-asset
+  stellar-simple-slides --> ion-icon
   style stellar-simple-slides fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

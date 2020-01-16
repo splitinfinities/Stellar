@@ -1,6 +1,6 @@
 <stellar-tabs size="tiny">
   <stellar-tab>
-    <stellar-asset name="person"></stellar-asset>
+    <ion-icon name="person"></ion-icon>
     Profile
   </stellar-tab>
   <stellar-tab open>Details</stellar-tab>
@@ -13,7 +13,7 @@
 
 <stellar-tabs size="small">
   <stellar-tab>
-    <stellar-asset name="person"></stellar-asset>
+    <ion-icon name="person"></ion-icon>
     Profile
   </stellar-tab>
   <stellar-tab open>Details</stellar-tab>
@@ -26,7 +26,7 @@
 
 <stellar-tabs>
   <stellar-tab>
-    <stellar-asset name="person"></stellar-asset>
+    <ion-icon name="person"></ion-icon>
     Profile
   </stellar-tab>
   <stellar-tab open>Details</stellar-tab>
@@ -39,7 +39,7 @@
 
 <stellar-tabs size="medium">
   <stellar-tab>
-    <stellar-asset name="person"></stellar-asset>
+    <ion-icon name="person"></ion-icon>
     Profile
   </stellar-tab>
   <stellar-tab open>Details</stellar-tab>
@@ -52,7 +52,7 @@
 
 <stellar-tabs size="large">
   <stellar-tab>
-    <stellar-asset name="person"></stellar-asset>
+    <ion-icon name="person"></ion-icon>
     Profile
   </stellar-tab>
   <stellar-tab open>Details</stellar-tab>

@@ -3,6 +3,7 @@ import ezClipboard from 'ez-clipboard';
 import properties from 'css-custom-properties';
 import { get_interview_lines, update_interview_lines } from './helpers';
 import { delay } from '../../../utils';
+import "ionicons";
 
 @Component({
   tag: 'stellar-interview',
@@ -171,7 +172,7 @@ export class Interview {
           </web-audio>
           <web-audio-visualizer for={`interview-${this.randomId}`} type={this.visualization} width={this.width} height={this.height} color={this.color} />
           <button class={this.loading ? "loading button" : (this.playing ? "playing button" : "button")} onClick={() => { this.handleClick() }}>
-            <stellar-asset name={this.loading ? "sync" : (this.playing ? "pause" : "play")} class={this.loading ? "animation-spin" : ""} />
+            <ion-icon name={this.loading ? "sync" : (this.playing ? "pause" : "play")} class={this.loading ? "animation-spin" : ""} />
           </button>
           <h3>
             <stellar-unit class="current" value={this.current} from="ms" to="s" onClick={() => { this.handleCurrentClick() }} />

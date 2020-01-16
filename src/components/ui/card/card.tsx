@@ -1,6 +1,7 @@
 import { Component, Prop, State, Element, Event, EventEmitter, Method, h, Watch, Listen } from '@stencil/core';
 import { properties, ResizeObserver, delay } from '../../../utils'
 import Tunnel from '../../theme';
+import "ionicons";
 
 @Component({
   tag: 'stellar-card',
@@ -194,7 +195,7 @@ export class Card {
     return (<this.tag {...childProps} class={"stencil-route-link" !== this.tag ? "wrap" : ""} anchorClass={"stencil-route-link" === this.tag ? "wrap" : ""} onClick={(e) => { this.click(e) }}>
       {this.flippable && [
         this.flipIcon && this.flipIcon !== "false" && <stellar-button tag="button" ghost class="flip-button" onClick={(e) => { e.stopPropagation(); e.preventDefault(); this.flip_card(e) }}>
-          <stellar-asset name={this.flipped ? "close" : this.flipIcon} class="ma0" />
+          <ion-icon name={this.flipped ? "close" : this.flipIcon} class="ma0" />
         </stellar-button>,
         <div class="front">
           <slot></slot>

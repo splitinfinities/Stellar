@@ -131,7 +131,7 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [stellar-asset](../../ui/asset)
+- ion-icon
 - [stellar-color-picker](../../forms/color-picker)
 - [stellar-button](../../forms/button)
 - [stellar-progress](../../forms/progress)
@@ -142,7 +142,7 @@ Type: `Promise<void>`
 ### Graph
 ```mermaid
 graph TD;
-  stellar-playlist --> stellar-asset
+  stellar-playlist --> ion-icon
   stellar-playlist --> stellar-color-picker
   stellar-playlist --> stellar-button
   stellar-playlist --> stellar-progress
@@ -150,11 +150,11 @@ graph TD;
   stellar-playlist --> web-audio-visualizer
   stellar-playlist --> context-consumer
   stellar-color-picker --> context-consumer
-  stellar-button --> stellar-asset
+  stellar-button --> ion-icon
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer
   stellar-progress --> context-consumer
-  skeleton-img --> stellar-asset
+  skeleton-img --> ion-icon
   skeleton-img --> stellar-intersection
   style stellar-playlist fill:#f9f,stroke:#333,stroke-width:4px
 ```

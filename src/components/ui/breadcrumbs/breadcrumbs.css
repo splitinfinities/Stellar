@@ -38,7 +38,7 @@
 	--font-size: var(--ms2);
 }
 
-:host stellar-asset {
+:host ion-icon {
 	font-size: 2em;
 	line-height: 0;
 }

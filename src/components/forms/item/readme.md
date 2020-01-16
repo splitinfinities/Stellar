@@ -95,13 +95,13 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [stellar-asset](../../ui/asset)
+- ion-icon
 - context-consumer
 
 ### Graph
 ```mermaid
 graph TD;
-  stellar-item --> stellar-asset
+  stellar-item --> ion-icon
   stellar-item --> context-consumer
   stellar-docs-component --> stellar-item
   stellar-docs-header --> stellar-item

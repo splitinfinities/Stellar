@@ -1,5 +1,6 @@
 import { Component, Prop, State, Element, h, Host } from '@stencil/core';
 import Tunnel from '../../theme';
+import "ionicons";
 
 @Component({
   tag: 'stellar-message',
@@ -60,7 +61,7 @@ export class Message {
       <div class="wrap">
         <slot></slot>
         {this.closable && <button aria-label="Close" onClick={() => { this.handleClose() }}>
-          <stellar-asset name="close" />
+          <ion-icon name="close" />
         </button>}
       </div>
     </Host>

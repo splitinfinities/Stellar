@@ -13,7 +13,7 @@ describe('stellar-switch', () => {
                     <input tabindex=\"-1\" type=\"checkbox\">
                     <button type=\"button\">
                         <span>
-                            <stellar-asset name=\"close\"></stellar-asset>
+                            <ion-icon name=\"close\"></ion-icon>
                         </span>
                     </button>
                 </label>

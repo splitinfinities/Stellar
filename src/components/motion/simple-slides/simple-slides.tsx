@@ -1,4 +1,5 @@
-import { Component, Element, Prop, State, h, Host, Listen } from '@stencil/core'
+import { Component, Element, Prop, State, h, Host, Listen } from '@stencil/core';
+import "ionicons";
 
 @Component({
   tag: 'stellar-simple-slides',
@@ -91,8 +92,8 @@ export class SimpleSlides {
 
   render() {
     return <Host tabIndex={0} style={{ '--padding': this.padding }}>
-      <button class={`nav prev ${this.first ? "hide" : ""}`} onClick={this.previous.bind(this)}><stellar-asset name="arrow-round-back" /></button>
-      <button class={`nav next ${this.last ? "hide" : ""}`} onClick={this.next.bind(this)}><stellar-asset name="arrow-round-forward" /></button>
+      <button class={`nav prev ${this.first ? "hide" : ""}`} onClick={this.previous.bind(this)}><ion-icon name="arrow-round-back" /></button>
+      <button class={`nav next ${this.last ? "hide" : ""}`} onClick={this.next.bind(this)}><ion-icon name="arrow-round-forward" /></button>
       {this.pager && this.slides && <div class="pager">{Array.from(this.slides).map((e, i) => <button onClick={() => this.scrollToSlide(e)} class={this.active.includes(i) ? "visible" : ""}>Slide {i}</button>)}</div>}
       <div class="wrapper">
         <slot />

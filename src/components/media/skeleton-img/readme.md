@@ -60,13 +60,13 @@
 
 ### Depends on
 
-- [stellar-asset](../../ui/asset)
+- ion-icon
 - [stellar-intersection](../../helpers/intersection)
 
 ### Graph
 ```mermaid
 graph TD;
-  skeleton-img --> stellar-asset
+  skeleton-img --> ion-icon
   skeleton-img --> stellar-intersection
   stellar-360-image --> skeleton-img
   stellar-google-maps --> skeleton-img

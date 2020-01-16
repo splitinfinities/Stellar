@@ -96,7 +96,7 @@
   padding: 0 calc(var(--font-size) / 2);
 }
 
-:host .caps-lock stellar-asset {
+:host .caps-lock ion-icon {
   font-size: calc(var(--font-size) * 1.75)
 }
 
@@ -256,7 +256,7 @@
   color: var(--icon-color);
 }
 
-:host ::slotted(stellar-asset[slot="icon"]) {
+:host ::slotted(ion-icon[slot="icon"]) {
   font-size: calc(var(--font-size) * 2);
   width: calc(var(--font-size) * 2);
   height: calc(var(--font-size) * 2);
@@ -389,23 +389,23 @@
   display: none;
 }
 
-:host([type="search"]) stellar-asset {
+:host([type="search"]) ion-icon {
   color: var(--theme-base5);
 }
 
-:host([type="search"]) stellar-asset.search {
+:host([type="search"]) ion-icon.search {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   height: calc(var(--font-size) * 2);
 }
 
-:host([size="small"][type="search"]) stellar-asset.search {
+:host([size="small"][type="search"]) ion-icon.search {
   top: calc(50% - .125em);
   left: 0.25em;
 }
 
-:host([type="search"]) stellar-asset.close {
+:host([type="search"]) ion-icon.close {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -418,12 +418,12 @@
   height: calc(var(--font-size) * 2);
 }
 
-:host([type="search"]) stellar-asset.close:hover,
-:host([type="search"]) stellar-asset.close:focus {
+:host([type="search"]) ion-icon.close:hover,
+:host([type="search"]) ion-icon.close:focus {
   color: var(--red5);
 }
 
-:host([type="search"]) label[focused="true"] stellar-asset.search {
+:host([type="search"]) label[focused="true"] ion-icon.search {
   color: var(--theme-base2);
 }
 
@@ -584,7 +584,7 @@
   margin-bottom: .4em;
 }
 
-:host .file-wrapper h4 stellar-asset {
+:host .file-wrapper h4 ion-icon {
   display: inline-block;
   top: 3px;
   left: -3px;

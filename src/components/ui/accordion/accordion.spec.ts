@@ -18,7 +18,7 @@ describe('stellar-accordion', () => {
                   More Details
                 </stellar-button>
               </slot>
-              <stellar-asset class=\"chevron\" name=\"arrow-down\"></stellar-asset>
+              <ion-icon class=\"chevron\" name=\"arrow-down\"></ion-icon>
             </div>
             <stellar-blur vertical=\"0\">
               <div class=\"expander\" tabindex=\"-1\">

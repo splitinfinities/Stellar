@@ -139,7 +139,7 @@
   mix-blend-mode: hard-light;
 }
 
-:host .button stellar-asset {
+:host .button ion-icon {
   font-size: 7rem;
   margin: auto;
   display: block;
@@ -159,7 +159,7 @@
   transition: all .35s var(--ease) 0s, background .175s var(--ease) 0s;
 }
 
-:host .button.playing stellar-asset {
+:host .button.playing ion-icon {
   font-size: 2.8rem;
 }
 

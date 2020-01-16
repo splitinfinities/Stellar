@@ -35,7 +35,7 @@
 ```mermaid
 graph TD;
   stellar-google-maps --> skeleton-img
-  skeleton-img --> stellar-asset
+  skeleton-img --> ion-icon
   skeleton-img --> stellar-intersection
   style stellar-google-maps fill:#f9f,stroke:#333,stroke-width:4px
 ```

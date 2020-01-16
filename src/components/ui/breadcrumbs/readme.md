@@ -27,7 +27,7 @@
 <stellar-breadcrumbs icon="person" class="theme-violet">
 	<stellar-breadcrumb>Profile</stellar-breadcrumb>
 	<stellar-breadcrumb>Details</stellar-breadcrumb>
-	<stellar-breadcrumb><stellar-asset name="people"></stellar-asset>Payment</stellar-breadcrumb>
+	<stellar-breadcrumb><ion-icon name="people"></ion-icon>Payment</stellar-breadcrumb>
 </stellar-breadcrumbs>
 
 
@@ -53,7 +53,7 @@
 ### Depends on
 
 - [stellar-breadcrumb](../breadcrumb)
-- [stellar-asset](../asset)
+- ion-icon
 - [stellar-label](../../forms/label)
 - context-consumer
 
@@ -61,7 +61,7 @@
 ```mermaid
 graph TD;
   stellar-breadcrumbs --> stellar-breadcrumb
-  stellar-breadcrumbs --> stellar-asset
+  stellar-breadcrumbs --> ion-icon
   stellar-breadcrumbs --> stellar-label
   stellar-breadcrumbs --> context-consumer
   stellar-breadcrumb --> context-consumer

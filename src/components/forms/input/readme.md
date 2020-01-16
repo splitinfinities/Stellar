@@ -172,7 +172,7 @@ Type: `Promise<FormResult>`
 
 - [stellar-label](../label)
 - [copy-wrap](../../ui/copy-wrap)
-- [stellar-asset](../../ui/asset)
+- ion-icon
 - [stellar-unit](../../helpers/unit)
 - [stellar-tooltip](../../ui/tooltip)
 - context-consumer
@@ -182,7 +182,7 @@ Type: `Promise<FormResult>`
 graph TD;
   stellar-input --> stellar-label
   stellar-input --> copy-wrap
-  stellar-input --> stellar-asset
+  stellar-input --> ion-icon
   stellar-input --> stellar-unit
   stellar-input --> stellar-tooltip
   stellar-input --> context-consumer

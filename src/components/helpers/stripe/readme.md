@@ -60,7 +60,7 @@ graph TD;
   stellar-stripe --> stellar-grid
   stellar-input --> stellar-label
   stellar-input --> copy-wrap
-  stellar-input --> stellar-asset
+  stellar-input --> ion-icon
   stellar-input --> stellar-unit
   stellar-input --> stellar-tooltip
   stellar-input --> context-consumer

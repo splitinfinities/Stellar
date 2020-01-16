@@ -48,7 +48,7 @@
 	font-weight: 600;
 }
 
-:host a stellar-asset {
+:host a ion-icon {
 	margin-right: .25em;
 }
 
@@ -73,7 +73,7 @@
     padding-right: 1.75em;
 }
 
-:host([first]) a stellar-asset {
+:host([first]) a ion-icon {
 	margin: 0;
 }
 

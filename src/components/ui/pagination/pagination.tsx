@@ -1,6 +1,7 @@
 import { Component, Prop, State, Watch, Element, Event, EventEmitter, h } from '@stencil/core';
 import { properties, blurringEase } from '../../../utils'
 import Tunnel from '../../theme';
+import "ionicons";
 
 @Component({
   tag: 'stellar-pagination',
@@ -146,7 +147,7 @@ export class Pagination {
 
     return (
       <a href={this.__firstPageUrl()} data-page={this.__first} onClick={(event: UIEvent) => this.handleClick(event)} class="icon first" data-hidden={hidden}>
-        <stellar-asset name="skip-backward" block />
+        <ion-icon name="skip-backward" />
       </a>
     );
   }
@@ -156,7 +157,7 @@ export class Pagination {
 
     return (
       <a href={this.__previousPageUrl()} data-page={this.__previous} onClick={(event: UIEvent) => this.handleClick(event)} class="icon previous" data-hidden={hidden}>
-        <stellar-asset name="rewind" block />
+        <ion-icon name="rewind" />
       </a>
     );
   }
@@ -166,7 +167,7 @@ export class Pagination {
 
     return (
       <a href={this.__nextPageUrl()} data-page={this.__next} onClick={(event: UIEvent) => this.handleClick(event)} class="icon next" data-hidden={hidden}>
-        <stellar-asset name="fastforward" block />
+        <ion-icon name="fastforward" />
       </a>
     );
   }
@@ -176,7 +177,7 @@ export class Pagination {
 
     return (
       <a href={this.__lastPageUrl()} data-page={this.__last} onClick={(event: UIEvent) => this.handleClick(event)} class="icon last" data-hidden={hidden}>
-        <stellar-asset name="skip-forward" block />
+        <ion-icon name="skip-forward" />
       </a>
     );
   }

@@ -45,7 +45,7 @@ skeleton-img[loading].visible::before {
   animation: 1.25s linear 0s shimmer infinite forwards;
 }
 
-skeleton-img stellar-asset {
+skeleton-img ion-icon {
   position: absolute;
   top: 50%;
   right: 50%;

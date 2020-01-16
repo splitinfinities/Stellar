@@ -273,7 +273,7 @@ Type: `Promise<FormResult>`
 
 - [stellar-label](../label)
 - [stellar-button](../button)
-- [stellar-asset](../../ui/asset)
+- ion-icon
 - [stellar-item](../item)
 - [stellar-tooltip](../../ui/tooltip)
 - [stellar-blur](../../motion/blur)
@@ -284,16 +284,16 @@ Type: `Promise<FormResult>`
 graph TD;
   stellar-select --> stellar-label
   stellar-select --> stellar-button
-  stellar-select --> stellar-asset
+  stellar-select --> ion-icon
   stellar-select --> stellar-item
   stellar-select --> stellar-tooltip
   stellar-select --> stellar-blur
   stellar-select --> context-consumer
   stellar-label --> context-consumer
-  stellar-button --> stellar-asset
+  stellar-button --> ion-icon
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer
-  stellar-item --> stellar-asset
+  stellar-item --> ion-icon
   stellar-item --> context-consumer
   stellar-tooltip --> context-consumer
   stellar-docs-header --> stellar-select

@@ -64,13 +64,13 @@ Type: `Promise<FormResult>`
 
 ### Depends on
 
-- [stellar-asset](../../ui/asset)
+- ion-icon
 - context-consumer
 
 ### Graph
 ```mermaid
 graph TD;
-  stellar-switch --> stellar-asset
+  stellar-switch --> ion-icon
   stellar-switch --> context-consumer
   style stellar-switch fill:#f9f,stroke:#333,stroke-width:4px
 ```

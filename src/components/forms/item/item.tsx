@@ -2,6 +2,7 @@ import { Component, Prop, State, Element, Method, Event, EventEmitter, h } from 
 import { RouterHistory, LocationSegments, injectHistory } from '@stencil/router';
 import { delay } from '../../../utils';
 import Tunnel from '../../theme';
+import "ionicons";
 
 @Component({
   tag: 'stellar-item',
@@ -159,7 +160,7 @@ export class Item {
         <div class="content">
           <slot />
         </div>
-        {(this.selected || this.multiple) && <stellar-asset class={this.classes()} name="checkmark" block></stellar-asset>}
+        {(this.selected || this.multiple) && <ion-icon class={this.classes()} name="checkmark"></ion-icon>}
       </this.type>
     )
   }

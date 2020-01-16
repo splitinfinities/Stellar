@@ -68,14 +68,6 @@ export namespace Components {
     'phrase': boolean;
     'words': boolean;
   }
-  interface StellarAsset {
-    'align': string;
-    'ariaLabel': string;
-    'block': boolean;
-    'language': string;
-    'name': string;
-    'src': string;
-  }
   interface StellarAutoScroll {
     'autoplay': boolean;
     'loop': boolean;
@@ -517,6 +509,11 @@ export namespace Components {
     'margin': string;
     'multiple': boolean;
     'out': Function;
+  }
+  interface StellarInterstitial {
+    'fullscreen': boolean;
+    'remember': boolean;
+    'shown': boolean;
   }
   interface StellarInterview {
     'aspectRatio': number;
@@ -1215,12 +1212,6 @@ declare global {
     new (): HTMLStellarAnimateTextElement;
   };
 
-  interface HTMLStellarAssetElement extends Components.StellarAsset, HTMLStencilElement {}
-  var HTMLStellarAssetElement: {
-    prototype: HTMLStellarAssetElement;
-    new (): HTMLStellarAssetElement;
-  };
-
   interface HTMLStellarAutoScrollElement extends Components.StellarAutoScroll, HTMLStencilElement {}
   var HTMLStellarAutoScrollElement: {
     prototype: HTMLStellarAutoScrollElement;
@@ -1429,6 +1420,12 @@ declare global {
   var HTMLStellarIntersectionElement: {
     prototype: HTMLStellarIntersectionElement;
     new (): HTMLStellarIntersectionElement;
+  };
+
+  interface HTMLStellarInterstitialElement extends Components.StellarInterstitial, HTMLStencilElement {}
+  var HTMLStellarInterstitialElement: {
+    prototype: HTMLStellarInterstitialElement;
+    new (): HTMLStellarInterstitialElement;
   };
 
   interface HTMLStellarInterviewElement extends Components.StellarInterview, HTMLStencilElement {}
@@ -1757,7 +1754,6 @@ declare global {
     'stellar-360-video': HTMLStellar360VideoElement;
     'stellar-accordion': HTMLStellarAccordionElement;
     'stellar-animate-text': HTMLStellarAnimateTextElement;
-    'stellar-asset': HTMLStellarAssetElement;
     'stellar-auto-scroll': HTMLStellarAutoScrollElement;
     'stellar-avatar': HTMLStellarAvatarElement;
     'stellar-blur': HTMLStellarBlurElement;
@@ -1793,6 +1789,7 @@ declare global {
     'stellar-image': HTMLStellarImageElement;
     'stellar-input': HTMLStellarInputElement;
     'stellar-intersection': HTMLStellarIntersectionElement;
+    'stellar-interstitial': HTMLStellarInterstitialElement;
     'stellar-interview': HTMLStellarInterviewElement;
     'stellar-interview-line': HTMLStellarInterviewLineElement;
     'stellar-item': HTMLStellarItemElement;
@@ -1894,14 +1891,6 @@ declare namespace LocalJSX {
     'onlyIn'?: boolean;
     'phrase'?: boolean;
     'words'?: boolean;
-  }
-  interface StellarAsset {
-    'align'?: string;
-    'ariaLabel'?: string;
-    'block'?: boolean;
-    'language'?: string;
-    'name'?: string;
-    'src'?: string;
   }
   interface StellarAutoScroll {
     'autoplay'?: boolean;
@@ -2337,6 +2326,11 @@ declare namespace LocalJSX {
     'margin'?: string;
     'multiple'?: boolean;
     'out'?: Function;
+  }
+  interface StellarInterstitial {
+    'fullscreen'?: boolean;
+    'remember'?: boolean;
+    'shown'?: boolean;
   }
   interface StellarInterview {
     'aspectRatio'?: number;
@@ -2932,7 +2926,6 @@ declare namespace LocalJSX {
     'stellar-360-video': Stellar360Video;
     'stellar-accordion': StellarAccordion;
     'stellar-animate-text': StellarAnimateText;
-    'stellar-asset': StellarAsset;
     'stellar-auto-scroll': StellarAutoScroll;
     'stellar-avatar': StellarAvatar;
     'stellar-blur': StellarBlur;
@@ -2968,6 +2961,7 @@ declare namespace LocalJSX {
     'stellar-image': StellarImage;
     'stellar-input': StellarInput;
     'stellar-intersection': StellarIntersection;
+    'stellar-interstitial': StellarInterstitial;
     'stellar-interview': StellarInterview;
     'stellar-interview-line': StellarInterviewLine;
     'stellar-item': StellarItem;
@@ -3038,7 +3032,6 @@ declare module "@stencil/core" {
       'stellar-360-video': LocalJSX.Stellar360Video & JSXBase.HTMLAttributes<HTMLStellar360VideoElement>;
       'stellar-accordion': LocalJSX.StellarAccordion & JSXBase.HTMLAttributes<HTMLStellarAccordionElement>;
       'stellar-animate-text': LocalJSX.StellarAnimateText & JSXBase.HTMLAttributes<HTMLStellarAnimateTextElement>;
-      'stellar-asset': LocalJSX.StellarAsset & JSXBase.HTMLAttributes<HTMLStellarAssetElement>;
       'stellar-auto-scroll': LocalJSX.StellarAutoScroll & JSXBase.HTMLAttributes<HTMLStellarAutoScrollElement>;
       'stellar-avatar': LocalJSX.StellarAvatar & JSXBase.HTMLAttributes<HTMLStellarAvatarElement>;
       'stellar-blur': LocalJSX.StellarBlur & JSXBase.HTMLAttributes<HTMLStellarBlurElement>;
@@ -3074,6 +3067,7 @@ declare module "@stencil/core" {
       'stellar-image': LocalJSX.StellarImage & JSXBase.HTMLAttributes<HTMLStellarImageElement>;
       'stellar-input': LocalJSX.StellarInput & JSXBase.HTMLAttributes<HTMLStellarInputElement>;
       'stellar-intersection': LocalJSX.StellarIntersection & JSXBase.HTMLAttributes<HTMLStellarIntersectionElement>;
+      'stellar-interstitial': LocalJSX.StellarInterstitial & JSXBase.HTMLAttributes<HTMLStellarInterstitialElement>;
       'stellar-interview': LocalJSX.StellarInterview & JSXBase.HTMLAttributes<HTMLStellarInterviewElement>;
       'stellar-interview-line': LocalJSX.StellarInterviewLine & JSXBase.HTMLAttributes<HTMLStellarInterviewLineElement>;
       'stellar-item': LocalJSX.StellarItem & JSXBase.HTMLAttributes<HTMLStellarItemElement>;

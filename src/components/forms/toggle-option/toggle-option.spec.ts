@@ -15,7 +15,7 @@ describe('stellar-toggle-option', () => {
                 <input class=\"input\" id=\"_undefined_undefined\" name=\"[undefined]\" type=\"checkbox\">
                 <div class=\"box\">
                     <div class=\"indicator\">
-                        <stellar-asset name=\"checkmark\"></stellar-asset>
+                        <ion-icon name=\"checkmark\"></ion-icon>
                     </div>
                 </div>
                 <p>Awesome</p>

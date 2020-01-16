@@ -69,7 +69,7 @@ Type: `Promise<void>`
 - [web-audio](../../audio/web-audio)
 - [web-audio-source](../../audio/web-audio-source)
 - [web-audio-visualizer](../../audio/web-audio-visualizer)
-- [stellar-asset](../../ui/asset)
+- ion-icon
 - [stellar-unit](../../helpers/unit)
 - [stellar-progress](../../forms/progress)
 - [stellar-intersection](../../helpers/intersection)
@@ -81,11 +81,11 @@ graph TD;
   stellar-interview --> web-audio
   stellar-interview --> web-audio-source
   stellar-interview --> web-audio-visualizer
-  stellar-interview --> stellar-asset
+  stellar-interview --> ion-icon
   stellar-interview --> stellar-unit
   stellar-interview --> stellar-progress
   stellar-interview --> stellar-intersection
-  skeleton-img --> stellar-asset
+  skeleton-img --> ion-icon
   skeleton-img --> stellar-intersection
   stellar-progress --> context-consumer
   style stellar-interview fill:#f9f,stroke:#333,stroke-width:4px

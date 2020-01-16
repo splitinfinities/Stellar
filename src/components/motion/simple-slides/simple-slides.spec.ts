@@ -12,10 +12,10 @@ describe('stellar-simple-slides', () => {
 			<stellar-simple-slides tabindex=\"0\" style=\"--padding: 1rem;\">
 				<mock:shadow-root>
 					<button class=\"hide nav prev\">
-						<stellar-asset name=\"arrow-round-back\"></stellar-asset>
+						<ion-icon name=\"arrow-round-back\"></ion-icon>
 					</button>
 					<button class=\"nav next\">
-						<stellar-asset name=\"arrow-round-forward\"></stellar-asset>
+						<ion-icon name=\"arrow-round-forward\"></ion-icon>
 					</button>
 					<div class=\"wrapper\">
 						<slot></slot>

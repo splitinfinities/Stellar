@@ -2,6 +2,7 @@ import { Component, Prop, State, Element, Method, Event, EventEmitter, h } from 
 import { leadingZeroIndex, relPathAsAbs } from "../../../utils";
 import './vendor/jsmediatags';
 import smallIndexedDb from 'small-indexeddb'
+import "ionicons";
 
 @Component({
 	tag: 'stellar-song',
@@ -163,7 +164,7 @@ export class Song {
 			<button onClick={() => this.play()}>
 				<span class="index">
 					{!this.playing && leadingZeroIndex(this._index)}
-					{this.playing && <stellar-asset name="play" />}
+					{this.playing && <ion-icon name="play" />}
 				</span>
 				<div class="tracklisting">
 					{this.artwork && <img src={this.picture} class="preview-image" />}

@@ -1,5 +1,6 @@
 import { Component, Prop, Element, Event, EventEmitter, Method, Watch, h, State } from '@stencil/core';
 import Tunnel from '../../theme';
+import "ionicons";
 
 @Component({
   tag: 'stellar-switch',
@@ -66,7 +67,7 @@ export class Switch {
         <input type="checkbox" name={this.name} id={this.name} checked={this.checked} tabindex="-1" onClick={() => { this.activate() }} />
         <button type="button">
           <span>
-            <stellar-asset name={this.checked ? "checkmark" : "close"} />
+            <ion-icon name={this.checked ? "checkmark" : "close"} />
           </span>
         </button>
         <slot />

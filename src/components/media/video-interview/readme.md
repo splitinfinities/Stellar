@@ -68,7 +68,7 @@ Type: `Promise<void>`
 - [skeleton-img](../skeleton-img)
 - [stellar-video](../video)
 - [web-audio-visualizer](../../audio/web-audio-visualizer)
-- [stellar-asset](../../ui/asset)
+- ion-icon
 - [stellar-unit](../../helpers/unit)
 - [stellar-progress](../../forms/progress)
 - [stellar-intersection](../../helpers/intersection)
@@ -79,11 +79,11 @@ graph TD;
   stellar-video-interview --> skeleton-img
   stellar-video-interview --> stellar-video
   stellar-video-interview --> web-audio-visualizer
-  stellar-video-interview --> stellar-asset
+  stellar-video-interview --> ion-icon
   stellar-video-interview --> stellar-unit
   stellar-video-interview --> stellar-progress
   stellar-video-interview --> stellar-intersection
-  skeleton-img --> stellar-asset
+  skeleton-img --> ion-icon
   skeleton-img --> stellar-intersection
   stellar-video --> stellar-intersection
   stellar-progress --> context-consumer

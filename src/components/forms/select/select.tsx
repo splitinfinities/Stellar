@@ -2,6 +2,7 @@ import { Component, Prop, State, Listen, Watch, Element, Event, EventEmitter, Me
 import delay from 'await-delay';
 import Pluralize from 'pluralize';
 import Tunnel from '../../theme';
+import "ionicons";
 
 @Component({
   tag: 'stellar-select',
@@ -488,7 +489,7 @@ export class Select {
 
   renderEmptyButton() {
     return this.multiple && this.value && this.value.length > 0 && <stellar-button class="clear-button" tag="button" size={this.size} ghost onClick={(e) => { e.stopPropagation(); this.clearValue() }}>
-      <stellar-asset name="close" />
+      <ion-icon name="close" />
       {this.clear_confirm ? `Clear ${this.value.length} selections?` : `Clear`}
     </stellar-button>
   }
@@ -499,11 +500,11 @@ export class Select {
         {this.renderLabel()}
 
         <div class="select">
-          {this.loading && <div class="loading"><stellar-asset name="loading-spin" /> <p>One sec...</p></div>}
+          {this.loading && <div class="loading"><ion-icon name="loading-spin" /> <p>One sec...</p></div>}
 
           <button type="button" class="select-title" onClick={() => this.handleTitleClick()} onFocus={() => this.handleTitleFocus()} onBlur={() => this.handleTitleBlur()}>
             <stellar-item fit wrap select-title type="button" value={this.value ? this.value.toString() : ""} tabindex="-1" selectable={false} label={this.language} innerHTML={this.language}></stellar-item>
-            <stellar-asset name="arrow-down" />
+            <ion-icon name="arrow-down" />
 
             {this.name && <input type="text" tabindex="-1" name={this.name.toString()} required={this.required} value={this.value} />}
           </button>

@@ -116,14 +116,14 @@
   min-height: 3rem;
 }
 
-:host stellar-asset[slot="handle"] {
+:host ion-icon[slot="handle"] {
   color: var(--dropdown-color);
 }
 
-:host stellar-asset[slot="handle"]:hover,
-:host stellar-asset[slot="handle"]:active,
-:host(:focus-within) stellar-asset[slot="handle"],
-:host([focus-within]) stellar-asset[slot="handle"] {
+:host ion-icon[slot="handle"]:hover,
+:host ion-icon[slot="handle"]:active,
+:host(:focus-within) ion-icon[slot="handle"],
+:host([focus-within]) ion-icon[slot="handle"] {
   color: var(--dropdown-color);
 }
 

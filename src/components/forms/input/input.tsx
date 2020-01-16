@@ -2,6 +2,7 @@ import { Component, Element, Prop, State, Listen, Method, Event, EventEmitter, W
 import { shouldBeAnInput, hasIncrements, hasValue, isDatePicker, Validator, Tokenfield } from "./lib";
 import { zxcvbn, TinyDatePicker, moment } from '../../../utils'
 import Tunnel from '../../theme';
+import "ionicons";
 
 @Component({
   tag: 'stellar-input',
@@ -518,7 +519,7 @@ export class Input {
   renderSearch() {
     if (this.type === "search") {
       return (
-        <stellar-asset name="search" class="search" block></stellar-asset>
+        <ion-icon name="search" class="search"></ion-icon>
       )
     }
   }
@@ -528,10 +529,10 @@ export class Input {
       return (
         <div class="incrementing">
           <a href="#" onClick={(event: UIEvent) => this.handleIncrement(event)} onKeyDown={(event: KeyboardEvent) => this.handleKeyDownIncrement(event)} onFocus={() => { this.handleFocus() }} onBlur={() => { this.handleBlur() }}>
-            <stellar-asset name="arrow-up" block></stellar-asset>
+            <ion-icon name="arrow-up"></ion-icon>
           </a>
           <a href="#" onClick={(event: UIEvent) => this.handleDecrement(event)} onKeyDown={(event: KeyboardEvent) => this.handleKeyDownDecrement(event)} onFocus={() => { this.handleFocus() }} onBlur={() => { this.handleBlur() }}>
-            <stellar-asset name="arrow-down" block></stellar-asset>
+            <ion-icon name="arrow-down"></ion-icon>
           </a>
         </div>
       )
@@ -546,18 +547,18 @@ export class Input {
 
   renderPasswordStrengthSmile() {
     if (this.level === 5 || this.level === 4 || this.level === 3) {
-      return <stellar-asset class="smile" name="happy" data-level={this.level}></stellar-asset>
+      return <ion-icon class="smile" name="happy" data-level={this.level}></ion-icon>
     } else if (this.level === 2 || this.level === 1 || this.level === 0) {
-      return <stellar-asset class="smile" name="sad" data-level={this.level}></stellar-asset>
+      return <ion-icon class="smile" name="sad" data-level={this.level}></ion-icon>
     } else {
-      return <stellar-asset class="smile" name="sad" data-level="-1"></stellar-asset>
+      return <ion-icon class="smile" name="sad" data-level="-1"></ion-icon>
     }
   }
 
   renderSearchClearButton() {
     if (this.type === "search" && hasValue(this.value)) {
       return (
-        <stellar-asset name="close" class="close" onClick={(event: UIEvent) => this.handleReset(event)} onKeyDown={(event: KeyboardEvent) => this.handleKeyDownReset(event)} tabindex="0" title="Reset" block></stellar-asset>
+        <ion-icon name="close" class="close" onClick={(event: UIEvent) => this.handleReset(event)} onKeyDown={(event: KeyboardEvent) => this.handleKeyDownReset(event)} tabindex="0" title="Reset"></ion-icon>
       )
     }
   }
@@ -602,7 +603,7 @@ export class Input {
               {this._fileLabel && <h3>{this._fileLabel}</h3>}
 
               <h4>
-                <stellar-asset name={this._fileLabel ? "create" : "add-circle"} class="" />
+                <ion-icon name={this._fileLabel ? "create" : "add-circle"} class="" />
                 {this.placeholder}
               </h4>
 
@@ -659,7 +660,7 @@ export class Input {
             {this.renderSearchClearButton()}
             {this.renderPasswordStrength()}
 
-            {this.showCapsLock && this.capsLock && <div class="caps-lock"><stellar-label size={this.size}>Caps Lock</stellar-label><stellar-asset name="arrow-dropup-circle" /></div>}
+            {this.showCapsLock && this.capsLock && <div class="caps-lock"><stellar-label size={this.size}>Caps Lock</stellar-label><ion-icon name="arrow-dropup-circle" /></div>}
             {this.tooltip && <stellar-tooltip align="bottom-left">{this.tooltip}</stellar-tooltip>}
           </div>
 

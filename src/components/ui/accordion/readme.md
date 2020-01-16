@@ -51,7 +51,7 @@ Type: `Promise<void>`
 ### Depends on
 
 - [stellar-button](../../forms/button)
-- [stellar-asset](../asset)
+- ion-icon
 - [stellar-blur](../../motion/blur)
 - context-consumer
 
@@ -59,10 +59,10 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   stellar-accordion --> stellar-button
-  stellar-accordion --> stellar-asset
+  stellar-accordion --> ion-icon
   stellar-accordion --> stellar-blur
   stellar-accordion --> context-consumer
-  stellar-button --> stellar-asset
+  stellar-button --> ion-icon
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer
   stellar-docs-component --> stellar-accordion

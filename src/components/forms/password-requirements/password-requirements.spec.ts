@@ -15,43 +15,43 @@ describe('stellar-progress', () => {
     expect(page.root).toEqualHtml(`
       <stellar-password-requirements for=\"nice\">
       <p class=\"flex fs5 items-center ma0 mb3 pa0 theme-red\">
-        <stellar-asset class=\"dib fs4 mr2 theme-base7\" name=\"close-circle-outline\"></stellar-asset>
+        <ion-icon class=\"dib fs4 mr2 theme-base7\" name=\"close-circle-outline\"></ion-icon>
         <small>
           10 characters or longer
         </small>
       </p>
       <p class=\"flex fs5 items-center ma0 mb3 pa0 theme-red\">
-        <stellar-asset class=\"dib fs4 mr2 theme-base7\" name=\"close-circle-outline\"></stellar-asset>
+        <ion-icon class=\"dib fs4 mr2 theme-base7\" name=\"close-circle-outline\"></ion-icon>
         <small>
           At least 1 uppercase character
         </small>
       </p>
       <p class=\"flex fs5 items-center ma0 mb3 pa0 theme-red\">
-        <stellar-asset class=\"dib fs4 mr2 theme-base7\" name=\"close-circle-outline\"></stellar-asset>
+        <ion-icon class=\"dib fs4 mr2 theme-base7\" name=\"close-circle-outline\"></ion-icon>
         <small>
           At least 1 number
         </small>
       </p>
       <p class=\"flex fs5 items-center ma0 mb3 pa0 theme-red\">
-        <stellar-asset class=\"dib fs4 mr2 theme-base7\" name=\"close-circle-outline\"></stellar-asset>
+        <ion-icon class=\"dib fs4 mr2 theme-base7\" name=\"close-circle-outline\"></ion-icon>
         <small>
           At least 1 symbol
         </small>
       </p>
       <p class=\"flex fs5 items-center ma0 mb3 pa0 theme-green\">
-        <stellar-asset class=\"dib fs4 mr2 theme-base7\" name=\"checkmark-circle-outline\"></stellar-asset>
+        <ion-icon class=\"dib fs4 mr2 theme-base7\" name=\"checkmark-circle-outline\"></ion-icon>
         <small>
           Cannot be common passwords ('password123 is bad')
         </small>
       </p>
       <p class=\"flex fs5 items-center ma0 mb3 pa0 theme-green\">
-        <stellar-asset class=\"dib fs4 mr2 theme-base7\" name=\"checkmark-circle-outline\"></stellar-asset>
+        <ion-icon class=\"dib fs4 mr2 theme-base7\" name=\"checkmark-circle-outline\"></ion-icon>
         <small>
           Cannot be a name ('andrew')
         </small>
       </p>
       <p class=\"flex fs5 items-center ma0 mb3 pa0 theme-green\">
-        <stellar-asset class=\"dib fs4 mr2 theme-base7\" name=\"checkmark-circle-outline\"></stellar-asset>
+        <ion-icon class=\"dib fs4 mr2 theme-base7\" name=\"checkmark-circle-outline\"></ion-icon>
         <small>
           Cannot be repeated keys ('asdfasdfasdf')
         </small>

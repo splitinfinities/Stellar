@@ -112,16 +112,16 @@ Type: `Promise<void>`
 ### Depends on
 
 - [stellar-button](../../forms/button)
-- [stellar-asset](../asset)
+- ion-icon
 - context-consumer
 
 ### Graph
 ```mermaid
 graph TD;
   stellar-card --> stellar-button
-  stellar-card --> stellar-asset
+  stellar-card --> ion-icon
   stellar-card --> context-consumer
-  stellar-button --> stellar-asset
+  stellar-button --> ion-icon
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer
   stellar-code --> stellar-card

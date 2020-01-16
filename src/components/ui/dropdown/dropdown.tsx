@@ -1,6 +1,7 @@
 import { Component, Element, Prop, State, h, Host } from '@stencil/core'
 import { focusWithin } from '../../../utils';
 import Tunnel from '../../theme';
+import "ionicons";
 
 focusWithin(document)
 
@@ -37,7 +38,7 @@ export class Dropdown {
     return <Host aria-label={this.label} class="dropdown" title={this.label}>
       <div class="toggle">
         <slot name="handle"></slot>
-        {this.icon && <stellar-asset name={this.iconName} class="caret"></stellar-asset>}
+        {this.icon && <ion-icon name={this.iconName} class="caret"></ion-icon>}
       </div>
       <div class="clipper">
         <div class="list-wrap">

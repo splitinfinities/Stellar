@@ -14,10 +14,10 @@ describe('stellar-pagination', () => {
                     <span class=\"pagination-container\">
                     <div class=\"pagination-wrap\">
                         <a class=\"first icon\" data-hidden=\"yes\" data-page=\"1\" href=\"\">
-                        <stellar-asset block=\"\" name=\"skip-backward\"></stellar-asset>
+                        <ion-icon block=\"\" name=\"skip-backward\"></ion-icon>
                         </a>
                         <a class=\"icon previous\" data-hidden=\"yes\" href=\"\">
-                        <stellar-asset block=\"\" name=\"rewind\"></stellar-asset>
+                        <ion-icon block=\"\" name=\"rewind\"></ion-icon>
                         </a>
                         <div class=\"pages\">
                         <div class=\"ellipsis previous\" data-hidden=\"yes\">
@@ -34,10 +34,10 @@ describe('stellar-pagination', () => {
                         </stellar-blur>
                         </div>
                         <a class=\"icon next\" data-hidden=\"yes\" href=\"\">
-                        <stellar-asset block=\"\" name=\"fastforward\"></stellar-asset>
+                        <ion-icon block=\"\" name=\"fastforward\"></ion-icon>
                         </a>
                         <a class=\"icon last\" data-hidden=\"yes\" data-page=\"1\" href=\"\">
-                        <stellar-asset block=\"\" name=\"skip-forward\"></stellar-asset>
+                        <ion-icon block=\"\" name=\"skip-forward\"></ion-icon>
                         </a>
                     </div>
                     </span>

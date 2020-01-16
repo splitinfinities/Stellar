@@ -94,7 +94,7 @@
 	align-items: center;
 }
 
-:host h6.list stellar-asset {
+:host h6.list ion-icon {
 	margin-right: 0.5rem;
 }
 
@@ -212,7 +212,7 @@
 	width: 50%;
 	flex: 12 6 200px;
 }
-:host .controls .button stellar-asset {
+:host .controls .button ion-icon {
 	display: inline-block;
 }
 :host .playlist-playing-image {
@@ -240,14 +240,14 @@
 	color: white;
 	position: relative;
 }
-:host .playlist-playing .toggle-button stellar-asset {
+:host .playlist-playing .toggle-button ion-icon {
     font-size: 2rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-:host .playlist-playing .toggle-button stellar-asset[name="play"] {
+:host .playlist-playing .toggle-button ion-icon[name="play"] {
     transform: translate(-43%, -50%);
 }
 :host .playlist-playing .toggle-button[data-playing="false"] {

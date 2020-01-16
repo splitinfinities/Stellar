@@ -1,5 +1,6 @@
 import { Component, Prop, State, Element, h } from '@stencil/core';
 import Tunnel from '../../theme';
+import "ionicons";
 
 @Component({
   tag: 'stellar-button',
@@ -124,7 +125,7 @@ export class Button {
       this.label = this.element.getAttribute("title");
     }
 
-    this.icon = this.element.querySelectorAll('stellar-asset').length > 0;
+    this.icon = this.element.querySelectorAll('ion-icon').length > 0;
   }
 
   async click() {
@@ -160,7 +161,7 @@ export class Button {
 
   renderSVG() {
     return (
-      <stellar-asset src="Loading" color="white"></stellar-asset>
+      <ion-icon src="loading" style={{ color: "var(--white)" }}></ion-icon>
     )
   }
 

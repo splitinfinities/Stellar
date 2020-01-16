@@ -30,7 +30,7 @@ describe('stellar-card', () => {
         <mock:shadow-root>
           <div anchorclass=\"\" class=\"wrap\" href=\"#\" url=\"#\" value=\"#\">
             <stellar-button class=\"flip-button\" ghost=\"\" tag=\"button\">
-              <stellar-asset class=\"ma0\" name=\"cog\"></stellar-asset>
+              <ion-icon class=\"ma0\" name=\"cog\"></ion-icon>
             </stellar-button>
             <div class=\"front\">
               <slot></slot>

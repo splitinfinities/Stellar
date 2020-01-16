@@ -1,6 +1,7 @@
 import { Component, Element, Prop, State, Method, h } from '@stencil/core'
 import { blurringEase, properties } from '../../../utils';
 import Tunnel from '../../theme';
+import "ionicons";
 
 @Component({
   tag: 'stellar-accordion',
@@ -104,7 +105,7 @@ export class Accordion {
           <slot name="label">
             <stellar-button id="button" tag="button" ghost label={this.label}>{this.label}</stellar-button>
           </slot>
-          <stellar-asset class="chevron" name="arrow-down"></stellar-asset>
+          <ion-icon class="chevron" name="arrow-down"></ion-icon>
         </div>
 
         <stellar-blur vertical={this.blur}>

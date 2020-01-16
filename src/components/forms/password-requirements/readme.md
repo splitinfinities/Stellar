@@ -17,12 +17,12 @@
 
 ### Depends on
 
-- [stellar-asset](../../ui/asset)
+- ion-icon
 
 ### Graph
 ```mermaid
 graph TD;
-  stellar-password-requirements --> stellar-asset
+  stellar-password-requirements --> ion-icon
   style stellar-password-requirements fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

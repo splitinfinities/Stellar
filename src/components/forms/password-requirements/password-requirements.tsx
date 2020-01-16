@@ -1,5 +1,6 @@
 import { Component, Prop, Watch, Element, State, h } from '@stencil/core';
 import zxcvbn from "zxcvbn";
+import "ionicons";
 
 @Component({
     tag: 'stellar-password-requirements'
@@ -75,49 +76,49 @@ export class PasswordRequirements {
 
     renderLength() {
         return <p class={`${this.fs} flex items-center mb3 pa0 ma0 ${this.length ? 'theme-green' : 'theme-red'}`}>
-            <stellar-asset class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.length ? "checkmark-circle-outline" : "close-circle-outline"} />
+            <ion-icon class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.length ? "checkmark-circle-outline" : "close-circle-outline"} />
             <small>10 characters or longer</small>
         </p>
     }
 
     renderUppercase() {
         return <p class={`${this.fs} flex items-center mb3 pa0 ma0 ${this.uppercase ? 'theme-green' : 'theme-red'}`}>
-            <stellar-asset class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.uppercase ? "checkmark-circle-outline" : "close-circle-outline"} />
+            <ion-icon class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.uppercase ? "checkmark-circle-outline" : "close-circle-outline"} />
             <small>At least 1 uppercase character</small>
         </p>
     }
 
     renderNumber() {
         return <p class={`${this.fs} flex items-center mb3 pa0 ma0 ${this.number ? 'theme-green' : 'theme-red'}`}>
-            <stellar-asset class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.number ? "checkmark-circle-outline" : "close-circle-outline"} />
+            <ion-icon class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.number ? "checkmark-circle-outline" : "close-circle-outline"} />
             <small>At least 1 number</small>
         </p>
     }
 
     renderSymbol() {
         return <p class={`${this.fs} flex items-center mb3 pa0 ma0 ${this.symbol ? 'theme-green' : 'theme-red'}`}>
-            <stellar-asset class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.symbol ? "checkmark-circle-outline" : "close-circle-outline"} />
+            <ion-icon class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.symbol ? "checkmark-circle-outline" : "close-circle-outline"} />
             <small>At least 1 symbol</small>
         </p>
     }
 
     renderCommonPasswords() {
         return <p class={`${this.fs} flex items-center mb3 pa0 ma0 ${this.commonPasswords ? 'theme-green' : 'theme-red'}`}>
-            <stellar-asset class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.commonPasswords ? "checkmark-circle-outline" : "close-circle-outline"} />
+            <ion-icon class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.commonPasswords ? "checkmark-circle-outline" : "close-circle-outline"} />
             <small>Cannot be common passwords ('password123 is bad')</small>
         </p>
     }
 
     renderCommonNames() {
         return <p class={`${this.fs} flex items-center mb3 pa0 ma0 ${this.commonNames ? 'theme-green' : 'theme-red'}`}>
-            <stellar-asset class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.commonNames ? "checkmark-circle-outline" : "close-circle-outline"} />
+            <ion-icon class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.commonNames ? "checkmark-circle-outline" : "close-circle-outline"} />
             <small>Cannot be a name ('andrew')</small>
         </p>
     }
 
     renderRepeatedKeys() {
         return <p class={`${this.fs} flex items-center mb3 pa0 ma0 ${this.repeated ? 'theme-green' : 'theme-red'}`}>
-            <stellar-asset class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.repeated ? "checkmark-circle-outline" : "close-circle-outline"} />
+            <ion-icon class={`${this.icon} fs4 dib mr2 theme-base7`} name={this.repeated ? "checkmark-circle-outline" : "close-circle-outline"} />
             <small>Cannot be repeated keys ('asdfasdfasdf')</small>
         </p>
     }

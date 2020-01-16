@@ -1,12 +1,13 @@
 import { Component, Prop, Watch, h } from '@stencil/core';
+import "ionicons";
 import Tunnel from '../dependencies';
 
 @Component({
   tag: 'stellar-docs-header'
 })
 export class DocsHeader {
-  @Prop({mutable: true}) theme: string = "red";
-  @Prop({mutable: true}) complement: string = "indigo";
+  @Prop({ mutable: true }) theme: string = "red";
+  @Prop({ mutable: true }) complement: string = "indigo";
   @Prop() mark: string;
   @Prop() max: number = 10;
   @Prop() value: number = 0;
@@ -22,9 +23,9 @@ export class DocsHeader {
   render() {
     return this.ready && [
       <stellar-message striped type="alert" size="full">
-        <stellar-asset name="happy"></stellar-asset>
-          <p>Stellar is still an alpha product - some things may change! We'll do out best to notify you when something changes.</p>
-        <stellar-button size="tiny" pill>See change log <stellar-asset name="arrow-forward" align="right"></stellar-asset></stellar-button>
+        <ion-icon name="happy"></ion-icon>
+        <p>Stellar is still an alpha product - some things may change! We'll do out best to notify you when something changes.</p>
+        <stellar-button size="tiny" pill>See change log <ion-icon name="arrow-forward" class="right"></ion-icon></stellar-button>
       </stellar-message>,
       <stellar-layout size="large" class="relative mb5" type="sidebar-right">
         <stellar-starscape></stellar-starscape>
@@ -32,7 +33,7 @@ export class DocsHeader {
           <slot name="title">
             <h1 class="flex fs-massive">
               <div class="flex mr4 flex-column items-center">
-                <stellar-icon src="/global/vector/mark.svg"></stellar-icon>
+                <ion-icon src="/global/vector/mark.svg"></ion-icon>
                 <stellar-tag color="blue5" class="mt4">v{this.package && this.package.version}</stellar-tag>
               </div>
               <div>

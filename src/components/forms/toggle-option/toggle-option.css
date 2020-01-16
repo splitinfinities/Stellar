@@ -30,7 +30,7 @@ stellar-toggle-option[type="checkbox-block"] + stellar-toggle-option[type="check
   margin-top: 0;
 }
 
-stellar-toggle-option stellar-asset {
+stellar-toggle-option ion-icon {
   --icon-color: white;
 }
 
@@ -139,12 +139,12 @@ stellar-toggle-option[type*="checkbox"] .box {
   border-radius: 0.3rem;
 }
 
-stellar-toggle-option[type*="checkbox"] .box stellar-asset {
+stellar-toggle-option[type*="checkbox"] .box ion-icon {
   transition: transform 350ms var(--ease) 0ms;
   transform: scale(0);
 }
 
-stellar-toggle-option[type="checkbox-block"] .box stellar-asset {
+stellar-toggle-option[type="checkbox-block"] .box ion-icon {
   height: 3rem;
   width: 3rem;
   font-size: 3rem;
@@ -173,7 +173,7 @@ stellar-toggle-option[type="checkbox"] .box .active {
   transform: translate(-50%, -50%) scale(1);
 }
 
-stellar-toggle-option[type*="checkbox"] .box .active stellar-asset {
+stellar-toggle-option[type*="checkbox"] .box .active ion-icon {
   transform: scale(1);
 }
 
@@ -337,6 +337,6 @@ stellar-toggle-option[dark] .box {
   background: var(--black)
 }
 
-stellar-toggle-option[dark][type*="checkbox"] .box .active stellar-asset {
+stellar-toggle-option[dark][type*="checkbox"] .box .active ion-icon {
   color: var(--black);
 }

@@ -1,6 +1,7 @@
 import { Component, Prop, State, Element, Method, Event, EventEmitter, h } from "@stencil/core";
 import { blurringEase } from "../../../utils";
 import Tunnel from '../../theme';
+import "ionicons";
 
 @Component({
   tag: "stellar-toggle-option",
@@ -119,7 +120,7 @@ export class ToggleOption {
       return (
         <div class={this.focused ? "box focused" : "box"}>
           <div class={this.checked ? "indicator active" : "indicator"}>
-            {this.type === "checkbox" && <stellar-asset name="checkmark"></stellar-asset>}
+            {this.type === "checkbox" && <ion-icon name="checkmark"></ion-icon>}
           </div>
         </div>
       );
@@ -147,7 +148,7 @@ export class ToggleOption {
         <div class="wrapper">
           <div class={this.focused ? "box focused" : "box"}>
             <div class={this.checked ? "indicator active" : "indicator"}>
-              <stellar-asset name="checkmark" block></stellar-asset>
+              <ion-icon name="checkmark"></ion-icon>
             </div>
           </div>
           <div class="block-content">

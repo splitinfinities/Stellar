@@ -91,12 +91,12 @@
   justify-content: flex-start;
 }
 
-:host .tab-wrap .tab-button span ::slotted(stellar-asset) {
+:host .tab-wrap .tab-button span ::slotted(ion-icon) {
   line-height: 0;
   margin-right: 0.25em;
 }
 
-:host .tab-wrap .tab-button span ::slotted(stellar-asset) {
+:host .tab-wrap .tab-button span ::slotted(ion-icon) {
   line-height: 0;
   margin-right: 0.25em;
 }

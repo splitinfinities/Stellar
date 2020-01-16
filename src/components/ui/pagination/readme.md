@@ -42,7 +42,7 @@
 
 ### Depends on
 
-- [stellar-asset](../asset)
+- ion-icon
 - [stellar-blur](../../motion/blur)
 - [stellar-input](../../forms/input)
 - context-consumer
@@ -50,13 +50,13 @@
 ### Graph
 ```mermaid
 graph TD;
-  stellar-pagination --> stellar-asset
+  stellar-pagination --> ion-icon
   stellar-pagination --> stellar-blur
   stellar-pagination --> stellar-input
   stellar-pagination --> context-consumer
   stellar-input --> stellar-label
   stellar-input --> copy-wrap
-  stellar-input --> stellar-asset
+  stellar-input --> ion-icon
   stellar-input --> stellar-unit
   stellar-input --> stellar-tooltip
   stellar-input --> context-consumer

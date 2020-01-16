@@ -99,12 +99,12 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [stellar-asset](../../ui/asset)
+- ion-icon
 
 ### Graph
 ```mermaid
 graph TD;
-  stellar-song --> stellar-asset
+  stellar-song --> ion-icon
   style stellar-song fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

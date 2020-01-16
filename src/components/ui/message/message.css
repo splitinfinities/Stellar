@@ -64,7 +64,7 @@
   color: var(--theme-base9);
 }
 
-:host .wrap stellar-asset {
+:host .wrap ion-icon {
   font-size: 2rem;
   color: var(--theme-base9);
 }
@@ -85,7 +85,7 @@
   outline: 0;
 }
 
-:host button[icon] stellar-asset {
+:host button[icon] ion-icon {
   margin-right: 0;
   margin-left: 1rem;
   color: black;
@@ -102,6 +102,6 @@
 }
 
 
-:host([dark]) .wrap stellar-asset {
+:host([dark]) .wrap ion-icon {
   color: var(--theme-base1);
 }

@@ -126,7 +126,7 @@ stellar-interview .button:focus {
   mix-blend-mode: hard-light;
 }
 
-stellar-interview .button stellar-asset {
+stellar-interview .button ion-icon {
   font-size: 7rem;
   margin: auto;
   display: block;
@@ -146,6 +146,6 @@ stellar-interview .button.playing {
   transition: all .35s var(--ease) 0s, background .175s var(--ease) 0s;
 }
 
-stellar-interview .button.playing stellar-asset {
+stellar-interview .button.playing ion-icon {
   font-size: 2.8rem;
 }
