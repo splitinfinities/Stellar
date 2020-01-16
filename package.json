@@ -19,7 +19,9 @@
     "start": "stencil build --next --dev --watch --serve",
     "test": "stencil test --next --spec",
     "test.complete": "stencil test --next --spec --e2e --screenshot",
-    "test.watch": "stencil test --next --spec --e2e --screenshot --watchAll"
+    "test.watch": "stencil test --next --spec --e2e --screenshot --watchAll",
+    "version": "./build-docs && git add *",
+    "publish": "np --any-branch"
   },
   "dependencies": {
     "@shopify/draggable": "^1.0.0-beta.8",
@@ -78,7 +80,8 @@
   },
   "np": {
     "yarn": false,
-    "anyBranch": true
+    "anyBranch": true,
+    "contents": "dist"
   },
   "license": "MIT"
 }
