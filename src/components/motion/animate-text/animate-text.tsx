@@ -56,7 +56,6 @@ export class AnimateText {
 
   render() {
     return <Host role="text" ariaLabel={this.originalText}>
-      <slot />
       <stellar-intersection element={this.element} multiple in={this.in.bind(this)} out={this.out.bind(this)} />
     </Host>
   }

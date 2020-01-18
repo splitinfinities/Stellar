@@ -76,7 +76,6 @@ ul.group, ol.group {
   -ms-flex-align: center;
   align-items: center;
   grid-gap: 1rem;
-  margin-top: 1rem;
   text-align: center;
   width: 100%;
 }
