@@ -14,32 +14,591 @@
 </head>
 
 <body>
-      <stellar-simple-slides>
-            <stellar-slide>
-                  nice!!
-            </stellar-slide>
-            <stellar-slide>
-                  nice
-            </stellar-slide>
-            <stellar-slide>
-                  nice
-            </stellar-slide>
-            <stellar-slide>
-                  nice
-            </stellar-slide>
-            <stellar-slide>
-                  nice
-            </stellar-slide>
-            <stellar-slide>
-                  nice
-            </stellar-slide>
-            <stellar-slide>
-                  nice
-            </stellar-slide>
-            <stellar-slide>
-                  nice
-            </stellar-slide>
-      </stellar-simple-slides>
+      <stellar-theme body system></stellar-theme>
+      <header class="bg-theme-base1 dm-bg-theme-base9">
+            <stellar-layout class="layer-children" padding="none" size="flush" style="--grid-gap: 0;">
+                  <copy-wrap align="center" class="pv6 ma0 pa0 order-0 relative z-2 h-100 invert" style="backdrop-filter: blur(10px);mix-blend-mode: screen;">
+                        <h2 class="white ttu fw9 tracked">
+                              BarCamp Something
+                        </h2>
+                        <h4 class="theme-base7 dm-theme-base2 fw5 mt3">
+                              Hosted at
+                              The Bay
+                        </h4>
+                        <h6 class="theme-base5 dm-theme-base5">
+                              August  7
+                              -
+                              8am to 3pm
+                        </h6>
+                  </copy-wrap>
+                  <stellar-video autoplay class="order-1 h-100 ma0 pa0" controls="false" height="600" loop overlay playsinline width="1800">
+                        <source src="/assets/video/hero.mp4"/>
+                  </stellar-video>
+            </stellar-layout>
+      </header>
+      <header class="sticky top-0 bottom-0 bg-theme-base0 dm-bg-theme-base8 db w-100 z-max ph4 bb b--theme-base1 dm-b--theme-base9">
+            <stellar-layout padding="tiny" size="flush" style="--grid-gap: 1rem;">
+                  <div class="flex flex-column flex-row-ns flex-row-m flex-row-l items-center justify-between w-100">
+                        <stellar-button class="order-0" href="" padding="small">
+                              Buy Tickets
+                        </stellar-button>
+                        <stellar-button class="order-0 order-2-ns order-2-m order-2-l" href="" padding="small">
+                              Sponsor the event
+                        </stellar-button>
+                  </div>
+            </stellar-layout>
+      </header>
+      <stellar-layout class="bg-theme-base1 dm-bg-theme-base7" id="about" padding="large" size="small">
+            <copy-wrap full>
+                  <h2 class="lh-title fw7 black dm-white theme-base9">Come share your passion</h2>
+                  
+                  <p class="theme-base5 dm-theme-base2 mt0">BarCamp's are user generated conferences where the speakers are everyday folks, talking about what makes them excited. Talks aren’t scheduled or planned until just before the conference starts, and anyone can give a talk. Interested, but don’t want to give a talk? That’s okay too!</p>
+                  
+                  <p class="theme-base5 dm-theme-base2 mt0">At BarCamp, you won’t find a predetermined speaker list or a line of suits passing out business cards. What you will find is some shaggy dude in a t-shirt talking about moonshine, a web developer talking about the best practices in SEO, or a world traveler sharing their experiences. BarCamp is a chance to network, learn something new, and communicate what you’re most passionate about. Come one, come all.</p>
+                  
+            </copy-wrap>
+      </stellar-layout>
+      <stellar-layout align="top" class="bg-white dm-bg-black" id="venue" size="large" type="half">
+            <stellar-grid class="self-center" style="--grid-gap: 0;">
+                  <copy-wrap class="br b--theme-base2 dm-b--theme-base8 pa3">
+                        <h6 class="theme-base5 dm-theme-base5 ttu fs7 fw7 tracked">The Venue</h6>
+                        <div class="flex items-center">
+                              <img class="mb0 db w2 h-auto mr2" src="/assets/images/pins/pin-event.png" width="40"/>
+                              <h3 class="black dm-white fw8">The Bay</h3>
+                        </div>
+                        <h6 class="theme-base7 dm-theme-base2 fs7 b">
+                              <address>
+                                    2005 Y St, Lincoln, NE
+                              </address>
+                        </h6>
+                        <p class="theme-base5 dm-theme-base4">The Bay is an international organization headquartered in Lincoln NE. The BAY is known for taking an innovative approach to creating healthy communities around the world which are focused on alternative recreation, fighting poverty and homelessness, and preventing sex-trafficking through the avenues of street outreach, skate, art, and music.</p>
+                  </copy-wrap>
+                  <copy-wrap class="ma0 pa3">
+                        <h6 class="theme-base5 dm-theme-base5 ttu fs7 fw7 tracked">The Opening Party</h6>
+                        <div class="flex items-center">
+                              <img class="mb0 db w2 h-auto mr2" src="/assets/images/pins/pin-party.png" width="40"/>
+                              <h3 class="black dm-white fw8">Turbine Flats</h3>
+                        </div>
+                        <h6 class="theme-base7 dm-theme-base2 fs7 b">
+                              <address>
+                                    2124 Y St, Lincoln, NE
+                              </address>
+                        </h6>
+                        <p class="theme-base5 dm-theme-base4">Turbine Flat's is an entrepreneurial cooperative that supports and promotes Lincoln's ideas community. The Turbine Flats Project's mission is to create a robust, self-sustaining, collaborative environment for small and start-up businesses to bring their products and ideas to market.</p>
+                  </copy-wrap>
+            </stellar-grid>
+            
+            <div class="flex items-center justify-center bg-gold">
+                  <stellar-google-maps apikey="AIzaSyDwDhY20PU4F89wF7xNQPZZgyjl0L7IwIw" lat="40.827449" lng="-96.7051944" zoom="13.3" block theme="silver-minimal" dark-theme="dark-minimal" no-ui>
+                        <stellar-google-maps-marker lat="40.827449" lng="-96.7051944" marker-title="The Bay" icon="/assets/images/pins/pin-event.png" icon-width="37" icon-height="57.5">
+                              <h6 class="theme-base5 dm-theme-base5 ttu fs8 fw7 tracked">The Venue</h6>
+                              <h5 class="dm-theme-base9 ma0 pa0 b">The Bay</h5>
+                              <p class="dm-theme-base7 ma0">2005 Y St, Lincoln, NE</p>
+                              <stellar-button block href="https://www.google.com/maps/dir/?api=1&destination=2005 Y St, Lincoln, NE" padding="tiny" size="tiny" tag="link" target="_blank">
+                                    Directions
+                              </stellar-button>
+                        </stellar-google-maps-marker>
+                        <stellar-google-maps-marker lat="40.824494" lng="-96.690233" marker-title="Turbine Flats" icon="/assets/images/pins/pin-party.png" icon-width="37" icon-height="57.5">
+                              <h6 class="theme-base5 dm-theme-base5 ttu fs8 fw7 tracked">The Opening Party</h6>
+                              <h5 class="dm-theme-base9 ma0 pa0 b">Turbine Flats</h5>
+                              <p class="dm-theme-base7 ma0">2124 Y St, Lincoln, NE</p>
+                              <stellar-button block href="https://www.google.com/maps/dir/?api=1&destination=2124 Y St, Lincoln, NE" padding="tiny" size="tiny" tag="link" target="_blank">
+                                    Directions
+                              </stellar-button>
+                        </stellar-google-maps-marker>
+                  </stellar-google-maps>
+            </div>
+      </stellar-layout>
+      <stellar-layout class="bg-theme-base0 dm-bg-theme-base9" id="tracks" size="full">
+            <stellar-layout padding="none" size="small">
+                  <copy-wrap align="center">
+                        <h2 class="fw7 mb0">The Tracks</h2>
+                        <p class="theme-base5 dm-theme-base2 mt0">Talks are organized into one of four speaking categories. Some possible talks may include:</p>
+                  </copy-wrap>
+            </stellar-layout>
+            <stellar-layout padding="none" size="full">
+                  <stellar-grid>
+                        <stellar-card class="bg-white theme-red" padding="none">
+                              <header class="bg-theme-base7 flex items-center justify-center relative pa0 track--creative">
+                                    <stellar-image bg="var(--theme-base7)" height="900" style="mix-blend-mode: hard-light;" width="1600" nozoom>
+                                          <source srcset="/assets/images/tracks/creative.jpg"/>
+                                    </stellar-image>
+                                    
+                                    <h6 class="white absolute z-1 bottom-1 left-1 fs7 fw9 tracked ma0 pa0 ttu">Creative</h6>
+                                    
+                              </header>
+                              <section class="pa3 bg-white">
+                                    
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">Creative Problem Solving</p>
+                                    
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">How to Make the Perfect Paper Snowflake</p>
+                                    
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">Design for Mobile Devices</p>
+                                    
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">Plumbing Metaphors can Improve Your Interfaces</p>
+                                    
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">Photography Lighting Basics</p>
+                                    
+                              </section>
+                        </stellar-card>
+                        <stellar-card class="bg-white theme-magenta" padding="none">
+                              <header class="bg-theme-base7 flex items-center justify-center relative pa0 track--kitchen-sink">
+                                    <stellar-image bg="var(--theme-base7)" height="900" style="mix-blend-mode: hard-light;" width="1600" nozoom>
+                                          <source srcset="/assets/images/tracks/kitchen sink.jpg"/>
+                                    </stellar-image>
+                                    
+                                    <h6 class="white absolute z-1 bottom-1 left-1 fs7 fw9 tracked ma0 pa0 ttu">Kitchen Sink</h6>
+                                    
+                              </header>
+                              <section class="pa3 bg-white">
+                                    
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">Squirrel Trapping and More</p>
+                                    
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">How to Chop Wood like a Pro</p>
+                                    
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">Teenage Globetrotting</p>
+                                    
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">Making the Best Cup of Coffee</p>
+                                    
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">Down a Rabbit Hole of Cool Science</p>
+                                    
+                              </section>
+                        </stellar-card>
+                        <stellar-card class="bg-white theme-indigo" padding="none">
+                              <header class="bg-theme-base7 flex items-center justify-center relative pa0 track--maker">
+                                    <stellar-image bg="var(--theme-base7)" height="900" style="mix-blend-mode: hard-light;" width="1600" nozoom>
+                                          <source srcset="/assets/images/tracks/maker.jpg"/>
+                                    </stellar-image>
+                                    
+                                    <h6 class="white absolute z-1 bottom-1 left-1 fs7 fw9 tracked ma0 pa0 ttu">Maker</h6>
+                                    
+                              </header>
+                              <section class="pa3 bg-white">
+                                    
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">Marketing Your iOS App</p>
+                                    
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">Bird Watching for fun and profit</p>
+                                    
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">Competitive Intelligence on a Shoestring</p>
+                                    
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">How to get Venture Capital</p>
+                                    
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">Fostering a Co-working Environment</p>
+                                    
+                              </section>
+                        </stellar-card>
+                        <stellar-card class="bg-white theme-orange" padding="none">
+                              <header class="bg-theme-base7 flex items-center justify-center relative pa0 track--technology">
+                                    <stellar-image bg="var(--theme-base7)" height="900" style="mix-blend-mode: hard-light;" width="1600" nozoom>
+                                          <source srcset="/assets/images/tracks/technology.jpg"/>
+                                    </stellar-image>
+                                    <h6 class="white absolute z-1 bottom-1 left-1 fs7 fw9 tracked ma0 pa0 ttu">Technology</h6>
+                              </header>
+                              <section class="pa3 bg-white">
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">CSS4 and the Future of Design</p>
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">How to Wrangle WordPress</p>
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">HTML5 and the Modern Browser</p>
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">iPhone, Me, and My Drone</p>
+                                    <p class="f7 lh-copy mw-100 theme-base9 mt0 mb0">Hardware is the New Geocities</p>
+                              </section>
+                        </stellar-card>
+                        
+                  </stellar-grid>
+            </stellar-layout>
+      </stellar-layout>
+      <stellar-layout class="bg-theme-base1 dm-bg-theme-base7" id="agenda" size="tiny">
+            <copy-wrap align="center">
+                  <h2 class="fw7">The Agenda</h2>
+                  <p class="theme-base5 dm-theme-base2 lh-copy mt0">We may not have the skinny on the talk topics, but we are hip to the general agenda of events!</p>
+            </copy-wrap>
+            
+            <div class="flex flex-wrap flex-nowrap-ns">
+                  <div class="flex justify-center w-100 w-auto-ns mb4 mb0-ns"><div class="b--theme-base7 b--solid black dm-white br-100 flex fs5 fw7 h3 items-center justify-center pa3 w3">1</div></div>
+                  
+                  <div class="pt2 pl3-ns w-100">
+                        <h4 class="pa0 ma0 fs7 fw7 theme-base6 dm-theme-base4 ttu tracked">Friday, November 8th</h4>
+                        
+                        <h3 class="fw7">7PM | Opening Party <span class='ttn'>at TBD!</span></h3>
+                        <p class="theme-base9 dm-theme-base2 lh-copy f6 mt0 w-100 mb4 mw-100">nice</p>
+                        
+                  </div>
+            </div>
+            
+            <div class="flex flex-wrap flex-nowrap-ns">
+                  <div class="flex justify-center w-100 w-auto-ns mb4 mb0-ns"><div class="b--theme-base7 b--solid black dm-white br-100 flex fs5 fw7 h3 items-center justify-center pa3 w3">2</div></div>
+                  
+                  <div class="pt2 pl3-ns w-100">
+                        <h4 class="pa0 ma0 fs7 fw7 theme-base6 dm-theme-base4 ttu tracked">Saturday, November 9th</h4>
+                        <h3 class="fw7">8AM | Coffee / Sign Up</h3>
+                        <p class="theme-base9 dm-theme-base2 lh-copy f6 mt0 w-100 mb4 mw-100">Scarf some snacks and coffee, sign up for a talk, and start the day lip-flappin’ with your fellow BarCampers.</p>
+                        <h3 class="fw7">9AM | Morning Talks Begin</h3>
+                        <p class="theme-base9 dm-theme-base2 lh-copy f6 mt0 w-100 mb4 mw-100">We’ll start out the first round of talks promptly at 9am, so make sure you’re mellowed out and ready to learn!</p>
+                        <h3 class="fw7">12PM | Lunch & Networking</h3>
+                        <p class="theme-base9 dm-theme-base2 lh-copy f6 mt0 w-100 mb4 mw-100">Soak up the good vibes with your new BarCamp friends and enjoy a stellar lunch.</p>
+                        <h3 class="fw7">1PM | Afternoon Talks Begin</h3>
+                        <p class="theme-base9 dm-theme-base2 lh-copy f6 mt0 w-100 mb4 mw-100">At 1 PM, we’ll reconvene and chill for our afternoon session of ace talks!</p>
+                        <h3 class="fw7">3PM | Closing</h3>
+                        <p class="theme-base9 dm-theme-base2 lh-copy f6 mt0 w-100 mb4 mw-100">It’s time to peace out! Tell your new friends to keep on keepin’ on, collect addresses for your new pen pals, and start getting psyched for next year. Don’t forget to pick up your friendship bracelet (sponsored by Bergman Incentives), and other BarCamp memorabilia from the merch table!</p>
+                        
+                  </div>
+            </div>
+      </stellar-layout>
+      <stellar-layout class="bg-theme-base0 dm-bg-theme-base5" id="faqs" size="small">
+            <copy-wrap>
+                  <h2 class="lh-title fw7 mb0 tc center">The FAQ's</h2>
+                  <p class="mt0 mb4 theme-base5 dm-theme-base2 tc center">FAQ's Lead In</p><stellar-accordion class="b--theme-base2 dm-b--theme-base7">
+                        <h6 class="theme-base9 dm-white pa0 ma0 fw7" slot="label">What am I paying $20 for?</h6>
+                        <p class="theme-base5 dm-theme-base2 w-100 mw-100">Opening party / drink ticket, breakfast, soda & snacks, lunch, BarCamp t-shirt, friendship bracelet, good times / new friends (which is sorta priceless&hellip;)</p>
+                  </stellar-accordion>
+                  
+                  <stellar-accordion class="b--theme-base2 dm-b--theme-base7">
+                        <h6 class="theme-base9 dm-white pa0 ma0 fw7" slot="label">How long are the talks?</h6>
+                        <p class="theme-base5 dm-theme-base2 w-100 mw-100">Each talk runs for 23 minutes. Speakers are allowed to use that time however they wish&mdash;you can even share a time slot with multiple people or set up a panel discussion, allowing time for Q&amp;A at the end. The last 7 minutes of every half-hour slot is reserved for transition time between talks.</p>
+                  </stellar-accordion>
+                  
+                  <stellar-accordion class="b--theme-base2 dm-b--theme-base7">
+                        <h6 class="theme-base9 dm-white pa0 ma0 fw7" slot="label">Can I give a sales presentation?</h6>
+                        <p class="theme-base5 dm-theme-base2 w-100 mw-100">Nope! To be respectful of our BarCamp community, sales presentations or pitches are not allowed. Don’t even try it, folks.</p>
+                  </stellar-accordion>
+                  
+                  <stellar-accordion class="b--theme-base2 dm-b--theme-base7">
+                        <h6 class="theme-base9 dm-white pa0 ma0 fw7" slot="label">When do I get my BarCamp t-shirt?</h6>
+                        <p class="theme-base5 dm-theme-base2 w-100 mw-100">Tees and friendship bracelets will be available on the day of BarCamp at the merch table. Though we try to purchase enough of each t-shirt size, we recommend picking your shirt up early in the morning just in case.</p>
+                  </stellar-accordion>
+                  
+                  <stellar-accordion class="b--theme-base2 dm-b--theme-base7">
+                        <h6 class="theme-base9 dm-white pa0 ma0 fw7" slot="label">What should I bring?</h6>
+                        <p class="theme-base5 dm-theme-base2 w-100 mw-100">Something to share with all of your new friends&hellip;a business card perhaps? We encourage you to bring a notebook for notes. If you&rsquo;ve planned a talk with presentation slides, bring your laptop or an external drive with your files. And bring all your friends, because BarCamp is all about friendship this year!</p>
+                  </stellar-accordion>
+                  
+                  <stellar-accordion class="b--theme-base2 dm-b--theme-base7">
+                        <h6 class="theme-base9 dm-white pa0 ma0 fw7" slot="label">What if I have a food allergy?</h6>
+                        <p class="theme-base5 dm-theme-base2 w-100 mw-100">No sweat! We make sure everyone is included. If you have specific food allergies or restrictions, contact Will at <a href="mailto:will@splitinfinities.com">will@splitinfinities.com</a> and we&rsquo;ll take care of you. Each year we work with our caterer to provide vegetarian, vegan and gluten free options.</p>
+                  </stellar-accordion>
+                  
+            </copy-wrap>
+      </stellar-layout>
+      <stellar-layout class="dm-bg-theme-base7 bg-white" id="sponsors" size="large">
+            <copy-wrap align="center">
+                  <h2 class="fw7 dm-white mb0">The Sponsors</h2>
+                  <p class="theme-base5 dm-theme-base1 lh-copy mt0">A huge thanks to all our amazing BarCamp sponsors!</p>
+            </copy-wrap>
+            
+            <div class="relative clearfix z-1">
+                  
+                  <stellar-layout align="top" size="flush" type="sidebar">
+                        <div>
+                              <h6 class="white ma0 tl mb3 ttu tracked fw7 dm-bg-theme-base9 bg-theme-base5 dib pv2 ph3">
+                                    <stellar-animate-text>Platinum</stellar-animate-text>
+                              </h6>
+                        </div>
+                        <stellar-grid class="items-center" style="--grid-width: 300px;">
+                              <stellar-card  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Anthony Banks</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--platinum sponsor--anthony-banks copy">
+                                                <title>Anthony Banks</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--anthony-banks copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Anthony Banks is doing the design this year!</p>
+                                    </footer>
+                              </stellar-card><stellar-card  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Anthony Banks</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--platinum sponsor--anthony-banks">
+                                                <title>Anthony Banks</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--anthony-banks" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Anthony Banks is doing the design this year!</p>
+                                    </footer>
+                              </stellar-card><stellar-card  tag="a" href="https://splitinfinities.com" target="_blank"  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Split Infinities</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--platinum sponsor--split-infinities copy">
+                                                <title>Split Infinities</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--split-infinities copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Sponsoring a thing or not</p>
+                                    </footer>
+                              </stellar-card><stellar-card  tag="a" href="https://splitinfinities.com" target="_blank"  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Split Infinities</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--platinum sponsor--split-infinities">
+                                                <title>Split Infinities</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--split-infinities" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Sponsoring a thing or not</p>
+                                    </footer>
+                              </stellar-card>
+                        </stellar-grid>
+                  </stellar-layout>
+                  <hr class="bg-theme-base0 dm-bg-theme-base8"/>
+                  <stellar-layout align="top" size="flush" type="sidebar-right">
+                        <div class="order-1 tr">
+                              <h6 class="white ma0 tr mb3 ttu tracked fw7 dm-bg-theme-base9 bg-theme-base5 dib pv2 ph3">
+                                    <stellar-animate-text>
+                                          Gold
+                                    </stellar-animate-text>
+                              </h6>
+                        </div>
+                        <stellar-grid class="items-center order-0">
+                              <stellar-card  tag="a" href="https://splitinfinities.com" target="_blank"  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Split Infinities</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--gold sponsor--split-infinities">
+                                                <title>Split Infinities</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--split-infinities" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Sponsoring a thing or not</p>
+                                    </footer>
+                              </stellar-card>
+                        </stellar-grid>
+                  </stellar-layout>
+                  
+                  <hr class="bg-theme-base0 dm-bg-theme-base8"/>
+                  
+                  <stellar-layout align="top" size="flush" type="sidebar">
+                        <div>
+                              <h6 class="white ma0 tl mb3 ttu tracked fw7 dm-bg-theme-base9 bg-theme-base5 dib pv2 ph3">
+                                    <stellar-animate-text>Silver</stellar-animate-text>
+                              </h6>
+                        </div>
+                        <stellar-grid class="items-center">
+                              <stellar-card  tag="a" href="https://splitinfinities.com" target="_blank"  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Split Infinities</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--silver sponsor--split-infinities">
+                                                <title>Split Infinities</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--split-infinities" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Sponsoring a thing or not</p>
+                                    </footer>
+                              </stellar-card>
+                        </stellar-grid>
+                  </stellar-layout>
+                  
+                  <hr class="bg-theme-base0 dm-bg-theme-base8"/>
+
+                  <stellar-layout align="top" size="flush" type="sidebar-right">
+                        <div class="order-1 tr">
+                              <h6 class="white ma0 tr mb3 ttu tracked fw7 dm-bg-theme-base9 bg-theme-base5 dib pv2 ph3">
+                                    <stellar-animate-text>
+                                          Bronze
+                                    </stellar-animate-text>
+                              </h6>
+                        </div>
+                        <stellar-grid class="items-center order-0">
+                              <stellar-card  tag="a" href="https://splitinfinities.com" target="_blank"  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Split Infinities</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--bronze sponsor--split-infinities">
+                                                <title>Split Infinities</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--split-infinities" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Sponsoring a thing or not</p>
+                                    </footer>
+                              </stellar-card>
+                        </stellar-grid>
+                  </stellar-layout>
+                  
+                  <hr class="bg-theme-base0 dm-bg-theme-base8"/>
+
+                  <stellar-layout align="top" size="flush" type="sidebar">
+                        <div>
+                              <h6 class="white ma0 tl mb3 ttu tracked fw7 dm-bg-theme-base9 bg-theme-base5 dib pv2 ph3">
+                                    <stellar-animate-text>
+                                          Carbon
+                                    </stellar-animate-text>
+                              </h6>
+                        </div>
+                        <stellar-grid class="items-center">
+                              <stellar-card  tag="a" href="https://splitinfinities.com" target="_blank"  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Split Infinities</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--carbon sponsor--split-infinities copy 2">
+                                                <title>Split Infinities</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--split-infinities copy 2" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Sponsoring a thing or not</p>
+                                    </footer>
+                              </stellar-card>
+                              <stellar-card  tag="a" href="https://splitinfinities.com" target="_blank"  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Split Infinities</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--carbon sponsor--split-infinities copy 3">
+                                                <title>Split Infinities</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--split-infinities copy 3" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Sponsoring a thing or not</p>
+                                    </footer>
+                              </stellar-card>
+                              <stellar-card  tag="a" href="https://splitinfinities.com" target="_blank"  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Split Infinities</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--carbon sponsor--split-infinities copy 4">
+                                                <title>Split Infinities</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--split-infinities copy 4" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Sponsoring a thing or not</p>
+                                    </footer>
+                              </stellar-card>
+                              <stellar-card  tag="a" href="https://splitinfinities.com" target="_blank"  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Split Infinities</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--carbon sponsor--split-infinities copy 5">
+                                                <title>Split Infinities</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--split-infinities copy 5" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Sponsoring a thing or not</p>
+                                    </footer>
+                              </stellar-card>
+                              <stellar-card  tag="a" href="https://splitinfinities.com" target="_blank"  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Split Infinities</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--carbon sponsor--split-infinities copy 6">
+                                                <title>Split Infinities</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--split-infinities copy 6" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Sponsoring a thing or not</p>
+                                    </footer>
+                              </stellar-card>
+                              <stellar-card  tag="a" href="https://splitinfinities.com" target="_blank"  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Split Infinities</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--carbon sponsor--split-infinities copy 7">
+                                                <title>Split Infinities</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--split-infinities copy 7" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Sponsoring a thing or not</p>
+                                    </footer>
+                              </stellar-card>
+                              <stellar-card  tag="a" href="https://splitinfinities.com" target="_blank"  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Split Infinities</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--carbon sponsor--split-infinities copy 8">
+                                                <title>Split Infinities</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--split-infinities copy 8" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Sponsoring a thing or not</p>
+                                    </footer>
+                              </stellar-card>
+                              <stellar-card  tag="a" href="https://splitinfinities.com" target="_blank"  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Split Infinities</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--carbon sponsor--split-infinities copy 9">
+                                                <title>Split Infinities</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--split-infinities copy 9" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Sponsoring a thing or not</p>
+                                    </footer>
+                              </stellar-card>
+                              <stellar-card  tag="a" href="https://splitinfinities.com" target="_blank"  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Split Infinities</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--carbon sponsor--split-infinities copy">
+                                                <title>Split Infinities</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--split-infinities copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Sponsoring a thing or not</p>
+                                    </footer>
+                              </stellar-card>
+                              <stellar-card  tag="a" href="https://splitinfinities.com" target="_blank"  padding="tiny" class="sponsor">
+                                    <header>
+                                          <h5 class="tc dm-white ma0 pa0 mw-100 fw7">Split Infinities</h5>
+                                    </header>
+                                    <section>
+                                          <svg class="sponsor sponsor--carbon sponsor--split-infinities">
+                                                <title>Split Infinities</title>
+                                                <use xlink:href="/assets/images/sprite.svg#sponsor-logos--split-infinities" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                          </svg>
+                                    </section>
+                                    <footer>
+                                          <p class="w-100 theme-base5 dm-theme-base0 tc f7 mw-100">Sponsoring a thing or not</p>
+                                    </footer>
+                              </stellar-card>
+                        </stellar-grid>
+                  </stellar-layout>
+            </div>
+      </stellar-layout>
+      <footer class="sticky top-0 bottom-0 bg-theme-base0 dm-bg-theme-base8 db w-100 z-999 ph4 bt b--theme-base1 dm-b--theme-base9">
+            <stellar-layout padding="none" size="flush" style="--grid-gap: 0;">
+                  <div class="flex flex-column flex-row-ns flex-row-m flex-row-l items-center justify-between w-100">
+                        <stellar-tabs block class="bg-transparent bn mh3" flip-indicator invert pay-attention size="tiny">
+                              <stellar-tab class="ttu fw7 tracked" href="#about" tag="link">About</stellar-tab>
+                              <stellar-tab class="ttu fw7 tracked" href="#venue" tag="link">Venue</stellar-tab>
+                              <stellar-tab class="ttu fw7 tracked" href="#tracks" tag="link">Tracks</stellar-tab>
+                              <stellar-tab class="ttu fw7 tracked" href="#agenda" tag="link">Agenda</stellar-tab>
+                              <stellar-tab class="ttu fw7 tracked" href="#faqs" tag="link">FAQ's</stellar-tab>
+                              <stellar-tab class="ttu fw7 tracked" href="#sponsors" tag="link">Sponsors</stellar-tab>
+                        </stellar-tabs>
+                  </div>
+            </stellar-layout>
+      </footer>
+      
 </body>
 
 </html>

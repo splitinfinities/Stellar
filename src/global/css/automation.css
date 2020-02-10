@@ -87,3 +87,14 @@ ul.group li, ol.group li {
 canvas[width="80"][height="80"] {
   display: none;
 }
+
+.layer-children {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+.layer-children > * {
+    grid-column: 1;
+    grid-row: 1;
+}

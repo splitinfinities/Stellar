@@ -3,7 +3,6 @@
 }
 
 :host {
-  contain: content;
   display: block;
   position: relative;
   width: 100%;

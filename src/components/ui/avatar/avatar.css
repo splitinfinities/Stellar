@@ -3,7 +3,6 @@
 }
 
 :host {
-  contain: content;
     display: inline-block;
     width: var(--avatar-size);
     max-height: var(--avatar-size);

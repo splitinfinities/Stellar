@@ -68,6 +68,7 @@ export namespace Components {
     'phrase': boolean;
     'words': boolean;
   }
+  interface StellarAssetLibrary {}
   interface StellarAutoScroll {
     'autoplay': boolean;
     'loop': boolean;
@@ -384,6 +385,8 @@ export namespace Components {
   interface StellarGoogleMaps {
     'apikey': string;
     'block': boolean;
+    'dark': boolean;
+    'darkTheme': string;
     'fullscreenControl': boolean;
     'gestureHandling': "greedy" | "cooperative" | "none" | "auto";
     'height': number;
@@ -975,6 +978,7 @@ export namespace Components {
     'height': string;
     'name': string;
     'noanimation': boolean;
+    'payAttention': boolean;
     'size': "tiny" | "small" | "medium" | "large";
     'tabs': () => Promise<HTMLStellarTabElement[]>;
     'vertical': boolean;
@@ -1210,6 +1214,12 @@ declare global {
   var HTMLStellarAnimateTextElement: {
     prototype: HTMLStellarAnimateTextElement;
     new (): HTMLStellarAnimateTextElement;
+  };
+
+  interface HTMLStellarAssetLibraryElement extends Components.StellarAssetLibrary, HTMLStencilElement {}
+  var HTMLStellarAssetLibraryElement: {
+    prototype: HTMLStellarAssetLibraryElement;
+    new (): HTMLStellarAssetLibraryElement;
   };
 
   interface HTMLStellarAutoScrollElement extends Components.StellarAutoScroll, HTMLStencilElement {}
@@ -1754,6 +1764,7 @@ declare global {
     'stellar-360-video': HTMLStellar360VideoElement;
     'stellar-accordion': HTMLStellarAccordionElement;
     'stellar-animate-text': HTMLStellarAnimateTextElement;
+    'stellar-asset-library': HTMLStellarAssetLibraryElement;
     'stellar-auto-scroll': HTMLStellarAutoScrollElement;
     'stellar-avatar': HTMLStellarAvatarElement;
     'stellar-blur': HTMLStellarBlurElement;
@@ -1892,6 +1903,7 @@ declare namespace LocalJSX {
     'phrase'?: boolean;
     'words'?: boolean;
   }
+  interface StellarAssetLibrary {}
   interface StellarAutoScroll {
     'autoplay'?: boolean;
     'loop'?: boolean;
@@ -2199,6 +2211,8 @@ declare namespace LocalJSX {
   interface StellarGoogleMaps {
     'apikey'?: string;
     'block'?: boolean;
+    'dark'?: boolean;
+    'darkTheme'?: string;
     'fullscreenControl'?: boolean;
     'gestureHandling'?: "greedy" | "cooperative" | "none" | "auto";
     'height'?: number;
@@ -2761,6 +2775,7 @@ declare namespace LocalJSX {
     'height'?: string;
     'name'?: string;
     'noanimation'?: boolean;
+    'payAttention'?: boolean;
     'size'?: "tiny" | "small" | "medium" | "large";
     'vertical'?: boolean;
   }
@@ -2926,6 +2941,7 @@ declare namespace LocalJSX {
     'stellar-360-video': Stellar360Video;
     'stellar-accordion': StellarAccordion;
     'stellar-animate-text': StellarAnimateText;
+    'stellar-asset-library': StellarAssetLibrary;
     'stellar-auto-scroll': StellarAutoScroll;
     'stellar-avatar': StellarAvatar;
     'stellar-blur': StellarBlur;
@@ -3032,6 +3048,7 @@ declare module "@stencil/core" {
       'stellar-360-video': LocalJSX.Stellar360Video & JSXBase.HTMLAttributes<HTMLStellar360VideoElement>;
       'stellar-accordion': LocalJSX.StellarAccordion & JSXBase.HTMLAttributes<HTMLStellarAccordionElement>;
       'stellar-animate-text': LocalJSX.StellarAnimateText & JSXBase.HTMLAttributes<HTMLStellarAnimateTextElement>;
+      'stellar-asset-library': LocalJSX.StellarAssetLibrary & JSXBase.HTMLAttributes<HTMLStellarAssetLibraryElement>;
       'stellar-auto-scroll': LocalJSX.StellarAutoScroll & JSXBase.HTMLAttributes<HTMLStellarAutoScrollElement>;
       'stellar-avatar': LocalJSX.StellarAvatar & JSXBase.HTMLAttributes<HTMLStellarAvatarElement>;
       'stellar-blur': LocalJSX.StellarBlur & JSXBase.HTMLAttributes<HTMLStellarBlurElement>;

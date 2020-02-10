@@ -3,7 +3,6 @@
 }
 
 :host {
-    contain: content;
     appearance: none;
     -webkit-appearance: none !important;
     display: block;

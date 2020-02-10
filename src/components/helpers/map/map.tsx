@@ -1,6 +1,7 @@
 import { Component, Host, h, Prop, Element, getAssetPath, Watch } from '@stencil/core';
 import { asyncForEach } from '../../../utils';
 import { } from 'googlemaps';
+import Tunnel from '../../theme';
 
 @Component({
   tag: 'stellar-google-maps',
@@ -19,11 +20,14 @@ export class Map {
   @Prop() noUi: boolean = false;
   @Prop() block: boolean = false;
   @Prop() theme: string;
+  @Prop() darkTheme: string;
   @Prop() gestureHandling: "greedy" | "cooperative" | "none" | "auto" = "auto";
   @Prop() zoomControls: boolean = false;
   @Prop() streetView: boolean = false;
   @Prop() mapType: boolean = false;
   @Prop() fullscreenControl: boolean = false;
+
+  @Prop({ mutable: true }) dark: boolean;
 
   loaded: boolean = false;
 
@@ -45,7 +49,7 @@ export class Map {
     let styles = [];
 
     if (this.theme) {
-      styles = await (await fetch(getAssetPath(`./themes/${this.theme}.json`))).json();
+      styles = await (await fetch(getAssetPath(`./themes/${this.dark ? this.theme : this.darkTheme}.json`))).json();
     }
 
     this.map.setOptions({ styles })
@@ -126,3 +130,5 @@ export class Map {
     </ Host>
   }
 }
+
+Tunnel.injectProps(Map, ['dark']);

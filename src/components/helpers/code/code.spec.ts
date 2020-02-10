@@ -37,7 +37,7 @@ describe('stellar-code', () => {
                  <p>
                    Nice!
                  </p>
-               </template><slot-fb hidden=""><template></template></slot-fb></div></pre>
+               </template><slot-fb><template></template></slot-fb></div></pre>
          </footer>
         </stellar-card>
       </stellar-code>

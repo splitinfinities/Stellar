@@ -85,11 +85,11 @@
 
 ### Used by
 
- - [stellar-avatar]()
+ - [stellar-avatar](.)
 
 ### Depends on
 
-- [stellar-avatar]()
+- [stellar-avatar](.)
 - [stellar-tooltip](../tooltip)
 - context-consumer
 

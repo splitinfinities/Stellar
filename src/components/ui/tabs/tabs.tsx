@@ -22,6 +22,7 @@ export class Tabs {
   @Prop({ reflect: true }) behavior: string;
   @Prop({ reflect: true }) flipIndicator: boolean;
   @Prop({ reflect: true }) blockIndicator: boolean;
+  @Prop({ reflect: true }) payAttention: boolean;
 
   @State() tabsList: Array<HTMLStellarTabElement>;
   @State() contentsList: Array<HTMLStellarContentElement>;
@@ -72,6 +73,10 @@ export class Tabs {
         tab.vertical = this.vertical;
       }
     })
+
+    if (this.payAttention) {
+
+    }
   }
 
   @Watch('dark')

@@ -50,6 +50,7 @@ graph TD;
   stellar-tabs --> context-consumer
   stellar-tab --> stellar-tag
   stellar-tab --> stencil-route-link
+  stellar-tab --> stellar-intersection
   stellar-tab --> context-consumer
   stellar-tag --> stellar-label
   stellar-tag --> context-consumer

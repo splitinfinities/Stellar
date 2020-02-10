@@ -188,6 +188,7 @@
 | `height`         | `height`          |             | `string`                                   | `undefined` |
 | `name`           | `name`            |             | `string`                                   | `undefined` |
 | `noanimation`    | `noanimation`     |             | `boolean`                                  | `false`     |
+| `payAttention`   | `pay-attention`   |             | `boolean`                                  | `undefined` |
 | `size`           | `size`            |             | `"large" or "medium" or "small" or "tiny"` | `undefined` |
 | `vertical`       | `vertical`        |             | `boolean`                                  | `false`     |
 

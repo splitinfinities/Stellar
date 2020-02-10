@@ -3,7 +3,6 @@
 }
 
 :host {
-  contain: content;
   color: var(--theme-base7);
   --focus-color: var(--theme-base8);
   --active-color: var(--theme-base9);

@@ -62,15 +62,15 @@ export class Blur {
   }
 
   render() {
-    return <Host id={this.element.id || this.generatedId} style={{ "--blur-url": `url('#${this.generatedId}-filter')` }}>
+    return this.supported() ? <Host id={this.element.id || this.generatedId} style={{ "--blur-url": `url('#${this.generatedId}-filter')` }}>
       <slot />
-      {this.supported() && <svg class="blur-svg">
+      <svg class="blur-svg">
         <defs>
           <filter id={this.generatedId + "-filter"}>
             <feGaussianBlur id={this.generatedId + "-gaussian"} in="SourceGraphic" stdDeviation={`${this.horizontal},${this.vertical}`} />
           </filter>
         </defs>
-      </svg>}
-    </Host>;
+      </svg>
+    </Host> : <slot />;
   }
 }

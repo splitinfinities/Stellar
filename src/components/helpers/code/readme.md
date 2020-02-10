@@ -67,6 +67,7 @@ Type: `Promise<void>`
 
 ### Used by
 
+ - [stellar-asset-library](../asset-library)
  - [stellar-docs-component](../../docs/component)
 
 ### Depends on
@@ -85,6 +86,7 @@ graph TD;
   stellar-button --> ion-icon
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer
+  stellar-asset-library --> stellar-code
   stellar-docs-component --> stellar-code
   style stellar-code fill:#f9f,stroke:#333,stroke-width:4px
 ```

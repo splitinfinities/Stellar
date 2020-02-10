@@ -52,6 +52,7 @@ Type: `Promise<void>`
 
 - [stellar-tag](../tag)
 - stencil-route-link
+- [stellar-intersection](../../helpers/intersection)
 - context-consumer
 
 ### Graph
@@ -59,6 +60,7 @@ Type: `Promise<void>`
 graph TD;
   stellar-tab --> stellar-tag
   stellar-tab --> stencil-route-link
+  stellar-tab --> stellar-intersection
   stellar-tab --> context-consumer
   stellar-tag --> stellar-label
   stellar-tag --> context-consumer

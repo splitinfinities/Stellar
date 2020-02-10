@@ -30,6 +30,7 @@
  - [stellar-reveal](../reveal)
  - [stellar-reveal-list](../reveal-list)
  - [stellar-slide](../../motion/slide)
+ - [stellar-tab](../../ui/tab)
  - [stellar-video](../../media/video)
  - [stellar-video-interview](../../media/video-interview)
 
@@ -46,6 +47,7 @@ graph TD;
   stellar-reveal --> stellar-intersection
   stellar-reveal-list --> stellar-intersection
   stellar-slide --> stellar-intersection
+  stellar-tab --> stellar-intersection
   stellar-video --> stellar-intersection
   stellar-video-interview --> stellar-intersection
   style stellar-intersection fill:#f9f,stroke:#333,stroke-width:4px

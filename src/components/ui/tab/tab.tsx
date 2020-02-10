@@ -134,6 +134,14 @@ export class Tab {
     }
   }
 
+  async sectionIsOnScreen() {
+    if (this.parent.payAttention) {
+      this.disabled = true;
+      await this.handleClick();
+      this.disabled = false;
+    }
+  }
+
   renderNotifications() {
     return this.notifications && <stellar-tag>{this.notifications}</stellar-tag>
   }
@@ -177,6 +185,7 @@ export class Tab {
       {this.tag === "link" && this.renderLink()}
       {this.tag === "route-link" && this.renderAppLink()}
       {this.tag === "pjax" && this.renderButton()}
+      {this.parent?.payAttention && <stellar-intersection in={this.sectionIsOnScreen.bind(this)} element={this.href} multiple margin="-50%" />}
     </div>
   }
 }
