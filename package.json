@@ -19,8 +19,7 @@
     "start": "stencil build --next --dev --watch --serve",
     "test": "stencil test --next --spec",
     "test.complete": "stencil test --next --spec --e2e --screenshot",
-    "test.watch": "stencil test --next --spec --e2e --screenshot --watchAll",
-    "publish": "np --any-branch"
+    "test.watch": "stencil test --next --spec --e2e --screenshot --watchAll"
   },
   "dependencies": {
     "@shopify/draggable": "^1.0.0-beta.8",
