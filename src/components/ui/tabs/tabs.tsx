@@ -41,6 +41,8 @@ export class Tabs {
 
   @State() blur: number = 0;
 
+  wrap!: HTMLDivElement;
+
   @Method()
   async tabs() {
     if (!this.tabsList || this.tabsList.length === 0) {
@@ -73,10 +75,6 @@ export class Tabs {
         tab.vertical = this.vertical;
       }
     })
-
-    if (this.payAttention) {
-
-    }
   }
 
   @Watch('dark')
@@ -99,6 +97,10 @@ export class Tabs {
       }, 100)
     }
 
+    this.wrap.addEventListener('scroll', () => {
+      this.element.style.setProperty("--current-left-scroll", `${this.wrap.scrollLeft}`);
+    });
+
     const tabs = await this.tabs()
     const tabCount = tabs.length;
 
@@ -110,7 +112,7 @@ export class Tabs {
 
   render() {
     return (
-      <div class="tab-wrap">
+      <div class="tab-wrap" ref={(el) => this.wrap = el as HTMLDivElement}>
         <div class="tab-list" role="tablist">
           <slot></slot>
           <stellar-blur horizontal={!this.vertical ? this.blur : 0} vertical={this.vertical ? this.blur : 0}><div class="indicator"></div></stellar-blur>

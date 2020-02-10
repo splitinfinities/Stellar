@@ -19,6 +19,12 @@
   background: var(--white);
 }
 
+@media (max-width: 700px) {
+  :host {
+    --justify-content: flex-start;
+  }
+}
+
 :host([size="tiny"]) {
   --font-size: var(--ms-2);
   --padding: calc(var(--ms-3) + 0.45em) var(--ms-3);
@@ -43,7 +49,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 0;
+  left: calc(var(--current-left-scroll, 0) * -1px);
   bottom: 0;
 }
 
