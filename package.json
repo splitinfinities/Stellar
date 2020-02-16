@@ -76,6 +76,9 @@
   "jest": {
     "preset": "@stencil/core/testing"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "np": {
     "yarn": false,
     "anyBranch": true,
