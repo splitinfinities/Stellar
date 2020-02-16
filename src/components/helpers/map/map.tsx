@@ -45,14 +45,19 @@ export class Map {
   }
 
   @Watch('theme')
+  @Watch('dark')
   async handleTheme() {
     let styles = [];
 
-    if (this.theme) {
-      styles = await (await fetch(getAssetPath(`./themes/${this.dark ? this.theme : this.darkTheme}.json`))).json();
+    if (this.theme || this.darkTheme) {
+      styles = await (await fetch(getAssetPath(`./themes/${(this.dark && this.darkTheme) ? this.darkTheme : this.theme}.json`))).json();
     }
 
-    this.map.setOptions({ styles })
+    if (this.map) {
+      this.map.setOptions({ styles });
+    }
+
+    return styles;
   }
 
   loadGoogleMaps() {
@@ -75,11 +80,7 @@ export class Map {
 
   async initMap() {
     if (this.apikey) {
-      let styles: any = [];
-
-      if (this.theme) {
-        styles = await (await fetch(getAssetPath(`./themes/${this.theme}.json`))).json();
-      }
+      let styles: any = await this.handleTheme();
 
       this.map = new google.maps.Map(this.el.querySelector('#map'), {
         center: { lat: this.lat, lng: this.lng },
