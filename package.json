@@ -1,6 +1,6 @@
 {
   "name": "@stellar-design/core",
-  "version": "1.5.10",
+  "version": "1.5.11",
   "description": "A Beautiful, Complete Design System",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
