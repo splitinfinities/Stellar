@@ -1,15 +1,15 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { SimpleSlides } from './simple-slides';
+import { Slides } from './slides';
 
-describe('stellar-simple-slides', () => {
+describe('stellar-slides', () => {
 	it('should render and respond to changes appropriately', async () => {
 		const page = await newSpecPage({
-			components: [SimpleSlides],
-			html: `<stellar-simple-slides></stellar-simple-slides>`,
+			components: [Slides],
+			html: `<stellar-slides></stellar-slides>`,
 		});
 
 		expect(page.root).toEqualHtml(`
-			<stellar-simple-slides tabindex=\"0\" style=\"--padding: 1rem;\">
+			<stellar-slides tabindex=\"0\" style=\"--padding: 1rem;\">
 				<mock:shadow-root>
 					<button class=\"hide nav prev\">
 						<ion-icon name=\"arrow-round-back\"></ion-icon>
@@ -21,7 +21,7 @@ describe('stellar-simple-slides', () => {
 						<slot></slot>
 					</div>
 				</mock:shadow-root>
-			</stellar-simple-slides>
+			</stellar-slides>
 		`);
 	});
 })

@@ -47,7 +47,6 @@
  - [stellar-accordion](../../ui/accordion)
  - [stellar-pagination](../../ui/pagination)
  - [stellar-select](../../forms/select)
- - [stellar-slides](../slides)
  - [stellar-tabs](../../ui/tabs)
  - [stellar-toggle-option](../../forms/toggle-option)
 
@@ -57,7 +56,6 @@ graph TD;
   stellar-accordion --> stellar-blur
   stellar-pagination --> stellar-blur
   stellar-select --> stellar-blur
-  stellar-slides --> stellar-blur
   stellar-tabs --> stellar-blur
   stellar-toggle-option --> stellar-blur
   style stellar-blur fill:#f9f,stroke:#333,stroke-width:4px

@@ -808,7 +808,11 @@ export namespace Components {
         "verbiageAn": boolean;
         "wrap": boolean;
     }
-    interface StellarSimpleSlides {
+    interface StellarSlide {
+        "slideId": number;
+        "width": string;
+    }
+    interface StellarSlides {
         /**
           * Show or hide the pager
          */
@@ -817,91 +821,6 @@ export namespace Components {
           * Show or hide the pager
          */
         "pager": boolean;
-    }
-    interface StellarSlide {
-        "slideId": number;
-        "width": string;
-    }
-    interface StellarSlides {
-        "autoHeight": boolean;
-        "blurring": boolean;
-        "centeredSlides": boolean;
-        "direction": "horizontal" | "vertical";
-        "effect": "slide" | "fade" | "cube" | "coverflow" | "flip";
-        /**
-          * Get the index of the active slide.
-         */
-        "getActiveIndex": () => Promise<number>;
-        /**
-          * Get the index of the previous slide.
-         */
-        "getPreviousIndex": () => Promise<number>;
-        "initialSlide": number;
-        "instance": () => Promise<any>;
-        /**
-          * Get whether or not the current slide is the first slide.
-         */
-        "isBeginning": () => Promise<boolean>;
-        /**
-          * Get whether or not the current slide is the last slide.
-         */
-        "isEnd": () => Promise<boolean>;
-        /**
-          * Get the total number of slides.
-         */
-        "length": () => Promise<number>;
-        /**
-          * Lock or unlock the ability to slide to the next slides.
-         */
-        "lockSwipeToNext": (shouldLockSwipeToNext: boolean) => Promise<any>;
-        /**
-          * Lock or unlock the ability to slide to the previous slides.
-         */
-        "lockSwipeToPrev": (shouldLockSwipeToPrev: boolean) => Promise<any>;
-        /**
-          * Lock or unlock the ability to slide to change slides.
-         */
-        "lockSwipes": (shouldLockSwipes: boolean) => Promise<any>;
-        "loop": boolean;
-        "nested": boolean;
-        /**
-          * Options to pass to the swiper instance. See http://idangero.us/swiper/api/ for valid options
-         */
-        "options": any;
-        /**
-          * Show or hide the pager
-         */
-        "pager": boolean;
-        "pagination": boolean;
-        /**
-          * Transition to the next slide.
-         */
-        "slideNext": (speed?: number, runCallbacks?: boolean) => Promise<void>;
-        /**
-          * Transition to the previous slide.
-         */
-        "slidePrev": (speed?: number, runCallbacks?: boolean) => Promise<void>;
-        /**
-          * Transition to the specified slide.
-         */
-        "slideTo": (index: number, speed?: number, runCallbacks?: boolean) => Promise<void>;
-        "slidesPerView": number;
-        "spaceBetween": number;
-        "speed": number;
-        /**
-          * Start auto play.
-         */
-        "startAutoplay": () => Promise<void>;
-        /**
-          * Stop auto play.
-         */
-        "stopAutoplay": () => Promise<void>;
-        /**
-          * Update the underlying slider implementation. Call this if you've added or removed child slides.
-         */
-        "update": () => Promise<void>;
-        "watchSlidesProgress": boolean;
-        "watchSlidesVisibility": boolean;
     }
     interface StellarSong {
         "artwork": boolean;
@@ -1591,12 +1510,6 @@ declare global {
         prototype: HTMLStellarSelectElement;
         new (): HTMLStellarSelectElement;
     };
-    interface HTMLStellarSimpleSlidesElement extends Components.StellarSimpleSlides, HTMLStencilElement {
-    }
-    var HTMLStellarSimpleSlidesElement: {
-        prototype: HTMLStellarSimpleSlidesElement;
-        new (): HTMLStellarSimpleSlidesElement;
-    };
     interface HTMLStellarSlideElement extends Components.StellarSlide, HTMLStencilElement {
     }
     var HTMLStellarSlideElement: {
@@ -1840,7 +1753,6 @@ declare global {
         "stellar-scroll-z-root": HTMLStellarScrollZRootElement;
         "stellar-scroll-z-section": HTMLStellarScrollZSectionElement;
         "stellar-select": HTMLStellarSelectElement;
-        "stellar-simple-slides": HTMLStellarSimpleSlidesElement;
         "stellar-slide": HTMLStellarSlideElement;
         "stellar-slides": HTMLStellarSlidesElement;
         "stellar-song": HTMLStellarSongElement;
@@ -2632,7 +2544,12 @@ declare namespace LocalJSX {
         "verbiageAn"?: boolean;
         "wrap"?: boolean;
     }
-    interface StellarSimpleSlides {
+    interface StellarSlide {
+        "onSwitched"?: (event: CustomEvent<any>) => void;
+        "slideId"?: number;
+        "width"?: string;
+    }
+    interface StellarSlides {
         /**
           * Show or hide the pager
          */
@@ -2641,87 +2558,6 @@ declare namespace LocalJSX {
           * Show or hide the pager
          */
         "pager"?: boolean;
-    }
-    interface StellarSlide {
-        "onSwitched"?: (event: CustomEvent<any>) => void;
-        "slideId"?: number;
-        "width"?: string;
-    }
-    interface StellarSlides {
-        "autoHeight"?: boolean;
-        "blurring"?: boolean;
-        "centeredSlides"?: boolean;
-        "direction"?: "horizontal" | "vertical";
-        "effect"?: "slide" | "fade" | "cube" | "coverflow" | "flip";
-        "initialSlide"?: number;
-        "loop"?: boolean;
-        "nested"?: boolean;
-        /**
-          * Emitted after the active slide has changed.
-         */
-        "onIonSlideDidChange"?: (event: CustomEvent<any>) => void;
-        /**
-          * Emitted when the slider is actively being moved.
-         */
-        "onIonSlideDrag"?: (event: CustomEvent<any>) => void;
-        /**
-          * Emitted when the next slide has ended.
-         */
-        "onIonSlideNextEnd"?: (event: CustomEvent<any>) => void;
-        /**
-          * Emitted when the next slide has started.
-         */
-        "onIonSlideNextStart"?: (event: CustomEvent<any>) => void;
-        /**
-          * Emitted when the previous slide has ended.
-         */
-        "onIonSlidePrevEnd"?: (event: CustomEvent<any>) => void;
-        /**
-          * Emitted when the previous slide has started.
-         */
-        "onIonSlidePrevStart"?: (event: CustomEvent<any>) => void;
-        /**
-          * Emitted when the slider is at the last slide.
-         */
-        "onIonSlideReachEnd"?: (event: CustomEvent<any>) => void;
-        /**
-          * Emitted when the slider is at its initial position.
-         */
-        "onIonSlideReachStart"?: (event: CustomEvent<any>) => void;
-        /**
-          * Emitted when the user releases the touch.
-         */
-        "onIonSlideTouchEnd"?: (event: CustomEvent<any>) => void;
-        /**
-          * Emitted when the user first touches the slider.
-         */
-        "onIonSlideTouchStart"?: (event: CustomEvent<any>) => void;
-        /**
-          * Emitted when the slide transition has ended.
-         */
-        "onIonSlideTransitionEnd"?: (event: CustomEvent<any>) => void;
-        /**
-          * Emitted when the slide transition has started.
-         */
-        "onIonSlideTransitionStart"?: (event: CustomEvent<any>) => void;
-        /**
-          * Emitted before the active slide has changed.
-         */
-        "onIonSlideWillChange"?: (event: CustomEvent<any>) => void;
-        /**
-          * Options to pass to the swiper instance. See http://idangero.us/swiper/api/ for valid options
-         */
-        "options"?: any;
-        /**
-          * Show or hide the pager
-         */
-        "pager"?: boolean;
-        "pagination"?: boolean;
-        "slidesPerView"?: number;
-        "spaceBetween"?: number;
-        "speed"?: number;
-        "watchSlidesProgress"?: boolean;
-        "watchSlidesVisibility"?: boolean;
     }
     interface StellarSong {
         "artwork"?: boolean;
@@ -3023,7 +2859,6 @@ declare namespace LocalJSX {
         "stellar-scroll-z-root": StellarScrollZRoot;
         "stellar-scroll-z-section": StellarScrollZSection;
         "stellar-select": StellarSelect;
-        "stellar-simple-slides": StellarSimpleSlides;
         "stellar-slide": StellarSlide;
         "stellar-slides": StellarSlides;
         "stellar-song": StellarSong;
@@ -3127,7 +2962,6 @@ declare module "@stencil/core" {
             "stellar-scroll-z-root": LocalJSX.StellarScrollZRoot & JSXBase.HTMLAttributes<HTMLStellarScrollZRootElement>;
             "stellar-scroll-z-section": LocalJSX.StellarScrollZSection & JSXBase.HTMLAttributes<HTMLStellarScrollZSectionElement>;
             "stellar-select": LocalJSX.StellarSelect & JSXBase.HTMLAttributes<HTMLStellarSelectElement>;
-            "stellar-simple-slides": LocalJSX.StellarSimpleSlides & JSXBase.HTMLAttributes<HTMLStellarSimpleSlidesElement>;
             "stellar-slide": LocalJSX.StellarSlide & JSXBase.HTMLAttributes<HTMLStellarSlideElement>;
             "stellar-slides": LocalJSX.StellarSlides & JSXBase.HTMLAttributes<HTMLStellarSlidesElement>;
             "stellar-song": LocalJSX.StellarSong & JSXBase.HTMLAttributes<HTMLStellarSongElement>;

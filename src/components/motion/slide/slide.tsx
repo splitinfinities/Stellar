@@ -14,8 +14,8 @@ export class Slide {
   @Event() switched: EventEmitter;
 
   componentWillLoad() {
-    if (this.el.closest('stellar-slides, stellar-simple-slides')) {
-      this.swiper = (this.el.closest('stellar-slides, stellar-simple-slides').nodeName === "STELLAR-SLIDES");
+    if (this.el.closest('stellar-slides')) {
+      this.swiper = (this.el.closest('stellar-slides').nodeName === "STELLAR-SLIDES");
     }
   }
 

@@ -1,520 +1,103 @@
-import { Component, Element, Event, EventEmitter, Method, Prop, State, Watch, h, Host } from '@stencil/core'
-import { Swiper } from './vendor/swiper'
-import { blurringEase } from '../../../utils';
+import { Component, Element, Prop, State, h, Host, Listen } from '@stencil/core';
+import "ionicons";
 
 @Component({
   tag: 'stellar-slides',
   styleUrl: 'slides.css',
-  assetsDirs: ['vendor']
+  shadow: true
 })
-
 export class Slides {
-  private container!: HTMLElement
-  private swiper: any
-
   @Element() el!: HTMLElement
-
-  /**
-   * Emitted before the active slide has changed.
-   */
-  @Event() ionSlideWillChange!: EventEmitter
-
-  /**
-   * Emitted after the active slide has changed.
-   */
-  @Event() ionSlideDidChange!: EventEmitter
-
-  /**
-   * Emitted when the next slide has started.
-   */
-  @Event() ionSlideNextStart!: EventEmitter
-
-  /**
-   * Emitted when the previous slide has started.
-   */
-  @Event() ionSlidePrevStart!: EventEmitter
-
-  /**
-   * Emitted when the next slide has ended.
-   */
-  @Event() ionSlideNextEnd!: EventEmitter
-
-  /**
-   * Emitted when the previous slide has ended.
-   */
-  @Event() ionSlidePrevEnd!: EventEmitter
-
-  /**
-   * Emitted when the slide transition has started.
-   */
-  @Event() ionSlideTransitionStart!: EventEmitter
-
-  /**
-   * Emitted when the slide transition has ended.
-   */
-  @Event() ionSlideTransitionEnd!: EventEmitter
-
-  /**
-   * Emitted when the slider is actively being moved.
-   */
-  @Event() ionSlideDrag!: EventEmitter
-
-  /**
-   * Emitted when the slider is at its initial position.
-   */
-  @Event() ionSlideReachStart!: EventEmitter
-
-  /**
-   * Emitted when the slider is at the last slide.
-   */
-  @Event() ionSlideReachEnd!: EventEmitter
-
-  /**
-   * Emitted when the user first touches the slider.
-   */
-  @Event() ionSlideTouchStart!: EventEmitter
-
-  /**
-   * Emitted when the user releases the touch.
-   */
-  @Event() ionSlideTouchEnd!: EventEmitter
-
-  /**
-   * Options to pass to the swiper instance.
-   * See http://idangero.us/swiper/api/ for valid options
-   */
-  @Prop() options: any // SwiperOptions  // TODO
-
-  @Prop({ reflect: true }) effect: "slide" | "fade" | "cube" | "coverflow" | "flip" = "slide"
-  @Prop() speed: number = 300
-  @Prop() direction: "horizontal" | "vertical" = "horizontal"
-  @Prop() autoHeight: boolean = false
-  @Prop() nested: boolean = false
-  @Prop() pagination: boolean = false
-  @Prop() initialSlide: number = 0;
-
-  @Prop() loop: boolean = false
-
-  @Prop() watchSlidesProgress: boolean = false
-  @Prop() watchSlidesVisibility: boolean = false
-
-  @Prop() slidesPerView: number = 3
-  @Prop() centeredSlides: boolean = true
-  @Prop() spaceBetween: number = 30
-  @Prop() blurring: boolean = true
-
-  @State() blur: number = 0;
-
-  @State() ease: Function = () => {
-    const ease = blurringEase({
-      end: 60,
-      start: -1,
-      duration: (this.speed / 2),
-      tick: (args) => {
-        this.blur = args.value;
-      },
-      complete: () => {
-        this.blur = -1;
-        ease.stop()
-
-        setTimeout(() => {
-          this.blur = -2;
-        }, 100)
-      },
-    });
-
-    return ease;
-  }
-
-  @State() slides;
-
-  @Watch('options')
-  @Watch('effect')
-  @Watch('speed')
-  @Watch('direction')
-  @Watch('autoHeight')
-  @Watch('pagination')
-  @Watch('nested')
-  @Watch('loop')
-  @Watch('watchSlidesProgress')
-  @Watch('watchSlidesVisibility')
-  @Watch('slidesPerView')
-  @Watch('centeredSlides')
-  updateSwiperOptions() {
-    const newOptions = this.normalizeOptions()
-    this.swiper.params = Object.assign({}, this.swiper.params, newOptions)
-    this.update()
-  }
-
-  @Method()
-  async instance() {
-    return this.swiper;
-  }
 
   /**
    * Show or hide the pager
    */
-  @Prop() pager = true
-
-  componentDidLoad() {
-    setTimeout(this.initSlides.bind(this), 10)
-  }
-
-  componentDidUnload() {
-    this.swiper.destroy(true, true)
-  }
-
-  private initSlides() {
-    this.container = this.el.children[0] as HTMLElement
-    const finalOptions = this.normalizeOptions()
-    // init swiper core
-    this.swiper = new Swiper(this.container, finalOptions);
-
-    this.el!.onmouseenter = () => {
-      this.swiper.keyboard.enable()
-    }
-
-    this.el!.onmouseleave = () => {
-      this.swiper.keyboard.disable()
-    }
-
-    this.el!.onfocus = () => {
-      this.swiper.keyboard.enable()
-    }
-
-    this.el!.onblur = () => {
-      this.swiper.keyboard.disable()
-    }
-  }
+  @Prop() pager = false;
 
   /**
-   * Update the underlying slider implementation. Call this if you've added or removed
-   * child slides.
+   * Show or hide the pager
    */
-  @Method()
-  async update() {
-    this.swiper.update()
-  }
+  @Prop() padding: string = "1rem";
 
   /**
-   * Transition to the specified slide.
+   * Show or hide the pager
    */
-  @Method()
-  async slideTo(index: number, speed?: number, runCallbacks?: boolean) {
-    this.swiper.slideTo(index, speed, runCallbacks)
-  }
+  @State() active: number[] = [];
 
   /**
-   * Transition to the next slide.
+   * Show or hide the pager
    */
-  @Method()
-  async slideNext(speed?: number, runCallbacks?: boolean) {
-    this.swiper.slideNext(runCallbacks, speed)
-  }
+  @State() first: boolean = true;
 
   /**
-   * Transition to the previous slide.
+   * Show or hide the pager
    */
-  @Method()
-  async slidePrev(speed?: number, runCallbacks?: boolean) {
-    this.swiper.slidePrev(runCallbacks, speed)
+  @State() last: boolean = false;
+
+  slides!: NodeListOf<HTMLStellarSlideElement>;
+
+  componentWillLoad() {
+    this.slides = this.el.querySelectorAll("stellar-slide");
+
+    this.slides.forEach((slide: HTMLStellarSlideElement, index) => {
+      slide.setAttribute("tabIndex", "0");
+      slide.slideId = index;
+    })
   }
 
-  /**
-   * Get the index of the active slide.
-   */
-  @Method()
-  async getActiveIndex(): Promise<number> {
-    return this.swiper.activeIndex
+  scrollToSlide(element) {
+    element.scrollIntoView({ behavior: "smooth", block: "nearest" })
   }
 
-  /**
-   * Get the index of the previous slide.
-   */
-  @Method()
-  async getPreviousIndex(): Promise<number> {
-    return this.swiper.previousIndex
-  }
-
-  /**
-   * Get the total number of slides.
-   */
-  @Method()
-  async length(): Promise<number> {
-    return this.swiper.slides.length
-  }
-
-  /**
-   * Get whether or not the current slide is the last slide.
-   *
-   */
-  @Method()
-  async isEnd(): Promise<boolean> {
-    return this.swiper.isEnd
-  }
-
-  /**
-   * Get whether or not the current slide is the first slide.
-   */
-  @Method()
-  async isBeginning(): Promise<boolean> {
-    return this.swiper.isBeginning
-  }
-
-  /**
-   * Start auto play.
-   */
-  @Method()
-  async startAutoplay() {
-    this.swiper.autoplay.start()
-  }
-
-  /**
-   * Stop auto play.
-   */
-  @Method()
-  async stopAutoplay() {
-    this.swiper.autoplay.stop()
-  }
-
-  /**
-   * Lock or unlock the ability to slide to the next slides.
-   */
-  @Method()
-  async lockSwipeToNext(shouldLockSwipeToNext: boolean) {
-    if (shouldLockSwipeToNext) {
-      return this.swiper.lockSwipeToNext()
-    }
-    this.swiper.unlockSwipeToNext()
-  }
-
-  /**
-   * Lock or unlock the ability to slide to the previous slides.
-   */
-  @Method()
-  async lockSwipeToPrev(shouldLockSwipeToPrev: boolean) {
-    if (shouldLockSwipeToPrev) {
-      return this.swiper.lockSwipeToPrev()
-    }
-    this.swiper.unlockSwipeToPrev()
-  }
-
-  /**
-   * Lock or unlock the ability to slide to change slides.
-   */
-  @Method()
-  async lockSwipes(shouldLockSwipes: boolean) {
-    if (shouldLockSwipes) {
-      return this.swiper.lockSwipes()
-    }
-    this.swiper.unlockSwipes()
-  }
-
-  blurStart() {
-    if (!this.slides) {
-      this.slides = Array.from(this.el!.querySelectorAll('stellar-slide'))
-    }
-
-    if (this.blurring) {
-      this.ease().start();
-    }
-  }
-
-  blurEnd() {
-    if (!this.slides) {
-      this.slides = Array.from(this.el!.querySelectorAll('stellar-slide'))
-    }
-
-    this.blur = -1;
-
+  next() {
+    const lastVisible = Array.from(this.el.shadowRoot.querySelectorAll('.pager > button.visible'));
+    const element = lastVisible[lastVisible.length - 1].nextSibling;
     // @ts-ignore
-    const resize = new Event('resize');
-    window.dispatchEvent(resize);
+    element.click()
   }
 
-  private normalizeOptions() {
-    // Base options, can be changed
-    const swiperOptions = {
-      effect: this.effect,
-      direction: this.direction,
-      initialSlide: this.initialSlide,
-      loop: this.loop,
-      pager: this.pagination,
-      keyboard: {
-        enabled: false,
-        onlyInViewport: true,
-      },
-      pagination: '.swiper-pagination',
-      paginationType: 'bullets',
-      parallax: false,
-      slidesPerView: Number(this.slidesPerView),
-      spaceBetween: this.spaceBetween,
-      speed: this.speed,
-      zoom: false,
-      nested: this.nested,
-      slidesPerColumn: 1,
-      slidesPerColumnFill: 'column',
-      slidesPerGroup: 1,
-      centeredSlides: this.centeredSlides,
-      slidesOffsetBefore: -0,
-      slidesOffsetAfter: 0,
-      touchEventsTarget: 'container',
-      autoplayDisableOnInteraction: true,
-      autoplayStopOnLast: false,
-      freeMode: false,
-      freeModeMomentum: true,
-      freeModeMomentumRatio: 1,
-      freeModeMomentumBounce: true,
-      freeModeMomentumBounceRatio: 1,
-      freeModeMomentumVelocityRatio: 1,
-      freeModeSticky: false,
-      freeModeMinimumVelocity: 0.02,
-      autoHeight: this.autoHeight,
-      setWrapperSize: false,
-      zoomMax: 3,
-      zoomMin: 1,
-      zoomToggle: true,
-      touchRatio: 1,
-      touchAngle: 45,
-      simulateTouch: true,
-      shortSwipes: true,
-      longSwipes: true,
-      longSwipesRatio: 0.5,
-      longSwipesMs: 300,
-      followFinger: true,
-      onlyExternal: false,
-      threshold: 0,
-      touchMoveStopPropagation: true,
-      touchReleaseOnEdges: false,
-      iOSEdgeSwipeDetection: false,
-      iOSEdgeSwipeThreshold: 20,
-      paginationClickable: false,
-      paginationHide: false,
-      resistance: true,
-      resistanceRatio: 0.85,
-      watchSlidesProgress: this.watchSlidesProgress,
-      watchSlidesVisibility: this.watchSlidesVisibility,
-      preventClicks: true,
-      preventClicksPropagation: true,
-      slideToClickedSlide: false,
-      loopAdditionalSlides: 0,
-      noSwiping: true,
-      runCallbacksOnInit: true,
-      controlBy: 'slide',
-      controlInverse: false,
-      breakpoints: {
-        400: {
-          slidesPerView: 2,
-          spaceBetween: 10
-        },
-        600: {
-          slidesPerView: 3,
-          spaceBetween: 15
-        },
-        900: {
-          slidesPerView: 4,
-          spaceBetween: 20
-        },
-        1200: {
-          slidesPerView: 5,
-          spaceBetween: 25
-        }
-      },
-      coverflow: {
-        rotate: 20,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true
-      },
-      flip: {
-        slideShadows: true,
-        limitRotation: true
-      },
-      cube: {
-        slideShadows: true,
-        shadow: true,
-        shadowOffset: 20,
-        shadowScale: 0.94
-      },
-      fade: {
-        crossFade: false
-      },
-      prevSlideMessage: 'Previous slide',
-      nextSlideMessage: 'Next slide',
-      firstSlideMessage: 'This is the first slide',
-      lastSlideMessage: 'This is the last slide',
-      grabCursor: true
-    }
+  previous() {
+    const firstVisible = Array.from(this.el.shadowRoot.querySelectorAll('.pager > button.visible'));
+    const element = firstVisible[0].previousSibling;
+    // @ts-ignore
+    element.click()
+  }
 
-    // Keep the event options separate, we dont want users
-    // overwriting these
-    const eventOptions = {
-      on: {
-        slideChangeStart: () => {
-          this.ionSlideWillChange.emit
-        },
-        slideChangeEnd: () => {
-          this.ionSlideDidChange.emit
-        },
-        slideNextStart: () => {
-          this.ionSlideNextStart.emit
-        },
-        slidePrevStart: () => {
-          this.ionSlidePrevStart.emit
-        },
-        slideNextEnd: () => {
-          this.blurEnd()
-          this.ionSlideNextEnd.emit
-        },
-        slidePrevEnd: () => {
-          this.blurEnd()
-          this.ionSlidePrevEnd.emit
-        },
-        transitionStart: () => {
-          this.blurStart()
-          this.ionSlideTransitionStart.emit
-        },
-        transitionEnd: () => {
-          this.blurEnd()
-          this.ionSlideTransitionEnd.emit
-        },
-        sliderMove: () => {
-          this.ionSlideDrag.emit
-        },
-        reachBeginning: () => {
-          this.ionSlideReachStart.emit
-        },
-        reachEnd: () => {
-          this.blurEnd()
-          this.ionSlideReachEnd.emit
-        },
-        touchStart: () => {
-          this.ionSlideTouchStart.emit
-        },
-        touchEnd: () => {
-          this.ionSlideTouchEnd.emit
-        }
+  @Listen('switched')
+  handleSwitched(e) {
+    if (this.pager) {
+      if (e.detail.visible) {
+        this.active = [...this.active, e.detail.slideId]
+      } else {
+        this.active = this.active.filter((item) => {
+          return item !== e.detail.slideId;
+        })
       }
     }
 
-    // Merge the base, user options, and events together then pass to swiper
-    return Object.assign({}, swiperOptions, this.options, eventOptions)
+    if (e.detail.visible) {
+      if (e.detail.slideId === 0) {
+        this.first = true;
+      } else {
+        this.first = false;
+      }
+
+      if (e.detail.slideId === (this.slides.length - 1)) {
+        this.last = true;
+      } else {
+        this.last = false;
+      }
+    }
   }
 
   render() {
-    return <Host tabIndex={0}>
-      <stellar-blur class="swiper-container" horizontal={this.blurring && this.blur}>
-        <div class="swiper-wrapper">
-          <slot />
-        </div>
-        <div
-          class={{
-            'swiper-pagination': true,
-            hide: !this.pager
-          }}
-        />
-      </stellar-blur>
+    return <Host tabIndex={0} style={{ '--padding': this.padding }}>
+      <button class={`nav prev ${this.first ? "hide" : ""}`} onClick={this.previous.bind(this)}><ion-icon name="arrow-round-back" /></button>
+      <button class={`nav next ${this.last ? "hide" : ""}`} onClick={this.next.bind(this)}><ion-icon name="arrow-round-forward" /></button>
+      {this.pager && this.slides && <div class="pager">{Array.from(this.slides).map((e, i) => <button onClick={() => this.scrollToSlide(e)} class={this.active.includes(i) ? "visible" : ""}>Slide {i}</button>)}</div>}
+      <div class="wrapper">
+        <slot />
+      </div>
     </Host>
   }
 }
