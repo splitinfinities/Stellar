@@ -73,7 +73,7 @@
 :host .chevron {
   position: absolute;
   right: 1rem;
-  color: var(--gray4);
+  color: currentColor;
   margin-left: auto;
   transition: all 350ms ease-in-out 0s;
 }
