@@ -46,13 +46,13 @@ Type: `Promise<Boolean>`
 
 
 
-### `source(name: any) => Promise<HTMLWebAudioSourceElement>`
+### `source(name: any) => Promise<any>`
 
 
 
 #### Returns
 
-Type: `Promise<HTMLWebAudioSourceElement>`
+Type: `Promise<any>`
 
 
 

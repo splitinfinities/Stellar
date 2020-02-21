@@ -205,23 +205,23 @@ Type: `Promise<void>`
 
 
 
-### `contents() => Promise<HTMLStellarContentElement[]>`
+### `contents() => Promise<any[]>`
 
 
 
 #### Returns
 
-Type: `Promise<HTMLStellarContentElement[]>`
+Type: `Promise<any[]>`
 
 
 
-### `tabs() => Promise<HTMLStellarTabElement[]>`
+### `tabs() => Promise<any[]>`
 
 
 
 #### Returns
 
-Type: `Promise<HTMLStellarTabElement[]>`
+Type: `Promise<any[]>`
 
 
 

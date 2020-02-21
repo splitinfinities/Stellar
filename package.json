@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "build": "stencil build --next --docs",
-    "build.prod": "stencil build --next --prod --docs",
+    "build.prod": "stencil build --prod --docs",
     "start": "stencil build --next --dev --watch --serve",
     "test": "stencil test --next --spec",
     "test.complete": "stencil test --next --spec --e2e --screenshot",
