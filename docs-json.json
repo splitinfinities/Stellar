@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-02-29T19:20:16",
+  "timestamp": "2020-02-29T19:31:18",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.0-19",
@@ -7,7 +7,7 @@
   },
   "components": [
     {
-      "filePath": "./src/components/ui/copy-wrap/copy-wrap.tsx",
+      "filePath": "src/components/ui/copy-wrap/copy-wrap.tsx",
       "encapsulation": "shadow",
       "tag": "copy-wrap",
       "readme": "# copy-wrap\n\n\n",
@@ -75,7 +75,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/horizontal-scroll/horizontal-scroll.tsx",
+      "filePath": "src/components/helpers/horizontal-scroll/horizontal-scroll.tsx",
       "encapsulation": "shadow",
       "tag": "horizontal-scroll",
       "readme": "# horizontal-scroll\n\n\n",
@@ -92,7 +92,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/media/skeleton-img/skeleton-img.tsx",
+      "filePath": "src/components/media/skeleton-img/skeleton-img.tsx",
       "encapsulation": "none",
       "tag": "skeleton-img",
       "readme": "# skeleton-text\n\n\n",
@@ -228,7 +228,7 @@
       }
     },
     {
-      "filePath": "./src/components/media/skeleton-text/skeleton-text.tsx",
+      "filePath": "src/components/media/skeleton-text/skeleton-text.tsx",
       "encapsulation": "none",
       "tag": "skeleton-text",
       "readme": "# skeleton-text\n\n\n",
@@ -305,7 +305,7 @@
       }
     },
     {
-      "filePath": "./src/components/media/360-image/360-image.tsx",
+      "filePath": "src/components/media/360-image/360-image.tsx",
       "encapsulation": "none",
       "tag": "stellar-360-image",
       "readme": "# stellar-360-image\n\n\n",
@@ -418,7 +418,7 @@
       }
     },
     {
-      "filePath": "./src/components/media/360-video/360-video.tsx",
+      "filePath": "src/components/media/360-video/360-video.tsx",
       "encapsulation": "none",
       "tag": "stellar-360-video",
       "readme": "# stellar-360-video\n\n\n",
@@ -502,7 +502,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/ui/accordion/accordion.tsx",
+      "filePath": "src/components/ui/accordion/accordion.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-accordion",
       "readme": "# stellar-accordian\n\n\n",
@@ -636,7 +636,7 @@
       }
     },
     {
-      "filePath": "./src/components/motion/animate-text/animate-text.tsx",
+      "filePath": "src/components/motion/animate-text/animate-text.tsx",
       "encapsulation": "none",
       "tag": "stellar-animate-text",
       "readme": "# stellar-animate-text\n\n\n",
@@ -785,7 +785,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/asset-library/asset-library.tsx",
+      "filePath": "src/components/helpers/asset-library/asset-library.tsx",
       "encapsulation": "none",
       "tag": "stellar-asset-library",
       "readme": "# stellar-asset-library\n\n\n",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/auto-scroll/auto-scroll.tsx",
+      "filePath": "src/components/helpers/auto-scroll/auto-scroll.tsx",
       "encapsulation": "none",
       "tag": "stellar-auto-scroll",
       "readme": "# stellar-auto-scroll\n\n\n",
@@ -933,7 +933,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/ui/avatar/avatar.tsx",
+      "filePath": "src/components/ui/avatar/avatar.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-avatar",
       "readme": "# stellar-avatar\n\n\n",
@@ -1158,7 +1158,7 @@
       }
     },
     {
-      "filePath": "./src/components/motion/blur/blur.tsx",
+      "filePath": "src/components/motion/blur/blur.tsx",
       "encapsulation": "none",
       "tag": "stellar-blur",
       "readme": "# stellar-blur\n\n\n",
@@ -1235,7 +1235,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/breadcrumb/breadcrumb.tsx",
+      "filePath": "src/components/ui/breadcrumb/breadcrumb.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-breadcrumb",
       "readme": "# stellar-breadcrumb\n\n\n",
@@ -1419,7 +1419,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/breadcrumbs/breadcrumbs.tsx",
+      "filePath": "src/components/ui/breadcrumbs/breadcrumbs.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-breadcrumbs",
       "readme": "# stellar-breadcrumb\n\n\n",
@@ -1644,7 +1644,7 @@
       }
     },
     {
-      "filePath": "./src/components/forms/button/button.tsx",
+      "filePath": "src/components/forms/button/button.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-button",
       "readme": "# stellar-button\n\n\n",
@@ -2117,7 +2117,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/callout/callout.tsx",
+      "filePath": "src/components/ui/callout/callout.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-callout",
       "readme": "# stellar-callout\n\n\n",
@@ -2195,7 +2195,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/card/card.tsx",
+      "filePath": "src/components/ui/card/card.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-card",
       "readme": "# stellar-card\n\n\n",
@@ -2542,7 +2542,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/chart/chart.tsx",
+      "filePath": "src/components/helpers/chart/chart.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-chart",
       "readme": "# stellar-chart\n\n\n",
@@ -2748,7 +2748,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/clock/clock.tsx",
+      "filePath": "src/components/helpers/clock/clock.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-clock",
       "readme": "# stellar-clock\n\n\n",
@@ -2851,7 +2851,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/code/code.tsx",
+      "filePath": "src/components/helpers/code/code.tsx",
       "encapsulation": "none",
       "tag": "stellar-code",
       "readme": "# stellar-code\n\n\n",
@@ -3089,7 +3089,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/color-library/color-library.tsx",
+      "filePath": "src/components/helpers/color-library/color-library.tsx",
       "encapsulation": "none",
       "tag": "stellar-color-library",
       "readme": "# stellar-color-library\n\n\n",
@@ -3159,7 +3159,7 @@
       }
     },
     {
-      "filePath": "./src/components/forms/color-picker/color-picker.tsx",
+      "filePath": "src/components/forms/color-picker/color-picker.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-color-picker",
       "readme": "# stellar-color-picker\n\n\n",
@@ -3249,7 +3249,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/comment/comment.tsx",
+      "filePath": "src/components/ui/comment/comment.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-comment",
       "readme": "# single-comment\n\n\n",
@@ -3324,7 +3324,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/comments/comments.tsx",
+      "filePath": "src/components/ui/comments/comments.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-comments",
       "readme": "# comment-thread\n\n\n",
@@ -3343,7 +3343,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/ui/content/content.tsx",
+      "filePath": "src/components/ui/content/content.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-content",
       "readme": "# stellar-content\n\n\n",
@@ -3410,7 +3410,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/helpers/context/context.tsx",
+      "filePath": "src/components/helpers/context/context.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-context",
       "readme": "# stellar-context\n\n\n",
@@ -3496,7 +3496,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/ui/dropdown/dropdown.tsx",
+      "filePath": "src/components/ui/dropdown/dropdown.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-dropdown",
       "readme": "# stellar-button\n\n\n",
@@ -3636,7 +3636,7 @@
       }
     },
     {
-      "filePath": "./src/components/motion/follow/follow.tsx",
+      "filePath": "src/components/motion/follow/follow.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-follow",
       "readme": "# stellar-follow\n\n\n",
@@ -3710,7 +3710,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/forms/form/form.tsx",
+      "filePath": "src/components/forms/form/form.tsx",
       "encapsulation": "none",
       "tag": "stellar-form",
       "readme": "# stellar-form\n\n\n",
@@ -3938,7 +3938,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/map/map.tsx",
+      "filePath": "src/components/helpers/map/map.tsx",
       "encapsulation": "none",
       "tag": "stellar-google-maps",
       "readme": "# stellar-google-maps\n\n\n",
@@ -4249,7 +4249,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/map-marker/marker.tsx",
+      "filePath": "src/components/helpers/map-marker/marker.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-google-maps-marker",
       "readme": "# stellar-google-maps-marker\n\n\n",
@@ -4406,7 +4406,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/ui/grid/grid.tsx",
+      "filePath": "src/components/ui/grid/grid.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-grid",
       "readme": "# stellar-grid\n\n\n",
@@ -4548,7 +4548,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/group/group.tsx",
+      "filePath": "src/components/ui/group/group.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-group",
       "readme": "# stellar-group\n\n\n",
@@ -4634,7 +4634,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/group-overflow/group-overflow.tsx",
+      "filePath": "src/components/ui/group-overflow/group-overflow.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-group-overflow",
       "readme": "# stellar-avatar\n\n\n",
@@ -4699,7 +4699,7 @@
       }
     },
     {
-      "filePath": "./src/components/media/image/image.tsx",
+      "filePath": "src/components/media/image/image.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-image",
       "readme": "# stellar-image\n\n\n",
@@ -4891,7 +4891,7 @@
       }
     },
     {
-      "filePath": "./src/components/forms/input/input.tsx",
+      "filePath": "src/components/forms/input/input.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-input",
       "readme": "# stellar-input\n\n\n",
@@ -5888,7 +5888,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/intersection/intersection.tsx",
+      "filePath": "src/components/helpers/intersection/intersection.tsx",
       "encapsulation": "none",
       "tag": "stellar-intersection",
       "readme": "# stellar-intersection\n\n\n",
@@ -6044,7 +6044,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/interstitial/interstitial.tsx",
+      "filePath": "src/components/helpers/interstitial/interstitial.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-interstitial",
       "readme": "# stellar-interstitial\n\n\n",
@@ -6111,7 +6111,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/media/interview/interview.tsx",
+      "filePath": "src/components/media/interview/interview.tsx",
       "encapsulation": "none",
       "tag": "stellar-interview",
       "readme": "# stellar-interview\n\n\n",
@@ -6332,7 +6332,7 @@
       }
     },
     {
-      "filePath": "./src/components/media/interview-line/interview-line.tsx",
+      "filePath": "src/components/media/interview-line/interview-line.tsx",
       "encapsulation": "none",
       "tag": "stellar-interview-line",
       "readme": "# stellar-interview-line\n\n\n",
@@ -6401,7 +6401,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/forms/item/item.tsx",
+      "filePath": "src/components/forms/item/item.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-item",
       "readme": "# stellar-button\n\n\n",
@@ -6842,7 +6842,7 @@
       }
     },
     {
-      "filePath": "./src/components/motion/keyframes/keyframes.tsx",
+      "filePath": "src/components/motion/keyframes/keyframes.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-keyframes",
       "readme": "# stellar-keyframes\n\n\n",
@@ -6927,7 +6927,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/forms/label/label.tsx",
+      "filePath": "src/components/forms/label/label.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-label",
       "readme": "# stellar-label\n\n\n",
@@ -7041,7 +7041,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/layout/layout.tsx",
+      "filePath": "src/components/ui/layout/layout.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-layout",
       "readme": "# stellar-layout\n\n\n",
@@ -7264,7 +7264,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/long-shadow/long-shadow.tsx",
+      "filePath": "src/components/helpers/long-shadow/long-shadow.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-long-shadow",
       "readme": "# stellar-long-shadow\n\n\n",
@@ -7409,7 +7409,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/markdown/markdown.tsx",
+      "filePath": "src/components/helpers/markdown/markdown.tsx",
       "encapsulation": "none",
       "tag": "stellar-markdown",
       "readme": "# stellar-markdown\n\n\n",
@@ -7557,7 +7557,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/message/message.tsx",
+      "filePath": "src/components/ui/message/message.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-message",
       "readme": "# stellar-message\n\n\n",
@@ -7739,7 +7739,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/mouse-trail/mouse-trail.tsx",
+      "filePath": "src/components/helpers/mouse-trail/mouse-trail.tsx",
       "encapsulation": "none",
       "tag": "stellar-mouse-trail",
       "readme": "# stellar-mouse-trail\n\n\n",
@@ -7808,7 +7808,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/ui/pagination/pagination.tsx",
+      "filePath": "src/components/ui/pagination/pagination.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-pagination",
       "readme": "# stellar-pagination\n\n\n",
@@ -7989,7 +7989,7 @@
       }
     },
     {
-      "filePath": "./src/components/motion/parallax/parallax.tsx",
+      "filePath": "src/components/motion/parallax/parallax.tsx",
       "encapsulation": "none",
       "tag": "stellar-parallax",
       "readme": "# stellar-parallax\n\n\n",
@@ -8049,7 +8049,7 @@
       }
     },
     {
-      "filePath": "./src/components/motion/parallax-section/parallax-section.tsx",
+      "filePath": "src/components/motion/parallax-section/parallax-section.tsx",
       "encapsulation": "none",
       "tag": "stellar-parallax-section",
       "readme": "# stellar-parallax-section\n\n\n",
@@ -8090,7 +8090,7 @@
       }
     },
     {
-      "filePath": "./src/components/forms/password-requirements/password-requirements.tsx",
+      "filePath": "src/components/forms/password-requirements/password-requirements.tsx",
       "encapsulation": "none",
       "tag": "stellar-password-requirements",
       "readme": "# stellar-password-requirements\n\n\n",
@@ -8155,7 +8155,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/pjax/pjax.tsx",
+      "filePath": "src/components/helpers/pjax/pjax.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-pjax",
       "readme": "# stellar-pjax\n\n\n",
@@ -8190,7 +8190,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/media/playlist/playlist.tsx",
+      "filePath": "src/components/media/playlist/playlist.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-playlist",
       "readme": "# stellar-playlist\n\n\n",
@@ -8536,7 +8536,7 @@
       }
     },
     {
-      "filePath": "./src/components/forms/progress/progress.tsx",
+      "filePath": "src/components/forms/progress/progress.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-progress",
       "readme": "# stellar-progress\n\n\n",
@@ -8755,7 +8755,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/reveal/reveal.tsx",
+      "filePath": "src/components/helpers/reveal/reveal.tsx",
       "encapsulation": "none",
       "tag": "stellar-reveal",
       "readme": "# stellar-reveal\n\n\n",
@@ -8877,7 +8877,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/reveal-list/reveal-list.tsx",
+      "filePath": "src/components/helpers/reveal-list/reveal-list.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-reveal-list",
       "readme": "# stellar-reveal\n\n\n",
@@ -9027,7 +9027,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/scatter/scatter.tsx",
+      "filePath": "src/components/helpers/scatter/scatter.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-scatter",
       "readme": "# stellar-scatter\n\n\n",
@@ -9130,7 +9130,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/helpers/scroll-z-root/scroll-z-root.tsx",
+      "filePath": "src/components/helpers/scroll-z-root/scroll-z-root.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-scroll-z-root",
       "readme": "# stellar-scroll-z-root\n\n\n",
@@ -9262,7 +9262,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/helpers/scroll-z-section/scroll-z-section.tsx",
+      "filePath": "src/components/helpers/scroll-z-section/scroll-z-section.tsx",
       "encapsulation": "none",
       "tag": "stellar-scroll-z-section",
       "readme": "# stellar-scroll-z-section\n\n\n",
@@ -9279,7 +9279,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/forms/select/select.tsx",
+      "filePath": "src/components/forms/select/select.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-select",
       "readme": "# stellar-select\n\n\n",
@@ -9780,10 +9780,10 @@
         {
           "name": "option_elements",
           "returns": {
-            "type": "Promise<NodeListOf<HTMLStellarItemElement>>",
+            "type": "Promise<NodeListOf<any>>",
             "docs": ""
           },
-          "signature": "option_elements() => Promise<NodeListOf<HTMLStellarItemElement>>",
+          "signature": "option_elements() => Promise<NodeListOf<any>>",
           "parameters": [],
           "docs": "",
           "docsTags": []
@@ -9878,7 +9878,7 @@
       }
     },
     {
-      "filePath": "./src/components/motion/slide/slide.tsx",
+      "filePath": "src/components/motion/slide/slide.tsx",
       "encapsulation": "none",
       "tag": "stellar-slide",
       "readme": "# ion-slide\n\nThe Slide component is a child component of [Slides](../Slides). The template\nshould be written as `ion-slide`. Any slide content should be written\nin this component and it should be used in conjunction with [Slides](../Slides).\n\nSee the [Slides API Docs](../Slides) for more usage information.\n\n",
@@ -9945,7 +9945,7 @@
       }
     },
     {
-      "filePath": "./src/components/motion/slides/slides.tsx",
+      "filePath": "src/components/motion/slides/slides.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-slides",
       "readme": "# stellar-simple-slides\n\n\n",
@@ -10003,7 +10003,7 @@
       }
     },
     {
-      "filePath": "./src/components/media/song/song.tsx",
+      "filePath": "src/components/media/song/song.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-song",
       "readme": "# stellar-song\n\n\n",
@@ -10172,7 +10172,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/starscape/starscape.tsx",
+      "filePath": "src/components/helpers/starscape/starscape.tsx",
       "encapsulation": "none",
       "tag": "stellar-starscape",
       "readme": "# stellar-starscape\n\n\n",
@@ -10197,7 +10197,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/step/step.tsx",
+      "filePath": "src/components/ui/step/step.tsx",
       "encapsulation": "none",
       "tag": "stellar-step",
       "readme": "# stellar-step\n\n\n",
@@ -10317,7 +10317,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/steps/steps.tsx",
+      "filePath": "src/components/ui/steps/steps.tsx",
       "encapsulation": "none",
       "tag": "stellar-steps",
       "readme": "# stellar-steps\n\n\n",
@@ -10348,10 +10348,10 @@
         {
           "name": "contents",
           "returns": {
-            "type": "Promise<HTMLStellarContentElement[]>",
+            "type": "Promise<any[]>",
             "docs": ""
           },
-          "signature": "contents() => Promise<HTMLStellarContentElement[]>",
+          "signature": "contents() => Promise<any[]>",
           "parameters": [],
           "docs": "",
           "docsTags": []
@@ -10359,10 +10359,10 @@
         {
           "name": "steps",
           "returns": {
-            "type": "Promise<HTMLStellarStepElement[]>",
+            "type": "Promise<any[]>",
             "docs": ""
           },
-          "signature": "steps() => Promise<HTMLStellarStepElement[]>",
+          "signature": "steps() => Promise<any[]>",
           "parameters": [],
           "docs": "",
           "docsTags": []
@@ -10376,7 +10376,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/helpers/story/story.tsx",
+      "filePath": "src/components/helpers/story/story.tsx",
       "encapsulation": "none",
       "tag": "stellar-story",
       "readme": "# stellar-story\n\n\n",
@@ -10411,7 +10411,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/helpers/stripe/stripe.tsx",
+      "filePath": "src/components/helpers/stripe/stripe.tsx",
       "encapsulation": "none",
       "tag": "stellar-stripe",
       "readme": "# stellar-card\n\n\n",
@@ -10519,7 +10519,7 @@
       }
     },
     {
-      "filePath": "./src/components/forms/switch/switch.tsx",
+      "filePath": "src/components/forms/switch/switch.tsx",
       "encapsulation": "none",
       "tag": "stellar-switch",
       "readme": "# stellar-accordian\n\n\n",
@@ -10680,7 +10680,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/tab/tab.tsx",
+      "filePath": "src/components/ui/tab/tab.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-tab",
       "readme": "# stellar-content\n\n\n",
@@ -10939,7 +10939,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/table/table.tsx",
+      "filePath": "src/components/ui/table/table.tsx",
       "encapsulation": "none",
       "tag": "stellar-table",
       "readme": "# stellar-table\n\n\n",
@@ -11033,7 +11033,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/tabs/tabs.tsx",
+      "filePath": "src/components/ui/tabs/tabs.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-tabs",
       "readme": "# stellar-content\n\n\n",
@@ -11255,10 +11255,10 @@
         {
           "name": "contents",
           "returns": {
-            "type": "Promise<HTMLStellarContentElement[]>",
+            "type": "Promise<any[]>",
             "docs": ""
           },
-          "signature": "contents() => Promise<HTMLStellarContentElement[]>",
+          "signature": "contents() => Promise<any[]>",
           "parameters": [],
           "docs": "",
           "docsTags": []
@@ -11266,10 +11266,10 @@
         {
           "name": "tabs",
           "returns": {
-            "type": "Promise<HTMLStellarTabElement[]>",
+            "type": "Promise<any[]>",
             "docs": ""
           },
-          "signature": "tabs() => Promise<HTMLStellarTabElement[]>",
+          "signature": "tabs() => Promise<any[]>",
           "parameters": [],
           "docs": "",
           "docsTags": []
@@ -11291,7 +11291,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/tag/tag.tsx",
+      "filePath": "src/components/ui/tag/tag.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-tag",
       "readme": "# stellar-tag\n\n\n",
@@ -11435,7 +11435,7 @@
       }
     },
     {
-      "filePath": "./src/components/tester/tester.tsx",
+      "filePath": "src/components/tester/tester.tsx",
       "encapsulation": "none",
       "tag": "stellar-tester",
       "readme": "# stellar-tester\n\n\n",
@@ -11499,7 +11499,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/theme/theme.tsx",
+      "filePath": "src/components/helpers/theme/theme.tsx",
       "encapsulation": "none",
       "tag": "stellar-theme",
       "readme": "# stellar-dark-mode\n\n\n",
@@ -11630,7 +11630,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/time/time.tsx",
+      "filePath": "src/components/helpers/time/time.tsx",
       "encapsulation": "none",
       "tag": "stellar-time",
       "readme": "# moment-time\n\n\n",
@@ -11698,7 +11698,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/forms/toggle/toggle.tsx",
+      "filePath": "src/components/forms/toggle/toggle.tsx",
       "encapsulation": "none",
       "tag": "stellar-toggle",
       "readme": "# stellar-toggle\n\n\n",
@@ -11978,7 +11978,7 @@
       }
     },
     {
-      "filePath": "./src/components/forms/toggle-option/toggle-option.tsx",
+      "filePath": "src/components/forms/toggle-option/toggle-option.tsx",
       "encapsulation": "none",
       "tag": "stellar-toggle-option",
       "readme": "# stellar-toggle-option\n\n\n",
@@ -12316,7 +12316,7 @@
       }
     },
     {
-      "filePath": "./src/components/ui/tooltip/tooltip.tsx",
+      "filePath": "src/components/ui/tooltip/tooltip.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-tooltip",
       "readme": "# stellar-accordian\n\n\n",
@@ -12452,7 +12452,7 @@
       }
     },
     {
-      "filePath": "./src/components/helpers/unit/unit.tsx",
+      "filePath": "src/components/helpers/unit/unit.tsx",
       "encapsulation": "none",
       "tag": "stellar-unit",
       "readme": "# stellar-unit\n\n\n",
@@ -12586,7 +12586,7 @@
       }
     },
     {
-      "filePath": "./src/components/media/video/video.tsx",
+      "filePath": "src/components/media/video/video.tsx",
       "encapsulation": "none",
       "tag": "stellar-video",
       "readme": "# stellar-video\n\n\n",
@@ -12913,7 +12913,7 @@
       }
     },
     {
-      "filePath": "./src/components/media/video-interview/video-interview.tsx",
+      "filePath": "src/components/media/video-interview/video-interview.tsx",
       "encapsulation": "shadow",
       "tag": "stellar-video-interview",
       "readme": "# stellar-interview\n\n\n",
@@ -13134,7 +13134,7 @@
       }
     },
     {
-      "filePath": "./src/components/audio/web-audio/web-audio.tsx",
+      "filePath": "src/components/audio/web-audio/web-audio.tsx",
       "encapsulation": "none",
       "tag": "web-audio",
       "readme": "# web-audio\n\n\n",
@@ -13228,10 +13228,10 @@
         {
           "name": "source",
           "returns": {
-            "type": "Promise<HTMLWebAudioSourceElement>",
+            "type": "Promise<any>",
             "docs": ""
           },
-          "signature": "source(name: any) => Promise<HTMLWebAudioSourceElement>",
+          "signature": "source(name: any) => Promise<any>",
           "parameters": [],
           "docs": "",
           "docsTags": []
@@ -13262,7 +13262,7 @@
       }
     },
     {
-      "filePath": "./src/components/audio/web-audio-debugger/web-audio-debugger.tsx",
+      "filePath": "src/components/audio/web-audio-debugger/web-audio-debugger.tsx",
       "encapsulation": "shadow",
       "tag": "web-audio-debugger",
       "readme": "# web-audio-debugger\n\n\n",
@@ -13309,7 +13309,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/audio/web-audio-effect/web-audio-effect.tsx",
+      "filePath": "src/components/audio/web-audio-effect/web-audio-effect.tsx",
       "encapsulation": "shadow",
       "tag": "web-audio-effect",
       "readme": "# web-audio-effect\n\n\n",
@@ -13456,7 +13456,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/audio/web-audio-sequencer/web-audio-sequencer.tsx",
+      "filePath": "src/components/audio/web-audio-sequencer/web-audio-sequencer.tsx",
       "encapsulation": "shadow",
       "tag": "web-audio-sequencer",
       "readme": "# web-audio-sequencer\n\n\n",
@@ -13580,7 +13580,7 @@
       "dependencyGraph": {}
     },
     {
-      "filePath": "./src/components/audio/web-audio-source/web-audio-source.tsx",
+      "filePath": "src/components/audio/web-audio-source/web-audio-source.tsx",
       "encapsulation": "shadow",
       "tag": "web-audio-source",
       "readme": "# web-audio-source\n\n\n",
@@ -13870,7 +13870,7 @@
       }
     },
     {
-      "filePath": "./src/components/audio/web-audio-visualizer/web-audio-visualizer.tsx",
+      "filePath": "src/components/audio/web-audio-visualizer/web-audio-visualizer.tsx",
       "encapsulation": "shadow",
       "tag": "web-audio-visualizer",
       "readme": "# web-audio-visualizer\n\n\n",
@@ -14079,7 +14079,7 @@
       }
     },
     {
-      "filePath": "./src/components/audio/web-audio-visualizer-shader/web-audio-visualizer-shader.tsx",
+      "filePath": "src/components/audio/web-audio-visualizer-shader/web-audio-visualizer-shader.tsx",
       "encapsulation": "shadow",
       "tag": "web-audio-visualizer-shader",
       "readme": "# web-audio-visualizer-shader\n\n\n",

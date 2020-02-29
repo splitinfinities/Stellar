@@ -27,3 +27,4 @@ package-lock.json
 storybook-static
 
 .now
+.stencil

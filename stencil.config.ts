@@ -57,7 +57,7 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null,
-      dir: "storybook-static",
+      dir: "www",
       copy: [
         { src: "global/**/*" },
         { src: "*.html" },

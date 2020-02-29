@@ -14,8 +14,8 @@
     "dist/"
   ],
   "scripts": {
-    "build-storybook": "build-storybook -s www -o www",
-    "build": "npm run build-stroybook && NODE_ENV=production stencil build --stats",
+    "build-storybook": "build-storybook -s www",
+    "build": "NODE_ENV=production stencil build --stats && build-storybook -s www",
     "dev": "stencil build --watch --serve --next",
     "lint": "run-p \"lint.ts\" \"lint.styles\"",
     "lint.styles": "stylelint \"src/**/*.css\"",
