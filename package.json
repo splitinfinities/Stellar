@@ -16,7 +16,7 @@
   "scripts": {
     "build-storybook": "build-storybook -s www",
     "build-stencil": "stencil build --stats",
-    "build": "num run build-stencil && npm run build-stencil",
+    "build": "npm run build-stencil && npm run build-storybook",
     "dev": "stencil build --watch --serve --next",
     "lint": "run-p \"lint.ts\" \"lint.styles\"",
     "lint.styles": "stylelint \"src/**/*.css\"",

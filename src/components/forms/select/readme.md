@@ -221,13 +221,13 @@
 
 ## Methods
 
-### `option_elements() => Promise<NodeListOf<any>>`
+### `option_elements() => Promise<NodeListOf<HTMLStellarItemElement>>`
 
 
 
 #### Returns
 
-Type: `Promise<NodeListOf<any>>`
+Type: `Promise<NodeListOf<HTMLStellarItemElement>>`
 
 
 
