@@ -1,0 +1,3788 @@
+{
+  "version": 1.1,
+  "tags": [
+    {
+      "name": "copy-wrap",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "align",
+          "description": ""
+        },
+        {
+          "name": "full",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "horizontal-scroll",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
+    },
+    {
+      "name": "skeleton-img",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "block",
+          "description": ""
+        },
+        {
+          "name": "height",
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "description": ""
+        },
+        {
+          "name": "loading",
+          "description": ""
+        },
+        {
+          "name": "width",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "skeleton-text",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "as",
+          "description": ""
+        },
+        {
+          "name": "loading",
+          "description": ""
+        },
+        {
+          "name": "width",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-360-image",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "height",
+          "description": ""
+        },
+        {
+          "name": "nolazyload",
+          "description": ""
+        },
+        {
+          "name": "poster",
+          "description": ""
+        },
+        {
+          "name": "src",
+          "description": ""
+        },
+        {
+          "name": "width",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-360-video",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "height",
+          "description": ""
+        },
+        {
+          "name": "poster",
+          "description": ""
+        },
+        {
+          "name": "src",
+          "description": ""
+        },
+        {
+          "name": "width",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-accordion",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "label",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "open",
+          "description": ""
+        },
+        {
+          "name": "tight",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-animate-text",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "delay",
+          "description": ""
+        },
+        {
+          "name": "duration",
+          "description": ""
+        },
+        {
+          "name": "method",
+          "description": ""
+        },
+        {
+          "name": "only-in",
+          "description": ""
+        },
+        {
+          "name": "phrase",
+          "description": ""
+        },
+        {
+          "name": "words",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-asset-library",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
+    },
+    {
+      "name": "stellar-auto-scroll",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "autoplay",
+          "description": ""
+        },
+        {
+          "name": "loop",
+          "description": ""
+        },
+        {
+          "name": "speed",
+          "description": ""
+        },
+        {
+          "name": "start-position",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-avatar",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "color",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "initials",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "notooltip",
+          "description": ""
+        },
+        {
+          "name": "processing",
+          "description": ""
+        },
+        {
+          "name": "shape",
+          "description": "",
+          "values": [
+            {
+              "name": "circle"
+            },
+            {
+              "name": "diamond"
+            },
+            {
+              "name": "hexagon"
+            },
+            {
+              "name": "message"
+            },
+            {
+              "name": "rectangle"
+            },
+            {
+              "name": "square"
+            },
+            {
+              "name": "star"
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "description": "",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "small"
+            },
+            {
+              "name": "tiny"
+            }
+          ]
+        },
+        {
+          "name": "src",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-blur",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "horizontal",
+          "description": ""
+        },
+        {
+          "name": "vertical",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-breadcrumb",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "color",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "description": ""
+        },
+        {
+          "name": "first",
+          "description": ""
+        },
+        {
+          "name": "href",
+          "description": ""
+        },
+        {
+          "name": "label",
+          "description": ""
+        },
+        {
+          "name": "last",
+          "description": ""
+        },
+        {
+          "name": "tag",
+          "description": "",
+          "values": [
+            {
+              "name": "link"
+            },
+            {
+              "name": "route"
+            }
+          ]
+        },
+        {
+          "name": "target",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-breadcrumbs",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "color",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "description",
+          "description": ""
+        },
+        {
+          "name": "home",
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "description": ""
+        },
+        {
+          "name": "icon_size",
+          "description": ""
+        },
+        {
+          "name": "icon_src",
+          "description": ""
+        },
+        {
+          "name": "label",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": "",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "small"
+            },
+            {
+              "name": "tiny"
+            }
+          ]
+        },
+        {
+          "name": "tag",
+          "description": "",
+          "values": [
+            {
+              "name": "link"
+            },
+            {
+              "name": "route"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "stellar-button",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "active",
+          "description": "Sets the button or link as an active state."
+        },
+        {
+          "name": "block",
+          "description": "Sets the button or link to render at full width to the parent."
+        },
+        {
+          "name": "contrast",
+          "description": "Sets the button or link as an outlined button."
+        },
+        {
+          "name": "danger",
+          "description": "Sets the button or link to provide the affordance of a dangerous action."
+        },
+        {
+          "name": "dark",
+          "description": "Sets the button or link as an outlined button."
+        },
+        {
+          "name": "disabled",
+          "description": "Sets the button or link as disabled and not-interactable."
+        },
+        {
+          "name": "for",
+          "description": "Sets the href on the anchor tag if the button is a link."
+        },
+        {
+          "name": "ghost",
+          "description": ""
+        },
+        {
+          "name": "href",
+          "description": "Sets the href on the anchor tag if the button is a link."
+        },
+        {
+          "name": "icon",
+          "description": "Sets the button or link as a button with only an icon."
+        },
+        {
+          "name": "invert",
+          "description": "Sets the button or link as an outlined button."
+        },
+        {
+          "name": "label",
+          "description": "Sets accessibility options on the buttons"
+        },
+        {
+          "name": "name",
+          "description": "Sets the name on the button if the button is an input. Allows the button to act as an item in a form."
+        },
+        {
+          "name": "outline",
+          "description": "Sets the button or link as an outlined button."
+        },
+        {
+          "name": "padding",
+          "description": "Sets the padding inside of the button. Can be small, medium, or large.",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "small"
+            },
+            {
+              "name": "tiny"
+            }
+          ]
+        },
+        {
+          "name": "pill",
+          "description": "Sets the button or link to render as a pill."
+        },
+        {
+          "name": "pjax",
+          "description": "Sets the button or link as an outlined button."
+        },
+        {
+          "name": "processable",
+          "description": "Sets the button or link as processing when clicked."
+        },
+        {
+          "name": "size",
+          "description": "Sets the size of the button. Can be tiny, small, medium, or large.",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "small"
+            },
+            {
+              "name": "tiny"
+            }
+          ]
+        },
+        {
+          "name": "tag",
+          "description": "Allows the button to render for different tags.",
+          "values": [
+            {
+              "name": "button"
+            },
+            {
+              "name": "link"
+            },
+            {
+              "name": "pjax"
+            },
+            {
+              "name": "route-link"
+            },
+            {
+              "name": "span"
+            },
+            {
+              "name": "submit"
+            }
+          ]
+        },
+        {
+          "name": "target",
+          "description": "Sets the target on the anchor tag if the button is a link."
+        },
+        {
+          "name": "value",
+          "description": "Sets the value on the button if the button is an input."
+        }
+      ]
+    },
+    {
+      "name": "stellar-callout",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "type",
+          "description": "",
+          "values": [
+            {
+              "name": "alert"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "error"
+            },
+            {
+              "name": "info"
+            },
+            {
+              "name": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "stellar-card",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "flip-icon",
+          "description": "Sets the href on the anchor tag if the button is a link."
+        },
+        {
+          "name": "flip-ready",
+          "description": "Let's a card be flippable"
+        },
+        {
+          "name": "flippable",
+          "description": "Let's a card be flippable"
+        },
+        {
+          "name": "flipped",
+          "description": "Renders a flipped card"
+        },
+        {
+          "name": "for",
+          "description": "Sets the href on the anchor tag if the button is a link."
+        },
+        {
+          "name": "href",
+          "description": "Sets the href if the card is a link."
+        },
+        {
+          "name": "name",
+          "description": "Sets the name if the card is a button."
+        },
+        {
+          "name": "noresize",
+          "description": "Removes the resize observer"
+        },
+        {
+          "name": "padding",
+          "description": "Sets the padding inside of the button. Can be small, medium, or large.",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "none"
+            },
+            {
+              "name": "small"
+            },
+            {
+              "name": "tiny"
+            }
+          ]
+        },
+        {
+          "name": "shadow",
+          "description": "Renders a shadow on the card",
+          "values": [
+            {
+              "name": "heavy"
+            },
+            {
+              "name": "light"
+            },
+            {
+              "name": "medium"
+            }
+          ]
+        },
+        {
+          "name": "tag",
+          "description": "Sets the element to render the card as - an anchor tag, a button, or a div.",
+          "values": [
+            {
+              "name": "a"
+            },
+            {
+              "name": "button"
+            },
+            {
+              "name": "div"
+            },
+            {
+              "name": "stencil-route-link"
+            }
+          ]
+        },
+        {
+          "name": "type",
+          "description": "Sets the type on a button"
+        },
+        {
+          "name": "value",
+          "description": "Sets the value if the card is a button."
+        }
+      ]
+    },
+    {
+      "name": "stellar-chart",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "exporting",
+          "description": ""
+        },
+        {
+          "name": "for",
+          "description": ""
+        },
+        {
+          "name": "remote",
+          "description": ""
+        },
+        {
+          "name": "type",
+          "description": "",
+          "values": [
+            {
+              "name": "area"
+            },
+            {
+              "name": "areaspline"
+            },
+            {
+              "name": "bar"
+            },
+            {
+              "name": "bubble"
+            },
+            {
+              "name": "column"
+            },
+            {
+              "name": "line"
+            },
+            {
+              "name": "pie"
+            },
+            {
+              "name": "polygon"
+            },
+            {
+              "name": "scatter"
+            },
+            {
+              "name": "spline"
+            },
+            {
+              "name": "waterfall"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "stellar-clock",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "animated",
+          "description": ""
+        },
+        {
+          "name": "between",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": ""
+        },
+        {
+          "name": "time",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-code",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "code-string",
+          "description": ""
+        },
+        {
+          "name": "copy",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "expandable",
+          "description": ""
+        },
+        {
+          "name": "expanded",
+          "description": ""
+        },
+        {
+          "name": "feature",
+          "description": ""
+        },
+        {
+          "name": "language",
+          "description": ""
+        },
+        {
+          "name": "preview",
+          "description": ""
+        },
+        {
+          "name": "simple",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-color-library",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "colors",
+          "description": ""
+        },
+        {
+          "name": "shape",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-color-picker",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "dark",
+          "description": "Sets the button or link as an outlined button."
+        },
+        {
+          "name": "notransparent",
+          "description": ""
+        },
+        {
+          "name": "val",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-comment",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "content",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-comments",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
+    },
+    {
+      "name": "stellar-content",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "behavior",
+          "description": ""
+        },
+        {
+          "name": "for",
+          "description": ""
+        },
+        {
+          "name": "open",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-context",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "apikey",
+          "description": ""
+        },
+        {
+          "name": "time",
+          "description": ""
+        },
+        {
+          "name": "weather",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-docs-component",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "ready",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-docs-header",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "complement",
+          "description": ""
+        },
+        {
+          "name": "mark",
+          "description": ""
+        },
+        {
+          "name": "max",
+          "description": ""
+        },
+        {
+          "name": "package",
+          "description": ""
+        },
+        {
+          "name": "ready",
+          "description": ""
+        },
+        {
+          "name": "theme",
+          "description": ""
+        },
+        {
+          "name": "value",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-docs-home",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
+    },
+    {
+      "name": "stellar-docs-navigation",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "collection",
+          "description": ""
+        },
+        {
+          "name": "documentation",
+          "description": ""
+        },
+        {
+          "name": "loader",
+          "description": ""
+        },
+        {
+          "name": "ready",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-docs-not-found",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
+    },
+    {
+      "name": "stellar-docs-page",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
+    },
+    {
+      "name": "stellar-documentation",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "collection_link",
+          "description": ""
+        },
+        {
+          "name": "coverage_link",
+          "description": ""
+        },
+        {
+          "name": "documentation_link",
+          "description": ""
+        },
+        {
+          "name": "package_link",
+          "description": ""
+        },
+        {
+          "name": "stats_link",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-dropdown",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "description": ""
+        },
+        {
+          "name": "icon-name",
+          "description": ""
+        },
+        {
+          "name": "label",
+          "description": ""
+        },
+        {
+          "name": "open",
+          "description": ""
+        },
+        {
+          "name": "position",
+          "description": "",
+          "values": [
+            {
+              "name": "center"
+            },
+            {
+              "name": "left"
+            },
+            {
+              "name": "right"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "stellar-follow",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "distance",
+          "description": ""
+        },
+        {
+          "name": "padding",
+          "description": ""
+        },
+        {
+          "name": "type",
+          "description": "",
+          "values": [
+            {
+              "name": "cursor"
+            },
+            {
+              "name": "scroll"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "stellar-form",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "accept-charset",
+          "description": ""
+        },
+        {
+          "name": "action",
+          "description": ""
+        },
+        {
+          "name": "ajax",
+          "description": ""
+        },
+        {
+          "name": "autocomplete",
+          "description": ""
+        },
+        {
+          "name": "enctype",
+          "description": ""
+        },
+        {
+          "name": "method",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "novalidate",
+          "description": ""
+        },
+        {
+          "name": "target",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-google-maps",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "apikey",
+          "description": ""
+        },
+        {
+          "name": "block",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "dark-theme",
+          "description": ""
+        },
+        {
+          "name": "fullscreen-control",
+          "description": ""
+        },
+        {
+          "name": "gesture-handling",
+          "description": "",
+          "values": [
+            {
+              "name": "auto"
+            },
+            {
+              "name": "cooperative"
+            },
+            {
+              "name": "greedy"
+            },
+            {
+              "name": "none"
+            }
+          ]
+        },
+        {
+          "name": "height",
+          "description": ""
+        },
+        {
+          "name": "lat",
+          "description": ""
+        },
+        {
+          "name": "lng",
+          "description": ""
+        },
+        {
+          "name": "map-type",
+          "description": ""
+        },
+        {
+          "name": "no-ui",
+          "description": ""
+        },
+        {
+          "name": "street-view",
+          "description": ""
+        },
+        {
+          "name": "theme",
+          "description": ""
+        },
+        {
+          "name": "width",
+          "description": ""
+        },
+        {
+          "name": "zoom",
+          "description": ""
+        },
+        {
+          "name": "zoom-controls",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-google-maps-marker",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "address",
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "description": ""
+        },
+        {
+          "name": "icon-height",
+          "description": ""
+        },
+        {
+          "name": "icon-width",
+          "description": ""
+        },
+        {
+          "name": "lat",
+          "description": ""
+        },
+        {
+          "name": "lng",
+          "description": ""
+        },
+        {
+          "name": "marker-title",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-grid",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "align",
+          "description": ""
+        },
+        {
+          "name": "cols",
+          "description": ""
+        },
+        {
+          "name": "compact",
+          "description": ""
+        },
+        {
+          "name": "noresponsive",
+          "description": ""
+        },
+        {
+          "name": "padding",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-group",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "count",
+          "description": ""
+        },
+        {
+          "name": "overflow",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-group-overflow",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "count",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-image",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "alt",
+          "description": ""
+        },
+        {
+          "name": "bg",
+          "description": ""
+        },
+        {
+          "name": "block",
+          "description": ""
+        },
+        {
+          "name": "height",
+          "description": ""
+        },
+        {
+          "name": "large",
+          "description": ""
+        },
+        {
+          "name": "nozoom",
+          "description": ""
+        },
+        {
+          "name": "poster",
+          "description": ""
+        },
+        {
+          "name": "type",
+          "description": "",
+          "values": [
+            {
+              "name": "background"
+            },
+            {
+              "name": "picture"
+            }
+          ]
+        },
+        {
+          "name": "width",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-input",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "accept",
+          "description": ""
+        },
+        {
+          "name": "autocomplete",
+          "description": "",
+          "values": [
+            {
+              "name": "name"
+            },
+            {
+              "name": "honorific-prefix"
+            },
+            {
+              "name": "given-name"
+            },
+            {
+              "name": "additional-name"
+            },
+            {
+              "name": "family-name"
+            },
+            {
+              "name": "honorific-suffix"
+            },
+            {
+              "name": "nickname"
+            },
+            {
+              "name": "username"
+            },
+            {
+              "name": "current-password"
+            },
+            {
+              "name": "new-password"
+            },
+            {
+              "name": "one-time-code"
+            },
+            {
+              "name": "organization-title"
+            },
+            {
+              "name": "organization"
+            },
+            {
+              "name": "street-address"
+            },
+            {
+              "name": "address-line1"
+            },
+            {
+              "name": "address-line2"
+            },
+            {
+              "name": "address-line3"
+            },
+            {
+              "name": "address-level4"
+            },
+            {
+              "name": "address-level3"
+            },
+            {
+              "name": "address-level2"
+            },
+            {
+              "name": "address-level1"
+            },
+            {
+              "name": "country"
+            },
+            {
+              "name": "country-name"
+            },
+            {
+              "name": "postal-code"
+            },
+            {
+              "name": "cc-name"
+            },
+            {
+              "name": "cc-given-name"
+            },
+            {
+              "name": "cc-additional-name"
+            },
+            {
+              "name": "cc-family-name"
+            },
+            {
+              "name": "cc-number"
+            },
+            {
+              "name": "cc-exp"
+            },
+            {
+              "name": "cc-exp-month"
+            },
+            {
+              "name": "cc-exp-year"
+            },
+            {
+              "name": "cc-csc"
+            },
+            {
+              "name": "cc-type"
+            },
+            {
+              "name": "transaction-currency"
+            },
+            {
+              "name": "transaction-amount"
+            },
+            {
+              "name": "language"
+            },
+            {
+              "name": "bday"
+            },
+            {
+              "name": "bday-day"
+            },
+            {
+              "name": "bday-month"
+            },
+            {
+              "name": "bday-year"
+            },
+            {
+              "name": "sex"
+            },
+            {
+              "name": "url"
+            },
+            {
+              "name": "photo"
+            }
+          ]
+        },
+        {
+          "name": "autofocus",
+          "description": ""
+        },
+        {
+          "name": "caps-lock",
+          "description": ""
+        },
+        {
+          "name": "color",
+          "description": ""
+        },
+        {
+          "name": "cols",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": "Sets the button or link as an outlined button."
+        },
+        {
+          "name": "date-type",
+          "description": "",
+          "values": [
+            {
+              "name": "day"
+            },
+            {
+              "name": "month"
+            },
+            {
+              "name": "year"
+            }
+          ]
+        },
+        {
+          "name": "default",
+          "description": "The pre-set value to pass to the input element"
+        },
+        {
+          "name": "description",
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "description": ""
+        },
+        {
+          "name": "droppable",
+          "description": ""
+        },
+        {
+          "name": "focused",
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "description": ""
+        },
+        {
+          "name": "label",
+          "description": ""
+        },
+        {
+          "name": "match",
+          "description": ""
+        },
+        {
+          "name": "max",
+          "description": ""
+        },
+        {
+          "name": "maxlength",
+          "description": ""
+        },
+        {
+          "name": "min",
+          "description": ""
+        },
+        {
+          "name": "multiple",
+          "description": ""
+        },
+        {
+          "name": "multiple-file-caption",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": "The name of the input element"
+        },
+        {
+          "name": "novalidate",
+          "description": ""
+        },
+        {
+          "name": "placeholder",
+          "description": ""
+        },
+        {
+          "name": "readonly",
+          "description": ""
+        },
+        {
+          "name": "replace_placeholder",
+          "description": ""
+        },
+        {
+          "name": "required",
+          "description": ""
+        },
+        {
+          "name": "requirements",
+          "description": "The pre-set value to pass to the input element"
+        },
+        {
+          "name": "rows",
+          "description": ""
+        },
+        {
+          "name": "show-caps-lock",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": ""
+        },
+        {
+          "name": "spellcheck",
+          "description": ""
+        },
+        {
+          "name": "step",
+          "description": ""
+        },
+        {
+          "name": "token-field",
+          "description": ""
+        },
+        {
+          "name": "tooltip",
+          "description": ""
+        },
+        {
+          "name": "type",
+          "description": "The kind of element that the Input should be rendered as"
+        },
+        {
+          "name": "validates",
+          "description": ""
+        },
+        {
+          "name": "value",
+          "description": "The pre-set value to pass to the input element"
+        },
+        {
+          "name": "wrap",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-intersection",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "element",
+          "description": ""
+        },
+        {
+          "name": "margin",
+          "description": ""
+        },
+        {
+          "name": "multiple",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-interstitial",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "fullscreen",
+          "description": ""
+        },
+        {
+          "name": "remember",
+          "description": ""
+        },
+        {
+          "name": "shown",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-interview",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "aspect-ratio",
+          "description": ""
+        },
+        {
+          "name": "color",
+          "description": ""
+        },
+        {
+          "name": "height",
+          "description": ""
+        },
+        {
+          "name": "playing",
+          "description": ""
+        },
+        {
+          "name": "src",
+          "description": ""
+        },
+        {
+          "name": "visualization",
+          "description": "",
+          "values": [
+            {
+              "name": "bars"
+            },
+            {
+              "name": "bars2"
+            },
+            {
+              "name": "circle"
+            },
+            {
+              "name": "wave"
+            }
+          ]
+        },
+        {
+          "name": "width",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-interview-line",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "complement",
+          "description": ""
+        },
+        {
+          "name": "in",
+          "description": ""
+        },
+        {
+          "name": "out",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-item",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "danger",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": "Sets the button or link as an outlined button."
+        },
+        {
+          "name": "fit",
+          "description": ""
+        },
+        {
+          "name": "focused",
+          "description": ""
+        },
+        {
+          "name": "href",
+          "description": ""
+        },
+        {
+          "name": "label",
+          "description": ""
+        },
+        {
+          "name": "multiple",
+          "description": ""
+        },
+        {
+          "name": "route",
+          "description": ""
+        },
+        {
+          "name": "select-title",
+          "description": ""
+        },
+        {
+          "name": "selectable",
+          "description": ""
+        },
+        {
+          "name": "selected",
+          "description": ""
+        },
+        {
+          "name": "simple",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": ""
+        },
+        {
+          "name": "type",
+          "description": "",
+          "values": [
+            {
+              "name": "a"
+            },
+            {
+              "name": "button"
+            },
+            {
+              "name": "stencil-route-link"
+            }
+          ]
+        },
+        {
+          "name": "value",
+          "description": ""
+        },
+        {
+          "name": "value-label",
+          "description": ""
+        },
+        {
+          "name": "wrap",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-keyframes",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "frame",
+          "description": ""
+        },
+        {
+          "name": "height",
+          "description": ""
+        },
+        {
+          "name": "src",
+          "description": ""
+        },
+        {
+          "name": "width",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-label",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "dark",
+          "description": "Sets the button or link as an outlined button."
+        },
+        {
+          "name": "for",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": ""
+        },
+        {
+          "name": "underneath",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-layout",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "align",
+          "description": "",
+          "values": [
+            {
+              "name": "baseline"
+            },
+            {
+              "name": "bottom"
+            },
+            {
+              "name": "center"
+            },
+            {
+              "name": "top"
+            }
+          ]
+        },
+        {
+          "name": "content",
+          "description": "",
+          "values": [
+            {
+              "name": "baseline"
+            },
+            {
+              "name": "bottom"
+            },
+            {
+              "name": "center"
+            },
+            {
+              "name": "top"
+            }
+          ]
+        },
+        {
+          "name": "has-nav",
+          "description": ""
+        },
+        {
+          "name": "height",
+          "description": "",
+          "values": [
+            {
+              "name": "fill"
+            }
+          ]
+        },
+        {
+          "name": "padding",
+          "description": "",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "none"
+            },
+            {
+              "name": "small"
+            },
+            {
+              "name": "tiny"
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "description": "",
+          "values": [
+            {
+              "name": "flush"
+            },
+            {
+              "name": "full"
+            },
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "small"
+            },
+            {
+              "name": "tiny"
+            },
+            {
+              "name": "xlarge"
+            }
+          ]
+        },
+        {
+          "name": "type",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-long-shadow",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "active",
+          "description": ""
+        },
+        {
+          "name": "delay",
+          "description": ""
+        },
+        {
+          "name": "direction",
+          "description": "",
+          "values": [
+            {
+              "name": "bottom-left"
+            },
+            {
+              "name": "bottom-right"
+            },
+            {
+              "name": "top-left"
+            },
+            {
+              "name": "top-right"
+            }
+          ]
+        },
+        {
+          "name": "length",
+          "description": ""
+        },
+        {
+          "name": "timing",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-markdown",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "code-string",
+          "description": "Used to set"
+        },
+        {
+          "name": "editable",
+          "description": ""
+        },
+        {
+          "name": "flavor",
+          "description": "",
+          "values": [
+            {
+              "name": "github"
+            },
+            {
+              "name": "original"
+            },
+            {
+              "name": "vanilla"
+            }
+          ]
+        },
+        {
+          "name": "src",
+          "description": "Used to reference an external markdown file"
+        }
+      ]
+    },
+    {
+      "name": "stellar-message",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "closable",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "remember",
+          "description": ""
+        },
+        {
+          "name": "shown",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": "",
+          "values": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "full"
+            }
+          ]
+        },
+        {
+          "name": "striped",
+          "description": ""
+        },
+        {
+          "name": "type",
+          "description": "",
+          "values": [
+            {
+              "name": "alert"
+            },
+            {
+              "name": "error"
+            },
+            {
+              "name": "info"
+            },
+            {
+              "name": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "stellar-mouse-trail",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "count",
+          "description": ""
+        },
+        {
+          "name": "speed",
+          "description": ""
+        },
+        {
+          "name": "threedee",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-pagination",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "color",
+          "description": ""
+        },
+        {
+          "name": "current",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "padding",
+          "description": ""
+        },
+        {
+          "name": "pages",
+          "description": "Public: Sets the max cap of pages you can skip through"
+        },
+        {
+          "name": "type",
+          "description": "",
+          "values": [
+            {
+              "name": "compact"
+            },
+            {
+              "name": "full"
+            }
+          ]
+        },
+        {
+          "name": "url",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-parallax",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "center",
+          "description": ""
+        },
+        {
+          "name": "horizontal",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-parallax-section",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "speed",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-password-requirements",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "for",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": "",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "small"
+            },
+            {
+              "name": "tiny"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "stellar-pjax",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "pjax",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-playlist",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "artwork",
+          "description": ""
+        },
+        {
+          "name": "autoplay",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "load",
+          "description": ""
+        },
+        {
+          "name": "loading",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "playing",
+          "description": ""
+        },
+        {
+          "name": "playlist",
+          "description": "",
+          "values": [
+            {
+              "name": "hide"
+            },
+            {
+              "name": "show"
+            }
+          ]
+        },
+        {
+          "name": "remember",
+          "description": ""
+        },
+        {
+          "name": "view",
+          "description": "",
+          "values": [
+            {
+              "name": "art"
+            },
+            {
+              "name": "playlist"
+            }
+          ]
+        },
+        {
+          "name": "visualization-color",
+          "description": ""
+        },
+        {
+          "name": "visualization-type",
+          "description": "",
+          "values": [
+            {
+              "name": "bars"
+            },
+            {
+              "name": "bars2"
+            },
+            {
+              "name": "circle"
+            },
+            {
+              "name": "wave"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "stellar-progress",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "blurable",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": "Sets the button or link as an outlined button."
+        },
+        {
+          "name": "editable",
+          "description": "Allows the progress bar to be clicked on, to help the user to navigate through the progressing content."
+        },
+        {
+          "name": "indeterminate",
+          "description": "Sets the maximum cap for steps in the progress bar"
+        },
+        {
+          "name": "max",
+          "description": "Sets the maximum cap for steps in the progress bar"
+        },
+        {
+          "name": "noease",
+          "description": "eliminates the easing in the css so you can apply value updates without jitter."
+        },
+        {
+          "name": "rounded",
+          "description": "eliminates the easing in the css so you can apply value updates without jitter."
+        },
+        {
+          "name": "secondary",
+          "description": "Sets the value of the progress bar"
+        },
+        {
+          "name": "slender",
+          "description": "Renders if this element is slender or not"
+        },
+        {
+          "name": "value",
+          "description": "Sets the value of the progress bar"
+        }
+      ]
+    },
+    {
+      "name": "stellar-reveal",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "animation-distance",
+          "description": "How far the element moves in the animation (% of element width/height)"
+        },
+        {
+          "name": "delay",
+          "description": "How long to delay the animation (ms)"
+        },
+        {
+          "name": "direction",
+          "description": "Direction the element moves when animating in",
+          "values": [
+            {
+              "name": "down"
+            },
+            {
+              "name": "left"
+            },
+            {
+              "name": "right"
+            },
+            {
+              "name": "up"
+            }
+          ]
+        },
+        {
+          "name": "duration",
+          "description": "How long the animation runs (ms)"
+        },
+        {
+          "name": "trigger-distance",
+          "description": "How much of the element must be visible before it animates (% of element height)"
+        }
+      ]
+    },
+    {
+      "name": "stellar-reveal-list",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "active",
+          "description": ""
+        },
+        {
+          "name": "animation",
+          "description": "",
+          "values": [
+            {
+              "name": "fadeIn"
+            },
+            {
+              "name": "fadeInDown"
+            },
+            {
+              "name": "fadeInUp"
+            }
+          ]
+        },
+        {
+          "name": "delay",
+          "description": ""
+        },
+        {
+          "name": "out-animation",
+          "description": "",
+          "values": [
+            {
+              "name": "fadeOut"
+            },
+            {
+              "name": "fadeOutDown"
+            },
+            {
+              "name": "fadeOutUp"
+            }
+          ]
+        },
+        {
+          "name": "timing",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-scatter",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "colors",
+          "description": ""
+        },
+        {
+          "name": "float",
+          "description": ""
+        },
+        {
+          "name": "max",
+          "description": ""
+        },
+        {
+          "name": "min",
+          "description": ""
+        },
+        {
+          "name": "sizes",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-scroll-z-root",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "camera-speed",
+          "description": ""
+        },
+        {
+          "name": "camera-z",
+          "description": ""
+        },
+        {
+          "name": "initial-origin-x",
+          "description": ""
+        },
+        {
+          "name": "initial-origin-y",
+          "description": ""
+        },
+        {
+          "name": "item-z",
+          "description": ""
+        },
+        {
+          "name": "scene-perspective",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-scroll-z-section",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
+    },
+    {
+      "name": "stellar-select",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "auto-select-first",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": "Sets the button or link as an outlined button."
+        },
+        {
+          "name": "default",
+          "description": ""
+        },
+        {
+          "name": "description",
+          "description": ""
+        },
+        {
+          "name": "fit",
+          "description": ""
+        },
+        {
+          "name": "focused",
+          "description": ""
+        },
+        {
+          "name": "footer",
+          "description": ""
+        },
+        {
+          "name": "inline",
+          "description": ""
+        },
+        {
+          "name": "label",
+          "description": ""
+        },
+        {
+          "name": "loading",
+          "description": ""
+        },
+        {
+          "name": "multiple",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "novalidate",
+          "description": ""
+        },
+        {
+          "name": "open",
+          "description": ""
+        },
+        {
+          "name": "other",
+          "description": ""
+        },
+        {
+          "name": "overlay",
+          "description": ""
+        },
+        {
+          "name": "placeholder",
+          "description": ""
+        },
+        {
+          "name": "placeholder-inverted",
+          "description": ""
+        },
+        {
+          "name": "processing",
+          "description": ""
+        },
+        {
+          "name": "required",
+          "description": ""
+        },
+        {
+          "name": "resize",
+          "description": "",
+          "values": [
+            {
+              "name": "full"
+            }
+          ]
+        },
+        {
+          "name": "size",
+          "description": "",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "small"
+            },
+            {
+              "name": "tiny"
+            }
+          ]
+        },
+        {
+          "name": "tooltip",
+          "description": ""
+        },
+        {
+          "name": "value",
+          "description": ""
+        },
+        {
+          "name": "value-label",
+          "description": ""
+        },
+        {
+          "name": "verbiage",
+          "description": ""
+        },
+        {
+          "name": "verbiage-an",
+          "description": ""
+        },
+        {
+          "name": "wrap",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-slide",
+      "description": {
+        "kind": "markdown",
+        "value": "The Slide component is a child component of [Slides](../Slides). The template\nshould be written as `ion-slide`. Any slide content should be written\nin this component and it should be used in conjunction with [Slides](../Slides).\n\nSee the [Slides API Docs](../Slides) for more usage information."
+      },
+      "attributes": [
+        {
+          "name": "slide-id",
+          "description": ""
+        },
+        {
+          "name": "width",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-slides",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "padding",
+          "description": "Show or hide the pager"
+        },
+        {
+          "name": "pager",
+          "description": "Show or hide the pager"
+        }
+      ]
+    },
+    {
+      "name": "stellar-song",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "artwork",
+          "description": ""
+        },
+        {
+          "name": "playing",
+          "description": ""
+        },
+        {
+          "name": "src",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-starscape",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
+    },
+    {
+      "name": "stellar-step",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "disabled",
+          "description": ""
+        },
+        {
+          "name": "href",
+          "description": ""
+        },
+        {
+          "name": "open",
+          "description": ""
+        },
+        {
+          "name": "order",
+          "description": ""
+        },
+        {
+          "name": "tab-count",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-steps",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "name",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-story",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "target",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-stripe",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "token",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-switch",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "checked",
+          "description": ""
+        },
+        {
+          "name": "checked-default",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": "Sets the button or link as an outlined button."
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "novalidate",
+          "description": ""
+        },
+        {
+          "name": "required",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-tab",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "description": ""
+        },
+        {
+          "name": "href",
+          "description": "Sets the href on the anchor tag if the button is a link."
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "notifications",
+          "description": ""
+        },
+        {
+          "name": "open",
+          "description": ""
+        },
+        {
+          "name": "order",
+          "description": ""
+        },
+        {
+          "name": "tab-count",
+          "description": ""
+        },
+        {
+          "name": "tag",
+          "description": "",
+          "values": [
+            {
+              "name": "button"
+            },
+            {
+              "name": "link"
+            },
+            {
+              "name": "pjax"
+            },
+            {
+              "name": "route-link"
+            }
+          ]
+        },
+        {
+          "name": "target",
+          "description": "Sets the target on the anchor tag if the button is a link."
+        },
+        {
+          "name": "vertical",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-table",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "chart",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "striped",
+          "description": ""
+        },
+        {
+          "name": "upgrade",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-tabs",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "behavior",
+          "description": ""
+        },
+        {
+          "name": "block",
+          "description": ""
+        },
+        {
+          "name": "block-indicator",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "flip-indicator",
+          "description": ""
+        },
+        {
+          "name": "height",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "noanimation",
+          "description": ""
+        },
+        {
+          "name": "pay-attention",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": "",
+          "values": [
+            {
+              "name": "large"
+            },
+            {
+              "name": "medium"
+            },
+            {
+              "name": "small"
+            },
+            {
+              "name": "tiny"
+            }
+          ]
+        },
+        {
+          "name": "vertical",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-tag",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "color",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "outline",
+          "description": ""
+        },
+        {
+          "name": "pill",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": ""
+        },
+        {
+          "name": "text-color",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-tester",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": []
+    },
+    {
+      "name": "stellar-theme",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "base",
+          "description": ""
+        },
+        {
+          "name": "body",
+          "description": ""
+        },
+        {
+          "name": "complement",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "light",
+          "description": ""
+        },
+        {
+          "name": "system",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-time",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "format",
+          "description": ""
+        },
+        {
+          "name": "relative",
+          "description": ""
+        },
+        {
+          "name": "value",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-toggle",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "card",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": "Sets the button or link as an outlined button."
+        },
+        {
+          "name": "description",
+          "description": ""
+        },
+        {
+          "name": "flip",
+          "description": ""
+        },
+        {
+          "name": "label",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "novalidate",
+          "description": ""
+        },
+        {
+          "name": "required",
+          "description": ""
+        },
+        {
+          "name": "single",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": ""
+        },
+        {
+          "name": "stacked",
+          "description": ""
+        },
+        {
+          "name": "type",
+          "description": ""
+        },
+        {
+          "name": "value",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-toggle-option",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "checked",
+          "description": ""
+        },
+        {
+          "name": "checked-default",
+          "description": ""
+        },
+        {
+          "name": "dark",
+          "description": "Sets the button or link as an outlined button."
+        },
+        {
+          "name": "default",
+          "description": ""
+        },
+        {
+          "name": "disabled",
+          "description": ""
+        },
+        {
+          "name": "for",
+          "description": ""
+        },
+        {
+          "name": "icon",
+          "description": ""
+        },
+        {
+          "name": "inline",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "required",
+          "description": ""
+        },
+        {
+          "name": "selected-copy",
+          "description": ""
+        },
+        {
+          "name": "single",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": ""
+        },
+        {
+          "name": "tooltip",
+          "description": ""
+        },
+        {
+          "name": "type",
+          "description": ""
+        },
+        {
+          "name": "value",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-tooltip",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "align",
+          "description": "",
+          "values": [
+            {
+              "name": "bottom-center"
+            },
+            {
+              "name": "bottom-left"
+            },
+            {
+              "name": "bottom-right"
+            },
+            {
+              "name": "center"
+            },
+            {
+              "name": "left"
+            },
+            {
+              "name": "middle-center"
+            },
+            {
+              "name": "middle-left"
+            },
+            {
+              "name": "middle-right"
+            },
+            {
+              "name": "right"
+            }
+          ]
+        },
+        {
+          "name": "dark",
+          "description": ""
+        },
+        {
+          "name": "focused",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-unit",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "decimals",
+          "description": ""
+        },
+        {
+          "name": "from",
+          "description": ""
+        },
+        {
+          "name": "money",
+          "description": ""
+        },
+        {
+          "name": "round",
+          "description": ""
+        },
+        {
+          "name": "to",
+          "description": ""
+        },
+        {
+          "name": "value",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-video",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "autoplay",
+          "description": ""
+        },
+        {
+          "name": "controls",
+          "description": ""
+        },
+        {
+          "name": "height",
+          "description": ""
+        },
+        {
+          "name": "muted",
+          "description": ""
+        },
+        {
+          "name": "overlay",
+          "description": ""
+        },
+        {
+          "name": "playing",
+          "description": ""
+        },
+        {
+          "name": "playsinline",
+          "description": ""
+        },
+        {
+          "name": "poster",
+          "description": ""
+        },
+        {
+          "name": "preload",
+          "description": ""
+        },
+        {
+          "name": "track-in-view",
+          "description": ""
+        },
+        {
+          "name": "width",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "stellar-video-interview",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "aspect-ratio",
+          "description": ""
+        },
+        {
+          "name": "color",
+          "description": ""
+        },
+        {
+          "name": "height",
+          "description": ""
+        },
+        {
+          "name": "playing",
+          "description": ""
+        },
+        {
+          "name": "src",
+          "description": ""
+        },
+        {
+          "name": "visualization",
+          "description": "",
+          "values": [
+            {
+              "name": "bars"
+            },
+            {
+              "name": "bars2"
+            },
+            {
+              "name": "circle"
+            },
+            {
+              "name": "wave"
+            }
+          ]
+        },
+        {
+          "name": "width",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "web-audio",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "name",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "web-audio-debugger",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "count",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "web-audio-effect",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "axis",
+          "description": ""
+        },
+        {
+          "name": "method",
+          "description": ""
+        },
+        {
+          "name": "midicontroller",
+          "description": ""
+        },
+        {
+          "name": "responds",
+          "description": ""
+        },
+        {
+          "name": "type",
+          "description": ""
+        },
+        {
+          "name": "use",
+          "description": ""
+        },
+        {
+          "name": "value",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "web-audio-sequencer",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "autoplay",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "taps",
+          "description": ""
+        },
+        {
+          "name": "tempo",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "web-audio-source",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "effectsvolume",
+          "description": ""
+        },
+        {
+          "name": "inert",
+          "description": ""
+        },
+        {
+          "name": "midichannel",
+          "description": ""
+        },
+        {
+          "name": "midikey",
+          "description": ""
+        },
+        {
+          "name": "name",
+          "description": ""
+        },
+        {
+          "name": "playing",
+          "description": ""
+        },
+        {
+          "name": "prepared",
+          "description": ""
+        },
+        {
+          "name": "src",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "web-audio-visualizer",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "_color",
+          "description": ""
+        },
+        {
+          "name": "color",
+          "description": ""
+        },
+        {
+          "name": "for",
+          "description": ""
+        },
+        {
+          "name": "height",
+          "description": ""
+        },
+        {
+          "name": "size",
+          "description": ""
+        },
+        {
+          "name": "smoothing",
+          "description": ""
+        },
+        {
+          "name": "type",
+          "description": ""
+        },
+        {
+          "name": "width",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "web-audio-visualizer-shader",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "type",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}
