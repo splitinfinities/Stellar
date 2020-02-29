@@ -1,7 +1,14 @@
 import { Config } from '@stencil/core';
 import { postcss } from "@stencil/postcss";
+import autoprefixer from "autoprefixer";
 import designTokenFunction from "postcss-design-token-function";
+import { generateJsonDocs } from "./src/customElementDocGenerator";
 import { colors } from "./src/utils/colors";
+
+const purgecss = require("@fullhuman/postcss-purgecss")({
+  content: ["./src/**/*.tsx", "./src/index.html"],
+  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+});
 
 export const config: Config = {
   namespace: 'stellar-core',
@@ -39,20 +46,20 @@ export const config: Config = {
   outputTargets: [
     { type: 'dist' },
     { type: "stats", file: "./dist/data/stats.json" },
-    { type: "docs-json", file: "./dist/data/documentation.json" },
     { type: "docs-readme" },
+    { type: "docs-vscode", file: "docs-vscode.json" },
+    { type: "docs-json", file: "docs-json.json" },
+    {
+      type: "custom",
+      generator: generateJsonDocs,
+      name: "custom-element-docs"
+    },
     {
       type: 'www',
       serviceWorker: null,
       copy: [
-        {
-          src: "global/**/*",
-          warn: true
-        },
-        {
-          src: "*.html",
-          warn: true
-        },
+        { src: "global/**/*" },
+        { src: "*.html" },
       ],
     }
   ],
@@ -64,7 +71,12 @@ export const config: Config = {
           name: "color",
           data: colors,
           base: 0,
-        })
+        }),
+        require("tailwindcss")("./tailwind.config.js"),
+        autoprefixer(),
+        ...(process.env.NODE_ENV === "production"
+          ? [purgecss, require("cssnano")]
+          : []),
       ]
     })
   ]

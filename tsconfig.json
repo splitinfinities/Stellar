@@ -8,6 +8,8 @@
       "dom",
       "es2017"
     ],
+    "sourceMap": true,
+    "allowJs": false,
     "moduleResolution": "node",
     "module": "esnext",
     "target": "es2017",
@@ -17,8 +19,7 @@
     "jsxFactory": "h"
   },
   "include": [
-    "src",
-    "types/jsx.d.ts"
+    "src"
   ],
   "exclude": [
     "node_modules"

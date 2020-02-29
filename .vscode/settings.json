@@ -1,0 +1,28 @@
+{
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "*.css": "postcss"
+  },
+  "cSpell.words": [
+    "async",
+    "be",
+    "colors",
+    "firefox",
+    "haspopup",
+    "html",
+    "index",
+    "keyframes",
+    "markup",
+    "mixins",
+    "prerender",
+    "reehal",
+    "scss",
+    "spec",
+    "src",
+    "styleguide",
+    "stylelint",
+    "teamcity",
+    "to",
+    "truthy"
+  ]
+}

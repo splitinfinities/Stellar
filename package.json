@@ -14,12 +14,22 @@
     "dist/"
   ],
   "scripts": {
-    "build": "stencil build --next --docs",
-    "build.prod": "stencil build --prod --docs",
-    "start": "stencil build --next --dev --watch --serve",
-    "test": "stencil test --next --spec",
-    "test.complete": "stencil test --next --spec --e2e --screenshot",
-    "test.watch": "stencil test --next --spec --e2e --screenshot --watchAll"
+    "build-storybook": "build-storybook -s www",
+    "build": "NODE_ENV=production stencil build --stats",
+    "dev": "stencil build --watch --serve --next",
+    "lint": "run-p \"lint.ts\" \"lint.styles\"",
+    "lint.styles": "stylelint \"src/**/*.css\"",
+    "lint.ts": "eslint src/**/*.tsx",
+    "serve": "serve www -p 5000",
+    "start": "run-p dev storybook",
+    "storybook": "start-storybook -p 6006 -s www",
+    "stylelint:fix": "stylelint --fix \"src/**/*.css\"",
+    "test": "stencil test --spec --e2e --headless",
+    "test.ci": "stencil test --spec --e2e --ci",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "test.unit": "stencil test --spec",
+    "test.e2e": "stencil test --e2e --headless",
+    "test.screenshot": "stencil test --e2e --screenshot"
   },
   "dependencies": {
     "@shopify/draggable": "^1.0.0-beta.8",
