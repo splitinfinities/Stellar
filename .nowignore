@@ -1,0 +1,7 @@
+storybook-static
+www
+screenshot
+dist
+__mocks__
+.vscode
+.stencil

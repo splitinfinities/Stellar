@@ -1,5 +1,5 @@
 module.exports = {
-  stories: [`${__dirname}/../src/components/*.stories.*`],
+  stories: [`${__dirname}/../src/components/**/*.stories.*`],
   presets: ['@storybook/addon-docs/preset'],
   addons: [
     '@storybook/addon-a11y/register',
@@ -8,3 +8,5 @@ module.exports = {
     '@storybook/addon-actions/register',
   ],
 };
+
+
