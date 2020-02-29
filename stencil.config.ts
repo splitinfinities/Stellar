@@ -11,7 +11,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 });
 
 export const config: Config = {
-  namespace: 'stellar-core',
+  namespace: 'stellar',
   preamble: '(C) Split Infinities https://splitinfinities.com - MIT License',
   globalStyle: "./src/global/css/stellar.css",
   testing: {
@@ -57,6 +57,7 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null,
+      dir: "storybook-static",
       copy: [
         { src: "global/**/*" },
         { src: "*.html" },

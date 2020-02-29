@@ -1,0 +1,9 @@
+{
+	"version": 2,
+	"env": {
+		"IS_NOW": "true"
+	},
+	"alias": [
+		"midwest.design"
+	]
+}

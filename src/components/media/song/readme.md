@@ -24,13 +24,13 @@
 
 ## Methods
 
-### `details() => Promise<{ 'title': string; 'album': string; 'genre': string; 'artist': string; 'picture': string; }>`
+### `details() => Promise<{ title: string; album: string; genre: string; artist: string; picture: string; }>`
 
 
 
 #### Returns
 
-Type: `Promise<{ 'title': string; 'album': string; 'genre': string; 'artist': string; 'picture': string; }>`
+Type: `Promise<{ title: string; album: string; genre: string; artist: string; picture: string; }>`
 
 
 

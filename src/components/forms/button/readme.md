@@ -67,7 +67,6 @@
 
  - [stellar-accordion](../../ui/accordion)
  - [stellar-card](../../ui/card)
- - [stellar-docs-header](../../docs/header)
  - [stellar-playlist](../../media/playlist)
  - [stellar-select](../select)
  - [stellar-tester](../../tester)
@@ -86,7 +85,6 @@ graph TD;
   stellar-button --> context-consumer
   stellar-accordion --> stellar-button
   stellar-card --> stellar-button
-  stellar-docs-header --> stellar-button
   stellar-playlist --> stellar-button
   stellar-select --> stellar-button
   stellar-tester --> stellar-button

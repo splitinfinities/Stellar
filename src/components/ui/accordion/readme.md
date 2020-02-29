@@ -43,11 +43,6 @@ Type: `Promise<void>`
 
 ## Dependencies
 
-### Used by
-
- - [stellar-docs-component](../../docs/component)
- - [stellar-docs-navigation](../../docs/navigation)
-
 ### Depends on
 
 - [stellar-button](../../forms/button)
@@ -65,8 +60,6 @@ graph TD;
   stellar-button --> ion-icon
   stellar-button --> stencil-route-link
   stellar-button --> context-consumer
-  stellar-docs-component --> stellar-accordion
-  stellar-docs-navigation --> stellar-accordion
   style stellar-accordion fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -205,32 +205,28 @@ Type: `Promise<void>`
 
 
 
-### `contents() => Promise<any[]>`
+### `contents() => Promise<HTMLStellarContentElement[]>`
 
 
 
 #### Returns
 
-Type: `Promise<any[]>`
+Type: `Promise<HTMLStellarContentElement[]>`
 
 
 
-### `tabs() => Promise<any[]>`
+### `tabs() => Promise<HTMLStellarTabElement[]>`
 
 
 
 #### Returns
 
-Type: `Promise<any[]>`
+Type: `Promise<HTMLStellarTabElement[]>`
 
 
 
 
 ## Dependencies
-
-### Used by
-
- - [stellar-docs-component](../../docs/component)
 
 ### Depends on
 
@@ -242,7 +238,6 @@ Type: `Promise<any[]>`
 graph TD;
   stellar-tabs --> stellar-blur
   stellar-tabs --> context-consumer
-  stellar-docs-component --> stellar-tabs
   style stellar-tabs fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

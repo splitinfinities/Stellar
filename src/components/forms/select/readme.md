@@ -221,13 +221,13 @@
 
 ## Methods
 
-### `option_elements() => Promise<NodeListOf<any>>`
+### `option_elements() => Promise<NodeListOf<HTMLStellarItemElement>>`
 
 
 
 #### Returns
 
-Type: `Promise<NodeListOf<any>>`
+Type: `Promise<NodeListOf<HTMLStellarItemElement>>`
 
 
 
@@ -266,7 +266,6 @@ Type: `Promise<FormResult>`
 
 ### Used by
 
- - [stellar-docs-header](../../docs/header)
  - [stellar-tester](../../tester)
 
 ### Depends on
@@ -296,7 +295,6 @@ graph TD;
   stellar-item --> ion-icon
   stellar-item --> context-consumer
   stellar-tooltip --> context-consumer
-  stellar-docs-header --> stellar-select
   stellar-tester --> stellar-select
   style stellar-select fill:#f9f,stroke:#333,stroke-width:4px
 ```

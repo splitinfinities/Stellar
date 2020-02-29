@@ -38,11 +38,6 @@
 
 ## Dependencies
 
-### Used by
-
- - [stellar-docs-component](../../docs/component)
- - [stellar-docs-page](../../docs/page)
-
 ### Depends on
 
 - [stellar-card](../../ui/card)
@@ -69,8 +64,6 @@ graph TD;
   stellar-input --> context-consumer
   stellar-label --> context-consumer
   stellar-tooltip --> context-consumer
-  stellar-docs-component --> stellar-markdown
-  stellar-docs-page --> stellar-markdown
   style stellar-markdown fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

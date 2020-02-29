@@ -67,7 +67,7 @@ export async function writeDocsOutput(
   root: string
 ) {
   return compilerCtx.fs.writeFile(
-    `${root}/dist/docs/custom-elements.json`,
+    `${root}/custom-elements.json`,
     jsonContent
   );
 }

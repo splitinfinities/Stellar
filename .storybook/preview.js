@@ -8,7 +8,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withA11y } from '@storybook/addon-a11y';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
-import customElements from "../dist/docs/custom-elements.json";
+import customElements from "../custom-elements.json";
 
 setCustomElements(customElements);
 

@@ -44,10 +44,6 @@ Type: `Promise<void>`
 
 ## Dependencies
 
-### Used by
-
- - [stellar-docs-component](../../docs/component)
-
 ### Depends on
 
 - [stellar-tag](../tag)
@@ -65,7 +61,6 @@ graph TD;
   stellar-tag --> stellar-label
   stellar-tag --> context-consumer
   stellar-label --> context-consumer
-  stellar-docs-component --> stellar-tab
   style stellar-tab fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

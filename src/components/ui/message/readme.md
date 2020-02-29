@@ -87,10 +87,6 @@
 
 ## Dependencies
 
-### Used by
-
- - [stellar-docs-header](../../docs/header)
-
 ### Depends on
 
 - ion-icon
@@ -101,7 +97,6 @@
 graph TD;
   stellar-message --> ion-icon
   stellar-message --> context-consumer
-  stellar-docs-header --> stellar-message
   style stellar-message fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

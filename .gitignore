@@ -25,3 +25,5 @@ dist
 www
 package-lock.json
 storybook-static
+
+.now
