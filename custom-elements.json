@@ -1,5 +1,5 @@
 {
-  "timestamp": "2020-02-29T20:19:51",
+  "timestamp": "2020-03-01T23:51:30",
   "compiler": {
     "name": "@stencil/core",
     "version": "1.9.0-19",
@@ -883,9 +883,7 @@
       "readme": "# stellar-accordian\n\n\n",
       "description": "",
       "docsTags": [],
-      "usage": {
-        "default": "<stellar-accordion>\n\t<p slot=\"label\">Title <stellar-tag size='tiny'>New</stellar-tag></p>\n\t<h1>Content!</h1>\n\t<h2>Hello!</h2>\n</stellar-accordion>\n"
-      },
+      "usage": {},
       "properties": [
         {
           "name": "dark",

@@ -50,23 +50,23 @@
 
 ## Methods
 
-### `contents() => Promise<HTMLStellarContentElement[]>`
+### `contents() => Promise<any[]>`
 
 
 
 #### Returns
 
-Type: `Promise<HTMLStellarContentElement[]>`
+Type: `Promise<any[]>`
 
 
 
-### `steps() => Promise<HTMLStellarStepElement[]>`
+### `steps() => Promise<any[]>`
 
 
 
 #### Returns
 
-Type: `Promise<HTMLStellarStepElement[]>`
+Type: `Promise<any[]>`
 
 
 
