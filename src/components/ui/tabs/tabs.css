@@ -5,6 +5,7 @@
   --overflow: auto hidden;
   --justify-content: space-evenly;
   --max-width: var(--large);
+
   font-size: var(--font-size);
   display: block;
   position: relative;
@@ -56,7 +57,7 @@
 :host .indicator {
   display: block;
   position: absolute;
-  bottom: -.1em;
+  bottom: -0.1em;
   left: var(--tab-left, 0);
   background: var(--indicator-color);
   width: var(--tab-width, 0);
@@ -64,12 +65,12 @@
 }
 
 :host([flip-indicator]) .indicator {
-  top: -.1em;
+  top: -0.1em;
   bottom: initial;
 }
 
 :host .indicator.ready {
-  transition: all .35s var(--ease);
+  transition: all 0.35s var(--ease);
 }
 
 :host .tab-wrap {
@@ -133,7 +134,7 @@
   background: var(--theme-base1);
   top: 3px;
   bottom: 3px;
-  transition: all .35s var(--ease);
+  transition: all 0.35s var(--ease);
 }
 
 :host([vertical]) {

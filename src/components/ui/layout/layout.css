@@ -1,4 +1,7 @@
-:host, :host *, :host *:before, :host *:after {
+:host,
+:host *,
+:host *::before,
+:host *::after {
   box-sizing: border-box;
 }
 
@@ -7,6 +10,7 @@
   position: relative;
   font-family: inherit;
   contain: content;
+
   --grid-gap: 3rem;
   --padding: 4rem;
   --layout: 1fr;
@@ -160,6 +164,5 @@ stellar-header + :host .layout {
 main > :host:first-of-type > .layout {
   padding-top: 0;
 }
-
 
  */

@@ -1,26 +1,29 @@
-:host, :host *, :host *:before, :host *:after {
-    box-sizing: border-box;
+:host,
+:host *,
+:host *::before,
+:host *::after {
+  box-sizing: border-box;
 }
 
 :host {
-	display: block;
-	padding: 2rem;
-	background-color: var(--theme-base4);
+  display: block;
+  padding: 2rem;
+  background-color: var(--theme-base4);
 }
 
 :host .callout-wrap {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 :host(.db) .callout-wrap {
-	display: block;
+  display: block;
 }
 
 :host ::slotted(*) {
-	color: var(--gray9);
+  color: var(--gray9);
 }
 
 :host([dark]) {
-	background-color: var(--theme-base6);
+  background-color: var(--theme-base6);
 }

@@ -56,22 +56,19 @@
 @import "./tachyons/_word-break.css";
 @import "./tachyons/_z-index.css";
 
-
 :root {
   --spacing-none: 0;
-  --spacing-extra-small: .2rem;
-  --spacing-small: .4rem;
+  --spacing-extra-small: 0.2rem;
+  --spacing-small: 0.4rem;
   --spacing-medium: 1rem;
   --spacing-large: 2rem;
   --spacing-extra-large: 4rem;
   --spacing-extra-extra-large: 8rem;
   --spacing-extra-extra-extra-large: 16rem;
-
   --base: color(base);
   --black: color(black);
   --black-alt: color(black-alt);
   --white: color(white);
-
   --gray0: color(gray, 0);
   --gray1: color(gray, 1);
   --gray2: color(gray, 2);
@@ -82,7 +79,6 @@
   --gray7: color(gray, 7);
   --gray8: color(gray, 8);
   --gray9: color(gray, 9);
-
   --red0: color(red, 0);
   --red1: color(red, 1);
   --red2: color(red, 2);
@@ -93,7 +89,6 @@
   --red7: color(red, 7);
   --red8: color(red, 8);
   --red9: color(red, 9);
-
   --orange0: color(orange, 0);
   --orange1: color(orange, 1);
   --orange2: color(orange, 2);
@@ -104,7 +99,6 @@
   --orange7: color(orange, 7);
   --orange8: color(orange, 8);
   --orange9: color(orange, 9);
-
   --yellow0: color(yellow, 0);
   --yellow1: color(yellow, 1);
   --yellow2: color(yellow, 2);
@@ -115,7 +109,6 @@
   --yellow7: color(yellow, 7);
   --yellow8: color(yellow, 8);
   --yellow9: color(yellow, 9);
-
   --lime0: color(lime, 0);
   --lime1: color(lime, 1);
   --lime2: color(lime, 2);
@@ -126,7 +119,6 @@
   --lime7: color(lime, 7);
   --lime8: color(lime, 8);
   --lime9: color(lime, 9);
-
   --green0: color(green, 0);
   --green1: color(green, 1);
   --green2: color(green, 2);
@@ -137,7 +129,6 @@
   --green7: color(green, 7);
   --green8: color(green, 8);
   --green9: color(green, 9);
-
   --teal0: color(teal, 0);
   --teal1: color(teal, 1);
   --teal2: color(teal, 2);
@@ -148,7 +139,6 @@
   --teal7: color(teal, 7);
   --teal8: color(teal, 8);
   --teal9: color(teal, 9);
-
   --cyan0: color(cyan, 0);
   --cyan1: color(cyan, 1);
   --cyan2: color(cyan, 2);
@@ -159,7 +149,6 @@
   --cyan7: color(cyan, 7);
   --cyan8: color(cyan, 8);
   --cyan9: color(cyan, 9);
-
   --blue0: color(blue, 0);
   --blue1: color(blue, 1);
   --blue2: color(blue, 2);
@@ -170,7 +159,6 @@
   --blue7: color(blue, 7);
   --blue8: color(blue, 8);
   --blue9: color(blue, 9);
-
   --indigo0: color(indigo, 0);
   --indigo1: color(indigo, 1);
   --indigo2: color(indigo, 2);
@@ -181,7 +169,6 @@
   --indigo7: color(indigo, 7);
   --indigo8: color(indigo, 8);
   --indigo9: color(indigo, 9);
-
   --violet0: color(violet, 0);
   --violet1: color(violet, 1);
   --violet2: color(violet, 2);
@@ -192,7 +179,6 @@
   --violet7: color(violet, 7);
   --violet8: color(violet, 8);
   --violet9: color(violet, 9);
-
   --fuschia0: color(fuschia, 0);
   --fuschia1: color(fuschia, 1);
   --fuschia2: color(fuschia, 2);
@@ -203,7 +189,6 @@
   --fuschia7: color(fuschia, 7);
   --fuschia8: color(fuschia, 8);
   --fuschia9: color(fuschia, 9);
-
   --pink0: color(pink, 0);
   --pink1: color(pink, 1);
   --pink2: color(pink, 2);
@@ -214,15 +199,11 @@
   --pink7: color(pink, 7);
   --pink8: color(pink, 8);
   --pink9: color(pink, 9);
-
   --ease: cubic-bezier(0.2, 0.3, 0.25, 0.9);
-
-  --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-
+  --font-system: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
   --font-heading: var(--font-system);
   --font-subheading: var(--font-system);
   --font-body: var(--font-system);
-
   --theme-base0: var(--gray0);
   --theme-base1: var(--gray1);
   --theme-base2: var(--gray2);
@@ -233,7 +214,6 @@
   --theme-base7: var(--gray7);
   --theme-base8: var(--gray8);
   --theme-base9: var(--gray9);
-
   --theme-complement0: var(--red0);
   --theme-complement1: var(--red1);
   --theme-complement2: var(--red2);
@@ -244,15 +224,12 @@
   --theme-complement7: var(--red7);
   --theme-complement8: var(--red8);
   --theme-complement9: var(--red9);
-
   --theme-copy-base: var(--gray9);
   --theme-copy-supporting: var(--red9);
   --theme-copy-complement: var(--indigo9);
-
   --theme-bg-base: var(--theme-base9);
   --theme-bg-supporting: var(--theme-base2);
   --theme-bg-complement: var(--indigo5);
-
   --theme-placeholder-color: var(--gray4);
 }
 

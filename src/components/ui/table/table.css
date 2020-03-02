@@ -98,7 +98,6 @@ stellar-table[striped] table tbody tr {
   border-bottom: 1px solid var(--gray2);
 }
 
-
 stellar-table[striped] complete-table .table .tbody tr:nth-child(odd),
 stellar-table[striped] complete-table .table tbody tr:nth-child(odd),
 stellar-table[striped] table .tbody tr:nth-child(odd),

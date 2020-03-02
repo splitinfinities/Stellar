@@ -50,20 +50,25 @@
   .measure-ns {
     max-width: 30em;
   }
+
   .measure-wide-ns {
     max-width: 34em;
   }
+
   .measure-narrow-ns {
     max-width: 20em;
   }
+
   .indent-ns {
     margin-top: 0;
     margin-bottom: 0;
     text-indent: 1em;
   }
+
   .small-caps-ns {
     font-variant: small-caps;
   }
+
   .truncate-ns {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -75,20 +80,25 @@
   .measure-m {
     max-width: 30em;
   }
+
   .measure-wide-m {
     max-width: 34em;
   }
+
   .measure-narrow-m {
     max-width: 20em;
   }
+
   .indent-m {
     margin-top: 0;
     margin-bottom: 0;
     text-indent: 1em;
   }
+
   .small-caps-m {
     font-variant: small-caps;
   }
+
   .truncate-m {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -100,20 +110,25 @@
   .measure-l {
     max-width: 30em;
   }
+
   .measure-wide-l {
     max-width: 34em;
   }
+
   .measure-narrow-l {
     max-width: 20em;
   }
+
   .indent-l {
     margin-top: 0;
     margin-bottom: 0;
     text-indent: 1em;
   }
+
   .small-caps-l {
     font-variant: small-caps;
   }
+
   .truncate-l {
     overflow: hidden;
     text-overflow: ellipsis;

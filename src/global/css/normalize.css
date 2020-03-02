@@ -30,7 +30,6 @@ body ::-webkit-scrollbar-thumb:hover {
   background: var(--theme-base5, var(--gray5));
 }
 
-
 .dark-mode ::-webkit-scrollbar-track {
   background: var(--theme-base9, var(--gray9));
 }
@@ -126,7 +125,13 @@ h1 {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
@@ -179,7 +184,7 @@ pre {
  */
 
 small {
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 /**

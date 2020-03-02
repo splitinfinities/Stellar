@@ -1,4 +1,7 @@
-:host, :host *, :host *:before, :host *:after {
+:host,
+:host *,
+:host *::before,
+:host *::after {
   box-sizing: border-box;
 }
 
@@ -9,7 +12,7 @@
   --border-radius: 0.3rem;
   --clip-from: polygon(0 0, 100% 0, 100% 0, 0 0);
   --clip-to: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  --filter: drop-shadow(0px 2px 2px var(--theme-base1));
+  --filter: drop-shadow(0 2px 2px var(--theme-base1));
   --icon-rotation: 180deg;
 
   cursor: pointer;
@@ -23,13 +26,13 @@
 }
 
 :host([dark]) {
-  --filter: drop-shadow(0px 2px 2px var(--theme-base9));
+  --filter: drop-shadow(0 2px 2px var(--theme-base9));
 }
 
 :host .clipper {
   filter: var(--filter);
   position: absolute;
-  top: calc(100% + .5rem);
+  top: calc(100% + 0.5rem);
   right: 50%;
   left: calc(50% - (var(--dropdown-width) /2));
   width: var(--dropdown-width);
@@ -139,7 +142,7 @@
   margin-left: 0;
   margin-bottom: 0;
   transition: all 110ms var(--ease) 250ms;
-  box-shadow: 0 0 2px 0 rgba(128, 128, 128, .35);
+  box-shadow: 0 0 2px 0 rgba(128, 128, 128, 0.35);
   background: white;
   list-style-type: none;
   padding: 0;
@@ -162,23 +165,23 @@
   content: "";
   display: block;
   position: absolute;
-  top: calc(50% - .5px);
+  top: calc(50% - 0.5px);
   background: var(--gray5);
   width: 100%;
-  height: .1rem;
+  height: 0.1rem;
 }
 
 :host .icon {
   flex: 0 0 2.25em;
   order: -1;
-  transition: all .05s var(--ease) 0s;
+  transition: all 0.05s var(--ease) 0s;
   margin-right: 1em;
 }
 
 :host .thumb {
   flex: 0 0 2.25em;
   order: -1;
-  transition: all .05s var(--ease) 0s;
+  transition: all 0.05s var(--ease) 0s;
   margin-right: 1rem;
   width: 2.25em;
   height: 2.25em;
@@ -186,11 +189,11 @@
 
 :host .notification {
   display: inline-block;
-  margin: 0 0 0 .8rem;
+  margin: 0 0 0 0.8rem;
   border-radius: 50%;
   background: var(--yellow5);
-  width: .8rem;
-  height: .8rem;
+  width: 0.8rem;
+  height: 0.8rem;
 }
 
 :host ::slotted(stellar-item) {

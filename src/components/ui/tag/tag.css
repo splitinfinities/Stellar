@@ -1,6 +1,7 @@
 :host {
   contain: content;
   display: inline-block;
+
   --color: var(--color, var(--white));
   --background-color: var(--background-color, var(--blue5));
 }
@@ -41,7 +42,6 @@
 
 :host([size="large"]) .tag {
   padding: 0 var(--ms-4);
-
 }
 
 :host([pill]) .tag {

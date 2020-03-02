@@ -15,9 +15,11 @@
 .word-normal {
   word-break: normal;
 }
+
 .word-wrap {
   word-break: break-all;
 }
+
 .word-nowrap {
   word-break: keep-all;
 }
@@ -26,9 +28,11 @@
   .word-normal-ns {
     word-break: normal;
   }
+
   .word-wrap-ns {
     word-break: break-all;
   }
+
   .word-nowrap-ns {
     word-break: keep-all;
   }
@@ -38,9 +42,11 @@
   .word-normal-m {
     word-break: normal;
   }
+
   .word-wrap-m {
     word-break: break-all;
   }
+
   .word-nowrap-m {
     word-break: keep-all;
   }
@@ -50,9 +56,11 @@
   .word-normal-l {
     word-break: normal;
   }
+
   .word-wrap-l {
     word-break: break-all;
   }
+
   .word-nowrap-l {
     word-break: keep-all;
   }

@@ -1,4 +1,7 @@
-:host, :host *, :host *:before, :host *:after {
+:host,
+:host *,
+:host *::before,
+:host *::after {
   box-sizing: border-box;
 }
 
@@ -21,7 +24,7 @@
   --border: 1px solid var(--border-color);
   --line-height: var(--ms6);
   --border-radius: 0.3rem;
-  --validation-spacing: var(--ms-2)
+  --validation-spacing: var(--ms-2);
 }
 
 :host([type="hidden"]) {
@@ -97,7 +100,7 @@
 }
 
 :host .caps-lock ion-icon {
-  font-size: calc(var(--font-size) * 1.75)
+  font-size: calc(var(--font-size) * 1.75);
 }
 
 :host .caps-lock * {
@@ -200,8 +203,8 @@
   outline: 0;
   background: var(--background);
   padding: var(--padding);
-  padding-top: .5em;
-  padding-bottom: .5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   min-height: calc(var(--height) * 2);
   max-height: 10em;
   line-height: 1.47;
@@ -214,6 +217,7 @@
 
 :host([focused]) .input {
   --border: 1px solid var(--theme-base5);
+
   box-shadow: inset 0 0 0 1px var(--theme-base5);
 }
 
@@ -238,7 +242,7 @@
   color: var(--icon-color);
   font-size: calc(var(--font-size) * 2);
   line-height: 0;
-  background: var(--background)
+  background: var(--background);
 }
 
 :host([type="password"]) input {
@@ -340,7 +344,7 @@
   height: 1px;
   width: 100%;
   position: absolute;
-  top: calc(50% - .5px);
+  top: calc(50% - 0.5px);
 }
 
 :host([focused]) .incrementing::after {
@@ -370,11 +374,11 @@
 }
 
 :host([size="small"]) :host .incrementing a:first-child {
-  padding-top: .25rem;
+  padding-top: 0.25rem;
 }
 
 :host([size="small"]) :host .incrementing a:last-child {
-  padding-bottom: .25rem;
+  padding-bottom: 0.25rem;
 }
 
 :host([type="search"]) .input {
@@ -401,7 +405,7 @@
 }
 
 :host([size="small"][type="search"]) ion-icon.search {
-  top: calc(50% - .125em);
+  top: calc(50% - 0.125em);
   left: 0.25em;
 }
 
@@ -499,11 +503,11 @@
   float: left;
   display: flex;
   align-items: center;
-  margin-right: .5em;
-  margin-top: .5em;
+  margin-right: 0.5em;
+  margin-top: 0.5em;
   border-radius: 100em;
   background: var(--theme-base5);
-  padding: .125em 1em;
+  padding: 0.125em 1em;
   height: 1.75rem;
   line-height: 1;
   color: var(--white);
@@ -581,7 +585,7 @@
 
 :host .file-wrapper h3 {
   font-size: 1.6rem;
-  margin-bottom: .4em;
+  margin-bottom: 0.4em;
 }
 
 :host .file-wrapper h4 ion-icon {
@@ -635,7 +639,7 @@
   --border-color: var(--gray9);
   --background: var(--black-alt);
   --color: var(--white);
-  --icon-color: var(--gray6)
+  --icon-color: var(--gray6);
 }
 
 :host([dark]) .tokenfield.tokenfield-mode-tokens .focused {

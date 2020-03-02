@@ -1,14 +1,19 @@
-:host, :host *, :host *:before, :host *:after {
+:host,
+:host *,
+:host *::before,
+:host *::after {
   box-sizing: border-box;
 }
 
 :host {
   contain: content;
+
   --width: 32px;
   --height: 32px;
   --gap: 2px;
   --mod-width: calc(var(--width) + var(--gap));
   --mod-height: calc(var(--height) + var(--gap));
+
   display: inline-block;
   position: relative;
   width: var(--width);
@@ -78,7 +83,7 @@
   width: calc(var(--gap) * 2);
   height: calc(100% + (var(--gap) * 2));
   transform: rotate(45deg);
-  background: var(--red5)
+  background: var(--red5);
 }
 
 :host button[data-selected="true"] {
@@ -154,8 +159,8 @@
   transform: translate3d(var(--mod-width), calc(var(--mod-height) * 5), 0);
 }
 
-  :host([dark][val="none"]),
-  :host([dark]) button.none {
-    background: var(--black) !important;
-    border: 2px solid var(--white) !important;
-  }
+:host([dark][val="none"]),
+:host([dark]) button.none {
+  background: var(--black) !important;
+  border: 2px solid var(--white) !important;
+}

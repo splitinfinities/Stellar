@@ -38,7 +38,7 @@ hr {
 hr.vertical {
   width: 1px;
   height: 2rem;
-  margin: -.75rem 1rem;
+  margin: -0.75rem 1rem;
   display: inline-block;
 }
 
@@ -61,10 +61,11 @@ img.medium-zoom-image {
   object-fit: cover;
 }
 
-ul.group, ol.group {
+ul.group,
+ol.group {
   padding: 0;
   margin: 0;
-  list-style: none!important;
+  list-style: none !important;
   display: -ms-inline-grid;
   display: inline-grid;
   -ms-grid-columns: auto 1rem auto 1rem auto;
@@ -80,7 +81,8 @@ ul.group, ol.group {
   width: 100%;
 }
 
-ul.group li, ol.group li {
+ul.group li,
+ol.group li {
   margin: 0;
 }
 
@@ -89,12 +91,12 @@ canvas[width="80"][height="80"] {
 }
 
 .layer-children {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
 }
 
 .layer-children > * {
-    grid-column: 1;
-    grid-row: 1;
+  grid-column: 1;
+  grid-row: 1;
 }

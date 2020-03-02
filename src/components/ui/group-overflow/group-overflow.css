@@ -1,4 +1,7 @@
-:host, :host *, :host *:before, :host *:after {
+:host,
+:host *,
+:host *::before,
+:host *::after {
   box-sizing: border-box;
 }
 
@@ -8,6 +11,7 @@
   max-height: var(--group-overflow-size);
   font-size: var(--group-overflow-font-size);
   contain: content;
+
   --group-overflow-size: 2.2em;
   --group-overflow-font-size: 1.8rem;
 }
@@ -25,7 +29,7 @@
 }
 
 :host([size="tiny"]) {
-  --group-overflow-font-size: .8rem;
+  --group-overflow-font-size: 0.8rem;
 }
 
 :host .wrapper {
@@ -64,6 +68,6 @@
   line-height: 100%;
   padding: 0.2em 0.4em;
   color: var(--theme-complement9);
-  font-size: calc(var(--group-overflow-font-size) * .825);
+  font-size: calc(var(--group-overflow-font-size) * 0.825);
   font-weight: 600;
 }

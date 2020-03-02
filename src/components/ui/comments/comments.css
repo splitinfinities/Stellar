@@ -1,12 +1,15 @@
-:host, :host *, :host *:before, :host *:after {
-	box-sizing: border-box;
+:host,
+:host *,
+:host *::before,
+:host *::after {
+  box-sizing: border-box;
 }
 
 :host {
-	contain: content;
-	display: block;
+  contain: content;
+  display: block;
 }
 
 :host ::slotted(stellar-comment) {
-	margin-top: 1rem;
+  margin-top: 1rem;
 }

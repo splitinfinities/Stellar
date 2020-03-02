@@ -1,4 +1,7 @@
-stellar-code, stellar-code *, stellar-code *:before, stellar-code *:after {
+stellar-code,
+stellar-code *,
+stellar-code *::before,
+stellar-code *::after {
   box-sizing: border-box;
 }
 

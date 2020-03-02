@@ -14,21 +14,24 @@
 .strike {
   text-decoration: line-through;
 }
+
 .underline {
   text-decoration: underline;
 }
+
 .no-underline {
   text-decoration: none;
 }
-
 
 @media (min-width: 480px) {
   .strike-ns {
     text-decoration: line-through;
   }
+
   .underline-ns {
     text-decoration: underline;
   }
+
   .no-underline-ns {
     text-decoration: none;
   }
@@ -38,9 +41,11 @@
   .strike-m {
     text-decoration: line-through;
   }
+
   .underline-m {
     text-decoration: underline;
   }
+
   .no-underline-m {
     text-decoration: none;
   }
@@ -50,9 +55,11 @@
   .strike-l {
     text-decoration: line-through;
   }
+
   .underline-l {
     text-decoration: underline;
   }
+
   .no-underline-l {
     text-decoration: none;
   }

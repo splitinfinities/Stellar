@@ -86,7 +86,6 @@ p {
   color: var(--white);
 }
 
-
 h1,
 .fs1 {
   font-size: var(--ms9);
@@ -124,14 +123,14 @@ p,
 .fs7 {
   line-height: var(--ms-ratio);
   font-size: var(--ms0);
-  padding: calc(var(--ms0) * .3333) 0;
+  padding: calc(var(--ms0) * 0.3333) 0;
 }
 
 small,
 .fs8 {
   line-height: var(--ms-ratio);
   font-size: 0.8em;
-  padding: calc(var(--ms0) * .25) 0;
+  padding: calc(var(--ms0) * 0.25) 0;
 }
 
 h1 + h2 {
@@ -145,14 +144,13 @@ h3 + h4 {
   padding: 0;
 }
 
-
 h4 + h5 {
   margin-top: var(--ms0);
   padding: 0;
 }
 
 h5 + h6 {
-  margin-top: calc(var(--ms1) * .5)
+  margin-top: calc(var(--ms1) * 0.5);
 }
 
 h1 + p {
@@ -168,15 +166,15 @@ h3 + p {
 }
 
 h4 + p {
-  margin-top: calc(var(--ms0) * .3333);
+  margin-top: calc(var(--ms0) * 0.3333);
 }
 
 h5 + p {
-  margin-top: calc(var(--ms0) * .5);
+  margin-top: calc(var(--ms0) * 0.5);
 }
 
 h6 + p {
-  margin-top: calc(var(--ms0) * .625)
+  margin-top: calc(var(--ms0) * 0.625);
 }
 
 p + p {

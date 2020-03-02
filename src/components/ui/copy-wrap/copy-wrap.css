@@ -1,4 +1,7 @@
-:host, :host *, :host *:before, :host *:after {
+:host,
+:host *,
+:host *::before,
+:host *::after {
   box-sizing: border-box;
 }
 
@@ -38,24 +41,24 @@
 
 :host ::slotted(img),
 :host ::slotted(stellar-code-block) {
-  margin-bottom: 2rem ;
+  margin-bottom: 2rem;
 }
 
 :host ::slotted(*:last-child) {
-  margin-bottom: 0 ;
+  margin-bottom: 0;
 }
 
 :host([full]) ::slotted(*) {
-  max-width: 100% ;
+  max-width: 100%;
 }
 
 :host ::slotted(ul),
 :host ::slotted(ol) {
-  margin: .25em 0 ;
-  display: inline-block ;
-  text-align: left ;
+  margin: 0.25em 0;
+  display: inline-block;
+  text-align: left;
 }
 
 :host ::slotted(li) {
-  margin-top: 0.5em ;
+  margin-top: 0.5em;
 }

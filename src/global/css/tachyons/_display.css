@@ -27,33 +27,43 @@
 .dn {
   display: none;
 }
+
 .di {
   display: inline;
 }
+
 .db {
   display: block;
 }
+
 .dib {
   display: inline-block;
 }
+
 .dit {
   display: inline-table;
 }
+
 .dt {
   display: table;
 }
+
 .dtc {
   display: table-cell;
 }
+
 .dt-row {
   display: table-row;
 }
+
 .dt-row-group {
   display: table-row-group;
 }
+
 .dt-column {
   display: table-column;
 }
+
 .dt-column-group {
   display: table-column-group;
 }
@@ -65,6 +75,7 @@
 .dig {
   display: inline-grid;
 }
+
 .dc {
   display: contents;
 }
@@ -83,46 +94,58 @@
   .dn-ns {
     display: none;
   }
+
   .di-ns {
     display: inline;
   }
+
   .db-ns {
     display: block;
   }
+
   .dib-ns {
     display: inline-block;
   }
+
   .dit-ns {
     display: inline-table;
   }
+
   .dt-ns {
     display: table;
   }
+
   .dtc-ns {
     display: table-cell;
   }
+
   .dt-row-ns {
     display: table-row;
   }
+
   .dt-row-group-ns {
     display: table-row-group;
   }
+
   .dt-column-ns {
     display: table-column;
   }
+
   .dt-column-group-ns {
     display: table-column-group;
   }
+
   .dg-ns {
     display: grid;
   }
+
   .dig-ns {
     display: inline-grid;
   }
+
   .dc-ns {
     display: contents;
   }
-
 
   .dt--fixed-ns {
     width: 100%;
@@ -134,46 +157,58 @@
   .dn-m {
     display: none;
   }
+
   .di-m {
     display: inline;
   }
+
   .db-m {
     display: block;
   }
+
   .dib-m {
     display: inline-block;
   }
+
   .dit-m {
     display: inline-table;
   }
+
   .dt-m {
     display: table;
   }
+
   .dtc-m {
     display: table-cell;
   }
+
   .dt-row-m {
     display: table-row;
   }
+
   .dt-row-group-m {
     display: table-row-group;
   }
+
   .dt-column-m {
     display: table-column;
   }
+
   .dt-column-group-m {
     display: table-column-group;
   }
+
   .dg-m {
     display: grid;
   }
+
   .dig-m {
     display: inline-grid;
   }
+
   .dc-m {
     display: contents;
   }
-
 
   .dt--fixed-m {
     width: 100%;
@@ -185,42 +220,55 @@
   .dn-l {
     display: none;
   }
+
   .di-l {
     display: inline;
   }
+
   .db-l {
     display: block;
   }
+
   .dib-l {
     display: inline-block;
   }
+
   .dit-l {
     display: inline-table;
   }
+
   .dt-l {
     display: table;
   }
+
   .dtc-l {
     display: table-cell;
   }
+
   .dt-row-l {
     display: table-row;
   }
+
   .dt-row-group-l {
     display: table-row-group;
   }
+
   .dt-column-l {
     display: table-column;
   }
+
   .dt-column-group-l {
     display: table-column-group;
   }
+
   .dg-l {
     display: grid;
   }
+
   .dig-l {
     display: inline-grid;
   }
+
   .dc-l {
     display: contents;
   }

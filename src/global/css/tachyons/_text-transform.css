@@ -22,12 +22,15 @@
 .ttc {
   text-transform: capitalize;
 }
+
 .ttl {
   text-transform: lowercase;
 }
+
 .ttu {
   text-transform: uppercase;
 }
+
 .ttn {
   text-transform: none;
 }
@@ -36,12 +39,15 @@
   .ttc-ns {
     text-transform: capitalize;
   }
+
   .ttl-ns {
     text-transform: lowercase;
   }
+
   .ttu-ns {
     text-transform: uppercase;
   }
+
   .ttn-ns {
     text-transform: none;
   }
@@ -51,12 +57,15 @@
   .ttc-m {
     text-transform: capitalize;
   }
+
   .ttl-m {
     text-transform: lowercase;
   }
+
   .ttu-m {
     text-transform: uppercase;
   }
+
   .ttn-m {
     text-transform: none;
   }
@@ -66,12 +75,15 @@
   .ttc-l {
     text-transform: capitalize;
   }
+
   .ttl-l {
     text-transform: lowercase;
   }
+
   .ttu-l {
     text-transform: uppercase;
   }
+
   .ttn-l {
     text-transform: none;
   }

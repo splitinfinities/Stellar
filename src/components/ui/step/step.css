@@ -84,10 +84,10 @@ stellar-step[open] stellar-label {
 
 @keyframes moveStripes {
   from {
-   background-position-x: 0;
+    background-position-x: 0;
   }
 
   to {
-   background-position-x: 5.5rem;
+    background-position-x: 5.5rem;
   }
 }

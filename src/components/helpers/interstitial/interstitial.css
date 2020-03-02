@@ -1,4 +1,7 @@
-:host, :host *, :host *:before, :host *:after {
+:host,
+:host *,
+:host *::before,
+:host *::after {
   box-sizing: border-box;
 }
 
@@ -7,7 +10,10 @@
   position: fixed;
   z-index: 999999;
   height: auto;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: var(--black);
   backdrop-filter: blur(10px);
   display: grid;
@@ -28,10 +34,12 @@
   max-width: 60rem;
   height: auto;
   width: 90%;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: auto;
 }
-
 
 :host([fullscreen]),
 :host([fullscreen=""]) {

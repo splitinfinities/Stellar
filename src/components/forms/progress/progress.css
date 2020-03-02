@@ -1,4 +1,7 @@
-:host, :host *, :host *:before, :host *:after {
+:host,
+:host *,
+:host *::before,
+:host *::after {
   box-sizing: border-box;
 }
 
@@ -7,6 +10,7 @@
   display: block;
   position: relative;
   overflow: hidden;
+
   --border-radius: 0.3rem;
   --time: 124;
   --negative-time: -124;

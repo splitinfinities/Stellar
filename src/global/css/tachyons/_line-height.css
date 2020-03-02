@@ -13,9 +13,11 @@
 .lh-solid {
   line-height: 1;
 }
+
 .lh-title {
   line-height: 1.25;
 }
+
 .lh-copy {
   line-height: 1.5;
 }
@@ -24,9 +26,11 @@
   .lh-solid-ns {
     line-height: 1;
   }
+
   .lh-title-ns {
     line-height: 1.25;
   }
+
   .lh-copy-ns {
     line-height: 1.5;
   }
@@ -36,9 +40,11 @@
   .lh-solid-m {
     line-height: 1;
   }
+
   .lh-title-m {
     line-height: 1.25;
   }
+
   .lh-copy-m {
     line-height: 1.5;
   }
@@ -48,9 +54,11 @@
   .lh-solid-l {
     line-height: 1;
   }
+
   .lh-title-l {
     line-height: 1.25;
   }
+
   .lh-copy-l {
     line-height: 1.5;
   }

@@ -1,351 +1,377 @@
 :host,
 :host * {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 :host {
-	--color-one: var(--theme-base1);
-	--color-two: var(--theme-base9);
-	--color-three: var(--theme-base5);
-	--color-four: var(--theme-base7);
-	--color-bg: var(--theme-base0);
-	--color-bg-active: var(--theme-base1);
-	--color-bg-playing: var(--theme-base2);
-	--color-line: var(--theme-base1);
+  --color-one: var(--theme-base1);
+  --color-two: var(--theme-base9);
+  --color-three: var(--theme-base5);
+  --color-four: var(--theme-base7);
+  --color-bg: var(--theme-base0);
+  --color-bg-active: var(--theme-base1);
+  --color-bg-playing: var(--theme-base2);
+  --color-line: var(--theme-base1);
+
   contain: content;
 }
 
 :host([dark]) {
-	--color-one: var(--theme-base9);
-	--color-two: var(--theme-base1);
-	--color-three: var(--theme-base7);
-	--color-four: var(--theme-base2);
-	--color-bg: var(--black-alt);
-	--color-bg-active: var(--theme-base8);
-	--color-bg-playing: var(--theme-base8);
-	--color-line: var(--black);
+  --color-one: var(--theme-base9);
+  --color-two: var(--theme-base1);
+  --color-three: var(--theme-base7);
+  --color-four: var(--theme-base2);
+  --color-bg: var(--black-alt);
+  --color-bg-active: var(--theme-base8);
+  --color-bg-playing: var(--theme-base8);
+  --color-line: var(--black);
 }
 
 :host {
-	display: block;
-	box-sizing: border-box;
-	background: var(--color-bg);
-	max-width: 650px;
-	width: 100%;
-	margin: 0 auto;
+  display: block;
+  box-sizing: border-box;
+  background: var(--color-bg);
+  max-width: 650px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 :host button {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	background: none;
-	outline: 0;
-	border: 0;
-	cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
 }
 
 :host button.playlist {
-	margin: 0 0.5rem 0 auto;
+  margin: 0 0.5rem 0 auto;
 }
 
 :host button.switch-view {
-	margin: 0 0.5rem 0 0;
+  margin: 0 0.5rem 0 0;
 }
 
 :host audio {
-	display: none;
+  display: none;
 }
 
 :host #player {
-	position: relative;
+  position: relative;
 }
 
 :host stellar-color-picker {
-	z-index: 99;
+  z-index: 99;
 }
 
 :host web-audio-visualizer {
-    height: 0;
-	margin-top: 1rem;
-	opacity: 0;
-	transition: all 0.25s var(--ease) 0s;
-	width: 100%;
+  height: 0;
+  margin-top: 1rem;
+  opacity: 0;
+  transition: all 0.25s var(--ease) 0s;
+  width: 100%;
 }
 
 :host([playing]) web-audio-visualizer {
-	opacity: 1;
-	height: 10rem;
+  opacity: 1;
+  height: 10rem;
 }
 
 :host h6 {
-	font-size: 0.75rem;
-	margin: 0;
-	text-transform: uppercase;
-	color: var(--color-two);
-	letter-spacing: .23em;
-	z-index: 1;
+  font-size: 0.75rem;
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--color-two);
+  letter-spacing: 0.23em;
+  z-index: 1;
 }
 
 :host h6.list {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 :host h6.list ion-icon {
-	margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 :host .playlist-playing,
 :host .playlist-progress,
 :host .playlist-playing-details,
 :host .playlist-title {
-	transition: all 0.1875s ease-in-out 0s;
+  transition: all 0.1875s ease-in-out 0s;
 }
+
 :host .playlist-playing-image {
-	transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
 }
+
 :host .playlist-title {
-	background: var(--color-one);
-	height: 3rem;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0.5rem 1rem;
+  background: var(--color-one);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
 }
+
 :host .playlist-playing-details {
-	margin-right: 30px;
+  margin-right: 30px;
 }
+
 :host .playlist-playing {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	padding: 2rem 1rem 3rem;
-	position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2rem 1rem 3rem;
+  position: relative;
 }
+
 :host .playlist-playing h2,
 :host .playlist-playing h3 {
-	font-weight: 400;
-	margin: 0;
+  font-weight: 400;
+  margin: 0;
 }
+
 :host .playlist-playing h2 {
-	color: var(--color-two);
-	font-weight: 700;
-	font-size: 17px;
-	overflow: hidden;
-	width: 100%;
+  color: var(--color-two);
+  font-weight: 700;
+  font-size: 17px;
+  overflow: hidden;
+  width: 100%;
 }
+
 :host .playlist-playing h3 {
-	color: var(--color-four);
-	font-size: 16px;
-	overflow: hidden;
-	width: 100%;
-}
-:host .playlist-progress {
-	display: flex;
-	position: absolute;
-	align-items: baseline;
-	justify-content: space-between;
-	width: 100%;
-	padding: 0 15px 15px;
-	z-index: 5;
-	bottom: 0;
-	left: 0;
+  color: var(--color-four);
+  font-size: 16px;
+  overflow: hidden;
+  width: 100%;
 }
 
 :host .playlist-progress {
-	transition: all 100ms ease 0s;
-	opacity: 0;
-	transform: translateY(-10px);
-	max-height: 0;
+  display: flex;
+  position: absolute;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 15px 15px;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+}
+
+:host .playlist-progress {
+  transition: all 100ms ease 0s;
+  opacity: 0;
+  transform: translateY(-10px);
+  max-height: 0;
 }
 
 :host .playlist-progress.load {
-	opacity: 1;
-	transform: translateY(0px);
-	max-height: 100px;
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 100px;
 }
 
 :host .playlist-progress progress {
-	-webkit-appearance: none;
-	appearance: none;
-	position: absolute;
-	height: 3px;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	transition: all 0.075s ease-in-out 0.25s;
-	cursor: pointer;
-	z-index: 2;
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.075s ease-in-out 0.25s;
+  cursor: pointer;
+  z-index: 2;
 }
+
 :host .playlist-progress progress:hover {
-	transition: all 0.075s ease-in-out 0s;
-	height: 16px;
-	bottom: -8px;
+  transition: all 0.075s ease-in-out 0s;
+  height: 16px;
+  bottom: -8px;
 }
+
 :host .playlist-progress progress[value]::-moz-progress-bar {
-	background-color: var(--color-line);
+  background-color: var(--color-line);
 }
+
 :host .playlist-progress progress[value]::-webkit-progress-bar {
-	background-color: var(--color-line);
+  background-color: var(--color-line);
 }
+
 :host .playlist-progress progress[value]::-webkit-progress-value {
-	background-color: var(--color-three);
+  background-color: var(--color-three);
 }
+
 :host .playlist-list {
-	max-height: 24rem;
-	overflow: auto;
-	transition: all 0.2s ease 0s;
+  max-height: 24rem;
+  overflow: auto;
+  transition: all 0.2s ease 0s;
 }
+
 :host .playlist-list.hide {
-	max-height: 0;
+  max-height: 0;
 }
+
 :host .controls {
-	display: flex;
-	display: none;
-	margin: 1em 0;
+  display: flex;
+  display: none;
+  margin: 1em 0;
 }
+
 :host .controls .button {
-	font-size: 2rem;
-	width: 50%;
-	flex: 12 6 200px;
+  font-size: 2rem;
+  width: 50%;
+  flex: 12 6 200px;
 }
+
 :host .controls .button ion-icon {
-	display: inline-block;
+  display: inline-block;
 }
+
 :host .playlist-playing-image {
-	margin: auto 0 auto auto;
-	width: 5rem;
-	flex: 0 0 5rem;
-	height: 5rem;
-	cursor: pointer;
+  margin: auto 0 auto auto;
+  width: 5rem;
+  flex: 0 0 5rem;
+  height: 5rem;
+  cursor: pointer;
 }
+
 :host .playlist-playing-image img {
-	width: 100%;
-	background: white;
-	border-radius: 3px;
-	height: auto;
-	box-shadow: 0 3px 3px 0px rgba(232,232,232,0.6);
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  height: auto;
+  box-shadow: 0 3px 3px 0 rgba(232, 232, 232, 0.6);
 }
+
 :host .playlist-playing .toggle-button {
-	padding: 0;
-	margin-right: 2rem;
-	width: 3rem;
-	height: 3rem;
-	padding: 14px;
-	border-radius: 100%;
-	background: var(--color-three);
-	color: white;
-	position: relative;
+  padding: 0;
+  margin-right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  padding: 14px;
+  border-radius: 100%;
+  background: var(--color-three);
+  color: white;
+  position: relative;
 }
+
 :host .playlist-playing .toggle-button ion-icon {
-    font-size: 2rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 :host .playlist-playing .toggle-button ion-icon[name="play"] {
-    transform: translate(-43%, -50%);
+  transform: translate(-43%, -50%);
 }
+
 :host .playlist-playing .toggle-button[data-playing="false"] {
-	padding: 14px 12px 14px 16px;
+  padding: 14px 12px 14px 16px;
 }
+
 :host .st0 {
-	fill: var(--color-three);
+  fill: var(--color-three);
 }
+
 :host .st1 {
-	fill: #fff;
+  fill: #fff;
 }
 
 :host skeleton-img {
-	display: none;
+  display: none;
 }
 
 :host([view="art"]) .playlist-playing {
-	position: relative;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 :host([view="art"]) web-audio-visualizer {
-	height: 100%;
-	position: absolute;
-	bottom: 0;
-	z-index: 2;
-	transition: all 0s var(--ease) 0s;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  transition: all 0s var(--ease) 0s;
 }
 
 :host([view="art"]) .playlist-playing .toggle-button {
-	display: none;
+  display: none;
 }
 
 :host([view="art"]) .playlist-playing .playlist-playing-details {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 2rem;
-    background: var(--color-one);
-    left: 0;
-    right: 0;
-    text-align: center;
-	mix-blend-mode: hard-light;
-	margin: 0;
-	transform: translateY(100%);
-	z-index: 3;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
+  background: var(--color-one);
+  left: 0;
+  right: 0;
+  text-align: center;
+  mix-blend-mode: hard-light;
+  margin: 0;
+  transform: translateY(100%);
+  z-index: 3;
 }
 
 :host([view="art"]:hover) .playlist-playing-details {
-	transform: translateY(0%);
+  transform: translateY(0%);
 }
 
 :host([view="art"]) .playlist-progress {
-	padding: 0 15px 0px;
+  padding: 0 15px 0;
 }
 
 :host([view="art"]) .playlist-progress h6 {
-	display: none;
+  display: none;
 }
 
 :host([view="art"]) .playlist-playing stellar-button {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	z-index: 3;
-	transform: translate(-50%, -50%) !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%) !important;
 }
 
 :host([view="art"]) skeleton-img,
 :host([view="art"]) .playlist-playing-image {
-	display: block;
-    width: 100%;
-    margin: 0 auto;
-    flex: none;
-	height: 0;
-    padding-bottom: 100%;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  flex: none;
+  height: 0;
+  padding-bottom: 100%;
 }
 
 :host([view="art"]) .playlist-playing-image:hover,
 :host([view="art"]) .playlist-playing-image:focus {
-	transform: scale(1.025);
-	cursor: pointer;
+  transform: scale(1.025);
+  cursor: pointer;
 }
 
 :host([view="art"]) .playlist-playing-image img {
-	width: 100%;
+  width: 100%;
 }
 
 :host([view="art"]) .controls {
-	display: none;
+  display: none;
 }
 
 :host([dark]) .playlist-playing-image img {
-	box-shadow: 0 3px 3px 0px rgba(24,24,24,0.6);
+  box-shadow: 0 3px 3px 0 rgba(24, 24, 24, 0.6);
 }
 
 :host([dark]) web-audio-visualizer {
-	filter: hue-rotate(180deg) invert(80%);
+  filter: hue-rotate(180deg) invert(80%);
 }

@@ -63,7 +63,6 @@
   color: var(--gray9) !important;
 }
 
-
 .theme-base0 {
   color: var(--theme-base0) !important;
 }
@@ -103,7 +102,6 @@
 .theme-base9 {
   color: var(--theme-base9) !important;
 }
-
 
 .theme-complement0 {
   color: var(--theme-complement0) !important;
@@ -211,7 +209,6 @@
 .bg-gray9 {
   background-color: var(--gray9);
 }
-
 
 .bg-theme-base0 {
   background-color: var(--theme-base0);
@@ -357,7 +354,6 @@
   color: var(--gray9) !important;
 }
 
-
 .dark-mode .dm-theme-base0 {
   color: var(--theme-base0) !important;
 }
@@ -397,7 +393,6 @@
 .dark-mode .dm-theme-base9 {
   color: var(--theme-base9) !important;
 }
-
 
 .dark-mode .dm-theme-complement0 {
   color: var(--theme-complement0) !important;
@@ -505,7 +500,6 @@
 .dark-mode .dm-bg-gray9 {
   background-color: var(--gray9);
 }
-
 
 .dark-mode .dm-bg-theme-base0 {
   background-color: var(--theme-base0);

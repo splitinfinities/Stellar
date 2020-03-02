@@ -1,96 +1,99 @@
-:host, :host *, :host *:before, :host *:after {
-    box-sizing: border-box;
+:host,
+:host *,
+:host *::before,
+:host *::after {
+  box-sizing: border-box;
 }
 
 :host {
-    --grid-width: 200px;
-    --grid-gap: 2rem;
+  --grid-width: 200px;
+  --grid-gap: 2rem;
 
-    position: relative;
-    display: flex;
-    display: grid;
-    flex-wrap: wrap;
-    grid-gap: var(--grid-gap);
-    grid-template-columns: repeat(auto-fit, minmax(var(--grid-width), 1fr));
+  position: relative;
+  display: flex;
+  display: grid;
+  flex-wrap: wrap;
+  grid-gap: var(--grid-gap);
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-width), 1fr));
 }
 
 :host([padding]) {
-    padding: var(--grid-gap);
+  padding: var(--grid-gap);
 }
 
 /* Non-Responsive Grid */
 :host([noresponsive]) {
-    grid-template-columns: repeat(auto-fit, minmax(var(--grid-width), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--grid-width), 1fr));
 }
 
 :host([noresponsive][cols="1"]) {
-    grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
 }
 
 :host([noresponsive][cols="2"]) {
-    grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 :host([noresponsive][cols="3"]) {
-    grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 :host([noresponsive][cols="4"]) {
-    grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 :host([noresponsive][cols="5"]) {
-    grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 :host([noresponsive][cols="6"]) {
-    grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 
 :host ::slotted(.width-all) {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 :host ::slotted(.width-2) {
-    grid-column: auto / span 2;
+  grid-column: auto / span 2;
 }
 
 :host ::slotted(.width-3) {
-    grid-column: auto / span 3;
+  grid-column: auto / span 3;
 }
 
 :host ::slotted(.width-4) {
-    grid-column: auto / span 4;
+  grid-column: auto / span 4;
 }
 
 :host ::slotted(.width-5) {
-    grid-column: auto / span 5;
+  grid-column: auto / span 5;
 }
 
 :host ::slotted(.width-6) {
-    grid-column: auto / span 6;
+  grid-column: auto / span 6;
 }
 
 :host ::slotted(.height-all) {
-    grid-row: 1 / -1;
+  grid-row: 1 / -1;
 }
 
 :host ::slotted(.height-2) {
-    grid-row: auto / span 2;
+  grid-row: auto / span 2;
 }
 
 :host ::slotted(.height-3) {
-    grid-row: auto / span 3;
+  grid-row: auto / span 3;
 }
 
 :host ::slotted(.height-4) {
-    grid-row: auto / span 4;
+  grid-row: auto / span 4;
 }
 
 :host ::slotted(.height-5) {
-    grid-row: auto / span 5;
+  grid-row: auto / span 5;
 }
 
 :host ::slotted(.height-6) {
-    grid-row: auto / span 6;
+  grid-row: auto / span 6;
 }

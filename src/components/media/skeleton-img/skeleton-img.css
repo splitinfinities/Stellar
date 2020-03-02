@@ -61,6 +61,7 @@ skeleton-img ion-icon {
     opacity: 0;
     transform: translateX(calc(var(--width) * -1.75));
   }
+
   10% {
     opacity: 1;
   }

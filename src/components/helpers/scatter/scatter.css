@@ -25,15 +25,19 @@
 :host([float]) ::slotted(*:nth-of-type(5n+1)) {
   animation: floating-x 10s infinite;
 }
+
 :host([float]) ::slotted(*:nth-of-type(5n+2)) {
   animation: floating-x-spin 15s infinite;
 }
+
 :host([float]) ::slotted(*:nth-of-type(5n+3)) {
   animation: floating-x-full-spin 35s infinite;
 }
+
 :host([float]) ::slotted(*:nth-of-type(5n+4)) {
   animation: floating-x-full-spin-rel 20s infinite;
 }
+
 :host([float]) ::slotted(*:nth-of-type(5n+5)) {
   animation: floating-x-full-spin 25s infinite;
 }

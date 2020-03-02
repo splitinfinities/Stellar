@@ -101,7 +101,6 @@
   background: repeating-linear-gradient(45deg, var(--theme-base7), var(--theme-base7) 2rem, var(--theme-base8) 0, var(--theme-base8) 4rem);
 }
 
-
 :host([dark]) .wrap ion-icon {
   color: var(--theme-base1);
 }

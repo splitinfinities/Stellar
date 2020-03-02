@@ -1,6 +1,7 @@
 stellar-switch {
   contain: content;
   display: block;
+
   --border-radius: 200px;
   --font-size: 1.2rem;
 }
@@ -21,11 +22,11 @@ stellar-switch .label button {
   font-size: var(--font-size);
   display: inline-block;
   position: relative;
-  transition: all .2s var(--ease) 0s;
+  transition: all 0.2s var(--ease) 0s;
   margin-right: 1em;
   background-color: var(--gray2);
   width: 4rem;
-  height: .8rem;
+  height: 0.8rem;
   vertical-align: text-bottom;
   border-radius: var(--border-radius);
   border: 0;
@@ -38,11 +39,11 @@ stellar-switch .label button:focus {
 }
 
 stellar-switch .label button:focus::after {
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, .125), 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.125), 0 0 3px 0 rgba(0, 0, 0, 0.3);
 }
 
 stellar-switch .label button span {
-  transition: all .2s var(--ease) 0s;
+  transition: all 0.2s var(--ease) 0s;
   font-size: 2rem;
   font-weight: 700;
   color: var(--gray7);
@@ -65,8 +66,8 @@ stellar-switch .label button::after {
   position: absolute;
   top: -0.8rem;
   left: -0.2rem;
-  transform: translate3d(.125em, .125em, 0);
-  transition: all .2s var(--ease) 0s;
+  transform: translate3d(0.125em, 0.125em, 0);
+  transition: all 0.2s var(--ease) 0s;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
   background-color: white;
   border-radius: var(--border-radius);
@@ -75,12 +76,12 @@ stellar-switch .label button::after {
 }
 
 stellar-switch .label:active button::after {
-  transform: translate3d(2px, .125rem, 0);
+  transform: translate3d(2px, 0.125rem, 0);
   width: 2.3rem;
 }
 
 stellar-switch .label:active input:checked + button::after {
-  transform: translate3d(1.9rem, .125rem, 0);
+  transform: translate3d(1.9rem, 0.125rem, 0);
 }
 
 stellar-switch .label input {
@@ -100,11 +101,11 @@ stellar-switch .label input:checked + button span {
 }
 
 stellar-switch .label input:checked + button::after {
-  transform: translate3d(2.25rem, .125rem, 0);
+  transform: translate3d(2.25rem, 0.125rem, 0);
   background: var(--theme-base5);
 }
 
 stellar-switch[dark] .label input:checked + button,
 stellar-switch[dark] .label input:checked + button span {
-  color: var(--black)
+  color: var(--black);
 }

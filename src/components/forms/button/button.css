@@ -1,249 +1,252 @@
-:host, :host *, :host *:before, :host *:after {
-    box-sizing: border-box;
+:host,
+:host *,
+:host *::before,
+:host *::after {
+  box-sizing: border-box;
 }
 
 :host {
-    contain: content;
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    display: var(--wrap-display, inline-block);
-    font-family: var(--font-heading);
-    text-align: center;
-    vertical-align: baseline;
-    align-self: center;
+  contain: content;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: var(--wrap-display, inline-block);
+  font-family: var(--font-heading);
+  text-align: center;
+  vertical-align: baseline;
+  align-self: center;
 
-    --width: auto;
-    --height: auto;
-    --padding-vertical: var(--ms0);
-    --padding-horizontal: var(--ms2);
-    --padding: var(--padding-vertical) var(--padding-horizontal);
-    --background: var(--theme-base5);
-    --color: var(--white);
-    --border: none;
-    --active-background: var(--theme-base7);
-    --active-color: var(--white);
-    --active-border: none;
-    --border: none;
-    --border-radius: 0;
-    --font-size: var(--ms0);
-    --text-decoration: none;
+  --width: auto;
+  --height: auto;
+  --padding-vertical: var(--ms0);
+  --padding-horizontal: var(--ms2);
+  --padding: var(--padding-vertical) var(--padding-horizontal);
+  --background: var(--theme-base5);
+  --color: var(--white);
+  --border: none;
+  --active-background: var(--theme-base7);
+  --active-color: var(--white);
+  --active-border: none;
+  --border: none;
+  --border-radius: 0;
+  --font-size: var(--ms0);
+  --text-decoration: none;
 }
 
 :host([outline]) {
-    --background: transparent;
-    --color: var(--theme-base5);
-    --border: 2px solid currentColor;
-    --active-background: var(--theme-base0);
-    --active-color: var(--theme-base7);
-    --active-border: 2px solid currentColor;
+  --background: transparent;
+  --color: var(--theme-base5);
+  --border: 2px solid currentColor;
+  --active-background: var(--theme-base0);
+  --active-color: var(--theme-base7);
+  --active-border: 2px solid currentColor;
 }
 
 :host([ghost]) {
-    --padding-vertical: 0;
-    --padding-horizontal: 0;
-    --background: none;
-    --color: var(--theme-base5);
-    --border: none;
-    --active-background: none;
-    --active-color: var(--theme-base7);
-    --active-border: none;
+  --padding-vertical: 0;
+  --padding-horizontal: 0;
+  --background: none;
+  --color: var(--theme-base5);
+  --border: none;
+  --active-background: none;
+  --active-color: var(--theme-base7);
+  --active-border: none;
 }
 
 :host([outline][invert]) {
-    --background: transparent;
-    --border: 2px solid currentColor;
-    --active-background: var(--theme-base0);
-    --active-border: 2px solid currentColor;
+  --background: transparent;
+  --border: 2px solid currentColor;
+  --active-background: var(--theme-base0);
+  --active-border: 2px solid currentColor;
 }
 
 :host([ghost][invert]) {
-    --background: none;
-    --color: var(--theme-base2);
-    --border: none;
-    --active-background: none;
-    --active-color: var(--theme-base5);
-    --active-border: none;
+  --background: none;
+  --color: var(--theme-base2);
+  --border: none;
+  --active-background: none;
+  --active-color: var(--theme-base5);
+  --active-border: none;
 }
 
 :host([invert]) {
-    --background: var(--white);
-    --color: var(--theme-base2);
-    --border: none;
-    --active-background: var(--theme-base0);
-    --active-color: var(--theme-base5);
-    --active-border: none;
+  --background: var(--white);
+  --color: var(--theme-base2);
+  --border: none;
+  --active-background: var(--theme-base0);
+  --active-color: var(--theme-base5);
+  --active-border: none;
 }
 
 :host([contrast]) {
-    --background: var(--theme-base7);
-    --color: var(--white);
-    --border: none;
-    --active-background: var(--theme-base9);
-    --active-color: var(--theme-base0);
-    --active-border: none;
+  --background: var(--theme-base7);
+  --color: var(--white);
+  --border: none;
+  --active-background: var(--theme-base9);
+  --active-color: var(--theme-base0);
+  --active-border: none;
 }
 
 :host([pill]) {
-    --border-radius: 1000px;
+  --border-radius: 1000px;
 }
 
 :host([size="tiny"]) {
-    --font-size: var(--ms-2);
+  --font-size: var(--ms-2);
 }
 
 :host([size="small"]) {
-    --font-size: var(--ms-1);
+  --font-size: var(--ms-1);
 }
 
 :host([size="medium"]) {
-    --font-size: var(--ms1);
+  --font-size: var(--ms1);
 }
 
 :host([size="large"]) {
-    --font-size: var(--ms2);
+  --font-size: var(--ms2);
 }
 
 :host([padding="tiny"]) {
-    --padding-vertical: var(--ms-2);
-    --padding-horizontal: var(--ms0);
+  --padding-vertical: var(--ms-2);
+  --padding-horizontal: var(--ms0);
 }
 
 :host([padding="small"]) {
-    --padding-vertical: var(--ms-1);
-    --padding-horizontal: var(--ms1);
+  --padding-vertical: var(--ms-1);
+  --padding-horizontal: var(--ms1);
 }
 
 :host([padding="medium"]) {
-    --padding-vertical: var(--ms1);
-    --padding-horizontal: var(--ms3);
+  --padding-vertical: var(--ms1);
+  --padding-horizontal: var(--ms3);
 }
 
 :host([padding="large"]) {
-    --padding-vertical: var(--ms2);
-    --padding-horizontal: var(--ms4);
+  --padding-vertical: var(--ms2);
+  --padding-horizontal: var(--ms4);
 }
 
 :host(:active) {
-    transform: scale(0.925);
+  transform: scale(0.925);
 }
 
 :host(.h-auto) {
-    --height: 100%;
-    --padding-vertical: 0;
+  --height: 100%;
+  --padding-vertical: 0;
 }
 
 :host .button {
-    cursor: pointer;
-    display: inline-flex;
-    position: relative;
-    align-items: center;
-    outline: 0;
-    border: var(--border);
-    background: var(--background);
-    padding: var(--padding);
-    width: var(--width);
-    height: var(--height);
-    vertical-align: bottom;
-    text-decoration: var(--text-decoration);
-    line-height: 1;
-    letter-spacing: var(--letter-spacing, 0.0275em);;
-    white-space: nowrap;
-    color: var(--color);
-    font-family: inherit;
-    font-size: var(--font-size);
-    font-weight: 600;
-    border-radius: var(--border-radius, 0);
+  cursor: pointer;
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  outline: 0;
+  border: var(--border);
+  background: var(--background);
+  padding: var(--padding);
+  width: var(--width);
+  height: var(--height);
+  vertical-align: bottom;
+  text-decoration: var(--text-decoration);
+  line-height: 1;
+  letter-spacing: var(--letter-spacing, 0.0275em);
+  white-space: nowrap;
+  color: var(--color);
+  font-family: inherit;
+  font-size: var(--font-size);
+  font-weight: 600;
+  border-radius: var(--border-radius, 0);
 }
 
 :host a.button,
 :host span.button {
-    width: auto;
+  width: auto;
 }
 
 :host .button:hover,
 :host .button:focus {
-    border: var(--active-border);
-    background-color: var(--active-background);
-    color: var(--active-color);
+  border: var(--active-border);
+  background-color: var(--active-background);
+  color: var(--active-color);
 }
 
 :host .button .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 :host([block]),
 :host([block]) .button {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 :host ::slotted(*) {
-    line-height: 1 !important;
-    font-family: inherit;
+  line-height: 1 !important;
+  font-family: inherit;
 }
 
 :host([icon]) .button .content {
-    display: inline-grid;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: auto auto auto;
-    grid-gap: 0.1em;
+  display: inline-grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: auto auto auto;
+  grid-gap: 0.1em;
 }
 
 :host ::slotted(img),
 :host ::slotted(ion-icon) {
-    display: inline-block;
-    float: none;
-    width: 1em;
-    height: 1em;
-    font-size: 1.75em;
-    margin: calc(var(--padding-vertical) * -0.5) 0 calc(var(--padding-vertical) * -0.5) calc(var(--padding-vertical) * -0.5);
+  display: inline-block;
+  float: none;
+  width: 1em;
+  height: 1em;
+  font-size: 1.75em;
+  margin: calc(var(--padding-vertical) * -0.5) 0 calc(var(--padding-vertical) * -0.5) calc(var(--padding-vertical) * -0.5);
 }
 
 :host([ghost]) ::slotted(img),
 :host([ghost]) ::slotted(ion-icon) {
-    font-size: 1.65em;
+  font-size: 1.65em;
 }
 
 :host ::slotted(.align-left) {
-    order: -1;
-    margin-right: var(--ms-7);
+  order: -1;
+  margin-right: var(--ms-7);
 }
 
 :host ::slotted(.align-right) {
-    order: 2;
-    margin-left: var(--ms-7);
+  order: 2;
+  margin-left: var(--ms-7);
 }
 
 :host([dark]) {
-    --background: var(--theme-base7);
-    --color: var(--white);
-    --active-background: var(--theme-base9);
-    --active-color: var(--white);
-    --active-border: none;
+  --background: var(--theme-base7);
+  --color: var(--white);
+  --active-background: var(--theme-base9);
+  --active-color: var(--white);
+  --active-border: none;
 }
 
 :host([dark][outline]) {
-    --background: transparent;
-    --color: var(--white);
-    --border: 2px solid var(--theme-base5);
-    --active-background: var(--theme-base9);
-    --active-color: var(--theme-base0);
-    --active-border: 2px solid var(--theme-base9);
+  --background: transparent;
+  --color: var(--white);
+  --border: 2px solid var(--theme-base5);
+  --active-background: var(--theme-base9);
+  --active-color: var(--theme-base0);
+  --active-border: 2px solid var(--theme-base9);
 }
 
 :host([dark][ghost]) {
-    --padding: 0.05em 0 0.125em;
-    --background: none;
-    --color: var(--theme-base5);
-    --border: none;
-    --active-background: none;
-    --active-color: var(--theme-base7);
-    --active-border: none;
+  --padding: 0.05em 0 0.125em;
+  --background: none;
+  --color: var(--theme-base5);
+  --border: none;
+  --active-background: none;
+  --active-color: var(--theme-base7);
+  --active-border: none;
 }

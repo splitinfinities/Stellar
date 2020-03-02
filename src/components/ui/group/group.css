@@ -1,71 +1,78 @@
-:host, :host *, :host *:before, :host *:after {
-    box-sizing: border-box;
+:host,
+:host *,
+:host *::before,
+:host *::after {
+  box-sizing: border-box;
 }
 
 :host {
-	display: inline-flex;
-	align-items: stretch;
-	justify-content: center;
-	height: auto;
-	contain: content;
-	min-height: calc(var(--ms6) - 0.1rem);
+  display: inline-flex;
+  align-items: stretch;
+  justify-content: center;
+  height: auto;
+  contain: content;
+  min-height: calc(var(--ms6) - 0.1rem);
 }
 
 :host([fill]) {
-	display: flex;
-	width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 :host([size="tiny"]) {
-	min-height: calc(var(--ms4) - 0.1rem);
+  min-height: calc(var(--ms4) - 0.1rem);
 }
 
 :host([size="small"]) {
-	min-height: calc(var(--ms5) - 0.1rem);
+  min-height: calc(var(--ms5) - 0.1rem);
 }
 
 :host([size="medium"]) {
-	min-height: calc(var(--ms7) - 0.2rem);
+  min-height: calc(var(--ms7) - 0.2rem);
 }
 
 :host([size="large"]) {
-	min-height:var(--ms7);
+  min-height: var(--ms7);
 }
 
 :host ::slotted(*) {
-	align-self: stretch;
+  align-self: stretch;
 }
 
 :host([fill]) ::slotted(*) {
-	width: 100%;
+  width: 100%;
 }
 
 :host ::slotted(stellar-button),
 :host ::slotted(stellar-input),
 :host ::slotted(stellar-card) {
-	--border-radius: 0;
-	margin: 0;
+  --border-radius: 0;
+
+  margin: 0;
 }
 
 :host ::slotted(*:nth-of-type(1)) {
-	margin-left: -1px !important;
+  margin-left: -1px !important;
 }
 
 :host ::slotted([emphasis]) {
-	transform: scale(1.05);
-	z-index: 1;
+  transform: scale(1.05);
+  z-index: 1;
 }
 
 :host ::slotted(stellar-avatar) {
-	margin-left: 2px;
-	--drop-shadow: none;
+  margin-left: 2px;
+
+  --drop-shadow: none;
 }
 
 :host ::slotted(stellar-avatar) {
-	position: relative;
-	margin-left: -0.5em;
-	--drop-shadow: .1em 0 0 white;
-	transition: all 100ms ease 0s;
+  position: relative;
+  margin-left: -0.5em;
+
+  --drop-shadow: 0.1em 0 0 white;
+
+  transition: all 100ms ease 0s;
 }
 
 :host([overflow]) > *:nth-of-type(1) { z-index: 10; }
@@ -80,5 +87,5 @@
 :host([overflow]) > *:nth-of-type(10) { z-index: 1; }
 
 :host stellar-group-overflow {
-	margin-left: 0.25em;
+  margin-left: 0.25em;
 }

@@ -1,4 +1,7 @@
-:host, :host *, :host *:before, :host *:after {
+:host,
+:host *,
+:host *::before,
+:host *::after {
   box-sizing: border-box;
 }
 
@@ -7,6 +10,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+
   --accordion-height: 200vh;
   --padding-underneath: 6rem;
 }
@@ -27,7 +31,7 @@
   opacity: 1;
   height: calc(var(--accordion-height) + var(--padding-underneath));
   overflow: auto;
-  transform: translateY(0px);
+  transform: translateY(0);
 }
 
 :host .expander stellar-item {
@@ -35,7 +39,7 @@
 }
 
 :host .expander stellar-item:last-of-type {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 :host([tight]) {

@@ -1,46 +1,51 @@
-:host, :host *, :host *:before, :host *:after {
-    box-sizing: border-box;
+:host,
+:host *,
+:host *::before,
+:host *::after {
+  box-sizing: border-box;
 }
 
 :host {
-	contain: content;
-	--background: white;
-	--clip-path: polygon(0 100%, 0% 0%, calc(100% - 1em) 0%, 100% 100%, calc(100% - 1em) 100%, 0% 100%);
-	--height: var(--ms5);
-	--font-size: var(--ms0);
-	display: inline-block;
-	border-bottom: 1px solid var(--background);
-	background: var(--white);
-	height: var(--height);
-	overflow-x: auto;
-	overflow-y: hidden;
-	font-size: var(--font-size);
-	clip-path: var(--clip-path);
+  contain: content;
+
+  --background: white;
+  --clip-path: polygon(0 100%, 0% 0%, calc(100% - 1em) 0%, 100% 100%, calc(100% - 1em) 100%, 0% 100%);
+  --height: var(--ms5);
+  --font-size: var(--ms0);
+
+  display: inline-block;
+  border-bottom: 1px solid var(--background);
+  background: var(--white);
+  height: var(--height);
+  overflow-x: auto;
+  overflow-y: hidden;
+  font-size: var(--font-size);
+  clip-path: var(--clip-path);
 }
 
 :host([size="tiny"]) {
-	--height: var(--ms3);
-	--font-size: var(--ms-2);
+  --height: var(--ms3);
+  --font-size: var(--ms-2);
 }
 
 :host([size="small"]) {
-	--height: var(--ms4);
-	--font-size: var(--ms-1);
+  --height: var(--ms4);
+  --font-size: var(--ms-1);
 }
 
 :host([size="medium"]) {
-	--height: var(--ms6);
-	--font-size: var(--ms1);
+  --height: var(--ms6);
+  --font-size: var(--ms1);
 }
 
 :host([size="large"]) {
-	--height: var(--ms7);
-	--font-size: var(--ms2);
+  --height: var(--ms7);
+  --font-size: var(--ms2);
 }
 
 :host ion-icon {
-	font-size: 2em;
-	line-height: 0;
+  font-size: 2em;
+  line-height: 0;
 }
 
 :host stellar-label {
@@ -50,33 +55,33 @@
 }
 
 :host .breadcrumbs {
-	display: inline-flex;
-	position: relative;
-	background: var(--background);
-	width: auto;
-	height: 100%;
+  display: inline-flex;
+  position: relative;
+  background: var(--background);
+  width: auto;
+  height: 100%;
 }
 
 :host .breadcrumbs .flush {
-	display: block;
-	right: 0;
-	flex: 0 0 2rem;
-	margin-left: -2rem;
-	background: transparent;
-	width: 2rem;
-	height: inherit;
+  display: block;
+  right: 0;
+  flex: 0 0 2rem;
+  margin-left: -2rem;
+  background: transparent;
+  width: 2rem;
+  height: inherit;
 }
 
 :host .breadcrumbs .flush-left {
-	display: block;
-	left: 0;
-	flex: 0 0 2rem;
-	margin-right: -2.5rem;
-	background: transparent;
-	width: 2rem;
-	height: inherit;
+  display: block;
+  left: 0;
+  flex: 0 0 2rem;
+  margin-right: -2.5rem;
+  background: transparent;
+  width: 2rem;
+  height: inherit;
 }
 
 :host([dark]) {
-	--background: linear-gradient(45deg, var(--theme-base7) 0%, var(--theme-base9) 100%);
+  --background: linear-gradient(45deg, var(--theme-base7) 0%, var(--theme-base9) 100%);
 }

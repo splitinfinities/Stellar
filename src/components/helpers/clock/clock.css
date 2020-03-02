@@ -13,6 +13,7 @@
   height: var(--size);
   width: var(--size);
   display: none;
+
   --background: transparent !important;
 }
 

@@ -1,44 +1,44 @@
 :host {
-    contain: content;
-    height: calc(var(--sectionHeight) * 1px);
-    display: block;
-    opacity: calc(var(--cameraZ) + 1);
-    will-change: opacity;
-    transition: opacity 200ms ease 0s;
+  contain: content;
+  height: calc(var(--sectionHeight) * 1px);
+  display: block;
+  opacity: calc(var(--cameraZ) + 1);
+  will-change: opacity;
+  transition: opacity 200ms ease 0s;
 }
 
 :host .container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    perspective: calc(var(--scenePerspective) * var(--cameraSpeed) * 1px);
-    perspective-origin: calc(var(--scenePerspectiveOriginX) * 1%) calc(var(--scenePerspectiveOriginY) * 1%);
-    will-change: perspective-origin;
-    transform: translate3d(0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  perspective: calc(var(--scenePerspective) * var(--cameraSpeed) * 1px);
+  perspective-origin: calc(var(--scenePerspectiveOriginX) * 1%) calc(var(--scenePerspectiveOriginY) * 1%);
+  will-change: perspective-origin;
+  transform: translate3d(0, 0, 0);
 }
 
 :host .scene {
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    transform-style: preserve-3d;
-    transform: translateZ(calc(var(--cameraZ) * 1px));
-    will-change: transform;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(var(--cameraZ) * 1px));
+  will-change: transform;
 }
 
 :host ::slotted(stellar-scroll-z-section) {
-    position: absolute;
-    display: block;
-    width: 100%;
-    top: 40%;
-    z-index: 2;
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 40%;
+  z-index: 2;
 }
 
 @media only screen and (min-width: 600px) {
-    :host ::slotted(stellar-scroll-z-section) {
-        width: 45%;
-    }
+  :host ::slotted(stellar-scroll-z-section) {
+    width: 45%;
+  }
 }

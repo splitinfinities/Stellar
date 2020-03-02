@@ -13,6 +13,7 @@
   content: " ";
   display: table;
 }
+
 .cf::after {
   clear: both;
 }
@@ -20,30 +21,36 @@
 .cl {
   clear: left;
 }
+
 .cr {
   clear: right;
 }
+
 .cb {
   clear: both;
 }
+
 .cn {
   clear: none;
 }
+
 .cf {
   *zoom: 1;
 }
-
 
 @media (min-width: 480px) {
   .cl-ns {
     clear: left;
   }
+
   .cr-ns {
     clear: right;
   }
+
   .cb-ns {
     clear: both;
   }
+
   .cn-ns {
     clear: none;
   }
@@ -53,12 +60,15 @@
   .cl-m {
     clear: left;
   }
+
   .cr-m {
     clear: right;
   }
+
   .cb-m {
     clear: both;
   }
+
   .cn-m {
     clear: none;
   }
@@ -68,12 +78,15 @@
   .cl-l {
     clear: left;
   }
+
   .cr-l {
     clear: right;
   }
+
   .cb-l {
     clear: both;
   }
+
   .cn-l {
     clear: none;
   }

@@ -24,18 +24,23 @@
 .bw0 {
   border-width: 0;
 }
+
 .bw1 {
-  border-width: .1rem;
+  border-width: 0.1rem;
 }
+
 .bw2 {
-  border-width: .2rem;
+  border-width: 0.2rem;
 }
+
 .bw3 {
-  border-width: .4rem;
+  border-width: 0.4rem;
 }
+
 .bw4 {
   border-width: 1rem;
 }
+
 .bw5 {
   border-width: 2rem;
 }
@@ -44,12 +49,15 @@
 .bt-0 {
   border-top-width: 0;
 }
+
 .br-0 {
   border-right-width: 0;
 }
+
 .bb-0 {
   border-bottom-width: 0;
 }
+
 .bl-0 {
   border-left-width: 0;
 }
@@ -58,30 +66,39 @@
   .bw0-ns {
     border-width: 0;
   }
+
   .bw1-ns {
-    border-width: .1rem;
+    border-width: 0.1rem;
   }
+
   .bw2-ns {
-    border-width: .2rem;
+    border-width: 0.2rem;
   }
+
   .bw3-ns {
-    border-width: .4rem;
+    border-width: 0.4rem;
   }
+
   .bw4-ns {
     border-width: 1rem;
   }
+
   .bw5-ns {
     border-width: 2rem;
   }
+
   .bt-0-ns {
     border-top-width: 0;
   }
+
   .br-0-ns {
     border-right-width: 0;
   }
+
   .bb-0-ns {
     border-bottom-width: 0;
   }
+
   .bl-0-ns {
     border-left-width: 0;
   }
@@ -91,30 +108,39 @@
   .bw0-m {
     border-width: 0;
   }
+
   .bw1-m {
-    border-width: .1rem;
+    border-width: 0.1rem;
   }
+
   .bw2-m {
-    border-width: .2rem;
+    border-width: 0.2rem;
   }
+
   .bw3-m {
-    border-width: .4rem;
+    border-width: 0.4rem;
   }
+
   .bw4-m {
     border-width: 1rem;
   }
+
   .bw5-m {
     border-width: 2rem;
   }
+
   .bt-0-m {
     border-top-width: 0;
   }
+
   .br-0-m {
     border-right-width: 0;
   }
+
   .bb-0-m {
     border-bottom-width: 0;
   }
+
   .bl-0-m {
     border-left-width: 0;
   }
@@ -124,30 +150,39 @@
   .bw0-l {
     border-width: 0;
   }
+
   .bw1-l {
-    border-width: .1rem;
+    border-width: 0.1rem;
   }
+
   .bw2-l {
-    border-width: .2rem;
+    border-width: 0.2rem;
   }
+
   .bw3-l {
-    border-width: .4rem;
+    border-width: 0.4rem;
   }
+
   .bw4-l {
     border-width: 1rem;
   }
+
   .bw5-l {
     border-width: 2rem;
   }
+
   .bt-0-l {
     border-top-width: 0;
   }
+
   .br-0-l {
     border-right-width: 0;
   }
+
   .bb-0-l {
     border-bottom-width: 0;
   }
+
   .bl-0-l {
     border-left-width: 0;
   }

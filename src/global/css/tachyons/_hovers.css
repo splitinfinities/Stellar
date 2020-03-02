@@ -19,17 +19,19 @@
 
 */
 .dim {
-  transition: opacity .15s ease-in;
+  transition: opacity 0.15s ease-in;
   opacity: 1;
 }
+
 .dim:hover,
 .dim:focus {
-  transition: opacity .15s ease-in;
-  opacity: .5;
+  transition: opacity 0.15s ease-in;
+  opacity: 0.5;
 }
+
 .dim:active {
-  transition: opacity .15s ease-out;
-  opacity: .8;
+  transition: opacity 0.15s ease-out;
+  opacity: 0.8;
 }
 
 /*
@@ -38,11 +40,12 @@
 
 */
 .glow {
-  transition: opacity .15s ease-in;
+  transition: opacity 0.15s ease-in;
 }
+
 .glow:hover,
 .glow:focus {
-  transition: opacity .15s ease-in;
+  transition: opacity 0.15s ease-in;
   opacity: 1;
 }
 
@@ -62,13 +65,14 @@
 */
 
 .hide-child .child {
-  transition: opacity .15s ease-in;
+  transition: opacity 0.15s ease-in;
   opacity: 0;
 }
-.hide-child:hover  .child,
-.hide-child:focus  .child,
+
+.hide-child:hover .child,
+.hide-child:focus .child,
 .hide-child:active .child {
-  transition: opacity .15s ease-in;
+  transition: opacity 0.15s ease-in;
   opacity: 1;
 }
 
@@ -83,7 +87,7 @@
 .grow {
   transform: translateZ(0);
   backface-visibility: hidden;
-  transition: transform .25s ease-out;
+  transition: transform 0.25s ease-out;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -93,13 +97,13 @@
 }
 
 .grow:active {
-  transform: scale(.90);
+  transform: scale(0.9);
 }
 
 .grow-large {
   transform: translateZ(0);
   backface-visibility: hidden;
-  transition: transform .25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -109,7 +113,7 @@
 }
 
 .grow-large:active {
-  transform: scale(.95);
+  transform: scale(0.95);
 }
 
 /* Add pointer on hover */
@@ -128,7 +132,7 @@
 .shadow-hover {
   cursor: pointer;
   position: relative;
-  transition: all .5s cubic-bezier(.165, .84, .44, 1);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .shadow-hover::after {
@@ -136,11 +140,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  transition: opacity .5s cubic-bezier(.165, .84, .44, 1);
+  transition: opacity 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   opacity: 0;
   z-index: -1;
   border-radius: inherit;
-  box-shadow: 0 0 16px 2px rgba( 0, 0, 0, .2 );
+  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 100%;
 }
@@ -156,5 +160,5 @@
 .bg-animate,
 .bg-animate:hover,
 .bg-animate:focus {
-  transition: background-color .15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
 }

@@ -1,4 +1,7 @@
-:host, :host *, :host *:before, :host *:after {
+:host,
+:host *,
+:host *::before,
+:host *::after {
   box-sizing: border-box;
 }
 
@@ -33,6 +36,7 @@
 
 :host([block]) {
   display: flex;
+
   --width: 100% !important;
   --height: 100% !important;
 }
@@ -50,7 +54,7 @@
 
 :host figure:hover,
 :host figure:focus {
-	transform: scale(1.025);
+  transform: scale(1.025);
 }
 
 :host([nozoom]) figure {

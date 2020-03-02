@@ -1,5 +1,6 @@
 :host {
   --scroll-height: 32rem;
+
   height: var(--scroll-height);
   contain: content;
 }
@@ -29,7 +30,7 @@
   transform-origin: right top;
   direction: ltr;
   width: auto;
-  height: calc(100% - calc(var(--scroll-height) * .3)) !important;
+  height: calc(100% - calc(var(--scroll-height) * 0.3)) !important;
   flex: 0 100% !important;
   margin: 0 !important;
 }

@@ -51,7 +51,7 @@
 
   to {
     opacity: 1;
-    transform: translate(0, 0px);
+    transform: translate(0, 0);
   }
 }
 
@@ -63,7 +63,7 @@
 
   to {
     opacity: 0;
-    transform: translate(0, 0px);
+    transform: translate(0, 0);
   }
 }
 
@@ -75,7 +75,7 @@
 
   to {
     opacity: 1;
-    transform: translate(0, 0px);
+    transform: translate(0, 0);
   }
 }
 
@@ -87,7 +87,7 @@
 
   to {
     opacity: 0;
-    transform: translate(0, 0px);
+    transform: translate(0, 0);
   }
 }
 
@@ -104,8 +104,8 @@
 }
 
 @keyframes spin {
-  from { transform:rotate(0deg); }
-  to { transform:rotate(360deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes gradient {
@@ -114,80 +114,97 @@
   }
 }
 
-
 @keyframes floating-x {
   from {
-    transform: translate(0, 0px);
+    transform: translate(0, 0);
   }
+
   65% {
     transform: translate(0, 15px);
   }
+
   to {
-    transform: translate(0, 0px);
+    transform: translate(0, 0);
   }
 }
+
 @keyframes floating-x-rel {
   from {
     transform: translate(0, 0%);
   }
+
   65% {
     transform: translate(0, -50%);
   }
+
   to {
     transform: translate(0, 0%);
   }
 }
+
 @keyframes floating-x-spin {
   from {
-    transform: translate(0, 0px);
+    transform: translate(0, 0);
   }
+
   65% {
     transform: translate(0, 15px) rotate(0deg);
   }
+
   75% {
     transform: translate(0, 15px) rotate(15deg);
   }
+
   to {
-    transform: translate(0, 0px);
-  }
-}
-@keyframes floating-x-spin-rel {
-  from {
-    transform: translate(0, 0px);
-  }
-  65% {
-    transform: translate(0, -50%) rotate(0deg);
-  }
-  75% {
-    transform: translate(0, -50%) rotate(15deg);
-  }
-  to {
-    transform: translate(0, 0px);
-  }
-}
-@keyframes floating-x-full-spin {
-  from {
-    transform: translate(0, 0px) rotate(0deg);
-  }
-  65% {
-    transform: translate(0, 15px) rotate(234deg);
-  }
-  to {
-    transform: translate(0, 0px) rotate(360deg);
-  }
-}
-@keyframes floating-x-full-spin-rel {
-  from {
-    transform: translate(0, 0px) rotate(0deg);
-  }
-  65% {
-    transform: translate(0, -50%) rotate(-234deg);
-  }
-  to {
-    transform: translate(0, 0px) rotate(-360deg);
+    transform: translate(0, 0);
   }
 }
 
+@keyframes floating-x-spin-rel {
+  from {
+    transform: translate(0, 0);
+  }
+
+  65% {
+    transform: translate(0, -50%) rotate(0deg);
+  }
+
+  75% {
+    transform: translate(0, -50%) rotate(15deg);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes floating-x-full-spin {
+  from {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  65% {
+    transform: translate(0, 15px) rotate(234deg);
+  }
+
+  to {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+@keyframes floating-x-full-spin-rel {
+  from {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  65% {
+    transform: translate(0, -50%) rotate(-234deg);
+  }
+
+  to {
+    transform: translate(0, 0) rotate(-360deg);
+  }
+}
 
 @keyframes moveStripes {
   from {

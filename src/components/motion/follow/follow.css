@@ -1,11 +1,12 @@
 :host {
-    --translate-y: calc(-50% + var(--top));
-    --translate-x: calc(-50% + var(--left));
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 20;
-    transform: translate3d(var(--translate-x),var(--translate-y), 0);
-    pointer-events: none;
-    contain: content;
+  --translate-y: calc(-50% + var(--top));
+  --translate-x: calc(-50% + var(--left));
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  transform: translate3d(var(--translate-x), var(--translate-y), 0);
+  pointer-events: none;
+  contain: content;
 }

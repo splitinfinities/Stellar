@@ -45,12 +45,12 @@
 }
 
 .nested-links a {
-  transition: color .15s ease-in;
+  transition: color 0.15s ease-in;
   color: var(--blue5);
 }
 
 .nested-links a:hover,
 .nested-links a:focus {
-  transition: color .15s ease-in;
+  transition: color 0.15s ease-in;
   color: var(--light-blue);
 }

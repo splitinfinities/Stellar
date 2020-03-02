@@ -23,7 +23,7 @@ stellar-toggle *::selection {
 }
 
 stellar-toggle .label {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   line-height: 1.69;
   color: var(--gray9);
   font-size: 1rem;
@@ -36,6 +36,7 @@ stellar-toggle stellar-card .item {
 
 stellar-toggle stellar-grid {
   width: 100%;
+
   --width: 18.5rem;
 }
 

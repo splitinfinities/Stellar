@@ -1,11 +1,13 @@
 stellar-toggle-option {
   contain: content;
+
   --background: var(--gray0);
   --hover-background: var(--gray1);
   --border: var(--gray1);
   --focus: var(--gray5);
   --check-bg: var(--white);
   --check-subject-bg: var(--theme-base5);
+
   box-sizing: border-box;
   display: block;
   width: 100%;
@@ -69,7 +71,7 @@ stellar-toggle-option:focus-within .box,
 stellar-toggle-option[checked] .box,
 stellar-toggle-option:hover .box {
   border: 1px solid var(--background);
-  box-shadow: 0 0 0 1px var(--focus), 0 0 0 3px rgba(0, 0, 0, .125);
+  box-shadow: 0 0 0 1px var(--focus), 0 0 0 3px rgba(0, 0, 0, 0.125);
 }
 
 stellar-toggle-option .box .indicator {
@@ -325,16 +327,15 @@ stellar-toggle-option copy-wrap * {
 stellar-toggle-option[dark] {
   --background: var(--black-alt);
   --hover-background: var(--black-alt);
-  --border: var(--gray9)
+  --border: var(--gray9);
 }
 
 stellar-toggle-option[dark] copy-wrap * {
   color: white;
 }
 
-
 stellar-toggle-option[dark] .box {
-  background: var(--black)
+  background: var(--black);
 }
 
 stellar-toggle-option[dark][type*="checkbox"] .box .active ion-icon {

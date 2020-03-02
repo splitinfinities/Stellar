@@ -1,20 +1,25 @@
-:host, :host *, :host *:before, :host *:after {
+:host,
+:host *,
+:host *::before,
+:host *::after {
   box-sizing: border-box;
 }
 
 :host {
   contain: content;
   display: block;
+
   --background: transparent;
 }
 
 :host {
   display: block;
+
   --background: var(--black);
 }
 
 :host([dark]) .highcharts-background {
-  fill: var(--background) !important
+  fill: var(--background) !important;
 }
 
 :host([dark]) .highcharts-title,
@@ -22,22 +27,22 @@
 :host([dark]) .highcharts-legend-item text,
 :host([dark]) .highcharts-axis-labels text,
 :host([dark]) .highcharts-axis-title {
-  fill: var(--white) !important
+  fill: var(--white) !important;
 }
 
 :host([dark]) .highcharts-legend-box {
-  fill: transparent !important
+  fill: transparent !important;
 }
 
 :host([dark]) .highcharts-grid path,
 :host([dark]) .highcharts-axis path {
-  stroke: rgba(255, 255, 255, 0.2) !important
+  stroke: rgba(255, 255, 255, 0.2) !important;
 }
 
 :host([dark]) .highcharts-tooltip text {
-  fill: var(--background) !important
+  fill: var(--background) !important;
 }
 
 :host([dark]) .highcharts-series rect {
-  stroke: var(--background) !important
+  stroke: var(--background) !important;
 }

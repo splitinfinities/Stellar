@@ -1,6 +1,7 @@
 stellar-interview {
   --width: 800px;
   --height: 800px;
+
   display: block;
   contain: content;
 }
@@ -37,7 +38,6 @@ stellar-interview web-audio-visualizer[type="circle"] {
   height: 100%;
 }
 
-
 stellar-interview web-audio-visualizer[type="bars2"] {
   width: 80%;
   left: 10%;
@@ -49,6 +49,7 @@ stellar-interview stellar-360-image,
 stellar-interview stellar-video,
 stellar-interview stellar-360-video {
   --gradient: radial-gradient(circle at 30% 107%, var(--theme-base5) 0%, var(--theme-base8) 5%, var(--theme-complement8) 45%, var(--theme-complement5) 60%, var(--theme-base5) 90%);
+
   position: relative;
   z-index: 1;
   display: block;
@@ -97,7 +98,7 @@ stellar-interview .transcript {
 
 stellar-interview .button {
   position: absolute;
-  transition: all .35s var(--ease) 0s, background .175s var(--ease) 0s;
+  transition: all 0.35s var(--ease) 0s, background 0.175s var(--ease) 0s;
   width: 9rem;
   height: 9rem;
   top: 50%;
@@ -143,7 +144,7 @@ stellar-interview .button.playing {
   right: 1.8rem;
   padding: 0;
   background: transparent;
-  transition: all .35s var(--ease) 0s, background .175s var(--ease) 0s;
+  transition: all 0.35s var(--ease) 0s, background 0.175s var(--ease) 0s;
 }
 
 stellar-interview .button.playing ion-icon {

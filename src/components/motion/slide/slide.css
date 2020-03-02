@@ -8,6 +8,7 @@ stellar-slide {
 stellar-slide stellar-image,
 stellar-slide stellar-video {
   height: 100%;
+
   --object-fit: cover;
   --figure-height: 100%;
 }

@@ -22,6 +22,7 @@
 .mr-auto {
   margin-right: auto;
 }
+
 .ml-auto {
   margin-left: auto;
 }
@@ -41,9 +42,11 @@
     margin-right: auto;
     margin-left: auto;
   }
+
   .mr-auto-ns {
     margin-right: auto;
   }
+
   .ml-auto-ns {
     margin-left: auto;
   }
@@ -54,9 +57,11 @@
     margin-right: auto;
     margin-left: auto;
   }
+
   .mr-auto-m {
     margin-right: auto;
   }
+
   .ml-auto-m {
     margin-left: auto;
   }
@@ -67,9 +72,11 @@
     margin-right: auto;
     margin-left: auto;
   }
+
   .mr-auto-l {
     margin-right: auto;
   }
+
   .ml-auto-l {
     margin-left: auto;
   }

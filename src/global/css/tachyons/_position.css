@@ -13,15 +13,19 @@
 .static {
   position: static;
 }
+
 .relative {
   position: relative;
 }
+
 .absolute {
   position: absolute;
 }
+
 .fixed {
   position: fixed;
 }
+
 .sticky {
   position: sticky;
 }
@@ -30,15 +34,19 @@
   .static-ns {
     position: static;
   }
+
   .relative-ns {
     position: relative;
   }
+
   .absolute-ns {
     position: absolute;
   }
+
   .fixed-ns {
     position: fixed;
   }
+
   .sticky-ns {
     position: sticky;
   }
@@ -48,15 +56,19 @@
   .static-m {
     position: static;
   }
+
   .relative-m {
     position: relative;
   }
+
   .absolute-m {
     position: absolute;
   }
+
   .fixed-m {
     position: fixed;
   }
+
   .sticky-m {
     position: sticky;
   }
@@ -66,15 +78,19 @@
   .static-l {
     position: static;
   }
+
   .relative-l {
     position: relative;
   }
+
   .absolute-l {
     position: absolute;
   }
+
   .fixed-l {
     position: fixed;
   }
+
   .sticky-l {
     position: sticky;
   }

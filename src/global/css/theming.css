@@ -378,6 +378,7 @@
   --ms14: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
   --ms15: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
   --ms16: calc(var(--ms0) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)) * var(--ms-ratio, var(--golden)));
+
   /* moving down the scale */
   --ms-1: calc(var(--ms0) / var(--ms-ratio, var(--golden)));
   --ms-2: calc(var(--ms0) / var(--ms-ratio, var(--golden)) / var(--ms-ratio, var(--golden)));
@@ -461,6 +462,7 @@
 
 .dark-mode {
   background: var(--black);
+
   --theme-copy-header: var(--theme-base7) !important;
   --theme-copy-base: var(--theme-base0) !important;
   --theme-copy-supporting: var(--theme-base3) !important;
@@ -468,6 +470,7 @@
 
 .light-mode {
   background: var(--theme-base2);
+
   --theme-copy-header: var(--theme-base9) !important;
   --theme-copy-base: var(--theme-base5) !important;
   --theme-copy-supporting: var(--theme-base3) !important;
@@ -475,6 +478,7 @@
 
 .plain-mode {
   background: var(--white);
+
   --theme-copy-header: var(--theme-base5) !important;
   --theme-copy-base: var(--theme-base0) !important;
   --theme-copy-supporting: var(--theme-base5) !important;

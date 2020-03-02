@@ -5,7 +5,8 @@
 :host,
 :host stellar-intersection {
   display: contents;
-  --animation: fadeIn;
+
+  --animation: fadein;
 }
 
 :host ::slotted(*) {
