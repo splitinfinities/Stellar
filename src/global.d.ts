@@ -18,7 +18,7 @@ declare interface TweenInstance {
 }
 
 declare interface String {
-  format(args: any): () => string;
+  formatReplace(args: any): () => string;
 }
 
 declare interface FormResult {

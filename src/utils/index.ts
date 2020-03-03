@@ -117,7 +117,7 @@ export var shuffle = function (array) {
   return array;
 };
 
-String.prototype['format'] = function() {
+String.prototype['formatReplace'] = function() {
   var formatted = this;
   for( var arg in arguments ) {
     formatted = formatted.replace("{" + arg + "}", arguments[arg]);

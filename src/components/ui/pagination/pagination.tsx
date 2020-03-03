@@ -138,7 +138,7 @@ export class Pagination {
   }
 
   formatUrl(pageNumber) {
-    return this.url.format(pageNumber);
+    return this.url.formatReplace(pageNumber);
   }
 
   renderFirstPageButton () {
